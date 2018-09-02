@@ -1,0 +1,221 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC0.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\beagle.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\dameware.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\dcom.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\dcom2.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\iis5ssl.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\kuang2.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\lsass.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\lsass2.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\ms04_007_asn1.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\mssql.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\mydoom.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\netbios.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\netdevil.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\optix.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\sub7.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\veritas.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\wkssvc.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\advscan.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\aliaslog.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\autostart.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\capture.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\cdkeys.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\crc32.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\crypt.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\dcc.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\ddos.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\download.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\driveinfo.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\ehandler.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\findfile.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\findpass.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\fphost.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\ftpd.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\httpd.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\icmpflood.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\ident.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\irc_send.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\keylogger.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\loaddlls.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\misc.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\net.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\netutils.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\pingudp.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\processes.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\psniff.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\rBot.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\redirect.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\remotecmd.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\rlogind.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\rndnick.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\scan.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\secure.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\session.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\shellcode.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\socks4.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\synflood.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\sysinfo.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\tcpflood.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\tftpd.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\threads.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\upnp.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\visit.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\webdav.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Mijn ontvangen bestanden\rxbot-[060205]\m0d\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC0.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC1.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rBot.pdb" /machine:I386 /out:"Release/rBot.exe" 
+".\Release\beagle.obj"
+".\Release\dameware.obj"
+".\Release\dcom.obj"
+".\Release\dcom2.obj"
+".\Release\iis5ssl.obj"
+".\Release\kuang2.obj"
+".\Release\lsass.obj"
+".\Release\lsass2.obj"
+".\Release\ms04_007_asn1.obj"
+".\Release\mssql.obj"
+".\Release\mydoom.obj"
+".\Release\netbios.obj"
+".\Release\netdevil.obj"
+".\Release\optix.obj"
+".\Release\sub7.obj"
+".\Release\veritas.obj"
+".\Release\wkssvc.obj"
+".\Release\advscan.obj"
+".\Release\aliaslog.obj"
+".\Release\autostart.obj"
+".\Release\capture.obj"
+".\Release\cdkeys.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\dcc.obj"
+".\Release\ddos.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\ehandler.obj"
+".\Release\findfile.obj"
+".\Release\findpass.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\httpd.obj"
+".\Release\icmpflood.obj"
+".\Release\ident.obj"
+".\Release\irc_send.obj"
+".\Release\keylogger.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\net.obj"
+".\Release\netutils.obj"
+".\Release\pingudp.obj"
+".\Release\processes.obj"
+".\Release\psniff.obj"
+".\Release\rBot.obj"
+".\Release\redirect.obj"
+".\Release\remotecmd.obj"
+".\Release\rlogind.obj"
+".\Release\rndnick.obj"
+".\Release\scan.obj"
+".\Release\secure.obj"
+".\Release\session.obj"
+".\Release\shellcode.obj"
+".\Release\socks4.obj"
+".\Release\synflood.obj"
+".\Release\sysinfo.obj"
+".\Release\tcpflood.obj"
+".\Release\tftpd.obj"
+".\Release\threads.obj"
+".\Release\upnp.obj"
+".\Release\visit.obj"
+".\Release\webdav.obj"
+".\Release\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC1.tmp"
+<h3>Output Window</h3>
+Compiling...
+beagle.cpp
+dameware.cpp
+dcom.cpp
+dcom2.cpp
+iis5ssl.cpp
+kuang2.cpp
+lsass.cpp
+lsass2.cpp
+ms04_007_asn1.cpp
+mssql.cpp
+mydoom.cpp
+netbios.cpp
+netdevil.cpp
+optix.cpp
+sub7.cpp
+veritas.cpp
+wkssvc.cpp
+advscan.cpp
+aliaslog.cpp
+autostart.cpp
+capture.cpp
+cdkeys.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+ftpd.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+irc_send.cpp
+keylogger.cpp
+loaddlls.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+pingudp.cpp
+processes.cpp
+psniff.cpp
+rBot.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+upnp.cpp
+visit.cpp
+webdav.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

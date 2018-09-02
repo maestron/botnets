@@ -1,0 +1,23 @@
+ablauf bei sharK Final beta
+
+1. board wird während des betateste geschlossen
+2. bug tracker/fet requests werden geleert
+3. die betatester sollen testen und in dem neu erstellten unterforum im "Intern" Forum posten
+
+
+es wird wieder 2 kategorien für support geben  - englisch & deutsch
+als unterforen gibt es dann je sharK 2 Support und sharK 2.1 Support.
+
+Alle Beiträge in den bisherien UNterforen (Configprbleme, Abuse usw) werden dann in den entsprechenden neuen
+unterforen eingegliedert und die leeren unterforen dann gelöscht.
+
+es werden ausserdem prefixes eingesetzt um das mehrere-unterforen-system zu ersetzen. prefixes werden dann sein:
+[abuse], [portprobleme], [configprobleme] usw.
+
+
+
+nach max 1 monat wird das unterforum für shark 2 support geschlossen, da das nicht länger supportet werden soll.
+
+----
+
+neue modbestimmung! (newbie + schnarch)

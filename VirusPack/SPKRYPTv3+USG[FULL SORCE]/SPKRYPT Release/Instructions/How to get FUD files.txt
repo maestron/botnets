@@ -1,0 +1,10 @@
+In order to get completely FUD files, please use the icon changer, and file information cloner.
+
+(Also make sure to try out a few icons. If still detected, move your stub to C:\ , and choose it in the crypter from there)
+
+IMPORTANT: 
+
+14.05.2010: You MUST use the add section (method 1) to bypass F-PROT and Avira.
+
+
+If you have any problems regarding this, do not hesitate to contact me at: spkcore@hotmail.com

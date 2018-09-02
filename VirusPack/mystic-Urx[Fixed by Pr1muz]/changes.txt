@@ -1,0 +1,11 @@
+[Saturday, April 30th, 2005 @ 2:08:AM]
+Pr1muZ Fixed passwd.h / advscan.cpp / netbios.cpp/.h
+-Who ever thinks ntpass scans on 445, quit botnets right now.
+-Who ever thinks ntpass needs 39048320404 passwords, quit botnets right now.
+-80% of ntpass is passwordless, common sense kids.
+-Added more ntshares considering-They all sucked.
+-I bet i'll find a million more things to fix in this src, so stay tuned.\
+
+Even though this is a private source, it'll get leaked so:
+
+irc.rizon.net #hacked #exploit

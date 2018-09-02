@@ -1,0 +1,66 @@
+ _______            ________  
+/         |      | |          |       |
+|         |      | |          |       |
+ \ ____   |      | |          |       |
+       \  |------| |------    |       |
+	    | |      | |          |       |
+ ______/  |      | |________  |______ |______
+
+-----------------------------------------------
+
+SHELLBOT UPDATES - 
+
+	If you have this then you know where the 
+	updates are coming from. Otherwise it's 
+	been leaked.
+
+- Many things to come .. [10/05/05]
+
+-----------------------------------------------
+
+SHELLBOT AUTHOR -
+
+Shellz
+Shellz@shell.org
+03/04/2005 (DAMN, didn't you wish you had it sooner) 
+
+-----------------------------------------------
+
+SHELLBOT COMMENTS -
+
+This is the only version of this bot produced by 
+the original author, so if you're looking for 
+updated versions, THERE AINT ANY.
+
+-----------------------------------------------
+
+SHELLBOT CREDITS -
+
+twoci, r-22, dj-fu, dmiller, winpcap.org, 29a/Z0MB1E
+VX people on undernet.org, Wonk, whoever else i 
+forgot...
+
+-----------------------------------------------
+
+SHELLBOT FEATURES -
+
+- Implementation of PCAP protocol 
+- Multi-topic command sequencing 
+- HTTP transfer when exploiting
+- Exploit mem address changes (wkssvc_445)
+- Original version, bypasses most/all AV's.
+- Stable IRC client connection
+
+-----------------------------------------------
+	....
+	Looking for his enemies
+	with double dee batteries
+
+	I put that battery in his gat
+	thats why he move like that
+
+    this is mah muthafucking toy solider
+	....
+
+								- Shellz
+  

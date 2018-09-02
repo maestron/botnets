@@ -1,0 +1,28 @@
+List of work to be done:
+
++ psniff memory leak/fix for universal commands
++ sniffer for other bot messages
++ irc_connect line split truncation
++ execute w/output to ircd
++ kuang2 finish
++ netdevil finish
++ ntscan re-write/test
++ polymorphic add in
++ ddos code add-in
++ key logger add-in/sendkeys
++ add socks 4 auth addition
++ auto-scan on startup
++ beagle add-in
++ mydoom fix
++ secure code with security policy lock-out
++ secure code hooked into drive list and share list
++ ftpd server
++ portscanner for single ip
++ global unified scan structure
++ auto-update bot after dns fails or is pointed to rfc1918 address
++ rndnick code (separate)
++ kernel hook/dll support
++ multiple server list (round-robin)
++ password extract code
++ msn/aim spreader
++ p2p code add-in (for people who want it)

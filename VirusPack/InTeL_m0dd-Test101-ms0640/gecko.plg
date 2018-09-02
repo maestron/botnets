@@ -1,0 +1,110 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: gecko - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP10D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "lib/openssl/win32/include" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "NDEBUG" /Fp"Release/gecko.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\advscan.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\aimspread.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\asn.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\dcom.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\fphost.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\ftpd.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\lsass.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\netbios.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\pnp445.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\wkssvc.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\commands.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\crypt.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\ddos.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\download.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\info.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\irc.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\loaddlls.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\netutils.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\processes.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\protocol.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\regcontrol.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\reptile.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\secure.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\service.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\socks4.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\threads.cpp"
+"C:\Documents and Settings\r00t\Bureaublad\InTeL m0d\utility.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP10D.tmp" 
+Creating temporary file "C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP10E.tmp" with contents
+[
+User32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gecko.pdb" /machine:I386 /out:"Bin/gecko.exe" /libpath:"lib/openssl/win32/lib" 
+".\Release\advscan.obj"
+".\Release\aimspread.obj"
+".\Release\asn.obj"
+".\Release\dcom.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\lsass.obj"
+".\Release\netbios.obj"
+".\Release\pnp445.obj"
+".\Release\wkssvc.obj"
+".\Release\commands.obj"
+".\Release\crypt.obj"
+".\Release\ddos.obj"
+".\Release\download.obj"
+".\Release\info.obj"
+".\Release\irc.obj"
+".\Release\loaddlls.obj"
+".\Release\netutils.obj"
+".\Release\processes.obj"
+".\Release\protocol.obj"
+".\Release\regcontrol.obj"
+".\Release\reptile.obj"
+".\Release\secure.obj"
+".\Release\service.obj"
+".\Release\socks4.obj"
+".\Release\threads.obj"
+".\Release\utility.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP10E.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+aimspread.cpp
+asn.cpp
+dcom.cpp
+fphost.cpp
+ftpd.cpp
+lsass.cpp
+netbios.cpp
+pnp445.cpp
+wkssvc.cpp
+commands.cpp
+crypt.cpp
+ddos.cpp
+download.cpp
+info.cpp
+irc.cpp
+loaddlls.cpp
+netutils.cpp
+processes.cpp
+protocol.cpp
+regcontrol.cpp
+reptile.cpp
+secure.cpp
+service.cpp
+socks4.cpp
+threads.cpp
+utility.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+gecko.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

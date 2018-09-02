@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1278630261 source:c:\users\william\desktop\cryptit\main.c
+	<stdio.h>
+	<windows.h>
+
+1278643822 source:c:\users\william\desktop\cryptit\crypter.rc
+

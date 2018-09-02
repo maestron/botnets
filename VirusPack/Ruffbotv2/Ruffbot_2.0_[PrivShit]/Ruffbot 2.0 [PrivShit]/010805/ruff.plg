@@ -1,0 +1,152 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ruff - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Ruff/recource.res" /d "NDEBUG" "C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\recource.rc"" 
+Creating temporary file "C:\DOCUME~1\Dale\LOCALS~1\Temp\RSP218.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Ruff/ruff.pch" /YX /Fo"Ruff/" /Fd"Ruff/" /FD /c 
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\advscan.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\ms04_007_asn1.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\netbios.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\aliaslog.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\autostart.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\avirus.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\crc32.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\crypt.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\dcc.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\ddos.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\download.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\driveinfo.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\ehandler.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\findfile.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\findpass.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\fphost.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\ftpd.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\httpd.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\ident.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\irc_send.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\loaddlls.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\misc.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\net.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\netutils.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\processes.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\random.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\remotecmd.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\rlogind.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\rndnick.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\ruff.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\scan.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\secure.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\session.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\shellcode.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\socks4.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\sysinfo.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\tftpd.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\threads.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\visit.cpp"
+"C:\Documents and Settings\Dale\Desktop\Ruffbot 2.0 [PrivShit]\010805\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Dale\LOCALS~1\Temp\RSP218.tmp" 
+Creating temporary file "C:\DOCUME~1\Dale\LOCALS~1\Temp\RSP219.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Ruff/ruff.pdb" /machine:I386 /out:"Ruff/ruff.exe" 
+".\Ruff\advscan.obj"
+".\Ruff\ms04_007_asn1.obj"
+".\Ruff\netbios.obj"
+".\Ruff\aliaslog.obj"
+".\Ruff\autostart.obj"
+".\Ruff\avirus.obj"
+".\Ruff\crc32.obj"
+".\Ruff\crypt.obj"
+".\Ruff\dcc.obj"
+".\Ruff\ddos.obj"
+".\Ruff\download.obj"
+".\Ruff\driveinfo.obj"
+".\Ruff\ehandler.obj"
+".\Ruff\findfile.obj"
+".\Ruff\findpass.obj"
+".\Ruff\fphost.obj"
+".\Ruff\ftpd.obj"
+".\Ruff\httpd.obj"
+".\Ruff\ident.obj"
+".\Ruff\irc_send.obj"
+".\Ruff\loaddlls.obj"
+".\Ruff\misc.obj"
+".\Ruff\net.obj"
+".\Ruff\netutils.obj"
+".\Ruff\processes.obj"
+".\Ruff\random.obj"
+".\Ruff\remotecmd.obj"
+".\Ruff\rlogind.obj"
+".\Ruff\rndnick.obj"
+".\Ruff\ruff.obj"
+".\Ruff\scan.obj"
+".\Ruff\secure.obj"
+".\Ruff\session.obj"
+".\Ruff\shellcode.obj"
+".\Ruff\socks4.obj"
+".\Ruff\sysinfo.obj"
+".\Ruff\tftpd.obj"
+".\Ruff\threads.obj"
+".\Ruff\visit.obj"
+".\Ruff\wildcard.obj"
+".\Ruff\recource.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Dale\LOCALS~1\Temp\RSP219.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+advscan.cpp
+ms04_007_asn1.cpp
+netbios.cpp
+aliaslog.cpp
+autostart.cpp
+avirus.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+ftpd.cpp
+httpd.cpp
+ident.cpp
+irc_send.cpp
+loaddlls.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+processes.cpp
+random.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+ruff.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+sysinfo.cpp
+tftpd.cpp
+threads.cpp
+visit.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ruff.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

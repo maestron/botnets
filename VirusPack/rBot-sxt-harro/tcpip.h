@@ -1,0 +1,81 @@
+/*************************** TCPIP.H ********************************/
+#ifndef _TCPIP_H_
+#define _TCPIP_H_
+
+// Standard TCP flags
+#define URG 0x20
+#define ACK 0x10
+#define PSH 0x08
+#define RST 0x04
+#define SYN 0x02
+#define FIN 0x01
+
+// Our tcp header struct
+typedef struct tcphdr {
+
+	unsigned short sport;			// Source port
+	unsigned short dport;			// Destination port
+	unsigned int   seq;				// Sequence number
+	unsigned int   ack_seq;			// Acknowledgement number
+	unsigned char  lenres;			// Length return size
+	unsigned char  flags;			// Flags and header length
+	unsigned short window;			// Window size
+	unsigned short checksum;		// Packet Checksum
+	unsigned short urg_ptr;			// Urgent Pointer
+
+} TCPHEADER;
+
+// Our ip header struct
+typedef struct iphdr {
+
+	unsigned char  verlen;			// IP version & length
+	//unsigned int   h_len:4;		// Length of the header
+	//unsigned int   version:4;		// Version of IP
+	unsigned char  tos;				// Type of service
+	unsigned short total_len;		// Total length of the packet
+	unsigned short ident;			// Unique identifier
+	unsigned short frag_and_flags;	// Flags
+	unsigned char  ttl;				// Time to live
+	unsigned char  proto;			// Protocol (TCP, UDP etc)
+	unsigned short checksum;		// IP checksum
+	unsigned int   sourceIP;		// Source IP
+	unsigned int   destIP;			// Destination IP
+
+} IPHEADER;
+
+// Our pseudo header struct
+typedef struct pshdr {
+
+	unsigned int   saddr;			// Source address
+	unsigned int   daddr;			// Destination address
+	unsigned char  zero;			// Placeholder
+	unsigned char  proto;			// Protocol
+	unsigned short length;			// TCP length
+	struct tcphdr tcp;				// TCP Header struct
+
+} PSDHEADER;
+
+// Our udp header struct
+typedef struct udphdr {
+
+	unsigned short source;			// Source port
+	unsigned short dest;			// Destination port
+    unsigned short length;			// Packet length
+    unsigned short checksum;		// Packet checksum
+
+} UDPHEADER;
+        
+// Our icmp header struct
+typedef struct icmphdr {
+
+	unsigned char  type;			// Type of ICMP packet
+    unsigned char  subcode;			// Subcode of type of packet
+    unsigned short checksum;		// Packet checksum
+    unsigned long  param;			// Type-specific parameter
+
+} ICMPHEADER;
+
+
+#endif
+
+/********************** END TCPIP.H *************************************/

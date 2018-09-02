@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1278639014 source:c:\users\william\desktop\stub\main.c
+	<stdio.h>
+	<windows.h>
+
+1278642376 source:c:\users\william\desktop\cryptit\stub\main.c
+	<stdio.h>
+	<windows.h>
+

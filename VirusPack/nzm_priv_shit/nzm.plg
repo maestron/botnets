@@ -1,0 +1,201 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nzm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Pyrox\LOCALS~1\Temp\RSP20B4.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"obj/nzm.pch" /YX /Fo"obj/" /Fd"obj/" /FD /c 
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\ddos\ddos.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\ddos\icmpflood.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\ddos\supersyn.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\ddos\synflood.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\ddos\tcpflood.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\keylogger.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\psniff.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\clsass.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\dcass.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\dcom.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\lsass.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\lsass1lsass.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\ms04_007_asn1.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\mssql.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\mssqllsass.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\pnp.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\realcast.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\exploits\wkssvc.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\xfer\ftpd.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\httpd.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\xfer\tftpd.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\scan\advscan.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\redirect.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\socks4.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\capture.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\cdkeys.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\findfile.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\findpass.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\loaddlls.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\misc.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\netutils.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\ddos\pingudp.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\remotecmd.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\sysinfo.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\visit.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\aliaslog.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\autostart.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\crc32.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\crypt.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\dcc.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\download.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\driveinfo.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\ehandler.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\fphost.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\ident.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\irc_send.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\net.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\nzm.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\processes.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\random.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\rndnick.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\scan\scan.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\modules\secure.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\session.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\shellcode.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\threads.cpp"
+"C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\core\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Pyrox\LOCALS~1\Temp\RSP20B4.tmp" 
+Creating temporary file "C:\DOCUME~1\Pyrox\LOCALS~1\Temp\RSP20B5.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"exe/nzm.pdb" /machine:I386 /out:"exe/nzm.exe" 
+".\obj\ddos.obj"
+".\obj\icmpflood.obj"
+".\obj\supersyn.obj"
+".\obj\synflood.obj"
+".\obj\tcpflood.obj"
+".\obj\keylogger.obj"
+".\obj\psniff.obj"
+".\obj\clsass.obj"
+".\obj\dcass.obj"
+".\obj\dcom.obj"
+".\obj\lsass.obj"
+".\obj\lsass1lsass.obj"
+".\obj\ms04_007_asn1.obj"
+".\obj\mssql.obj"
+".\obj\mssqllsass.obj"
+".\obj\pnp.obj"
+".\obj\realcast.obj"
+".\obj\wkssvc.obj"
+".\obj\ftpd.obj"
+".\obj\httpd.obj"
+".\obj\tftpd.obj"
+".\obj\advscan.obj"
+".\obj\redirect.obj"
+".\obj\socks4.obj"
+".\obj\capture.obj"
+".\obj\cdkeys.obj"
+".\obj\findfile.obj"
+".\obj\findpass.obj"
+".\obj\loaddlls.obj"
+".\obj\misc.obj"
+".\obj\netutils.obj"
+".\obj\pingudp.obj"
+".\obj\remotecmd.obj"
+".\obj\sysinfo.obj"
+".\obj\visit.obj"
+".\obj\aliaslog.obj"
+".\obj\autostart.obj"
+".\obj\crc32.obj"
+".\obj\crypt.obj"
+".\obj\dcc.obj"
+".\obj\download.obj"
+".\obj\driveinfo.obj"
+".\obj\ehandler.obj"
+".\obj\fphost.obj"
+".\obj\ident.obj"
+".\obj\irc_send.obj"
+".\obj\net.obj"
+".\obj\nzm.obj"
+".\obj\processes.obj"
+".\obj\random.obj"
+".\obj\rndnick.obj"
+".\obj\scan.obj"
+".\obj\secure.obj"
+".\obj\session.obj"
+".\obj\shellcode.obj"
+".\obj\threads.obj"
+".\obj\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Pyrox\LOCALS~1\Temp\RSP20B5.tmp"
+<h3>Output Window</h3>
+Compiling...
+ddos.cpp
+icmpflood.cpp
+supersyn.cpp
+synflood.cpp
+tcpflood.cpp
+keylogger.cpp
+psniff.cpp
+clsass.cpp
+dcass.cpp
+dcom.cpp
+lsass.cpp
+lsass1lsass.cpp
+ms04_007_asn1.cpp
+mssql.cpp
+mssqllsass.cpp
+pnp.cpp
+C:\Documents and Settings\Pyrox\Desktop\nzm.ASN.PNP.MSSQL.DCASS.M0D.PYR0X\cpp\pnp.cpp(327) : warning C4101: 'buffer' : unreferenced local variable
+realcast.cpp
+wkssvc.cpp
+ftpd.cpp
+httpd.cpp
+tftpd.cpp
+advscan.cpp
+redirect.cpp
+socks4.cpp
+capture.cpp
+cdkeys.cpp
+findfile.cpp
+findpass.cpp
+loaddlls.cpp
+misc.cpp
+netutils.cpp
+pingudp.cpp
+remotecmd.cpp
+sysinfo.cpp
+visit.cpp
+aliaslog.cpp
+autostart.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+fphost.cpp
+ident.cpp
+irc_send.cpp
+net.cpp
+nzm.cpp
+processes.cpp
+random.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+threads.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+nzm.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

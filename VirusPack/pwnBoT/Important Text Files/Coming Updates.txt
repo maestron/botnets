@@ -1,0 +1,20 @@
+  _____________________________________________________ 
+ /________.::[pwnBoT Coming Soon And Credits]::._______\
+||                                                     ||
+||------------- -----.::[CREDITS]::.-------------------||
+||                                                     ||
+||Authors:Nils, Racerx90, Edge-, D-oNe, HaRRo, TehRain ||
+||Modders:CoKeHeAd & SeminolePride                     ||
+||Origins: SDBot(rbot base), rxBot0.6.6d-stable(coke)  ||
+||                                                     ||
+||----------------.::[Coming - Soon]::.----------------||
+||                                                     ||
+|| + FTP Daemon                                        ||
+|| + New Spreading Forms                               ||
+|| + Higher Security                                   ||
+|| + Bug Fixes                                         ||
+|| + Thats about it... Until someone tells me of       ||
+|| + something im missing that i should add...         ||
+||                                                     ||
+||_________________.::[EnD oF FiLe]::._________________||
+ \_____________________________________________________/

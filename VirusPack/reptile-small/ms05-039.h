@@ -1,0 +1,1 @@
+BOOL PNP(char *target, void* conn,EXINFO exinfo);

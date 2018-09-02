@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="33"
+   name=""
+   committed-date="2004-02-26T23:05:59.668978Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/getmd5"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="145"/>
+<entry
+   committed-rev="9"
+   name="gpl.txt"
+   text-time="2003-02-11T19:52:20.755152Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="393a5ca445f6965873eca0259a17f833"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.735123Z"/>
+<entry
+   committed-rev="9"
+   name="r_random.c"
+   text-time="2003-02-11T19:52:20.785195Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="add9792642db39757c98711eb50db9b0"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.775180Z"/>
+<entry
+   committed-rev="9"
+   name="main.cpp"
+   text-time="2003-02-11T19:52:20.825252Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="cafd9e20c0e2f75a63a552de76fc6300"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.805224Z"/>
+<entry
+   committed-rev="9"
+   name="Makefile.bc5"
+   text-time="2003-02-11T19:52:20.855296Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="61f205b522b8141218684247d814388e"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.845281Z"/>
+<entry
+   committed-rev="9"
+   name="global.h"
+   text-time="2003-02-11T19:52:20.885339Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="7608d8e0a03c8d3dcb8fc8995b4c97f4"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.875324Z"/>
+<entry
+   committed-rev="9"
+   name="Makefile.ming"
+   text-time="2003-02-11T19:52:20.915382Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="003145b802e07c0125acb162bf7b48ca"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.905368Z"/>
+<entry
+   committed-rev="9"
+   name="r_random.h"
+   text-time="2003-02-11T19:52:20.945425Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="e375984a0bdee9a816fbaaba55a42c6e"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.935411Z"/>
+<entry
+   committed-rev="9"
+   name="rsaref.h"
+   text-time="2003-02-11T19:52:20.985483Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="1082287b3fec7a8c66ebc38754832675"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.975468Z"/>
+<entry
+   committed-rev="9"
+   name="md5c.c"
+   text-time="2003-02-11T19:52:21.015526Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="c10130aa7b2b270988f4bd06558c1743"
+   kind="file"
+   prop-time="2003-02-11T19:52:21.005512Z"/>
+<entry
+   committed-rev="33"
+   name="getmd5.dsp"
+   text-time="2003-02-11T19:52:21.055584Z"
+   committed-date="2004-02-26T23:05:59.668978Z"
+   checksum="c199e376e31eae102622c8b02d905d0f"
+   kind="file"
+   prop-time="2003-02-11T19:52:21.045569Z"/>
+<entry
+   committed-rev="9"
+   name="md5.h"
+   text-time="2003-02-11T19:52:21.085627Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="c995fd0563b19a6d6b6f60bc791e46ea"
+   kind="file"
+   prop-time="2003-02-11T19:52:21.075612Z"/>
+<entry
+   committed-rev="9"
+   name="Makefile"
+   text-time="2003-02-11T19:52:21.115670Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="84d24ae96df293b9c90ad91b8f7a4c9c"
+   kind="file"
+   prop-time="2003-02-11T19:52:21.105656Z"/>
+</wc-entries>

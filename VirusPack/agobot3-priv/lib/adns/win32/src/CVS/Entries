@@ -1,0 +1,15 @@
+/adns.h/1.1/Mon Oct 20 03:01:27 2003//
+/check.c/1.1/Mon Oct 20 03:01:27 2003//
+/config.h/1.1/Mon Oct 20 03:01:27 2003//
+/dlist.h/1.1/Mon Oct 20 03:01:27 2003//
+/event.c/1.1/Mon Oct 20 03:01:27 2003//
+/general.c/1.1/Mon Oct 20 03:01:27 2003//
+/internal.h/1.1/Mon Oct 20 03:01:27 2003//
+/parse.c/1.1/Mon Oct 20 03:01:27 2003//
+/query.c/1.1/Mon Oct 20 03:01:27 2003//
+/reply.c/1.1/Mon Oct 20 03:01:27 2003//
+/setup.c/1.1/Mon Oct 20 03:01:27 2003//
+/transmit.c/1.1/Mon Oct 20 03:01:27 2003//
+/tvarith.h/1.1/Mon Oct 20 03:01:27 2003//
+/types.c/1.1/Mon Oct 20 03:01:27 2003//
+D

@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rxbot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ERICDU~1\LOCALS~1\Temp\RSP4224.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rxbot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\xdcc_install_v45_winapp\rxBot_066a\commands.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ERICDU~1\LOCALS~1\Temp\RSP4224.tmp" 
+Creating temporary file "C:\DOCUME~1\ERICDU~1\LOCALS~1\Temp\RSP4225.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rxbot.pdb" /machine:I386 /out:"Release/rxbot.exe" 
+.\Release\advscan.obj
+.\Release\aliaslog.obj
+.\Release\autostart.obj
+.\Release\beagle.obj
+.\Release\capture.obj
+.\Release\cdkeys.obj
+.\Release\commands.obj
+.\Release\connect.obj
+.\Release\crc32.obj
+.\Release\crypt.obj
+.\Release\dameware.obj
+.\Release\dcc.obj
+.\Release\dcom.obj
+.\Release\download.obj
+.\Release\driveinfo.obj
+.\Release\ehandler.obj
+.\Release\findfile.obj
+.\Release\findpass.obj
+.\Release\fphost.obj
+.\Release\ftptransfer.obj
+.\Release\httpd.obj
+.\Release\icmpflood.obj
+.\Release\ident.obj
+.\Release\iis5ssl.obj
+.\Release\irc_send.obj
+.\Release\keylogger.obj
+.\Release\kuang2.obj
+.\Release\loaddlls.obj
+.\Release\lsarestrict.obj
+.\Release\misc.obj
+.\Release\mssql.obj
+.\Release\mydoom.obj
+.\Release\net.obj
+.\Release\netbios.obj
+.\Release\netdevil.obj
+.\Release\netutils.obj
+.\Release\optix.obj
+.\Release\pingudp.obj
+.\Release\processes.obj
+.\Release\protocol.obj
+.\Release\psniff.obj
+.\Release\redirect.obj
+.\Release\remotecmd.obj
+.\Release\rlogind.obj
+.\Release\rndnick.obj
+.\Release\rxbot.obj
+.\Release\secure.obj
+.\Release\session.obj
+.\Release\shellcode.obj
+.\Release\socks4.obj
+.\Release\startup.obj
+.\Release\sub7.obj
+.\Release\synflood.obj
+.\Release\sysinfo.obj
+.\Release\tcpflood.obj
+.\Release\tftpd.obj
+.\Release\threads.obj
+.\Release\visit.obj
+.\Release\wildcard.obj
+.\Release\upnp.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ERICDU~1\LOCALS~1\Temp\RSP4225.tmp"
+<h3>Output Window</h3>
+Compiling...
+commands.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rxbot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

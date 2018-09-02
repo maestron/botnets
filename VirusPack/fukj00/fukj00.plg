@@ -1,0 +1,158 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: h1dd3n - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\WrickPC\LOCALS~1\Temp\RSP3DB.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/fukj00.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\autostart.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\crc32.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\crypt.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\ehandler.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\fukj00.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\irc_send.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\loaddlls.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\netutils.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\rndnick.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\shellcode.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\threads.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\wildcard.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\advscan.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\scan.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\asn.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\backdoor.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\connback.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\ftpd.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\httpd.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\ident.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\redirect.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\session.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\tftpd.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\keylogger.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\psniff.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\sniffer.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\aliaslog.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\capture.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\cdkeys.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\dcc.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\download.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\driveinfo.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\findfile.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\fphost.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\misc.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\net.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\patcher.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\processes.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\remotecmd.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\secure.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\sysinfo.cpp"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\version.c"
+"C:\Documents and Settings\WrickPC\Desktop\DEV\fukj00\visit.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\WrickPC\LOCALS~1\Temp\RSP3DB.tmp" 
+Creating temporary file "C:\DOCUME~1\WrickPC\LOCALS~1\Temp\RSP3DC.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/fukj00.map" /debug /machine:I386 /out:"Debug/fukj00.exe" 
+".\Debug\autostart.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\ehandler.obj"
+".\Debug\fukj00.obj"
+".\Debug\irc_send.obj"
+".\Debug\loaddlls.obj"
+".\Debug\netutils.obj"
+".\Debug\rndnick.obj"
+".\Debug\shellcode.obj"
+".\Debug\threads.obj"
+".\Debug\wildcard.obj"
+".\Debug\advscan.obj"
+".\Debug\scan.obj"
+".\Debug\asn.obj"
+".\Debug\backdoor.obj"
+".\Debug\connback.obj"
+".\Debug\ftpd.obj"
+".\Debug\httpd.obj"
+".\Debug\ident.obj"
+".\Debug\redirect.obj"
+".\Debug\session.obj"
+".\Debug\tftpd.obj"
+".\Debug\keylogger.obj"
+".\Debug\psniff.obj"
+".\Debug\sniffer.obj"
+".\Debug\aliaslog.obj"
+".\Debug\capture.obj"
+".\Debug\cdkeys.obj"
+".\Debug\dcc.obj"
+".\Debug\download.obj"
+".\Debug\driveinfo.obj"
+".\Debug\findfile.obj"
+".\Debug\fphost.obj"
+".\Debug\misc.obj"
+".\Debug\net.obj"
+".\Debug\patcher.obj"
+".\Debug\processes.obj"
+".\Debug\remotecmd.obj"
+".\Debug\secure.obj"
+".\Debug\sysinfo.obj"
+".\Debug\version.obj"
+".\Debug\visit.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\WrickPC\LOCALS~1\Temp\RSP3DC.tmp"
+<h3>Output Window</h3>
+Compiling...
+autostart.cpp
+crc32.cpp
+crypt.cpp
+ehandler.cpp
+fukj00.cpp
+irc_send.cpp
+loaddlls.cpp
+netutils.cpp
+rndnick.cpp
+shellcode.cpp
+threads.cpp
+wildcard.cpp
+advscan.cpp
+scan.cpp
+asn.cpp
+backdoor.cpp
+connback.cpp
+ftpd.cpp
+httpd.cpp
+ident.cpp
+redirect.cpp
+session.cpp
+tftpd.cpp
+keylogger.cpp
+psniff.cpp
+sniffer.cpp
+aliaslog.cpp
+capture.cpp
+cdkeys.cpp
+dcc.cpp
+download.cpp
+driveinfo.cpp
+findfile.cpp
+fphost.cpp
+misc.cpp
+net.cpp
+patcher.cpp
+processes.cpp
+remotecmd.cpp
+secure.cpp
+sysinfo.cpp
+version.c
+visit.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+fukj00.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

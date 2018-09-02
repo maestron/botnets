@@ -1,0 +1,100 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP551.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/rBot.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"D:\exploits\rxbot2006\rBot.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP551.tmp" 
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP552.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/rBot.map" /debug /machine:I386 /out:"Debug/rBot.exe" 
+.\Debug\autostart.obj
+.\Debug\crc32.obj
+.\Debug\crypt.obj
+.\Debug\ehandler.obj
+.\Debug\irc_send.obj
+.\Debug\loaddlls.obj
+.\Debug\netutils.obj
+.\Debug\rBot.obj
+.\Debug\rndnick.obj
+.\Debug\shellcode.obj
+.\Debug\threads.obj
+.\Debug\wildcard.obj
+.\Debug\advscan.obj
+.\Debug\scan.obj
+.\Debug\cisco.obj
+.\Debug\dcom.obj
+.\Debug\iis5ssl.obj
+.\Debug\imail.obj
+.\Debug\lsass.obj
+.\Debug\messenger.obj
+.\Debug\ms04_007_asn1.obj
+.\Debug\msmq.obj
+.\Debug\netbios.obj
+.\Debug\plsass.obj
+.\Debug\upnp.obj
+.\Debug\veritas.obj
+.\Debug\webdav.obj
+.\Debug\wkssvc.obj
+.\Debug\backdoor.obj
+.\Debug\connback.obj
+.\Debug\ftpd.obj
+.\Debug\httpd.obj
+.\Debug\ident.obj
+.\Debug\redirect.obj
+.\Debug\rlogind.obj
+.\Debug\session.obj
+.\Debug\socks4.obj
+.\Debug\tftpd.obj
+.\Debug\keylogger.obj
+.\Debug\psniff.obj
+.\Debug\sniffer.obj
+.\Debug\ddos.obj
+.\Debug\icmpflood.obj
+.\Debug\pingudp.obj
+.\Debug\skysyn.obj
+.\Debug\synflood.obj
+.\Debug\targa3.obj
+.\Debug\tcpflood.obj
+.\Debug\tsunami.obj
+.\Debug\wisdom.obj
+.\Debug\wonk.obj
+.\Debug\aliaslog.obj
+.\Debug\capture.obj
+.\Debug\cdkeys.obj
+.\Debug\dcc.obj
+.\Debug\download.obj
+.\Debug\driveinfo.obj
+.\Debug\findfile.obj
+.\Debug\findpass.obj
+.\Debug\flood.obj
+.\Debug\fphost.obj
+.\Debug\misc.obj
+.\Debug\net.obj
+.\Debug\processes.obj
+.\Debug\remotecmd.obj
+.\Debug\secure.obj
+.\Debug\speedtest.obj
+.\Debug\sysinfo.obj
+.\Debug\visit.obj
+]
+Creating command line "link.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP552.tmp"
+<h3>Output Window</h3>
+Compiling...
+rBot.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

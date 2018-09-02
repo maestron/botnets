@@ -1,0 +1,21 @@
+1.		Finish crypt stuff.
+2.		Make bot remove itself if no DNS is active and no update URL is supplied (in cfg)
+		But if DNS matches a certain IP, then idle.
+3.		Hash check file
+4.		several stages of auth (bot.rcon)
+		(set tea key before logging so key is not stored in bot)
+5.		extend ftpd.
+6.		make source OOP
+7.		add structures to fidn debug and virtual machine code
+		so file properly uninstalls itself
+8.		add thread handling, _NEEDED_
+9.		make command names editable through config.exe?
+10.		make keylogger log to buffer and msg to chan
+11.		add better hostcmp.
+12.		NOT GET DETECTED BY AVS??!? POLYMORPH? AV HOOKS? WAHHHH
+13.		Make uninstall_userkit() unload the dll
+14.		syn scanner.
+15.		distributed cracking, md5!
+16.		more stealth options! stealth is a core component of this bot! like anti-av but no
+		av-kill.
+and lots more.............

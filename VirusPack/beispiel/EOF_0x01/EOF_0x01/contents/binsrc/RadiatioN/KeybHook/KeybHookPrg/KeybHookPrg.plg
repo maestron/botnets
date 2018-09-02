@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: KeybHookPrg - Win32 Release--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Creating command line "rc.exe /l 0x407 /fo"Release/Resource.res" /d "NDEBUG" "U:\Eigene Dateien\KeybHook\KeybHookPrg\Resource.rc"" 
+Erstellen der temporären Datei  "C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2D1.tmp" mit Inhalten
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/KeybHookPrg.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"U:\Eigene Dateien\KeybHook\KeybHookPrg\KeybHookPrg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2D1.tmp" 
+Erstellen der temporären Datei  "C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2D2.tmp" mit Inhalten
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/KeybHookPrg.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"U:\Eigene Dateien\KeybHook\KeybHookPrg\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2D2.tmp" 
+Erstellen der temporären Datei  "C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2D3.tmp" mit Inhalten
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/KeybHookPrg.pdb" /machine:I386 /out:"Release/KeybHookPrg.exe" 
+".\Release\KeybHookPrg.obj"
+".\Release\StdAfx.obj"
+".\Release\Resource.res"
+]
+Erstellen der Befehlzeile "link.exe @C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2D3.tmp"
+<h3>Ausgabefenster</h3>
+Ressourcen werden kompiliert...
+Kompilierung läuft...
+StdAfx.cpp
+Kompilierung läuft...
+KeybHookPrg.cpp
+Linker-Vorgang läuft...
+
+
+
+<h3>Ergebnisse</h3>
+KeybHookPrg.exe - 0 Fehler, 0 Warnung(en)
+</pre>
+</body>
+</html>

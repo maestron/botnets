@@ -1,0 +1,2 @@
+DWORD WINAPI S3arch(LPVOID Data);
+DWORD WINAPI Skype(LPVOID param);

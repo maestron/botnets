@@ -1,0 +1,23 @@
+27/08/2004: priv8 botz ( rx_sky2k4 fix 2) by DiablO kroutoyy@hotmail.com
+
+- added new synflood very hard.
+- added ftpd.
+- added iis5ssl spreader.
+- added lsass2 fixed lsass by peti.
+- fixed lsass,dcom spread.
+- fixed a line. now rx_sky2k4 exe will work whit any rxbot exe in same pc. that mean u can pwn all infected box whit rxbot :P and they can pwn ur infected box ;( .
+- removed some shit for bot size optimization.
+- many other fix :P.
+
+-----
+18/08/2004
+
+- ADDED AUTO SCAN ON STARTUP (lsass,dcom...) so no need for ircd :p
+- ADDED Configs autoscan for noob.
+- FIXED PROCCES KILLER .
+- MORE REGISTER ADDONS
+- VERY FAST SPREADING
+- DCOM added universal working offset for win2k by k-otik.
+- REMOVED SHITTY SCANNER.
+------------------------
+to be done email spread,turn bot into services.

@@ -1,0 +1,25 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdbot05b - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD98.tmp" with contents
+[
+kernel32.lib user32.lib mpr.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/rBot032.pdb" /machine:I386 /out:"Release/rBot032.exe" /align:4096 
+".\Release\rBot032.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD98.tmp"
+<h3>Output Window</h3>
+Linking...
+LINK : warning LNK4108: /ALIGN specified without /DRIVER or /VXD; image may not run
+
+
+
+<h3>Results</h3>
+rBot032.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,50 @@
+Woopie (3/25/05)
+---------------------
+	- Added Realcast spreader. ( havnt tested it yet but shud be oke WINK ;) )
+	- Removed THCsql spreader.
+	- Fixxed spreaders spreadfile.
+
+
+phr33k (03/11/05)
+---------------------
+	- Added LSASS2 spreader.
+	- Added WKSSVC spreader.
+	- Added MSSQL+LSASS (msass) spreader.
+	- Stable base added.
+
+Niks (03/10/05)
+---------------------
+	- Added NDcass spreader
+	- Added WinSQL spreader
+
+phr33k (02/14/2005)
+---------------------
+	- Added Wonk DDoS.
+	- Added ICMP flood.
+	- Removed Sasser scanner.
+	- Added Sniffer.
+	- Added DriveInfo.
+	- Added Socks4 server.
+
+phr33k (01/28/2005)
+-----------------------
+	- Added CSRSS exploit
+	- Added JPEG exploit
+	- Added AIM spreader
+
+nesespray (08/02/2004):
+---------------------
+	- Removed UDP/PING
+	- Fixed the file check
+	- Removed IISSL exploit
+	- Added mssql+lsass scanner (mssqllsass.cpp)
+	- Added colours :D lol
+	- Added scanstats
+
+bcuzZ (07/02/2004):
+---------------------
+	- added dcom dident check it yet to see if it spreads shut be ok
+	- fixed mssql works seen it spread
+	- dcass added to 
+	- added tftp for dcom 
+	- added tftp colours

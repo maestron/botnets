@@ -1,0 +1,35 @@
+To compile rbot/rxbot/urxbot/forbot/phatbot/agobot or somehting else.
+
+you must:
+
+You need Visual Studio 6.0 (Get it from wherever...) with (Download these) ...
+  
+Service Pack 5 (*)
+Newest Platform SDK (Core SDK/Build Environment) (**) 
+Newest Processor Pack (***)
+
+(*)	http://msdn.microsoft.com/vstudio/downloads/updates/sp/vs6/sp5/ 
+(**)	http://www.microsoft.com/msdownload/platformsdk/sdkupdate/
+(***)	http://msdn.microsoft.com/vstudio/downloads/tools/ppack/download.aspx
+
+Now...
+
+A.Install SP5 
+
+B.Install the Process Packer for VS C++
+
+C.Install latest SDK/Core
+
+D.Add these paths to VS:- 
+
+"Tools|Options | Directories" in Visual Studio (be sure to include them on top of the list):
+To Show directories for|Executable files: <path to sdk>\MICROSOFT SDK\BIN
+To Show directories for|Include files: <path to sdk>\MICROSOFT SDK\INCLUDE
+To Show directories for|Library files: <path to sdk>\MICROSOFT SDK\LIB 
+
+Afternotes:
+1. Make sure the added paths are on top of the list
+2. You don't need the full SDK download, only Core SDK/Build Environment
+3 Thats it..
+
+Good Luck.

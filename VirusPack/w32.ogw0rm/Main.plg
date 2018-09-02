@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Main - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP8D7.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/Main.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Clients\Aim.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Clients\Gaim.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Clients\GoogleTalk.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Clients\Msn.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Clients\PalTalk.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Clients\Skype.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Main.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Peer2Peer.cpp"
+"C:\Documents and Settings\Akos\Desktop\w32.ogw0rm\Clients\Icq.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP8D7.tmp" 
+Creating temporary file "C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP8D8.tmp" with contents
+[
+msvcrt.lib kernel32.lib user32.lib advapi32.lib shell32.lib shlwapi.lib wininet.lib ws2_32.lib odbc32.lib netapi32.lib mpr.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Main.pdb" /machine:I386 /nodefaultlib /out:"Release/Main.exe" 
+".\Release\Aim.obj"
+".\Release\Gaim.obj"
+".\Release\GoogleTalk.obj"
+".\Release\Msn.obj"
+".\Release\PalTalk.obj"
+".\Release\Skype.obj"
+".\Release\IMSpread.obj"
+".\Release\Main.obj"
+".\Release\Peer2Peer.obj"
+".\Release\Icq.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP8D8.tmp"
+<h3>Output Window</h3>
+Compiling...
+Aim.cpp
+Gaim.cpp
+GoogleTalk.cpp
+Msn.cpp
+PalTalk.cpp
+Skype.cpp
+Main.cpp
+Peer2Peer.cpp
+Icq.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Main.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

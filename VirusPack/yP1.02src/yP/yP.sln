@@ -1,0 +1,15 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "yP", "yP.dsp", "{404CFDFF-F78C-4D23-A882-E4458C723237}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,154 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+Starting your app by viewing file properties
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+By some experiments i found a very interesting thing. Maybe you know the WinRAR or WinZIP explorer
+extensions which attaches themself to the context menu of the windows explorer. So you maybe asked yourself
+why is this fucking explorer so intelligent to decide whether this file is extractable or not?
+Hehe the answer is simple: the explorer is stupid but the explorer extension is intelligent :)
+I noticed that by clicking on a installation package from the internet to its context menu. i wanted to 
+debug the file with ollydbg's context menu entry. i wondered why WinRAR was showing me a entry &quot;Extract this
+file...&quot; on a EXE file!?!? I stopped debugging and went on seach how this could be. So here you now
+can read how it works. First i thought, ok nice feature and then i fall back into my VX origin for starting
+viral stuff :) 
+
+four new important things have been born with this new technique:
+- We are able about this extensions to start our viral stuff without any autorun entries anywhere.
+- this would also work in secure mode of windows
+- start your viral stuff just by showing file properties - a VXer dream comes true xD
+- most of AV and autorun checking apps already don't know this method
+
+remark:
+i never implemented this in an app. you will have to do it yourself. i tested it with a test dll
+giving me a messagebox on loading, it worked really well. at the end of the tutorial i will add a 
+*.reg file for you, so its easier for you to implement it. This technique seems more complex then it 
+really is!
+
+Description
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+ok enough intruduction, let me explain how this works. We need to change the windows registry on 
+some places. also we need a dll which will be loaded on viewing the properties. this dll must!!! be 
+dropped on harddisk or it will not work. you could move it to windows or system32 directory for example. 
+If you have infected the PC by exe you could go this way (for explanation look under it):
+
+ +-------------------------------------+
+ | EXE infects PC                      |
+ | EXE dropps DLL                      |
+ | EXE creates mutex                   |
+ | EXE writes to registry              |
+ | DLL loads                           |
+ | DLL does nothing cause mutex exists |
+ +-------------------------------------+
+       ||
+       ||
+       \/
+ +------------+
+ | PC reboots |     (Workflow goes from up to down)
+ +------------+
+       ||
+       ||
+       \/
+ +---------------------------------------------+
+ | Windows explorer loads                      |
+ | explorer loads extension for *.lnk files    |
+ | DLL loads                                   |
+ | DLL loads EXE file cause mutex doesnt exist |
+ | EXE creates mutex                           |
+ +---------------------------------------------+
+
+ok as i already said you must infect the PC, how you do it is your problem :) ok, then the app should 
+drop a dll onto harddisk, where is not important but it must keep at that place. Then the app should create 
+a mutex so the dll can decide whether the app is already started or not. You must do this because the dll
+gets often loaded and unloaded, everytime the explorer checks properties of our file. Which file this is,
+is the next step to set in registry. its described in the next chapter! the best way to start the dll
+is to register it for the *.lnk file extension. This extension will be not shown to the user and is found
+very often on a normal computer. Just open start menu and dll + app will be loaded :P
+
+But what happens if the computer reboots?
+The Windows explorer will be loaded as normal. So if there is any link on the desktop the explorer 
+extension dll will be loaded by the explorer automatically. For now the DLL has to start the app if 
+the mutex is not already created. At the app startup we have to create the mutex to avoid double starting.
+the app can run now as an normal virus.
+
+Installing explorer extension in registry
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+1. We have to create a new key like: (replace [NAME] with anything you want)
+HKEY_CLASSES_ROOT\lnkfile\shellex\ContextMenuHandlers\[NAME]
+
+
+2. Set default value of this key to a non-existing CLSID. syntax must be the same!
+(you can generate it randomly with hex characters)
+{E0D79304-84BE-11CE-9641-444553544444}
+
+
+3. Create a new Key like: (CLSID must be the same as above)
+HKEY_CLASSES_ROOT\CLSID\{E0D79304-84BE-11CE-9641-444553544444}\InProcServer32
+
+
+4. Set default value of this key to path of your dll
+C:\Windows\system32\TestDll.dll
+
+
+5. create an entry under
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved
+(Name of value also the CLSID)
+{E0D79304-84BE-11CE-9641-444553544444}
+
+6. set its value to
+[NAME]
+
+
+remark: 
+all values are REG_SZ (string terminated with zero)
+
+*.REG Files
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+As an example, here a reg file with my test settings. Just copy/paste it in a *.reg file.
+
+----- FILE START -----
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\lnkfile\shellex\ContextMenuHandlers\TestDll]
+@=&quot;{E0D79304-84BE-11CE-9641-444553544444}&quot;
+
+[HKEY_CLASSES_ROOT\CLSID\{E0D79304-84BE-11CE-9641-444553544444}\InProcServer32]
+@=&quot;C:\\TestDll.dll&quot;
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved]
+&quot;{E0D79304-84BE-11CE-9641-444553544444}&quot;=&quot;TestDll&quot;
+
+
+
+------ FILE END ------
+
+Important
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+If you don't want to crash the system, your dll should not longer need than some milliseconds in main().
+Cause if your dll needs to much time, the explorer is waiting until your dll comes back from main() 
+function. beware of this, its important!
+
+If your dll loads not instantly you add the entries to registry, wait some time ... it will be loaded
+always, be sure. Windows seems to call this dll like in a timer, but the time is not really defined ;)
+
+Now you should be able to write a code to start your malware, virus worm and so on without using
+public known startup methods :) 
+
+Last words
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Some nice greetings go to the complete EOF group and especially to Skyout my good friend *keep on rocking*
+
+As always no copyright - free for any use
+
+Tutorial written by RadiatioN in May 2006 at EOF group
+http://www.eof-project.net
+
+My Site:
+http://radiation.eof-project.net
+
+Contact:
+radiation[at]eof-project[dot]net
+</pre></body></html>

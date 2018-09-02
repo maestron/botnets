@@ -1,0 +1,5 @@
+# Microsoft Developer Studio Generated Dependency File, included by download.mak
+
+.\download.c : \
+	".\main.h"\
+	

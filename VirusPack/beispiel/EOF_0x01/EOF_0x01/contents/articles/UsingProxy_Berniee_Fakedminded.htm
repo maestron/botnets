@@ -1,0 +1,221 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Berniee,Fakedminded/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+                                   Using proxy
+                               berniee/fakedminded
+                                      2006
+
+
+1.Introduction
+
+  In this article I will try to give you a hint on how you can use proxies in your 
+codes. I will not get deep in this subject meaning that I will not discuss Authentication
+too.
+PS:all the following is tested on CCProxy(c).
+
+2.Proxy types:
+
+Proxy types that I am going to discuss here are socks (v.4) and http proxy.
+
+3.Socks proxy:
+
+I will explain this briefly -socks proxy according to my own researches(rfc!).
+Inorder to get connected to socks proxy first you need to send a packet(duh!),
+and according to rfc 
+--the packet should be like this:
+
+                +----+----+----+----+----+----+----+----+----+----+....+----+
+		| VN | CD | DSTPORT |      DSTIP        | USERID       |NULL|
+		+----+----+----+----+----+----+----+----+----+----+....+----+
+ # of bytes:	   1    1      2              4           variable       1
+
+
+vn=is the version of rfc which   we are going to use 4(one byte)
+cd=is the order to the proxy '1'--&gt;connect,while '2'---&gt;bind(not going to talk about it here)(1byte)
+dstport=destination port so obvious(2 bytes==word)
+dstip=destination IP address (4 bytes==dword!)
+userid=variable size it said to be something to do with identd(I think Authentication--
+not my bussiness here--)
+Null=must be ended with null byte.
+
+now  lets put it in a structure:
+
+socks_s struct
+
+vn db ?
+cd db ?
+dstport dw ?
+dstip dd ?
+userID db 256 dup(?)
+nell db ?
+
+socks_s ends
+
+and we just fill the previous structure and send it.(check the code at the end)
+
+--and the response should be somehting like this(rfc):
+           	+----+----+----+----+----+----+----+----+
+		| VN | CD | DSTPORT |      DSTIP        |
+		+----+----+----+----+----+----+----+----+
+ # of bytes:	   1    1      2              4
+
+
+vn=the version of the reply code and should be 0.
+cd=state that our request is accomplished or not.Again from rfc:
+
+	90: request granted
+	91: request rejected or failed
+	92: request rejected becasue SOCKS server cannot connect to
+	    identd on the client
+	93: request rejected because the client program and identd
+	    report different user-ids
+
+dtport=port that we wanted to connect to of the requested IP address.
+dstip=Ip address we requested to connect to.
+...well for me I saw that other thing is resent back to me is the userid!
+
+so we are going to check the cd of the recieved packet .
+
+See the following code that will try to connect to mx1.mail.yahoo.com,through socks 
+proxy.(change the proxy IP to get it work)
+
+;-----------------------cut from here
+
+ .586
+.model flat,stdcall
+option casemap:none
+
+socks_s struct
+
+vn db ?
+cd db ?
+dstport dw ?
+dstip dd ?
+userID db 256 dup(?)
+db ?
+
+socks_s ends
+
+include \masm32\include\windows.inc
+include \masm32\include\kernel32.inc
+include \masm32\include\user32.inc
+include \masm32\include\wsock32.inc
+
+includelib \masm32\lib\kernel32.lib
+includelib \masm32\lib\user32.lib
+includelib \masm32\lib\wsock32.lib
+
+
+.data
+db &quot;sock4&quot;,0
+ip_sock db &quot;xxx.xxx.xxx.xxx&quot;,0    ;change that according to socks proxy address
+_server db &quot;mx1.mail.yahoo.com&quot;,0 ;our requested address!
+USERid db &quot;Guest&quot;,0               ; :)   
+
+.data?
+
+socks_send socks_s&lt;?&gt;
+
+ws WSADATA &lt;?&gt;
+sock_addr sockaddr_in&lt;?&gt;
+buffer db 256 dup(?)           ;where to put the recieved packet
+socket_ dd ?
+
+.code
+start:
+
+call Intialize_wsocket
+cmp eax,-1
+je exit
+
+invoke socket,AF_INET,SOCK_STREAM,IPPROTO_TCP
+mov socket_,eax
+
+mov sock_addr.sin_family,AF_INET
+xor eax,eax
+invoke htons,1080               ;most socks proxies have this port change it if not.
+mov sock_addr.sin_port,ax
+invoke inet_addr,offset ip_sock
+cmp eax,INADDR_NONE
+je exit
+mov sock_addr.sin_addr.S_un.S_addr,eax
+invoke connect,socket_,addr sock_addr,sizeof sock_addr
+cmp eax,SOCKET_ERROR
+je exit
+;nvoke inet_addr,offset dstIP  ;if you are using IP address not domain 
+invoke gethostbyname,offset _server
+
+or eax,eax
+jz exit
+mov eax,[eax+12]
+mov eax,[eax]
+mov eax,[eax]
+
+mov socks_send.vn,4   ;socks v.4
+mov socks_send.cd,1   ;order===&gt;connect
+
+mov socks_send.dstport,1900h           ;port 25==&gt;19h==&gt;1900h(in dword)
+mov socks_send.dstip,eax               ;the ip we supposed to get from gethostbyname()
+invoke lstrcpy,offset socks_send.userID,offset USERid
+mov socks_send.nell,0
+
+
+invoke send,socket_,offset socks_send,sizeof socks_send,0
+invoke recv,socket_,offset buffer,512,0
+
+
+mov eax,offset buffer
+cmp byte ptr [eax+1],90                 ;checking if the request is granted
+jne exit
+invoke recv,socket_,offset buffer,256,0
+
+
+invoke MessageBox,0,offset ip_sock,offset buffer,0
+
+
+exit:
+invoke ExitProcess,0
+
+Intialize_wsocket:
+invoke WSAStartup,001h,addr ws
+or eax,eax
+jz failed_to_intialize
+
+ret
+
+failed_to_intialize:
+mov eax,-1
+ret
+
+end start
+;----------------------stop cutting 
+
+
+
+
+4.HTTP proxy:
+HTTP proxy is dependant on http protocol,well here I am going to discuss how it works
+by the 'CONNECT'method ,and Again I will not explain how to use authentication.
+
+to use http proxy,you just send the following packet:
+CONNECT servername:port HTTP/1.1   
+
+where :
+CONNECT is the order we send to the proxy
+servername whether it is an IP address or domain name(depend on proxy to resolve it)
+port it is the port to connect to!
+HTTP/1.1 Hypertext Transfer Protocol
+
+try it on telnet it is fun.
+
+I am to0 tired to write anything else,so I will depend on you to develop the code.
+
+5.Final Words:
+Hoping you understand the point I wanted to reach from all this,you have to go on 
+googling to see how the Authentication is done,and then code nice things.
+
+xxxxxxxxxxxxfakedminded(2006) from the lands of the Ultimate Free-Damn! :\xxxxxxxxxxx
+</pre></body></html>

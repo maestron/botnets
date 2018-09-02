@@ -1,0 +1,11 @@
+mFunctions = 0, 0, 0, 0, C
+frmMain = 115, 115, 873, 583, Z, 46, 46, 816, 524, C
+mFileSize = 0, 0, 0, 0, C
+RC4 = 0, 0, 0, 0, C
+RealignPE = 0, 0, 0, 0, C
+mChangeIcon = 46, 46, 814, 524, 
+mEOF = 0, 0, 0, 0, C
+mCloneFile = 69, 69, 837, 547, 
+frmLogin = 46, 46, 814, 524, , 23, 23, 793, 501, C
+mSection = 0, 0, 0, 0, C
+mPADX = 125, 125, 867, 583, 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="365"
+   name=""
+   committed-date="2004-03-18T14:58:55.478305Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/Mods/glow"
+   last-author="glow"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="365"
+   name="quick-commands-list.mrc"
+   text-time="2004-03-21T22:23:22.199017Z"
+   committed-date="2004-03-18T14:58:55.478305Z"
+   checksum="9171b6df53e3016deb520d24737818d8"
+   last-author="glow"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.168974Z"/>
+<entry
+   committed-rev="153"
+   name="sniffer.cpp"
+   text-time="2004-03-21T22:23:22.239075Z"
+   committed-date="2004-03-08T05:18:58.597845Z"
+   checksum="74557fc0d9227d3b1ff27b8df07e2d82"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.219046Z"/>
+</wc-entries>

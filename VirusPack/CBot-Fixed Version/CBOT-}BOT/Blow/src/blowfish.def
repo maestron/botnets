@@ -1,0 +1,9 @@
+LIBRARY BLOWFISH
+
+EXPORTS
+	LoadDll
+	UnloadDll
+	DLLInfo
+	Encpass
+	Encrypt
+	Decrypt

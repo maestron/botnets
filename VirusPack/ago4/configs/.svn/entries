@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="131"
+   name=""
+   committed-date="2004-03-07T16:16:33.404565Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/configs"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="145"/>
+<entry
+   committed-rev="11"
+   name="gpl.txt"
+   text-time="2003-02-11T19:52:24.069918Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="393a5ca445f6965873eca0259a17f833"
+   kind="file"
+   prop-time="2003-02-11T19:52:24.059904Z"/>
+<entry
+   committed-rev="42"
+   name="config-sample-old.cpp"
+   text-time="2003-02-11T19:52:24.099961Z"
+   committed-date="2004-02-27T21:15:04.728136Z"
+   checksum="c9c775811248523adb6e1ca1316d346b"
+   kind="file"
+   prop-time="2003-02-11T19:52:24.089947Z"/>
+<entry
+   committed-rev="131"
+   name="config-sample.cpp"
+   text-time="2003-02-11T19:52:24.140019Z"
+   committed-date="2004-03-07T16:16:33.404565Z"
+   checksum="cddb84b3d54d8a5374fe65884343a0bd"
+   kind="file"
+   prop-time="2003-02-11T19:52:24.130004Z"/>
+</wc-entries>

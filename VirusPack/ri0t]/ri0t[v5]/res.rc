@@ -1,0 +1,2 @@
+#pragma comment(linker,"/RELEASE")
+APPICON ICON "jpg.ico"

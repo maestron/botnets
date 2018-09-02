@@ -1,0 +1,364 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_YC ACCELERATORS 
+BEGIN
+    "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOGEX 0, 0, 333, 215
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "[ yoda's Protector v1.02 ]"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TABS,"SysTabControl32",TCS_MULTILINE | WS_TABSTOP,
+                    0,0,333,204,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,0,205,333,
+                    10
+END
+
+DLG_OPTIONS DIALOGEX 0, 0, 324, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_STATICEDGE
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Anti-SoftICE Protection",IDC_SICHECK,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,20,20,128,10
+    CONTROL         "Clear Import Information",IDC_DESTROYIMPORT,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,20,77,127,10
+    CONTROL         "Checksum Protection",IDC_CHECKHEADERCRC,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,20,34,127,10
+    CONTROL         "Anti-Dump Protection",IDC_ANTIDUMP,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,20,62,127,10
+    GROUPBOX        "Protection",IDC_STATIC3,7,5,152,127
+    CONTROL         "API Redirection",IDC_APIREDIRECT,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,20,48,127,10
+    CONTROL         "Clear PE header ",IDC_ERASEPEHEADER,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,20,91,126,10
+    GROUPBOX        "Compression Option",IDC_STATIC4,7,137,152,39
+    CONTROL         "",IDC_COMPRESSLEVEL,"msctls_trackbar32",TBS_AUTOTICKS,
+                    15,155,126,12
+    LTEXT           "10",IDC_COMPRESSRATE,146,155,8,9
+    GROUPBOX        "Advanced",IDC_STATIC5,165,5,152,80
+    GROUPBOX        "Other",IDC_STATIC6,165,91,152,85
+    CONTROL         "Create backup copy (BAK-file)",IDC_MAKEBACKUP,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,180,106,127,11
+    CONTROL         "Exit when done",IDC_EXITDONE,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT,180,135,127,11
+    CONTROL         "Auto run after loading",IDC_AUTORUN,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,180,121,126,8
+    CONTROL         "Remove .reloc section",IDC_REMOVERELOC,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,180,21,124,8
+    CONTROL         "Eliminate MS-DOS header",IDC_REMOVEDOS,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,180,47,122,12
+    CONTROL         "Optimize MS-DOS header",IDC_OPTIMIZEDOS,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,180,60,122,13
+    EDITTEXT        IDC_SECTIONNAME,180,152,55,13,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    LTEXT           "Section's Name",IDC_STATIC7,240,153,69,8
+    CONTROL         "Remove debug information",IDC_RMDEBUG,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT,180,34,123,9
+END
+
+DLG_PROTECT DIALOGEX 0, 0, 324, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_STATICEDGE
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "...",ID_FILE_OPEN,302,7,15,12,NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "...",ID_FILE_SAVE,302,25,15,12,WS_DISABLED | NOT 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Protect",ID_FILE_PROTECT,7,162,62,14,WS_DISABLED | NOT 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Test",ID_FILE_TEST,71,162,62,14,WS_DISABLED | NOT 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_FILE_OPEN,72,7,225,12,ES_AUTOHSCROLL | NOT WS_BORDER | 
+                    NOT WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_FILE_SAVE,72,25,225,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    LTEXT           "File to Protect",IDC_STATIC1,7,8,61,9
+    LTEXT           "Ouput to FileName",IDC_STATIC2,7,26,63,9,WS_DISABLED
+    EDITTEXT        IDC_COMMENT,7,48,310,106,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL | 
+                    NOT WS_TABSTOP,WS_EX_ACCEPTFILES | WS_EX_STATICEDGE
+END
+
+DLG_PROJECT DIALOGEX 0, 0, 236, 103
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_STATICEDGE
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 181, 122
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About yoda's Protector"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "OK",IDOK,121,102,53,13,0,WS_EX_STATICEDGE
+    LTEXT           "yoda's Protector \tVersion 1.02",IDC_STATIC,36,12,125,9,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 2004-2005 Ashkbiz Danehkar All rights reserved",
+                    IDC_STATIC,21,36,142,18
+    ICON            IDI_ICON,IDC_STATIC,7,6,20,20,0,WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_STATIC,7,26,167,69
+    LTEXT           "Website:",IDC_STATIC,22,60,30,10
+    PUSHBUTTON      "http://yodap.cjb.net/",IDC_WEB,64,59,92,11,BS_FLAT | 
+                    NOT WS_TABSTOP
+    PUSHBUTTON      "Special Thanks to...",IDC_THANKS,64,76,92,11,BS_FLAT | 
+                    NOT WS_TABSTOP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 213
+    END
+
+    DLG_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        VERTGUIDE, 7
+        VERTGUIDE, 317
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 176
+    END
+
+    DLG_PROTECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        VERTGUIDE, 7
+        VERTGUIDE, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    DLG_PROJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 114
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "&Open",                       ID_FILE_OPEN
+        MENUITEM "&Save as...",                 ID_FILE_SAVE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Protect",                    ID_FILE_PROTECT, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        IDOK
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Protection",                  ID_OPTIONS_PROTECTION
+    END
+    POPUP "View"
+    BEGIN
+        POPUP "Interface Language"
+        BEGIN
+            MENUITEM "English",                     ID_LNG_ENGLISH
+            MENUITEM "Deutsch ",                    ID_LNG_GERMAN
+            MENUITEM "Français ",                   ID_LNG_FRENCH
+            MENUITEM "Italiano",                    ID_LNG_ITALIAN
+            MENUITEM "Español ",                    ID_LNG_SPANISH
+        END
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Help contents\tF1",           ID_HELP_HELPCONTENTS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "About...",                    ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SAVE                BITMAP                  "Graphics\\bitmaps\\SAVE.BMP"
+IDB_HELP                BITMAP                  "Graphics\\bitmaps\\HELP.BMP"
+IDB_PROTECT             BITMAP                  "graphics\\bitmaps\\bitmap1.bmp"
+IDB_OPEN                BITMAP                  "Graphics\\bitmaps\\OPEN.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "graphics\\icons\\yPIcons.ico"
+IDI_SECUR               ICON                    "Graphics\\icons\\SECUR01B.ICO"
+IDI_OPEN                ICON                    "graphics\\icons\\Open.ico"
+IDI_OPTION              ICON                    "graphics\\icons\\Option.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_RT_MANIFEST1        RT_MANIFEST             "Graphics\\XPtheme\\yP.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,2,5
+ PRODUCTVERSION 1,0,2,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Yoda's Protector"
+            VALUE "FileVersion", "1.0.2.5"
+            VALUE "InternalName", "yP"
+            VALUE "LegalCopyright", "© 2004-2005 Ashkbiz Danehkar."
+            VALUE "OriginalFilename", "yP.exe"
+            VALUE "ProductName", "yoda's Protector"
+            VALUE "ProductVersion", "1.02"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "yC"
+    IDC_YC                  "YC"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

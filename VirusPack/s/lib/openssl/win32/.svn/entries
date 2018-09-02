@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="310"
+   name=""
+   committed-date="2004-03-15T21:01:05.074908Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/lib/openssl/win32"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   name="include"
+   kind="dir"/>
+<entry
+   name="lib"
+   kind="dir"/>
+</wc-entries>

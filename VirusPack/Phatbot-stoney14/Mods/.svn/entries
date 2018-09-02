@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="365"
+   name=""
+   committed-date="2004-03-18T14:58:55.478305Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/Mods"
+   last-author="glow"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   name="glow"
+   kind="dir"/>
+<entry
+   committed-rev="152"
+   name="mods-readme.txt"
+   text-time="2004-03-21T22:23:22.299161Z"
+   committed-date="2004-03-08T05:16:35.031231Z"
+   checksum="435c463d873b54ceb9aed44f7d628bc3"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.289147Z"/>
+</wc-entries>

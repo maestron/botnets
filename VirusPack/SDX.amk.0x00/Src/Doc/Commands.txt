@@ -1,0 +1,15 @@
+<prefix>addreg                                   Adds registry autostart entries
+<prefix>die                                      Exits the application (bot will be rerun at startup)
+<prefix>disconnect                               Disconnect from the IRC server
+<prefix>getedu                                   Replies if the bot has an edu host
+<prefix>logout                                   Logs the user out
+<prefix>prefix                                   Temporarely changes the prefix
+<prefix>reconnect                                Reconnect to the IRC server specified in the settings
+<prefix>randnick                                 Changes the nick of the bot into a new random one
+<prefix>rm                                       Removes the bot from the computer, and all his changes to the system
+<prefix>quit                                     Quits from IRC
+<prefix>dns <ip/host>                            Resolves ip to host / host to ip
+<prefix>execute <visibility> <file>              Runs <file>. 0 = hidden; 1= visible
+<prefix>up <link> <id>                           Updates the bot  if <id> is not equal to the bot's ID
+<prefix>download <url> <destination> <action>    Downloads <url> to <destination> and executes it if action = 1
+<prefix>mode <channel> <mode> <user>             Set mode <mode> applied to <user> on <channel>

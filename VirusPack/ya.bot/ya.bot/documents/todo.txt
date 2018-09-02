@@ -1,0 +1,43 @@
+/*  ya.bot  */
+
+1.		encrypt exploits.
+9.		smtp engine.
+13.		more mail snaggers.
+14.		aim / googletalk / icq / msn spread.
+15.		irc clone / flood / jupe.
+16.		xdcc.
+18.		redirect.
+20.		http proxies.
+21.		irc bouncer.
+22.		mssql exploit.
+21.		plugins / run shellcode, download shellcode as plugin .shl and read + run + crazy shellcode_being idea.
+22.		registry control.
+23.		encrypt av-killer list, 600 entries, remove dupes.
+24.		socks4 traffic logger.
+26.		add wif.c.
+27.		get external ip via ip site or ircd if external ip is private.
+28.		support for parameters in file.execute.
+29.		mac login ala agobot.
+31.		prevent remote apps to load dlls into our process.
+33.		exception handler.
+34.		trace / whois.
+35.		clone / fakenet.
+36.		flashfxp snagger.
+38.		ssl
+39.		process module control
+40.		array with list of ips to avoid scannning
+41.		add shellcode type and offset to expscan
+42.		p2p spreading
+43.		nix support
+44.		irc redirect w. irc redirect scanner (syn)
+45.		builtin ircd
+46.		bot exploit honeypot
+47.		php control
+48.		dynamic buffers: new, delete
+49.		scan.all / autoscan
+50.		botkiller.process - scan specific process
+51.		add wonkflood
+52.		make threading array dynamic, linked list
+53.		add support for "" if a path or parameter consists of spaces
+54.		pause / resume thread (SuspendThread()/ResumeThread())
+55.		real nick mod, starts with steve and changes for example e to 3, st3ve

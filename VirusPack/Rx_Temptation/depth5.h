@@ -1,0 +1,1 @@
+bool massasn(EXINFO exinfo);

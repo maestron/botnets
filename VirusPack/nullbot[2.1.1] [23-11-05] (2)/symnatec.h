@@ -1,0 +1,1 @@
+BOOL SYMExploit(EXINFO exinfo);

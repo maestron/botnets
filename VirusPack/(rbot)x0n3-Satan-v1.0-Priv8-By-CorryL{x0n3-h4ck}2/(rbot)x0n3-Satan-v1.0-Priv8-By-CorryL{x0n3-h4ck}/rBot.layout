@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Win32 Release" />
+	<File name="advscan.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="18" topLine="0" />
+	</File>
+	<File name="aliaslog.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="autostart.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="avirus.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="ehandler.h" open="1" top="1" tabpos="6">
+		<Cursor position="21" topLine="0" />
+	</File>
+	<File name="includes.h" open="1" top="0" tabpos="5">
+		<Cursor position="830" topLine="39" />
+	</File>
+</CodeBlocks_layout_file>

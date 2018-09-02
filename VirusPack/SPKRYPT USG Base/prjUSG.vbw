@@ -1,0 +1,13 @@
+mGlobals = 75, 75, 693, 533, 
+mStrGen = 100, 100, 718, 558, 
+mCreateClass = 150, 150, 768, 608, 
+frmMain = 150, 150, 768, 608, , 100, 100, 718, 558, C
+mFindStrFunc = 200, 200, 818, 658, 
+mCreateForm = 50, 50, 674, 508, 
+mCreateProject = 25, 25, 649, 483, 
+mEncrypt = 150, 150, 766, 608, 
+mWriteSettings = 175, 175, 791, 633, 
+mCreateModule = 125, 125, 760, 583, 
+mJunkAPI = 25, 25, 660, 483, 
+mBlankLines = 75, 75, 710, 533, 
+mFakeFunction = 100, 100, 735, 558, 

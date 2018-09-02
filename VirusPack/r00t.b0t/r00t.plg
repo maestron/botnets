@@ -1,0 +1,67 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: r00t - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Affix\LOCALS~1\Temp\RSP89D1.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/r00t.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Affix\Desktop\Backupz\- ihack.co.uk\r00t.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Affix\LOCALS~1\Temp\RSP89D1.tmp" 
+Creating temporary file "C:\DOCUME~1\Affix\LOCALS~1\Temp\RSP89D2.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Exe/r00t.pdb" /machine:I386 /out:"Exe/r00t.exe" 
+".\Release\advscan.obj"
+".\Release\asn1.obj"
+".\Release\dcom.obj"
+".\Release\lsass.obj"
+".\Release\random.obj"
+".\Release\aliaslog.obj"
+".\Release\autostart.obj"
+".\Release\crc32.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\ehandler.obj"
+".\Release\flashfxp.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\irc_send.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\msn.obj"
+".\Release\net.obj"
+".\Release\netutils.obj"
+".\Release\processes.obj"
+".\Release\psniff.obj"
+".\Release\r00t.obj"
+".\Release\redirect.obj"
+".\Release\rndnick.obj"
+".\Release\scan.obj"
+".\Release\secure.obj"
+".\Release\shellcode.obj"
+".\Release\SkySyn.obj"
+".\Release\Socks4.obj"
+".\Release\sysinfo.obj"
+".\Release\tftpd.obj"
+".\Release\threads.obj"
+".\Release\visit.obj"
+".\Release\wildcard.obj"
+".\Release\zip.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Affix\LOCALS~1\Temp\RSP89D2.tmp"
+<h3>Output Window</h3>
+Compiling...
+r00t.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+r00t.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

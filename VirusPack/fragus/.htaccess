@@ -1,0 +1,9 @@
+Options -Indexes
+AddDefaultCharset WINDOWS-1251
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} /images/country/
+	RewriteRule ^(.*)$ ./images/country/OTHER.png [L,QSA]
+</IfModule>

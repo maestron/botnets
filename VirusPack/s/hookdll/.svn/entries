@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="9"
+   name=""
+   committed-date="2004-02-25T22:24:22.829912Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/hookdll"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="9"
+   name="hookdll.dsp"
+   text-time="2004-03-21T22:23:18.093113Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="ca3c13a4de68d321ac482d272f8d8e3e"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.073084Z"/>
+<entry
+   committed-rev="9"
+   name="hookdll.h"
+   text-time="2004-03-21T22:23:18.133171Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="7bbbd7d11dda78cba93df51b061248bd"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.123156Z"/>
+<entry
+   committed-rev="9"
+   name="apihijack.cpp"
+   text-time="2004-03-21T22:23:18.193257Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="2fdd99429b54b8c92f1f4caf29cbddeb"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.173228Z"/>
+<entry
+   committed-rev="9"
+   name="apihijack.h"
+   text-time="2004-03-21T22:23:18.243329Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="30b69595647aa5b77eb52bed2ee419ba"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.223300Z"/>
+<entry
+   committed-rev="9"
+   name="hookdll.def"
+   text-time="2004-03-21T22:23:18.313430Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="0331893fc8a1539cfd887b938e3d6b1e"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.263358Z"/>
+<entry
+   committed-rev="9"
+   name="hookdll.cpp"
+   text-time="2004-03-21T22:23:18.393545Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="8055b4a4d1fb0800771adcf7c87dd1b1"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.383531Z"/>
+</wc-entries>

@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: JrBot01b - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP41B.tmp" with contents
+[
+/nologo /ML /Gi /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/JrBot.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"D:\exploits\JRBOT\main.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP41B.tmp" 
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP41C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib mpr.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib ws2_32.lib vfw32.lib mpr.lib psapi.lib urlmon.lib shell32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/JrBot.pdb" /map:"Debug/JrBot.map" /debug /machine:I386 /out:"JrBot.exe" /ignore:4108 /ignore:4108 /align:4096 
+.\Debug\main.obj
+]
+Creating command line "link.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP41C.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+Linking...
+LINK : LNK6004: JrBot.exe not found or not built by the last incremental link; performing full link
+
+
+
+<h3>Results</h3>
+JrBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

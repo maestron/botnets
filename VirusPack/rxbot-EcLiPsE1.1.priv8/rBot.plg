@@ -1,0 +1,261 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD94C.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "NO_AVFW_KILL" /D "NO_SECSYSTEM" /D "NO_REGISTRY" /D "NO_EHANDLER" /D "NO_CRYPT" /D "DEBUG_LOGGING" /FR"Debug/" /Fp"Debug/rBot.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\advscan.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\aliaslog.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\autostart.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\beagle.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\capture.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\cdkeys.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\crc32.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\crypt.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\dameware.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\dcc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\dcom.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\dcom2.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\ddos.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\download.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\driveinfo.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\ehandler.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\findfile.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\findpass.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\fphost.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\httpd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\icmpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\ident.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\irc_send.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\keylogger.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\kuang2.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\loaddlls.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\lsass.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\misc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\mssql.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\mydoom.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\net.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\netbios.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\netdevil.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\netutils.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\optix.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\pingudp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\processes.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\psniff.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\rBot.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\redirect.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\remotecmd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\rlogind.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\rndnick.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\scan.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\secure.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\session.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\shellcode.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\socks4.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\sub7.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\synflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\sysinfo.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\tcpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\tftpd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\threads.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\upnp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\visit.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\webdav.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD94C.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD94D.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/rBot.map" /debug /machine:I386 /out:"Debug/rBot.exe" 
+".\Debug\advscan.obj"
+".\Debug\aliaslog.obj"
+".\Debug\autostart.obj"
+".\Debug\beagle.obj"
+".\Debug\capture.obj"
+".\Debug\cdkeys.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\dameware.obj"
+".\Debug\dcc.obj"
+".\Debug\dcom.obj"
+".\Debug\dcom2.obj"
+".\Debug\ddos.obj"
+".\Debug\download.obj"
+".\Debug\driveinfo.obj"
+".\Debug\ehandler.obj"
+".\Debug\findfile.obj"
+".\Debug\findpass.obj"
+".\Debug\fphost.obj"
+".\Debug\httpd.obj"
+".\Debug\icmpflood.obj"
+".\Debug\ident.obj"
+".\Debug\irc_send.obj"
+".\Debug\keylogger.obj"
+".\Debug\kuang2.obj"
+".\Debug\loaddlls.obj"
+".\Debug\lsass.obj"
+".\Debug\misc.obj"
+".\Debug\mssql.obj"
+".\Debug\mydoom.obj"
+".\Debug\net.obj"
+".\Debug\netbios.obj"
+".\Debug\netdevil.obj"
+".\Debug\netutils.obj"
+".\Debug\optix.obj"
+".\Debug\pingudp.obj"
+".\Debug\processes.obj"
+".\Debug\psniff.obj"
+".\Debug\rBot.obj"
+".\Debug\redirect.obj"
+".\Debug\remotecmd.obj"
+".\Debug\rlogind.obj"
+".\Debug\rndnick.obj"
+".\Debug\scan.obj"
+".\Debug\secure.obj"
+".\Debug\session.obj"
+".\Debug\shellcode.obj"
+".\Debug\socks4.obj"
+".\Debug\sub7.obj"
+".\Debug\synflood.obj"
+".\Debug\sysinfo.obj"
+".\Debug\tcpflood.obj"
+".\Debug\tftpd.obj"
+".\Debug\threads.obj"
+".\Debug\upnp.obj"
+".\Debug\visit.obj"
+".\Debug\webdav.obj"
+".\Debug\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD94D.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+aliaslog.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+autostart.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+beagle.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+capture.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+cdkeys.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+crc32.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+crypt.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+dameware.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+dcc.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+dcom.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+dcom2.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+ddos.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+download.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+driveinfo.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+ehandler.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+findfile.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+findpass.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+fphost.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+httpd.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+icmpflood.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+ident.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+irc_send.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+keylogger.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+kuang2.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+loaddlls.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+lsass.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(89) : fatal error C1070: mismatched #if/#endif pair in file 'C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h'
+misc.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+mssql.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+mydoom.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+net.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+netbios.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+netdevil.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+netutils.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+optix.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+pingudp.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+processes.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+psniff.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+rBot.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+redirect.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+remotecmd.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+rlogind.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+rndnick.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+scan.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+secure.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+session.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+shellcode.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+socks4.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+sub7.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+synflood.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+sysinfo.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+tcpflood.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+tftpd.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+threads.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+upnp.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+visit.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+webdav.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+wildcard.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rxbot-EcLiPsE1.1.priv\defines.h(58) : fatal error C1020: unexpected #endif
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+rBot.exe - 58 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

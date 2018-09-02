@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Zac\LOCALS~1\Temp\RSPAE9.tmp" with contents
+[
+user32.lib Netapi32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" /verbose:lib 
+".\120\vncshit.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\d3des.obj"
+".\120\ddos.obj"
+".\120\ftpd.obj"
+".\120\icmpflood.obj"
+".\120\Ide.obj"
+".\120\inject.obj"
+".\120\Ldll.obj"
+".\120\patcher.obj"
+".\120\persist.obj"
+".\120\pingudp.obj"
+".\120\pstore.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\socks4.obj"
+".\120\synflood.obj"
+".\120\Sys.obj"
+".\120\tcpflood.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Zac\LOCALS~1\Temp\RSPAE9.tmp"
+<h3>Output Window</h3>
+Linking...
+
+Searching Libraries
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\Netapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ws2_32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\Version.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\Netapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+
+Done Searching Libraries
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

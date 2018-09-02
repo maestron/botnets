@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="499"
+   name=""
+   committed-date="2004-03-22T18:20:13.652456Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/doc"
+   last-author="wonk"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="11"
+   name="gpl.txt"
+   text-time="2004-03-21T22:22:35.942504Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="393a5ca445f6965873eca0259a17f833"
+   kind="file"
+   prop-time="2004-03-21T22:22:35.922475Z"/>
+<entry
+   committed-rev="11"
+   name="agobug.jpg"
+   text-time="2004-03-21T22:22:38.556262Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="8480622e98fbaff360233ed8b1f2b8df"
+   kind="file"
+   prop-time="2004-03-21T22:22:38.536233Z"/>
+<entry
+   committed-rev="286"
+   name="Executables.jpg"
+   text-time="2004-03-21T22:22:39.407486Z"
+   committed-date="2004-03-13T21:24:24.215510Z"
+   checksum="dd889a5bf52101b74195ee848735e5c5"
+   kind="file"
+   prop-time="2004-03-21T22:22:39.387457Z"/>
+<entry
+   committed-rev="286"
+   name="Includes.jpg"
+   text-time="2004-03-21T22:22:39.617788Z"
+   committed-date="2004-03-13T21:24:24.215510Z"
+   checksum="cc535d6be714bca1ffb151dad1b09817"
+   kind="file"
+   prop-time="2004-03-21T22:22:39.597760Z"/>
+<entry
+   committed-rev="499"
+   name="rules.txt"
+   text-time="2004-03-22T21:39:06.827880Z"
+   committed-date="2004-03-22T18:20:13.652456Z"
+   checksum="fe17a6f3dcc1b9850acec9ab1d98d191"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:06.817865Z"/>
+<entry
+   name="!New"
+   kind="dir"/>
+<entry
+   committed-rev="405"
+   name="faq.html"
+   text-time="2004-03-21T22:22:40.919660Z"
+   committed-date="2004-03-19T20:21:57.359729Z"
+   checksum="18772ffe8416a4eb9eb176c39d67849f"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.899632Z"/>
+<entry
+   committed-rev="369"
+   name="history-icon.gif"
+   text-time="2004-03-21T22:22:40.959718Z"
+   committed-date="2004-03-18T16:40:44.674705Z"
+   checksum="7f42e80bf06c3fc688419e03da324991"
+   last-author="glow"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.949704Z"/>
+<entry
+   committed-rev="286"
+   name="Libraries.jpg"
+   text-time="2004-03-21T22:22:41.089905Z"
+   committed-date="2004-03-13T21:24:24.215510Z"
+   checksum="9dc6ba5a519dbb8b57d73fecba10fa62"
+   kind="file"
+   prop-time="2004-03-21T22:22:41.069876Z"/>
+<entry
+   committed-rev="11"
+   name="agobot3.jpg"
+   text-time="2004-03-21T22:22:41.160006Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="a137ca64758c9a0819b8887091e4e735"
+   kind="file"
+   prop-time="2004-03-21T22:22:41.149992Z"/>
+<entry
+   name="templates"
+   kind="dir"/>
+<entry
+   committed-rev="11"
+   name="commandref.html"
+   text-time="2004-03-21T22:22:41.580611Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="fd30868df0bd75ac3596213ccb9b00ed"
+   kind="file"
+   prop-time="2004-03-21T22:22:41.560582Z"/>
+<entry
+   committed-rev="405"
+   name="Agobot.png"
+   text-time="2004-03-21T22:22:42.031259Z"
+   committed-date="2004-03-19T20:21:57.359729Z"
+   checksum="d7d30d0cfec088f0072301103c8e2ab4"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:41.991201Z"/>
+</wc-entries>

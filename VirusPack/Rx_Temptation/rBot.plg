@@ -1,0 +1,206 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\SCOTTD~1.MAC\LOCALS~1\Temp\RSP16F.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Root Kits\pwningyou from hell\dcom.cpp"
+"D:\Root Kits\pwningyou from hell\dcom2.cpp"
+"D:\Root Kits\pwningyou from hell\depth.cpp"
+"D:\Root Kits\pwningyou from hell\depth2.cpp"
+"D:\Root Kits\pwningyou from hell\depth3.cpp"
+"D:\Root Kits\pwningyou from hell\depth4.cpp"
+"D:\Root Kits\pwningyou from hell\depth5.cpp"
+"D:\Root Kits\pwningyou from hell\depth6.cpp"
+"D:\Root Kits\pwningyou from hell\lsass.cpp"
+"D:\Root Kits\pwningyou from hell\lsass2.cpp"
+"D:\Root Kits\pwningyou from hell\ms04_007_asn1.cpp"
+"D:\Root Kits\pwningyou from hell\mssql.cpp"
+"D:\Root Kits\pwningyou from hell\netbios.cpp"
+"D:\Root Kits\pwningyou from hell\thcsql.cpp"
+"D:\Root Kits\pwningyou from hell\wkssvc.cpp"
+"D:\Root Kits\pwningyou from hell\ddos.cpp"
+"D:\Root Kits\pwningyou from hell\icmpflood.cpp"
+"D:\Root Kits\pwningyou from hell\pingudp.cpp"
+"D:\Root Kits\pwningyou from hell\synflood.cpp"
+"D:\Root Kits\pwningyou from hell\tcpflood.cpp"
+"D:\Root Kits\pwningyou from hell\aliaslog.cpp"
+"D:\Root Kits\pwningyou from hell\autostart.cpp"
+"D:\Root Kits\pwningyou from hell\capture.cpp"
+"D:\Root Kits\pwningyou from hell\cdkeys.cpp"
+"D:\Root Kits\pwningyou from hell\crc32.cpp"
+"D:\Root Kits\pwningyou from hell\crypt.cpp"
+"D:\Root Kits\pwningyou from hell\dcc.cpp"
+"D:\Root Kits\pwningyou from hell\download.cpp"
+"D:\Root Kits\pwningyou from hell\driveinfo.cpp"
+"D:\Root Kits\pwningyou from hell\ehandler.cpp"
+"D:\Root Kits\pwningyou from hell\findfile.cpp"
+"D:\Root Kits\pwningyou from hell\findpass.cpp"
+"D:\Root Kits\pwningyou from hell\fphost.cpp"
+"D:\Root Kits\pwningyou from hell\ident.cpp"
+"D:\Root Kits\pwningyou from hell\irc_send.cpp"
+"D:\Root Kits\pwningyou from hell\keylogger.cpp"
+"D:\Root Kits\pwningyou from hell\loaddlls.cpp"
+"D:\Root Kits\pwningyou from hell\misc.cpp"
+"D:\Root Kits\pwningyou from hell\net.cpp"
+"D:\Root Kits\pwningyou from hell\netutils.cpp"
+"D:\Root Kits\pwningyou from hell\processes.cpp"
+"D:\Root Kits\pwningyou from hell\psniff.cpp"
+"D:\Root Kits\pwningyou from hell\rBot.cpp"
+"D:\Root Kits\pwningyou from hell\redirect.cpp"
+"D:\Root Kits\pwningyou from hell\remotecmd.cpp"
+"D:\Root Kits\pwningyou from hell\rlogind.cpp"
+"D:\Root Kits\pwningyou from hell\rndnick.cpp"
+"D:\Root Kits\pwningyou from hell\secure.cpp"
+"D:\Root Kits\pwningyou from hell\session.cpp"
+"D:\Root Kits\pwningyou from hell\shellcode.cpp"
+"D:\Root Kits\pwningyou from hell\sysinfo.cpp"
+"D:\Root Kits\pwningyou from hell\threads.cpp"
+"D:\Root Kits\pwningyou from hell\visit.cpp"
+"D:\Root Kits\pwningyou from hell\wildcard.cpp"
+"D:\Root Kits\pwningyou from hell\httpd.cpp"
+"D:\Root Kits\pwningyou from hell\socks4.cpp"
+"D:\Root Kits\pwningyou from hell\tftpd.cpp"
+"D:\Root Kits\pwningyou from hell\advscan.cpp"
+"D:\Root Kits\pwningyou from hell\scan.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\SCOTTD~1.MAC\LOCALS~1\Temp\RSP16F.tmp" 
+Creating temporary file "C:\DOCUME~1\SCOTTD~1.MAC\LOCALS~1\Temp\RSP170.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rBot.pdb" /machine:I386 /out:"Release/rBot.exe" 
+".\Release\dcom.obj"
+".\Release\dcom2.obj"
+".\Release\depth.obj"
+".\Release\depth2.obj"
+".\Release\depth3.obj"
+".\Release\depth4.obj"
+".\Release\depth5.obj"
+".\Release\depth6.obj"
+".\Release\lsass.obj"
+".\Release\lsass2.obj"
+".\Release\ms04_007_asn1.obj"
+".\Release\mssql.obj"
+".\Release\netbios.obj"
+".\Release\thcsql.obj"
+".\Release\wkssvc.obj"
+".\Release\ddos.obj"
+".\Release\icmpflood.obj"
+".\Release\pingudp.obj"
+".\Release\synflood.obj"
+".\Release\tcpflood.obj"
+".\Release\aliaslog.obj"
+".\Release\autostart.obj"
+".\Release\capture.obj"
+".\Release\cdkeys.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\dcc.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\ehandler.obj"
+".\Release\findfile.obj"
+".\Release\findpass.obj"
+".\Release\fphost.obj"
+".\Release\ident.obj"
+".\Release\irc_send.obj"
+".\Release\keylogger.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\net.obj"
+".\Release\netutils.obj"
+".\Release\processes.obj"
+".\Release\psniff.obj"
+".\Release\rBot.obj"
+".\Release\redirect.obj"
+".\Release\remotecmd.obj"
+".\Release\rlogind.obj"
+".\Release\rndnick.obj"
+".\Release\secure.obj"
+".\Release\session.obj"
+".\Release\shellcode.obj"
+".\Release\sysinfo.obj"
+".\Release\threads.obj"
+".\Release\visit.obj"
+".\Release\wildcard.obj"
+".\Release\httpd.obj"
+".\Release\socks4.obj"
+".\Release\tftpd.obj"
+".\Release\advscan.obj"
+".\Release\scan.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\SCOTTD~1.MAC\LOCALS~1\Temp\RSP170.tmp"
+<h3>Output Window</h3>
+Compiling...
+dcom.cpp
+dcom2.cpp
+depth.cpp
+depth2.cpp
+depth3.cpp
+depth4.cpp
+depth5.cpp
+depth6.cpp
+lsass.cpp
+lsass2.cpp
+ms04_007_asn1.cpp
+mssql.cpp
+netbios.cpp
+thcsql.cpp
+wkssvc.cpp
+ddos.cpp
+icmpflood.cpp
+pingudp.cpp
+synflood.cpp
+tcpflood.cpp
+aliaslog.cpp
+autostart.cpp
+capture.cpp
+cdkeys.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+ident.cpp
+irc_send.cpp
+keylogger.cpp
+loaddlls.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+processes.cpp
+psniff.cpp
+rBot.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+sysinfo.cpp
+threads.cpp
+visit.cpp
+wildcard.cpp
+httpd.cpp
+socks4.cpp
+tftpd.cpp
+advscan.cpp
+scan.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

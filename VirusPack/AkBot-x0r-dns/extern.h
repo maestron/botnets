@@ -1,0 +1,23 @@
+extern char botid[128];
+extern char server[16][128];
+extern char port[128];
+extern char serverpass[128];
+extern char channel[128];
+extern char chankey[128];
+extern char hostauth[128];
+extern char scanchan[128];
+extern char filename[128];
+
+extern int transfers;
+extern int emails_sent;
+extern char dllname[256];
+extern char local_ip[16];
+extern char global_ip[16];
+extern char global_host[128];
+extern struct threads thread[512];
+extern struct ircs irc;
+extern bool mail_done;
+extern bool transfer_info;
+extern bool scan_active;
+extern bool socks4_active;
+extern bool httpd_active;

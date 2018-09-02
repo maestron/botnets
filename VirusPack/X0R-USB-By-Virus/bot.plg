@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: bot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\INF18~1.OKE\LOKALE~1\Temp\RSP153.tmp" with contents
+[
+/nologo /ML /W3 /Og /Os /Oy /Gy /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Release/" /Fp"Release/bot.pch" /YX /Fo"Release/" /Fd"Release/" /Zl /FD /c 
+"E:\X0R-USB-By-Virus\X0R-USB-By-Virus\main.c"
+]
+Creating command line "cl.exe @C:\DOKUME~1\INF18~1.OKE\LOKALE~1\Temp\RSP153.tmp" 
+Creating temporary file "C:\DOKUME~1\INF18~1.OKE\LOKALE~1\Temp\RSP154.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/bot.pdb" /machine:I386 /nodefaultlib /out:"Release/bot.exe" 
+".\Release\main.obj"
+]
+Creating command line "link.exe @C:\DOKUME~1\INF18~1.OKE\LOKALE~1\Temp\RSP154.tmp"
+<h3>Output Window</h3>
+Compiling...
+Error spawning cl.exe
+Creating command line "bscmake.exe /nologo /o"Release/bot.bsc"  ".\Release\main.sbr""
+Creating browse info file...
+Error spawning bscmake.exe
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+bot.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

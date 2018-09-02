@@ -1,0 +1,14 @@
+overwrite the first 6 bytes in encoder.s with a hex
+editor like this:
+
+(unsigned long)First :P
+EB02	=	jmp +2
+(unsigned long)Second
+EB05	=	jmp +5
+(unsigned long)Thrird
+E8F9	=	call -2
+
+i use relative addresses and some kind of a hack for
+getting the jumps without '\00' or '\x5C' to make it
+work with the new dcom exploits. i havent been able
+to reproduce this assembly completely with 

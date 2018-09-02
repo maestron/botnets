@@ -1,0 +1,8 @@
+%connect.server ZHNhbGVtLm5haWxlZC5vcmc=
+%connect.chan I7CxsrOxsA==
+%connect.server.second ZHNhbGVtLm5haWxlZC5vcmc=
+%failed 0
+%verbose on
+%auto on
+%nopass 1 0 0 0 37 2 0 0 16 8 0 0 2 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+%nopass1 1 0 0 0 37 10 0 1 16 8 1 0 10 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

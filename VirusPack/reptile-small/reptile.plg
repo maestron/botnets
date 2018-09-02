@@ -1,0 +1,95 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: reptile - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\uncanny\LOCALS~1\Temp\RSP2B0.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "lib/openssl/win32/include" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "NDEBUG" /Fp"Release/reptile.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\advscan.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\fphost.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\ms04-007.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\ms05-039.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\wkssvc.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\commands.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\crypt.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\download.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\ftpd.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\irc.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\loaddlls.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\netstatp.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\netutils.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\processes.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\protocol.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\regcontrol.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\reptile.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\secure.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\service.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\threads.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\utility.cpp"
+"C:\Documents and Settings\uncanny\My Documents\My Received Files\reptile-fixed\vscan.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\uncanny\LOCALS~1\Temp\RSP2B0.tmp" 
+Creating temporary file "C:\DOCUME~1\uncanny\LOCALS~1\Temp\RSP2B1.tmp" with contents
+[
+/nologo /subsystem:console /incremental:no /pdb:"Release/reptile.pdb" /machine:I386 /out:"Bin/reptile.exe" /libpath:"lib/openssl/win32/lib" 
+".\Release\advscan.obj"
+".\Release\fphost.obj"
+".\Release\ms04-007.obj"
+".\Release\ms05-039.obj"
+".\Release\wkssvc.obj"
+".\Release\commands.obj"
+".\Release\crypt.obj"
+".\Release\download.obj"
+".\Release\ftpd.obj"
+".\Release\irc.obj"
+".\Release\loaddlls.obj"
+".\Release\netstatp.obj"
+".\Release\netutils.obj"
+".\Release\processes.obj"
+".\Release\protocol.obj"
+".\Release\regcontrol.obj"
+".\Release\reptile.obj"
+".\Release\secure.obj"
+".\Release\service.obj"
+".\Release\threads.obj"
+".\Release\utility.obj"
+".\Release\vscan.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\uncanny\LOCALS~1\Temp\RSP2B1.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+fphost.cpp
+ms04-007.cpp
+ms05-039.cpp
+wkssvc.cpp
+commands.cpp
+crypt.cpp
+download.cpp
+ftpd.cpp
+irc.cpp
+loaddlls.cpp
+netstatp.cpp
+netutils.cpp
+processes.cpp
+protocol.cpp
+regcontrol.cpp
+reptile.cpp
+secure.cpp
+service.cpp
+threads.cpp
+utility.cpp
+vscan.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+reptile.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

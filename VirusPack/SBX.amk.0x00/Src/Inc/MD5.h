@@ -1,0 +1,1 @@
+extern void MD5_Get (const char *str, char *dest);

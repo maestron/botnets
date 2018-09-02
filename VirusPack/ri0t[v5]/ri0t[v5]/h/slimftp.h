@@ -1,0 +1,1 @@
+BOOL slim(EXINFO exinfo);

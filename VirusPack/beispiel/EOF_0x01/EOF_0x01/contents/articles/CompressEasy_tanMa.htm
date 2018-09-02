@@ -1,0 +1,122 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" ><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: tanMa || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+Compress Easy by tanMa  (<a style="text-decoration: none" href="mailto:demonyu@yahoo.com">demonyu@yahoo.com</a>)
+written for EOF-PROJECT (<a style="text-decoration: none" href="http://www.eof-project.net" target="_blank">http://www.eof-project.net</a>)
+Serbia, December of 2006.
+
+
+<b><u>DESCRIPTION</u></b>:
+This article is about compression and will be short as possible because I don't want to bother you.
+Just want, advert you on some un-documented functions of Windows NT/XP and Windows Server 2003 that
+are used by OS it-self for internal operations during compression and some MS utility programs for
+managing files with attribute "compressed". Functions were discovered in 2000. and I'm badly surprised
+that this is very first usage by virus writers. Functions are exported by ntdll.dll dynamic-linking
+library and exist on x86 and x64 editions of mentioned OSes, that is Microsoft implementation of Lempel-Ziv
+algorithm. I don't know about Windows Vista but I'm pretty sure Vista has those functions built-in.
+
+<b><u>FUNCTIONS</b></u>:
+
+<hr>
+
+<b>NTSTATUS RtlCompressBuffer</b> ( <b>USHORT</b> <i>CompressionFormatAndEngine</i>, <b>PUCHAR</b> <i>UncompressedBuffer</i>, <b>ULONG</b> <i>UncompressedBufferSize</i>,
+<b>PUCHAR</b> <i>CompressedBuffer</i>, <b>ULONG</b> <i>CompressedBufferSize</i>, <b>ULONG</b> <i>UncompressedChunkSize</i>, <b>PULONG</b> <i>FinalCompressedSize</i>, <b>PVOID</b> <i>WorkSpace</i> )
+
+Parameters:
+
+	[in] <i>CompressionFormatAndEngine</i>
+	Format of compression and level of compression, for correct values look at inside
+	of WinNT.h under macro names COMPRESSION_FORMAT* and COMPRESSION_ENGINE*
+	(eg. COMPRESSION_FORMAT_LZNT1 | COMPRESSION_ENGINE_STANDARD)
+
+	[in] <i>UncompressedBuffer</i>
+	The starting address of source buffer to be compressed
+
+	[in] <i>UncompressedBufferSize</i>
+	Size in bytes of source buffer
+
+	[out] <i>CompressedBuffer</i>
+	The starting address of destination buffer, where compressed data
+	will be stored after compression 
+
+	[in] <i>CompressedBufferSize</i>
+	Size of destination buffer 
+
+	[in] <i>UncompressedChunkSize</i>
+	Put 0x1000. Probably means page size 
+
+	[out] <i>FinalCompressedSize</i>
+	Size in bytes of data after compression 
+
+	[in] <i>WorkSpace</i>
+	The starting address of internal buffer used during compression,
+	beforehand established by RtlGetCompressionWorkSpaceSize
+
+Return values:
+
+	Use NT_SUCCESS macro to determinate, failed or success
+
+<hr>
+
+<b>NTSTATUS RtlGetCompressionWorkSpaceSize</b> ( <b>USHORT</b> <i>CompressionFormatAndEngine</i>,  <b>PULONG</b> <i>CompressBufferWorkSpaceSize</i>,
+<b>PULONG</b> <i>CompressFragmentWorkSpaceSize</i> )
+
+Parameters:
+
+	[in] <i>CompressionFormatAndEngine</i>
+	Look at RtlCompressBuffer description for more information
+
+	[out] <i>CompressBufferWorkSpaceSize</i>
+	You must allocate temporary internal buffer, buffer is used by RtlCompressBuffer.
+	Buffer must have CompressBufferWorkSpaceSize bytes length.
+
+	[out] <i>CompressFragmentWorkSpaceSize</i>
+	Unknown.
+
+Return values:
+
+	Use NT_SUCCESS macro to determinate, failed or success
+
+<hr>
+
+<b>NTSTATUS RtlDecompressBuffer</b> ( <b>USHORT</b> <i>CompressionFormat</i>, <b>PUCHAR</b> <i>UncompressedBuffer</i>, <b>ULONG</b> <i>UncompressedBufferSize</i>,
+<b>PUCHAR</b> <i>CompressedBuffer</i>, <b>ULONG</b> <i>CompressedBufferSize</i>, <b>PULONG</b> <i>FinalUncompressedSize</i> )
+
+Parameters:
+
+	[in] <i>CompressionFormat</i>
+	Look at RtlCompressBuffer description for more information, but looks like
+	it is discarded.
+
+	[out] <i>UncompressedBuffer</i>
+	The starting address of destination buffer, where data will be stored after
+	decompression
+
+	[in] <i>UncompressedBufferSize</i>
+	Size in bytes of destination buffer
+
+	[in] <i>CompressedBuffer</i>
+	The starting address of compressed buffer, data to be uncompressed
+
+	[in] <i>CompressedBufferSize</i>
+	Size of compressed buffer in bytes
+
+	[out] <i>FinalUncompressedSize</i>
+	Size of data in bytes after decompression
+
+Return values:
+
+	Use NT_SUCCESS macro to determinate, failed or success
+
+<hr>
+<b></b>
+<b><u>Ending:</u></b>
+I'm sorry for example code not included (because lack of time) in this short article.
+I hope you'll find those functions useful, especially when implementing of your own
+compression / decompression engine isn't suitable, btw 'this' compression algorithm looks
+like is also used by NTFS for managing files with attribute 'compressed' . Thank you for your time.
+</pre></body></html>

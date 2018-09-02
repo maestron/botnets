@@ -1,0 +1,36 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, ComCtrls, XPMan, StdCtrls, Buttons;
+
+type
+  TForm1 = class(TForm)
+    Image1: TImage;
+    XPManifest1: TXPManifest;
+    PageControl1: TPageControl;
+    TabSheet2: TTabSheet;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    BitBtn1: TBitBtn;
+    GroupBox1: TGroupBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.

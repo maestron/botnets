@@ -1,0 +1,30 @@
+﻿Build started 10/15/2010 2:55:18 PM.
+     1>Project "C:\Users\d4n1s\documents\visual studio 2010\Projects\crypter\crypter\crypter.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\crypter.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /l"0x0409" /nologo /fo"Debug\crypter.res" crypter.rc 
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\d4n1s\documents\visual studio 2010\Projects\crypter\Debug\crypter.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\crypter.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\d4n1s\documents\visual studio 2010\Projects\crypter\Debug\crypter.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\d4n1s\documents\visual studio 2010\Projects\crypter\Debug\crypter.lib" /MACHINE:X86 Debug\crypter.res
+         Debug\crypter.exe.embed.manifest.res
+         Debug\crypter.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\crypter.exe.embed.manifest" /manifest Debug\crypter.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         crypter.vcxproj -> C:\Users\d4n1s\documents\visual studio 2010\Projects\crypter\Debug\crypter.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\crypter.unsuccessfulbuild".
+         Touching "Debug\crypter.lastbuildstate".
+     1>Done Building Project "C:\Users\d4n1s\documents\visual studio 2010\Projects\crypter\crypter\crypter.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.77

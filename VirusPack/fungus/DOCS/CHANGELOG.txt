@@ -1,0 +1,55 @@
+1.7
+==============================
++ added yahoo text
++ added yahoo file
++ fixed startup
+==============================
+
+
+1.8
+==============================
++ fixed yahoo text
++ fixed yahoo sendfile
+(-> now every contact gets 1 file+ text, 
+even if there are empty groups)
+==============================
+
+2.2
+==============================
++ fixed allspread cmd
++ added rarworm (auto)
+==============================
+
+2.3
+==============================
++ recoded base
+  -> stable
+  -> mutlitopic
+  -> untlimited server support
+==============================
+
+2.4
+==============================
++ fixed output
++ fixed minor yim bugs
+==============================
+
+2.4
+==============================
++ added "Paylogger" (alpha)
++ fixed RARworm, every exe can 
+  only be adde once to a .rar
+==============================
+
+2.5
+==============================
++ tweaked Paylogger
+   -> custom webpanel
+   -> only loggs user/pw, no 
+      useless shit of the site
++ added fancy nicktype
+==============================
+
+TODO: zipworm
+      xfire full contact
+      p2p-spreader

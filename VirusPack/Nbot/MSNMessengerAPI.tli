@@ -1,0 +1,789 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8447.0 (abc6a1ad).
+//
+// MSNMessengerAPI.tli
+//
+// Wrapper implementations for Win32 type library ./MSN/MSNMessengerAPI.tlb
+// compiler-generated file created 07/22/08 at 09:26:12 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IMSNMessenger wrapper method implementations
+//
+
+inline IDispatchPtr IMSNMessenger::GetWindow ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_Window(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IMSNMessenger::ViewProfile ( const _variant_t & vContact ) {
+    HRESULT _hr = raw_ViewProfile(vContact);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMSNMessenger::GetReceiveFileDirectory ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ReceiveFileDirectory(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IDispatchPtr IMSNMessenger::StartVoice ( const _variant_t & vContact ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_StartVoice(vContact, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IDispatchPtr IMSNMessenger::InviteApp ( const _variant_t & vContact, _bstr_t bstrAppID ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_InviteApp(vContact, bstrAppID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IMSNMessenger::SendMail ( const _variant_t & vContact ) {
+    HRESULT _hr = raw_SendMail(vContact);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMSNMessenger::OpenInbox ( ) {
+    HRESULT _hr = raw_OpenInbox();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IMSNMessenger::SendFile ( const _variant_t & vContact, _bstr_t bstrFileName ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_SendFile(vContact, bstrFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IMSNMessenger::Signout ( ) {
+    HRESULT _hr = raw_Signout();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMSNMessenger::Signin ( long hwndParent, _bstr_t bstrSigninName, _bstr_t bstrPassword ) {
+    HRESULT _hr = raw_Signin(hwndParent, bstrSigninName, bstrPassword);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IMSNMessenger::GetContact ( _bstr_t bstrSigninName, _bstr_t bstrServiceId ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetContact(bstrSigninName, bstrServiceId, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IMSNMessenger::OptionsPages ( long hwndParent, MOPTIONPAGE MOPTIONPAGE ) {
+    HRESULT _hr = raw_OptionsPages(hwndParent, MOPTIONPAGE);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMSNMessenger::AddContact ( long hwndParent, _bstr_t bstrEMail ) {
+    HRESULT _hr = raw_AddContact(hwndParent, bstrEMail);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMSNMessenger::FindContact ( long hwndParent, _bstr_t bstrFirstName, _bstr_t bstrLastName, const _variant_t & vbstrCity, const _variant_t & vbstrState, const _variant_t & vbstrCountry ) {
+    HRESULT _hr = raw_FindContact(hwndParent, bstrFirstName, bstrLastName, vbstrCity, vbstrState, vbstrCountry);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IMSNMessenger::InstantMessage ( const _variant_t & vContact ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_InstantMessage(vContact, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IDispatchPtr IMSNMessenger::Phone ( const _variant_t & vContact, MPHONE_TYPE ePhoneNumber, _bstr_t bstrNumber ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_Phone(vContact, ePhoneNumber, bstrNumber, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IMSNMessenger::MediaWizard ( long hwndParent ) {
+    HRESULT _hr = raw_MediaWizard(hwndParent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IMSNMessenger::Page ( const _variant_t & vContact ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_Page(vContact, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IMSNMessenger::AutoSignin ( ) {
+    HRESULT _hr = raw_AutoSignin();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IMSNMessenger::GetMyContacts ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_MyContacts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline _bstr_t IMSNMessenger::GetMySigninName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MySigninName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMSNMessenger::GetMyFriendlyName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MyFriendlyName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMSNMessenger::PutMyStatus ( MISTATUS pmStatus ) {
+    HRESULT _hr = put_MyStatus(pmStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline MISTATUS IMSNMessenger::GetMyStatus ( ) {
+    MISTATUS _result;
+    HRESULT _hr = get_MyStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMSNMessenger::GetUnreadEmailCount ( MUAFOLDER mFolder ) {
+    long _result;
+    HRESULT _hr = get_UnreadEmailCount(mFolder, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMSNMessenger::GetMyServiceName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MyServiceName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMSNMessenger::GetMyPhoneNumber ( MPHONE_TYPE PhoneType ) {
+    BSTR _result;
+    HRESULT _hr = get_MyPhoneNumber(PhoneType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _variant_t IMSNMessenger::GetMyProperty ( MCONTACTPROPERTY ePropType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_MyProperty(ePropType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IMSNMessenger::PutMyProperty ( MCONTACTPROPERTY ePropType, const _variant_t & pvPropVal ) {
+    HRESULT _hr = put_MyProperty(ePropType, pvPropVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMSNMessenger::GetMyServiceId ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MyServiceId(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IDispatchPtr IMSNMessenger::GetServices ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_Services(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IMSNMessenger2 wrapper method implementations
+//
+
+inline MUASORT IMSNMessenger2::GetContactsSortOrder ( ) {
+    MUASORT _result;
+    HRESULT _hr = get_ContactsSortOrder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMSNMessenger2::PutContactsSortOrder ( MUASORT pSort ) {
+    HRESULT _hr = put_ContactsSortOrder(pSort);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IDispatchPtr IMSNMessenger2::StartVideo ( const _variant_t & vContact ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_StartVideo(vContact, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IDispatchPtr IMSNMessenger2::GetMyGroups ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_MyGroups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IDispatchPtr IMSNMessenger2::CreateGroup ( _bstr_t bstrName, const _variant_t & vService ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_CreateGroup(bstrName, vService, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IMSNMessenger3 wrapper method implementations
+//
+
+inline _variant_t IMSNMessenger3::GetProperty ( MMESSENGERPROPERTY ePropType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Property(ePropType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IMSNMessenger3::PutProperty ( MMESSENGERPROPERTY ePropType, const _variant_t & pvPropVal ) {
+    HRESULT _hr = put_Property(ePropType, pvPropVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// dispinterface DMSNMessengerEvents wrapper method implementations
+//
+
+inline HRESULT DMSNMessengerEvents::OnGroupAdded ( long hr, IDispatch * pMGroup ) {
+    return _com_dispatch_method(this, 0x415, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009", hr, pMGroup);
+}
+
+inline HRESULT DMSNMessengerEvents::OnGroupRemoved ( long hr, IDispatch * pMGroup ) {
+    return _com_dispatch_method(this, 0x416, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009", hr, pMGroup);
+}
+
+inline HRESULT DMSNMessengerEvents::OnGroupNameChanged ( long hr, IDispatch * pMGroup ) {
+    return _com_dispatch_method(this, 0x417, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009", hr, pMGroup);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactAddedToGroup ( long hr, IDispatch * pMGroup, IDispatch * pMContact ) {
+    return _com_dispatch_method(this, 0x418, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009\x0009", hr, pMGroup, pMContact);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactRemovedFromGroup ( long hr, IDispatch * pMGroup, IDispatch * pMContact ) {
+    return _com_dispatch_method(this, 0x419, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009\x0009", hr, pMGroup, pMContact);
+}
+
+inline HRESULT DMSNMessengerEvents::OnIMWindowCreated ( IDispatch * pIMWindow ) {
+    return _com_dispatch_method(this, 0x411, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", pIMWindow);
+}
+
+inline HRESULT DMSNMessengerEvents::OnIMWindowDestroyed ( IDispatch * pIMWindow ) {
+    return _com_dispatch_method(this, 0x412, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", pIMWindow);
+}
+
+inline HRESULT DMSNMessengerEvents::OnIMWindowContactAdded ( IDispatch * pContact, IDispatch * pIMWindow ) {
+    return _com_dispatch_method(this, 0x413, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0009", pContact, pIMWindow);
+}
+
+inline HRESULT DMSNMessengerEvents::OnIMWindowContactRemoved ( IDispatch * pContact, IDispatch * pIMWindow ) {
+    return _com_dispatch_method(this, 0x414, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0009", pContact, pIMWindow);
+}
+
+inline HRESULT DMSNMessengerEvents::OnAppShutdown ( ) {
+    return _com_dispatch_method(this, 0x408, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT DMSNMessengerEvents::OnSignin ( long hr ) {
+    return _com_dispatch_method(this, 0x400, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", hr);
+}
+
+inline HRESULT DMSNMessengerEvents::OnSignout ( ) {
+    return _com_dispatch_method(this, 0x401, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactListAdd ( long hr, IDispatch * pMContact ) {
+    return _com_dispatch_method(this, 0x402, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009", hr, pMContact);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactListRemove ( long hr, IDispatch * pMContact ) {
+    return _com_dispatch_method(this, 0x403, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009", hr, pMContact);
+}
+
+inline HRESULT DMSNMessengerEvents::OnMyFriendlyNameChange ( long hr, _bstr_t bstrPrevFriendlyName ) {
+    return _com_dispatch_method(this, 0x405, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", hr, (BSTR)bstrPrevFriendlyName);
+}
+
+inline HRESULT DMSNMessengerEvents::OnMyStatusChange ( long hr, MISTATUS mMyStatus ) {
+    return _com_dispatch_method(this, 0x407, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", hr, mMyStatus);
+}
+
+inline HRESULT DMSNMessengerEvents::OnMyPhoneChange ( MPHONE_TYPE PhoneType, _bstr_t bstrNumber ) {
+    return _com_dispatch_method(this, 0x40e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", PhoneType, (BSTR)bstrNumber);
+}
+
+inline HRESULT DMSNMessengerEvents::OnMyPropertyChange ( long hr, MCONTACTPROPERTY ePropType, const _variant_t & vPropVal ) {
+    return _com_dispatch_method(this, 0x409, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x000c", hr, ePropType, &vPropVal);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactFriendlyNameChange ( long hr, IDispatch * pMContact, _bstr_t bstrPrevFriendlyName ) {
+    return _com_dispatch_method(this, 0x404, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009\x0008", hr, pMContact, (BSTR)bstrPrevFriendlyName);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactStatusChange ( IDispatch * pMContact, MISTATUS mStatus ) {
+    return _com_dispatch_method(this, 0x406, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0003", pMContact, mStatus);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactPropertyChange ( long hr, IDispatch * pContact, MCONTACTPROPERTY ePropType, const _variant_t & vPropVal ) {
+    return _com_dispatch_method(this, 0x40a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009\x0003\x000c", hr, pContact, ePropType, &vPropVal);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactBlockChange ( long hr, IDispatch * pContact, VARIANT_BOOL pBoolBlock ) {
+    return _com_dispatch_method(this, 0x40b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009\x000b", hr, pContact, pBoolBlock);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactPagerChange ( long hr, IDispatch * pContact, VARIANT_BOOL pBoolPage ) {
+    return _com_dispatch_method(this, 0x40c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009\x000b", hr, pContact, pBoolPage);
+}
+
+inline HRESULT DMSNMessengerEvents::OnContactPhoneChange ( long hr, IDispatch * pContact, MPHONE_TYPE PhoneType, _bstr_t bstrNumber ) {
+    return _com_dispatch_method(this, 0x40d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0009\x0003\x0008", hr, pContact, PhoneType, (BSTR)bstrNumber);
+}
+
+inline HRESULT DMSNMessengerEvents::OnUnreadEmailChange ( MUAFOLDER mFolder, long cUnreadEmail, VARIANT_BOOL * pBoolfEnableDefault ) {
+    return _com_dispatch_method(this, 0x40f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x400b", mFolder, cUnreadEmail, pBoolfEnableDefault);
+}
+
+inline HRESULT DMSNMessengerEvents::OnEmoticonListChange ( ) {
+    return _com_dispatch_method(this, 0x41a, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+//
+// interface IMSNMessengerWindow wrapper method implementations
+//
+
+inline HRESULT IMSNMessengerWindow::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMSNMessengerWindow::GetHWND ( ) {
+    long _result;
+    HRESULT _hr = get_HWND(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMSNMessengerWindow::GetLeft ( ) {
+    long _result;
+    HRESULT _hr = get_Left(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMSNMessengerWindow::PutLeft ( long plLeft ) {
+    HRESULT _hr = put_Left(plLeft);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMSNMessengerWindow::GetTop ( ) {
+    long _result;
+    HRESULT _hr = get_Top(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMSNMessengerWindow::PutTop ( long plTop ) {
+    HRESULT _hr = put_Top(plTop);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMSNMessengerWindow::GetWidth ( ) {
+    long _result;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMSNMessengerWindow::PutWidth ( long plWidth ) {
+    HRESULT _hr = put_Width(plWidth);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMSNMessengerWindow::GetHeight ( ) {
+    long _result;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMSNMessengerWindow::PutHeight ( long plHeight ) {
+    HRESULT _hr = put_Height(plHeight);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMSNMessengerWindow::GetIsClosed ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsClosed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMSNMessengerWindow::Show ( ) {
+    HRESULT _hr = raw_Show();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IMSNMessengerWindow::GetProperty ( MWINDOWPROPERTY ePropType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Property(ePropType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IMSNMessengerWindow::PutProperty ( MWINDOWPROPERTY ePropType, const _variant_t & pvPropVal ) {
+    HRESULT _hr = put_Property(ePropType, pvPropVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IMSNMessengerConversationWnd wrapper method implementations
+//
+
+inline IDispatchPtr IMSNMessengerConversationWnd::GetContacts ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_Contacts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline _bstr_t IMSNMessengerConversationWnd::GetHistory ( ) {
+    BSTR _result;
+    HRESULT _hr = get_History(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMSNMessengerConversationWnd::AddContact ( const _variant_t & vContact ) {
+    HRESULT _hr = raw_AddContact(vContact);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMSNMessengerContact wrapper method implementations
+//
+
+inline _bstr_t IMSNMessengerContact::GetFriendlyName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FriendlyName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline MISTATUS IMSNMessengerContact::GetStatus ( ) {
+    MISTATUS _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMSNMessengerContact::GetSigninName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SigninName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMSNMessengerContact::GetServiceName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ServiceName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IMSNMessengerContact::GetBlocked ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Blocked(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMSNMessengerContact::PutBlocked ( VARIANT_BOOL pBoolBlock ) {
+    HRESULT _hr = put_Blocked(pBoolBlock);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMSNMessengerContact::GetCanPage ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_CanPage(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMSNMessengerContact::GetPhoneNumber ( MPHONE_TYPE PhoneType ) {
+    BSTR _result;
+    HRESULT _hr = get_PhoneNumber(PhoneType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IMSNMessengerContact::GetIsSelf ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsSelf(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IMSNMessengerContact::GetProperty ( MCONTACTPROPERTY ePropType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Property(ePropType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IMSNMessengerContact::PutProperty ( MCONTACTPROPERTY ePropType, const _variant_t & pvPropVal ) {
+    HRESULT _hr = put_Property(ePropType, pvPropVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMSNMessengerContact::GetServiceId ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ServiceId(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMSNMessengerContacts wrapper method implementations
+//
+
+inline long IMSNMessengerContacts::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IDispatchPtr IMSNMessengerContacts::Item ( long Index ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IMSNMessengerContacts::Remove ( IDispatch * pMContact ) {
+    HRESULT _hr = raw_Remove(pMContact);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr IMSNMessengerContacts::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IMSNMessengerService wrapper method implementations
+//
+
+inline _bstr_t IMSNMessengerService::GetServiceName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ServiceName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMSNMessengerService::GetServiceId ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ServiceId(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMSNMessengerService::GetMyFriendlyName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MyFriendlyName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline MISTATUS IMSNMessengerService::GetMyStatus ( ) {
+    MISTATUS _result;
+    HRESULT _hr = get_MyStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMSNMessengerService::GetMySigninName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MySigninName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _variant_t IMSNMessengerService::GetProperty ( MSERVICEPROPERTY ePropType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Property(ePropType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IMSNMessengerService::PutProperty ( MSERVICEPROPERTY ePropType, const _variant_t & pvPropVal ) {
+    HRESULT _hr = put_Property(ePropType, pvPropVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IMSNMessengerServices wrapper method implementations
+//
+
+inline IDispatchPtr IMSNMessengerServices::GetPrimaryService ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_PrimaryService(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline long IMSNMessengerServices::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IDispatchPtr IMSNMessengerServices::Item ( long Index ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IUnknownPtr IMSNMessengerServices::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IMSNMessengerGroup wrapper method implementations
+//
+
+inline IDispatchPtr IMSNMessengerGroup::GetContacts ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_Contacts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline _bstr_t IMSNMessengerGroup::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMSNMessengerGroup::PutName ( _bstr_t bstrName ) {
+    HRESULT _hr = put_Name(bstrName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMSNMessengerGroup::AddContact ( const _variant_t & vContact ) {
+    HRESULT _hr = raw_AddContact(vContact);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMSNMessengerGroup::RemoveContact ( const _variant_t & vContact ) {
+    HRESULT _hr = raw_RemoveContact(vContact);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IMSNMessengerGroup::GetService ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_Service(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IMSNMessengerGroups wrapper method implementations
+//
+
+inline HRESULT IMSNMessengerGroups::Remove ( IDispatch * pGroup ) {
+    HRESULT _hr = raw_Remove(pGroup);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMSNMessengerGroups::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IDispatchPtr IMSNMessengerGroups::Item ( long Index ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IUnknownPtr IMSNMessengerGroups::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}

@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SkuZ - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"SkuZ/SkuZ.res" /d "NDEBUG" "E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\SkuZ.rc"" 
+Creating temporary file "H:\DOCUME~1\B_U_Z\LOCALS~1\Temp\RSP5A.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"SkuZ/SkuZ.pch" /YX /Fo"SkuZ/" /Fd"SkuZ/" /FD /c 
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Asn.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Dcom.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Dss.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Land.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Lsass.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Map.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Masn.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Netbios.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Scanners\Pnp.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Adv.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Crc.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Cry.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Ide.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Ldll.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Rnd.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Shel.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\SkuZ.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Sys.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Test.cpp"
+"E:\Hacking\BoT Source\SkuZ-BoT-V0.1\260106\Thr.cpp"
+]
+Creating command line "cl.exe @H:\DOCUME~1\B_U_Z\LOCALS~1\Temp\RSP5A.tmp" 
+Creating temporary file "H:\DOCUME~1\B_U_Z\LOCALS~1\Temp\RSP5B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"SkuZ/SkuZ.pdb" /machine:I386 /out:"SkuZ/SkuZ.exe" 
+".\SkuZ\Asn.obj"
+".\SkuZ\Dcom.obj"
+".\SkuZ\Dss.obj"
+".\SkuZ\Land.obj"
+".\SkuZ\Lsass.obj"
+".\SkuZ\Map.obj"
+".\SkuZ\Masn.obj"
+".\SkuZ\Netbios.obj"
+".\SkuZ\Pnp.obj"
+".\SkuZ\Adv.obj"
+".\SkuZ\Crc.obj"
+".\SkuZ\Cry.obj"
+".\SkuZ\Ide.obj"
+".\SkuZ\Ldll.obj"
+".\SkuZ\Rnd.obj"
+".\SkuZ\Shel.obj"
+".\SkuZ\SkuZ.obj"
+".\SkuZ\Sys.obj"
+".\SkuZ\Test.obj"
+".\SkuZ\Thr.obj"
+".\SkuZ\SkuZ.res"
+]
+Creating command line "link.exe @H:\DOCUME~1\B_U_Z\LOCALS~1\Temp\RSP5B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Asn.cpp
+Dcom.cpp
+Dss.cpp
+Land.cpp
+Lsass.cpp
+Map.cpp
+Masn.cpp
+Netbios.cpp
+Pnp.cpp
+Adv.cpp
+Crc.cpp
+Cry.cpp
+Ide.cpp
+Ldll.cpp
+Rnd.cpp
+Shel.cpp
+SkuZ.cpp
+Sys.cpp
+Test.cpp
+Thr.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SkuZ.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

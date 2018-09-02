@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\CompressLib">
+      <UniqueIdentifier>{078db30e-b4c6-4d68-ab8e-75639ad408ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Thanks">
+      <UniqueIdentifier>{131f327a-d0b4-4f1b-8c55-05548bffe62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\CompressLib">
+      <UniqueIdentifier>{0c0116c5-7f30-45b3-a84e-08d87f6cbff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Thanks">
+      <UniqueIdentifier>{2ef73098-afc2-4963-9146-402ab328a1d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CryptErr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptFunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptIT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptPack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptVar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LangData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="yP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ziplib\alloc.cpp">
+      <Filter>Source Files\CompressLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Ziplib\lzo1x_9x.cpp">
+      <Filter>Source Files\CompressLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Ziplib\lzo_ptr.cpp">
+      <Filter>Source Files\CompressLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Ziplib\lzo_util.cpp">
+      <Filter>Source Files\CompressLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Thanks\grid.cpp">
+      <Filter>Source Files\Thanks</Filter>
+    </ClCompile>
+    <ClCompile Include="Thanks\thanks.cpp">
+      <Filter>Source Files\Thanks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ziplib\lzo_mchw.ch">
+      <Filter>Source Files\CompressLib</Filter>
+    </None>
+    <None Include="Ziplib\lzo_swd.ch">
+      <Filter>Source Files\CompressLib</Filter>
+    </None>
+    <None Include="Graphics\bitmaps\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\bitmaps\Help.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\icons\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\bitmaps\New.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\bitmaps\OPEN.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\icons\Open.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\icons\Option.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\bitmaps\Save.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\icons\Secur01b.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Graphics\icons\yPIcons.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="yPIcons.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Copyright.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aplib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptErr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptIT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptPack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptVar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LangData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TabCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\config1x.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\lutil.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\lzo1x.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\lzo_conf.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\lzo_ptr.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\lzo_util.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\lzoconf.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziplib\lzoutil.h">
+      <Filter>Header Files\CompressLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Thanks\grid.h">
+      <Filter>Header Files\Thanks</Filter>
+    </ClInclude>
+    <ClInclude Include="Thanks\thanks.h">
+      <Filter>Header Files\Thanks</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="yP.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Graphics\XPtheme\yP.exe.manifest" />
+  </ItemGroup>
+</Project>

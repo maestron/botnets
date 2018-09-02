@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2004-03-13T13:21:24.035399Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/configgui/res"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="244"
+   name="string.ico"
+   text-time="2004-03-21T22:23:20.536627Z"
+   committed-date="2004-03-13T01:14:18.065032Z"
+   checksum="1583133be23045bdeefa8eaf2aca3210"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.516598Z"/>
+<entry
+   committed-rev="244"
+   name="int.ico"
+   text-time="2004-03-21T22:23:20.616742Z"
+   committed-date="2004-03-13T01:14:18.065032Z"
+   checksum="a853cafc8711f2b65b8a9793a390dbfc"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.606728Z"/>
+<entry
+   committed-rev="240"
+   name="configgui.ico"
+   text-time="2004-03-21T22:23:20.656800Z"
+   committed-date="2004-03-13T00:49:47.255430Z"
+   checksum="ee65972d6535bfafaf3b6b64fa0a2892"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.646785Z"/>
+<entry
+   committed-rev="244"
+   name="bool.ico"
+   text-time="2004-03-21T22:23:20.716886Z"
+   committed-date="2004-03-13T01:14:18.065032Z"
+   checksum="33aac18e4282ac8dc8f42accbc64f41f"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.696857Z"/>
+<entry
+   committed-rev="244"
+   name="char.ico"
+   text-time="2004-03-21T22:23:20.756944Z"
+   committed-date="2004-03-13T01:14:18.065032Z"
+   checksum="7f4872b950191ca3f97d850c6a2ee5f2"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.736915Z"/>
+</wc-entries>

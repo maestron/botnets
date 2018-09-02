@@ -1,0 +1,1296 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Cyberdude || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+[*] Title  =  Calculator's Mathematics Problems Resolution 
+[*] Author =  Giuseppe aka Cyberdude 
+[*] Mailto =  viromarquantebello[at]libero[dot]it 
+
+=[ M e n &ugrave; ]=
+ [0x0] A simple C code to arousing your curiosity 
+ [0x1] The rapresentation of numbers in a finished space
+ [0x2] Two problems with addition operation
+ [0x3] The smooler positiv number considerable and the rapresentable it
+ [0x4] Binary unfinished rapresentations 
+ [0x5] Polinomy sovling with Horner
+ [0x6] Linear systems resolution 
+ [0x7] Gauss's elimination of unknown variables to obtain a triangulate upper matrix 
+
+
+[ 0x0 - A simple C code to arousing your curiosity ]
+
+Hi  to  all  boys... I want  start  this  text  arousing your curiosity with a simple C code... what is the 
+output of this code?? I think that it is very &quot;funny&quot; 
+
+--------[Cod.c]--------------------------------------------------------------------------------------------
+int main()
+{
+	double a=0,b=0;
+	printf(&quot;[***] Initial value of double [a]--&gt; %f\n&quot;,a);
+	printf(&quot;[***] Initial value of double [b]--&gt; %f\n\n&quot;,b);
+	printf(&quot;[**]  I run two same while cicle for [a] and [b] now!!\n\n&quot;); 
+	while(a&lt;1.0) a+=0.25;
+	while(b&lt;1.0) b+=0.1;
+	printf(&quot;[*]   Final value of [a]\n\tIn the cicle I added 0.25 to it\n\t--&gt; %f\n\n&quot;,a);
+	printf(&quot;[*]   Final value of [b]\n\tIn the cicle I added 0.1 to it\n\t--&gt; %f\n\n&quot;,b);
+	return 0;
+}
+--------[Cod.c]--------------------------------------------------------------------------------------------
+
+--------[Cod.s]--------------------------------------------------------------------------------------------
+/* 
+	This is the asm version of the prev C code
+	Compile it using =&gt; gcc Cod.s 
+	Run it using = &gt; ./a.out  
+*/ 
+
+msgtxt1:	.string	&quot;[***] Initial value of double [a]--&gt; %f\n&quot;
+msgtxt2:	.string	&quot;[***] Initial value of double [b]--&gt; %f\n\n&quot;
+msgtxt3:	.string	&quot;[**]  I run two same while cicle for [a] and [b] now!!\n\n&quot;
+msgtxt4:	.string	&quot;[*]   Final value of [a]\n\tIn the cicle I added 0.25 to it\n\t--&gt; %f\n\n&quot;
+msgtxt5:	.string	&quot;[*]   Final value of [b]\n\tIn the cicle I added 0.1 to it\n\t--&gt; %f\n\n&quot;
+
+value025:	.long	0
+		.long	1070596096
+
+value01:	.long	-1717986918
+		.long	1069128089
+
+.globl main
+main:
+	pushl	%ebp			/* I push the ebp register to preserve the information */
+	movl	%esp, %ebp		/* Move %esp in %ebp this is a default operation used to */
+	subl	$40, %esp		/* preserve the stack! After I alloc 40 byte of memory */
+
+					/* To work with 32-bit 64-bit or 80-bit values I use the 
+				           Floating Point Unit (FPU). The first value in the top of  
+					   FPU register is named ST0 or ST, the second ST1 etc. */
+
+	fldz				/* Is a asm diclaration of a double value 0.0 */
+	fstl	-16(%ebp)		/* In the st0 is stored 0.0 I copy it in -16(%ebp) */
+	fstl	-8(%ebp)		/* I copy the same value 0.0 in -8(%ebp) */
+
+	fstl	4(%esp)			/* I copy the value 0.0 in the 4(%eps) */
+	movl	$msgtxt1, (%esp)	/* I move the msgtxt1 in %esp to call the printf syscall */
+	call	printf			/* I call the printf syscall */
+	fstpl	4(%esp)			/* I copy the value 0.0 in the 4(%esp) and pop the stack of FPU */
+					/* So now in the top it is anymore 0.0 value but the second value
+					   stored next it */ 
+	movl	$msgtxt2, (%esp)	/* I move the msgtxt2 in %esp to call the printf syscall */
+	call	printf			/* I call the printf syscall */
+
+	pushl	$msgtxt3		/* I push the msgtxt3 in the stack to call the puts syscall */
+	call	puts			/* I call the puts syscall */
+
+	jmp	ControlCicle1
+
+add025:
+	fldl	-16(%ebp)		/* I push the value stored in -16(%ebp) in the top of FPU stack */
+	fldl	value025		/* Now push the value 0.25 in the top and the first pushed value 
+					   become the second value after the top */
+	faddp	%st, %st(1)		/* Now I do the top value (0.25) + the second value! After I pop 
+					   the stack becouse the sum is stored in the destination position 
+					   (%st1). So I want that the result of this sum is on the top of 
+					   stack */
+	fstpl	-16(%ebp)		/* Now I pop the stack and store the sum in -16(%ebp) to refresh 
+				  	   his value */
+
+ControlCicle1:
+	fldl	-16(%ebp)		/* I push the value stored in -16(%ebp) in the FPU stack! this 
+				           value in the first time was 0.0 but I refresh it during the 
+					   execution of this code */
+	fld1				/* Now I push the value 1.0 so st0 is 1.0 and st1 is the value 
+					   stored in -16(%ebp) */
+	fucompp				/* Now I can compare the value stored in st0 and in st1 */
+	fnstsw	%ax			/* I must store the result of this comparation in a 16bit 
+					   register as %ax */
+	sahf				/* To use this value I must move the value stored in %ax in the flag 
+					   register becouse I don't have a direct access to %ax */
+	ja	add025			/* If the first value is bigger than the second I jump to add025 */
+	jmp	ControlCicle2		/* Else if the value stored in -16(%ebp) (the second value in FPU
+					   stack) is &gt; 1 I jump to the next cicle labeled ControlCicle2 */
+
+add01:					/* add01 is similar to add025 but I sum 0.1 and not 0.25 */
+	fldl	-8(%ebp)
+	fldl	value01
+	faddp	%st, %st(1)
+	fstpl	-8(%ebp)
+
+ControlCicle2:				/* ControlCicle2 is similar to ControlCicle1 but I jump to the */
+	fldl	-8(%ebp)		/* add01 block code and not to add025 block code */
+	fld1
+	fucompp
+	fnstsw	%ax
+	sahf
+	ja	add01
+
+	fldl	-16(%ebp)		/* Now I push in FPU register the value stored in -16(%ebp)*/	
+	fstpl	4(%esp)			/* and pop the FPU register to move this value in 4(%esp)*/
+	movl	$msgtxt4,(%esp)		/* after that I move the msgtxt4 in the top of esp stack*/
+	call	printf			/* And I call printf syscall */
+
+	fldl	-8(%ebp)		/* I do the same of the prev block of code with the value */
+	fstpl	4(%esp)			/* stored in -8(%ebp) */
+	movl	$msgtxt5, (%esp)
+	call	printf
+
+	movl	$0, %eax		/* I kill the process and exit*/
+	leave
+	ret
+--------[Cod.s]--------------------------------------------------------------------------------------------
+
+the prev code creat 2 double named  a and b. In the first time boot have value zero! I print this value ... 
+in the second time i creat two while cicle! boot  the  cicles  ended when the value of the double variables 
+become &gt;1.0! in the first while cicle I added 0.25 value to  a   in  the  second i added 0.1 to b. We think 
+that the final value of a and  b  is  1. 0!!  it's  true?  but  strangely the result of the second cicle is 
+different!! Why?? What do  you  think  if  I  said you that this different result is a cause of dead for 25 
+soldiers?? I answer to this question in the second time! We must know only a little theory part first! 
+
+
+
+[ 0x1 - The rapresentation of numbers in a finished space ] 
+
+Ok start the theory part!  we  must know that the calculator assign a finished space to rapresents a single 
+number! so we can rapresents only the 'n'  number  that  are  rapresentable with a number of values smooler 
+of the space permitted! If we try to rapresents a biggest number of permettid it we cause overflow!
+
+The number that we consider in this text are the real number!  this  type of number is compost of one base, 
+one mantissa and one caracteristic.
+ 
+For exemple we can rapresent the  number  123 as 123 * 10^0 or 12,3 * 10^1 or 1,23 * 10^2 etc... 123 is the 
+mantissa, 10 is the base and ^1 ^2 ^3 are the caracteristics. 
+
+If I want rapresent a number  with  caracteristic  biggest  of  the  permitted  it the calculator trunk our 
+number or it make round the number. The calculator consider all number in  normal  form! the normal form is 
+that  the  first  value  to  the  right  of  point.  For  exemple  the  number 123.715  in  normal  form is 
+0.123715 * 10^3! the number 0.000713 in normal form is 0.713 * 10^-3
+
+
+
+[ 0x2 - Two problems with addition operation ]
+
+The sum operation is very simple when the caracteristic is the same for exemple : 
+0.2841 * 10^-3 + 0.4212 * 10^-3 = 0.7053 * 10^-3
+
+For the moment we can imagine that our calcolator permit we to use only 4 values after the  point!  this is 
+only an exemple to work with simple number and  understend  the  concept!  Ok  if we consider only 4 values 
+for the decimal part we can have an exemple   of  trunk  operatione committed from the calculator! If I wan 
+do this addition : 0.2831 * 10^-3 + 0.8112 * 10^-3 I  can  becouse  the  caracteristic are the same but the 
+result is this : 1.0953 * 10^-3 that it isn't in  normal  form,  so the calculator must transform this form 
+in normal form in this way : I must  move  all  values  of  one  position  direction right and add 1 to the 
+caracteristic! the result is : 0.1095 * 10^-2 now  the number is rapresentated in normal form but its value 
+is changed becouse the 4&deg; value is trunked!! In reality the calculator supports more value for the decimale 
+part, but is not unifinished and if we want rapresent a  number with a decimal part biggest of permitted it 
+the calculator trunk our number.
+
+Another problem born when we want add two number with different caracteristic! 
+for exemple 0.2841 * 10^-3 + 0.4813 * 10^-2!! In this case  I  must equals the caracteristic... I transform 
+0.2841 * 10^-3 in 0.0284 * 10^-2 and execute the addition  operation  : 0.0284 + 0.4813 = 0.5097 * 10^-2 in 
+this case I have lose only a  little  information  value  of  the  my  numbers!  But if I must operate this 
+addition : 0.2841 * 10^-3 + 0.1248 * 10^-7  and  transform  the  more  little  caracteristic (-7) in -3 the 
+number 0.1248 * 10^-7 become this number: 0.00001248 * 10^-3 and if we imagine that  we have  only 4 values 
+for decimal part... this value is 0.0000 * 10^-3 that  is  0!  The  computer  consider this value 0 and the 
+result  of  this  sum  operation  is  0.2841 * 10^-3  that is  the  value of the first number!!! This is an 
+important error that we must consider!! 
+
+--------[Sum.c]--------------------------------------------------------------------------------------------
+#include &lt;math.h&gt;
+int main()
+{
+	system(&quot;clear&quot;);
+	double a = 1/pow(10,4);
+	
+	double b1 = 0.2841;
+	double b2 = 0.1248;
+
+	printf(&quot;\tIn this exemple we imagine the max values that I can use for decimal part is 4 \n\n&quot;);
+	printf(&quot;[*] The values of b1 and b2 are:\n\t[b1] =&gt; %.4f *10^-3\n\t[b2] =&gt; %.4f *10^-7\n\n&quot;,b1,b2);
+	printf(&quot;[*] Now I must transform b2 from 10^-7 to 10^-3 to do the addition from the two values\n&quot;);
+	b2 = b2 *a;
+	printf(&quot;\t[*] The new value of [b2] is %.8f *10^-3 but we use only %.4f *10^-3\n&quot;,b2,b2);
+	printf(&quot;\t[*] Now I do [b1]+[b2]\n&quot;);
+	double b3 = b1+b2;
+	printf(&quot;\t[*] The result of this addition is [b3] = %.8f &quot;,b3);
+	printf(&quot;but I use only 4 values for decimal part so [b1]+[b2] = %.4f\n&quot;,b3);
+	printf(&quot;\t\t[b1]+[b2] == [b1] &lt;&lt;- the value of [b2] is not considerated\n&quot;);
+
+	return 0;
+}
+--------[Sum.c]--------------------------------------------------------------------------------------------
+
+--------[Sum.s]--------------------------------------------------------------------------------------------
+clear:	.string	&quot;clear&quot;
+msg1:	.string	&quot;\t In this exemple we imagine that the max values that I can use for decimal part is 4 \n&quot;
+msg2:	.string	&quot;[*] The values of b1 and b2 are:\n\t[b1] =&gt; %.4f *10^-3\n\t[b2] =&gt; %.4f *10^-7\n\n&quot;
+msg3:	.string	&quot;[*] Now I must transform b2 from 10^-7 to 10^-3 to do the addition from the two values\n&quot;
+msg4:	.string	&quot;\t[*] The new value of [b2] is %.8f *10^-3 but we use only %.4f *10^-3\n&quot;
+msg5:	.string	&quot;\t[*] Now I do [b1]+[b2]\n&quot;
+msg6:	.string	&quot;\t[*] The result of this addition is [b3] = %.8f &quot;
+msg7:	.string	&quot;but I use only 4 values for decimal part so [b1]+[b2] = %.4f\n&quot;
+msg8:	.string	&quot;\t\t[b1]+[b2] == [b1] &lt;&lt;- the value of [b2] is not considerated\n&quot;
+
+pow10e4:.long	-350469331
+	.long	1058682594
+val2841:
+	.long	-1003304360
+	.long	1070739121
+val1248:
+	.long	-1903529506
+	.long	1069544164
+
+.globl main
+main:
+	pushl	%ebp			/* Push the ebp to preserve the information */
+	movl	%esp, %ebp		
+	subl	$56, %esp		/* Alloc 56byte of memory*/
+
+	movl	$clear, (%esp)		/* Clear the screen */
+	call	system
+
+	fldl	pow10e4			/* Push the value 1/10^4 rapresentated with label pow10e4 */
+	fstpl	-32(%ebp)		/* And move it in -32(%ebp)*/
+	fldl	val2841			/* The same for 0.2841*/
+	fstpl	-24(%ebp)
+	fldl	val1248			/* And 0.1248*/
+	fstpl	-16(%ebp)
+
+	movl	$msg1, (%esp)		/* Print the msg1 */
+	call	puts
+
+	fldl	-16(%ebp)		/* Move the value 0.2841 and 0.1248 in esp register */
+	fstpl	12(%esp)		/* and print the msg2*/
+	fldl	-24(%ebp)
+	fstpl	4(%esp)
+	movl	$msg2, (%esp)
+	call	printf
+
+	movl	$msg3, (%esp)		/* print the msg3 */
+	call	printf
+
+	fldl	-16(%ebp)		/* push 0.1248 in FPU register and multiply it */
+	fmull	-32(%ebp)		/* to 1/10^4*/
+	fstpl	-16(%ebp)		/* store the result of multiplication in -16(%ebp) */
+	fldl	-16(%ebp)		/* repush the refreshed value of 0.1248 */
+	fstpl	12(%esp)		/* And pop the FPU register and push the result in 12(%esp) */
+	fldl	-16(%ebp)		/* Repush the same value in 4(%esp) becouse I must print  */
+	fstpl	4(%esp)			/* it two time in the msg 4*/
+	movl	$msg4, (%esp)		/* Print the msg4*/
+	call	printf
+
+	movl	$msg5, (%esp)		/* Print the msg5 */
+	call	printf
+
+	fldl	-24(%ebp)		/* Push 0.2841 in FPU */
+	faddl	-16(%ebp)		/* And add it to 0.1248 */
+	fstpl	-8(%ebp)		/* Pop the result from the FPU register and move it in -8(%ebp)*/
+	fldl	-8(%ebp)		/* Push this value and repop it in 4(%esp)*/
+	fstpl	4(%esp)
+	movl	$msg6, (%esp)		/* Print the msg6*/
+	call	printf
+
+	fldl	-8(%ebp)		/* Take the value that I have stored in -(%ebp) */
+	fstpl	4(%esp)			/* And move in in 4(%esp)*/
+	movl	$msg7, (%esp)		/* Print the msg7 */
+	call	printf
+
+	movl	$msg8, (%esp)	 	/* Print the msg8 */
+	call	printf
+
+	movl	$0, %eax		/* Exit */
+	leave
+	ret
+--------[Sum.s]--------------------------------------------------------------------------------------------
+
+
+We must think that the machine operation are different from the reality!! a+(b+c) is different from (a+b)+c
+and a * (b+c) is different from (a*b)+(a*c) and (a*b)/b is different from a!! 
+For exemple imagine  three  variable  a,b,c all rapresentated in normal form in our calcolator that take we 
+only 8 values for rapresents the decimal part!! 
+[*] a = 0.23371258 * 10^-4; 
+[*] b =  0.33678429 * 10^2; 
+[*] c = -0.33677811 * 10^2 
+
+If I resolve the addirion a+(b+c) I do this operation: 
+	[1] b+c = 0.00000618 * 10^2 that in normal form is 0.61800000 * 10^-3
+	[2] a + 0.61800000 * 10^-3 
+	[3] a = 0.02337125 * 10^-3 
+	[4] 0.02337125 + 0.61800000 = 0.64137125 * 10^-3
+
+Buf if I resolve the same addition in this way (a+b)+c the result is different:
+	[1] a+b = 0.00000023 * 10^2 + 0.33678429 * 10^2 = 0.33678452 * 10^2
+	[2] 0.33678452 - 0.33677811 = 0.00000641 * 10^2 that in normal form is 0.64100000 * 10^-3
+	
+NOTE: 
+a+(b+c) is 0.64137125 * 10^-3  
+(a+b)+c is 0.64100000 * 10^-3 
+
+in the second way I have lose 5 values of information! Is more  correct  to  do the operation with the same 
+caracteristic first and the different later to preserv more information!! 
+
+
+
+[ 0x3 - The smooler positiv number considerable and the rapresentable it ]
+
+Now I can describe  to  you  the  machine' s  propriety  of  precision that we named ESP. With this we want
+rapresent the  smooler  positiv  number  that  the calculator &quot;consider&quot; int the sum with 1! simply if I do 
+1+a where a is a number &gt;0 but &lt;ESP the calculator  interpret  a  as  0  and  the  result of sum is 1! If I 
+want know what is the smooler positiv number that my calculator consider different from zero I can run this
+code 
+
+--------[Esp.c]--------------------------------------------------------------------------------------------
+int main()
+{
+	system(&quot;clear&quot;);
+	system(&quot;clear&quot;);
+	printf(&quot;[*] FIND THE ESP VALUE OF THIS CALCULATOR\n&quot;);
+	double esp = 1;
+	while((1+esp)!=1)
+	{
+		printf(&quot;%.70f\n&quot;,esp);
+		esp/=2;
+	}
+	esp*=2;
+
+	printf(&quot;[*] The min positiv value that the calculator consider != 0 is\n\t==&gt; %.70f\n&quot;,esp);
+	printf(&quot;[*] If I use the next min positive value after it for my calculator this value is 0\n&quot;);
+}
+--------[Esp.c]--------------------------------------------------------------------------------------------
+
+--------[Esp.s]--------------------------------------------------------------------------------------------
+clear:	.string	&quot;clear&quot;
+msg1:	.string	&quot;[*] FIND THE ESP VALUE OF THIS CALCULATOR&quot;
+msg2:	.string	&quot;[*] The min positiv value that the calculator consider != 0 is\n\t==&gt; %.70f\n&quot;
+msg3:	.string	&quot;[*] If I use the next min positive value after it for my calculator this value is 0\n&quot;
+p70:	.string	&quot;%.70f\n&quot;
+val2:	.long	0
+	.long	1073741824
+
+.globl main
+main:
+	pushl	%ebp			/* I preserve the information */
+	movl	%esp, %ebp	
+	subl	$40, %esp		/* And alloc 40bytes of memory*/
+
+	movl	$clear, (%esp)		/* Clear the screen */
+	call	system
+	movl	$clear, (%esp)
+	call	system
+	movl	$msg1, (%esp)		/* And print the msg1*/
+	call	puts
+
+	fld1				/* Push the 1.0 value in FPU register */
+	fstpl	-8(%ebp)		/* Pop it and store in -8(%ebp) */
+	jmp	control			/* Jump to control cicle*/
+
+execute:
+	fldl	-8(%ebp)		/* Push the value stored in -8(%ebp) in FPU*/
+	fstpl	4(%esp)			/* Pop it in 4(%esp)*/
+	movl	$p70, (%esp)		/* push the p70 string in esp */
+	call	printf			/* And print the value stored in -8(%ebp)*/
+
+	fldl	-8(%ebp)		/* Push this value in FPU */
+	fldl	val2			/* Push the value 2.0 in FPU*/
+	fdivrp	%st, %st(1)		/* I do the division between st1/st0 and pop st0 */
+	fstpl	-8(%ebp)		/* I pop the result in -8(%ebp) and refresh the 
+					   prev value of it*/
+
+control:
+	fldl	-8(%ebp)		/* Push the value stored in -8(%ebp) in FPU*/
+	fld1				/* Push the value 1.0 */
+	fadd	%st, %st(1)		/* Add 1.0 to value stored in -8(%ebp) */
+
+	fxch	%st(1)			/* change the position of st0 and st1*/
+	fucompp				/* compare st0 and st1 */
+	fnstsw	%ax			/* move the result of compare in %ax*/
+	sahf				/* and write it in the flag register */
+	jne	execute			/* if st0 and st1 are different jump to execute */
+
+	fldl	-8(%ebp)		/* Else push the value stored in -8(%ebp) in FPU*/
+	fadd	%st(0), %st		/* And add it with itself */
+	fstpl	-8(%ebp)		/* Refresh the value of -8(%ebp) */
+	fldl	-8(%ebp)		/* Repush it in FPU register */
+	fstpl	4(%esp)			/* And pop it in 4(%esp) */
+	movl	$msg2, (%esp)		/* Move the msg2 in (%esp) */
+	call	printf			/* Call printf syscall to print it*/
+	movl	$msg3, (%esp)		/* Move the msg3 in (%esp) */
+	call	printf			/* Call printf syscall to print it */
+
+	movl	$0, (%esp)		/* Exit procedure*/
+	call	exit
+
+--------[Esp.s]--------------------------------------------------------------------------------------------
+
+The  esp  value  is  the smooler positiv number that the calculator consider different from zero but we can 
+rapresent several  value  &lt; esp in the calculato. We can rapresent but the calculator consider they as zero
+If we want know the smooler value &lt; esp that we can rapresent on our calculator we can run this code 
+
+--------[Min.c]--------------------------------------------------------------------------------------------
+int main()
+{
+	system(&quot;clear&quot;);
+	double min = 1;
+	double temp;
+	while(min!=0)
+	{	
+		temp = min;
+		min/=10;
+	}
+	printf(&quot;[*] The min rapresentable number of my compuer is:\n-&gt; %.1100f\n\n&quot;,temp);
+	printf(&quot;[*] I can't rapresent a number more small of this!!\n&quot;);
+	exit(0);
+}
+--------[Min.c]--------------------------------------------------------------------------------------------
+
+--------[Min.s]--------------------------------------------------------------------------------------------
+clear:	.string	&quot;clear&quot;
+msg1:	.string	&quot;[*] The min rapresentable number of my compuer is:\n-&gt; %.1100f\n\n&quot;
+msg2:	.string	&quot;[*] I can't rapresent a number more small of this!!\n&quot;
+val10:	.long	0
+	.long	1076101120
+
+.globl main
+main:
+	pushl	%ebp			/* I preserve the information pushing %ebp */
+	movl	%esp, %ebp
+	subl	$40, %esp		/* And alloc 40bytes of memory */
+
+	movl	$clear, (%esp)		/* I clear the screen */
+	call	system
+
+	fld1				/* Push the value 1.0 in the FPU register */
+	fstpl	-16(%ebp)		/* And pop it in -16(%ebp) */
+	jmp	control			/* Jump to the control label */
+
+execute:
+	fldl	-16(%ebp)		/* I push the value of -16(%ebp) in FPU */
+	fstpl	-8(%ebp)		/* And pop it in -8(%ebp) (my temp variable) */
+	fldl	-16(%ebp)		/* Repush the value of -16(%ebp) in FPU */
+	fldl	val10			/* And Push the value 10.0 in FPU */
+	fdivrp	%st, %st(1)		/* Divide the value of -16(%ebp)/10 */
+	fstpl	-16(%ebp)		/* And pops the result in -16(%ebp) */
+
+control:
+	fldl	-16(%ebp)		/* I push the value -16(%epb) in FPU */
+	fldz				/* I puth the value 0.0 in FPU */
+	fxch	%st(1)			/* Change the value in st1 with st0 */
+	fucompp				/* Compare st0 with st1 */
+	fnstsw	%ax			/* Move the result in %ax */
+	sahf				/* And store it in flag register */ 
+	jne	execute			/* If this value are different I jump to execute*/
+
+	fldl	-8(%ebp)		/* The value stored in -8(%ebp) is the last value of 
+					   my element first to become equals to zero*/
+	fstpl	4(%esp)			/* I pop it in 4(%esp) */
+	movl	$msg1, (%esp)		/* Push the msg1 in esp */
+	call	printf			/* And print it*/
+	movl	$msg2, (%esp)		/* Push the msg2 in esp*/
+	call	printf			/* and print it*/
+
+	movl	$0, (%esp)		/* Exit procedure*/
+	call	exit
+
+--------[Min.s]--------------------------------------------------------------------------------------------
+
+
+
+[ 0x4 - Binary unfinished rapresentations ]
+
+A considerable problem is that  for several decimal number are necessary unfinished binary bit!! If we want 
+store a number that is rapresentated by unfinished binary bin in 24 byte... the number that we store is not
+the number that we want store!! For exemple: if I want rapresent the decimale 0.25 in binary the conversion
+is very simple: 
+
+	-&gt; 0.25 * 2 = 0.50 =&gt; store the 0 and use the 50 to continue the conversion
+	-&gt; 0.50 * 2 = 1.00 =&gt; store the 1 and continue but with 00 I can't continue 
+
+	The final value of 0.25 in binary is 01 
+
+The broblem born when I want convert 0.1 decimal value in binary!! 
+
+	[point1]	-&gt; 0.1 * 2 = 0.2	=&gt; store the 0 and use .2 to continue
+	[point2]	-&gt; 0.2 * 2 = 0.4	=&gt; store the 0 and use .4 to continue
+	[point3]	-&gt; 0.4 * 2 = 0.8	=&gt; store the 0 and use .8 to continue
+	[point4]	-&gt; 0.8 * 2 = 1.6	=&gt; store the 1 and use .6 to continue
+	[point5]	-&gt; 0.6 * 2 = 1.2	=&gt; store the 1 and use .2 to continue
+	[point6]	-&gt; 0.2 is the same of point 2!!! This is an unifinished cicle!!!! 
+
+	The final value of 0.1 in binary is 0 0011 0011 0011 0011 0011 0011 0011 ...
+
+when  I  write  0.1 (decimal value) in 24 byte I can store only 24 byte so: 0.1 = 0.00011001100110011001100
+In  this  way I have  introduct  an  error  of  0.00000000000000000000000110011001100.... that  in  decimal 
+is equale to 0.000000095!!
+
+--------[Bin.c]--------------------------------------------------------------------------------------------
+int main()
+{
+	double a = 0.25;
+	printf(&quot;BIN VALUE OF 0.25 = &quot;);
+	while(a!=0)
+	{
+		a*=2;
+		printf(&quot;%.0f&quot;,a);
+		if(a&gt;=1) a-=1;
+	}
+
+	double b = 0.1;
+	int count = 0;
+	printf(&quot;\nBIN VALUE OF 0.1 = &quot;);
+	while(b!=0 &amp;&amp; count != 1000)
+	{
+		b*=2;
+		printf(&quot;%d&quot;,(int)b);
+		if(b&gt;=1) b-=1;
+		count++;
+	}
+
+	printf(&quot;...\n&quot;);
+	
+	exit(0);
+}
+--------[Bin.c]--------------------------------------------------------------------------------------------
+
+On February 25, 1991, during the Gulf war this &quot;little&quot; problem killing 28 soldiers and injuring around 100 
+other people... if you are interested to it  you  can  read  the  article  of  professor  Douglas N. Arnold 
+(University of Minnesota) at this link: http://www.ima.umn.edu/~arnold/disasters/patriot.html 
+
+
+
+[ 0x5 - Polinomy sovling with Horner ]
+First  to continue I want said only several things: all the operations in the calculator are solved as poly
+becouse  they are trunked pow! When we &quot;transform&quot; the unfinished sum in finished  sum  we  creat a  little 
+errors that we can consider becouse we can know it! Now we can imagine that our calculator must  solve  the
+next operation :
+
+a3*x^3 + a2*x^2 +a1*x^1+a0
+
+there are several mode to solve it! for exemple we can solve it in this way:
+
+       [P1]= a3 * x * x * x 
+       [P2]= a2 * x * x
+       [P3]= a3 * x
+       [P4]= P1+P2+P3+a0
+
+If we consider this in general : (an * x^n) + [a(n-1) * x^(n-1)] + ... + a1 * x^1 + a0
+and we solve this operation in the same way thet we have solved the first we obtain this resolution: 
+
+       (n+(n-1)+...+1)M = {[n(n+1)]/2} * M 
+
+       that is the (Sum form i = 1 to n) * i = n(n+1)/2
+
+But this is not a good mode to solve it! The best mode is using the Horner Algorithm! 
+
+       a3*x^3 + a2*x^2 +a1*x^1+a0 = ((a3*x+a2)x+a1)x+a0
+
+in this way we evidence the x value so we have this operations 
+
+       [P1]= a3*x
+       [P2]= P1+a2
+       [P3]= P2*x
+       [P4]= P3+a1
+       [P5]= P4*x
+       [P6]= P5+a0
+
+The result is the same but now we can compare the &quot;work&quot; that do the calculator in this  two ways  to  know
+the best way to resolve!! In the first case we do 6 multiplications and 3 additions; in the  second  we  do
+3 additions and 3 multiplications! So the Horner Algorithm is more &quot;economic&quot; for machine!
+
+--------[Hor.c]--------------------------------------------------------------------------------------------
+int main()
+{
+       system(&quot;clear&quot;);
+       printf(&quot;[We want solve this poly with Horner Algorithm]\n&quot;);
+       printf(&quot;\t[poly] = a3*x^3 + a2*x^2 + a1*x^1 +a0\n&quot;);
+       printf(&quot;\nImagine that :\n&quot;);
+       printf(&quot;\t[a3] = 2\t[a2] = 4\n\t[a1] = 6\t[a0] = 8\n\t[x] = 2\n&quot;);
+       printf(&quot;So we must solve this : 2*2^3 +4*2^2+6*2^1+8\n&quot;);
+       printf(&quot;\nHornet solve it in this way: ((2*2)+4)*2+6)*2+8\n&quot;);
+
+       int a[] = {8,6,4,2};
+       int x = 2;
+
+       int temp = a[3];
+       int i;
+       for(i=2; i&gt;=0; i--)
+       {
+              printf(&quot;\t=&gt; (%d*%d)+%d = &quot;,temp,x,a[i]); 
+              temp = (temp*x) + a[i];   
+              printf(&quot;%d\n&quot;,temp);
+       }
+
+       printf(&quot;\n==&gt; The result is %d\n&quot;,temp);
+       exit(0);
+}
+--------[Hor.c]--------------------------------------------------------------------------------------------
+
+--------[Hor.s]--------------------------------------------------------------------------------------------
+clear:	.string	&quot;clear&quot;
+msg1:	.string	&quot;[We want solve this poly with Horner Algorithm]&quot;
+msg2:	.string	&quot;\t[poly] = a3*x^3 + a2*x^2 + a1*x^1 +a0&quot;
+msg3:	.string	&quot;\nImagine that :&quot;
+msg4:	.string	&quot;\t[a3] = 2\t[a2] = 4\n\t[a1] = 6\t[a0] = 8\n\t[x] = 2&quot;
+msg5:	.string	&quot;So we must solve this : 2*2^3 +4*2^2+6*2^1+8&quot;
+msg6:	.string	&quot;\nHornet solve it in this way: ((2*2)+4)*2+6)*2+8&quot;
+msg7:	.string	&quot;\t=&gt; (%d*%d)+%d = &quot;
+msg8:	.string	&quot;%d\n&quot;
+msg9:	.string	&quot;\n==&gt; The result is %d\n&quot;
+
+.globl main
+main:
+	pushl	%ebp			/* Push the ebp register in the stack to preserve the */	
+	movl	%esp, %ebp		/* information and after that alloc 56Byte of memory */ 
+	subl	$56, %esp		/* to execute my operations! */
+
+clearScreen:
+	movl	$clear, (%esp)		/* clear the screen */
+	call	system
+
+printStrings:
+	pushl	$msg1			/* push the ms1 and puts it to the output */
+	call	puts
+	pushl	$msg2			/* the same for msg2 */
+	call	puts
+	pushl	$msg3			/* the same for msgs3*/
+	call	puts
+	pushl	$msg4			/* the same for msg4 */
+	call	puts
+	pushl	$msg5			/* the same for msg5 */
+	call	puts
+	pushl	$msg6			/* the same for msg6 */
+	call	puts
+
+storeValueInMemory:
+	movl	$8, -28(%ebp)		/* In -28(%ebp) I store the value 8 (a[0])*/
+	movl	$6, -24(%ebp)		/* In -24(%ebp) I store the value 6 (a[1])*/
+	movl	$4, -20(%ebp)		/* In -20(%ebp) I store the value 4 (a[2])*/
+	movl	$2, -16(%ebp)		/* In -16(%ebp) I store the value 2 (a[3])*/
+	movl	$2, -12(%ebp)		/* In -12(%ebp) I store the value 2 (x) */
+
+assignTemp:
+	movl	-16(%ebp), %eax		/* I store the value of a[3] in -8(%ebp) */
+	movl	%eax, -8(%ebp)		/* My temp variable*/
+
+createCount:
+	movl	$2, -4(%ebp)		/* I store the value 2 in -4(%ebp) I use it as counter*/
+	jmp	control			/* jump to control label*/
+
+execute:
+	movl	-4(%ebp), %eax		/* I store the value of counter in %eax */
+	movl	-28(%ebp,%eax,4), %eax	/* I stay in -28(%ebp) take the value in %eax and */
+	movl	%eax, 12(%esp)		/* multiply it to 4 after from -28(%ebp) add the */
+					/* value obetenute from 4*(value in %eax) and obtain a*/	
+					/* new registry address: ex %eax = 2 =&gt; 4*2 = 8 */
+					/* -28+8 = -20%ebp I move the value stored in -20(%ebp) */
+					/* in %eax in this case is a[2] = 4! I do it to obtain a[i] */
+	movl	-12(%ebp), %eax		/* Move the value of x in 8(%esp) */
+	movl	%eax, 8(%esp)		
+	movl	-8(%ebp), %eax		/* Move the value of temp variable in 4(%esp)*/
+	movl	%eax, 4(%esp)
+	movl	$msg7, (%esp)		/* Move the msg7 string in (%esp) and print it*/
+	call	printf
+
+copyTemp:
+	movl	-8(%ebp), %eax		/* Remember the temp value in %edx */
+	movl	%eax, %edx
+
+mulOperation:
+	imull	-12(%ebp), %edx		/* Multiply the value of x to temp the result is in %edx */
+
+	movl	-4(%ebp), %eax		/* The same procedure of first to obtain a[i] */
+	movl	-28(%ebp,%eax,4), %eax
+
+addOperation:
+	addl	%edx,%eax		/* After add the value of a[i] to the result of multiply */
+	movl	%eax, -8(%ebp)		/* refresh the value of temp */
+
+printTemp:
+	movl	-8(%ebp), %eax		/* Move the value of temp in 4(%esp)*/
+	movl	%eax, 4(%esp)
+	movl	$msg8, (%esp)		/* Move the string msg8 in (%esp)*/
+	call	printf			/* print it*/
+
+decrementCounter:
+	leal	-4(%ebp), %eax		/* take a pointer to counter */
+	subl	$1, (%eax)		/* and decrement it value of 1 */
+
+control:
+	cmpl	$0, -4(%ebp)		/* Compare my counter stored in -4(%ebp) to 0 value */
+	jns	execute			/* If the counter is &gt;= 0 jump execute */
+
+printResult:
+	movl	-8(%ebp), %eax		/* I move my temp variable in 4(%esp) becouse I must */
+	movl	%eax, 4(%esp)		/* print it*/
+	movl	$msg9, (%esp)		/* Move the msg9 string in esp */
+	call	printf			/* and print the string+value of temp*/
+
+quit:
+	movl	$0, (%esp)		/* Exit procedure*/
+	call	exit
+
+--------[Hor.s]--------------------------------------------------------------------------------------------
+
+If we  want valutate this  algorithm we must  consider the  complessity  of  time to  solve the  operations
+When we considere this type of operations the must expensive is the multipication! We can consider the time
+of this algorithm in this way :
+
+In every cicle iteration we do 1 multiply and 1 addition! We do n  iterations (from n-1 to 0 included)!! So
+we do n multiply and n addition to resolve a poly of dimension n 
+
+T(N) = N multiply = O(N)
+and this is the best time that we can implement in our calculator to solve the poly operation!
+
+
+[ 0x6 - Linear systems resolution ]
+To analize the linera systems we must consider the  different matrix type! In  the first time we  must know
+that there are 2 type of matrix : the full matrix and the spread  matrix  in  witch there are several  null
+elements. If the null elements in spread matrix are organized in a particular  way we  can distinguish  two
+particular matrix: 
+       [*] triangulate upper matrix
+                      ---- ---- ---- ----
+                     | 10 | 21 | 13 | 15 |
+                      ---- ---- ---- ----
+                     | 00 | 33 | 92 | 02 |
+                      ---- ---- ---- ----
+                     | 00 | 00 | 88 | 12 |
+                      ---- ---- ---- ----
+                     | 00 | 00 | 00 | 61 |
+                      ---- ---- ---- ----
+
+       [*] triangulate lower matrix
+                      ---- ---- ---- ----
+                     | 10 | 00 | 00 | 00 |
+                      ---- ---- ---- ----
+                     | 21 | 33 | 00 | 00 |
+                      ---- ---- ---- ----
+                     | 13 | 92 | 88 | 00 |
+                      ---- ---- ---- ----
+                     | 15 | 02 | 12 | 61 |
+                      ---- ---- ---- ----
+
+When we want resolve a system the calculator interpeter it as a matrix : 
+
+       2x + 5y = -8
+       6x - 7y = 20 
+
+        ----- ----- -----
+       | +2x | -5y | -08 |
+        ----- ----- -----
+       | +6x | -7y | +20 |
+        ----- ----- -----
+
+We can resolve it with Cramer method:
+
+       to obtain x we consider the 2x2 matrix in with the x colums is rapresentated of known column
+       divided the unknown 2x2 matrix
+             ----- -----
+            | -08 | +05 |
+             ----- -----
+            | +20 | -07 |    (-8)(-7) - (20)(5)    56 - 100    -44 
+       x = --------------- = ------------------ = ---------- = ---- = 1 
+            | +02 | +05 |    (2)(-7) - (6)(5)      -14 -30     -44 
+             ----- -----
+            | +06 | -07 |
+             ----- -----
+
+       to obtain y we do the same of for x 
+             ----- -----
+            | +02 | -08 |
+             ----- -----
+            | +06 | +20 |    40 + 48     +88 
+       y = -------------- = --------- = ----- = -2 
+            | +02 | +05 |    -14 -30     -44
+             ----- -----
+            | +06 | -07 |
+             ----- -----
+
+but using Cramer to execute 21*19*20! multiply the calculator necessity of 10^4 centurys  so  we  must find
+another type of resolution! We can use Gauss! In this text we analize only nxn matrix! (2x2 3x3 4x4 ecc...)
+
+Imagine that we must resolve the triangulate upper matrix :
+
+2(x1) + 2(x2) + 4(x3)  = 5
+0(x1) - 7(x2) - 11(x3) = -8
+0(x1) + 0(x2) + 2(x3)  = 2
+
+we can use the back sostitution to resolve it starting from 2(x3) = 1 so x3 = 1
+-7(x2) = -8+11(x3) =&gt; x2 = -3\7
+2(x1) = 5 -2(x2) -4(x3) =&gt; x1 = 13\14
+
+The same for the tiangulate lower matrix:
+
+2(x1) + 0(x2) + 0(x3) = 4
+3(x1) + 2(x2) + 0(x3) = 5
+1(x1) + 2(x2) - 3(x3) = 1
+
+so we take x1 = 2
+and obtain x2 = -1\2  x3 = 0
+
+in general the lower tiangulate matrix named L:  
+
+l11(x1)+........................... = b1
+l21(x1)+l22(x2)+................... = b2
+ln1(x1)+ln2(x2)+ln3(x3)+...+lnn(xn) = bn
+
+so: 
+
+x1 = b1\l11
+x2 = [b2 - l21(x1)]\l22
+...
+xn = {bn - [Sum form i=1 to n-1 of(ln(i)*x(i))]} / l(n,n) 
+
+the resolution of an upper triangulate matrix named U is: 
+
+x(n) = b(n)\u(n,n) 
+x(i) = {b(i) - [Sum from k = i+1 to n of(u(i,k) x(k)]} / u(i,i)
+
+--------[bks.c]--------------------------------------------------------------------------------------------
+#include &lt;math.h&gt;
+int main()
+{
+       int matrix[3][3];
+       double b[3];
+
+       matrix[0][0] = 2;
+       matrix[0][1] = 2;
+       matrix[0][2] = 4;
+       b[0] = 5;
+
+       matrix[1][0] = 0;
+       matrix[1][1] = -7;
+       matrix[1][2] = -11;
+       b[1] = -8;
+
+       matrix[2][0] = 0;
+       matrix[2][1] = 0;
+       matrix[2][2] = 2;
+       b[2]= 2;
+
+       int i,k,j;
+       double sum;
+
+       system(&quot;clear&quot;);
+       printf(&quot;Soving of 3x3 matrix polinomy with BackSolution alghoritm!\n&quot;);
+       printf(&quot;The poly as matrix:\n&quot;);
+       printf(&quot;\n[ x1 ][ x2 ][ x3 ]   [ B ]\n&quot;);
+       for(i=0;i!=3;i++)
+       {
+              for(k=0;k!=3;k++)
+              {
+                     printf(&quot;[%4d]&quot;,matrix[i][k]);
+              }
+              printf(&quot; = [%3.0f]&quot;,b[i]);
+              printf(&quot;\n&quot;);
+       }
+
+       for(i=2; i&gt;=0; i--)
+       {
+              sum = 0;
+              for(k=i+1;k!=3;k++)
+              {
+                     sum = sum + (matrix[i][k]*b[k]);
+              }
+              b[i] = (b[i]-sum)/matrix[i][i];
+       }
+       printf(&quot;\nThe solutions: \n&quot;);
+       for(j=1;j!=4;j++)
+       {
+              printf(&quot;x[%d] = %f\n&quot;,j,b[j-1]);
+       }
+}
+
+--------[bks.c]--------------------------------------------------------------------------------------------
+
+--------[bks.s]--------------------------------------------------------------------------------------------
+clear:	.string	&quot;clear&quot;
+
+msg1:	.string	&quot;Soving of 3x3 matrix polinomy with BackSolution alghoritm!&quot;
+msg2:	.string	&quot;The poly as matrix:&quot;
+msg3:	.string	&quot;\n[ x1 ][ x2 ][ x3 ]   [ B ]&quot;
+msg4:	.string	&quot;\nThe solutions: \n&quot;
+
+print4d:	.string	&quot;[%4d]&quot;
+print30f:	.string	&quot; = [%3.0f]&quot;
+printdf:	.string	&quot;x[%d] = %f\n&quot;
+slashn:		.string	&quot;\n&quot;
+
+val5:	.long	0
+	.long	1075052544
+valm8:	.long	0
+	.long	-1071644672
+val2:	.long	0
+	.long	1073741824
+
+.globl main
+main:
+	pushl	%ebp
+	movl	%esp, %ebp
+	subl	$100, %esp
+
+	movl	$2, -64(%ebp)		/* I creat the 3x3 upper triangulate matrix */
+	movl	$2, -60(%ebp)		/* That rapresents my poly */
+	movl	$4, -56(%ebp)		/* We can imagine the matrix stored in this way */
+	movl	$0, -52(%ebp)		/* | -64(%ebp) | -60(%ebp) | -56(%ebp) |*/
+	movl	$-7, -48(%ebp)		/* | -52(%ebp) | -48(%ebp) | -44(%ebp) |*/
+	movl	$-11, -44(%ebp)		/* | -40(%ebp) | -36(%ebp) | -32(%ebp) |*/
+	movl	$0, -40(%ebp)
+	movl	$0, -36(%ebp)
+	movl	$2, -32(%ebp)
+
+	fldl	val5			/* I creat the column of known terms pushing */
+	fstpl	-88(%ebp)		/* the double values 5 -8 and 2 in FPU register */
+	fldl	valm8			/* And repopping they in ebp register so we have: */
+	fstpl	-80(%ebp)		/* | -88(%ebp) |*/
+	fldl	val2			/* | -80(%ebp) |*/
+	fstpl	-72(%ebp)		/* | -72(%ebp) |*/
+
+	movl	$clear, (%esp)		/* I clear the screen */
+	call	system
+
+	movl	$msg1, (%esp)		/* And puts msg1 msg2 and msg3 in output*/
+	call	puts
+	movl	$msg2, (%esp)
+	call	puts
+	movl	$msg3, (%esp)
+	call	puts
+
+	movl	$0, -28(%ebp)		/* In -28(%ebp) store a counter = 0 */
+	jmp	PrintControlRow		/* And jump to the PrintControlRow label*/
+
+PrintInRow:
+	movl	$0, -24(%ebp)		/* Create another counter = 0 in -24(%ebp) */
+	jmp	PrintControlCol		/* And jump to PrintControlCol to know if I must print
+					   another column of this row */
+
+continuePrint:
+	movl	-28(%ebp), %edx		/* Move the counter stored in -28(%ebp) in %edx*/
+	movl	-24(%ebp), %ecx		/* And the counter stored in -24(%ebp) in %ecx */
+
+	movl	%edx, %eax		/* Calcule the address of the next value of matrix */
+	addl	%eax, %eax		/* that I must print! I take the value of edx. For exemple */
+	addl	%edx, %eax		/* if edx = 1 I know that I stay in the second row becouse */ 
+	addl	%ecx, %eax		/* the first is in 0.Since is a 3x3 matrix I must sum the value  */
+					/* of counter 3 times to go to the end of the first row! So I do */
+					/* %eax+%eax+%edx so I sum it with the  value the %ecx counter */
+					/* (the value of the counter of colum) */
+
+	movl	-64(%ebp,%eax,4), %eax	/* When I have calcolate the moving from the first index of 
+                                           matrix -64(%ebp) */
+					/* I can sum to this address 4byte*number of movings to take the */
+					/* exactly value row/column that I must print in this moment! */
+	movl	%eax, 4(%esp)		/* So I print it */
+	movl	$print4d, (%esp)
+	call	printf
+
+	leal	-24(%ebp), %eax		/* After I take the column counter stored in -24(%ebp) */
+	addl	$1, (%eax)		/* and increment it to continue! */
+
+PrintControlCol:
+	cmpl	$3, -24(%ebp)		/* Control if the counter in -24(%ebp) is = 3 */
+	jne	continuePrint		/* If is different I jump to continuePrint */
+
+	movl	-28(%ebp), %eax		/* If I stay here is becouse I have finished to print a row */
+	fldl	-88(%ebp,%eax,8)	/* So now I must print the known value of this row. So I */
+	fstpl	4(%esp)			/* go in -88(%ebp) and moving %eax(number of row)*8Byte */
+	movl	$print30f, (%esp)	/* To know how known value I must print! I move this value */
+	call	printf			/* in 4(%esp) and print it!*/
+
+	movl	$slashn, (%esp)		/* print the string slashn*/
+	call	printf
+
+	leal	-28(%ebp), %eax		/* And incremente the row counter!*/
+	addl	$1, (%eax)
+
+PrintControlRow:
+	cmpl	$3, -28(%ebp)		/* Control if the counter stored in -28(%ebp) is = 3*/
+	jne	PrintInRow		/* if is different from 0 i jump to PrintInRow label*/
+
+ResetCounterTo2:
+	movl	$2, -28(%ebp)		/* If I stay here is becouse I have finished to print matrix */
+	jmp	CalculateControlRow	/* So I set the counter stored in -28(%ebp) to 2 and jump */
+
+ResetSumAndColCount:
+	fldz				/* I push the value 0.0 in FPU register*/
+	fstpl	-16(%ebp)		/* and store it in -16(%ebp) this is a variable named Sum */
+	movl	-28(%ebp), %eax		/* After that I move the row counter in %eax */
+	addl	$1, %eax		/* And incremente it to 1*/
+	movl	%eax, -24(%ebp)		/* After I move this value in -24(%ebp) to set column counter 
+					   (remember that is a triangoular matrix so if I stay in the 
+					    row 2 I know that the value stored in column 1 is = 0 */
+	jmp	CalculateControlCol	/* After jump to CalculateControlCol:*/
+
+calculateSum:
+	movl	-28(%ebp), %edx		/* I move the row counter in %edx */
+	movl	-24(%ebp), %ecx		/* and the column counter in %ecx */
+
+	movl	%edx, %eax		/* So I can calulate the exactly cell that */		
+	addl	%eax, %eax		/* I must use in this time in the same way that */
+	addl	%edx, %eax		/* I do first to find the cell to print */
+	addl	%ecx, %eax
+
+	movl	-64(%ebp,%eax,4), %eax	/* When I have found it i push this value  */
+	pushl	%eax			/* in (%esp)*/
+	fildl	(%esp)			/* And read a double value of it of 64bit*/
+
+	leal	4(%esp), %esp
+	movl	-24(%ebp), %eax		/* Now I move the column counter in %eax*/
+	fldl	-88(%ebp,%eax,8)	/* multiply it for 8byte and sum to the -88(%ebp) address */
+	fmulp	%st, %st(1)		/* Multiply %st (the known value) with %st1 (matrix cell) */
+					/* the result stay in %st1 but I pop %st so now the result */
+					/* is in %st1*/
+
+	fldl	-16(%ebp)		/* Push in FPU the value of variable Sum created first */
+	faddp	%st, %st(1)		/* this value now stay in %st, the prev %st (the resutl
+					   of the sum) go in %st1 and I sum it to %st, after pop
+					   the %st so now in the %st there is the result of the
+					   addition operation */
+	fstpl	-16(%ebp)		/* Now I move this value in -16(%ebp) to refresh it */
+	leal	-24(%ebp), %eax		/* After that incremente the column counter of 1 */
+	addl	$1, (%eax)
+
+CalculateControlCol:
+	cmpl	$3, -24(%ebp)		/* Control if the column counter is = 3 (the last)*/
+	jne	calculateSum		/* If is different i go to calculateSum*/
+
+DoSubtraction:
+	movl	-28(%ebp), %ebx		/* If I stay here is becouse I have finished the column*/
+	movl	-28(%ebp), %eax		/* of the current row so now I move the row counter in %ebx*/
+	fldl	-88(%ebp,%eax,8)	/* and %eax! After i multiply this counter for 8byte and */
+	fsubl	-16(%ebp)		/* push in FPU register the known value calcoulated and */
+	movl	-28(%ebp), %edx		/* subtract from it the value stored in -16(%ebp)! After */
+	movl	-28(%ebp), %ecx		/* I move the row counter in %edx and %ecx*/
+
+	movl	%edx, %eax		/* Find the cell of matrix that I must use in this */
+	addl	%eax, %eax		/* time using the same code used first */
+	addl	%edx, %eax
+	addl	%ecx, %eax
+	movl	-64(%ebp,%eax,4), %eax
+
+DoDivision:
+	pushl	%eax			/* When I have found the cell that I want i push it*/
+	fildl	(%esp)			/* And read it as a double of 64bit*/
+	leal	4(%esp), %esp
+	fdivrp	%st, %st(1)		/* I divide %st(1) the value of the prex subtraction 
+					   and the value of matrix cell finded in the prev
+					   block of istruction! after pop %st and remain 
+					   the result of the division in %st0 */
+
+RefreshKnownValue:
+	fstpl	-88(%ebp,%ebx,8)	/* Now I pop this value in the column of known value 
+					   using the counter in %ebp multiplicated for 8Byte 
+					   to obtain the correct index in witch store the 
+					   value! */
+	leal	-28(%ebp), %eax		/* After incremente the value of row counter of 1*/
+	subl	$1, (%eax)
+
+CalculateControlRow:
+	cmpl	$0, -28(%ebp)		/* I Control if the row counter is = 0 */
+	jns	ResetSumAndColCount	/* If it is different i Jump to ResetSumAndColCount */
+
+	movl	$msg4, (%esp)		/* I stay here when I have finished all rows */
+	call	printf			/* print the msg4 */
+	movl	$1, -20(%ebp)		/* And create a new counter in -20(%ebp) */
+	jmp	FinalControl		/* Jump to the final control*/
+
+PrintResult:
+	movl	-20(%ebp), %eax		/* I move the value of counter in %eax*/
+	subl	$1, %eax		/* And decrement it becouse I must calculate the 
+					   knowned value and I must start from 0 and this
+					   counter start from 1 becouse it is necessary 
+					   to other things too*/
+	fldl	-88(%ebp,%eax,8)	/* After I push the exactly knowned value that I
+					   must use in FPU*/
+	fstpl	8(%esp)			/* And pop it in 8(%esp)*/
+	movl	-20(%ebp), %eax		/* After move the counter in %eax */
+	movl	%eax, 4(%esp)		/* And move it in (%esp) becouse I must print it as index*/
+	movl	$printdf, (%esp)	/* So print the string printdf*/
+	call	printf
+
+	leal	-20(%ebp), %eax		/* After that increment the counter value*/
+	addl	$1, (%eax)
+
+FinalControl:
+	cmpl	$4, -20(%ebp)		/* I compare the counter with the value 4*/
+	jne	PrintResult		/* if it is different from 4 i jump to PrintResult*/
+
+	movl	$0, (%esp)		/* Exit procedure*/
+	call	exit
+
+--------[bks.s]--------------------------------------------------------------------------------------------
+
+
+
+
+[ 0x7 - Gauss's elimination of unknown variables to obtain a triangulate upper matrix ]
+Ok at this time we can said that if a system where rank(A) !=rank(A)|b| have not a solution!! A is a matrix 
+of system and |b| is a vector of knowned values.
+
+for exemple the system 
+
+2x + 3y - 1z = 0
+1x + 1y + 1z = 0 
+
+where A and b are : 
+	 ---- ---- ----		     ---
+ 	| +2 | +3 | -1 |	    | 0 |
+    A =  ---- ---- ---- 	b =  ---
+	| +1 | +1 | +1 |            | 0 |
+	 ---- ---- ----		     ---
+
+the rank is the number of linear indipendents row! A row is linear indipendent when the sum of his value is
+different from zero
+
+so 
+
+A1 = 2+3+1 = 6 != 0
+A2 = 1+1+1 = 3 != 0 
+
+rank(A) = 2 since we have 2 linear indipendents row 
+
+if we consider the A matrix with b vector in this case the rank not change : 
+
+A1 = 2+3+1+0 =6 
+A2 = 1+1+1+0 =3
+
+so since rank(A) = 2 = rank(A)|b we  can  obtain  unfinished solution of this system! this solution dipends 
+from the value that we want take to x y and z variables. In particoular we have oo^n-c solutions where :
+oo is unifinished 
+n is the number of variables (x y z)
+c is the rank
+
+so we have oo^3-2 solution so oo^1! in a calculator oo^1 is different from oo^2
+if the rank(A) is different from rank(A)|b the system don't have solutions: 
+
+2x + 3y - 1z = 1
+4x + 6y - 2z = 5
+
+is we multiply the first line for -2 we obtain this: 
+
+(-2*2)x + (-2*3)y - (-2*1)z = -2*1
+4x +6y -2z = 5
+
+-4x -6y +2z = -2
++4x +6y -2z = 5
+
+now if i sum the first with the second line I obtain this: 
+
+(-4 +4)x + (-6+6)y + (2-2)z = -2+5 
+0x+0y+0z = 3
+0 = 3 is not a valid result
+
+To resolve this type of system we must trasform a normal system in triangulate upper matrix and resolve  it
+as  did first.. so  we  consider  only  the  2x2  3x3  4x4  5x5  6x6  etc  matrix!  We  use to solve it the
+Gauss's method
+
+For exemple the 3x3 matrix : 
+
+	2x1 + 4x2 - 2x3 = 6
+	1x1 - 1x2 + 5x3 = 0
+	4x1 + 1x2 - 2x3 = 2 
+
+	x2	x2	x3	x1	x2	x3	 b
+	-------------------	------------------	---
+	a11	a12	a13	+2	+4	-2	 6
+	-------------------	------------------	---
+	a21	a22	a23	+1	-1	+5	 0
+	-------------------	------------------	---
+	a31	a32	a33	+4	+1	-2	 2
+	-------------------	------------------	---
+
+	to obtain the triangulate upper matrix i must &quot;trasform&quot; a21 = a31 = a32 = 0 SO: 
+	
+	[TRANSFORM a21 = 0]
+		[pass1] =&gt; a21 =  a21/a11 = 1/2 
+
+		[pass2] =&gt; multiply a21* (a11 a12 a13 b) =  (1/2*2 ) (1/2*4) (1/2*-2) (1/2*6) 
+						         =    (1)      (2)     (-1)     (3)
+
+		[pass3] =&gt; subtract the obtenuted values to the (a21)(a22)(a23)(b)
+				1	-1	+5	0 	-
+				1	+2	-1	3	=
+			       -----------------------------------
+				0	-3	+6	+3	
+				x1	x2	x3	b
+
+		[pass4] =&gt; the new value of the row a21 a22 a23 b is : 0x1 -3x2 +6x3 = -3 
+
+		2x1 + 4x2 - 2x3 = 6
+		 0  - 3x2 + 6x3 = -3 
+		4x1 + 1x2 - 2x3 = 2 
+
+	[TRANSFORM a31 = 0]
+		[pass1] =&gt; a31 = a31\a11 = 2
+		[pass2] =&gt; a31 * (a11 a12 a13 b) = (2*2) (2*4) (2*-2) (2*6)
+		[pass3] =&gt; subract the obtenuted values to (a31) (a32) (a33) (b)
+				4	1	-2	2 -
+				4	8	-4	12 =
+			       -----------------------------
+				0	-7	2	-10
+				x1	x2	x3	b
+		[pass4]
+		
+		2x1 + 4x2 - 2x3 = 6
+		 0  - 3x2 + 6x3 = -3
+		 0  - 7x2 + 2x3 = -10
+
+	[TRANSFORM a32 = 0]
+		[pass1] =&gt; a32 = a32/a22 = 7/3
+		[pass2] =&gt; a32 * (a22 a23 b) = (7/3*0) (7/3*-3) (7/3*6) (7/3*-3)
+		[pass3] =&gt; subtract the obtenuted values to (a32) (a33) (b)
+				0	-7	+2	-10 -
+				0	-7	14	-7  =
+			       -------------------------------
+				0	0	-12	-3
+		[pass4]
+		
+		2x1 + 4x2 - 2x3  = 6
+		 0  - 3x2 + 6x3  = -3
+		 0  +  0  - 12x3 = -3
+
+Now we have obtenuted the triangulate upper matrix A 
+
+		X1	X2	X3   | B 
+		---------------------|---- 
+		+2	+4	-2   | +6
+		---------------------|----
+		0	-3	+6   | -3
+		---------------------|----
+		0	0	-12  | -3
+		--------------------------
+
+In general if we do this to resolve the linear system of nxn matrin in triangulate upper matrix 
+
+[      a11        ] [      a12         ] [     a13         ]... [     a1n         ] [     b1        ]
+[a21-(a21\a11)*a11] [a22-(a21\a11)*a12)] [a23-(a21\a11)*a13]... [a2n-(a21\a11)*a1n] [b2-(a21\a11)*b1]
+.
+.
+.
+[an1-(an1\a11)*a11] [an2-(an1\a11)*a12)] [an3-(an1\a11)*a13]... [ann-(an1\a11)*a1n] [bn-(an1\a11)*b1]
+
+to the end of this we obtain:
+
+	[a11]|  [a12         ]   | [a1n         ] | [b1         ]
+	-----|-------------------|----------------|---------------
+	[ 0 ]|  [a22(changed)]   | [a2n(changed)] | [b2(changed)]
+	-----|-------------------|----------------|---------------
+	.
+	.
+	.
+	-----|-------------------|----------------|---------------
+	[ 0 ]|  [an2(changed)]   | [ann(changed)] | [bn(changed)]
+
+We must repeat the same operation until we have obtenuted the triangulate upper matrix! when we rewrite the
+new value of matrix instead to store the 0 value in the null cell  we  can  store  the  multiplicand  value
+calculate during the execution of gauss process! So the matrix first calculated is stored in calculator  in 
+this way 
+	
+	 ----------------------------
+	|[ X1 ]|[ X2 ]|[ X3 ]  [  B ]|
+	|======|======|======  ======|
+	|[ +2 ]|[ +4 ]|[ -2 ]  [ +6 ]|
+	|======|------|------  ------|
+	|[+1/2] [ -3 ]|[ +6 ]  [ -3 ]|
+	|====== ====== ------  ------|
+	|[ +2 ]|[+7/3] [-12 ]  [ -3 ]|
+	 ----------------------------
+</pre></body></html>

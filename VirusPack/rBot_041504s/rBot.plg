@@ -1,0 +1,233 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSP171E.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\advscan.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\aliaslog.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\autostart.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\beagle.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\capture.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\cdkeys.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\crc32.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\crypt.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\dameware.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\dcc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\dcom.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\dcom2.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\ddos.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\download.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\driveinfo.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\ehandler.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\findfile.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\findpass.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\fphost.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\httpd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\icmpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\ident.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\irc_send.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\keylogger.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\kuang2.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\loaddlls.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\misc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\mssql.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\mydoom.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\net.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\netbios.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\netdevil.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\netutils.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\optix.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\pingudp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\processes.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\psniff.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\redirect.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\remotecmd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rlogind.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rndnick.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\scan.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\secure.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\session.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\shellcode.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\socks4.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\sub7.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\synflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\sysinfo.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\tcpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\tftpd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\threads.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\upnp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\visit.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\webdav.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSP171E.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSP171F.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rBot.pdb" /machine:I386 /out:"Release/rBot.exe" 
+".\Release\advscan.obj"
+".\Release\aliaslog.obj"
+".\Release\autostart.obj"
+".\Release\beagle.obj"
+".\Release\capture.obj"
+".\Release\cdkeys.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\dameware.obj"
+".\Release\dcc.obj"
+".\Release\dcom.obj"
+".\Release\dcom2.obj"
+".\Release\ddos.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\ehandler.obj"
+".\Release\findfile.obj"
+".\Release\findpass.obj"
+".\Release\fphost.obj"
+".\Release\httpd.obj"
+".\Release\icmpflood.obj"
+".\Release\ident.obj"
+".\Release\irc_send.obj"
+".\Release\keylogger.obj"
+".\Release\kuang2.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\mssql.obj"
+".\Release\mydoom.obj"
+".\Release\net.obj"
+".\Release\netbios.obj"
+".\Release\netdevil.obj"
+".\Release\netutils.obj"
+".\Release\optix.obj"
+".\Release\pingudp.obj"
+".\Release\processes.obj"
+".\Release\psniff.obj"
+".\Release\rBot.obj"
+".\Release\redirect.obj"
+".\Release\remotecmd.obj"
+".\Release\rlogind.obj"
+".\Release\rndnick.obj"
+".\Release\scan.obj"
+".\Release\secure.obj"
+".\Release\session.obj"
+".\Release\shellcode.obj"
+".\Release\socks4.obj"
+".\Release\sub7.obj"
+".\Release\synflood.obj"
+".\Release\sysinfo.obj"
+".\Release\tcpflood.obj"
+".\Release\tftpd.obj"
+".\Release\threads.obj"
+".\Release\upnp.obj"
+".\Release\visit.obj"
+".\Release\webdav.obj"
+".\Release\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSP171F.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+aliaslog.cpp
+autostart.cpp
+beagle.cpp
+capture.cpp
+cdkeys.cpp
+crc32.cpp
+crypt.cpp
+dameware.cpp
+dcc.cpp
+dcom.cpp
+dcom2.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+irc_send.cpp
+keylogger.cpp
+kuang2.cpp
+loaddlls.cpp
+misc.cpp
+mssql.cpp
+mydoom.cpp
+net.cpp
+netbios.cpp
+netdevil.cpp
+netutils.cpp
+optix.cpp
+pingudp.cpp
+processes.cpp
+psniff.cpp
+rBot.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(42) : error C2065: 'authost' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(42) : error C2065: 'versionlist' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(51) : error C2065: 'botid' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(70) : error C2065: 'filename' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(71) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(71) : error C2106: '=' : left operand must be l-value
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(184) : error C2100: illegal indirection
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(187) : error C2065: 'server' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(189) : error C2065: 'channel' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(190) : error C2065: 'chanpass' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(223) : error C2065: 'server2' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(223) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(226) : error C2065: 'channel2' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(227) : error C2065: 'chanpass2' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(305) : error C2065: 'serverpass' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(305) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(434) : error C2065: 'modeonconn' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(566) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(566) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(567) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(644) : error C2065: 'version' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(647) : error C2065: 'nickconst' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(648) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(649) : error C2065: 'password' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(684) : error C2109: subscript requires array or pointer type
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(684) : error C2664: 'wildcardfit' : cannot convert parameter 1 from 'int' to 'char *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(1311) : error C2446: ':' : no conversion from 'int' to 'char *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(1311) : error C2664: '_snprintf' : cannot convert parameter 3 from '' to 'const char *'
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(1633) : error C2065: 'psniffchan' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(1690) : error C2065: 'keylogchan' : undeclared identifier
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rBot_041504s\rBot.cpp(2379) : error C2065: 'exploitchan' : undeclared identifier
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+sub7.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+upnp.cpp
+visit.cpp
+webdav.cpp
+wildcard.cpp
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+rBot.exe - 31 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

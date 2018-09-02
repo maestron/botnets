@@ -1,0 +1,64 @@
+KEY OBJECTS LIBRARY for Delphi (and Free Pascal Compiler) - to make applications small and power. This library is freeware and open source. Delphi 2, 3, 4, 5, 6, 7, 8, BDS 2005, 2006, TurboDelphi5 and Free Pascal Compiler 1.0.5, 1.0.6, and higher (2.0.4 and above) are supported. Partially compatible with Kylix (Linux/Qt platform, use special converting tool and provided files in Tools section on the site http://kolmck.net). Also a version for WinCE exists.
+
+Copyright (C) by Vladimir Kladov, 1999-2007.
+Some parts of code are Copyright (C) intellectual property by other people, see comments in code and on KOL site. Thanks to all for help with KOL and MCK!
+
+version 2.80 (19-Sep-2007)
+
+To get newer version, go to Web-page http://kolmck.net and get there updates.
+
+__________________
+BRIEF DESCRIPTION:
+    KOL - Key Objects Library is a set of objects to develop applications using Delphi. It is distributed free of charge, with source code.
+   KOL allows to create very compact GUI applications (starting from ~14,0K without compression - if suggested system units replacement used). The majority of the code is converted to assembly.
+   A Help generating tool, xHelpGen is provided for KOL, which creates detailed documentation in html format. Documentation is generated on from the source code comments, so developers instantly  have access to the most fresh and complete documentation.
+   With advent of the MCK (Mirror Classes Kit) package, all advantages of visual programming are available for developers who use KOL. Additionally with MCK it is possible to make large enough projects smaller converting part of machine code to a byte code of Forth-like virtual (emulated at run time) machint (see more detailed: Collapse).
+   A lot of additions are available for KOL, which allow to work with data bases, Active-X components, print reports, different image and compression formats, etc.
+--------------------------------------------
+
+This archive contains Key Objects Library main part: KOL.PAS and several test samples. 
+At the KOL Web page (http://kolmck.net), you can download also additional components:
+
+MCK		- Mirror Classes Kit - visual programming environment for KOL
+xHelpGen	- utility to generate html-documentation from comments within the source code;
+KolErr	(~25K) - "light" (for 6K), but functional exception handling unit
+KOLEdb, KOLODBC, StrDb (by Mike Talcott), TdkDbKol (by Thaddy de Koning) - DB-extensions for KOL
+KolGif	(~20K) - GIF (animated, transparent) support for KOL
+KolJpegObj (~127K + 340K) - JPEG support for KOL
+KolOGL12 (~59K) - OpenGL support for KOL
+KOLword (~12K) - MS Word automation
+Service	(~20K) - writing NT services with KOL
+KOLSocket (~30K) - sockets for KOL (by Alexander Shakhaylo)
+TestKOLRas (~20K) - RAS dial-up for KOL (by Alexander Shakhaylo)
+sysdcu	(~200K) - system.dcu, sysinit.dcu replacement for Delphi5 (it provides a savings of 9KBytes from the .exe's file size)
+sysdcuD6 (~200K) - system.dcu, ... replacement for Delphi6
+HeapMM  (~1K) - alteranative memory manager
+MapMem
+Widgets
+ZLib
+... and many others, this list is constantly extended with new items.
+
+
+_____________
+INSTALLATION:
+
+1. When You install KOL the first time, create a new directory for KOL (e.g., E:\KOL).
+
+2. Unpack all files from KOL.ZIP there. (If upgrading, confirm overwriting of old files with new ones).
+
+3. If You downloaded xhelpgen.zip package, also unpack it into the same directory. Read also docs for xHelpGen from the package.
+
+4. If You downloaded SYSDCU.ZIP, create subdirectory for it (e.g. E:\KOL\SYS) and unpack it there. Read also docs for system units replacement in the package.
+
+5. To learn how to install the MCK (Mirror Classes Kit) see instructions in the MCK archive.
+
+6. To learn how to install KOLEdb, see instructions in KOLEDB.ZIP archive. 
+
+7. For more information on the use and or installation of any of the packages packages and programs found on KOL site: look for help within it's package.
+
+Note: KOL itself does not require creating a package since it has no design-time components to install it onto Component Palette. See MCK, which has such components and allows visual programming using KOL.
+--------------------------------------------------
+
+Web address: http://kolmck.net
+vk@kolmck.net      
+Vladimir Kladov

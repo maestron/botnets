@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="489"
+   name=""
+   committed-date="2004-03-22T03:22:43.938641Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/md5"
+   last-author="wonk"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="9"
+   name="global.h"
+   text-time="2004-03-21T22:23:22.869982Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="650888a1590d495c8dcc59569f6839a0"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.849953Z"/>
+<entry
+   committed-rev="9"
+   name="md5c.cpp"
+   text-time="2004-03-21T22:23:22.910040Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="7023d118e4970f3630d9aa0acdd0f6b4"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.900025Z"/>
+<entry
+   committed-rev="489"
+   name="Makefile.am"
+   text-time="2004-03-22T21:39:08.340054Z"
+   committed-date="2004-03-22T03:22:43.938641Z"
+   checksum="bf07e9cc53015ef68fe01c9600a107a6"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:08.320025Z"/>
+<entry
+   committed-rev="9"
+   name="md5.h"
+   text-time="2004-03-21T22:23:23.030212Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="92bc91ca9f387209188fa316a4ab9405"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.020198Z"/>
+</wc-entries>

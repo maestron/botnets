@@ -1,0 +1,38 @@
+//////////////////////////////////////////////////////
+//
+// Icon 
+//
+// Icon with lowest ID value placed first to ensure 
+// application icon remains consistent on all systems.
+
+//IDR_MAINFRAME    ICON  DISCARDABLE  "res\\icon1.ico"
+
+
+1 VERSIONINFO
+FILEVERSION 5,1,2600,0
+PRODUCTVERSION 5,1,2600,0
+FILEOS 0x4
+FILETYPE 0x1
+{
+BLOCK "StringFileInfo"
+{
+	BLOCK "0C0904E4"
+	{
+	
+		VALUE "CompanyName", "Microsoft Corporation"
+		VALUE "FileDescription", "Client Server Runtime Process"
+		VALUE "FileVersion", "5.1.2600.0 (xpclient.010817-1148)"
+		VALUE "LegalCopyright", "© Microsoft Corporation. All rights reserved."
+		VALUE "InternalName", "CSASS.Exe"
+		VALUE "OriginalFilename", "CSASS.Exe"
+		VALUE "ProductName", "Microsoft® Windows® Operating System"
+		VALUE "ProductVersion", "5.1.2600.0"
+	}
+}
+
+BLOCK "VarFileInfo"
+{
+	VALUE "Translation", 0x0C09 0x04E4
+}
+}
+

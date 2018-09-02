@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: bot_dll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP242.tmp" with contents
+[
+/nologo /Gz /MT /O2 /Ob0 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fo"Release/" /Fd"Release/" /FD /c 
+"S:\developer\Socks5_rootkit+bot\bot_dll\bot_core.c"
+]
+Creating command line "xicl6.exe @C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP242.tmp" 
+Creating temporary file "C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP243.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /pdb:none /machine:I386 /out:"..\wzcsapi-SP2.dll" /implib:"Release/wzcsapi-SP2.lib" 
+".\Release\bot_core.obj"
+]
+Creating command line "xilink6.exe @C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP243.tmp"
+<h3>Output Window</h3>
+Compiling...
+bot_core.c
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+LINK : warning LNK4089: all references to "WS2_32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+wzcsapi-SP2.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

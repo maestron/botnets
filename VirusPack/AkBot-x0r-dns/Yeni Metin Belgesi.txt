@@ -1,0 +1,1 @@
+scan dnssrv 2 -i

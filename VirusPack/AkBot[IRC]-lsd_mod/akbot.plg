@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: akbot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Rex\LOCALS~1\Temp\RSPC1.tmp" with contents
+[
+ws2_32.lib shell32.lib advapi32.lib wininet.lib user32.lib /nologo /dll /pdb:none /machine:I386 /out:"bin/nope.dll" /implib:"Release/nope.lib" 
+".\Release\asn.obj"
+".\Release\exploits.obj"
+".\Release\ipswitch.obj"
+".\Release\mssql3mod.obj"
+".\Release\netapi.obj"
+".\Release\akbot.obj"
+".\Release\download.obj"
+".\Release\Ehttp.obj"
+".\Release\ftpd.obj"
+".\Release\ip.obj"
+".\Release\irc.obj"
+".\Release\process.obj"
+".\Release\scanner.obj"
+".\Release\thread.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Rex\LOCALS~1\Temp\RSPC1.tmp"
+<h3>Output Window</h3>
+Linking...
+   Creating library Release/nope.lib and object Release/nope.exp
+
+
+
+<h3>Results</h3>
+nope.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

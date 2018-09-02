@@ -1,0 +1,6 @@
+warnings in directory s:\developer\socks5_rootkit+bot\bot_sys
+s:\developer\socks5_rootkit+bot\bot_sys\bot_entry.h(5) : warning C4103: 's:\developer\socks5_rootkit+bot\bot_sys\bot_entry.h' : alignment changed after including header, may be due to missing #pragma pack(pop)
+s:\developer\socks5_rootkit+bot\bot_sys\bot_hidedriver.h(32) : warning C4047: 'initializing' : 'ULONG_PTR' differs in levels of indirection from 'void *'
+s:\developer\socks5_rootkit+bot\bot_sys\bot_hidedriver.h(41) : warning C4022: 'MmIsAddressValid' : pointer mismatch for actual parameter 1
+s:\developer\socks5_rootkit+bot\bot_sys\bot_hidedriver.h(44) : warning C4047: '=' : 'ULONG_PTR' differs in levels of indirection from 'PVOID'
+s:\developer\socks5_rootkit+bot\bot_sys\bot_hidedriver.h(47) : warning C4022: 'memcpy' : pointer mismatch for actual parameter 1

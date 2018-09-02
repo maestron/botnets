@@ -1,0 +1,87 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nzm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Ph3mt\IMPOST~1\Temp\RSP93.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"obj/nzm.pch" /YX /Fo"obj/" /Fd"obj/" /FD /c 
+"C:\Documents and Settings\Ph3mt\Documenti\NzM 3.0 By Ph3mt\NzM 3.0 By Ph3mt\cpp\core\rndnick.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Ph3mt\IMPOST~1\Temp\RSP93.tmp" 
+Creating temporary file "C:\DOCUME~1\Ph3mt\IMPOST~1\Temp\RSP94.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"exe/nzm.pdb" /machine:I386 /out:"exe/nzm.exe" 
+".\obj\ddos.obj"
+".\obj\icmpflood.obj"
+".\obj\supersyn.obj"
+".\obj\synflood.obj"
+".\obj\tcpflood.obj"
+".\obj\keylogger.obj"
+".\obj\psniff.obj"
+".\obj\dcom.obj"
+".\obj\lsass.obj"
+".\obj\ms04_007_asn1.obj"
+".\obj\netapi.obj"
+".\obj\sym06_010.obj"
+".\obj\veritas.obj"
+".\obj\vncps.obj"
+".\obj\vncrooter.obj"
+".\obj\ftpd.obj"
+".\obj\httpd.obj"
+".\obj\tftpd.obj"
+".\obj\advscan.obj"
+".\obj\redirect.obj"
+".\obj\socks4.obj"
+".\obj\capture.obj"
+".\obj\cdkeys.obj"
+".\obj\findfile.obj"
+".\obj\findpass.obj"
+".\obj\loaddlls.obj"
+".\obj\misc.obj"
+".\obj\netutils.obj"
+".\obj\patcher.obj"
+".\obj\pingudp.obj"
+".\obj\remotecmd.obj"
+".\obj\sysinfo.obj"
+".\obj\visit.obj"
+".\obj\aliaslog.obj"
+".\obj\autostart.obj"
+".\obj\crc32.obj"
+".\obj\crypt.obj"
+".\obj\dcc.obj"
+".\obj\download.obj"
+".\obj\driveinfo.obj"
+".\obj\ehandler.obj"
+".\obj\fphost.obj"
+".\obj\ident.obj"
+".\obj\irc_send.obj"
+".\obj\net.obj"
+".\obj\nzm.obj"
+".\obj\processes.obj"
+".\obj\random.obj"
+".\obj\rndnick.obj"
+".\obj\scan.obj"
+".\obj\secure.obj"
+".\obj\session.obj"
+".\obj\shellcode.obj"
+".\obj\threads.obj"
+".\obj\version.obj"
+".\obj\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Ph3mt\IMPOST~1\Temp\RSP94.tmp"
+<h3>Output Window</h3>
+Compiling...
+rndnick.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+nzm.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

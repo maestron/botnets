@@ -1,0 +1,5 @@
+1.	???
+2.	???
+3.	d-one's persistence code 
+4.	installer that works on vista/limited user accounts
+5.	a59's downloader instead of that shitty udtf one

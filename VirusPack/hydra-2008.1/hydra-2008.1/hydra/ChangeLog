@@ -1,0 +1,11 @@
+Hydra 2008.1 stable (released 2008-02-23)
+
+ * added input line parser.
+ * added irc connection random ident string.
+ * added source address synflood spoofing.
+ * added daemonize manage function for quiet debug
+ * fixed 'upgrade' same file replace bug.
+ * fixed serveral error messages.
+ * removed an command 'reclst' for unutility.
+ * source code completly rewrite.
+

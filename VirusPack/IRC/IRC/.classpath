@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="commons-jxpath-1.1.jar"/>
+	<classpathentry kind="lib" path="commons-logging-api.jar"/>
+	<classpathentry kind="lib" path="commons-logging.jar"/>
+	<classpathentry kind="lib" path="jxta.jar"/>
+	<classpathentry kind="lib" path="sbbi-upnplib-1.0.4.jar"/>
+	<classpathentry kind="lib" path="sbbi-jmx-1.0.jar"/>
+	<classpathentry kind="lib" path="mx4j-tools.jar"/>
+	<classpathentry kind="lib" path="mx4j-remote.jar"/>
+	<classpathentry kind="lib" path="mx4j-impl.jar"/>
+	<classpathentry kind="lib" path="mx4j-jmx.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

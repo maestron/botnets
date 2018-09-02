@@ -1,0 +1,24 @@
+List of work to be done:
+
++ irc_connect line split truncation issue
++ turn bot into a service
++ topic command parsing
++ execute w/output to ircd
++ ntscan share support/test
++ polymorphic add in
++ key logger add-in/sendkeys
++ auto-scan on startup
++ secure code with security policy lock-out (LSA)
++ ftpd server
++ portscanner for single ip
++ auto-update bot after dns fails or is pointed to rfc1918 address
++ kernel hook/dll support
++ multiple server list (round-robin)
++ msn/aim spreader
++ p2p code add-in (for people who want it)
++ Fix buggy CRC code (or is it? definite clean though)
++ hook uninstall into melt code to properly delete bot
++ firewall add-in
++ syn scanner
++ add in channel mode settings
++ socks5

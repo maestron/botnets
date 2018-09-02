@@ -1,0 +1,180 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: agobot3 - Win32 Release No OpenSSL Internal--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\DIABLO\LOCALS~1\Temp\RSPE2.tmp" with contents
+[
+/nologo /G6 /MT /W3 /Gi /GX /O1 /Ob0 /I "lib/pthreads/win32" /D "NDEBUG" /D "AGOBOT_NO_OPENSSL" /D "INTERNAL" /D "WIN32" /D "_WINDOWS" /D "FORCE_UNICODE" /D "__CLEANUP_SEH" /FR"agobot3___Win32_Release_No_OpenSSL_Internal/" /Fp"agobot3___Win32_Release_No_OpenSSL_Internal/agobot3.pch" /YX /Fo"agobot3___Win32_Release_No_OpenSSL_Internal/" /Fd"agobot3___Win32_Release_No_OpenSSL_Internal/" /FD /c 
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\irc.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\smtp.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\smtp_logic.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\sockets.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\bot.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\cmdline.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\cmdshell.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\commands.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\config.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\consdbg.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\cplugin.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\crypter.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\cstring.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\cthread.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\cvar.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\hook.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\installer.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\logic.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\mac.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\mainctrl.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\polymorph.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\random.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\sdcompat.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\sniffer.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\ssllib.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\utility.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\dcomscanner.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\lsassscanner.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\netddescanner.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\scanner.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\winsscanner.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\ddos.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\httpflood.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\pingflood.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\skysyn.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\synflood.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\udpflood.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\wonk.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\shellcode.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\redir_gre.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\redir_http.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\redir_https.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\redir_socks.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\redir_tcp.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\redirect.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\ftplib\ftplib.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\lib\pthreads\win32\pthread.c"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\md5\md5c.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\harvest_emails.cpp"
+"C:\Documents and Settings\DIABLO\Bureau\SKYPHAT2K5\SKYPHAT2K5\harvest_registry.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DIABLO\LOCALS~1\Temp\RSPE2.tmp" 
+Creating temporary file "C:\DOCUME~1\DIABLO\LOCALS~1\Temp\RSPE3.tmp" with contents
+[
+msvcrt.lib msvcprt.lib oldnames.lib kernel32.lib user32.lib advapi32.lib shell32.lib ws2_32.lib netapi32.lib mpr.lib psapi.lib dnsapi.lib /nologo /subsystem:windows /incremental:no /pdb:"agobot3___Win32_Release_No_OpenSSL_Internal/agobot3.pdb" /machine:I386 /nodefaultlib /out:"bin/win32/agobot3.exe" /libpath:"lib/openssl/win32/lib" 
+".\agobot3___Win32_Release_No_OpenSSL_Internal\irc.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\smtp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\smtp_logic.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sockets.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\bot.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cmdline.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cmdshell.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\commands.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\config.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\consdbg.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cplugin.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\crypter.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cstring.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cthread.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cvar.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\hook.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\installer.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\logic.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\mac.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\mainctrl.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\polymorph.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\random.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sdcompat.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sniffer.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ssllib.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\utility.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\dcomscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\lsassscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\netddescanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\scanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\winsscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ddos.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\httpflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\pingflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\skysyn.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\synflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\udpflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\wonk.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\shellcode.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_gre.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_http.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_https.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_socks.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_tcp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redirect.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ftplib.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\pthread.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\md5c.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_emails.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_registry.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\DIABLO\LOCALS~1\Temp\RSPE3.tmp"
+<h3>Output Window</h3>
+Compiling...
+irc.cpp
+smtp.cpp
+smtp_logic.cpp
+sockets.cpp
+bot.cpp
+cmdline.cpp
+cmdshell.cpp
+commands.cpp
+config.cpp
+consdbg.cpp
+cplugin.cpp
+crypter.cpp
+cstring.cpp
+cthread.cpp
+cvar.cpp
+hook.cpp
+installer.cpp
+logic.cpp
+mac.cpp
+mainctrl.cpp
+polymorph.cpp
+random.cpp
+sdcompat.cpp
+sniffer.cpp
+ssllib.cpp
+utility.cpp
+dcomscanner.cpp
+lsassscanner.cpp
+netddescanner.cpp
+scanner.cpp
+winsscanner.cpp
+ddos.cpp
+httpflood.cpp
+pingflood.cpp
+skysyn.cpp
+synflood.cpp
+udpflood.cpp
+wonk.cpp
+shellcode.cpp
+redir_gre.cpp
+redir_http.cpp
+redir_https.cpp
+redir_socks.cpp
+redir_tcp.cpp
+redirect.cpp
+ftplib.cpp
+pthread.c
+md5c.cpp
+harvest_emails.cpp
+harvest_registry.cpp
+Linking...
+LINK : warning LNK4089: all references to "DNSAPI.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+agobot3.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

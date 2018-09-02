@@ -1,0 +1,682 @@
+Other items RacerX90 is working on:
+
+- Syn scanner. Need to put everything in an ipheader to use with winsock
+  (I'll try to get to this soon, but been trying to fix other more serious bugs.)
+- Multiple server/port structure for connecting to IRCD.
+- New packet filter firewall module
+
+---
+
+RacerX90 (04/14/04):
+
+- Finished integrating Findpass code. I tested on Windows 2k and it seems
+  to work just fine. I also added a new OS check function to use with this
+  module or else where within the bot. (findpass.cpp/h/misc.cpp/h/defines.h)
+
+- Ported Dameware exploit from Phatbot. There was a lot of code missing
+  from your port Nils. I had to start from the original source (sorry!) 
+  The connection code for the reverse shell was all removed and the send/recv
+  calls were messed up and out of order. Definitely needs testing. 
+  (dameware.cpp/h)
+
+- Integrated system secure and unsecure into the enumshare list and drive
+  list to be more accurate on removing or adding shares. (secure.cpp/h)
+
+- Threaded both the secure and unsecure functions to prevent bot pingout
+  on long lists. Will be adding more security features soon 
+  (secure.cpp/h/rbot.cpp)
+
+---
+
+RacerX90 (04/13/04):
+
+- Started work integrating Findpass code. It's not finished, and 
+  don't bug me about it. Sorry, but it will be done when it's done. 
+  (findpass.cpp/h/defines.h)
+
+- Changed FileExists() call to allow for different file checking/testing.
+  i.e. exists/readable/writeable/r+w. (driveinfo.cpp/h)
+
+- Removed old "BYTE spy" in code. This was used for a separate 
+  irc_parseline() routine for clones. Fixed clone command to identify 
+  itself in the IRC structure as a clone. This way it can be passed to 
+  irc_parseline() to remove the bug that clones could unwillingly accept 
+  topic commands if u use them to flood another channel. They should now 
+  ignore topic commands on clones.
+
+- Remove .csock & .cnick from clones. It now uses the default .sock & 
+  .nick from the threads structure to store the socket info and nick. 
+  Not sure why this wasn't done in the first place. All socket info for 
+  clones should remain the same, just points to a different member of 
+  the structure. (rbot.cpp)
+
+- Added clonestop command to stop all active clone threads instead of
+  having to kill individual threads. (rbot.cpp)
+
+- Added Sub7 Exploit for the fun of it. (sub7.cpp/h/advscan.cpp)
+
+- Added define options to add or remove exploits individually at
+  compile time (defines.h/advscan.cpp/*exploitname*.cpp/h)
+
+- Added Reboot command to remotely reboot the machine. 
+  (rbot.cpp/misc.cpp/h)
+
+- Added new master login code which is suppose to fix an unaligned
+  access issue. (rbot.cpp)
+
+- Added new command to dump masters list 'who', and hooked 'logout'
+  into the common structure to allow for individual logout of users.
+  (rbot.cpp)
+
+- I *THINK* I caught the memory corruption found in the login/auth
+  when using Crypt(). Added a delay on process creation before 
+  exiting in winmain, also changed declaration of OurKeyLen in
+  Crypt() from static const int to unsigned int (I'm pretty sure
+  this was at fault.) (crypt.cpp/rbot.cpp)
+
+- Added an exception handler to recover from crashes. The bot should
+  restart immediately upon crashing. Should handle most crashes, but
+  there are some cases it can't handle depending what state the memory
+  is in when the crash occurs. This should work without dumping any
+  sort of error message that the crash occured. (rbot.cpp/ehandler.cpp/h)
+
+- Added "crash" command for testing. This causes an unaligned 
+  access violation when called. It's used to test the bot exception
+  handler routine. (rbot.cpp)
+
+- Modded xwarlordx's PrivateIP to work on all RFC1918 IPs. It didn't
+  work on class B networks such as 172.16-31. Needs testing. 
+  (netutils.cpp/h) (BTW: What is 90.0 used for? It's a real network
+  and not RFC1918.)
+
+- Modded xwarlordx's CreateProc() function to use the correct dwFlags
+  for STARTF_USESHOWWINDOW which is needed for SW_HIDE option. 
+  Additionally, I removed "char *filename" which conflicts with the
+  global variable of the bot filename. Also implemented the command
+  line parameters which were passed to the function but weren't used?
+  Also changed the return value to be the pid vs. true/false which 
+  seems more useful. (misc.cpp/h)
+
+---
+
+Other items xwarlordx is working on:
+
+- getting sleep... saying this for ages ;)
+- ftpd.. will add some in the next version..
+- kernel hooks.. finaly found out how to do witouth driver
+
+---
+
+xwarlordx (04/12/04):
+
+- changed the avirus hooking code so it wouldnt keep adding changed hosts
+  to the file when this is already done. (rbot.cpp/avirus.cpp/.h)
+
+- added the anti virus remover back. this time i added it back with registry
+  cleanup and file removal. Not all virusses are supported, but thats more 
+  something for Nils or whatever to look up... :) (rbot.cpp/avirus.cpp/.h)
+
+- added the CreateProc() function. we can make a call to this function now
+  if we want to start a process. it accepts parameters and will return a true
+  or a false so you can see if the process runs. (misc.cpp)
+
+- added PrivateIP() function. this might be handsome, to prevent from scanning
+  unallocated or private networks. will return a true or a false (misc.cpp)
+
+- start for ADVHttpdScanner();. Plz keep it there, i'm testing around with it.
+  currently, it can determine if the server runs apache. need some work tough/
+  (advscan.cpp)
+
+---
+
+NOTE: There were MANY MANY changes, and large sections of code re-written
+and improved. Things could be broke, but chances are it would be something
+small or quick to fix. Don't message me telling me how "broke" the release is, 
+instead make a note were an issue might be and I'll look at it. More than
+likely I can fix it in a few minutes.
+
+---
+
+RacerX90 (04/11/04):
+
+- Ported wisdom bot syn/ack/random spoofed flood. Changed code to
+  generate a randomly generated IP for spoofing. The rest was ported
+  as is. (rbot.cpp/tcpflood.cpp/h)
+
+- Ported wisdom bot icmp spoofed flood. Changed code to generate a 
+  randomly generated IP for spoofing. The rest was ported as is. 
+  (rbot.cpp/icmpflood.cpp/h)
+
+- Added new CDKeys to list. Stolen from D-oNe snag.cpp program. 
+  (cdkeys.cpp)
+
+- General code clean-up in main connection functions and overall
+  logging improvements throughout the irc_parseline() function.
+  Taking advantage of the addlogv() call to reduce calls. (rbot.cpp)
+
+- Cleaned and fixed up DCC functions. (dcc.cpp/h/rbot.cpp)
+
+- Tons of structures cleaned up and fixed. Trying to standardize most
+  of these where I can. (*.h)
+
+- More code clean-up and standardizing of modules. (*.*)
+
+---
+
+RacerX90 (04/10/04):
+
+- Added default options for Rlogin server. Moved startup command to 
+  the no parameters area. Defaults to the rloginport and username
+  of the person issuing the command. (rbot.cpp)
+
+- Added default options for http server. Moved startup command to 
+  the no parameters area. Defaults to httpport and root folder of
+  the system directory drive. (rbot.cpp)
+
+- Added default options for tftp server. Moved startup command to 
+  the no parameters area. Defaults to the botfile name and the
+  requestname is the filename specified in configs.h. (rbot.cpp)
+
+- Fixed issue where socks4 could allow for a port number of 0.
+  Now defaults to socks4port. (rbot.cpp)
+
+- Added option for userid auth on Sock4 server. Code needs testing.
+  (rbot.cpp/socks4.cpp/h)
+
+- Added in Edge's newly revised password file. Did some minor tweaking
+  to it, but it should be looking for more relevant passwords now.
+  (passwd.h)
+
+---
+
+RacerX90 (04/09/04):
+
+- More code clean-up of rlogind. Added socket timeout and pid tracking of
+  subthreads/cmd so the process can be killed if open connections are active
+  during stop. (session.cpp/h/rlogind.cpp/h)
+
+- Redirect function clean-up and integration into global threads structure for
+  sub threads. Might need further testing. (redirect.cpp/h/rbot.cpp)
+
+- Cleaned up beagle exploit code. Made the code much tighter and removed a 
+  lot of redundant error code. (beagle.cpp)
+
+- Worked on organizing and straightening out psniff code (again.) Added more
+  sniff strings. (psniff.cpp)
+
+- Added new killthreadall() function and kill all active threads for either
+  a remove or die command. It's best to clean active threads up just in case.
+  (threads.cpp/h/misc.cpp)
+
+- Cleaned up code for killthread command and added additional call to 
+  kill all active threads - killthreadall(). (rbot.cpp)
+
+- Turned ident server into an actual server which can handle multiple 
+  requests. Also added option to stop/start ident server at will. 
+  (ident.cpp/rbot.cpp)
+
+- Numerous other code clean-ups and minor bug fixes.
+
+---
+
+RacerX90 (04/08/04):
+
+- Started re-write for self-deleting uninstall(). Right now the code *seems* to
+  work correctly. Both the .bat file and the bot file get deleted. However, I can
+  see where race conditions might cause this to fail. Really, I need to try to work
+  on getting process creation with the delete on exit flag set working. 
+  (misc.cpp/rbot.cpp)
+
+- Bunches of lines of code clean-up and reformatting also. Trying to keep the
+  feel of code consistant across all modules. It basically looks like each module
+  was written by a different person. This will be continued to be cleaned up as
+  I go along. 
+
+- Added and fixed several bugs in the beagle exploit. WSAStartup() not called.
+  Several clean-up calls added, missing recv(), arguments wrong for
+  send(), and added additional handling of new and old beagle exploits.
+  (advscan.cpp/beagle.cpp)
+
+- Added a new function for logging with variable arguments. addlogv() 
+  I should have added this a while ago. (aliaslog.cpp/h)
+
+- Added and integrated an rlogind server into rbot. Tested with PuTTY and seems
+  to work well. It's multi-threaded and will accept multiple connections. I'm
+  going to see if I can work on upping the socket timeout on disconnecting as
+  the socket is blocked until it times out. (session.cpp/h/rlogind.cpp/h)
+
+---
+
+D-oNe (04/07/04):
+
+- Updated optix exploit to handle v1.1 servers. (optix.cpp)
+
+---
+
+RacerX90 (04/07/04):
+
+- Fixed sysinfo to now use the proper drive letter to list the available free
+  drive space. (sysinfo.cpp)
+
+- Threaded the threads lister so if you want to dump out all of the active
+  threads including the children the bot won't ping out from such a long listing.
+  (threads.cpp/h/rbot.cpp)
+
+- Removed secondary cpuspeed2() function as it wasn't too accurate using 
+  microsoft high performance counters. (sysinfo.cpp/h)
+
+- Fixed numerous cases where CreateThread() was called and a while loop was used
+  to make sure the thread starts properly. However, if the thread fails to start
+  for any reason, the bot could get caught in an infinite loop and ping out and
+  die. This is a serious problem and needs to be addressed on future functions
+  added in. (rbot.cpp/httpd.cpp/socks4.cpp)
+
+- Re-wrote ident server. The code had very little error checking or even
+  structure. I also hooked into the unified threads structure and discovered
+  the server doesn't always talk to the ident server. It could be left running
+  on the port, which means if the bot disconnects from IRC for any reason and
+  tries to reconnect it could actually try to start multiple ident threads or
+  worse crash cause the port is already binded to. (ident.cpp/ident.h/rbot.cpp)
+
+- Removed three unneeded members of the unified threads structure.
+  .dir, .file, .info and .port can all be passed to the threads within the
+  structure for the thread itself. It's just more to keep track of 
+  and not needed. 
+  (socks4.cpp/h/httpd.cpp/h/advscan.cpp/rbot.cpp/tftp.cpp/threads.cpp/h)
+
+- Remove HTTP_Server() intermediate call for httpd start-up. No longer
+  need this as server is directly called as a thread. All socket/bind/listen/etc
+  is done right within the thread itself. Much cleaner way of doing this.
+  (httpd.cpp/httpd.h)
+
+- Added '-d' option for httpd server to enable or disable directory listings.
+  This allows you to restart the httpd for exploits. You don't need to have
+  directory listings on as this is only a security hazard. All you really
+  want is file transfering. (rbot.cpp)
+
+- Incorporated httpd server client threads into the unified threads
+  structure for all incoming connections. (httpd.cpp/h)
+
+- Cleaned some of the mydoom exploit code and shrunk it down in size. 
+  (mydoom.cpp)
+
+- Removed redundant list threads function call. This was originally used 
+  for development. Not needed anymore. (threads.cpp/h/rbot.cpp)
+
+- Added debugging console to handle output from stdout/stderr. I'm not 
+  sure what value this is, but Nils wanted it. (aliaslog.cpp/h/rbot.cpp)
+
+- Numerous other minor code improvements and changes to most of the 
+  source tree.
+
+---
+
+RacerX90 (04/06/04):
+
+- Fixed bug in SOCKS4 server accept() call. SOCKADDR_IN improperly
+  passed to call without a pointer to the size of the structure. 
+  Causes corruption when trying to pull out the client info. (socks4.cpp)
+
+- Incorporated SOCKS4 server client threads into the unified threads
+  structure with identifying client IP/Port for all incoming connections.
+  (socks4.cpp)
+
+- Cleaned packet sniffer code. Added in socket closing where needed. 
+  Also cleared the threads structure when a failure occurs. This was not
+  properly done. (psniff.cpp)
+
+- Fixed bug in redirect server accept() call. SOCKADDR_IN improperly
+  passed to call without a pointer to the size of the structure. 
+  Causes corruption when trying to pull out the client info. (redirect.cpp)
+
+- Major re-write to httpd to make more threads friendly. Old code was not
+  structured very well and since everything was defined globally it was
+  not multi-thread safe. (httpd.cpp/h/rbot.cpp/advscan.cpp)
+
+---
+
+RacerX90 (04/05/04):
+
+- Fixed bug in new rndnick routine that incorrectly parses the nick when
+  uptime/mirc mod is disable. Now I properly check for it and the bot will
+  connect normally to IRC. (rndnick.cpp)
+
+- Fixed exploit messages for DCOM, DCOM2, UPNP for improper messaging to
+  channel on fake exploits. (dcom.cpp/dcom2.cpp/upnp.cpp)
+
+---
+
+RacerX90 (04/04/04):
+
+- Made some modifications to the MS SQL exploit. Hopefully this will
+  get the exploit working. (mssql.cpp)
+
+- Re-wrote rndnick code to allow for universal adding in of functions.
+  Should make it very easy for people to plug in their own rndnick
+  function. (rbot.cpp/rndnick.cpp/h)
+
+- Added keylog,psniff,exploit message redirection to different
+  channels (re-added Nils' code this time without hardcoding them in.) 
+  (configs.h/externs.h/rbot.cpp)
+
+- Exploit messages now adhere to the -s silent option. This was
+  an oversight on my part.
+
+- Added filetime set after copy. (rbot.cpp/misc.cpp/h)
+
+---
+
+RacerX90 (04/03/04):
+
+- Fixed bug in update filename. If the nick contains a | the update
+  will fail since it's based on the nick name to generate the filename.
+  (rbot.cpp)
+
+- Moved nick generation code out of rbot main. Added customizable 
+  nick functions for plugging in your own nick generation routine.
+  Added new rndnick() call. (rbot.cpp/rndnick.cpp/h/configs.h/externs.h)
+
+- Added new random letters, country, real, and os nicks. 
+  (rndnick.cpp/h/nicklist.h)
+
+- Fixed rndnick command to allow for type of nick to be generated randomly
+  at will. (rbot.cpp)
+
+- Added in clearthread() for irc_connect() routine. (rbot.cpp)
+
+---
+
+RacerX90 (04/02/04):
+
+- Fixed bug in psniff where it could potentially use the wrong IP
+  to bind to. (psniff.cpp)
+
+---
+
+xwarlordx (04/02/04):
+
+- Added in the beagle exploit. (will try to find passes from other versions)
+
+- Added IRC/FTP/HTTP sniff to sniffer. (todo: maybe sniff outlook if possible ?)
+
+---
+
+RacerX90 (04/01/04):
+
+- Fixed auto-start bug for TFTP. No more corruption. (advscan.cpp)
+
+- HTTP server needs re-writing to use a local variable
+  to store server information instead of the global threads 
+  structure. (httpd.cpp)
+
+---
+
+RacerX90 (03/31/04);
+
+- Merged code updates from Nils (webdav.cpp/h/optix.cpp/h
+  dcom.cpp/h/dcom2.cpp/h/shellcode.cpp/h)
+
+- Cleaned up small memory leaks and simple coding mistakes in
+  new exploits. Also plugged them into the universal exploit
+  stat system.
+  (dcom2.cpp/h/optix.cpp/webdav.cpp/mydoom.cpp/upnp.cpp)
+
+- Added psniff, keylogger, exploit channel message option.
+  (rbot.cpp)
+
+- Fixed av_fw_kill code to use normal naming system. 
+  Fixed bug in process comparison routine. (processes.cpp)
+
+- Added error checking to advscan command. Invalid port and
+  no IP specified. (rbot.cpp)
+
+- Fixed kuang2 exploit. Should work now, but needs testing and final
+  code clean-up. (kuang2.cpp/h)
+
+- Added socket cleanup code to Syn Floods. (synflood.cpp)
+
+---
+
+Nils (03/31/04):
+
+- Changed the file copying in rBot.cpp due non working dcom. 
+
+- Changed the silent indication for the tftpd to true
+
+- Added a TFTP File start event.
+
+- Added Keylogger (yes, i know, it's crap, i put it in rBot.cpp, shame on me. :P
+
+- Added a new Channel Variable - keylogchan.
+
+- Added a define for keylogging on startup.
+
+- Added a define for a TFTPD on startup.
+
+- Switched the TFTPD run Boolean for dcom to FALSE (advscan.cpp)
+
+---
+
+Nils (03/30/04):
+
+- Added:
+   - WebDav Exploit (webdav.cpp/h)
+   - Optix Exploit (optix.cpp/h)
+   - DCom2 Exploit (dcom2.cpp/h)
+
+- Added 2 new Channelvariables "exploitchan", "snifferchan". 
+  (configs.h/externs.h/rBot.cpp)
+
+- Changed dcom1 and upnp. 
+  (dcom.cpp/upnp.cpp)
+
+- Added Loco's new Shellcode. (shellcode.cpp/h)
+
+---
+
+RacerX90 (03/30/04):
+
+- Fixed bug in tftp auto-start code preventing tftp running more than once.
+  Should have defined structure static since tftp server is recursive and
+  will cause the declaration to be out of context after the first run.
+  (i.e. memory is released and corruption happens.) (advscan.cpp)
+
+- Fixed bug in random IP scanning for advscan. (rbot.cpp)
+
+- Fixed memory leak in Packet sniffer. Malloc wasn't needed. (psniff.cpp)
+
+- Fixed mydoom.cpp to use GetModuleFilename. Using filename won't work
+  if rndfilename is enabled. Also general code clean-up and hooked into
+  universal exploit stat system. (mydoom.cpp)
+
+- Fixed logging and exploit stats for upnp (upnp.cpp)
+
+- Fixed netdevil exploit. Should work now, but needs testing and final
+  code clean-up. (netdevil.cpp/h)
+
+- Added file rename function. Hooked into universal error message system.
+  (rbot.cpp)
+
+- Changed mode setting before joining a channel. This was swapped. (rbot.cpp)
+
+- Added keylogger thread. (keylogger.cpp/h/rbot.cpp)
+
+---
+
+RacerX90 (03/28/04):
+
+- Added auto-start of tftp and http servers to advscan. Added an entry
+  in the structure to allow for auto-start up. (advscan.cpp/h)
+
+- Added net send command to send a message to the local system account.
+  (net.cpp/h/rbot.cpp)
+
+- Added option for http server to use for exploits only. Added an
+  option to turn of directory listing so file transfers (infecting) can
+  only take place. (httpd.cpp/h)
+
+- Working on removing global variables from http server code. Not finished
+  yet. (httpd.cpp/h)
+
+- Added silent option support for tftp server code. This comes in handy 
+  for when being used with an exploit. Still notifies log that file has
+  been completed. (tftpd.cpp/h/rbot.cpp)
+
+---
+
+RacerX90 (03/25/04):
+
+- Added "File transfer complete to IP: x.x.x.x" message to tftp server. Used
+  recvfrom() call to get peer IP from SOCKADDR_IN struct. (tftpd.cpp)
+
+- Added SQL exploit (cleaned redundant code and tighted up.) Additional
+  error checks were put in place and the code now will try to hack the
+  passwords by going through the password list. (mssql.cpp/h)
+
+- Fixed Exploit messaging structures. These need to be locally passed not
+  globally like they are not. It's 1 variable "extra" per function, please
+  do this from now on.
+
+- Added searchlog() call to for searching through the bot's log to 
+  monitor/check for events to happen. Used for exploits. (aliaslog.cpp)
+
+- Added lstrstr() (caseless strstr()), used for searchlog() and showlog()
+  calls. (misc.cpp/h)
+
+- Added error message on failure to open file for tftpd. Also fixed ordering
+  of bind() to fopen() calls on the tftp server routine. (tftpd.cpp)
+
+---
+
+RacerX90 (03/24/04):
+
+- Enabled level 4 warnings on compiler and worked on cleaning poor coding
+  practices all over the place. Cleaned a magnitude of SEVERAL hundred 
+  typecast/assignment/pointer/use without declaring issues. There are still 
+  some left, I honestly got tired of fixing the code. Touched every *.cpp file.
+
+- Added in additional prototypes and function loading for new calls being
+  used. (loaddlls.cpp/h/functions.h)
+
+---
+
+xwarlordx (03/24/04):
+
+- Testing out the ICMP/UDP/IGMP functions aswell, wrote them, but
+  didnt tested them that well. When done will send update (PVT)
+  IGMP looks pretty powerfull to me.
+
+- Checked out upnp, didnt do anything. Will need a rewrite i think 
+  (upnp.cpp/.h)
+
+- Testing the winlogon hooker. Not added to current version. Got it XP
+  compatible (XP bypasses gina when it runs ''xp home'' (no network)) - private
+
+---
+
+Loco (03/24/04):
+
+- tftp now automaticly starts when exploiting with dcom
+
+- Added transfer started message to tftp *FIX IP SHOWN* 
+  Note: RacerX90: This doesn't work, will fix later.
+
+- Fixed dcom to support port 445/1025 *FIX THIS*
+
+- Saved some lines in upnp.cpp
+  Note: RacerX90: This needs to be finished, code is not complete.
+
+---
+
+RacerX90 (03/24/04):
+
+- Removed redundant ResolveHost() call (fphost.cpp)
+
+- Removed inline #include "fphost.cpp" and fixed right.
+
+- SetErrorMode() to hide system messages on crashes (rbot.cpp)
+
+- Converted all new *.cpp files from below to use dynamic loading of
+  function calls instead of being statically linking. Most use 'f' in
+  front of call name. Check loaddlls.cpp/h for details. 
+
+- Added new exploits to code base, everything now builds with recent
+  code re-write (03/22/04).
+
+- Removed non-standard xWrite, xRead, xClose calls and replaced them
+  with the real send, recv, closesocket calls. This makes more sense to
+  keep the calls unified not mixed up and non-standard. (all new exploits)
+
+- Fixed "gethost" command to issue command to the specified hosts (rbot.cpp)
+
+- Fixed processes.cpp to allow for full or partial filename listing
+  on process list. (rbot.cpp/processes.cpp)
+
+- Added new privilege command to allow for raising privs to obtain
+  system process info. (processes.cpp/h)
+
+- Added several new commands to loaddlls.cpp/h for support of new
+  exploits and new process listing code (loaddlls.cpp/h)
+
+- Removed old ntscan functions, no longer needed with new scanner. (rbot.cpp)
+
+- tftp fix for bogus file name crash (tftp.cpp) Error code still needed to
+  be added.
+
+- Fixed the problem of removing the critical section during multiple scans.
+  I over looked this when adding multiple scan support code (caused the bot 
+  to crash) (advscan.cpp)
+
+- Added DNS flush call/command and code to irc connect. (netutils.cpp/h/rbot.cpp)
+
+- Added ARP flush call and command. (netutils.cpp/h/rbot.cpp)
+
+- Add new thread ID entries for file find and process list (threads.h)
+
+- Threaded process listing to prevent pinging out (processes.cpp/h/rbot.cpp)
+
+- Added find file stop and process list stop (rbot.cpp)
+
+- Fixed bug in thread ID for findfile thread (rbot.cpp)
+
+- Reset socket info in killthread() (threads.cpp)
+
+- Added new function clearthread() to clear away old thread information 
+  when a thread closes (threads.cpp)
+
+- Temoved redundant thread clearing code in almost ALL threaded function call
+  with clearthread() (touched almost all *.cpp files)
+
+- Added findthreadnum() call support to .currentip code as a "default" 
+  return option if no thread is specified. (rbot.cpp)
+
+- Added numerous "FIX ME" statements throughout the code for more problems 
+  identified with code, including memory leak in psniff.cpp, line truncation
+  problem in rbot.cpp, etc..
+
+- Log function supports full listing, filter searching, or number of entries
+  options. (aliaslog.cpp/rbot.cpp)
+
+---
+
+source files added:
+  mydoom.cpp
+  shellcode.cpp
+  dcom.cpp
+  upnp.cpp
+  FpHost.cpp
+  reqbuf.bin ; dump of dcom request packet, remove when it was checked
+  shellcode.asm ; same here
+
+include files added:
+  mydoom.h
+  shellcode.h
+  dcom.h
+  upnp.h
+
+advscan.cpp:
+  line 15, 16, 17 - new files included
+  line 22-25 exploits added
+
+most of the other stuff not mentioned here was just changed/added for
+debugging purposes

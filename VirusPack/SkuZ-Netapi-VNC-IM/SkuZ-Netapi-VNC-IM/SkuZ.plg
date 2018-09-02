@@ -1,0 +1,129 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SkuZ - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\COLTON~1\LOCALS~1\Temp\RSP647.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"SkuZ/" /Fp"SkuZ/SkuZ.pch" /YX /Fo"SkuZ/" /Fd"SkuZ/" /FD /c 
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Asn.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Dcom.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Dss.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Land.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Lsass.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Map.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Masn.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\netapi.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Netbios.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Pnp.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Scanners\Vnc.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Spreaders\Aim.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Spreaders\Gaim.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Spreaders\GoogleTalk.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Spreaders\Icq.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Spreaders\Msn.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Spreaders\PalTalk.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Spreaders\Skype.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Adv.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Crc.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Cry.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Ide.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Ims.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Key.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Ldll.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Rnd.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Shel.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\SkuZ.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Syn.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Sys.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Test.cpp"
+"C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Thr.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\COLTON~1\LOCALS~1\Temp\RSP647.tmp" 
+Creating temporary file "C:\DOCUME~1\COLTON~1\LOCALS~1\Temp\RSP648.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"SkuZ/SkuZ.map" /debug /machine:I386 /out:"SkuZ/SkuZ.exe" 
+".\SkuZ\Asn.obj"
+".\SkuZ\Dcom.obj"
+".\SkuZ\Dss.obj"
+".\SkuZ\Land.obj"
+".\SkuZ\Lsass.obj"
+".\SkuZ\Map.obj"
+".\SkuZ\Masn.obj"
+".\SkuZ\netapi.obj"
+".\SkuZ\Netbios.obj"
+".\SkuZ\Pnp.obj"
+".\SkuZ\Vnc.obj"
+".\SkuZ\Aim.obj"
+".\SkuZ\Gaim.obj"
+".\SkuZ\GoogleTalk.obj"
+".\SkuZ\Icq.obj"
+".\SkuZ\Msn.obj"
+".\SkuZ\PalTalk.obj"
+".\SkuZ\Skype.obj"
+".\SkuZ\Adv.obj"
+".\SkuZ\Crc.obj"
+".\SkuZ\Cry.obj"
+".\SkuZ\Ide.obj"
+".\SkuZ\Ims.obj"
+".\SkuZ\Key.obj"
+".\SkuZ\Ldll.obj"
+".\SkuZ\Rnd.obj"
+".\SkuZ\Shel.obj"
+".\SkuZ\SkuZ.obj"
+".\SkuZ\Syn.obj"
+".\SkuZ\Sys.obj"
+".\SkuZ\Test.obj"
+".\SkuZ\Thr.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\COLTON~1\LOCALS~1\Temp\RSP648.tmp"
+<h3>Output Window</h3>
+Compiling...
+Asn.cpp
+Dcom.cpp
+Dss.cpp
+Land.cpp
+Lsass.cpp
+Map.cpp
+Masn.cpp
+netapi.cpp
+Netbios.cpp
+Pnp.cpp
+Vnc.cpp
+Aim.cpp
+Gaim.cpp
+GoogleTalk.cpp
+Icq.cpp
+Msn.cpp
+PalTalk.cpp
+Skype.cpp
+Adv.cpp
+Crc.cpp
+Cry.cpp
+Ide.cpp
+Ims.cpp
+C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Ims.cpp(32) : warning C4244: 'argument' : conversion from 'short' to 'unsigned char', possible loss of data
+C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Ims.cpp(33) : warning C4244: 'argument' : conversion from 'short' to 'unsigned char', possible loss of data
+C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Ims.cpp(66) : warning C4244: 'argument' : conversion from 'short' to 'unsigned char', possible loss of data
+C:\Documents and Settings\Colton Siglin\Desktop\SkuZ-Netapi-VNC-IM\SkuZ-Netapi-VNC-IM\Ims.cpp(69) : warning C4244: 'argument' : conversion from 'short' to 'unsigned char', possible loss of data
+Key.cpp
+Ldll.cpp
+Rnd.cpp
+Shel.cpp
+SkuZ.cpp
+Syn.cpp
+Sys.cpp
+Test.cpp
+Thr.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SkuZ.exe - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

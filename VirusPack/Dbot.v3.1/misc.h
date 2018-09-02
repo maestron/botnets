@@ -1,0 +1,14 @@
+BOOL AntiSandBox();
+int Bot_Install(unsigned int Type, char FileName[MAX_PATH]);
+unsigned int Resolve(char *host);
+char *GenerateLetterNick(int len, SOCKET Sock);
+char *GenerateNumberNick(int len);
+char *GetIP(SOCKET Sock);
+int PrepareThreads();
+int AddThread(DWORD Type);
+int KillThread(DWORD Type);
+int ClearThread(int i);
+int CheckThread(DWORD Type);
+BOOL checkos();
+BOOL PrivateIP(const char *ip);
+void Uninstall();

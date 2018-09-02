@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Server - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ALBINO~1\AppData\Local\Temp\RSPE035.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/Server.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp"
+]
+Creating command line "cl.exe @C:\Users\ALBINO~1\AppData\Local\Temp\RSPE035.tmp" 
+Creating temporary file "C:\Users\ALBINO~1\AppData\Local\Temp\RSPE036.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Server.pdb" /machine:I386 /out:"Release/Server.exe" 
+".\Release\Main.obj"
+".\Release\Reasource.res"
+]
+Creating command line "link.exe @C:\Users\ALBINO~1\AppData\Local\Temp\RSPE036.tmp"
+<h3>Output Window</h3>
+Compiling...
+Main.cpp
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(1291) : warning C4018: '<' : signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(1534) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(2267) : warning C4244: '=' : conversion from 'long' to 'unsigned short', possible loss of data
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(2268) : warning C4244: '=' : conversion from 'long' to 'unsigned short', possible loss of data
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(2376) : warning C4244: '=' : conversion from 'double' to 'unsigned char', possible loss of data
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(2693) : warning C4102: 'SendSearch' : unreferenced label
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(1392) : warning C4700: local variable 'Buffer' used without having been initialized
+C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\Injection\Server\Main.cpp(2629) : warning C4700: local variable 'Buffer' used without having been initialized
+Linking...
+   Creating library Release/Server.lib and object Release/Server.exp
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+Server.exe - 0 error(s), 9 warning(s)
+</pre>
+</body>
+</html>

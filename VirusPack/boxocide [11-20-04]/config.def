@@ -1,0 +1,93 @@
+#------------------------------------------------------------------------------------------------------------------------
+# Config definition file
+#------------------------------------------------------------------------------------------------------------------------
+# Format:
+# Every line beginning with a # is a comment
+# cvar<tab><name><tab><datatype><tab><description>
+#------------------------------------------------------------------------------------------------------------------------
+# name is the name of the cvar to be registered
+#
+# datatype can be one of these:
+# string	-	a string
+# char		-	a single character
+# int		-	an integer
+# bool		-	a boolean value
+#
+# description is a string describing the cvar
+#------------------------------------------------------------------------------------------------------------------------
+# module<tab><name><tab><define>
+#
+# name is the name of the module to be added for conditional compilation
+#
+# define is the name of the define to be defined as preprocessor statement in modules.h
+#------------------------------------------------------------------------------------------------------------------------
+
+cvar	bot_filename	string	Bot - Runtime Filename
+cvar	bot_id	string	Bot - Current ID
+cvar	bot_prefix	char	Bot - Command Prefix
+cvar	bot_timeout	int	Bot - Timeout for receiving in miliseconds
+cvar	bot_seclogin	bool	Bot - Enable login only by channel messages
+cvar	bot_compnick	bool	Bot - Use the computer name as a nickname
+cvar	bot_randnick	bool	Bot - Random nicks of Letters and Numbers
+cvar	bot_meltserver	bool	Bot - Melt the original server file
+cvar	bot_mutex_name	string	Bot - Mutex Name
+cvar	bot_topiccmd	bool	Bot - Execute topic commands
+cvar	do_speedtest	bool	Bot - Do speedtest on startup
+cvar	do_avkill	bool	Bot - Enable AV kill.
+cvar	do_stealth	bool	Bot - Enable Stealth.
+cvar	as_valname	string	Autostart - Value Name
+cvar	as_enabled	bool	Autostart - Enabled
+cvar	as_service	bool	Autostart - Start as service
+cvar	as_service_name	string	Autostart - Short service name
+cvar	scan_maxthreads	int	Scanner - Maximum Number of threads
+cvar	scan_maxsockets	int	Scanner - Maximum Number of sockets
+cvar	ddos_maxthreads	int	DDOS - Maximum Number of threads
+cvar	redir_maxthreads	int	Redirect - Maximum Number of threads
+cvar	identd_enabled	bool	IdentD - Enable the server
+cvar	cdkey_windows	bool	Return Windows Product Keys on cdkey.get
+cvar	scaninfo_level	int	Scanner - Info Level (0)-none (1)-less (3)-more
+cvar	spam_aol_channel	string	AOL Spam - Channel name
+cvar	spam_aol_enabled	bool	AOL Spam - Enabled ?
+cvar	sniffer_enabled	bool	Sniffer - Enabled ?
+cvar	sniffer_channel	string	Sniffer Output channel
+cvar	sniff_http	bool	Sniff Http - Enabled ? - will flood more if its enabled.
+cvar	scaninfo_chan	string	Scanner - Output channel
+cvar	inst_polymorph	bool	Installer - Polymorph on install ? (Doesn't work with EXE packers)
+cvar	vuln_channel	string	Sniffer - Vulnerable Server Sniffer
+cvar	latency_sensitivity	int	Latency Control - Scaling factor
+cvar	latency_desired	int	Latency Control - Desired ping in ms
+module	Compile BNC	__COMPILE_BNC__
+module	Compile Sniffer	__COMPILE_SNIFFER__
+module	Compile Redirect - GRE	__COMPILE_REDIR_GRE__
+module	Compile Redirect - SOCKS	__COMPILE_REDIR_SOCKS__
+module	Compile Redirect - SOCKS5	__COMPILE_REDIR_SOCKS5__
+module	Compile Redirect - HTTP	__COMPILE_REDIR_HTTP__
+module	Compile Redirect - HTTPS	__COMPILE_REDIR_HTTPS__
+module	Compile Redirect - TCP	__COMPILE_REDIR_TCP__
+module	Compile Harvest - AOL	__COMPILE_HARVEST_AOL__
+module	Compile Harvest - CDKeys	__COMPILE_HARVEST_CDKEYS__
+module	Compile Harvest - EMails	__COMPILE_HARVEST_EMAILS__
+module	Compile Harvest - Registry	__COMPILE_HARVEST_REGISTRY__
+module	Compile DDOS - HTTP Flood	__COMPILE_DDOS_HTTPFLOOD__
+module	Compile DDOS - Phat ICMP Flood	__COMPILE_DDOS_PHATICMP__
+module	Compile DDOS - Phat SYN Flood	__COMPILE_DDOS_PHATSYN__
+module	Compile DDOS - SYN Flood	__COMPILE_DDOS_SYNFLOOD__
+module	Compile DDOS - Targa3	__COMPILE_DDOS_TARGA3__
+module	Compile DDOS - UDP Flood	__COMPILE_DDOS_UDPFLOOD__
+module	Compile DDOS - Phat Wonk	__COMPILE_DDOS_PHATWONK__
+module	Compile Scanner - Bagle	__COMPILE_SCANNER_BAGLE__
+module	Compile Scanner - DCOM2	__COMPILE_SCANNER_DCOM2__
+module	Compile Scanner - DCOM	__COMPILE_SCANNER_DCOM__
+module	Compile Scanner - Doom	__COMPILE_SCANNER_DOOM__
+module	Compile Scanner - DameWare	__COMPILE_SCANNER_DAMEWARE__
+module	Compile Scanner - Locator	__COMPILE_SCANNER_LOCATOR__
+module	Compile Scanner - NetBios	__COMPILE_SCANNER_NETBIOS__
+module	Compile Scanner - Optix	__COMPILE_SCANNER_OPTIX__
+module	Compile Scanner - SQL	__COMPILE_SCANNER_SQL__
+module	Compile Scanner - UPNP	__COMPILE_SCANNER_UPNP__
+module	Compile Scanner - Workstation	__COMPILE_SCANNER_WORKSTATION__
+module	Compile Scanner - HTTP	__COMPILE_SCANNER_HTTP__
+module	Compile Scanner - LSASS	__COMPILE_SCANNER_LSASS__
+module	Compile DCN	__COMPILE_DCN__
+module	Compile Telnet Server	__COMPILE_TELNET_SERVER__
+module	Use PCRE Library	__USE_PCRE__

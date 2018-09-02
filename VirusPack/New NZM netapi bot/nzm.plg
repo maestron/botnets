@@ -1,0 +1,124 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nzm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP96.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"obj/nzm.pch" /YX /Fo"obj/" /Fd"obj/" /FD /c 
+"D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP96.tmp" 
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP97.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"exe/nzm.pdb" /machine:I386 /out:"exe/nzm.exe" 
+".\obj\dcom.obj"
+".\obj\ms04_007_asn1.obj"
+".\obj\netapi.obj"
+".\obj\vncps.obj"
+".\obj\ftpd.obj"
+".\obj\tftpd.obj"
+".\obj\advscan.obj"
+".\obj\loaddlls.obj"
+".\obj\misc.obj"
+".\obj\netutils.obj"
+".\obj\patcher.obj"
+".\obj\sysinfo.obj"
+".\obj\version.obj"
+".\obj\aliaslog.obj"
+".\obj\autostart.obj"
+".\obj\download.obj"
+".\obj\ehandler.obj"
+".\obj\fphost.obj"
+".\obj\irc_send.obj"
+".\obj\md5.obj"
+".\obj\nzm.obj"
+".\obj\processes.obj"
+".\obj\random.obj"
+".\obj\rndnick.obj"
+".\obj\shellcode.obj"
+".\obj\threads.obj"
+".\obj\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP97.tmp"
+<h3>Output Window</h3>
+Compiling...
+nzm.cpp
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1070) : warning C4138: '*/' found outside of comment
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1070) : error C2059: syntax error : '/'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1072) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1079) : error C2660: 'rndnickletter' : function does not take 1 parameters
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1113) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1113) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1113) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1224) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1224) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1224) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1230) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1230) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1230) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1236) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1236) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1236) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1242) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1242) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1242) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1253) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1253) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1253) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1276) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1276) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1276) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1285) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1285) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1285) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1295) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1295) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1295) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1306) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1306) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1306) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1317) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1317) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1317) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1333) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1333) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1333) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1355) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1357) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1357) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1357) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1369) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1369) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1369) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1382) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1382) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1382) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1392) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1392) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1392) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1405) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1408) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1411) : error C2143: syntax error : missing ';' before 'else'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1411) : error C2143: syntax error : missing ';' before '{'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1411) : error C2447: missing function header (old-style formal list?)
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1549) : error C2143: syntax error : missing ';' before '}'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1549) : error C2143: syntax error : missing ';' before '}'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1549) : error C2143: syntax error : missing ';' before '}'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1550) : error C2143: syntax error : missing ';' before '}'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1550) : error C2143: syntax error : missing ';' before '}'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1553) : error C2143: syntax error : missing ';' before '}'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1553) : error C2143: syntax error : missing ';' before '}'
+D:\exploits\BOTS\New NZM netapi bot\cpp\core\nzm.cpp(1553) : error C2143: syntax error : missing ';' before '}'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+nzm.exe - 65 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

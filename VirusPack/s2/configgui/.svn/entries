@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="502"
+   name=""
+   committed-date="2004-03-22T20:31:16.992679Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/configgui"
+   last-author="wonk"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="295"
+   name="StdAfx.h"
+   text-time="2004-03-21T22:23:19.755504Z"
+   committed-date="2004-03-15T02:05:30.493748Z"
+   checksum="33c74abca38b057e0d34b66207609ddd"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.745489Z"/>
+<entry
+   committed-rev="342"
+   name="configgui.dsp"
+   text-time="2004-03-21T22:23:19.805576Z"
+   committed-date="2004-03-17T03:02:41.147400Z"
+   checksum="9d0a5024d4d9f13268a78a223bc285c2"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.785547Z"/>
+<entry
+   committed-rev="247"
+   name="configgui.h"
+   text-time="2004-03-21T22:23:19.845633Z"
+   committed-date="2004-03-13T02:01:58.919592Z"
+   checksum="e0bd7f1a46243179af640ea05a62b464"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.825604Z"/>
+<entry
+   committed-rev="342"
+   name="sapphire.h"
+   text-time="2004-03-21T22:23:19.885691Z"
+   committed-date="2004-03-17T03:02:41.147400Z"
+   checksum="62c2a91d677baf965bbb8518ac067ce3"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.875676Z"/>
+<entry
+   committed-rev="502"
+   name="configguiDlg.cpp"
+   text-time="2004-03-22T21:39:08.119737Z"
+   committed-date="2004-03-22T20:31:16.992679Z"
+   checksum="39db8a72e717fe698f2a6b4a54b108b1"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:08.089694Z"/>
+<entry
+   name="md5"
+   kind="dir"/>
+<entry
+   committed-rev="470"
+   name="configguiDlg.h"
+   text-time="2004-03-21T22:23:20.256224Z"
+   committed-date="2004-03-21T17:19:38.969418Z"
+   checksum="68ef0ff0e68c5ee7935056caf57df1ae"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.246209Z"/>
+<entry
+   name="res"
+   kind="dir"/>
+<entry
+   committed-rev="247"
+   name="StdAfx.cpp"
+   text-time="2004-03-21T22:23:20.807016Z"
+   committed-date="2004-03-13T02:01:58.919592Z"
+   checksum="614907522fd5ad4768868cd662362f40"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.797001Z"/>
+<entry
+   committed-rev="247"
+   name="configgui.cpp"
+   text-time="2004-03-21T22:23:20.857088Z"
+   committed-date="2004-03-13T02:01:58.919592Z"
+   checksum="a57289a82f52ff8704b7f9be23376569"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.837059Z"/>
+<entry
+   committed-rev="355"
+   name="sapphire.cpp"
+   text-time="2004-03-21T22:23:20.897145Z"
+   committed-date="2004-03-17T23:57:10.175486Z"
+   checksum="67a6b4fd1334cc329193a8b89e27abbd"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.877116Z"/>
+<entry
+   committed-rev="470"
+   name="resource.h"
+   text-time="2004-03-21T22:23:20.947217Z"
+   committed-date="2004-03-21T17:19:38.969418Z"
+   checksum="0856ff351c84a8c6794b08f07e2e0c3b"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.927188Z"/>
+<entry
+   committed-rev="470"
+   name="configgui.rc"
+   text-time="2004-03-21T22:23:21.027332Z"
+   committed-date="2004-03-21T17:19:38.969418Z"
+   checksum="6849f1b40133e366187073b963fc4a4f"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.017318Z"/>
+<entry
+   committed-rev="470"
+   name="configgui.clw"
+   text-time="2004-03-21T22:23:21.077404Z"
+   committed-date="2004-03-21T17:19:38.969418Z"
+   checksum="3fc58cb535bd0fad5f0499fdcbc4f693"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.057376Z"/>
+</wc-entries>

@@ -1,0 +1,2 @@
+drvrsc RT_RCDATA bin32\driver.sys
+wrdrsc RT_RCDATA bin32\wormride.dll

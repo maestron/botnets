@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="9"
+   name=""
+   committed-date="2004-02-25T22:24:22.829912Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/ftplib"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="145"/>
+<entry
+   committed-rev="9"
+   name="ftplib.cpp"
+   text-time="2003-02-11T19:52:20.254432Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="aee17072bbe22480a3dd230011cf1ace"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.244417Z"/>
+<entry
+   committed-rev="9"
+   name="ftplib.h"
+   text-time="2003-02-11T19:52:20.304504Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="1643800fdcb5f8ac02b697172cdd9312"
+   kind="file"
+   prop-time="2003-02-11T19:52:20.284475Z"/>
+</wc-entries>

@@ -1,0 +1,199 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: configgui - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x407 /fo"Release/configgui.res" /d "NDEBUG" /d "_AFXDLL" "C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\configgui\configgui.rc"" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE74.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "md5" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/configgui.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\configgui\configgui.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\configgui\configguiDlg.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\configgui\md5\md5c.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\configgui\sapphire.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE74.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE75.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "md5" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/configgui.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\configgui\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE75.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE76.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/configgui.pdb" /machine:I386 /out:"../configgui.exe" 
+".\Release\configgui.obj"
+".\Release\configguiDlg.obj"
+".\Release\md5c.obj"
+".\Release\sapphire.obj"
+".\Release\StdAfx.obj"
+".\Release\configgui.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE76.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+configgui.cpp
+configguiDlg.cpp
+md5c.cpp
+sapphire.cpp
+Generating Code...
+Linking...
+<h3>
+--------------------Configuration: agobot3 - Win32 Release No OpenSSL Internal--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE78.tmp" with contents
+[
+/nologo /G6 /MT /W3 /Gi /GX /O1 /Ob0 /I "lib/pthreads/win32" /D "NDEBUG" /D "AGOBOT_NO_OPENSSL" /D "INTERNAL" /D "WIN32" /D "_WINDOWS" /D "FORCE_UNICODE" /D "__CLEANUP_SEH" /FR"agobot3___Win32_Release_No_OpenSSL_Internal/" /Fp"agobot3___Win32_Release_No_OpenSSL_Internal/agobot3.pch" /YX /Fo"agobot3___Win32_Release_No_OpenSSL_Internal/" /Fd"agobot3___Win32_Release_No_OpenSSL_Internal/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\irc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\smtp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\smtp_logic.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\sockets.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\bot.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\cmdline.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\cmdshell.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\commands.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\config.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\consdbg.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\cplugin.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\crypter.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\cstring.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\cthread.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\cvar.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\hook.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\installer.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\keylogger.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\logic.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\mac.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\mainctrl.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\polymorph.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\random.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\sdcompat.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\sniffer.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\ssllib.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\utility.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\dcom2scanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\dcomscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\dwscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\locscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\lsassscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\nbscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\optixscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\sasserftpdscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\scanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\sqlscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\upnpscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\wdscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\wksscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\ddos.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\httpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\phaticmp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\phatsyn.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\synflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\targa3.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\udpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\wonk.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\shellcode.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\redir_gre.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\redir_http.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\redir_https.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\redir_socks.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\redir_socks5.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\redir_tcp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\redirect.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\ftplib\ftplib.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\md5\md5c.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\harvest_aol.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\harvest_cdkeys.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\harvest_emails.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\Phatbot-stoney1\harvest_registry.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE78.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE79.tmp" with contents
+[
+msvcrt.lib msvcprt.lib oldnames.lib kernel32.lib user32.lib advapi32.lib shell32.lib ws2_32.lib netapi32.lib mpr.lib psapi.lib dnsapi.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"agobot3___Win32_Release_No_OpenSSL_Internal/agobot3.pdb" /machine:I386 /nodefaultlib /out:"bin/win32/agobot3.exe" /libpath:"lib/openssl/win32/lib" /ignore:4033 
+".\agobot3___Win32_Release_No_OpenSSL_Internal\irc.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\smtp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\smtp_logic.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sockets.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\bot.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cmdline.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cmdshell.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\commands.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\config.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\consdbg.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cplugin.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\crypter.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cstring.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cthread.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cvar.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\hook.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\installer.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\keylogger.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\logic.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\mac.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\mainctrl.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\polymorph.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\random.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sdcompat.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sniffer.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ssllib.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\utility.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\dcom2scanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\dcomscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\dwscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\locscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\lsassscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\nbscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\optixscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sasserftpdscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\scanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sqlscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\upnpscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\wdscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\wksscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ddos.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\httpflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\phaticmp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\phatsyn.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\synflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\targa3.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\udpflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\wonk.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\shellcode.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_gre.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_http.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_https.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_socks.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_socks5.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_tcp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redirect.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ftplib.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\md5c.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_aol.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_cdkeys.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_emails.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_registry.obj"
+".\asmstub.OBJ"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPFE79.tmp"
+<h3>Output Window</h3>
+Compiling...
+Command line warning D4002 : ignoring unknown option '/Ob0'
+irc.cpp
+smtp.cpp
+smtp_logic.cpp
+sockets.cpp
+bot.cpp
+cmdline.cpp
+cl.exe terminated at user request.
+
+</pre>
+</body>
+</html>

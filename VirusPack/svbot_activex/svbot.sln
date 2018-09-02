@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "svbot", "svbot.vcproj", "{1DE103E6-AF82-4487-B212-279A39228966}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crypt", "crypt\crypt.vcproj", "{EF902F23-E50C-4FB9-B653-2153FBDD2E11}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcproj", "{4270159C-CFA8-4FE0-90B4-B102450FDDE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DE103E6-AF82-4487-B212-279A39228966}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1DE103E6-AF82-4487-B212-279A39228966}.Debug|Win32.Build.0 = Debug|Win32
+		{1DE103E6-AF82-4487-B212-279A39228966}.Release|Win32.ActiveCfg = Release|Win32
+		{1DE103E6-AF82-4487-B212-279A39228966}.Release|Win32.Build.0 = Release|Win32
+		{EF902F23-E50C-4FB9-B653-2153FBDD2E11}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF902F23-E50C-4FB9-B653-2153FBDD2E11}.Debug|Win32.Build.0 = Debug|Win32
+		{EF902F23-E50C-4FB9-B653-2153FBDD2E11}.Release|Win32.ActiveCfg = Release|Win32
+		{EF902F23-E50C-4FB9-B653-2153FBDD2E11}.Release|Win32.Build.0 = Release|Win32
+		{4270159C-CFA8-4FE0-90B4-B102450FDDE1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4270159C-CFA8-4FE0-90B4-B102450FDDE1}.Debug|Win32.Build.0 = Debug|Win32
+		{4270159C-CFA8-4FE0-90B4-B102450FDDE1}.Release|Win32.ActiveCfg = Release|Win32
+		{4270159C-CFA8-4FE0-90B4-B102450FDDE1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

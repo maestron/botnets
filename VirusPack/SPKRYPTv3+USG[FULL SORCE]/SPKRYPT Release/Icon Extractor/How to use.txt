@@ -1,0 +1,8 @@
+
+
+-= Steps =-
+
+If you have an executable (.exe) you want to steal the icon from, just drag and drop it on "Icon Extractor"
+and the .ico files should be in the "icons" subfolder.
+
+You must drag the executable (.exe) and not a shortcut (.lnk)

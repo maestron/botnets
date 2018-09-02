@@ -1,0 +1,5 @@
+/* Wedit generated resource file */
+#include <windows.h>
+#include "c:\home\bot\rsrc.h"
+
+500 ICON mainicon.ico

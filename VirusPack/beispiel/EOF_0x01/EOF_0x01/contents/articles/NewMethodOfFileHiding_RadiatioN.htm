@@ -1,0 +1,56 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+New method of file hiding
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+While writing the tutorial about the explorer extension i found something new interesting. We are able to hide
+files very well. You have ever seen the extension of a link in explorer? No? Then this is something for you.
+Just open &quot;regedit.exe&quot; and go to the following entry:
+
+HKEY_CLASSES_ROOT\lnkfile
+
+As you may now saw there is an entry named &quot;NeverShowExt&quot;. Just remove it completely, kill explorer and start it
+again. What can you now see in explorer with links? every extension of a link will be shown :) Of course you first 
+must enable file extension showing in:
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+
+and set following values to
+
+HideFileExt		0
+ShowSuperHidden		1
+
+But what can we do with this small new thing?
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Screensavers are normaly stored anywhere in Windows directory, so we can use this extension for us. Normal PC
+users even don't know *.scr files exist :) So my idea was to hide the file extension *.scr by the trick described 
+above. So you easily have to add 2 new entries to registry under:
+
+HKEY_CLASSES_ROOT\scrfile
+
+HKEY_CLASSES_ROOT\.scr
+
+The new values should be named &quot;NeverShowExt&quot; and after a reboot or logout an relogin the file extension is hidden
+forever. You can now give your app an icon like a folder...as stupid the user is, he starts it.
+
+This is just a very small tutorial and a little idea, but rethink of it and you will be able to write malware which 
+will be hidden by the system. Be creative and do some good work :)
+
+Last words
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Some nice greetings go to the complete EOF group and especially to Skyout my good friend *keep on rocking*
+
+As always no copyright - free for any use
+
+Tutorial written by RadiatioN in April 2006 at EOF group
+http://www.eof-project.net
+
+My Site:
+http://radiation.eof-project.net
+
+Contact:
+radiation[at]eof-project[dot]net
+</pre></body></html>

@@ -1,0 +1,202 @@
+BODY
+{
+	scrollbar-face-color: #D8D8D8;
+	scrollbar-highlight-color: #444444;
+	scrollbar-shadow-color:#BBBBBB;
+	scrollbar-3dlight-color: #444444;
+	scrollbar-arrow-color: #000000;
+	scrollbar-track-color: #444444;
+	scrollbar-darkshadow-color: #FFFFFF;
+	background-color: #000717;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px; 	
+}
+BODY, TD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+FIELDSET {
+	background-color: #000D2A;
+	border: #4B87AC; 
+	border-style: outset; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+}
+A {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+A:hover {
+	font-size: 10px; 
+	COLOR: RED; 
+	LINE-HEIGHT: normal; 
+	FONT-VARIANT: normal; 
+	text-decoration: underline;
+}
+.table
+{
+	font-family: Courier New, Arial, Helvetica, sans-serif;
+	font-size: 10px; 
+	color: #FFFFFF; 
+	text-decoration: none;
+	background-color: #000717;
+	border: #444444; 
+	border-style: outset; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+.table2
+{
+	font-family: Courier New, Arial, Helvetica, sans-serif;
+	font-size: 12px; 
+	color: #000000; 
+	text-decoration: none;
+	background-color: #000717;
+	border: #444444; 
+	border-style: none; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 0px; 
+	border-left-width: 0px;
+	MARGIN-TOP:    5px;
+	MARGIN-LEFT:   5px;
+	MARGIN-RIGHT:  5px;	
+	MARGIN-BOTTOM: 5px;
+}
+.list_table
+{
+	font-family: Courier New, Arial, Helvetica, sans-serif;
+	font-size: 10px; 
+	color: #FFFFFF; 
+	text-decoration: none;
+	background-color: #000717;
+	border: #444444; 
+	border-style: outset; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 1px; 
+	border-left-width: 0px;
+	margin-bottom: 10px;
+	
+}
+.row_main
+{
+	text-align: center;
+	border: #444444; 
+	border-style: outset; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 0px; 
+	border-left-width: 1px
+}
+.row_main2
+{
+	text-align: left;
+	background-color: #000717;
+	border: #444444; 
+	border-style: inset; 
+	border-top-width: 0px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+.row_sec
+{
+	text-decoration: none;
+	text-align: center;
+	border: #444444; 
+	border-style: inset; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+.row_sec2
+{
+	text-align: left;
+	border: #444444; 
+	border-style: inset; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+.click_row
+{
+	cursor: hand;
+	BACKGROUND-COLOR: #000717;
+}
+.click_row:hover
+{
+	cursor: hand;
+	BACKGROUND-COLOR: #000D2A;
+}
+.click_row2
+{
+	cursor: hand;
+	BACKGROUND-COLOR: #000D2A;
+}
+.click_row2:hover
+{
+	cursor: hand;
+	BACKGROUND-COLOR: #000D2A;
+}
+.INPUT
+{
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	FONT-STYLE: normal;
+	BACKGROUND-COLOR: #000717;
+	border: #444444; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+	height: 18px;
+	width: 140px;
+}
+.BUTTON
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	background-color: #000717;
+	border: #444444;
+	border-style: solid;
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+	cursor: hand;
+	height: 20px;
+	width: 75px;
+}
+.BUTTON2
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FF0000;
+	background-color: #000717;
+	border: #444444;
+	border-style: solid;
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+	cursor: hand;
+	height: 20px;
+	width: 90px;
+}

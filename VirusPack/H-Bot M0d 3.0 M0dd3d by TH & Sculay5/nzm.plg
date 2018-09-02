@@ -1,0 +1,212 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nzm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1AC.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft Platform SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"obj/nzm.pch" /YX /Fo"obj/" /Fd"obj/" /FD /c 
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\ddos\ddos.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\ddos\icmpflood.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\ddos\supersyn.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\ddos\synflood.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\ddos\tcpflood.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\keylogger.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\psniff.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\clsass.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\dcass.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\dcom.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\lsass.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\lsass1lsass.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\mssql.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\mssqllsass.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\netapi.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\vncrooter.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\vncps.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\realcast.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\wkssvc.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\xfer\ftpd.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\httpd.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\xfer\tftpd.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\scan\advscan.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\redirect.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\socks4.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\capture.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\cdkeys.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\findfile.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\findpass.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\loaddlls.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\misc.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\netutils.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\ddos\pingudp.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\remotecmd.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\sysinfo.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\visit.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\aliaslog.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\autostart.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\crc32.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\crypt.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\dcc.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\download.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\driveinfo.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\ehandler.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\fphost.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\ident.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\irc_send.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\net.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\nzm.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\processes.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\random.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\rndnick.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\sym06_010.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\pnp.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\exploits\Asn.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\scan\scan.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\modules\secure.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\session.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\shellcode.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\threads.cpp"
+"D:\03.-=Bots=-\H-Bot M0d 3.0 M0dd3d by TH & Sculay\cpp\core\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1AC.tmp" 
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1AD.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"exe/nzm.pdb" /machine:I386 /out:"exe/nzm.exe" 
+".\obj\ddos.obj"
+".\obj\icmpflood.obj"
+".\obj\supersyn.obj"
+".\obj\synflood.obj"
+".\obj\tcpflood.obj"
+".\obj\keylogger.obj"
+".\obj\psniff.obj"
+".\obj\clsass.obj"
+".\obj\dcass.obj"
+".\obj\dcom.obj"
+".\obj\lsass.obj"
+".\obj\lsass1lsass.obj"
+".\obj\mssql.obj"
+".\obj\mssqllsass.obj"
+".\obj\netapi.obj"
+".\obj\vncrooter.obj"
+".\obj\vncps.obj"
+".\obj\realcast.obj"
+".\obj\wkssvc.obj"
+".\obj\ftpd.obj"
+".\obj\httpd.obj"
+".\obj\tftpd.obj"
+".\obj\advscan.obj"
+".\obj\redirect.obj"
+".\obj\socks4.obj"
+".\obj\capture.obj"
+".\obj\cdkeys.obj"
+".\obj\findfile.obj"
+".\obj\findpass.obj"
+".\obj\loaddlls.obj"
+".\obj\misc.obj"
+".\obj\netutils.obj"
+".\obj\pingudp.obj"
+".\obj\remotecmd.obj"
+".\obj\sysinfo.obj"
+".\obj\visit.obj"
+".\obj\aliaslog.obj"
+".\obj\autostart.obj"
+".\obj\crc32.obj"
+".\obj\crypt.obj"
+".\obj\dcc.obj"
+".\obj\download.obj"
+".\obj\driveinfo.obj"
+".\obj\ehandler.obj"
+".\obj\fphost.obj"
+".\obj\ident.obj"
+".\obj\irc_send.obj"
+".\obj\net.obj"
+".\obj\nzm.obj"
+".\obj\processes.obj"
+".\obj\random.obj"
+".\obj\rndnick.obj"
+".\obj\sym06_010.obj"
+".\obj\pnp.obj"
+".\obj\Asn.obj"
+".\obj\scan.obj"
+".\obj\secure.obj"
+".\obj\session.obj"
+".\obj\shellcode.obj"
+".\obj\threads.obj"
+".\obj\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1AD.tmp"
+<h3>Output Window</h3>
+Compiling...
+ddos.cpp
+icmpflood.cpp
+supersyn.cpp
+synflood.cpp
+tcpflood.cpp
+keylogger.cpp
+psniff.cpp
+clsass.cpp
+dcass.cpp
+dcom.cpp
+lsass.cpp
+lsass1lsass.cpp
+mssql.cpp
+mssqllsass.cpp
+netapi.cpp
+vncrooter.cpp
+vncps.cpp
+realcast.cpp
+wkssvc.cpp
+ftpd.cpp
+httpd.cpp
+tftpd.cpp
+advscan.cpp
+redirect.cpp
+socks4.cpp
+capture.cpp
+cdkeys.cpp
+findfile.cpp
+findpass.cpp
+loaddlls.cpp
+misc.cpp
+netutils.cpp
+pingudp.cpp
+remotecmd.cpp
+sysinfo.cpp
+visit.cpp
+aliaslog.cpp
+autostart.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+fphost.cpp
+ident.cpp
+irc_send.cpp
+net.cpp
+nzm.cpp
+processes.cpp
+random.cpp
+rndnick.cpp
+sym06_010.cpp
+pnp.cpp
+Asn.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+threads.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+nzm.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

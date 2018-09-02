@@ -1,0 +1,31 @@
+.green {
+	font-weight: bold;
+	color: #00CC00;
+}
+.red {
+	font-weight: bold;
+	color: #FF0000;
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #0080C0;
+}
+body,td,th {
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	color: #000000;
+}
+#papericons {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+#mainicons {
+  position:absolute;
+  top:0;
+  left:0;
+}

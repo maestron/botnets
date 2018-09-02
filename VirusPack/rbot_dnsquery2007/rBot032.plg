@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdbot05b - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP417.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot032.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Administrateur\Bureau\rbot\dnsxpl_c.c"
+"C:\Documents and Settings\Administrateur\Bureau\rbot\dnsxpl_s.c"
+"C:\Documents and Settings\Administrateur\Bureau\rbot\rBot032.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP417.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP418.tmp" with contents
+[
+kernel32.lib user32.lib mpr.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib Rpcrt4.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/rBot032.pdb" /machine:I386 /out:"Release/rBot032.exe" /align:4096 
+".\Release\dnsxpl_c.obj"
+".\Release\dnsxpl_s.obj"
+".\Release\rBot032.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP418.tmp"
+<h3>Output Window</h3>
+Compiling...
+dnsxpl_c.c
+dnsxpl_s.c
+rBot032.cpp
+C:\Documents and Settings\Administrateur\Bureau\rbot\dnsxplc.cpp(221) : warning C4715: 'dnsrpc' : not all control paths return a value
+Linking...
+LINK : warning LNK4108: /ALIGN specified without /DRIVER or /VXD; image may not run
+
+
+
+<h3>Results</h3>
+rBot032.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,6 @@
+1. removed std::list erase bug in setSilent
+2. removed unneccessary default scanners from .scan.startall / .scan.stopall
+3. fixed bug in CreateProc routines
+4. added better speedtest sites
+
+comment: if you leak something, be sure that you atleast leak a working thing.

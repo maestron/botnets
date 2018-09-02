@@ -1,0 +1,28 @@
+# ToDo list
+
+~> adding ICQ-spread (textmessage, sendfile)
+~> adding mirccmd
+~> add ActiveX Startup
+~> add capture
+~> add encrypted ssl connection support
+~> add blowfish crypt
+~> add encrypted config from web (intern -x0r- and extern encryption)
+~> fixing the pstore search function, also why -n sends via msg instead of notice
+~> sorting shit out (outcommented shit which isn't needed, shit which has been on the old botsource)
+~> fixing the DDoS shit
+~> fixing the melt shit, also setable in the config if the server should melt or not
+
+# Change list
+
+~> constructed folders (better usage)
+~> added icon support (more sexy)
+~> changed and added/removed some commands (partly for security reasons)
+-> removed the a.bat 
+-> added msn spread
+-> added pstore incl. search
+-> added visit
+-> added anti debug
+-> added anti vmware
+-> added anti anubi
+-> adding botkill3r
+~> fixed some mut3x

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1246639757 source:e:\documents and settings\carve\desktop\carve\nameless bot\tools\encryptiontool\main.c
+	<stdio.h>
+	<windows.h>
+	<string.h>
+	<stdlib.h>
+	<tchar.h>
+

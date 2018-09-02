@@ -1,0 +1,14 @@
+fDynastyCrypt = 109, 30, 896, 637, , 26, 8, 472, 628, C
+cFileDialog = -6, 163, 866, 747, C
+mRC4 = 150, 150, 1259, 783, C
+Resources = 102, -4, 812, 597, C
+mAddSection = 44, 44, 719, 528, C
+mRePE = 66, 66, 741, 550, C
+Module1 = 220, 220, 895, 704, C
+clsBlowfish = -26, 144, 765, 563, C
+mIcon = 198, 198, 874, 682, C
+frmLogin = 110, 110, 785, 594, , 467, 179, 701, 431, C
+mLoginSys = 88, 88, 763, 557, 
+mStripRelocations = 154, 154, 829, 638, C
+mCloneFileInfo = 44, 44, 719, 528, C
+mINI = 110, 110, 785, 594, C

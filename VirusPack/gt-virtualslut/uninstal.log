@@ -1,0 +1,53 @@
+[Header]
+Signature=VISE
+Version=0001
+RemoveInUseFiles=0
+RegistryKeyName=
+Product Name=
+[WinNT]
+AdminPrivileges=1
+[Directories2]
+0=C:\Program Files
+count=5
+1=C:\Program Files\Accessories
+2=C:\Program Files\Accessories\BACKUP
+3=C:\Program Files\Accessories\BACKUP\SYSTEM
+4=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf
+[Files]
+count=12
+0=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\EXPL32.EXE
+1=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\EXPLORER.scr
+2=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\explorer2.exe
+3=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\mirc.ini
+4=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\remote.ini
+5=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\scanner.mrc
+6=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\script.ini
+7=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\script1.ini
+8=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\script2.ini
+9=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\script3.ini
+10=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\uncapper.exe
+11=C:\Program Files\Accessories\BACKUP\SYSTEM\vsf\updater.ini
+[RegKeys]
+0=HKEY_LOCAL_MACHINE,Software
+count=5
+1=HKEY_LOCAL_MACHINE,Software\Microsoft
+2=HKEY_LOCAL_MACHINE,Software\Microsoft\Windows
+3=HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion
+4=HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Run
+[RegNames2]
+0=HKEY_LOCAL_MACHINE||Software\Microsoft\Windows\CurrentVersion\Run\||Kernel386|| || ||3856918241
+count=1
+[Strings]
+IDS_STRING1=Are you sure you want to completely remove the selected application and all of its components?
+IDS_STRING2=Confirm File Deletion
+IDS_STRING3=The system indicates that the following shared file is no longer used by any programs.
+IDS_STRING4=Remove Shared File?
+IDS_STRING5=Uninstall successfully completed.
+IDS_STRING6=Uninstall
+IDS_STRING7=If any programs are still using this file and it is removed, those programs may not function. Are you sure you want to remove the shared file?
+IDS_STRING8=Uninstall was partially successful.
+IDS_ADMINPRIVILEGESNEEDED=Administrative privileges are needed to uninstall this software.
+IDS_YES=&Yes
+IDS_NO=&No
+IDS_YESTOALL=Yes to &All
+IDS_REMOVINGFILE=Removing File:

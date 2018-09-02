@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ChodeBase - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Release/modRewjgistry.res" /d "NDEBUG" /d "_AFXDLL" "C:\Documents and Settings\admin\Desktop\SpazBot\2.12\VBto VC++\ChodeBot C++ v1 base\modRewjgistry.rc"" 
+Creating temporary file "C:\DOCUME~1\admin\LOCALS~1\Temp\RSP118.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/ChodeBase.pdb" /machine:I386 /out:"Release/ChodeBase.exe" 
+".\Release\clsCPUID.obj"
+".\Release\clsExitWindows.obj"
+".\Release\clsStringBuilder.obj"
+".\Release\modAccessibility.obj"
+".\Release\modCPUSpeed.obj"
+".\Release\modCRC32.obj"
+".\Release\modData.obj"
+".\Release\modDoS.obj"
+".\Release\modDOSOutput.obj"
+".\Release\modEncrypt.obj"
+".\Release\modFileSearch.obj"
+".\Release\modHomepage.obj"
+".\Release\modKillProc.obj"
+".\Release\modKillStuff.obj"
+".\Release\modMD5.obj"
+".\Release\modMutex.obj"
+".\Release\modPatchTCPIP.obj"
+".\Release\modRewjgistry.obj"
+".\Release\modSettings.obj"
+".\Release\modShellExec.obj"
+".\Release\modSocketPlus.obj"
+".\Release\modSpreadAIM.obj"
+".\Release\modSpreadMSN.obj"
+".\Release\modStartup.obj"
+".\Release\modSysInfo.obj"
+".\Release\StdAfx.obj"
+".\Release\modRewjgistry.res"
+".\Release\frmMain.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\admin\LOCALS~1\Temp\RSP118.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+ChodeBase.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

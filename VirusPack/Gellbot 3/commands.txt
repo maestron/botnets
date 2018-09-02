@@ -1,0 +1,14 @@
+->HellBotv3::Commands
+
+.hell.login pass
+.hell.disconnect
+.hell.reconnect
+.hell.download url dest -u or -e // -u [update] -e [execute]
+.hell.raw raw commands
+.hell.mailstart //start mail spread
+.hell.mailstop //stop mail spread
+.hell.botcash url
+.hell.sysinfo
+.hell.remove
+
+

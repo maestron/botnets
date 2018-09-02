@@ -1,0 +1,122 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1B99.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\advscan.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\mssql.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\scan.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\shellcode.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\workstation.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\ftpd.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\httpd.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\ident.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\socks4.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\tftpd.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\download.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\driveinfo.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\net.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\netutils.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\processes.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\remotecmd.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\sysinfo.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\aliaslog.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\autostart.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\crc32.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\crypt.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\ehandler.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\fphost.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\irc_send.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\loaddlls.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\misc.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\rBot.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\rndnick.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\threads.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\wildcard.cpp"
+"C:\Documents and Settings\Administrator\Desktop\Stripped-RXV8\vncrooter.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1B99.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1B9A.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rBot.pdb" /machine:I386 /out:"Release/rBot.exe" 
+".\Release\advscan.obj"
+".\Release\mssql.obj"
+".\Release\scan.obj"
+".\Release\shellcode.obj"
+".\Release\workstation.obj"
+".\Release\ftpd.obj"
+".\Release\httpd.obj"
+".\Release\ident.obj"
+".\Release\socks4.obj"
+".\Release\tftpd.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\net.obj"
+".\Release\netutils.obj"
+".\Release\processes.obj"
+".\Release\remotecmd.obj"
+".\Release\sysinfo.obj"
+".\Release\aliaslog.obj"
+".\Release\autostart.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\ehandler.obj"
+".\Release\fphost.obj"
+".\Release\irc_send.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\rBot.obj"
+".\Release\rndnick.obj"
+".\Release\threads.obj"
+".\Release\wildcard.obj"
+".\Release\vncrooter.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1B9A.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+mssql.cpp
+scan.cpp
+shellcode.cpp
+workstation.cpp
+ftpd.cpp
+httpd.cpp
+ident.cpp
+socks4.cpp
+tftpd.cpp
+download.cpp
+driveinfo.cpp
+net.cpp
+netutils.cpp
+processes.cpp
+remotecmd.cpp
+sysinfo.cpp
+aliaslog.cpp
+autostart.cpp
+crc32.cpp
+crypt.cpp
+ehandler.cpp
+fphost.cpp
+irc_send.cpp
+loaddlls.cpp
+misc.cpp
+rBot.cpp
+rndnick.cpp
+threads.cpp
+wildcard.cpp
+vncrooter.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

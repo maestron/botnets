@@ -1,0 +1,25 @@
+Stoney todo
+-----------
+1. add keylogger
+
+wonk todo - probaly never gona get done
+-----------
+1.	maybe ".logic.if" and ".logic.else"
+2.	dcc support
+3.	screenshot support / keylogger
+5.	ring0, make access to the file fully stealth
+7.	.thread.list .thread.kill ( std::list based thread list )
+8.	install location ( bot_path, "%WINDIR%" )
+13.	bnc using the old ircgate.cpp
+14.	.file.findfile, .file.findmd5 & .file.sendfile
+15.	getadm or newer shatter-style attacks
+17.	built-in ftp/http server (.bot.ftpsrv <port> <usr> <pw>) (.bot.httpsrv <port>)
+18.	rsa keys for bot updates
+19.	identd: cvar for either id or random string
+20.	clone controls
+22.	add random distributed md5 password cracker // Private :)
+24.	be less libc/stl dependent
+25.	cvar for firewall/av killer
+29.	add .mac.adduser, mac.deluser, mac.setpass
+30.	fp30reg
+31.	linux autostart

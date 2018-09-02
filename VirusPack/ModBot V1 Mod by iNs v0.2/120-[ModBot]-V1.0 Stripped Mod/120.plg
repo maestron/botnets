@@ -1,0 +1,118 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\OLDT1M~1\IMPOST~1\Temp\RSP465D.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Adv.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Scanners\asn1.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Scanners\mssql.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Scanners\Netapi.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Scanners\vncshit.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\120.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Crc.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Cry.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\d3des.c"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\ftpd.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Ide.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Ldll.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\patcher.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Scanners\pstore.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Rnd.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Shel.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Sys.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Thr.cpp"
+"C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\ver.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\OLDT1M~1\IMPOST~1\Temp\RSP465D.tmp" 
+Creating temporary file "C:\DOCUME~1\OLDT1M~1\IMPOST~1\Temp\RSP465E.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" /verbose:lib 
+".\120\Adv.obj"
+".\120\asn1.obj"
+".\120\mssql.obj"
+".\120\Netapi.obj"
+".\120\vncshit.obj"
+".\120\120.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\d3des.obj"
+".\120\ftpd.obj"
+".\120\Ide.obj"
+".\120\Ldll.obj"
+".\120\patcher.obj"
+".\120\pstore.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\Sys.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\OLDT1M~1\IMPOST~1\Temp\RSP465E.tmp"
+<h3>Output Window</h3>
+Compiling...
+Adv.cpp
+asn1.cpp
+mssql.cpp
+Netapi.cpp
+vncshit.cpp
+C:\Documents and Settings\oldt1me1sov3r\Desktop\120-[ModBot]-V1.0 Stripped Mod\Scanners\vncshit.cpp(741) : warning C4390: ';' : empty controlled statement found; is this the intent?
+120.cpp
+Crc.cpp
+Cry.cpp
+d3des.c
+ftpd.cpp
+Ide.cpp
+Ldll.cpp
+patcher.cpp
+pstore.cpp
+Rnd.cpp
+Shel.cpp
+Sys.cpp
+Thr.cpp
+ver.c
+Linking...
+
+Searching Libraries
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching C:\Programmi\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+    Searching C:\Programmi\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+    Searching C:\Programmi\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\libcp.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\ws2_32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\Version.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\kernel32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching C:\Programmi\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+    Searching C:\Programmi\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+    Searching C:\Programmi\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\libcp.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\ws2_32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\Version.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\kernel32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching C:\Programmi\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching C:\PROGRAMMI\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+
+Done Searching Libraries
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

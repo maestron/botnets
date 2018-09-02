@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: LiquidBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Ic3\LOCALS~1\Temp\RSP677.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/LiquidBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Ic3\Desktop\LiquidBot\source\allx.cpp"
+"C:\Documents and Settings\Ic3\Desktop\LiquidBot\source\Liquid.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Ic3\LOCALS~1\Temp\RSP677.tmp" 
+Creating temporary file "C:\DOCUME~1\Ic3\LOCALS~1\Temp\RSP678.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/LiquidBot.pdb" /machine:I386 /out:"Release/LiquidBot.exe" 
+".\Release\advscan.obj"
+".\Release\aliaslog.obj"
+".\Release\allx.obj"
+".\Release\autostart.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\ddos.obj"
+".\Release\download.obj"
+".\Release\ehandler.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\httpd.obj"
+".\Release\icmpflood.obj"
+".\Release\ident.obj"
+".\Release\irc_send.obj"
+".\Release\kelvir.obj"
+".\Release\Liquid.obj"
+".\Release\loaddlls.obj"
+".\Release\lsass.obj"
+".\Release\lsass2.obj"
+".\Release\misc.obj"
+".\Release\mssql.obj"
+".\Release\netutils.obj"
+".\Release\ntpass.obj"
+".\Release\pingudp.obj"
+".\Release\redirect.obj"
+".\Release\remotecmd.obj"
+".\Release\rndnick.obj"
+".\Release\scan.obj"
+".\Release\shellcode.obj"
+".\Release\skysyn.obj"
+".\Release\synflood.obj"
+".\Release\tcpflood.obj"
+".\Release\tftpd.obj"
+".\Release\threads.obj"
+".\Release\visit.obj"
+".\Release\wildcard.obj"
+".\Release\wins.obj"
+".\Release\wkssvc.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Ic3\LOCALS~1\Temp\RSP678.tmp"
+<h3>Output Window</h3>
+Compiling...
+allx.cpp
+Liquid.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+LiquidBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

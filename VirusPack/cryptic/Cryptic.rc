@@ -1,0 +1,141 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Portugal) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTG)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 265, 95
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "Cryptic v3.0"
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         102,IDC_STATIC,"Static",SS_BITMAP,0,0,265,25
+    GROUPBOX        "",IDC_STATIC,0,25,265,65
+    LTEXT           "File:",IDC_STATIC,5,35,15,8
+    EDITTEXT        IDC_FILE,25,35,180,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,210,35,50,15
+    CONTROL         "Create backup copy (*.bak)",IDC_BACKUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,55,105,8
+    CONTROL         "Add icon",IDC_ADDICON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,55,40,8
+    ICON            IDI_EXE,IDC_ICONIMG,160,55,20,20
+    PUSHBUTTON      "Build",IDC_BUILD,5,70,50,15
+    PUSHBUTTON      "About",IDC_ABOUT,60,70,50,15
+    PUSHBUTTON      "Exit",IDC_EXIT,210,70,50,15
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MAIN                BITMAP  DISCARDABLE     "cryptic.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON    DISCARDABLE     "skull.ico"
+IDI_EXE                 ICON    DISCARDABLE     "exe.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+IDR_24                  24      DISCARDABLE     "XPThemes.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// STUB
+//
+
+IDR_STUB                STUB    DISCARDABLE     "Stub\\Release\\Stub.exe"
+#endif    // Portuguese (Portugal) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="release" />
+	<File name="apis.c" open="1" top="0" tabpos="8">
+		<Cursor position="1670" topLine="0" />
+	</File>
+	<File name="apis.h" open="1" top="0" tabpos="9">
+		<Cursor position="629" topLine="0" />
+	</File>
+	<File name="cfg.h" open="1" top="0" tabpos="3">
+		<Cursor position="1786" topLine="0" />
+	</File>
+	<File name="cryptn.c" open="1" top="0" tabpos="7">
+		<Cursor position="672" topLine="145" />
+	</File>
+	<File name="global.c" open="1" top="1" tabpos="4">
+		<Cursor position="3858" topLine="6" />
+	</File>
+	<File name="global.h" open="1" top="0" tabpos="2">
+		<Cursor position="586" topLine="30" />
+	</File>
+	<File name="irc.c" open="1" top="0" tabpos="5">
+		<Cursor position="6177" topLine="0" />
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1">
+		<Cursor position="799" topLine="0" />
+	</File>
+	<File name="usb+.c" open="1" top="0" tabpos="11">
+		<Cursor position="976" topLine="89" />
+	</File>
+	<File name="util.c" open="1" top="0" tabpos="6">
+		<Cursor position="3092" topLine="0" />
+	</File>
+	<File name="wget.c" open="1" top="0" tabpos="10">
+		<Cursor position="1238" topLine="34" />
+	</File>
+</CodeBlocks_layout_file>

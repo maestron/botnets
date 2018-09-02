@@ -1,0 +1,9 @@
+akbot-0.4.5-irc\AkBot[IRC]-lsd_mod changes.txt
+
+removed the following:
+	- cloning
+	- ddos
+	- email spread
+	- msdtc spread
+	- port scanner
+	- socks 4

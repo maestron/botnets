@@ -1,0 +1,4 @@
+- Add Blowfish message handling (for IRC messaging)
+- Make the bot pass Firewalls (unhooking user level / kernel level APIs + code injection into a process - called FWB#+ or FWB+++)
+- Make access to the file fully stealth
+- Make the bot undetected to Firewalls

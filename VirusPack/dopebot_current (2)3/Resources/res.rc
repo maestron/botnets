@@ -1,0 +1,2 @@
+driver RT_RCDATA Files\driver.sys
+hooker RT_RCDATA Files\hook.dll

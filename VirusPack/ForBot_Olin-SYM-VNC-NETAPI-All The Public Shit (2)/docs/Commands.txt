@@ -1,0 +1,66 @@
+() -> required
+[] -> optional
+
+bot.cpp
+ - b.id
+ - b.rndnick
+ - b.secure
+ - b.sysinfo
+ - b.remove (bot nickname)
+ - b.flushdns
+ - b.open (file)
+ - b.quit
+ - b.cmd (command)
+ - b.exe (file)
+ - b.dns (host)
+ - b.longuptime [days]
+ - b.nick (nickname)
+
+cvar.cpp
+ - cvar.list
+ - cvar.get (cvar)
+ - cvar.set (cvar) (value)
+
+findfile.cpp
+ - find (directory) (search-for)
+
+httpd.cpp
+ - http.start (port) (directory)
+ - http.stop -> not done
+ - http.snap -> not done
+
+irc.cpp
+ - i.raw (command)
+ - i.reconnect
+ - i.part (channel)
+ - i.mode (mode)
+ - i.msg (target) (message)
+ - i.notice (target) (message)
+ - i.disconnect
+ - i.gethost (search)
+ - i.netinfo
+ - i.join (channel)
+
+logic.cpp
+ - logic.if (type) (mode) (value) (command)
+
+mac.cpp
+ - set (user) (password)
+ - bye
+
+netstat.cpp
+ - netstat [port] [state -e / -l]
+
+utility.cpp
+ - ftp.dl (ftp web-based address) (local location)
+ - ftp.exe (ftp web-based address) (local location)
+ - ftp.up (ftp web-based address) (local location)
+ - http.dl (full address) (local location)
+ - http.exe (full address) (local location)
+ - http.up (full address) (local location)
+ - pc.shutdown
+ - pc.reboot
+ - pc.logoff
+ 
+
+

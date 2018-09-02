@@ -1,0 +1,593 @@
+<tr><td colspan="3" class="tableCellTwo" align="center"><b>Начало проверки<b></td></tr>
+<tr><td colspan="3" class="tableCellTwo" align="center"><b>25.06.2007 - 13:28:08<b></td></tr>
+<tr>
+<td class="tableCellTwo">game.compass.net.ua</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">game.compass.net.ua</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">game.compass.net.ua</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">subteam.iplot.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">sub-team.by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">thehens.iplot.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">by.ruwww</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">hensfail.1111mb.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">by.ruwww</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.tu1.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">boodby.org</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">boodby.org</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.boodby.org</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">1<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">subteam.iplot.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">subteam.iplot.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.cable.breezein.net</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">212.19.139.97</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">212.19.139.97</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">212.19.139.97</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.melani.customers.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.kosheen.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">u9758.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.paravideos.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.moskstor.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.new.kosheen.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">blog.kosheen.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp1.tvkursk.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp1.tvkursk.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">vault.lan</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.strimnet.md</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.vydavatel.sk</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">5<td>
+<tr>
+<td class="tableCellTwo">ftp.swginfo.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">hosting2.svitonline.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">212.98.164.132</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.tattelecom.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.tattelecom.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.cable.breezein.net</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">213.85.95.121</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.w3.lt</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">4<td>
+<tr>
+<td class="tableCellTwo">www.mekom.nnov.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">sale52.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.dago.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">3<td>
+<tr>
+<td class="tableCellTwo">ftp.dago.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">3<td>
+<tr>
+<td class="tableCellTwo">ftp.drpicture.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">1<td>
+<tr>
+<td class="tableCellTwo">gold-sity.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.goldsity.net.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">mobil-fon.gold-sity.ru.</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.ghost.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.ghost.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.krasnet.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.prioratus.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">217.66.96.8</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">hosting2.evitel.net</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">217.66.96.7</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">217.66.96.7</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">217.66.96.7</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">217.66.96.7</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">mini17.mirohost.net</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">212.1.66.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">www.ebara.com.ua</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">2<td>
+<tr>
+<td class="tableCellTwo">hosting.skif.com.ua</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.h1.xhosting.com.ua</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">hosts.uatop.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">hosting2.evitel.net</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">193.110.162.227</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.tefiplus.nichost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.hansanet.ee</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.hansanet.ee</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">6<td>
+<tr>
+<td class="tableCellTwo">dev.heathmont.net</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">www.hot.ee</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">www.hot.ee</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">www.smartestonia.ee</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.compu.ee</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">1<td>
+<tr>
+<td class="tableCellTwo">www.kindle.ee</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.melani.customers.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">dis-bat.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">dis-bat.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">mail.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">files.local</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">194.44.18.84</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.cable.breezein.net</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.cable.breezein.net</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">blackcat.quadra.lan</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">store2.data.bg</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">4erdak.polarnet.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">litcity.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">4<td>
+<tr>
+<td class="tableCellTwo">www.4erdak.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">4<td>
+<tr>
+<td class="tableCellTwo">ftp.modhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">4<td>
+<tr>
+<td class="tableCellTwo">u15929.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">by.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">217.20.163.13</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp1.mgdn.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.issc.com.tw</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">drsis.chat.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">drsis1.chat.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.proekt-exp.nichost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">drsis1.chat.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">212.40.39.134</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.tripod.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">8<td>
+<tr>
+<td class="tableCellTwo">ftp.istanbul7.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.extrememinds.nl</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.partnerbyte.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.alanyapagina.nl</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.denizliulkucuisciler.org</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">2<td>
+<tr>
+<td class="tableCellTwo">ftp.steljepcsamen.nl</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.ozgurenerji.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.geges.com.tr</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.ovacikyibo.k12.tr</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.tripod.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">8<td>
+<tr>
+<td class="tableCellTwo">www.bozdagli.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">2<td>
+<tr>
+<td class="tableCellTwo">ftp.westtravel.nl</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.reisbureaumerwede.nl</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.ileri-elektrik.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.denizli-otizm.org</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">72.36.139.130</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.synclub.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">minus-mp3.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">upl.stg360.ifolder.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.havasevleri.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">1<td>
+<tr>
+<td class="tableCellTwo">ftp.kokosgiyim.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.er-as.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.gazetegenc.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.thoteknoloji.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.buyukogluinsaat.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.deemlak.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp1.telecom.by</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">70.19.116.71</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">chicago-ftp.alliedadvpub.com</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">80.90.236.7</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">80.90.236.7</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">80.90.236.7</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">balkanalysis.com</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">65.98.100.218</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">85.21.72.165</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp1.zelnet.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.pochta.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">6<td>
+<tr>
+<td class="tableCellTwo">ftp.soho.net.ua</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.soho.net.ua</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">pgp.md</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp2.southtel.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">u63533.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">u63533.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">84.252.140.85</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">84.252.140.85</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">u5516.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">u11599.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">u56863.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">home.dpns.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">lianet.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">3<td>
+<tr>
+<td class="tableCellTwo">www2.100mb.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">87.248.184.123</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.fotoproekt.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo">4<td>
+<tr>
+<td class="tableCellTwo">altf13.gotdns.org</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">masterhost.ru</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">u25565.ftp.masterhost.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+<tr>
+<td class="tableCellTwo">ftp.games.lan</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">ftp.incoming.lan</td><td class="tableCellTwo">Ошибка</td>
+<td class="tableCellTwo">0<td>
+<tr>
+<td class="tableCellTwo">webcenter.ru</td><td class="tableCellTwo">Рабочий</td>
+<td class="tableCellTwo"><td>
+</tr>
+<tr><td colspan="3" class="tableCellTwo" align="center"><b>Проверка завершена<b></td></tr>
+<tr><td colspan="3" class="tableCellTwo" align="center"><b>25.06.2007 - 13:38:17<b></td></tr>

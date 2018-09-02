@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: bot - Win32 Release--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\Users\iD\AppData\Local\Temp\RSPD9C5.tmp" mit Inhalten
+[
+/nologo /ML /W3 /Og /Os /Oy /Gy /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Release/" /Fp"Release/bot.pch" /YX /Fo"Release/" /Fd"Release/" /Zl /FD /c 
+"K:\Security - Hacking\Private\BotNet\dci bot\main.c"
+]
+Creating command line "cl.exe @C:\Users\iD\AppData\Local\Temp\RSPD9C5.tmp" 
+Erstellen der temporären Datei  "C:\Users\iD\AppData\Local\Temp\RSPD9C6.tmp" mit Inhalten
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/bot.pdb" /machine:I386 /nodefaultlib /out:"Release/bot.exe" 
+".\Release\main.obj"
+]
+Erstellen der Befehlzeile "link.exe @C:\Users\iD\AppData\Local\Temp\RSPD9C6.tmp"
+<h3>Ausgabefenster</h3>
+Kompilierung läuft...
+main.c
+Linker-Vorgang läuft...
+Erstellen der Befehlzeile "bscmake.exe /nologo /o"Release/bot.bsc"  ".\Release\main.sbr""
+Browse-Informationsdatei wird erstellt...
+<h3>Ausgabefenster</h3>
+
+
+
+<h3>Ergebnisse</h3>
+bot.exe - 0 Fehler, 0 Warnung(en)
+</pre>
+</body>
+</html>

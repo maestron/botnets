@@ -1,0 +1,7 @@
+ToDo :	10th Oct. 05 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- add more features
+- colored messages
+- more exploits 
+- small fixes
+- make dcc working ! 

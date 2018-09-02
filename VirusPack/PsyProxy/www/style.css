@@ -1,0 +1,60 @@
+BODY {
+     BACKGROUND: #123123;
+color: #bfdccc;
+}
+TD {
+     FONT-SIZE: 8pt; FONT-FAMILY: Verdana;
+}
+A {
+     COLOR: #bfdccc;
+     TEXT-DECORATION: underline
+}
+INPUT, SELECT, TEXTAREA {
+	color: black; 
+	font-family: arial, verdana, ms sans serif; 
+	font-weight: thin; 
+	font-size: 8pt; 
+	border-top: thin outset;
+	border-right: thin inset; 
+	border-bottom: thin inset; 
+	border-left: thin outset; 
+}
+.MAIN {
+     COLOR: #bfdccc;
+     BACKGROUND: #123123
+}
+.ITEM {
+     BACKGROUND: #234234
+}
+.LIST {
+     BACKGROUND: #234234
+}
+.HEADER {
+     BACKGROUND: #234234
+}
+.HEAD {
+     TEXT-ALIGN: center;
+     FONT-WEIGHT: bold
+}
+.BUTTON
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	border: #000000;
+	border-style: solid;
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+	cursor: hand;
+	height: 16px;
+	width: 125px;
+} 
+
+A {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #789789;	
+	text-decoration: none; 
+}

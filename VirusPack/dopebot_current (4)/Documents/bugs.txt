@@ -1,0 +1,17 @@
+1.	Melt dosent work under Win9x since batch is started before app is exited
+	so the file is in use and Win9x dosent keep trying to delet like NT does.
+	Added tempfix, batch_run(), tries to run batch on every startup on win9x
+	when original file no longer should be running. Though i wanna add a melt
+	hook or commandline deletion instead. Though commandline deletion wont do
+	any good then removing bots. Iv already added melt.cpp, but the function
+	in there crashes the remote process on Win9x when the Sleep shit is used,
+	wich is _nessecary_.
+	(bot.cpp, line 1027, install.cpp, line 22-37, line 170-171)
+2.	IAT patching engine dosent work, need to change it to a overwriting one.
+	(hook.cpp, line 48-83)
+3.	Scanner dosent work as it should, it works fine while the threads are 
+	started but once all threads are running it goes crazy and starts flooding
+	irc with open ports and excess flood quits? I think this has to do with
+	ranges that have alot of ports open cuz i only get this problem with this
+	range: 83.140.33.0 (.130 and up, its a webhost i think).
+	(scanner.cpp, line ?)

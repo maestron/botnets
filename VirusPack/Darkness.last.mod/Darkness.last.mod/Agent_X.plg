@@ -1,0 +1,167 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Agent_X - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP23C.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "NO_AVFW_KILL" /D "NO_SECSYSTEM" /D "NO_REGISTRY" /D "NO_EHANDLER" /D "NO_CRYPT" /D "DEBUG_LOGGING" /FR"Debug/" /Fp"Debug/Agent_X.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\advscan.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\aliaslog.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\autostart.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\capture.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\crc32.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\crypt.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\Agent_X.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\dcc.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\ddos.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\download.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\driveinfo.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\ehandler.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\findfile.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\findpass.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\fphost.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\ftpd.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\httpd.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\icmpflood.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\ident.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\irc_send.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\keylogger.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\loaddlls.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\lsass.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\lsass2.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\misc.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\net.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\netutils.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\pingudp.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\processes.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\psniff.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\redirect.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\remotecmd.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\rlogind.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\rndnick.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\scan.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\secure.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\session.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\shellcode.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\socks4.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\synflood.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\sysinfo.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\tcpflood.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\tftpd.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\threads.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\visit.cpp"
+"C:\Documents and Settings\Owner\Desktop\AX\DarKNesS v.1.0 Priv (LsasS)\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP23C.tmp" 
+Creating temporary file "C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP23D.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/Agent_X.map" /debug /machine:I386 /out:"Debug/Agent_X.exe" 
+".\Debug\advscan.obj"
+".\Debug\aliaslog.obj"
+".\Debug\autostart.obj"
+".\Debug\capture.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\Agent_X.obj"
+".\Debug\dcc.obj"
+".\Debug\ddos.obj"
+".\Debug\download.obj"
+".\Debug\driveinfo.obj"
+".\Debug\ehandler.obj"
+".\Debug\findfile.obj"
+".\Debug\findpass.obj"
+".\Debug\fphost.obj"
+".\Debug\ftpd.obj"
+".\Debug\httpd.obj"
+".\Debug\icmpflood.obj"
+".\Debug\ident.obj"
+".\Debug\irc_send.obj"
+".\Debug\keylogger.obj"
+".\Debug\loaddlls.obj"
+".\Debug\lsass.obj"
+".\Debug\lsass2.obj"
+".\Debug\misc.obj"
+".\Debug\net.obj"
+".\Debug\netutils.obj"
+".\Debug\pingudp.obj"
+".\Debug\processes.obj"
+".\Debug\psniff.obj"
+".\Debug\redirect.obj"
+".\Debug\remotecmd.obj"
+".\Debug\rlogind.obj"
+".\Debug\rndnick.obj"
+".\Debug\scan.obj"
+".\Debug\secure.obj"
+".\Debug\session.obj"
+".\Debug\shellcode.obj"
+".\Debug\socks4.obj"
+".\Debug\synflood.obj"
+".\Debug\sysinfo.obj"
+".\Debug\tcpflood.obj"
+".\Debug\tftpd.obj"
+".\Debug\threads.obj"
+".\Debug\visit.obj"
+".\Debug\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP23D.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+aliaslog.cpp
+autostart.cpp
+capture.cpp
+crc32.cpp
+crypt.cpp
+Agent_X.cpp
+dcc.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+ftpd.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+irc_send.cpp
+keylogger.cpp
+loaddlls.cpp
+lsass.cpp
+lsass2.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+pingudp.cpp
+processes.cpp
+psniff.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+visit.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Agent_X.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

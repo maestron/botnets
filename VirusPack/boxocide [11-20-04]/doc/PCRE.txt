@@ -1,0 +1,106 @@
+Latest info on http://bigredswitch.com/software.
+
+Please look at the original PCRE documentation in pcre-3.9/doc for more
+information on PCRE including regular expression details.
+
+Text copy of the HTML article below:
+
+BigPcre C++ Wrapper
+
+OK, so I've also written yet another PCRE C++ wrapper (see my last Regex
+article). If I had known about Zopyra, I might have just ported it over to
+Windows instead, but I've already done this. I've done comparison
+benchmarking as well but that's the subject of the next article. The library
+contains PCRE as well and has only been tested on Windows though I've tried to
+keep to the standard as close as possible (I'll try to test it on Linux and
+FreeBSD in the future). The source is here: bigpcre-0.91.zip (453K).  I've
+written some notes on the implementation, follow the link. 
+
+First, I'd like to thank Philip Hazel, the author of PCRE, for such an
+excellent library and the generous license.
+
+An example (from simple_example.cpp):
+
+    try {
+        const char* s = "ffoobarfoooobarFOFUM";
+
+        Pcre::regex re("fo+", "/i");
+        Pcre::match m = re.match(s, strlen(s), "/g");
+        std::copy(m.begin(), m.end(), Pcre::ostream_iterator(std::cout, "\n"));
+    }
+    catch (Pcre::pcre_error& e) {
+        std::cerr << "Pcre error: " << e.what() << "\n";
+    }
+
+I find this much simpler than the C source to do this and that's why I wrote
+it. Things to note about this library (I compare to Perl since it is the
+reference, but the notes are relevant for other regex libraries you are
+familiar with (probably) since the syntaxes tend to be similar): 
+
+  * It is in the Pcre namespace. I wanted to use pcre but the symbol was
+    already taken by the PCRE C library. 
+  * I've added the convenient "/g" and "/G" options from pcretest example.
+    There are actually two regex::match() functions because of this. The
+    first, as shown above, returns a Pcre::match object which flattens all
+    matches with the "/g" and "/G" options. The second, regex::matchv()
+    returns a vector<Pcre::match> object with each "/g" or "/G" match as a
+    slot in the vector. You can still use this function for consistency
+    without "/g" or "/G" and the vector will be of size 0 or 1 depending on
+    whether there was a match or not. 
+  * The constructor and match functions take options as a string like Perl.
+    There are enums defined in pcre.hpp but there are no functions that take
+    them. I feel that this is consistent with Perl usage and is easy to
+    remember. Please note that some options can only be taken at compile time
+    and some only at match time. The slash ('/') at the beginning of an option
+    string is optional. 
+  * There are Perl inconsistencies, please see the documentation
+    (bigpcre/pcre-3.9/doc/pcre.html) for the details. The header, pcre.hpp,
+    and the bigpcre documentation show which options match to which strings. 
+  * I've added a simple substitution convenience function,
+    regex::substitute(). This does not support back references, another thing
+    to add in a future release. 
+  * This was a difficult decision, but the functions take C-style strings
+    rather than std::string's. This was because of efficiency, I will need
+    this with C libraries and when parsing big files, it is often faster to
+    use read or other C library functions. 
+  * Related to the point above, the match object returns a pair of indices to
+    the original string passed in. It also keeps a copy to the string pointer
+    and uses this for the convenience function
+    match::const_iterator::to_string() (and the associated cast to
+    std::string), this is potentially dangerous because if the original string
+    memory goes away, this will result in a runtime error.  This is another
+    reason not to use strings for the function signatures, it would be easy to
+    do something like this: re.match("this will blow up if you subsequently
+    use the to_string() function in the match object returned") 
+  * I rewrote pcretest and pcredemo from the C library to use the C++
+    wrappers. I've reran all tests (pcre-3.9\testdata\testinput*) and
+    confirmed the results with the C version of pcretest. There are some
+    differences in formatting (use diff -b) and some result differences
+    because I didn't support all pcretest escape sequences ('+', 'I', 'D',
+    'M').
+
+Some notes on the physical implementation: 
+
+  * The MSVC Makefile (nmake) is Make_mvc.mak. It will build both the C and
+    C++ versions using Windows multi-threaded DLLs (-MD) as static libraries
+    (.lib's, no dlls). Change this if you want something different. My
+    development environment is Windows2K with both VC6 and VC7. 
+  * The C PCRE-3.9 source is in the subdirectory pcre-3.9, the make will build
+    both libraries, pcre.lib and pcrexx.lib. pcrexx.lib includes all of
+    pcre.lib and can be linked directly into C programs and should be all you
+    need. Since these are static libraries you shouldn't lose any space. 
+  * To use the C++ library, you will only need pcre.hpp, the main header file.
+    To use the C library, include pcre-3.9/pcre.h. 
+  * The ported test programs are there: pcretest.cpp and pcredemo.cpp. The
+    makefile will automatically build these as well. Additional tests written
+    for performance testing are in tests and have it's own makefile. 
+
+One of the hardest and most interesting part of programming libraries is the
+interface. This is a simple wrapper but the hard decisions were still in the
+interface. My general philosophy is that I like C++ interfaces for their
+potential convenience but C interfaces for their basic simplicity. C++
+interfaces can have simplicity as well but they often get weighed down in
+fanciness and in ad-hoc method bloat. I think this is often tied to the high
+coupling of interface and implementation. Lastly, I did do performance tests
+and I will publish the results and thoughts within the next few days.
+

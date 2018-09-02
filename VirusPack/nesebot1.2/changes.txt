@@ -1,0 +1,20 @@
+nesespray (08/31/04):
+
+- Fixed the lsass scanner
+- Fixed FTP in sasser
+- Added WksSvc scanner
+- Fixed FTP in WksSvc
+- Removed shit spreaders
+- Added lsass2
+- Fixed FTP in lsass2
+
+---
+
+nesespray (08/28/04):
+
+- Fixed psniff
+- Added FTPD
+- Added dcom135lsass scanner
+- Added Sasser5554 and Sasser1023
+- Changed some shit in rBot.cpp
+- Added X-Lock's dcom

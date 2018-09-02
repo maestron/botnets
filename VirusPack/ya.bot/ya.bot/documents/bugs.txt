@@ -1,0 +1,3 @@
+/*  ya.bot  */
+
+1.		Search files for "FIXME", if you cant find any, there are no bugs. :)

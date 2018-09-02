@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_Sys", "_Sys.vcproj", "{2103C19D-143E-420A-88B6-4F459AA964F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Debug|Win32.Build.0 = Debug|Win32
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Debug|x64.ActiveCfg = Debug|x64
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Debug|x64.Build.0 = Debug|x64
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Release|Win32.ActiveCfg = Release|Win32
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Release|Win32.Build.0 = Release|Win32
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Release|x64.ActiveCfg = Release|x64
+		{2103C19D-143E-420A-88B6-4F459AA964F6}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+general:
+-----------
+
+ 1. do not ever tell anyone about this site and group. 
+ 2. do not ever leak any shit to any person outside of group. 
+ 3. any exe's that you compiled from this source code is for your use only.
+ 4. exe's should be kept to yourself.  
+ 5. if you have friend who wanting to give you bots. give them your other bot like sdbot. 
+ 7. please have friendly attuide and be friendly to others as you want to be respected like that. 
+ 8. get along with each other. 
+ 9. we should work as team.   
+10. No fighting or packeting/DDoS.  
+12. you must disable logging of our chat room and privmsgs. it can be easily done in mIRC or xchat options.  
+13. EVERYTHING stays in the chat rooms and privmsgs.  
+11. I may add more rules here.   
+
+
+results of not following those rules: 
+being wonked for life from us.
+your pc and sites will be reformated.  
+
+
+error reporting:
+-------------------
+
+1. Don't report a bug if the programmer cannot reproduce it (we already have enough bugs to search where we can reproduce the bug)
+2. Don't report a error where you don't have debug information (debug build) or debugger output (release build) or line numbers
+3. I (wonk) will not process any bug reports about bots behaving strangely on unrealircd and any mods of it (only if some bugs were fixed)
+4. Read the FAQ and the Reference before asking any questions !!!
+5. Error reports that result of people not following these rules will be silently ignored.

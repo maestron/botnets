@@ -1,0 +1,113 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nzm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1C0.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"obj/nzm.pch" /YX /Fo"obj/" /Fd"obj/" /FD /c 
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\exploits\dcom.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\exploits\ms04_007_asn1.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\exploits\netapi.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\exploits\sym06_010.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\vncps.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\exploits\ftpd.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\exploits\tftpd.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\exploits\advscan.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\loaddlls.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\misc.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\netutils.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\patcher.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\sysinfo.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\version.c"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\aliaslog.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\autostart.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\download.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\ehandler.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\fphost.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\irc_send.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\md5.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\nzm.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\processes.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\random.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\rndnick.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\shellcode.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\threads.cpp"
+"D:\exploits\BOTS\nzm-sym\nzmlite\cpp\core\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1C0.tmp" 
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1C1.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"exe/nzm.pdb" /machine:I386 /out:"exe/nzm.exe" 
+".\obj\dcom.obj"
+".\obj\ms04_007_asn1.obj"
+".\obj\netapi.obj"
+".\obj\sym06_010.obj"
+".\obj\vncps.obj"
+".\obj\ftpd.obj"
+".\obj\tftpd.obj"
+".\obj\advscan.obj"
+".\obj\loaddlls.obj"
+".\obj\misc.obj"
+".\obj\netutils.obj"
+".\obj\patcher.obj"
+".\obj\sysinfo.obj"
+".\obj\version.obj"
+".\obj\aliaslog.obj"
+".\obj\autostart.obj"
+".\obj\download.obj"
+".\obj\ehandler.obj"
+".\obj\fphost.obj"
+".\obj\irc_send.obj"
+".\obj\md5.obj"
+".\obj\nzm.obj"
+".\obj\processes.obj"
+".\obj\random.obj"
+".\obj\rndnick.obj"
+".\obj\shellcode.obj"
+".\obj\threads.obj"
+".\obj\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP1C1.tmp"
+<h3>Output Window</h3>
+Compiling...
+dcom.cpp
+ms04_007_asn1.cpp
+netapi.cpp
+sym06_010.cpp
+vncps.cpp
+ftpd.cpp
+tftpd.cpp
+advscan.cpp
+loaddlls.cpp
+misc.cpp
+netutils.cpp
+patcher.cpp
+sysinfo.cpp
+version.c
+aliaslog.cpp
+autostart.cpp
+download.cpp
+ehandler.cpp
+fphost.cpp
+irc_send.cpp
+md5.cpp
+nzm.cpp
+processes.cpp
+random.cpp
+rndnick.cpp
+shellcode.cpp
+threads.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+nzm.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

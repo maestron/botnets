@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2004-02-25T22:32:38.312647Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/doc"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="145"/>
+<entry
+   committed-rev="11"
+   name="gpl.txt"
+   text-time="2003-02-11T19:52:11.291544Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="393a5ca445f6965873eca0259a17f833"
+   kind="file"
+   prop-time="2003-02-11T19:52:11.281529Z"/>
+<entry
+   committed-rev="11"
+   name="agobug.jpg"
+   text-time="2003-02-11T19:52:12.232897Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="8480622e98fbaff360233ed8b1f2b8df"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.222883Z"/>
+<entry
+   committed-rev="11"
+   name="faq.html"
+   text-time="2003-02-11T19:52:12.282969Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="86ab10e12809d41aa32de2d800f45d88"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.262940Z"/>
+<entry
+   committed-rev="11"
+   name="agobot3.jpg"
+   text-time="2003-02-11T19:52:12.443200Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="a137ca64758c9a0819b8887091e4e735"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.433185Z"/>
+<entry
+   name="templates"
+   kind="dir"/>
+<entry
+   committed-rev="11"
+   name="commandref.html"
+   text-time="2003-02-11T19:52:12.633473Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="fd30868df0bd75ac3596213ccb9b00ed"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.623459Z"/>
+</wc-entries>

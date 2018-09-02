@@ -1,0 +1,10 @@
+********NOTE********
+*MAKE SURE YOU COPY + PASTE 
+THIS TO THE TOP OF
+THE "cryptn.c" FILE!!! -Carve
+********NOTE********
+
+
+/* ENCRYPTION KEY */
+char decode_ps[] = "k";
+

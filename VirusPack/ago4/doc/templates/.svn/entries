@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2004-02-25T22:32:38.312647Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/doc/templates"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="145"/>
+<entry
+   committed-rev="11"
+   name="template_priv.h"
+   text-time="2003-02-11T19:52:12.493272Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="568395b8514da8e0ab96a77f43d1d397"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.483257Z"/>
+<entry
+   committed-rev="11"
+   name="template.h"
+   text-time="2003-02-11T19:52:12.533329Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="82fc7ac6a5df848e5aef6a285b47c7ae"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.513300Z"/>
+<entry
+   committed-rev="11"
+   name="template.cpp"
+   text-time="2003-02-11T19:52:12.563372Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="5b79bc5224e467f6c3b9f5e98617fe27"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.553358Z"/>
+<entry
+   committed-rev="11"
+   name="template_priv.cpp"
+   text-time="2003-02-11T19:52:12.593416Z"
+   committed-date="2004-02-25T22:32:38.312647Z"
+   checksum="64191de4261fd379442798bcf3bf9191"
+   kind="file"
+   prop-time="2003-02-11T19:52:12.583401Z"/>
+</wc-entries>

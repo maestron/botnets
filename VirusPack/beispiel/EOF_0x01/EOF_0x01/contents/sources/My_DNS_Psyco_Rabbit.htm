@@ -1,0 +1,91 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Psyco_Rabbit/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/Psyco_Rabbit/My_DNS"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/***************************************************************************
+ *   Copyright (C) 29/04/2006 by Psyco_Rabbit                              *
+ *   PsycoRabbit@gmail.com                                                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the Berkeley Software Distribution (BSD)        *
+ *   License.                                                              *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY.                                             *
+ *                                                                         *
+ ***************************************************************************/
+
+
+#ifdef HAVE_CONFIG_H
+#include &lt;config.h&gt;
+#endif
+
+#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;string.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;arpa/inet.h&gt;
+
+
+
+using namespace std;
+
+int main()
+{
+ struct hostent *host;                            //it contains informations about host
+ struct in_addr addr;                             //in this struct there is our address
+ char address[32];
+ string c;
+
+
+ do{
+ cout&lt;&lt;&quot;DNS by Psyco_Rabbit&quot;&lt;&lt;endl;
+ cout&lt;&lt;&quot;1-hostname --&gt; ip&quot;&lt;&lt;endl;
+ cout&lt;&lt;&quot;2-ip --&gt; hostname&quot;&lt;&lt;endl;
+ string i;
+ cin&gt;&gt;i;
+ while (i!=&quot;1&quot; &amp;&amp; i!=&quot;2&quot;){
+   cout&lt;&lt;&quot;Type 1 or 2!&quot;&lt;&lt;endl;
+   cin&gt;&gt;i;
+  }
+
+ char s[32];
+ cout&lt;&lt;&quot;Type address:&quot;&lt;&lt;endl;
+ cin&gt;&gt;s;
+
+ if (i==&quot;1&quot;){
+ if ((host=gethostbyname(s))==NULL)                             //system call to obtain ip address by hostname
+    herror(&quot;gethostbyname&quot;);
+ else{
+    inet_ntop(AF_INET,host-&gt;h_addr,address,sizeof(address));    //transform h_addr in a readable format
+    cout&lt;&lt;address&lt;&lt;endl;
+   }
+ }
+
+
+ if (i==&quot;2&quot;){
+ if ((inet_aton(s, &amp;addr))==0)
+    herror(&quot;inet_aton&quot;);
+ if ((host=gethostbyaddr(&amp;addr,sizeof(addr),AF_INET))==NULL)    //system call to obtain hostname by ip address
+    herror(&quot;gethostbyaddr&quot;);
+ else cout&lt;&lt;host-&gt;h_name&lt;&lt;endl;
+
+ }
+
+
+ cout&lt;&lt;&quot;Do you want to continue? y/n&quot;&lt;&lt;endl;
+ cin&gt;&gt;c;
+ while (c!=&quot;n&quot; &amp;&amp; c!=&quot;y&quot;)
+    cin&gt;&gt;c;
+ }while (c!=&quot;n&quot;);
+
+
+ return EXIT_SUCCESS;
+}
+</pre></body></html>

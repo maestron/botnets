@@ -1,0 +1,69 @@
+Version 2.0.0--
+---------------
+Fixed Admin Name!Ident@Host (spoof-able)
+Fixed better save/load settings
+Fixed better About-screen (flashing a bit with elf's server ;D;D)
+Fixed BuddyList (now instead of making whole server public, just make it public for friends)
+Fixed small bugs
+
+
+Version 1.0.9--
+---------------
+
+Fixed send-mode (Selected bots only, Nicks starting with, Nicks containing, Nicks ending with)
+Fixed ban-mode (can now ban users instead of going into config for doing it)
+Fixed public-mode (make it able to allow ppl who connects to see userlist, and talk to eachother)(buggy)
+Fixed smaller buggs
+Fixed channel (allows you to choose what channel to force-join on connection)
+Fixed notify-on-close (Notifies the first time you run botnet on close that it goes into tray)
+Fixed always icon in tray (instead of first putting it there when botnet is closed)
+
+
+
+Version 1.0.7--
+---------------
+
+Fixed Multi-Connection Lagg (again, yes i know i suck ;P)
+Fixed <ADMIN> text (so you see what you write to bots ;p)
+Fixed Tray Icon
+Fixed Sorting in list (dont know how well it works but wtF)
+Fixed so ALL ircbots (no matter what kind) can connect. (was problem before on parsing)
+Fixed config (so you can allow/disallow ip-mask's to connect and other)
+Fixed Read-NICK instead of USER parsed Nickname
+Fixed multi-select (can now disconnect/send msg's to more then 1 bot instead of sending msg to all)
+
+
+
+Version 1.0.5--
+---------------
+
+Fixed Receive-Text from Same IP (if 2 bots with same ip sends text it fucked up)
+
+
+
+Version 1.0.4--
+---------------
+
+Fixed Multi-connection problem (caused error if many bots connected)
+Fixed Multi-connection lagg (caused lagg if many bots connected)
+Fixed Text-receive (the text was broken on receive before)
+Fixed Multi-commando text (if 2 cmd's are sent fast they get into 1 received length. Now this is fixed)
+
+
+
+Version 1.0.2--
+---------------
+
+Added SockID (so Botnet.exe knows what connection is who). This 
+is good if a bot from same ip connects twice. 
+
+Fixed "b0tpage" button in menu, now it works ;p
+Fixed "Error" message on "all"-Send (think only the cmd .exit caused this)
+Fixed some smaller errors
+
+
+
+Version 1.0.1--
+---------------
+
+First public version.

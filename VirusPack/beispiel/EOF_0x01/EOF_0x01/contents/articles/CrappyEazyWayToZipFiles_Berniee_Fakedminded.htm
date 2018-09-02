@@ -1,0 +1,164 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Berniee,Fakedminded/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+                                   ________________________________ 
+                                  |  Crappy Eazy Way to Zip files  |
+                                  |      [Tested on WinXP]         |
+                                  |     fakedminded/berniee        |
+                                  |        [EOF-Project]           |
+                                  |________________________________|              
+-Index
+
+	-Introduction
+	-Some stuff you need to know
+	-Script 
+	-Full Code
+	-Final Words
+
+
+-Introduction
+
+ This small tutorial will demonsetrate an easy way to zip files using microsoft built-in
+capabilities ,since this method based on namespace[..COM] I couldnt find better way at the 
+moment than scripting .
+'ALL THE FOLLOWING TESTED USING WINXP SP2'
+
+-Some stuff you need to know[you can skip them]
+
+   Namespace Extension:
+   An in-process COM object that implements IShellFolder, IPersistFolder, and IShellView, which 
+   are sometimes referred to as the namespace extension interfaces. A namespace extension is used
+   either to extend the shell's namespace or to create a separate namespace. Primary users are 
+   the Windows Explorer and common file dialog boxes. -- From MS-SDK
+  
+   Zip files :without installed softwares handles it,zip files in WinXP is treated as a folder
+   infact as a virtual folder so we need to deal with namespace thinggie to access it...
+
+-Script 
+
+  I am not that fond of scripting ,but there is no harm to use it from time to time,see the following
+script:
+
+'-------------------script
+see this vb script:
+Dim  oApp
+FileName = WScript.Arguments(0)
+ToBeZipped =WScript.Arguments(1)
+Set oApp = CreateObject(&quot;Shell.Application&quot;)
+oApp.NameSpace(FileName).CopyHere ToBeZipped
+Do Until oApp.NameSpace(FileName).items.Count = 1
+wScript.Sleep(100)
+Loop
+'-------------------end of script
+
+
+The script is simple and easy you can execute it by like this:
+zip.vbs &quot;[complete path of zip file]&quot; &quot;[Complete path of the source to be zipped file]&quot;
+Note :Dont forget the Quotes...
+
+But here you should have made previousily zip file, which you can create it as a normal
+file with this header of 22 bytes
+zip_header db 80, 75, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+
+
+-Full Code
+
+  Here I will demonstrate in asm code (masm32) how to drop the above vbscript and execute
+it to have current executable file zipped.
+
+;-----------------Start of code
+.586
+.model flat,stdcall
+option casemap:none
+
+include \masm32\include\kernel32.inc
+include \masm32\include\user32.inc
+include \masm32\include\windows.inc
+
+includelib \masm32\lib\kernel32.lib
+includelib \masm32\lib\user32.lib
+
+.data
+vbs db  'Dim  oApp',13,10
+    db  'FileName = WScript.Arguments(0)',13,10
+    db  'ToBeZipped =WScript.Arguments(1)',13,10
+    db  'Set oApp = CreateObject(&quot;Shell.Application&quot;)',13,10
+    db  'oApp.NameSpace(FileName).CopyHere ToBeZipped',13,10
+    db  'Do Until oApp.NameSpace(FileName).items.Count = 1',13,10
+    db  'wScript.Sleep(100)',13,10,'Loop',13,10,0
+
+zip_header db 80, 75, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+q_t db ' &quot;',0
+command db &quot;wscript zip.vbs&quot;,0
+vbs_file db &quot;zip.vbs&quot;,0
+zip_file db &quot;packed.zip&quot;,0
+slash db &quot;\&quot;,0
+
+.data?
+bwr dd ?
+buffer db 256 dup(?)
+buffer_ db 256 dup(?)
+
+.code
+start:
+
+invoke CreateFile,offset vbs_file,40000000h,0,0,2,0,0
+push eax
+invoke lstrlen,offset vbs
+mov edx,[esp]
+invoke WriteFile,edx,offset vbs,eax,offset bwr,0
+pop eax
+invoke CloseHandle,eax
+
+invoke CreateFile,offset zip_file,40000000h,0,0,2,0,0
+push eax
+invoke WriteFile,eax,offset zip_header,22,offset bwr,0
+pop eax
+invoke CloseHandle,eax
+
+
+invoke lstrcat,offset buffer,offset command      ;lots of lstrcat() :/
+invoke lstrcat,offset buffer,offset q_t
+invoke GetCurrentDirectory,256,offset buffer_
+invoke lstrcat,offset buffer_,offset slash
+invoke lstrcat,offset buffer_,offset zip_file
+invoke lstrcat,offset buffer,offset buffer_
+invoke lstrcat,offset buffer,offset q_t
+invoke lstrcat,offset buffer,offset q_t
+invoke RtlZeroMemory,offset buffer_,256
+invoke GetModuleFileName,0,offset buffer_,256
+invoke lstrcat,offset buffer,offset buffer_
+invoke lstrcat,offset buffer,offset q_t
+invoke WinExec,offset buffer,0
+invoke Sleep,1000				;time for the script to start
+invoke DeleteFile,offset vbs_file
+invoke MessageBox,0,offset zip_header,offset buffer,0
+
+
+
+exit:
+invoke ExitProcess,0
+end start
+
+;-----------------End of code
+
+the code will drop a zip.vbs and creates an empty zip file in current directory ,then
+execute wscript to run the zip.vbs with the needed arguments.
+
+-Final Words
+
+  Since dropping into disk is a very noisy procedure I would recommend the example 
+&quot;Adding a Script Engine to Assembly Applications&quot; in masm32 package by Ernest Murphy,I tried 
+it and it was cool specially if you put the script in your code as above and not as a separate 
+file as in the masm32 COM example.
+Also you may try your chance with COM to run namespace without script intrusion.
+All the above script have been scavanged &amp;modified from google resources,and the credit
+for the namespace object goes for a japanese site or other forum sites [see google]
+
+----------------------------------------------------------------------
+|| berniee/fakedminded[EOF-Project.net] || Oct.2006 || ass-koder.de.vu
+</pre></body></html>

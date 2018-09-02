@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: hook - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1.HIS\LOCALS~1\Temp\RSP66.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/hook.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Conference\Black Hat Europe 2004\Demo\Mechant Trojan\casper.cpp"
+"C:\Conference\Black Hat Europe 2004\Demo\Mechant Trojan\casper_inject.cpp"
+"C:\Conference\Black Hat Europe 2004\Demo\Mechant Trojan\casper_trojan.cpp"
+"C:\Conference\Black Hat Europe 2004\Demo\Mechant Trojan\casper_utils.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.HIS\LOCALS~1\Temp\RSP66.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.HIS\LOCALS~1\Temp\RSP67.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib wsock32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/hook.pdb" /machine:I386 /out:"Release/hook.exe" 
+".\Release\casper.obj"
+".\Release\casper_inject.obj"
+".\Release\casper_trojan.obj"
+".\Release\casper_utils.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1.HIS\LOCALS~1\Temp\RSP67.tmp"
+<h3>Output Window</h3>
+Compiling...
+casper.cpp
+casper_inject.cpp
+C:\Conference\Black Hat Europe 2004\Demo\Mechant Trojan\casper_inject.cpp(355) : warning C4101: 'lpError' : unreferenced local variable
+casper_trojan.cpp
+casper_utils.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+hook.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: BlindSpot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x1009 /fo"Release/BlindSpot.res" /d "NDEBUG" "C:\Documents and Settings\Ryan Nyquist\Desktop\BlindSpotv1.0\source\BlindSpot.rc"" 
+Creating temporary file "C:\DOCUME~1\RYANNY~1\LOCALS~1\Temp\RSP45.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/BlindSpot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Ryan Nyquist\Desktop\BlindSpotv1.0\source\BlindSpot.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\RYANNY~1\LOCALS~1\Temp\RSP45.tmp" 
+Creating temporary file "C:\DOCUME~1\RYANNY~1\LOCALS~1\Temp\RSP46.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/BlindSpot.pdb" /machine:I386 /out:"Release/BlindSpot.exe" 
+".\Release\BlindSpot.obj"
+".\Release\BlindSpot.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\RYANNY~1\LOCALS~1\Temp\RSP46.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+BlindSpot.c
+Linking...
+
+
+
+<h3>Results</h3>
+BlindSpot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

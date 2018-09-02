@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UpgradeLog Upgraded = "True" >
+    <Settings>
+        <Setting
+            Name = "LogFile"
+            Value = "Project1.log"
+        />
+        <Setting
+            Name = "GenerateInterfacesForClasses"
+            Value = "FALSE"
+        />
+        <Setting
+            Name = "ProjectName"
+            Value = "Project1"
+        />
+        <Setting
+            Name = "OutputName"
+            Value = "Project1.vbproj"
+        />
+        <Setting
+            Name = "OutputDir"
+            Value = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET"
+        />
+        <Setting
+            Name = "ProjectPath"
+            Value = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Project1.vbp"
+        />
+        <Setting
+            Name = "MigrateProjectTo"
+            Value = "0"
+        />
+    </Settings>
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Forms\fDynastyCrypt.frm"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\fDynastyCrypt.vb"
+        FileType = "Form"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Forms\Module2.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\Module2.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Forms\frmLogin.frm"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\frmLogin.vb"
+        FileType = "Form"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Forms\mLoginSys.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mLoginSys.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Forms\frmAbout.frm"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\frmAbout.vb"
+        FileType = "Form"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Classes\cFileDialog.cls"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\cFileDialog.vb"
+        FileType = "Class Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mRC4.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mRC4.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mResource.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mResource.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mAddSection.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mAddSection.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mRePE.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mRePE.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mCloneFileInfo.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mCloneFileInfo.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mINI.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mINI.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mAntiPADX.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mAntiPADX.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mFullClone.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mFullClone.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mStubDL.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mStubDL.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Modules\mIconChanger.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mIconChanger.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Module1.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\Module1.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\clsBlowfish.cls"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\clsBlowfish.vb"
+        FileType = "Class Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\mStripRelocations.bas"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\mStripRelocations.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Trans\Framez.ctl"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\Framez.vb"
+        FileType = "User Control"
+        Upgraded = "True"
+    >
+        <Section Name = "(Layout)" >
+            <Issue
+                Type = "Design"
+                Number = "2064"
+                ObjectName = "Framez"
+                ObjectType = "UserControl"
+                PME = "ToolboxBitmap"
+            >UserControl property Framez.ToolboxBitmap was not upgraded.</Issue>
+        </Section>
+    </File>
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Trans\UserControl1.ctl"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\UserControl1.vb"
+        FileType = "User Control"
+        Upgraded = "True"
+    >
+        <Section Name = "(Layout)" >
+            <Issue
+                Type = "Design"
+                Number = "2064"
+                ObjectName = "CkBx"
+                ObjectType = "UserControl"
+                PME = "ToolboxBitmap"
+            >UserControl property CkBx.ToolboxBitmap was not upgraded.</Issue>
+        </Section>
+    </File>
+    <File
+        OldPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\Project1.RES"
+        NewPath = "C:\Users\gv\Documents\My Received Files\DynastryCrypterSource\DynastryCrypterSource\Darow's Crypter 2.0\Client\DynastyCrypt.NET\ProjectResources.resX"
+        FileType = "Resource File"
+        Upgraded = "False"
+    />
+    <Issue
+        Type = "Global Error"
+        Number = "4002"
+    >Could not load referenced component: MSWINSCK.OCX (2.0.0) You need to install this component before you upgrade the project.It is recommended you install VB6.0, with all referenced components, and ensure the application compiles and runs before upgrading.</Issue>
+</UpgradeLog>
+

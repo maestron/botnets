@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Blow - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\75DE~1.MSE\LOCALS~1\Temp\RSP24E.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Blow.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\aa\BlowSXT\Blow\Blow.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\75DE~1.MSE\LOCALS~1\Temp\RSP24E.tmp" 
+Creating temporary file "D:\DOCUME~1\75DE~1.MSE\LOCALS~1\Temp\RSP24F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/config.pdb" /debug /machine:I386 /out:"../bin/config.exe" /pdbtype:sept 
+.\Debug\Blow.obj
+]
+Creating command line "link.exe @D:\DOCUME~1\75DE~1.MSE\LOCALS~1\Temp\RSP24F.tmp"
+<h3>Output Window</h3>
+Compiling...
+Blow.cpp
+C:\aa\BlowSXT\Blow\Blow.cpp(35) : warning C4101: 'blowpass' : unreferenced local variable
+C:\aa\BlowSXT\Blow\Blow.cpp(36) : warning C4101: 'content' : unreferenced local variable
+Linking...
+
+
+
+<h3>Results</h3>
+config.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,150 @@
+KOL&MCK Library Software License Agreement
+
+BEFORE PROCEEDING WITH THE INSTALLATION 
+AND/OR USE OF THIS SOFTWARE, CAREFULLY
+READ THE FOLLOWING TERMS AND CONDITIONS
+OF THIS LICENSE AGREEMENT AND LIMITED
+WARRANTY (The "Agreement").
+
+BY INSTALLING OR USING THIS SOFTWARE YOU
+INDICATE YOUR ACCEPTANCE OF THIS
+AGREEMENT. IF YOU DO NOT ACCEPT OR AGREE
+WITH THESE TERMS, YOU MAY NOT INSTALL OR
+USE THIS SOFTWARE!
+
+PREAMBLE
+
+The terms and conditions of the KOL&MCK
+Library Software License Agreement have 
+one major goal in mind; to foster a development 
+community based around the KOL (Key Objects
+Library) and MCK (Mirror Classes Kit for KOL)
+and associated source code.
+KOL&MCK Library does however reserve the
+right as the sole distributor of the library 
+source code. Hence although I encourage
+you to change and modify the library to 
+suit your needs, you may not distribute
+derivative works based on the library
+source code without express written 
+permission from KOL&MCK Library author. 
+Worthwhile changes and modifications to 
+the libraries may be submitted to KOL&MCK
+Library author for integration into a
+future release of the product.
+
+LICENSE
+
+This software, including documentation, 
+source code, object code and/or additional
+materials (the "Software") is owned by 
+KOL&MCK author.
+This Agreement does not provide you with 
+title or ownership of Product, but only a
+right of limited use as outlined in this 
+license agreement. KOL&MCK Library author
+hereby grant you a non-exclusive, 
+royalty free license to use the Software
+as set forth below:
+
+ . integrate the Software with your
+   Applications or DLLs, subject to the
+   redistribution terms below.
+ . modify or adapt the Software in whole
+   or in part for the development of 
+   Applications based on the Software.
+ . use portions of the KOL&MCK Library 
+   source code or KOL&MCK Library Demo
+   Programs in your own products and
+   libraries.
+
+REDISTRIBUTION RIGHTS
+
+You are granted a non-exclusive, 
+royalty-free right to reproduce and
+redistribute executable files created
+using the Software (the "Executable Code")
+in conjunction with software products that
+you develop and/or market (the 
+"Applications"). 
+
+RESTRICTIONS
+
+Without the expressed, written consent of
+KOL&MCK Library author, you may NOT:
+
+ . distribute modified versions of the 
+   Software, in whole or in part without
+   providing an information about it for
+   your customers (such information
+   must refer to any Copyright and legal
+   notes on portions of Software distributed,
+   version information on Software used
+   to redistribute, notes on changes
+   made, if any, and must include any
+   necessary information to provide a chance
+   for your customers to find and re-use
+   the original Software if they want to
+   do so).
+ . rent or lease the Software.
+ . sell any portion of the Software on 
+   its own, without integrating it into 
+   your Applications or DLLs as Executable 
+   Code.
+
+SELECTION AND USE
+
+You assume full responsibility for the
+selection of the Software to achieve your
+intended results and for the installation,
+use and results obtained from the Software.
+
+LIMITED WARRANTY
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT
+WARRANTY OF ANY KIND EITHER EXPRESSED OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+IMPLIED WARRANTIES MERCHANTIBILITY AND
+FITNESS FOR A PARTICULAR PURPOSE. THE 
+ENTIRE RISK AS TO THE QUALITY AND 
+PERFORMANCE OF THE PRODUCT IS WITH YOU. 
+SHOULD THE PRODUCT PROVE DEFECTIVE, YOU
+ASSUME THE COST OF ALL NECESSARY SERVICING
+OR ERROR CORRECTION.
+
+KOL&MCK LIBRARY AUTHOR DO NOT WARRANT THAT
+THE FUNCTIONS CONTAINED IN THE SOFTWARE 
+WILL MEET YOUR REQUIREMENTS OR THAT THE 
+OPERATION OF THE SOFTWARE WILL BE 
+UNINTERRUPTED OR ERROR FREE.
+
+No oral or written information given by 
+KOL&MCK Library shall create a warranty.
+
+LIMITATION OF REMEDIES AND LIABILITY.
+
+IN NO EVENT SHALL KOL&MCK LIBRARY AUTHOR, OR
+ANY OTHER PARTY WHO MAY HAVE DISTRIBUTED
+THE SOFTWARE AS PERMITTED ABOVE, BE LIABLE
+FOR DAMAGES, INCLUDING ANY GENERAL, 
+SPECIAL, INCIDENTAL, OR CONSEQUENTIAL 
+DAMAGES ARISING OUT OF THE USE OR 
+INABILITY TO USE THE SOFTWARE (INCLUDING
+BUT NOT LIMITED TO LOSS OF DATA OR DATA 
+BEING RENDERED INACCURATE OR LOSSES 
+SUSTAINED BY YOU OR THIRD PARTIES OR 
+FAILURE OF THE SOFTWARE TO OPERATE WITH 
+ANY OTHER PRODUCTS), EVEN IF SUCH HOLDER 
+OR OTHER PARTY HAS BEEN ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGES.
+
+If you have any questions regarding this 
+agreement, please contact KOL&MCK Library 
+author at his e-mail addresses: 
+
+  vk@kolmck.net
+  bonanzas@sibmail.ru
+
+KOL&MCK Library Web Site: 
+  http://kolmck.net
+  

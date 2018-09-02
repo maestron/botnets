@@ -1,0 +1,124 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: agobot3 - Win32 Debug No OpenSSL--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP952.tmp" with contents
+[
+/nologo /G6 /MDd /W3 /Gm /Gi /GX /ZI /Od /I "lib/stlport" /I "lib/pcre/win32" /I "lib/libpcap/include" /I "lib/xlibc/include" /D "_DEBUG" /D "DBGCONSOLE" /D "XLIBC_NO_OPENSSL" /D "AGOBOT_NO_OPENSSL" /D "WIN32" /D "_WINDOWS" /D "FORCE_UNICODE" /D "__CLEANUP_SEH" /FAs /Fa"agobot3___Win32_Debug_No_OpenSSL/" /FR"agobot3___Win32_Debug_No_OpenSSL/" /Fp"agobot3___Win32_Debug_No_OpenSSL/agobot3.pch" /YX /Fo"agobot3___Win32_Debug_No_OpenSSL/" /Fd"agobot3___Win32_Debug_No_OpenSSL/" /FD /GZ /c 
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\utility.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\baglescanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\dcom2scanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\dcomscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\doomscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\dwscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\httpscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\locscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\lsassscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\nbscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\optixscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\scanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\sqlscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\upnpscanner.cpp"
+"C:\irc2\download\boxocide_[11-20-04][PCAP][SYNSCAN]\boxocide [11-20-04]\wksscanner.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP952.tmp" 
+Creating temporary file "C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP953.tmp" with contents
+[
+winspool.lib comdlg32.lib oleaut32.lib uuid.lib gdi32.lib kernel32.lib user32.lib advapi32.lib shell32.lib ws2_32.lib netapi32.lib mpr.lib psapi.lib dnsapi.lib pcre.lib odbc32.lib odbccp32.lib ole32.lib wpcap.lib packet.lib iphlpapi.lib npptools.lib version.lib /nologo /subsystem:windows /incremental:yes /pdb:"agobot3___Win32_Debug_No_OpenSSL/agobot3_debug.pdb" /map:"agobot3___Win32_Debug_No_OpenSSL/agobot3_debug.map" /debug /machine:I386 /out:"bin/win32/agobot3_debug.exe" /pdbtype:sept /libpath:"lib/pcre/win32" /libpath:"lib/libpcap/lib" /ignore:4033 
+".\agobot3___Win32_Debug_No_OpenSSL\irc.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\telnet.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\bnc.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\bot.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\cmdline.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\cmdshell.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\commands.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\config.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\cplugin.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\crypter.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\cvar.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\installer.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\logic.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\mac.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\mainctrl.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\message.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\object.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\pcapbin.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\pcapclass.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\polymorph.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\sdcompat.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\sniffer.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\utilcmd.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\utility.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\baglescanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\dcom2scanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\dcomscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\doomscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\dwscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\httpscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\locscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\lsassscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\nbscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\optixscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\pwds.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\scanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\sqlscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\upnpscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\wksscanner.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\wormride.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\ddos.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\httpflood.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\phaticmp.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\phatsyn.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\synflood.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\targa3.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\udpflood.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\wonk.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\shellcode.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\redir_gre.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\redir_http.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\redir_https.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\redir_socks.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\redir_socks5.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\redir_tcp.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\redirect.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\ftplib.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\md5c.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\harvest_aol.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\harvest_cdkeys.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\harvest_emails.obj"
+".\agobot3___Win32_Debug_No_OpenSSL\harvest_registry.obj"
+".\asmstub.OBJ"
+".\lib\xlibc\lib\xlibc_release_console_nossl.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP953.tmp"
+<h3>Output Window</h3>
+Compiling...
+utility.cpp
+Skipping... (no relevant changes detected)
+baglescanner.cpp
+dcom2scanner.cpp
+dcomscanner.cpp
+doomscanner.cpp
+dwscanner.cpp
+httpscanner.cpp
+locscanner.cpp
+lsassscanner.cpp
+nbscanner.cpp
+optixscanner.cpp
+scanner.cpp
+sqlscanner.cpp
+upnpscanner.cpp
+wksscanner.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+agobot3_debug.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

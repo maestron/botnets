@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeybHookDll", "KeybHookDll.vcproj", "{5893702C-1769-4717-BFAD-09F6F1B1CF67}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeybHookPrg", "KeybHookPrg\KeybHookPrg.vcproj", "{D230BAB0-ED6F-4FA5-BBBF-9EEE413E0B94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5893702C-1769-4717-BFAD-09F6F1B1CF67}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5893702C-1769-4717-BFAD-09F6F1B1CF67}.Debug|Win32.Build.0 = Debug|Win32
+		{5893702C-1769-4717-BFAD-09F6F1B1CF67}.Release|Win32.ActiveCfg = Release|Win32
+		{5893702C-1769-4717-BFAD-09F6F1B1CF67}.Release|Win32.Build.0 = Release|Win32
+		{D230BAB0-ED6F-4FA5-BBBF-9EEE413E0B94}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D230BAB0-ED6F-4FA5-BBBF-9EEE413E0B94}.Debug|Win32.Build.0 = Debug|Win32
+		{D230BAB0-ED6F-4FA5-BBBF-9EEE413E0B94}.Release|Win32.ActiveCfg = Release|Win32
+		{D230BAB0-ED6F-4FA5-BBBF-9EEE413E0B94}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

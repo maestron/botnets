@@ -1,0 +1,144 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: SkyOut/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/SkyOut/FlvRip"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+#!/bin/sh
+#
+# This program is still considered Beta.
+# It has been tested on OpenBSD 4.0 with the Kornshell!
+#
+# With this tool you can download a file either from YouTube
+# or GoogleVideo, by giving the URL the file will be automatically
+# downloaded and converted into Mpeg video format (using ffmpeg).
+#
+# Example: http://youtube.com/watch?v=XXX myfilename
+#
+# Author: SkyOut
+# Date: December 2006
+#
+# Comment: This tool is for all the ones using a system, that has
+# no Flash installed, may it be because the user does not like
+# binary (and the many Flash bugs) or just because it is not
+# supported on the system.
+#
+
+#
+# Parameters, that are used by the program.
+# Filename is optional (default: &quot;youtube.mpg&quot; or &quot;googlevideo.mpg&quot;)
+#
+
+site=$1
+url=$2
+filename=$3
+
+#
+# Download a file from the YouTube website!
+#
+
+function youtube {
+	wget $url -O youtube.htm
+	line=`less youtube.htm | grep 'player2.swf?video_id=' | awk '{print $5}'`
+	rm youtube.htm
+	name=`echo $line | cut -c 25-`
+	numofchar=`echo $name | wc -c | sed 's/ //g'`
+	numofchar=`expr $numofchar - 3`
+	name=`echo $name | cut -c 1-$numofchar`
+	name=http://youtube.com/get_video?$name
+	wget $name -O youtube.flv
+	ffmpeg -i youtube.flv -ab 56 -ar 22050 -b 500 -s 320x240 youtube.mpg
+	if [ &quot;$filename&quot; != &quot;&quot; ]
+	then
+		filename=$filename.mpg
+		mv youtube.mpg $filename
+	fi
+	rm youtube.flv
+	exit 0
+}
+
+#
+# Download a file from the GoogleVideo website!
+#
+
+function googlevideo {
+	wget $url -O googlevideo.htm
+	line=`less googlevideo.htm | grep 'googleplayer.swf' | awk '{print $7}'`
+	rm googlevideo.htm
+	name=`echo $line | cut -c 45-`
+	numofchar=`echo $name | wc -c | sed 's/ //g'`
+	numofchar=`expr $numofchar - 161`
+	name=`echo $name | cut -c 1-$numofchar`
+	name=`echo $name | sed 's/%3A/:/g'`
+	name=`echo $name | sed 's/%2F/\//g'`
+	name=`echo $name | sed 's/%3F/?/g'`
+	name=`echo $name | sed 's/%3D/=/g'`
+	name=`echo $name | sed 's/%26/\&amp;/g'`
+	wget $name -O googlevideo.flv
+	ffmpeg -i googlevideo.flv -ab 56 -ar 22050 -b 500 -s 320x240 googlevideo.mpg
+	if [ &quot;$filename&quot; != &quot;&quot; ]
+	then
+		filename=$filename.mpg
+		mv googlevideo.mpg $filename
+	fi
+	rm googlevideo.flv
+	exit 0
+}
+
+#
+# Display the usage dialogue!
+#
+
+function usage {
+	echo &quot;&quot;
+	echo &quot;#	Usage: flvrip.sh -yt|gv|h [filename]&quot;
+	echo &quot;#&quot;
+	echo &quot;#	-yt	Rip a YouTube file&quot;
+	echo &quot;#		Example: http://youtube.com/watch?v=XXX&quot;
+	echo &quot;#	-gv	Rip a GoogleVideo file&quot;
+	echo &quot;#		Example: http://video.google.com/videoplay?docid=XXX&quot;
+	echo &quot;#	-h	Help (this one)&quot;
+	echo &quot;#&quot;
+	echo &quot;#	If you don't set a filename default names will be chosen&quot;
+	echo &quot;#	Important: For the URL use the syntax as shown above!&quot;
+	echo &quot;&quot;
+	exit 0
+}
+
+#
+# Main code, check for the first argument...
+#
+
+case &quot;$site&quot; in
+	-yt)	if [ &quot;$url&quot; = &quot;&quot; ]
+		then
+			usage
+			exit 0
+		fi
+		check=`echo $url | cut -c 1-24`
+		if [ &quot;$check&quot; != &quot;http://youtube.com/watch&quot; ]
+		then
+			usage
+			exit 0
+		fi
+		youtube
+		;;
+	-gv)	if [ &quot;$url&quot; = &quot;&quot; ]
+		then
+			usage
+			exit 0
+		fi
+		check=`echo $url | cut -c 1-33`
+		if [ &quot;$check&quot; != &quot;http://video.google.com/videoplay&quot; ]
+		then
+			usage
+			exit 0
+		fi
+		googlevideo
+		;;
+	-h)	usage
+		;;
+	*)	usage
+		;;
+esac
+</pre></body></html>

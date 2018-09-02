@@ -1,0 +1,176 @@
+# depslib dependency file v1.0
+1240885678 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\main.c
+	"global.h"
+
+1244360597 e:\documents and settings\carve\desktop\carve\tiny_bot_core\global.h
+	<windows.h>
+	<winsock2.h>
+	<tchar.h>
+	<stdio.h>
+	<shlwapi.h>
+	"apis.h"
+
+1244355675 e:\documents and settings\carve\desktop\carve\tiny_bot_core\cfg.h
+
+1244360349 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\irc.c
+	"global.h"
+	"cfg.h"
+
+1244360244 e:\documents and settings\carve\desktop\carve\tiny_bot_core\apis.h
+
+1244166855 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\global.c
+	"global.h"
+	<wininet.h>
+
+1241137784 e:\documents and settings\carve\desktop\carve\tiny_bot_core\util.h
+
+1244356570 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\util.c
+	"global.h"
+	<stdlib.h>
+
+1244360166 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\cryptn.c
+	<stdio.h>
+	<string.h>
+	"global.h"
+
+1243907834 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\apis.c
+	"global.h"
+
+1244358713 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\p2p.c
+	"global.h"
+
+1244360434 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\torrent.c
+	"global.h"
+
+1244360616 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\usb+.c
+	"global.h"
+
+1244357039 source:e:\documents and settings\carve\desktop\carve\tiny_bot_core\wget.c
+	"global.h"
+
+1246476707 source:e:\documents and settings\carve\desktop\carve\nameless bot\apis.c
+	"global.h"
+	"strings_apis.h"
+
+1246488124 e:\documents and settings\carve\desktop\carve\nameless bot\global.h
+	<windows.h>
+	<winsock2.h>
+	<tchar.h>
+	<stdio.h>
+	<shlwapi.h>
+	"apis.h"
+
+1246487930 e:\documents and settings\carve\desktop\carve\nameless bot\apis.h
+
+1246499841 source:e:\documents and settings\carve\desktop\carve\nameless bot\cryptn.c
+	<stdio.h>
+	<string.h>
+	"global.h"
+	"strings_other.h"
+
+1246499941 source:e:\documents and settings\carve\desktop\carve\nameless bot\global.c
+	"global.h"
+	<wininet.h>
+
+1246499662 source:e:\documents and settings\carve\desktop\carve\nameless bot\hider.c
+	"global.h"
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+
+1246499572 source:e:\documents and settings\carve\desktop\carve\nameless bot\irc.c
+	"global.h"
+	"strings_cfg.h"
+
+1245701876 e:\documents and settings\carve\desktop\carve\nameless bot\cfg.h
+
+1246499941 source:e:\documents and settings\carve\desktop\carve\nameless bot\main.c
+	"global.h"
+
+1245698091 source:e:\documents and settings\carve\desktop\carve\nameless bot\supersyn.c
+	"global.h"
+
+1245357197 source:e:\documents and settings\carve\desktop\carve\nameless bot\torrent.c
+	"global.h"
+
+1246499714 source:e:\documents and settings\carve\desktop\carve\nameless bot\usb+.c
+	"global.h"
+
+1246483774 source:e:\documents and settings\carve\desktop\carve\nameless bot\util.c
+	"global.h"
+	<stdlib.h>
+
+1246499613 source:e:\documents and settings\carve\desktop\carve\nameless bot\wget.c
+	"global.h"
+
+1246500446 e:\documents and settings\carve\desktop\carve\nameless bot\strings_apis.h
+
+1246500453 e:\documents and settings\carve\desktop\carve\nameless bot\strings_cfg.h
+
+1246500462 e:\documents and settings\carve\desktop\carve\nameless bot\strings_other.h
+
+1246499766 source:e:\documents and settings\carve\desktop\carve\nameless bot\startup.c
+	"global.h"
+
+1246476707 source:c:\users\carve\desktop\carve\nameless bot\apis.c
+	"global.h"
+	"strings_apis.h"
+
+1250792922 c:\users\carve\desktop\carve\nameless bot\global.h
+	<windows.h>
+	<winsock2.h>
+	<tchar.h>
+	<stdio.h>
+	<shlwapi.h>
+	"apis.h"
+
+1246487930 c:\users\carve\desktop\carve\nameless bot\apis.h
+
+1248286642 c:\users\carve\desktop\carve\nameless bot\strings_apis.h
+
+1246499841 source:c:\users\carve\desktop\carve\nameless bot\cryptn.c
+	<stdio.h>
+	<string.h>
+	"global.h"
+	"strings_other.h"
+
+1248286657 c:\users\carve\desktop\carve\nameless bot\strings_other.h
+
+1250790805 source:c:\users\carve\desktop\carve\nameless bot\global.c
+	"global.h"
+	<wininet.h>
+
+1246499662 source:c:\users\carve\desktop\carve\nameless bot\hider.c
+	"global.h"
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+
+1250791518 source:c:\users\carve\desktop\carve\nameless bot\irc.c
+	"global.h"
+	"strings_cfg.h"
+
+1250537767 c:\users\carve\desktop\carve\nameless bot\strings_cfg.h
+
+1250791126 source:c:\users\carve\desktop\carve\nameless bot\main.c
+	"global.h"
+
+1250792967 source:c:\users\carve\desktop\carve\nameless bot\startup.c
+	"global.h"
+
+1250791117 source:c:\users\carve\desktop\carve\nameless bot\supersyn.c
+	"global.h"
+
+1250791809 source:c:\users\carve\desktop\carve\nameless bot\usb+.c
+	"global.h"
+
+1246483774 source:c:\users\carve\desktop\carve\nameless bot\util.c
+	"global.h"
+	<stdlib.h>
+
+1246499613 source:c:\users\carve\desktop\carve\nameless bot\wget.c
+	"global.h"
+
+1249420309 source:c:\users\carve\desktop\carve\nameless bot\tor.c
+	"global.h"
+

@@ -1,0 +1,39 @@
+Dbot v3.0 (price: 100 usd):
+- stable irc bot
+- multicommand topic parsing
+- multicommand chat parsing
+- irc connection timeout
+- unlimited number of irc servers
+- xor encoded strings (antivirus anti-heuristic)
+- md5 protected important commands (download, remove) - if the command is
+  long enough, NOONE can steal your bots
+- copy to 3 different possible locations, but not windows or system32 dir
+- registry startup
+- win xp sp2 firewall bypass
+- anti-sandbox
+- multithreaded ftpd
+- cftp supported
+- ability to change cftp parameters while bot is running
+- scanner:
+	* distinguese wan and lan bots; eg. lan bots using cftp, wan using ftp
+	* ability to use ftp or cftp
+	* multithreaded scanning
+	* every single thread checks for all ports (less threads needed for
+	  more exploits)
+	* random or sequential scan
+	* ability to define range for lan bots to scan
+- anti-botkiller protection with nulling all expired strings, coping to
+  alternative locations instead of windows or system32 dir
+- tcpip.sys patcher (ver 1&2)
+- botkiller
+
+VNC Password Scanner + Universal VNC rooter (price: 100 usd):
+- finds authbypass, no passworded and passworded vncs
+- user defined wordlist
+- every RFB3.8 server is checked for authbypass exploit first, if it fails
+  scanner switch to password checking
+- 99,9% accurate scanner, at the time of scanning ALL vncs work!
+- alternative VNC rooting via task manager (universal for all languages)
+  that works on win2000 and win xp
+- reporting to irc: vnc version, desktop name, ip and password
+- myvnc password reporting

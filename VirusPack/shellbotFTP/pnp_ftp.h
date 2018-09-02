@@ -1,0 +1,1 @@
+bool pnp_ftp(TargetInfo exinfo);

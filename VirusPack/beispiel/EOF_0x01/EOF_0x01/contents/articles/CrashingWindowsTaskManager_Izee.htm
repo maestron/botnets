@@ -1,0 +1,149 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Izee/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+
+ /---------------------------------------------\
+ ;  Crashing Windows Task Manager by izee/EOF  ; 
+ ; 100s thxes to DiA for tests under WinXP SP2!;
+ \---------------------------------------------/
+
+ /--------------\
+ ;  Disclaimer  ;
+ \--------------/
+ 
+Author of this text isn't responsible in any way for the reader activities
+when the reader will read whole article, and what the reader will do after 
+it. Only  the reader is responsible for any next his step, not the author.
+
+ /--------------\
+ ;   Starting   ;
+ \--------------/
+
+We can crash Windows Task Manager (WTM) by setting incorrect preferences to
+the following registry key:
+HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\TaskManager\Preferences
+
+When you calling WTM, it's *reads preferences of WTM from that registry key.
+When you quiting WTM, it's *saves preferences of WTM  in  that registry key.
+
+Below the reg file with the buggy WTM preferences:
+
+8&lt;----------------------------------------------------------------cut here----
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\TaskManager]
+&quot;Preferences&quot;=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+8&lt;----------------------------------------------------------------end cut----
+
+If  you want to  experiment with it, then import upper  regfile into registry.
+After  you have imported regfile into registry, try to call WTM, probably you
+will  see  an  exception.  Do   not  forget  also  one  little detail  before
+experementing - backup our key ;). Otherwise you will can loose WTM.
+
+From the begining of this article you may think what the hell is these nulls
+means?  these nulls in our regfile means that we are going to disable almost
+all  columns,  change  view and so on... but as we do not  know where in our
+registry key hided &quot;ImageName&quot; column  (i think only  MS guys know it :)) we
+just  put  all  nulls  (or whatever you want) to  remove all columns, change
+view.. etc.
+
+Yep, we have removed &quot;ImageName&quot; column from WTM (which is hided somewhere in
+these nulls) trough our registry key, but WTM  is  crashing while starting...
+why? the main problem of this bug is that WTM works with LoadString(W) API
+incorrectly. Let's see at this API..
+
+---From Win32 SDK--------------------------------------------------------
+*************************************************************************
+The LoadString function loads a string resource from the executable file 
+associated with a specified module, copies the string into a buffer, and 
+appends a terminating null character. 
+
+int LoadString(
+
+    HINSTANCE hInstance, // handle of module containing string resource 
+    UINT uID,            // resource identifier
+    LPTSTR lpBuffer,     // address of buffer for resource 
+    int nBufferMax       // size of buffer 
+   );	
+ 
+
+*Parameters
+
+*hInstance
+
+Identifies an instance of the module whose executable file contains the 
+string resource. 
+
+*uID
+
+Specifies the integer identifier of the string to be loaded.
+
+*lpBuffer
+
+Points to the buffer to receive the string. 
+
+*nBufferMax
+
+Specifies the size of the buffer in bytes (ANSI version) or characters
+(Unicode version). The string is truncated and null terminated if it is
+longer than the number of characters specified.
+*************************************************************************
+---From Win32 SDK--------------------------------------------------------
+
+Actually it's crashes at the uID, but that's isn't important, we can say
+it's just crashes at LoadString(W) API.
+
+Well, the answer why it's crashing is simple, LoadString API cannot find
+the column which we removed trough our registry key, becouse WTM haven't
+prevented it from removing it from registry key, but in WTM itself it is.
+
+ /--------------\
+ ;  Before end  ;
+ \--------------/
+
+Under WinXP, SP1, and SP2 (thx DiA!), WTMs crashes successfully!
+Under WinVista - Unknown X-D
+
+This article is linked as WTM bug, but it's also can be used to avoid WTM.
+
+In any way, we have a bug in Windows Task Manager ;)
+I hope you like it, dear reader.
+
+ 
+ /------------------------\
+ ;izee[EOF-Project.net]   ;
+ ;izee[at]eof-project.net ;
+ ;Finished 02.11.2006     ;
+ ;izee.eof-project.net    ;
+ ;Sorry for my english :D ;
+ \------------------------/
+</pre></body></html>

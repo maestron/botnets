@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdbot04b - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD97A.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/sdbot04b.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\sdbot04b\sdbot04b.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD97A.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD97B.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/sdbot04b.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\sdbot04b\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD97B.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD97C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib wsock32.lib wininet.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/sdbot04b.pdb" /machine:I386 /out:"sdbot04b.exe" /align:4096 
+".\Release\sdbot04b.obj"
+".\Release\StdAfx.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD97C.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+sdbot04b.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\sdbot04b\sdbot04b.cpp(1602) : fatal error C1010: unexpected end of file while looking for precompiled header directive
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+sdbot04b.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,1 @@
+// #define NO_SNIFFER      // disables Sniffer

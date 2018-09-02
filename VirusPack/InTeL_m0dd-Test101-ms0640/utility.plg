@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: utility - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Build : warning : failed to (or don't know how to) build 'C:\Documents and Settings\Rob\Local Settings\Temp\Rar$DI24.390\utility.cpp'
+
+Creating temporary file "C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP11D.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/utility.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Rob\Local Settings\Temp\Rar$DI24.390\utility.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP11D.tmp" 
+Creating temporary file "C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP11E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/utility.pdb" /debug /machine:I386 /out:"Debug/utility.exe" /pdbtype:sept 
+".\Debug\utility.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\r00t\LOCALS~1\Temp\RSP11E.tmp"
+<h3>Output Window</h3>
+Compiling...
+utility.cpp
+fatal error C1083: Cannot open source file: 'C:\Documents and Settings\Rob\Local Settings\Temp\Rar$DI24.390\utility.cpp': No such file or directory
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+utility.exe - 1 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

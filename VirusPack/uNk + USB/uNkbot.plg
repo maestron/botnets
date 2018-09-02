@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: uNkbot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo".\Release\Temp/Icon.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\Trivium\Desktop\ago\uNk + USB\Icon.rc"" 
+Creating temporary file "C:\Users\Trivium\AppData\Local\Temp\RSPD68F.tmp" with contents
+[
+/nologo /MD /W2 /GX /O1 /I "lib/openssl/win32/include" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "NDEBUG" /D "_AFXDLL" /FR".\Release\Temp/" /Fp".\Release\Temp/uNkbot.pch" /YX /Fo".\Release\Temp/" /Fd".\Release\Temp/" /FD /c 
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Modules\ddos.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Modules\download.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Modules\pstore.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Modules\supersyn.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Modules\udp.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Modules\visit.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Modules\ZipIt.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Spreaders\msn.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\Spreaders\usb.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\commands.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\irc.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\loaddlls.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\protocol.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\threads.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\uNkbot.cpp"
+"C:\Users\Trivium\Desktop\ago\uNk + USB\Source\utility.cpp"
+]
+Creating command line "cl.exe @C:\Users\Trivium\AppData\Local\Temp\RSPD68F.tmp" 
+Creating temporary file "C:\Users\Trivium\AppData\Local\Temp\RSPD690.tmp" with contents
+[
+/nologo /subsystem:console /incremental:no /pdb:"Release/uNkbot.pdb" /machine:I386 /out:"Release/uNkbot.exe" /libpath:"lib/openssl/win32/lib" 
+".\Release\Temp\ddos.obj"
+".\Release\Temp\download.obj"
+".\Release\Temp\pstore.obj"
+".\Release\Temp\supersyn.obj"
+".\Release\Temp\udp.obj"
+".\Release\Temp\visit.obj"
+".\Release\Temp\ZipIt.obj"
+".\Release\Temp\msn.obj"
+".\Release\Temp\usb.obj"
+".\Release\Temp\commands.obj"
+".\Release\Temp\irc.obj"
+".\Release\Temp\loaddlls.obj"
+".\Release\Temp\protocol.obj"
+".\Release\Temp\threads.obj"
+".\Release\Temp\uNkbot.obj"
+".\Release\Temp\utility.obj"
+".\Release\Temp\Icon.res"
+]
+Creating command line "link.exe @C:\Users\Trivium\AppData\Local\Temp\RSPD690.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+ddos.cpp
+download.cpp
+pstore.cpp
+supersyn.cpp
+udp.cpp
+visit.cpp
+ZipIt.cpp
+msn.cpp
+usb.cpp
+commands.cpp
+irc.cpp
+loaddlls.cpp
+protocol.cpp
+threads.cpp
+uNkbot.cpp
+utility.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+uNkbot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

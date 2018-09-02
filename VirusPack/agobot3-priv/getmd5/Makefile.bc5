@@ -1,0 +1,50 @@
+BORLAND	= D:\Programme\Borland\bcc55
+CC		= bcc32
+LINK	= ilink32
+MAKE	= make
+DEFINES	= -DNDEBUG -DWIN32 -D_WINDOWS -D_MBCS -DBCC32
+FNAME	= agobot3
+FPATH	= bin/win32
+ZTHREAD	= lib/ZThread/win32
+LIBS	= import32.lib cw32i.lib cw32mt.lib cw32mti.lib msvcrt.lib msvcprt.lib ZThread.lib kernel32.lib shell32.lib user32.lib advapi32.lib ws2_32.lib netapi32.lib mpr.lib oldnames.lib
+CFLAGS	= -I$(ZTHREAD)\include $(DEFINES) -I$(BORLAND)\include -VM -w-8002 -w-8026 -w-8057 -w-8012 -w-8004	-O1 -X- -a1 -tW -tWM -q -laa -lTpe -M
+LDFLAGS	= /Tpe -L$(ZTHREAD)\lib -L$(BORLAND)\lib\PSDK
+
+OBJS = cmdline.obj mainctrl.obj crypter.obj cstring.obj consdbg.obj utility.obj random.obj mac.obj bot.obj commands.obj cvar.obj installer.obj scanner.obj nbscanner.obj dcomscanner.obj shellcode.obj irc.obj locscanner.obj ddos.obj synflood.obj
+MD5OBJS = md5/md5c.o
+
+all: $(OBJS) others link fin
+
+cleanbin: clean $(OBJS) others link fin
+
+others:
+	cd rsa
+	$(MAKE) -fMakefile.bc5
+	cd ..
+	cd getmd5
+	$(MAKE) -fMakefile.bc5
+	cd ..
+	cd crypt
+	$(MAKE) -fMakefile.bc5
+	cd ..
+
+link:
+	$(LINK) $(OBJS) $(LDFLAGS) $(LIBS)
+
+clean:
+	@del *.obj
+	@del md5\*.obj
+	@del getmd5\*.obj
+	@del crypt\*.obj
+	@del bin\win32\*.exe
+
+fin:
+	@mkdir -p bin
+	@mkdir -p $(FPATH)
+	@cp $(FNAME) $(FPATH)
+
+.cpp.obj:
+    $(CC) -c $(CFLAGS) $<
+
+.c.obj:
+    $(CC) -c $(CFLAGS) $<

@@ -1,0 +1,96 @@
+BUILD: Examining s:\develo~1\socks5~1\bot_sys directory for files to compile.
+skipping post pass 0 command
+Compiling and Linking s:\develo~1\socks5~1\bot_sys *************
+'nmake.exe /nologo BUILDMSG=Stop. -i BUILD_PASS=PASS2 LINKONLY=1 NOPASS0=1 MAKEDIR_RELATIVE_TO_BASEDIR='
+s:\develo~1\socks5~1\bot_sys: TARGETPATH is bin
+BUILDMSG: _NT_TARGET_VERSION SET TO WIN2K
+ cl.exe @s:\develo~1\socks5~1\bot_sys\objfre_w2k_x86\i386\cl.rsp
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.278 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+cl /Fo"s:\develo~1\socks5~1\bot_sys\objfre_w2k_x86\i386/"
+ /FC
+ /Ii386
+ /I.
+ /Is:\develo~1\socks5~1\bot_sys\objfre_w2k_x86\i386
+ /IS:\WINDDK\6001.18000\inc\api
+ /IS:\WINDDK\6001.18000\inc\api
+ /IS:\WINDDK\6001.18000\inc\ddk
+ /IS:\WINDDK\6001.18000\inc\ddk
+ /IS:\WINDDK\6001.18000\inc\crt
+ /D_X86_=1
+ /Di386=1
+ /DSTD_CALL
+ /DCONDITION_HANDLING=1
+ /DNT_INST=0
+ /DWIN32=100
+ /D_NT1X_=100
+ /DWINNT=1
+ /D_WIN32_WINNT=0x0500
+ /DWINVER=0x0500
+ /D_WIN32_IE=0x0501
+ /DWIN32_LEAN_AND_MEAN=1
+ /DDEVL=1
+ /D__BUILDMACHINE__=WinDDK
+ /DFPO=0
+ /DNDEBUG
+ /D_DLL=1
+ /DNDEBUG
+ -DNDIS_MINIPORT_DRIVER
+ -DNDIS_WDM=1
+ /DNTDDI_VERSION=0x05000400
+ /c
+ /Zc:wchar_t-
+ /Zl
+ /Zp8
+ /Gy
+ /Gm-
+ -cbstring
+ /W3
+ /WX
+ /Gz
+ /hotpatch
+ /EHs-c-
+ /GR-
+ /GF
+ /GS
+ /Z7
+ /Oxs
+ /Oy-
+ /Z7
+ /DKMDF_MAJOR_VERSION=01
+ /DKMDF_MINOR_VERSION=007
+ /FIS:\WINDDK\6001.18000\inc\api\warning.h
+ .\bot_entry.c 
+bot_entry.c
+ link.exe /out:bin\i386\bot_rootkit.sys /machine:ix86 @s:\develo~1\socks5~1\bot_sys\objfre_w2k_x86\i386\lnk.rsp
+Microsoft (R) Incremental Linker Version 8.00.50727.278
+Copyright (C) Microsoft Corporation.  All rights reserved.
+/MERGE:_PAGE=PAGE 
+/MERGE:_TEXT=.text 
+/SECTION:INIT,d 
+/OPT:REF 
+/OPT:ICF 
+/IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221 
+/INCREMENTAL:NO 
+/release 
+/NODEFAULTLIB 
+/WX 
+/debug 
+/debugtype:cv,fixup,pdata 
+/version:6.0 
+/osversion:6.0 
+/functionpadmin:5 
+/pdbcompress 
+/STACK:0x40000,0x1000 
+/driver 
+/base:0x10000 
+/align:0x80 /stub:s:\winddk\6001.18000\lib\w2k\stub512.com 
+/subsystem:native,5.00 
+/entry:GsDriverEntry@8 
+/out:bin\i386\bot_rootkit.sys 
+s:\develo~1\socks5~1\bot_sys\objfre_w2k_x86\i386\bot_entry.obj 
+s:\winddk\6001.18000\lib\w2k\i386\BufferOverflowK.lib 
+s:\winddk\6001.18000\lib\w2k\i386\ntoskrnl.lib 
+s:\winddk\6001.18000\lib\w2k\i386\hal.lib 
+s:\winddk\6001.18000\lib\w2k\i386\wmilib.lib 
+s:\winddk\6001.18000\lib\w2k\i386\sehupd.lib 

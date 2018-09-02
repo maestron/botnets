@@ -1,0 +1,229 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\RIP^DA~1\LOCALS~1\Temp\RSP99.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "NO_AVFW_KILL" /D "NO_SECSYSTEM" /D "NO_REGISTRY" /D "NO_EHANDLER" /D "NO_CRYPT" /D "DEBUG_LOGGING" /FR"Debug/" /Fp"Debug/rBot.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\aliaslog.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\autostart.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\beagle.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\capture.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\cdkeys.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\crc32.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\crypt.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\dameware.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\dcc.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\dcom.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\dcom2.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\ddos.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\download.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\driveinfo.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\ehandler.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\findfile.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\findpass.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\fphost.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\httpd.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\icmpflood.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\ident.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\irc_send.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\keylogger.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\kuang2.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\loaddlls.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\lsass.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\misc.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\mssql.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\mydoom.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\net.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\netbios.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\netdevil.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\netutils.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\optix.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\pingudp.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\processes.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\psniff.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\rBot.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\redirect.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\remotecmd.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\rlogind.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\rndnick.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\scan.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\secure.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\session.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\shellcode.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\socks4.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\sub7.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\synflood.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\sysinfo.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\tcpflood.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\tftpd.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\threads.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\upnp.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\visit.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\webdav.cpp"
+"C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\wildcard.cpp"
+]
+Creating command line "cl.exe @"C:\DOCUME~1\RIP^DA~1\LOCALS~1\Temp\RSP99.tmp"" 
+Creating temporary file "C:\DOCUME~1\RIP^DA~1\LOCALS~1\Temp\RSP9A.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/rBot.map" /debug /machine:I386 /out:"Debug/rBot.exe" 
+".\Debug\advscan.obj"
+".\Debug\aliaslog.obj"
+".\Debug\autostart.obj"
+".\Debug\beagle.obj"
+".\Debug\capture.obj"
+".\Debug\cdkeys.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\dameware.obj"
+".\Debug\dcc.obj"
+".\Debug\dcom.obj"
+".\Debug\dcom2.obj"
+".\Debug\ddos.obj"
+".\Debug\download.obj"
+".\Debug\driveinfo.obj"
+".\Debug\ehandler.obj"
+".\Debug\findfile.obj"
+".\Debug\findpass.obj"
+".\Debug\fphost.obj"
+".\Debug\httpd.obj"
+".\Debug\icmpflood.obj"
+".\Debug\ident.obj"
+".\Debug\irc_send.obj"
+".\Debug\keylogger.obj"
+".\Debug\kuang2.obj"
+".\Debug\loaddlls.obj"
+".\Debug\lsass.obj"
+".\Debug\misc.obj"
+".\Debug\mssql.obj"
+".\Debug\mydoom.obj"
+".\Debug\net.obj"
+".\Debug\netbios.obj"
+".\Debug\netdevil.obj"
+".\Debug\netutils.obj"
+".\Debug\optix.obj"
+".\Debug\pingudp.obj"
+".\Debug\processes.obj"
+".\Debug\psniff.obj"
+".\Debug\rBot.obj"
+".\Debug\redirect.obj"
+".\Debug\remotecmd.obj"
+".\Debug\rlogind.obj"
+".\Debug\rndnick.obj"
+".\Debug\scan.obj"
+".\Debug\secure.obj"
+".\Debug\session.obj"
+".\Debug\shellcode.obj"
+".\Debug\socks4.obj"
+".\Debug\sub7.obj"
+".\Debug\synflood.obj"
+".\Debug\sysinfo.obj"
+".\Debug\tcpflood.obj"
+".\Debug\tftpd.obj"
+".\Debug\threads.obj"
+".\Debug\upnp.obj"
+".\Debug\visit.obj"
+".\Debug\webdav.obj"
+".\Debug\wildcard.obj"
+]
+Creating command line "link.exe @"C:\DOCUME~1\RIP^DA~1\LOCALS~1\Temp\RSP9A.tmp""
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(121) : error C2146: syntax error : missing ';' before identifier 'tftpd'
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(121) : error C2065: 'tftpd' : undeclared identifier
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(122) : error C2228: left of '.port' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(123) : error C2228: left of '.threads' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(124) : error C2228: left of '.filename' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(124) : error C2228: left of '.filename' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(125) : error C2228: left of '.requestname' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(125) : error C2228: left of '.requestname' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(126) : error C2228: left of '.sock' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(127) : error C2228: left of '.notice' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(129) : error C2228: left of '.chan' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(129) : error C2228: left of '.chan' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(130) : error C2228: left of '.silent' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(132) : error C2228: left of '.chan' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(132) : error C2228: left of '.chan' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(133) : error C2228: left of '.silent' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(136) : error C2228: left of '.sock' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(136) : error C2228: left of '.port' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(136) : error C2228: left of '.filename' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(136) : error C2228: left of '.requestname' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(137) : error C2228: left of '.threadnum' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(138) : error C2228: left of '.threadnum' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(138) : error C2228: left of '.tHandle' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(138) : error C2065: 'TftpdThread' : undeclared identifier
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(139) : error C2228: left of '.gotinfo' must have class/struct/union type
+C:\Documents and Settings\Rip^Daddy\My Documents\shit\specfx\specfx\specfx\advscan.cpp(139) : fatal error C1903: unable to recover from previous error(s); stopping compilation
+aliaslog.cpp
+autostart.cpp
+beagle.cpp
+capture.cpp
+cdkeys.cpp
+crc32.cpp
+crypt.cpp
+dameware.cpp
+dcc.cpp
+dcom.cpp
+dcom2.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+irc_send.cpp
+keylogger.cpp
+kuang2.cpp
+loaddlls.cpp
+lsass.cpp
+misc.cpp
+mssql.cpp
+mydoom.cpp
+net.cpp
+netbios.cpp
+netdevil.cpp
+netutils.cpp
+optix.cpp
+pingudp.cpp
+processes.cpp
+psniff.cpp
+rBot.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+sub7.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+upnp.cpp
+visit.cpp
+webdav.cpp
+wildcard.cpp
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+rBot.exe - 26 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

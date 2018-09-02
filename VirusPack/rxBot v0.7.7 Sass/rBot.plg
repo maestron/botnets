@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\fenix1\LOCALS~1\Temp\RSP105.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\mIRC\download\rBot_041504\rBot.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\fenix1\LOCALS~1\Temp\RSP105.tmp" 
+Creating temporary file "C:\DOCUME~1\fenix1\LOCALS~1\Temp\RSP106.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rBot.pdb" /machine:I386 /out:"Release/rBot.exe" 
+.\Release\advscan.obj
+.\Release\aliaslog.obj
+.\Release\autostart.obj
+.\Release\beagle.obj
+.\Release\capture.obj
+.\Release\cdkeys.obj
+.\Release\crc32.obj
+.\Release\crypt.obj
+.\Release\dameware.obj
+.\Release\dcc.obj
+.\Release\dcom.obj
+.\Release\dcom2.obj
+.\Release\ddos.obj
+.\Release\download.obj
+.\Release\driveinfo.obj
+.\Release\ehandler.obj
+.\Release\findfile.obj
+.\Release\findpass.obj
+.\Release\fphost.obj
+.\Release\httpd.obj
+.\Release\icmpflood.obj
+.\Release\ident.obj
+.\Release\irc_send.obj
+.\Release\keylogger.obj
+.\Release\kuang2.obj
+.\Release\loaddlls.obj
+.\Release\lsass.obj
+.\Release\misc.obj
+.\Release\mssql.obj
+.\Release\mydoom.obj
+.\Release\net.obj
+.\Release\netbios.obj
+.\Release\netdevil.obj
+.\Release\netutils.obj
+.\Release\optix.obj
+.\Release\pingudp.obj
+.\Release\processes.obj
+.\Release\psniff.obj
+.\Release\rBot.obj
+.\Release\redirect.obj
+.\Release\remotecmd.obj
+.\Release\rlogind.obj
+.\Release\rndnick.obj
+.\Release\scan.obj
+.\Release\secure.obj
+.\Release\session.obj
+.\Release\shellcode.obj
+.\Release\socks4.obj
+.\Release\sub7.obj
+.\Release\synflood.obj
+.\Release\sysinfo.obj
+.\Release\tcpflood.obj
+.\Release\tftpd.obj
+.\Release\threads.obj
+.\Release\upnp.obj
+.\Release\visit.obj
+.\Release\webdav.obj
+.\Release\wildcard.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\fenix1\LOCALS~1\Temp\RSP106.tmp"
+<h3>Output Window</h3>
+Compiling...
+rBot.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

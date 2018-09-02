@@ -1,0 +1,37 @@
+TD {
+	FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Tahoma, Arial; FONT-WEIGHT: bold
+}
+font {
+	FONT-SIZE: 8pt; COLOR: #bbbbbb; FONT-FAMILY: Tahoma, Arial; FONT-WEIGHT: bold
+}
+.txt {
+	FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Tahoma, Arial
+}
+BODY {
+	BACKGROUND-COLOR: #BCBCBC; FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Tahoma, Arial
+}
+P {
+	FONT-SIZE: 8pt; FONT-FAMILY: Tahoma, Arial
+}
+A:link {
+	FONT-SIZE: 8pt; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #FF332f; FONT-FAMILY: Tahoma, Arial; TEXT-DECORATION: underline
+}
+A:active {
+	FONT-SIZE: 8pt; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #FF332f; FONT-FAMILY: Tahoma, Arial; TEXT-DECORATION: underline
+}
+A:visited {
+	FONT-SIZE: 8pt; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #FF332f; FONT-FAMILY: Tahoma, Arial; TEXT-DECORATION: underline
+}
+A:hover {
+	FONT-SIZE: 8pt; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #FF332f; FONT-FAMILY: Tahoma, Arial; TEXT-DECORATION: underline
+}
+input, textarea, select {
+        FONT-SIZE: 8pt; FONT-FAMILY: Tahoma, Arial;
+        border: 1px solid #222222;
+        color: #222222;
+        margin-top: 0px;
+        margin-bottom: 0px;
+}
+h2 {
+	COLOR: #FF332f; FONT-FAMILY: Tahoma, Arial; FONT-WEIGHT: bold
+}

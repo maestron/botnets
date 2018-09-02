@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="489"
+   name=""
+   committed-date="2004-03-22T03:22:43.938641Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/ftplib"
+   last-author="wonk"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="392"
+   name="ftplib.cpp"
+   text-time="2004-03-21T22:23:17.311990Z"
+   committed-date="2004-03-18T19:40:08.698759Z"
+   checksum="e6198b4a396e299a216d2245d18931ef"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.251904Z"/>
+<entry
+   committed-rev="9"
+   name="ftplib.h"
+   text-time="2004-03-21T22:23:17.362062Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="1643800fdcb5f8ac02b697172cdd9312"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.342033Z"/>
+<entry
+   committed-rev="489"
+   name="Makefile.am"
+   text-time="2004-03-22T21:39:07.248484Z"
+   committed-date="2004-03-22T03:22:43.938641Z"
+   checksum="820ccf5ce58507ae77638d9f38644064"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.228456Z"/>
+</wc-entries>

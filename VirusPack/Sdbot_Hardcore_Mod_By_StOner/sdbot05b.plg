@@ -1,0 +1,136 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdbot05b - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP1A.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/sdbot05b.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\advscan.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\dcom.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\ms04_007_asn1.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\pnp.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\shellcode.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\tftpd.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\dns.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\aliaslog.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\AutoStart.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\avirus.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\download.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\driveinfo.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\fphost.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\ftpd.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\hostauth.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\httpd.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\icmpflood.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\identd.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\irc_send.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\loaddll.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\misc.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\net.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\netutils.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\processes.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\rndnick.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\SDBOT05B.CPP"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\secure.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\sniffer.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\socks.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\synflood.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\taskhider.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\threads.cpp"
+"C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\visit.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP1A.tmp" 
+Creating temporary file "C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP1B.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib Netapi32.lib shlwapi.lib Mpr.lib Dnsapi.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/rose.pdb" /machine:I386 /out:"Release/rose.exe" /align:4096 
+".\Release\advscan.obj"
+".\Release\dcom.obj"
+".\Release\ms04_007_asn1.obj"
+".\Release\pnp.obj"
+".\Release\shellcode.obj"
+".\Release\tftpd.obj"
+".\Release\dns.obj"
+".\Release\aliaslog.obj"
+".\Release\AutoStart.obj"
+".\Release\avirus.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\hostauth.obj"
+".\Release\httpd.obj"
+".\Release\icmpflood.obj"
+".\Release\identd.obj"
+".\Release\irc_send.obj"
+".\Release\loaddll.obj"
+".\Release\misc.obj"
+".\Release\net.obj"
+".\Release\netutils.obj"
+".\Release\processes.obj"
+".\Release\rndnick.obj"
+".\Release\SDBOT05B.OBJ"
+".\Release\secure.obj"
+".\Release\sniffer.obj"
+".\Release\socks.obj"
+".\Release\synflood.obj"
+".\Release\taskhider.obj"
+".\Release\threads.obj"
+".\Release\visit.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Owner\LOCALS~1\Temp\RSP1B.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+dcom.cpp
+ms04_007_asn1.cpp
+pnp.cpp
+C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\pnp.cpp(327) : warning C4101: 'buffer' : unreferenced local variable
+shellcode.cpp
+tftpd.cpp
+dns.cpp
+aliaslog.cpp
+AutoStart.cpp
+avirus.cpp
+download.cpp
+driveinfo.cpp
+C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\driveinfo.cpp(62) : warning C4551: function call missing argument list
+fphost.cpp
+ftpd.cpp
+hostauth.cpp
+httpd.cpp
+icmpflood.cpp
+identd.cpp
+irc_send.cpp
+loaddll.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+processes.cpp
+rndnick.cpp
+SDBOT05B.CPP
+C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\SDBOT05B.CPP(113) : warning C4101: 'psnap' : unreferenced local variable
+C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\SDBOT05B.CPP(105) : warning C4101: 'tstr' : unreferenced local variable
+C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\SDBOT05B.CPP(460) : warning C4101: 'str' : unreferenced local variable
+C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\SDBOT05B.CPP(2038) : warning C4244: 'return' : conversion from 'unsigned __int64' to 'int', possible loss of data
+C:\Documents and Settings\Owner\Desktop\Rose1\Rose1.1frank\SDBOT05B.CPP(2061) : warning C4035: 'cyclecount' : no return value
+secure.cpp
+sniffer.cpp
+socks.cpp
+synflood.cpp
+taskhider.cpp
+threads.cpp
+visit.cpp
+Linking...
+LINK : warning LNK4108: /ALIGN specified without /DRIVER or /VXD; image may not run
+
+
+
+<h3>Results</h3>
+rose.exe - 0 error(s), 8 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP2.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Scanners\Netapi.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Scanners\Sym.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\vncshit.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\120.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Adv.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Crc.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Cry.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\d3des.c"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Ide.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Ldll.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\patcher.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Rnd.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Shel.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\sniff.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Sys.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Test.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\Thr.cpp"
+"D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\ver.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP2.tmp" 
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" 
+".\120\Netapi.obj"
+".\120\Sym.obj"
+".\120\vncshit.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\d3des.obj"
+".\120\Ide.obj"
+".\120\Ldll.obj"
+".\120\patcher.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\sniff.obj"
+".\120\Sys.obj"
+".\120\Test.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP3.tmp"
+<h3>Output Window</h3>
+Compiling...
+Netapi.cpp
+Sym.cpp
+vncshit.cpp
+D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\vncshit.cpp(215) : warning C4390: ';' : empty controlled statement found; is this the intent?
+120.cpp
+D:\Archive\Other\Root\Codes\120-[ModBot]-VNCBRUTE-SP2FIX-2007\vncshit.cpp(190) : warning C4700: local variable 'authResult' used without having been initialized
+Adv.cpp
+Crc.cpp
+Cry.cpp
+d3des.c
+Ide.cpp
+Ldll.cpp
+patcher.cpp
+Rnd.cpp
+Shel.cpp
+sniff.cpp
+Sys.cpp
+Test.cpp
+Thr.cpp
+ver.c
+Linking...
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

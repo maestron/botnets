@@ -1,0 +1,41 @@
+IrcWorm v1.3 by DR-EF
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+setup:
+------
+worm copy itself to system directory,add a startup registry
+key,disable windows xp firewall,and register itself as service
+process if the OS is win9x or winMe
+
+irc spreading:
+---------------
+the worm connect to 6 major irc networks around the world
+after connection establish the worm send a LIST command to
+the irc server,and retrive 75 channels with more than 50 ppl
+after that,the worm join 6 random channels,when a user join
+to a channel to worm can select between spam him with some
+message & url,the url is http://ip/file ,where ip is ip of
+the infected computer and the file is the worm,the file can 
+be .exe,.scr,.pif,.com or .rar archive contain the worm,
+beside that the worm can send the user a dcc request to
+send .rar file,with the worm insaid it...,when a user part
+a channel,the worm just spam him with with message & url
+when a kick heppends,the worm check if is it that got kicked
+if so,the worm will join new channel instead the one its got
+kicked from.
+
+rar archive infection:
+----------------------
+the worm scan all drivers for .rar archives,when its found one
+its add itself,this done by the worm its own rar packer,no need
+for any external application.
+
+mail spreading:
+---------------
+the worm scan the WAB for mails,and send itself to all of this
+mails as .rar file contain the worm insaid of it..
+
+notification:
+-------------
+worm connect to some irc channel,and type there a special chars
+when its infect a new machine,this will done only once per pc..

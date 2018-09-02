@@ -1,0 +1,31 @@
+Step 1:
+Register at http://www.blackapplehost.com/register.jsp
+
+Step 2:
+Go to UserCP.
+Click "Create/delete MySQL database"
+
+Name the database what you want, it will include your username.
+In this example my username will be "example".
+I have named my database "example_db"
+Press "Create Database"
+
+Now for the user, I have named mine "example_user"
+Password can be anything, mine will be "passw0rd"
+Press "Create User"
+
+For Assign Priviledges, make sure the user and database are selected on the list.
+When all boxes are ticked, press "Assign Priviledges"
+
+Step 3:
+Open \iStealer5.1\PHP Logger\index.php and edit the configuration information.
+All of the information is commented at the side, it's clear what it is. Leave localhost.
+
+Step 4:
+At BAH, go to "File manager" in the User CP and upload index.php & style.css
+After this, your iStealer is set up, http://username.blackapplehost.com/index.php
+Log in there to view your logs. Simple enough.
+
+Step 5:
+Open iStealer 5.0.1 and fill in all of the necessary information.
+The "Url" will be http://username.blackapplehost.com/index.php

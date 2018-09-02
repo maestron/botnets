@@ -1,0 +1,79 @@
+body {
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	line-height: normal;
+	color: #000000;
+	font-style: normal;
+}
+
+a {
+	font-size: 10pt;
+	color: #0066CC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+}
+
+textarea {
+	font-size: 10pt;
+	color: #000000;
+	font-family: Courier New, Courier, mono;
+	background: #EEEEEE;
+	border: 1px solid #000000;
+}
+button {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	background: #EEEEEE;
+	border: 1px solid #000000;
+}
+input {
+	font: 10pt/normal Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	background: #EEEEEE;
+	border: 1px solid #000000;
+}
+ 
+font {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+a:visited {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	color: #0066CC;
+	text-decoration: none;
+}
+select {
+	font-size: 10pt;
+	color: #000000;
+	font-family: Courier New, Courier, mono;
+	border: 1px solid #000000;
+	background: #EEEEEE;
+}
+a:hover {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline overline;
+	color: #0066CC;
+}
+
+pre {
+	font-size: 8pt;
+	color: #000000;
+	font-family: Courier New, Courier, mono;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+}
+
+.tableborder {
+	color: #000000;
+	border: 1px solid #000000;
+	padding: 10px;
+}
+
+.txtsmall {
+	font: 7pt Verdana, Arial, Helvetica, sans-serif;
+	color: #999999;
+}

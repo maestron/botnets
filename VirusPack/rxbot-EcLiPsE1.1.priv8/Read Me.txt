@@ -1,0 +1,54 @@
+[FAQ]
+Be Sure By Using This Source you are 
+using it at ur own risk.
+This Version Is Totally Private
+Dont leak this version out to anyone
+Keep it to yourself and keep away from making
+exe files to other kids.
+This Bot Source is not ours .. we just fixed some 
+things in it ... and we called it rxbot eclipse.
+
+LIMITATION OF LIABILITY: TO THE FULL EXTENT PERMISSIBLE UNDER 
+THE APPLICABLE LAW, THE AUTHOR SHALL NOT BE LIABLE FOR ANY DIRECT, 
+INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES RESULTING 
+FROM THE USE OF THIS SOURCE.
+
+
+[Fixes]
+- lsass now works fine and faster. - NiG
+- as known the psniff actually works now. - Ph33rl3ss
+- Stability is Extremely High. - NiG & Ph33rl3ss 
+- A Small Bug Found in Dcom2 & MyDoom .. they are fixed now. - NiG
+- Bots Do not Crash Anymore. - NiG
+- added msn/aim spreader scans randomly on startup(not so fast). - NiG
+- topic command fixed. - Ph33rl3ss
+
+
+[To Be Done]
+- irc_connect line split truncation issue
+- turn bot into a service
+- execute w/output to ircd
+- ntscan share support/test
+- polymorphic add in
+- key logger add-in/sendkeys
+- auto-scan on startup
+- secure code with security policy lock-out (LSA)
+- portscanner for single ip
+- auto-update bot after dns fails or is pointed to rfc1918 address
+- kernel hook/dll support
+- multiple server list (round-robin)
+- p2p code add-in (for people who want it)
+- Fix buggy CRC code (or is it? definite clean though)
+- hook uninstall into melt code to properly delete bot
+- firewall add-in
+- syn scanner
+- add in channel mode settings
+- socks5
+
+
+[Authors]
+- NiG
+- Ph33rl3ss
+
+
+-EcLiPsE Crew- 04/06/2004

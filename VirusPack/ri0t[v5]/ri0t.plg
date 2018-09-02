@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ri0t - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Zac\LOCALS~1\Temp\RSPDB9.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/ri0t.map" /debug /machine:I386 /out:"Debug/ri0t.exe" 
+".\Debug\autostart.obj"
+".\Debug\avirus.obj"
+".\Debug\cdkeys.obj"
+".\Debug\commands.obj"
+".\Debug\connect.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\download.obj"
+".\Debug\firefox.obj"
+".\Debug\icmpflood.obj"
+".\Debug\irc_send.obj"
+".\Debug\keylogger.obj"
+".\Debug\loaddlls.obj"
+".\Debug\misc.obj"
+".\Debug\netutils.obj"
+".\Debug\persist.obj"
+".\Debug\processes.obj"
+".\Debug\protocol.obj"
+".\Debug\psniff.obj"
+".\Debug\pstore.obj"
+".\Debug\ri0t.obj"
+".\Debug\rndnick.obj"
+".\Debug\rootkit.obj"
+".\Debug\startup.obj"
+".\Debug\threads.obj"
+".\Debug\usb.obj"
+".\Debug\visit.obj"
+".\Debug\wildcard.obj"
+".\Debug\res.res"
+".\Debug\peer2peer.obj"
+".\Debug\msn.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Zac\LOCALS~1\Temp\RSPDB9.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+ri0t.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

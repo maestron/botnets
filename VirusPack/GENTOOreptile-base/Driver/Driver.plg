@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Driver - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\PCA\CONFIG~1\Temp\RSP1077.tmp" with contents
+[
+/nologo /Gz /ML /W3 /Gm /Gi /Zi /O1 /I "D:\WINDDK\2600.1106\inc\ddk\wxp" /I "D:\WINDDK\2600.1106\inc\wxp" /D "WIN32" /D "NDEBUG" /D "_X86_" /D "i386" /D "DBG" /D _WIN32_WINNT=0x0500 /Fp"Release/Driver.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\kk\w\Kopie_van_reptile\Kopie van reptile\Driver\Driver.cpp"
+"D:\kk\w\Kopie_van_reptile\Kopie van reptile\Driver\Jiurl_PortHide.cpp"
+"D:\kk\w\Kopie_van_reptile\Kopie van reptile\Driver\ProcessName.c"
+"D:\kk\w\Kopie_van_reptile\Kopie van reptile\Driver\Rootkit.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\PCA\CONFIG~1\Temp\RSP1077.tmp" 
+Creating temporary file "C:\DOCUME~1\PCA\CONFIG~1\Temp\RSP1078.tmp" with contents
+[
+ntoskrnl.lib hal.lib /nologo /entry:"DriverEntry" /incremental:no /pdb:"Release/driver.pdb" /machine:I386 /out:"Bin/driver.sys" /libpath:"C:\WINDDK\2600\lib\wxp\i386" /subsystem:native /driver 
+".\Release\Driver.obj"
+".\Release\Jiurl_PortHide.obj"
+".\Release\ProcessName.obj"
+".\Release\Rootkit.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\PCA\CONFIG~1\Temp\RSP1078.tmp"
+<h3>Output Window</h3>
+Compiling...
+Driver.cpp
+D:\WINDDK\2600.1106\inc\ddk\wxp\ntddk.h(23) : fatal error C1189: #error :  Compiler version not supported by Windows DDK
+Jiurl_PortHide.cpp
+D:\WINDDK\2600.1106\inc\ddk\wxp\ntddk.h(23) : fatal error C1189: #error :  Compiler version not supported by Windows DDK
+ProcessName.c
+D:\WINDDK\2600.1106\inc\ddk\wxp\ntddk.h(23) : fatal error C1189: #error :  Compiler version not supported by Windows DDK
+Rootkit.cpp
+D:\WINDDK\2600.1106\inc\ddk\wxp\ntddk.h(23) : fatal error C1189: #error :  Compiler version not supported by Windows DDK
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+driver.sys - 4 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

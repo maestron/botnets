@@ -1,0 +1,843 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Cyberdude || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+[ Classic Cryptography Techniques ]
+	0x0 Sostituition Techniques
+		0x0x1 Cesare's Ciphrature
+		0x0x2 PlayFair Ciphrature
+		0x0x3 Hill Ciphrature
+		0x0x4 Polialphabetic Ciphrature
+	0x1 Transposition Techniques
+	0x2 Rotation Machines 
+
+-[0x0x1]----------------------------------------------------------------------- Cesare's Ciphrature
+
+Cesare's  Ciphrature  is  based on alphabetical letters! This algorithms replace only single letter 
+with a three letter after  considering  a  circula  alphabet !  so  the first letter after Z is A!! 
+
+exemple: 
+	text = meet me after the toga party
+	ciph = PHHW PH DIWHU WKH WRJD SDUWB
+
+To  implement  this ciphrature tecnique we cas assign a numeric value for every letter in this way: 
+
+[ a ][ b ][ c ][ d ][ e ][ f ][ g ][ h ][ i ][ j ][ k ][ l ][ m ]
+[ 0 ][ 1 ][ 2 ][ 3 ][ 4 ][ 5 ][ 6 ][ 7 ][ 8 ][ 9 ][ 0 ][11 ][12 ]
+
+[ n ][ o ][ p ][ q ][ r ][ s ][ t ][ u ][ v ][ w ][ x ][ y ][ z ]
+[13 ][14 ][15 ][16 ][17 ][18 ][19 ][20 ][21 ][22 ][23 ][24 ][25 ]
+
+Now we can apply this mathematics implementation of circular cesare's ciphrature : 
+Ciphred = Encript(word) = (char value + k) mod (26)
+C = E(w) = (cv+3)mod(26)
+C = E(m) = (12+3)mod(26) = 15 mod 26 = 15 = P 
+
+If we want decipher we can use the opposite operation 
+word = Decript(Ciphred) = (Ciphred char - k) mod 26 
+w = D(C) = (C-3) mod (26) 
+w = D(P) = (15-3) mod (26) = 12 mod 26 = 12 = m 
+
+The problem of this alghoritm is that if I don't know the k value i can resolve this with 25
+different k value :
+
+		PHHW PH DIWHU WKH WRJD SDUWB
+Key = 01	oggv og chvgt vjg vqic rctva
+Key = 02	nffu nf bgufs uif uphb qbsuz
+Key = 03	meet me after the toga party	&lt;= I have found my key!! 
+Key = 04	ldds ld zesdq sgd snfz ozqsx
+Key = 05	kccr kc ydrcp rfc rmey nyprw
+...
+Key = 25	qiix qi ejxiv xli xske tevxc
+
+-[0x0x2]----------------------------------------------------------------------- PlayFair Ciphrature
+
+This ciphrature algorithm  is  based on 5x5 matrix made on a single keyword! Image that our keyword
+is &quot;monarchy&quot;! The  matrix is made excluding the repetition letter and considering i and j char the 
+same char! The firsts cells are the char of keyword, the others are the remaning alphabetic letters
+
+	[ \ ] |	[ 0 ][ 1 ][ 2 ][ 3 ][ 4 ]
+	------|--------------------------
+	[ 0 ] |	[ m ][ o ][ n ][ a ][ r ]
+	[ 1 ] |	[ c ][ h ][ y ][ b ][ d ]
+	[ 2 ] |	[ e ][ f ][ g ][i/j][ k ]
+	[ 3 ] |	[ l ][ p ][ q ][ s ][ t ]
+	[ 4 ] |	[ u ][ v ][ w ][ x ][ z ]
+
+After  that  we have create the matrix  we must encript the text 2 letters by 2 letters follow this 
+rule: 
+
+	[1] If  in  my  text  d uring the division for 2 letters, two same letter are behind I must 
+	    insert a new letter!  for  exemple i divide the word &quot;balloon&quot; in this way : ba ll oo n
+	    since ll are the same letter  in  the same block I must insert a new letter and balloon 
+	    became : ba lx lo on now I have 4 block of 2 letters and I can continue! 
+
+	[2] The letter of my text that are in the same matrix  row are sostituited with the  letter 
+	    that is on the right it... for exemple in my matrix the string &quot;ar&quot; became &quot;rm&quot; 
+
+	[3] The letter of my text that are in the same matrix colum are sostutited with  the letter
+	    that is bottom it... for exemple in my matrix the string &quot;mu&quot; became &quot;cm&quot;
+
+	[4] In  the others cases the letter two letter changes row and column with the opposite of 
+	    the  other letter of block!... for exemple  the  string  &quot;ev&quot; of coordinate (2,0)(4,1) 
+	    became &quot;fu&quot; of coordinate (2,1)(4,0) becouse :
+			row  col     row  col  
+			[2]  [0]     [4]  [1] 
+	                 |    |       |    |      row-col
+			 2____|_______|____1____  (2,1)
+                              |       | 	  row-col 
+			      0_______4_________  (4,0)
+
+exemple: 
+	text = hello world 
+	
+	[1] Division = he ll ow or ld 
+		the second  block  ll  is  not correct so I insert x to divide the same letters and 
+		insert y to recreate a 2 letters block : he lx lo wo rl dy
+	[2] Control if I have letters of the same row :	
+		he -&gt; no
+		lx -&gt; no
+		lo -&gt; no
+		wo -&gt; no
+		rl -&gt; no
+		dy -&gt; yes -&gt; dy became cb -&gt; my string now is: he lx lo wo rl &quot;cb&quot;
+	[3] Control if I have letters of the same column:
+		he -&gt; no
+		lx -&gt; no
+		lo -&gt; no
+		wo -&gt; no
+		rl -&gt; no
+	[4] Change row and column with the opposite of the other letter of block!
+		he -&gt; (1,1)(2,0) -&gt; (1,0)(2,1) -&gt; cf -&gt; my string now is : CF lx lo wo rl CB 
+		lx -&gt; (3,0)(4,3) -&gt; (3,3)(4,0) -&gt; su -&gt; my string now is : CF SU lo wo rl CB
+		lo -&gt; (3,0)(0,1) -&gt; (3,1)(0,0) -&gt; pm -&gt; my string now is : CF SU PM wo rl CB
+		wo -&gt; (4,2)(0,1) -&gt; (4,1)(0,2) -&gt; vn -&gt; my string now is : CF SU PM VN rl CB
+		rl -&gt; (0,4)(3,0) -&gt; (0,0)(3,4) -&gt; mt -&gt; my string now is : CF SU PM VN MT CB
+
+	Ciphred text = cfsupmvnmtcb 
+
+To decript  this text is  necessary  that  you  know  the keyword so you can recreat the matrix and
+repeat the same operation used  to  encrypt  the  text!!  But  if  you  don't know the key you must
+try  26x26 = 676 different combinations so  this  is  more  secure  respect the Cesare's ciphrature
+
+-[0x0x3]--------------------------------------------------------------------------- Hill Ciphrature
+
+The therd ciphrature that I want show to you born in the 1929 by Lester Hill! This  algorithm  take 
+&quot;num&quot; letters from the text and replace this with &quot;num&quot; ciphred letters! To do it we resolve  &quot;num&quot;
+linear equations! In  the  first  time  we  assign  a numerical  value to a signle letter as in the 
+Cesare's ciphrature 
+
+[ a ][ b ][ c ][ d ][ e ][ f ][ g ][ h ][ i ][ j ][ k ][ l ][ m ]
+[ 0 ][ 1 ][ 2 ][ 3 ][ 4 ][ 5 ][ 6 ][ 7 ][ 8 ][ 9 ][ 0 ][11 ][12 ]
+
+[ n ][ o ][ p ][ q ][ r ][ s ][ t ][ u ][ v ][ w ][ x ][ y ][ z ]
+[13 ][14 ][15 ][16 ][17 ][18 ][19 ][20 ][21 ][22 ][23 ][24 ][25 ]
+
+After that we decide a value to assign tu &quot;num&quot; I use 3 so... I have three linear equations: 
+
+	ciphred = [ key(x,y) word(1) + key(x,y) word(2) + key(x,y) word(3) ]
+
+	[1] C1 = [k(1,1)w(1)+k(1,2)w(2)+k(1,3)w(3)]
+	[2] C2 = [k(2,1)w(1)+k(2,2)w(2)+k(2,3)w(3)]
+	[3] C3 = [k(3,1)w(1)+k(3,2)w(2)+k(3,3)w(3)]
+
+I can rapresents this equations as a vector and matrix form :
+
+	cyphred		   key matrix 		     word 
+	column	  	     			     column
+	[ c1 ]	 [	k11	k12	k13	]   [ w1 ]
+	[ c2 ] = [ 	k21	k22	k33	] = [ w2 ] = mod 26
+	[ c3 ] 	 [	k31	k32	k33	]   [ w3 ]
+
+I invent my key matrix with arbitrary value
+		
+		    [   17	17	05   ]
+		k = [	21	18	21   ]
+		    [	02	02	19   ]
+
+If  I  want  encript  t he text &quot;paymoremoney&quot; I must several block of 3 letters becouse I have set 
+&quot;num&quot; = 3 ... so I divide the text in this way: 
+
+	block 1 = pay
+	block 2 = mor
+	block 3 = emo	
+	block 4 = ney 
+
+Now I can replace the single letter with numerical value assigned it
+	
+	block 1 = pay = (15,0,24)
+	block 2 = mor = (12,14,17)
+	block 3 = emo = (4,12,14)
+	block 4 = ney = (13,4,24)
+
+Now that I have &quot;trasformed&quot; all information in number I can apply the algorith
+
+	[?01]   [	17	17	05 	]    [P][15]
+	[?02] = [	21	18	21 	] =  [A][0]  mod 26
+	[?03]   [	02	02	19 	]    [Y][24] 
+
+	[?04]   [	17	17	05 	]    [M][12]
+	[?05] = [	21	18	21 	] =  [O][14] mod 26
+	[?06]   [	02	02	19 	]    [R][17]
+
+	[?07]   [	17	17	05 	]    [E][4]
+	[?08] = [	21	18	21 	] =  [M][12] mod 26
+	[?09]   [	02	02	19 	]    [O][14] 
+
+	[?10]   [	17	17	05 	]    [N][13]
+	[?11] = [	21	18	21 	] =  [E][4]  mod 26
+	[?12]   [	02	02	19 	]    [Y][24] 
+	
+And resolve using this equation: 
+	[1] C1 = [k(1,1)w(1)+k(1,2)w(2)+k(1,3)w(3)]
+	[2] C2 = [k(2,1)w(1)+k(2,2)w(2)+k(2,3)w(3)]
+	[3] C3 = [k(3,1)w(1)+k(3,2)w(2)+k(3,3)w(3)]
+
+	[?01] = 17*15 + 17*0 + 5*24   = 255 + 0   + 120 = 375 mod 26 = 11 = L 
+	[?02] = 21*15 + 18*0 + 21*24  = 315 + 0   + 504 = 819 mod 26 = 13 = N 
+	[?03] = 02*15 + 02*0 + 19*24  = 30  + 0   + 456 = 486 mod 26 = 18 = S 
+
+	[?04] = 17*12 + 17*14 + 5*17  = 204 + 238 + 85  = 527 mod 26 = 7  = H 
+	[?05] = 21*12 + 18*14 + 21*17 = 252 + 252 + 357 = 861 mod 26 = 3  = D 
+	[?06] = 02*12 + 02*14 + 19*17 = 24  + 28  + 323 = 375 mod 26 = 11 = L
+
+If you continue using this tecnique you obtain this ciphred string : LNSHDLEWMTRW 
+
+To decrypt this ciphrate text are necessary that you know the keymatrix becouse you must  calculate
+the inverse matrix of it and apply the inverse matrix to the ciphred text to obtain a original text
+
+To obtain  the  inverse  matrix you must calculate the determinant of matrix first!To calcolate the 
+determinant I can rapresent my matrix in this way
+
+	 -------------- ---------
+	| 17 | 17 | 05 | 17 | 17 |  ||
+	|   \    \    \|         |  ||
+	|    \    \    |         |  ||
+	|     \    \   |\        |  || 
+        | 21 | 18 | 21 | 21 | 18 |  ||   17*18*19 + 17*21*2 + 5*21*2 = 5814 + 714 + 210 = 6738
+	|        \    \|   \     |  ||
+	|         \    |    \    |  ||
+	|          \   |\    \   |  || 
+	| 02 | 02 | 19 | 02 | 02 |  \/
+	 -------------- ---------
+
+	 -------------- ---------
+	| 17 | 17 | 05 | 17 | 17 |  /\
+	|          /   |/    /   |  ||
+	|         /    |    /    |  ||
+	|        /    /|   /     |  ||
+        | 21 | 18 | 21 | 21 | 18 |  ||   2*18*5 + 2*21*17 + 19*21*17 = 180 + 714 + 6783 = 7677 
+	|     /    /   |/        |  ||
+	|    /    /    |         |  ||
+	|   /    /    /|         |  ||  
+	| 02 | 02 | 19 | 02 | 02 |  ||
+	 -------------- ---------
+
+	DetK = 6738 - 7677 = -939 mod 26 = -3 
+	
+After that I have found the det of the 3x3 matrix I can calculate the inverse matrix in this way: 
+
+	 -----------------
+	| k11 | k12 | k13 |
+	|    \|     |     |
+	|----[=]----|-----|
+	|     |\    |     |
+	| k21 | k22 | k23 |
+	|     |    \|/    |
+	|-----|----[x]----|
+	|     |    /|\    | 
+	| k31 | k32 | k33 |
+	 -----------------
+
+	k11 = k22*k33 - k32*k23 =&gt; (18*19)-(2*21) = 4 -  16 = -12/DetK = 4 
+	...
+
+To the and we obtain this inverse matrix
+	 --------------
+	| 04 | 09 | 15 |
+	| 15 | 17 | 06 |
+	| 24 | 00 | 17 |
+	 --------------	
+
+If we  want  control  that  this  matrix it the inverse of our original matrix we must multiple the
+original matrix with the inverse matrix and we must obtain a new matrix that is the identity matrix
+The identify matrix is a matrix in witch all values are 0 and only the value in a diagonal are one!
+
+	 --------------		-------------- 
+	| 17 | 17 | 05 |       | 04 | 09 | 15 |
+	| 21 | 18 | 21 |   *   | 15 | 17 | 06 |
+	| 02 | 02 | 19 |       | 24 | 00 | 17 | 
+	 --------------		-------------- 
+
+	To obtain the new matrix we must multiply the row vector to column vector! for  exemple  to
+	obtain  the  value  of  k11  we must multiply the row vector of index 1 to column vector of 
+	index 1  
+
+               -------------- 	  ----
+	k11 = | 17 | 17 | 05 | * | 04 |
+               --------------	 | 15 |
+				 | 24 |
+				  ----
+
+	k11 = (17*04) + (17*15) + (05*24) = 443
+	k12 = (17*09) + (17*17) + (05*00) = 442 
+	...
+	k33 = (02*15) + (02*06) + (19*17) = 365
+
+         -----------------            -----------
+       	| 443 | 442 | 442 |          | 1 | 0 | 0 |
+	| 858 | 495 | 780 |mod26 =   | 0 | 1 | 0 | 
+	| 494 | 052 | 365 |          | 0 | 0 | 1 |
+	 -----------------	      -----------
+
+When we have obtenuted the inverse matrix we can decipher the ciphred message : LNSHDLEWMTRW
+
+[ a ][ b ][ c ][ d ][ e ][ f ][ g ][ h ][ i ][ j ][ k ][ l ][ m ]
+[ 0 ][ 1 ][ 2 ][ 3 ][ 4 ][ 5 ][ 6 ][ 7 ][ 8 ][ 9 ][ 0 ][11 ][12 ]
+
+[ n ][ o ][ p ][ q ][ r ][ s ][ t ][ u ][ v ][ w ][ x ][ y ][ z ]
+[13 ][14 ][15 ][16 ][17 ][18 ][19 ][20 ][21 ][22 ][23 ][24 ][25 ]
+
+	LNS = (11,13,18) 
+
+	[11]   [ 04 | 09 | 15 ]    (11*04)+(13*09)+(18*15) = 431 mod26 = 15 = [p]
+	[13] * [ 15 | 17 | 06 ] =  (11*15)+(13*17)+(18*06) = 494 mod26 = 00 = [a]
+	[18]   [ 24 | 00 | 17 ]    (11*24)+(13*00)+(18*17) = 570 mod26 = 24 = [y] 
+
+If we repeat the same operation for all ciphred string we obtain the original string 
+
+-[0x0x4]----------------------------------------------------------------- Polialphabetic Ciphrature
+This ciphrature tecnique is another monoalphabetic tecnique. The polialphabetic ciphrature is known
+as Vigenere ciphrature becouse is based on a Vigenere table! The table is  the  combination  of  26
+Cesare's ciphrature with scrolling from 0 to 25! the table is this: 
+
+[a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z]
+[b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a]
+[c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b] 
+[d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c]
+[e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d]
+[f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e] 
+[g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f]
+[h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g]
+[i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h]
+[j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i]
+[k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j]
+[l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k]
+[m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l]
+[n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m]
+[o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n]
+[p][q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o]
+[q][r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p]
+[r][s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q]
+[s][t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r]
+[t][u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s]
+[u][v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t]
+[v][w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u]
+[w][x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v]
+[x][y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w]
+[y][z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x]
+[z][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y]
+
+Now  imagine  that  we  want  encript  a  message  : &quot; we are discovered save yourself&quot;  using  the
+key: &quot;hello&quot;! To apply this ciphrature the kay must be lenght as the text that we  want encript! So
+we must repeat the key in this way :
+
+	message : WeAreDiscoveredSaveYourself
+	key	: hellohellohellohellohellohe
+
+The message is readed in orizontal way, the key in vertical... so the first char of  message is &quot;W&quot; 
+and the key assigned it is &quot;h&quot;. To encript we must go in table and find W in orizontal line  and  h
+in verthical line...
+
+[a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][W][x][y][z]
+[b][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[c][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[d][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[e][#][#][#]|I|[J][#][#][M][#][#][#][#][#][#][#][#][#][#][#][Y][#][#][#][#][#]
+[f][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[g][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[H][#][#][K][#][#][#][#][#][#][#][#][#][#][V][#][#][#][Z][#][#][C][D][#][#][#]
+[i][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[j][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[k][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[L][#][N][#][P][#][#][S][#][#][#][#][#][#][#][#][#][C][D][#][#][G][#][#][#][#]
+[m][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[n][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[o][#][#][R][S][#][#][#][#][#][#][#][#][#][C][#][#][#][#][#][#][#][#][#][M][#]
+[p][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[q][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[r][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[s][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[t][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[u][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[v][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[w][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[x][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[y][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+[z][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#][#]
+
+
+	=&gt; wh = D	=&gt; ee = I	=&gt; al = L	=&gt; rl = C
+	=&gt; eo = S	=&gt; dh = K	=&gt; ie = M	=&gt; sl = D
+	=&gt; cl = N	=&gt; oo = C	=&gt; vh = C	=&gt; ee = I
+	=&gt; rl = C	=&gt; el = P	=&gt; do = R	=&gt; sh = Z
+	=&gt; ae =	E	=&gt; vl = G	=&gt; el = P	=&gt; yo = M
+	=&gt; oh = V	=&gt; ue =	Y	=&gt; rl = C	=&gt; sl = D
+	=&gt; eo = S	=&gt; lh = S	=&gt; fe = J
+
+	Encripted Text = DILCSKMDNCCICPRZEGPMVYCDSSJ 
+
+Since the key is a little word (hello) we have found  several  repetute  associations   during  the
+encoding process : ee,rl,eo,sl,etc... if we use a big  key  we don't found   so  much  repetitions!
+To decrypt this message we must know the key, if we have the key we can do in this way:
+
+	Encripted Text	= DILCSKMDNCCICPRZEGPMVYCDSSJ 
+	key		= hellohellohellohellohellohe
+
+To decrypt  the  char  &quot;D&quot; with the keychar associated &quot;h&quot; I search in the table the row &quot;h&quot; and in 
+this row I search the char D after I see the first element in the column of D!
+ 
+[ a ][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][v][ W ][x][y][z]
+...								     /\
+...								     ||
+[ H ][i][j][k][l][m][n][o][p][q][r][s][t][u][v][w][x][y][z][a][b][c][ D ][e][f][g]
+...
+[ z ][a][b][c][d][e][f][g][h][i][j][k][l][m][n][o][p][q][r][s][t][u][ v ][w][x][y]
+
+	=&gt; Dh = w	=&gt; Ie = e	=&gt; Ll = a ... etc 
+
+This is  mine C + GTK implementation of the alghoritm of Polialphabetic Ciphrature! compile and use 
+it to  create ciphred text to send what you want without any problem that everyone can decripted it 
+without the key  that  you  have inseret to entrypt the text. Since the alghoritm is based on 26x26 
+matrix the original text that  you  want encrypt must be with nothing space and point signature but 
+only the 26 alphabetic letters! For exemple if you want send the text:
+ 
+	=&gt; hello world this is me life shoul be fun for every one 
+
+you must open a new file with 0777 permission and write in it 
+
+	=&gt; helloworldthisismelifeshoulbefunforeveryone 
+
+after  that  you  open  the  software  insert the key that you want select the encrypt radio button 
+insert the path of the file that contain the text and click the GO button! in this way the software
+make a file named encrypt that you can  rename as you want this file contain the crypted version of 
+your message! You can send this file to  you  want,  you  do  your  password  to  it and hi use the 
+the software in the same way. Insert the key the path of file to decrypt  select  the decrypt radio 
+button and click ok button! The result of it is a  file  named  decrypt  that  contain the original 
+message! Heppy cyprature to all 
+--[ C U T  H E R E ]-------------------------------------------------------------------------------
+/*
+       Compile it using gcc cipher.c `pkg-config --cflags --libs gtk+-2.0`  
+*/
+
+#include &lt;gtk/gtk.h&gt;
+#include &lt;glib.h&gt;
+#include &lt;gdk/gdkkeysyms.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;ctype.h&gt;
+
+GtkWidget *win;
+GtkWidget *keyL;
+GtkWidget *pathL;
+GtkWidget *entryK;
+GtkWidget *entryP;
+GtkWidget *table;
+GtkWidget *button;
+GtkWidget *radio1;
+GtkWidget *radio2;
+GtkWidget *hbox;
+
+void start()
+{
+
+       char matrix[26][26];
+       char *alphabet = &quot;abcdefghijklmnopqrstuvwxyz&quot;;
+       int row,column,count;
+       for(row = 0; row!=26; row++)
+       {
+              count = row;
+              for(column = 0; column!=26; column++)
+	      {
+	             if(count==26) count = 0;
+		     matrix[row][column] = alphabet[count++];
+	      }
+       }
+
+       int exist,fd,fd2,fd3;
+       char *c;
+       int keycount = 0;
+       const gchar *k,*p;
+       k = gtk_entry_get_text(GTK_ENTRY(entryK));
+       p = gtk_entry_get_text(GTK_ENTRY(entryP));
+
+       int keylen = strlen(k);
+
+       exist = access(p,X_OK);
+       if(exist==-1) g_print(&quot;Error: %s File not found!!\n&quot;,p);
+       else 
+       {
+              if((fd = open(p,O_RDWR))==-1) 
+                     g_print(&quot;Error: %s Open in RDWR not permitted!!\n&quot;,p);
+              else
+              {
+                     if (GTK_TOGGLE_BUTTON (radio1)-&gt;active)
+		     {	
+                            if((fd2 = open(&quot;encrypted&quot;,O_RDWR|O_CREAT|O_TRUNC,0777))==-1) 
+                                   g_print(&quot;Error: 'encrypted' File not created!!\n&quot;);
+                            else
+                            {
+                                   while(read(fd,&amp;c,1))
+                                   {
+                                          if(isupper((unsigned char)c))
+                                                 c = tolower((unsigned char)c);
+                                          int col = 0;
+                                          int ro = 0;
+
+                                          while(matrix[0][col++]!= (char)c &amp;&amp; col!=26);
+                                          while(matrix[ro++][0]!= k[keycount]);
+                                          char *toInsert = matrix[ro-1][col-1];
+                                          write(fd2,&amp;toInsert,1);
+                                          if((keycount)==keylen-1)keycount=0;
+                                          else keycount++;
+                                   }
+                            }
+                     }
+                     else if (GTK_TOGGLE_BUTTON (radio2)-&gt;active)
+                     {
+                            if((fd3 = open(&quot;decrypted&quot;,O_RDWR|O_CREAT|O_TRUNC,0777)) == -1)
+                                   g_print(&quot;Error: 'decrypted' File not created!!\n&quot;);
+                            else
+                            {
+                                   while(read(fd,&amp;c,1))
+                                   {
+                                          int Col = 0;
+                                          int Ro = 0;
+
+                                          while(matrix[Ro++][0]!=k[keycount]);
+                                          while(matrix[Ro][Col++]!=(char)c &amp;&amp; Col!=26);
+                                          char *Toinsert = matrix[0][Col];
+                                          write(fd3,&amp;Toinsert,1);
+                                          if((keycount)==keylen-1)keycount=0;
+                                          else keycount++;
+                                   }
+                            }
+                     }
+              }
+       }
+}
+
+gint quit(GtkWidget *widget, gpointer gdata)
+{
+       g_print(&quot;Thank you for use CPCGI! Bye Bye...\n&quot;);
+       gtk_main_quit();
+       return(FALSE);
+}
+
+int main(int argc, char *argv[])
+{
+	gtk_init(&amp;argc,&amp;argv);
+
+       button = gtk_button_new_with_label(&quot;Go!!&quot;);
+       table = gtk_table_new(3,3,FALSE);
+       entryK = gtk_entry_new();
+       entryP = gtk_entry_new();
+       win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+       keyL = gtk_label_new(&quot;Entry the Key&quot;);
+       pathL = gtk_label_new(&quot;Entry the path of file&quot;);
+       radio1 = gtk_radio_button_new_with_label(NULL,&quot;Encrypt&quot;);
+       radio2 = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(radio1)),&quot;Decrypt&quot;);
+       hbox = gtk_hbox_new(FALSE,0);
+
+       gtk_entry_set_editable(GTK_ENTRY(entryK),TRUE);
+       gtk_entry_set_editable(GTK_ENTRY(entryP),TRUE);
+       gtk_entry_set_max_length(GTK_ENTRY(entryP), 200);
+       gtk_entry_set_max_length(GTK_ENTRY(entryK), 50);
+
+       gtk_box_pack_start(GTK_BOX(hbox),radio1,TRUE,TRUE,2);
+       gtk_box_pack_start(GTK_BOX(hbox),radio2,TRUE,TRUE,2);
+
+       g_signal_connect(G_OBJECT (button), &quot;clicked&quot;, G_CALLBACK (start), NULL);
+       gtk_signal_connect(GTK_OBJECT(win),&quot;delete_event&quot;,GTK_SIGNAL_FUNC(quit),NULL);
+
+       gtk_window_set_title(GTK_WINDOW(win),&quot;[C]yberdude [P]olialphabetic [C]iphrature [G]tk [I]mplementation&quot;);
+       gtk_window_set_default_size(GTK_WINDOW(win),600,100);
+
+       gtk_table_attach(GTK_TABLE(table), keyL, 0, 1, 0, 1, GTK_EXPAND | GTK_SHRINK | GTK_FILL, GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
+       gtk_table_attach(GTK_TABLE(table), pathL, 0, 1, 1, 2, GTK_EXPAND | GTK_SHRINK | GTK_FILL, GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
+       gtk_table_attach(GTK_TABLE(table), entryK, 1, 2, 0, 1, GTK_EXPAND | GTK_SHRINK | GTK_FILL, GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
+       gtk_table_attach(GTK_TABLE(table), entryP, 1, 2, 1, 2, GTK_EXPAND | GTK_SHRINK | GTK_FILL, GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
+       gtk_table_attach(GTK_TABLE(table), hbox, 0, 1, 2, 3, GTK_EXPAND | GTK_SHRINK | GTK_FILL, GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
+       gtk_table_attach(GTK_TABLE(table), button, 1, 2, 2, 3, GTK_EXPAND | GTK_SHRINK | GTK_FILL, GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
+
+       gtk_container_add(GTK_CONTAINER(win),table);
+
+       gtk_widget_show(radio1);
+       gtk_widget_show(radio2);
+       gtk_widget_show(hbox);
+       gtk_widget_show(table);
+       gtk_widget_show(button);
+       gtk_widget_show(pathL);
+       gtk_widget_show(keyL);
+       gtk_widget_show(entryP);
+       gtk_widget_show(entryK);
+       gtk_widget_show(win);
+       gtk_main();
+       return 0;
+}
+--[ C U T  H E R E ]-------------------------------------------------------------------------------
+
+-[0x1]---------------------------------------------------------------------- Transposition tecnique
+This tecnique is different from the sobstitution tecnique becouse there isn't only the sobstitution
+of a letter with another but change the position of only letter too... 
+
+Imagine that we want cipher the message : hello world this is cyberdude 
+since my message is composit of 25 letters i can divide in a 5x5 matrix in this way:
+
+	[h][e][l][l][o]
+	[w][o][r][l][d]
+	[t][h][i][s][i]
+	[s][c][y][b][e]
+	[r][d][u][d][e]
+
+After that I have create my matrix I must creat a key to change the column order! Since  the matrix
+have 5 columns, my key have 5 element too! the element of key are the index from 1 to 5  in  casual
+way, for exemple : 41253 if I use this key to transposite my matrix I obtain this result
+
+	key = 	[4][1][2][5][3]
+
+		[h][e][l][l][o]
+		[w][o][r][l][d]
+	text =	[t][h][i][s][i]
+		[s][c][y][b][e]
+		[r][d][u][d][e]
+ 
+Now using the index of key I can read the column to cipher my message so I  read  the  column  with
+index 1 in this way : eohcd 
+
+	col[1] = eohcd
+	col[2] = lriyu 
+	col[3] = odiee
+	col[4] = hwtsr
+	col[5] = llsbd
+
+In this way I have obtenuted this text : eohcdlriyuodieehwtsrllsbd 
+But this type of cipher is deciphrable by an attacher using the bruteforce, in  particoular  if  he 
+know that my key is of 5 value he obtain 25 possible key to depcipher the message and  it  is  very 
+simple to do! To resolve this little problem we can retranspose the ciphred text in  the  same  way
+and using the same key used for the first transposition:
+
+	key = 	[4][1][2][5][3]
+
+		[e][o][h][c][d]
+		[l][r][i][y][u]
+	text =	[o][d][i][e][e]
+		[h][w][t][s][r]
+		[l][l][s][b][d]
+
+	col[1] = ordwl
+	col[2] = hiits
+	col[3] = duerd
+	col[4] = elohl
+	col[5] = cyesb
+
+The result of the ciprature of the ciphred text is this : ordwlhiitsduerdelohlcyesb 
+
+If we cosider the initial text : hello world this is cyberdude 
+and assign an index for only char : 
+
+		h=00	w=05	t=10	s=15	r=20
+		e=01	o=06	h=11	c=16	d=21
+		l=02	r=07	i=12	y=17	u=22
+		l=03	l=08	s=13	b=18	d=23	
+		o=04	d=09	i=14	e=19	e=24
+
+the initial matrix is 
+
+	[00][01][02][03][04]
+	[05][06][07][08][09]
+	[10][11][12][13][14]
+	[15][16][17][18][19]
+	[20][21][22][23][24]
+
+after the first ciphrature became this:
+
+	[01][06][11][16][21]
+	[02][07][12][17][22]
+	[04][09][14][19][24]
+	[00][05][10][15][20]
+	[03][08][13][18][23]
+
+after the second ciphrature became this:
+
+	[06][07][09][05][08]
+	[11][12][14][10][13]
+	[21][22][24][20][23]
+	[01][02][04][00][03]
+	[16][17][19][15][18]
+
+so the result of ciphrature is this :
+
+==&gt; 06 07 09 05 08 11 12 14 10 13 21 22 24 20 23 01 02 04 00 03 16 17 19 15 18 
+
+This type of permutation is more difficult to decipher if you haven't a key! If you have a key 	and
+want obtain the original message you must be the same operation in inverted way using the  rows  as
+we have used the column to cipher the message: 
+		
+key = 41253
+	row |	message
+	----|------------------------
+	[1] |	[06][07][09][05][08]
+	[2] |	[11][12][14][10][13]
+	[3] |	[21][22][24][20][23]
+	[4] |	[01][02][04][00][03]
+	[5] |	[16][17][19][15][18]
+
+ciphred text: ordwl hiits duerd elohl cyesb 
+
+	row| text matrix 	row| number matrix
+	---|---------------	---|----------------------
+	[1]|[o][r][d][w][l]	[1]| [06][07][09][05][08]
+	[2]|[h][i][i][t][s]	[2]| [11][12][14][10][13]
+	[3]|[d][u][e][r][d]	[3]| [21][22][24][20][23]
+	[4]|[e][l][o][h][l]	[4]| [01][02][04][00][03]
+	[5]|[c][y][e][s][b]	[5]| [16][17][19][15][18]
+
+	CONVERSION TABLE
+	------------------
+	   | key | became 
+	---|-----|-------- 
+	row| [4] | col1
+	row| [1] | col2 
+	row| [2] | col3
+	row| [5] | col4
+	row| [3] | col5
+
+We can reobtain the first ciphred matrix transposing the row with che column  as  indicate  in  the 
+prev conversion talbe
+
+	 [e][o][h][c][d]	[01][06][11][16][21]
+	 [l][r][i][y][u]	[02][07][12][17][22]
+	 [o][d][i][e][e]	[04][09][14][19][24]
+	 [h][w][t][s][r]	[00][05][10][15][20]
+	 [l][l][s][b][d]	[03][08][13][18][23]
+
+If we reapply the conversion table we reobtain the original text 
+		  
+	row [4] =| h | e | l | l | o |		| 00 | 01 | 02 | 03 | 04 |
+	row [1] =| w | o | r | l | d |		| 05 | 06 | 07 | 08 | 09 |
+	row [2] =| t | h | i | s | i |		| 10 | 11 | 12 | 13 | 14 |
+	row [5] =| s | c | y | b | e |		| 15 | 16 | 17 | 18 | 19 |
+	row [3] =| r | d | u | d | e |		| 20 | 21 | 22 | 23 | 24 |
+
+The correct implementation of this alghoritm is that in the first time assign an index in order  to 
+all char of the text and after work only with this index to return only index in the ciphred  text! 
+The algorithm must be remeber the char that corrispond to  all  values  to  reobtain  the  original 
+message. 
+
+-[0x2]--------------------------------------------------------------------------- Rotation Machines
+To understand the way to work of a rotation machine we must imagine a cilinder with  26  input  and
+26 ouptut! everyone input point is connected with a single output point. We can associate  a single 
+alphabet letter to the position. In the next exsemple we don't rapresesnts all link  between  input 
+and output point becouse is difficult to see the structure byt only for three links : 24,06,07! The
+situation of the cilinder change every time we use it, in this moment for exemple at the  letter  A 
+is associate the input point 24 but after that we use it the cilinder ruote in bottom direction and
+A  link  to  the  23  input  point!  But  we don't want consider the case in witch we have only one 
+cilinder becouse it is very simple to decipher since we must try only 25 different combinations! If
+we use three cilinder where in the first cilinder we write the originale message and  the  cilinder 
+number three return the ciphred text we have this type of ciphrature: When we insert a single input
+(for exemple we click the a button that in this moment is linked with  24  input  point) the  first 
+return in output the value of current input/output point linked with A that is  24 (in this moment)
+Note that the input point are ordinated,the output point are stored in  unordered  way  to  do  the 
+ciphrature! This is an exemple of a single cilinder but we want use three cilinder not only one! 
+
+	     input  output
+	     point  point
+	      -----------
+	=&gt; A | 24--   10 | ==&gt; A
+	=&gt; B | 25  |  18 | ==&gt; B
+	=&gt; C | 26  |  13 | ==&gt; C
+	=&gt; D | 01  |  16 | ==&gt; D
+	=&gt; E | 02   --24 | ==&gt; E
+	=&gt; F | 03     17 | ==&gt; F
+	=&gt; G | 04   --06 | ==&gt; G
+	=&gt; H | 05  |  25 | ==&gt; H
+	=&gt; I | 06--   22 | ==&gt; I
+	=&gt; J | 07--   11 | ==&gt; J
+	=&gt; K | 08  |  15 | ==&gt; K
+	=&gt; L | 09  |  01 | ==&gt; L
+	=&gt; M | 10  |  08 | ==&gt; M
+	=&gt; N | 11  |  12 | ==&gt; N
+	=&gt; O | 12  |  02 | ==&gt; O
+	=&gt; P | 13  |  14 | ==&gt; P
+	=&gt; Q | 14   --07 | ==&gt; Q
+	=&gt; R | 16     09 | ==&gt; R
+	=&gt; S | 15     26 | ==&gt; S
+	=&gt; T | 17     23 | ==&gt; T
+	=&gt; U | 18     04 | ==&gt; U
+	=&gt; V | 19     19 | ==&gt; V 
+	=&gt; W | 20     21 | ==&gt; W
+	=&gt; X | 21     03 | ==&gt; X
+	=&gt; Y | 22     20 | ==&gt; Y
+	=&gt; Z | 23     05 | ==&gt; Z
+	      -----------
+
+Only one cilinder work in this way: I click A, A in this moment is linked to 24 that in this moment 
+rapresent the output value E but when i have clicked A the cilinder is ruoted in  bottom  direction
+so if I click A another time now A is linked to 23 and 23 returne U as output!!  But in  the  first
+we seid that only one cilinder is simple to decipher for an attacher so we ca use three cilinder to 
+force it to try 25x25x25 different combinations to obtain the correct result. If we work with three
+cilinder they are sets in this way : when I click A in input cilinder it control the point that  in 
+this moment is linked with A and return in output the value linked, this value is linked  with  the 
+input of the second cilinder that do the same of the first and return the result in  input  to  the 
+therd register that return in output linked output point that in this time corrisponds ad a letter!
+Another ineresting characteristic is the way inwitch the cilinder rote. The first cilinder route of 
+one position when the second have finished a full rotation and returns in the initial position. But 
+the second cilinder roteate of a one position only when the therd cilinder  have  finished  a  full
+rotation and returns in the initial position so we can said that the  therd  cilinder  cicle  every
+click, the second change position every 26 click and the first every 26x26click. This is an exemple
+that rapresent the rotation of the three cilinder: 
+
+		cylinder       cylinder       cylinder
+		  one           two            three
+	      -----------    -----------    ----------- 
+	=&gt; A | 24--   10 |  | 26   -&gt;04 |-&gt;| 22--   01 | A
+	=&gt; B | 25  |  18 |  | 01  |  11 |  | 23  |  11 | B
+	=&gt; C | 26  |  13 |  | 02  |  14 |  | 24  |  16 | C
+	=&gt; D | 01  |  16 |  | 03  |  26 |  | 25   -&gt;22 | D
+	=&gt; E | 02   -&gt;24 |-&gt;| 04--   07 |  | 26     07 | E
+	=&gt; F | 03     17 |  | 05     25 |  | 01     23 | F
+	=&gt; G | 04   -&gt;06 |-&gt;| 06--   12 |  | 02     08 | G 
+	=&gt; H | 05  |  25 |  | 07  |  10 |  | 03     15 | H
+	=&gt; I | 06--   22 |  | 08  |  23 |  | 04     26 | I
+	=&gt; J | 07--   11 |  | 09  |  03 |  | 05   -&gt;09 | J 
+	=&gt; K | 08  |  15 |  | 10  |  09 |  | 06  |  25 | K
+	=&gt; L | 09  |  01 |  | 11  |  21 |  | 07  |  18 | L
+	=&gt; M | 10  |  08 |  | 12  |  08 |  | 08  |  14 | M
+	=&gt; N | 11  |  12 |  | 13   -&gt;06 |-&gt;| 09--   20 | N
+	=&gt; O | 12  |  02 |  | 14   -&gt;16 |-&gt;| 10--   02 | O
+	=&gt; P | 13  |  14 |  | 15  |  02 |  | 11  |  19 | P
+	=&gt; Q | 14   -&gt;07 |-&gt;| 16--   19 |  | 12  |  21 | Q
+	=&gt; R | 16     09 |  | 17     22 |  | 13  |  06 | R
+	=&gt; S | 15     26 |  | 18     20 |  | 14  |  24 | S
+	=&gt; T | 17     23 |  | 19     13 |  | 15  |  03 | T
+	=&gt; U | 18     04 |  | 20     01 |  | 16  |  17 | U
+	=&gt; V | 19     19 |  | 21     24 |  | 17  |  04 | V
+	=&gt; W | 20     21 |  | 22     18 |  | 18  |  13 | W
+	=&gt; X | 21     03 |  | 23     05 |  | 19   -&gt;10 | X 
+	=&gt; Y | 22     20 |  | 24     17 |  | 20     12 | Y 
+	=&gt; Z | 23     05 |  | 25     15 |  | 21     05 | Z 
+	      -----------    -----------    -----------
+
+If in this moment I click A the cilinder n.1 return 24 as  output  that  in  input  to  the  second
+equals to the input point 04 (in this moment) and the second cylinder return his output and take it 
+in input to the therd cilinder, in this time the input point of the third cilinder  that  return in
+output the current point linked : 22 that is in &quot;position&quot; D and we can interprete cyphred(A) = D!!
+After that the therd cilinder ruote of a one position and the first and  second  don't  move.
+</pre></body></html>

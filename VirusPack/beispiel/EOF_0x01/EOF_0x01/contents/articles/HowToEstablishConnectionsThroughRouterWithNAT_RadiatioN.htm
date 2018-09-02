@@ -1,0 +1,145 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+How to establish connections through router with Network Address Translation (NAT)?
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+As a result of security and alot hacking attacks, most homeuser use routers with internal hardware firewalls
+to protect themself of danger from the internet. To translate the WAN ip to LAN ip(s) there exists a 
+technique called Network Address Translation (short: NAT). In this technique the router holds a table
+of entries with source and destination ip + ports to route incoming packets to the right pc in the LAN who
+reuqested data in the Internet. Most (or better: alot of) people think this is a umbreakable wall which 
+cannot be destroyed.
+
+Do you ever used Skype or Hamachi? If yes, do you ever wondered yourself why this apps are able to establish 
+direct connections to each other without activated port translastion in the router through the NAT?
+In this tutorial i will describe how you can break NAT and establish UDP data transfer through two routers 
+with active NAT. I'll use the the tricks i found out from Skype :)
+
+In this tutorial i can only descibe how UDP data transfer works through NAT, cause i never found out how
+to get a solution for TCP. Skype only uses TCP when there occur to many errors, but i was never able to create 
+so much errors :D
+
+In my example i want to use Alice and Bob as the name of PC1 and PC2. 
+(i hope you can interpret my ASCII graphics)
+
+The scene:
+                     +------------+
+                     | Connection |
+                     |   Server   |
+                     +------------+
+                            |
+                            |
+  +-------+            _____|____            +-------+
+  |       |   ____    |          |   ____    |       |
+  | Alice |---|___|---| Internet |---|___|---|  Bob  |
+  |       |   Router  |__________|   Router  |       |
+  +-------+                                  +-------+
+
+To get the trick working both clients need to be connected to the connection server via TCP, which could be a 
+modified irc server or somethings else which is able to answer requests instantly. So Alice and Bob are
+now connected to this server, waiting for request for each other. The connection server has now registered
+ans stored the ip of Alice and Bob to send it back to the other remote host for a 'connectback'.
+(You will see what i mean).
+
+Now wants Alice to call Bob and sends a request to the connection server to notify Bob to answer Alice's
+request after some milliseconds.
+
+                     +------------+
+               ___\  | Connection | _____
+ Request for  /   /  |   Server   |      \   TCP notification from server to answer
+ connection  /       +------------+       \  after some milliseconds to Alice
+ (TCP)      /               |              \|
+           /                |              &macr;
+  +-------+            _____|____            +-------+
+  |       |   ____    |          |   ____    |       |
+  | Alice |---|___|---| Internet |---|___|---|  Bob  |
+  |       |   Router  |__________|   Router  |       |
+  +-------+                                  +-------+
+
+Alice sends now a UDP packet to Bob with destination port set to 500 and source port 
+set to 300 for example. So the local NAT translation of Alice adds an entry to its table for Bob's Ip and the
+incoming port (300) to forward data to Alice if an answer packet will arrive from Bob.
+
+                     +------------+
+                     | Connection |
+                     |   Server   |
+                     +------------+
+              New           |
+              NAT           |
+  +-------+   entry    _____|____            +-------+
+  |       |   ____    |          |   ____    |       |
+  | Alice |---|___|---| Internet |---|___|---|  Bob  |
+  |       |   Router  |__________|   Router  |       |
+  +-------+                                  +-------+
+       \                             /\
+        \                            || Router blocks packet
+         \___________________________/  
+                  UDP Packet
+
+Now Bob's NAT blocks the incoming UDP packet, cause no entry in the table exists for this destination port.
+Some short time later Bob sends also an UDP packet as requested from Alice over the connection server to 
+Alice's Ip (Destination port: 300, Source port: 500). But now there exists an entry in Alice's Router NAT 
+table to forward data to Alice's local PC in the LAN. The packet of Bob was able to reach Alice through the 
+NAT cause we built a whole in the Firewall.
+
+                     +------------+
+                     | Connection |
+                     |   Server   |
+                     +------------+
+                            |        New
+                            |        NAT
+  +-------+            _____|____    entry   +-------+
+  |       |   ____    |          |   ____    |       |
+  | Alice |---|___|---| Internet |---|___|---|  Bob  |
+  |       |   Router  |__________|   Router  |       |
+  +-------+                                  +-------+
+      /\                                        /
+      ||                                       /
+       \______________________________________/
+                      UDP Packet
+
+Bob's router does the same as Alice's router and adds also an entry to its NAT table to forward packets 
+from Alice into the LAN. Now are both able to transfer data through this two wholes in the Firewall.
+
+                     +------------+
+                     | Connection |
+                     |   Server   |
+                     +------------+
+                            |
+                            |
+  +-------+            _____|____            +-------+
+  |       |   ____    |          |   ____    |       |
+  | Alice |---|___|---| Internet |---|___|---|  Bob  |
+  |       |   Router  |__________|   Router  |       |
+  +-------+                                  +-------+
+      /\                                        /\
+      ||                                        ||
+       \________________________________________/
+                 UDP Packet data transfer
+
+As you can see its not to complicated to establish connections through two NAT routers. This is only possible
+why NAT router manufacturer and programmer think that outgoing packets also will get an answer from the other 
+host and add a entry to their NAT table :) Maybe, but i dont know, is someone able to get connections working 
+without using some extra connection server as shown in the example. If you will find it out, you can notify 
+me about success or failure :)
+
+I hope you understood all of my tutorial cause my english sucks as you may already noticed :)
+
+Last words
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Some nice greetings go to the complete EOF group and especially to Skyout my good friend *keep on rocking*
+
+As always no copyright - free for any use
+
+Tutorial written by RadiatioN in October 2006 at EOF group
+http://www.eof-project.net
+
+My Site:
+http://radiation.eof-project.net
+
+Contact:
+radiation[at]eof-project[dot]net
+</pre></body></html>

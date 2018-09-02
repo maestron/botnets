@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: configgui - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x407 /fo"Debug/configgui.res" /d "_DEBUG" /d "_AFXDLL" "E:\Phatbot-stoney\configgui\configgui.rc"" 
+Creating temporary file "C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP5E8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "md5" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/configgui.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Phatbot-stoney\configgui\configgui.cpp"
+"E:\Phatbot-stoney\configgui\configguiDlg.cpp"
+"E:\Phatbot-stoney\configgui\md5\md5c.cpp"
+"E:\Phatbot-stoney\configgui\sapphire.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP5E8.tmp" 
+Creating temporary file "C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP5E9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "md5" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/configgui.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Phatbot-stoney\configgui\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP5E9.tmp" 
+Creating temporary file "C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP5EA.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/configguid.pdb" /debug /machine:I386 /out:"../configguid.exe" /pdbtype:sept 
+".\Debug\configgui.obj"
+".\Debug\configguiDlg.obj"
+".\Debug\md5c.obj"
+".\Debug\sapphire.obj"
+".\Debug\StdAfx.obj"
+".\Debug\configgui.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\JONATH~1\LOCALS~1\Temp\RSP5EA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+configgui.cpp
+configguiDlg.cpp
+md5c.cpp
+sapphire.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+configguid.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

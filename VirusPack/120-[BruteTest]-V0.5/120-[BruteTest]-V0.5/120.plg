@@ -1,0 +1,107 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP64.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Asn.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Netapi.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Netbios.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Pnp.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Sym.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vnc.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\120.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Adv.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Crc.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Cry.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Ide.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Ldll.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Rnd.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Shel.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Sys.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Test.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Thr.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\d3des.cpp"
+"E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp"
+]
+Creating command line "cl.exe @G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP64.tmp" 
+Creating temporary file "G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP65.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" 
+".\120\Asn.obj"
+".\120\Netapi.obj"
+".\120\Netbios.obj"
+".\120\Pnp.obj"
+".\120\Sym.obj"
+".\120\Vnc.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\Ide.obj"
+".\120\Ldll.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\Sys.obj"
+".\120\Test.obj"
+".\120\Thr.obj"
+".\120\d3des.obj"
+".\120\Vncbrute.obj"
+]
+Creating command line "link.exe @G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP65.tmp"
+<h3>Output Window</h3>
+Compiling...
+Asn.cpp
+Netapi.cpp
+Netbios.cpp
+Pnp.cpp
+Sym.cpp
+Vnc.cpp
+120.cpp
+Adv.cpp
+Crc.cpp
+Cry.cpp
+Ide.cpp
+Ldll.cpp
+Rnd.cpp
+Shel.cpp
+Sys.cpp
+Test.cpp
+Thr.cpp
+d3des.cpp
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\d3des.cpp(70) : error C2065: 'key' : undeclared identifier
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\d3des.cpp(70) : error C2065: 'edf' : undeclared identifier
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\d3des.cpp(71) : error C2448: '<Unknown>' : function-style initializer appears to be a function definition
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\d3des.cpp(71) : fatal error C1004: unexpected end of file found
+Vncbrute.cpp
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(183) : error C2065: 'exinfo' : undeclared identifier
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(183) : error C2228: left of '.ip' must have class/struct/union type
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(186) : error C2664: 'ReadExact' : cannot convert parameter 2 from 'unsigned char [12]' to 'char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(187) : error C2664: 'strstr' : cannot convert parameter 1 from 'unsigned char [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(188) : error C2664: 'WriteExact' : cannot convert parameter 2 from 'unsigned char [12]' to 'char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(189) : error C2664: 'strtok' : cannot convert parameter 1 from 'unsigned char [12]' to 'char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(199) : error C2065: 'CHANNEL' : undeclared identifier
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(217) : error C2664: 'ReadExact' : cannot convert parameter 2 from 'unsigned char [16]' to 'char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(222) : error C2664: 'WriteExact' : cannot convert parameter 2 from 'unsigned char [16]' to 'char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Archive\Other\Root\@@ 120 VnC Brute @@\120-[ModBot]-V0.5\Scanners\Vncbrute.cpp(226) : error C2664: 'ReadExact' : cannot convert parameter 2 from 'unsigned char [4]' to 'char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+120.exe - 14 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

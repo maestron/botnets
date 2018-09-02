@@ -1,0 +1,42 @@
+-BOT-COMMANDS_
+bot.disconnect
+bot.info
+bot.log
+bot.login <pass>
+bot.logout
+bot.netinfo
+bot.raw <buffer>
+bot.remove
+bot.sysinfo
+
+-DDOS-COMMANDS
+ddos.bandwith <url> <times> <delay>
+
+-DOWNLOAD-COMMANDS-
+download.http <url> <saveto> <run(0/1>
+download.update <url>
+
+-FILE-COMMANDS-
+file.delete <file>
+file.execute <file> <visibility(0/1)>
+file.open <file>
+
+-KEYLOGGER-COMMANDS-
+keylog.start <filename>
+keylog.stop
+
+-PROCESS-COMMANDS-
+process.kill <processname>
+process.list
+
+-SCAN-COMMANDS-
+scan.cip
+scan.start <ip> <port/exploit> <delay> <threads> (-r(random, optional))
+scan.stop
+
+-SNIFFER-COMMANDS-
+sniff.start
+sniff.stop
+
+-OTHERS-
+-s == SILENT. Add after any command and bot will NOT reply and be silent!

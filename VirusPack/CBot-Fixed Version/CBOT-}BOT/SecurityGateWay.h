@@ -1,0 +1,1 @@
+void SecGate(ExploitInfo_s* pExploitInfo);

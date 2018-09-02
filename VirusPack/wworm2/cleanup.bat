@@ -1,0 +1,16 @@
+del *.dcu
+del *.~*
+del *.bak
+del *.exe
+del *.obj
+cd units
+del *.dcu
+del *.~*
+del *.bak
+cd ..
+cd units
+cd msnapi
+del *.dcu
+del *.~*
+del *.bak
+echo CLEANED

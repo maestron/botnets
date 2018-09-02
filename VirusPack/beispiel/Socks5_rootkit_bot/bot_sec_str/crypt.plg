@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: crypt - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP1E3.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/crypt.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"S:\developer\Socks5_rootkit+bot\bot_sec_str\crypt.cpp"
+]
+Creating command line "xicl6.exe @C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP1E3.tmp" 
+Creating temporary file "C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP1E4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/crypt.pdb" /debug /machine:I386 /out:"Debug/crypt.exe" /pdbtype:sept 
+".\Debug\crypt.obj"
+]
+Creating command line "xilink6.exe @C:\DOCUME~1\0x7A69\LOCALS~1\Temp\RSP1E4.tmp"
+<h3>Output Window</h3>
+Compiling...
+crypt.cpp
+s:\developer\socks5_rootkit+bot\bot_sec_str\crypt.cpp(35) : warning C4129: '*' : unrecognized character escape sequence
+s:\developer\socks5_rootkit+bot\bot_sec_str\crypt.cpp(35) : warning C4129: '*' : unrecognized character escape sequence
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+crypt.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

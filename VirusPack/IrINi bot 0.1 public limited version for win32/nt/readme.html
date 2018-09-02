@@ -1,0 +1,525 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+  <title>JEDI Windows API Library</title>
+  <style>
+    body
+            {
+            padding: 0px 0px 0px 26px;
+            background: #ffffff;
+            color: #000000;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 70%;
+            }
+
+    div
+            {
+            width: 90%;
+            border: 2px solid #999999;
+            padding: 4px 8px;
+            background: #cccccc;
+            }
+	
+    h1, h2, h3, h4
+            {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin-left: -26px;
+            }
+
+    h1
+            {
+            font-size: 145%;
+            margin-top: .5em;
+            margin-bottom: .5em;
+            }
+	
+    h2
+            {
+            font-size: 130%;
+            margin-top: 1em;
+            margin-bottom: .6em; 
+            }
+	
+    h3
+            {
+            font-size: 115%;
+            margin-top: 1em;
+            margin-bottom: .6em;
+            }
+	
+    h4
+            {
+            font-size: 100%;
+            margin-top: 1em;
+            margin-bottom: .6em; 
+            }
+
+    ul p, ol p, dl p
+            {
+            margin-left: 0em;
+            }
+
+    p
+            {
+            margin-top: .6em;
+            margin-bottom: .6em;
+            }
+
+    p.notice {
+            color: #ff0000;
+            }
+
+    dl
+            {
+            margin-top: 0em;
+            }
+
+    dd
+            {
+            margin-bottom: 0em;
+            margin-left: 1.9em;
+            }
+
+    dt
+            {
+            margin-top: .6em;
+            }
+
+    ul, ol
+            {
+            margin-top: .6em;
+            margin-bottom: 0em;
+            }
+
+    ol
+            {
+            margin-left: 1.9em;
+            }
+
+    ul
+            {
+            list-style-type: disc;
+            margin-left: 1.9em;
+            }
+
+    li
+            {
+            margin-bottom: .6em;
+            }
+
+    ul ol, ol ol
+            {
+            list-style-type: lower-alpha;
+            {
+
+    table
+            {
+            width: 90%;
+            background: #999999;
+            margin-top: .6em;
+            margin-bottom: .3em;
+            }
+
+    td
+            { 
+            padding: 4px 8px;
+            background: #ffffff;
+            vertical-align: top;
+            font-size: 70%;
+            }
+
+
+    a:link
+            {
+            color: #0066ff;
+            }
+
+    a:visited
+            {
+            color: #996600;
+            }
+
+    a:hover
+            {
+            color: #cc9900;
+            }
+            
+    pre
+            {
+            margin-top: .6em;
+            margin-bottom: .6em;
+            }
+
+    pre.syntax
+            {
+            background: #dddddd;
+            padding: 2pt,4pt;
+            cursor: text;
+            }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h2>Delphi 4 Users Read This</h2>
+  <p>
+  There's a problem using these units in Delphi. The problem is that in some places 
+  I use constant declarations like this:<br>
+  RESTORE_LAST_ERROR_NAME_W = WideString('RestoreLastError');<br>
+  which cause access violations at compile time. The work around is to change these
+  constants to:<br>
+  RESTORE_LAST_ERROR_NAME_W : PWideChar = 'RestoreLastError';<br>
+  When I have time I'll change this, until then at least you know...Thanks to 
+  Roman Grycz (Romek?) for reporting this.
+  </p>
+
+  <h2>What's new?</h2>
+
+  <p>
+  <h3December 2003</h3>
+  <p><b>New conversions.</b>
+  <p>The following units were added:
+  <ul>
+    <li>BlueTooth related units (thanks to John Penman)</li> 
+    <li>JwaNtDdPar (thanks to Pasha Sivtsov)</li>
+    <li>JwaBitsCfg, JwaBits1_5 (Thanks to Wayne Sherman)</li>
+    <li>JwaIcmpApi, JwaDsSec, JwaDhcpsApi</li>
+    <li>64 bit interlocked functions (Thanks to Will DeWitt Jr.</li>
+  </ul>
+  </p>
+
+  <p>
+  <h3>April 2003</h3>
+  <p><b>Updated units.</b>
+  <p>Most units were updated to the Windows Server 2003 Platform SDK release</p>
+  <p>Incorporated bugreports by Will de Wit</p>
+  <p><b>New conversions.</b>
+  <p>The following units were added:
+  <ul>
+    <li>System Event Notification Service API</li>
+    <li>System Restore API</li>
+  </ul>
+  </p>
+
+  <p>
+  <h3>30 Januari 2003</h3>
+  <p><b>Updated units.</b>
+  <p>Most units were updated to the November 2002 Platform SDK release</p>
+
+  <p>
+  <h3>25 November 2002</h3>
+  <p><b>Updated units.</b>
+  <p>Several minor bugfixes to different units.
+  <p><b>New conversions.</b>
+  <p>The following units were added:
+  <ul>
+    <li>JwaImapi (imapi.h))</li>
+    <li>JwaImapiError (imapierror.h)</li>
+  </ul>
+  </p>
+
+  <p>
+  <h3>3 September 2002</h3>
+  <p><b>Updated units.</b>
+  <p>Several minor bugfixes to different units.
+  </p>
+
+  <p>
+  <h3>24 July 2002</h3>
+  <p><b>Updated units.</b>
+  <p>JwaWinError.pas updated to the Windows XP SP 1 Platform SDK.
+  </p>
+
+  <p>
+  <h3>10 July 2002</h3>
+  <p><b>Updated units.</b>
+  <p>All units except two or three were updated to the Windows XP SP 1 Platform SDK.
+  </p>
+
+  <p>
+  <h3>10 May 2002</h3>
+  <p><b>New conversions.</b>
+  <p>The following units were added:
+  <ul>
+    <li>JwaIsGuids (isguids.idl)</li>
+    <li>JwaShlGuid (shlguid.h)</li>
+  </ul>
+  </p>
+
+  <p>
+  <h3>10 April 2002</h3>
+  <p><b>New conversions.</b>
+  <p>The following units were added:
+  <ul>
+    <li>JwaWbemCli (wbemcli.idl)</li>
+    <li>JwaWmiStr (wmistr.h)</li>
+    <li>JwaFaxDev (faxdev.h)</li>
+    <li>JwaFaxExt (faxext.h)</li>
+    <li>JwaFaxMmc (faxmmc.h)</li>
+    <li>JwaFaxRoute (faxroute.h)</li>
+    <li>JwaWinFax (winfax.h)</li>
+  </ul>
+  </p>
+
+  <p>
+  <h3>10 March 2002</h3>
+  <p><b>New conversions.</b>
+  <p>The following units were added:
+  <ul>
+    <li>JwaWinCred (wincred.h)</li>
+    <li>JwaCmnQuery (cmnquery.h)</li>
+    <li>JwaDSQuery (dsquery.h)</li>
+    <li>JwaHtmlGuid (htmlguid.h)</li>
+    <li>JwaIAccess (iaccess.h)</li>
+    <li>JwaIAdmExt (iadmext.h)</li>
+    <li>JwaIpInfoId (ipinfoid.h)</li>
+  </ul>
+  </p>
+  <p>
+  <p><b>Updated units</b>
+  <p>The following units were updated:
+  <ul>
+    <li>JwaNtDsApi</li>
+  </ul>
+  </p>
+
+  <p>
+  <h3>18 februari 2002</h3>
+  <p><b>Lan Manager header files (lm*.h).</b>
+  <p>Reason for this addition is twofold:<br>
+  <ol>
+    <li>The LM.pas interface unit included in this package was getting out of 
+        synch with the original from Petr and errors were creeping in. Conversion 
+        from scratch was imo the only way to remove all these errors.
+    <li>The original LM interface units were done by Petr and his copyright. This
+        somewhat limits me in my freedom to do as I want with those units.
+  </ol>
+  <p>
+  Petr's original LM interface unit is still included (JwaLM.pas) for those that
+  are already using it. New development should use either Petr's original units
+  (available from http://www.delphi-jedi.org) or the new units included in this
+  release (the individual JwaLmXYZ.pas units, not JwaLM.pas). Existing applications
+  should continue to use the JwaLM.pas unit as the new units are different in many
+  aspects (e.g. in the conversion of parameters, types and so forth).
+  Eventually JwaLM.pas from Petr will be removed...
+  </p>
+  <p>
+  <b>Up to date with November 2002 Platform SDK</b>
+  <p>
+  The units are now up to date with the November 2002 release of the Platform SDK.
+  This means that the included units are up to date with their equivalent header
+  files in the PSDK, not that all header files are converted - obviously..
+  The only files that are not yet up to date are:<br>
+  <ul>
+    <li>NtDsApi.pas</li>
+    <li>NtSecPkg.pas</li>	
+	<li>WinCrypt.pas</li>
+  </ul>
+  Hopefully I'll be able to attend to these soon.
+  </p>
+
+  <h3>8 januari 2002</h3>
+  <p>
+  The most significant change in this release is the addition of dynamic linking
+  support for all units. By default dynamic linking is turned off, to turn on
+  dynamic linking remove the dot in the line:<br>
+
+  <pre class=syntax>
+  {.$DEFINE DYNAMIC_LINK}
+  </pre>
+
+  <p>
+  inside WinDefines.inc. In this release this will turn on dynamic linking for all
+  interface units, in a future release I might add support to contorl this on a
+  unit-by-unit basis. Dynamic linking is supported by using a small assembler stub
+  that loads the DLL on demand only when the routine is actually used. There is no
+  need to call any special initialization routine, all happens automatically.
+  Thanks goes out to the guys in borland.public.delphi.basm for their help in
+  implementing this.
+
+  <p>
+  Please note that currently there is no way to find out upfront whether or not a
+  required library is present on the system other than explicitly testing this
+  yourself using LoadLibrary(), a future release might add support for this. In
+  case the required library is not present on the system, an exception is raised.
+  The exception is either EJwaLoadLibraryError or EJwaGetProcAddressError (both
+  defined in JwaWinType and descended from EJwaError) if LoadLibrary() or
+  GetProcAddress() fails respectively. Therefor, you'll need to protect your API
+  calls using a try...except block like this:<br>
+
+  <pre class=syntax>
+  var
+    H: HANDLE;
+  begin
+    try
+      H := CreateFile(...);
+      if H <> INVALID_HANDLE_VALUE then
+      begin
+        ...
+        CloseHandle(H);
+      end;
+    except
+      on EJwaError do
+      begin
+        // Either CreateFile or CloseHandle could not be found, handle that
+        // situation somehow.
+      end;
+    end;
+  end;
+  </pre>
+
+  <h2>Known issues</h2>
+
+  <ul>
+    <li>All functions with the cdecl calling convention do not yet support dynamic 
+        linking. This mostly involves JwaWinBer and JwaWinLdap but there exist a few
+        other instances.
+    <li>There are still plenty of TODO markers :-(
+    <li>The JwaAdsTLB unit has a few errors. This is a type library import and the
+        errors are a result of bugs in the Delphi type library importer, not mine.
+        Thanks to Chris Burr for pointing this out, sorry Chris but I haven't had
+        time to fix it yet.
+  </ul>
+
+  <h2>Installation</h2>
+
+  The Win32 interface units do not need explicit installation but you do need to
+  make sure that Delphi can find them. There are two ways to accomplish this,
+  using Project Options or Environment Options. First you need to extract the zip
+  into a directory of your liking, we'll refer to this directory as $(WIN32API).
+  Now follow either of the steps outlined in the next two sections.
+
+  <h4>Using Project Options</h4>
+
+  From the IDE menu select "Project > Options" and switch to the
+  "Directories/Conditionals" page in the dialog that appears. Find the edit box
+  labelled "Search Path", type in the $(WIN32API) path and select OK. Alternatively
+  you can use the ellipsis button to navigate to the directory in question. You
+  will need to repeat this for every new project you start that uses the Win32 API
+  interface units.
+
+  <h4>Using Environment Options</h4>
+
+  From the IDE menu select "Tools > Environment Options" and switch to the "Library"
+  page in the dialog that appears. Find the edit box labelled "Library Path", it
+  should contain something along the lines of "$(DELPHI)\Lib;$(DELPHI)\Bin;$(DELPHI)\Imports;$(DELPHI)\Projects\Bpl".
+  Change this to include the $(WIN32API) directory. For example, assuming you've
+  unzipped the Win32Api.zip file to "c:\win32api":<br>
+  "$(DELPHI)\Lib;$(DELPHI)\Bin;$(DELPHI)\Imports;$(DELPHI)\Projects\Bpl;c:\win32api".
+  Don't forget to seperate using a semicolon. You don't have to manually edit this
+  string, you can press the ellipsis button to navigate to the $(WIN32API) directory
+  and add it automatically. After pressing OK Delphi will be able to find the units
+  for every new project without the need to specify the directory again.
+
+  <p>
+  If you performed the steps above you can start using the units in your application
+  by including the appropriate ones in your uses clause. I personally prefer to
+  use Project Options instead of Environment Options to avoid problems. One known
+  problem is that when you use the Enironment Options method, you might get compiler
+  errors when trying to build the JEDI Code Library.
+
+  <h2>Using the units</h2>
+
+  When you use these interface units keep in mind that they duplicate a lot of
+  what's in the interface units that ship with Delphi, such as Windows.pas. These
+  units can co-exist but you need to make sure that you do not mix the usage of them
+  too much. For example, either use Windows.pas or the equivalents in this library
+  but not both, otherwise you might run into incompatibilities between them resulting
+  in compile errors. The easiest way is to not include both in the uses clause of
+  your own units. If this is impossible for some reason you're best of using explicit
+  unit qualification when using anything. For example, instead of using "CreateProcess"
+  use either "Windows.CreateProcess" or "JwaWinBase.CreateProcess". If you do not use
+  unit qualification you end up using the one from the unit last mentioned in the
+  uses clause.
+
+  <p>
+  The most common error you're likely to encounter is:
+  "Incompatible types: 'System.WideChar' and 'JwaWinType'.WideChar" where WideChar
+  is only an example. This is due to the fact that the RTL (e.g. System.pas or
+  Windows.pas) defines the type WideChar differently from WinType.pas. To solve
+  this simply change the declaration in JwaWinType.pas to become an alias for the
+  type in System.pas (or Windows.pas). For example
+  Before:
+  <pre class=syntax>
+  <b>type</b>
+    DWORD = Longword;
+  </pre>
+  After:
+  <pre class=syntax>
+  <b>type</b>
+    DWORD = Windows.DWORD;
+  </pre>
+  If you look inside JwaWinType.pas you see that I've already done this for the most
+  common types (using conditional compilation) like this
+  <pre class=syntax>
+  <b>type</b>
+    DWORD = {$IFDEF USE_DELPHI_TYPES}Windows.DWORD{$ELSE}Longword{$ENDIF};
+  </pre>
+  therefore it's unlikely you'll run into this problem. However, if you do please
+  notify me so I can update the interface units.
+
+  <p>
+  Please note that these units heavily use conditional compilation. You can
+  globally change some settings, and thereby determine how they get compiled,
+  through the WinDefines.inc include file. An example of this would be to specify
+  an unicode build. There are a few more directives which cannot be set globally
+  (yet), look through the unit itself to find them. Full documentation for all
+  directives will be provided in a later release.
+
+  <p>
+  Also note that all LanManager units (LM*.pas) were combined into a single
+  unit LM.pas for convenience. The same applies to the Ads*.pas units which
+  were combined into ActiveDS.pas and all Rpc*.pas files which were combined
+  into Rpc.pas. Furthermore, the LanManager translation was done by Petr Vones
+  and is included with his permission. The WinLDAP unit was created by Luk Vermeulen.</p>
+
+  <h2>Copyright</h2>
+
+  These units are distributed under the terms of of the MPL, or optionally the
+  terms of the LGPL. What this means is that they are completely free and can
+  be used in all development, even commercial applications. I have a few requests
+  though:
+  <ul>
+    <li>Please redistribute only using the MPL/LGPL dual license eventhough you
+        are legally allowed to redistribute using only MPL or LGPL.
+    <li>Please read, or have your legal department read, through the text of the
+        <a href="http://www.mozilla.org/MPL/MPL-1.1.html">MPL</a> and/or
+        <a href="http://www.gnu.org/copyleft/lesser.html">LGPL</a> to make sure
+        you understand your rights and obligations.
+    <li>If neither the MPL and LGPL fit your needs you I can grant you a different
+        license. <a href="mailto:brakelm@chello.nl?subject=Win32Api Licensing">
+        Contact me</a> for more information. Depending on the details, this will
+        cost you something though (dunno what exactly yet, perhaps a monetary
+        donation or a free copy of your product, we'll see).
+  </ul>
+  <p>
+  Please be aware that the WinLDAP unit was created by Luk Vermeulen and can only
+  be used and distributed under the MPL license. It's included because of dependencies
+  on this unit. I may convert the header myself one day.
+
+  <h2>Feedback</h2>
+
+  Any and all feedback can be send to <a href="mailto:brakelm@chello.nl?subject=Win32Api">
+  brakelm@chello.nl</a>. Please do not send me any generic API related questions,
+  for that you should use the Borland newsgroups
+  (see <a href="http://community.borland.com">the Borland Community site</a> for
+  more information). Questions directly related to the use, or problems encountered
+  by the use of, these units can of course be directed at the above address. Please
+  include the phrase "Win32Api" in the subject header.
+
+  <h2>Request an interface unit</h2>
+
+  If you're in desperate need of an interface unit for some C/C++ API you can
+  <a href="mailto:brakelm@chello.nl?subject=Win32Api Request">send me a request</a>
+  through e-mail. I cannot promise that I will convert the unit(s) within any
+  particular time frame, or at all, but I will let you know about it. Note that
+  you can also hire me to do header conversions, in that case I will guarentee
+  delivery within a certain time frame which depends on the header(s) themselves.
+  Mail me at the above address for more information.
+
+</body>
+
+</html>

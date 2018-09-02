@@ -1,0 +1,544 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FBIClient - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Release/Resource.res" /d "NDEBUG" "C:\Program Files\Microsoft Visual Studio\MyProjects\FBIRAT\FBIClient\Resource.rc"" 
+Creating temporary file "C:\Users\ALBINO~1\AppData\Local\Temp\RSPAADF.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib comctl32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Client.pdb" /machine:I386 /out:"Release/Client.exe" /FORCE:MULTIPLE 
+".\Release\FBISocket.obj"
+".\Release\File Manager.obj"
+".\Release\FileSocket.obj"
+".\Release\Keylog.obj"
+".\Release\Main.obj"
+".\Release\MainGui.obj"
+".\Release\PacketSniff.obj"
+".\Release\ParseData.obj"
+".\Release\Screen.obj"
+".\Release\ServerManager.obj"
+".\Release\SystemManager.obj"
+".\Release\WebCam.obj"
+".\Release\Xor.obj"
+".\Release\Resource.res"
+]
+Creating command line "link.exe @C:\Users\ALBINO~1\AppData\Local\Temp\RSPAADF.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+File Manager.obj : warning LNK4006: "char * Key" (?Key@@3PADA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int CL" (?CL@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int ServerPort" (?ServerPort@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+File Manager.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+FileSocket.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "char * Key" (?Key@@3PADA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int CL" (?CL@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int ServerPort" (?ServerPort@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Keylog.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "char * Key" (?Key@@3PADA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int CL" (?CL@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int ServerPort" (?ServerPort@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Main.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+MainGui.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+PacketSniff.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+ParseData.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Screen.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+SystemManager.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+WebCam.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int IC" (?IC@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int CUNT" (?CUNT@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int A" (?A@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int D" (?D@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int Listen" (?Listen@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned long dwBackColor" (?dwBackColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned long dwTitleColor" (?dwTitleColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned long dwTimeColor" (?dwTimeColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned long dwTextColor" (?dwTextColor@@3KA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "char * ConnectionsA" (?ConnectionsA@@3PADA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int Connections" (?Connections@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int S" (?S@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "int AdrLen" (?AdrLen@@3HA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HINSTANCE__ * CInst" (?CInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct _iobuf * * SCREENDOWN" (?SCREENDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned int * FileServer" (?FileServer@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * Web" (?Web@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * KeyHwnd" (?KeyHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct sockaddr_in ServAdr" (?ServAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * File" (?File@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * RenameF" (?RenameF@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HBITMAP__ * * WebA" (?WebA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned int * FClient" (?FClient@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * Rename" (?Rename@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "char * Time" (?Time@@3PADA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * System" (?System@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HINSTANCE__ * WebInst" (?WebInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct _iobuf * * WEBDOWN" (?WEBDOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct sockaddr_in ServAdress" (?ServAdress@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * Screen" (?Screen@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HINSTANCE__ * GInstance" (?GInstance@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * FBI" (?FBI@@3PAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct FBIPACKETA * Information" (?Information@@3PAUFBIPACKETA@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HINSTANCE__ * SysInst" (?SysInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned int * Server" (?Server@@3PAIA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned int hSock" (?hSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned int FSock" (?FSock@@3IA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HINSTANCE__ * ScreenInst" (?ScreenInst@@3PAUHINSTANCE__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HWND__ * * PacketHwnd" (?PacketHwnd@@3PAPAUHWND__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct _iobuf * * Logs" (?Logs@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "unsigned short Event" (?Event@@3GA) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct _iobuf * * DOWN" (?DOWN@@3PAPAU_iobuf@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct sockaddr_in RemAdr" (?RemAdr@@3Usockaddr_in@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "struct HBITMAP__ * * ScreenA" (?ScreenA@@3PAPAUHBITMAP__@@A) already defined in FBISocket.obj; second definition ignored
+Xor.obj : warning LNK4006: "char * RecvBuffer" (?RecvBuffer@@3PADA) already defined in FBISocket.obj; second definition ignored
+Release/Client.exe : warning LNK4088: image being generated due to /FORCE option; image may not run
+
+
+
+<h3>Results</h3>
+Client.exe - 0 error(s), 505 warning(s)
+</pre>
+</body>
+</html>

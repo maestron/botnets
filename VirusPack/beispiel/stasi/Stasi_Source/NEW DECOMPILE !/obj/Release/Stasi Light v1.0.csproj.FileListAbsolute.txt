@@ -1,0 +1,3 @@
+C:\Users\Geert\Desktop\Neuer Ordner 3\bots source\stasi\Stasi_Source\NEW DECOMPILE !\bin\Release\Stasi Light v1.0.exe
+C:\Users\Geert\Desktop\Neuer Ordner 3\bots source\stasi\Stasi_Source\NEW DECOMPILE !\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Geert\Desktop\Neuer Ordner 3\bots source\stasi\Stasi_Source\NEW DECOMPILE !\obj\Release\Stasi Light v1.0.exe

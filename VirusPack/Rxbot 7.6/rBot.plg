@@ -1,0 +1,176 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Akos\LOCALS~1\Temp\RSPF5.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "NO_AVFW_KILL" /D "NO_SECSYSTEM" /D "NO_REGISTRY" /D "NO_EHANDLER" /D "NO_CRYPT" /D "DEBUG_LOGGING" /FR"Debug/" /Fp"Debug/rBot.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\advscan.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\aliaslog.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\autostart.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\capture.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\cdkeys.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\crc32.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\crypt.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\dcc.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\dcom.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\dcom2.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\ddos.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\download.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\driveinfo.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\ehandler.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\findfile.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\findpass.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\fphost.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\httpd.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\icmpflood.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\ident.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\irc_send.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\keylogger.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\loaddlls.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\lsass.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\misc.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\mssql.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\net.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\netbios.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\netutils.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\pingudp.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\processes.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\psniff.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\rBot.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\redirect.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\remotecmd.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\rlogind.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\rndnick.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\scan.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\secure.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\session.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\shellcode.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\socks4.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\synflood.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\sysinfo.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\tcpflood.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\tftpd.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\threads.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\visit.cpp"
+"C:\Documents and Settings\Akos\Desktop\Rxbot Uncanny\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Akos\LOCALS~1\Temp\RSPF5.tmp" 
+Creating temporary file "C:\DOCUME~1\Akos\LOCALS~1\Temp\RSPF6.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/rBot.map" /debug /machine:I386 /out:"Debug/rBot.exe" 
+".\Debug\advscan.obj"
+".\Debug\aliaslog.obj"
+".\Debug\autostart.obj"
+".\Debug\capture.obj"
+".\Debug\cdkeys.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\dcc.obj"
+".\Debug\dcom.obj"
+".\Debug\dcom2.obj"
+".\Debug\ddos.obj"
+".\Debug\download.obj"
+".\Debug\driveinfo.obj"
+".\Debug\ehandler.obj"
+".\Debug\findfile.obj"
+".\Debug\findpass.obj"
+".\Debug\fphost.obj"
+".\Debug\httpd.obj"
+".\Debug\icmpflood.obj"
+".\Debug\ident.obj"
+".\Debug\irc_send.obj"
+".\Debug\keylogger.obj"
+".\Debug\loaddlls.obj"
+".\Debug\lsass.obj"
+".\Debug\misc.obj"
+".\Debug\mssql.obj"
+".\Debug\net.obj"
+".\Debug\netbios.obj"
+".\Debug\netutils.obj"
+".\Debug\pingudp.obj"
+".\Debug\processes.obj"
+".\Debug\psniff.obj"
+".\Debug\rBot.obj"
+".\Debug\redirect.obj"
+".\Debug\remotecmd.obj"
+".\Debug\rlogind.obj"
+".\Debug\rndnick.obj"
+".\Debug\scan.obj"
+".\Debug\secure.obj"
+".\Debug\session.obj"
+".\Debug\shellcode.obj"
+".\Debug\socks4.obj"
+".\Debug\synflood.obj"
+".\Debug\sysinfo.obj"
+".\Debug\tcpflood.obj"
+".\Debug\tftpd.obj"
+".\Debug\threads.obj"
+".\Debug\visit.obj"
+".\Debug\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Akos\LOCALS~1\Temp\RSPF6.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+aliaslog.cpp
+autostart.cpp
+capture.cpp
+cdkeys.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+dcom.cpp
+dcom2.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+irc_send.cpp
+keylogger.cpp
+loaddlls.cpp
+lsass.cpp
+misc.cpp
+mssql.cpp
+net.cpp
+netbios.cpp
+netutils.cpp
+pingudp.cpp
+processes.cpp
+psniff.cpp
+rBot.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+visit.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

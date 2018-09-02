@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RXB()tM()d - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP660.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"RXB()tM()d/" /Fp"RXB()tM()d/RXB()tM()d.pch" /YX /Fo"RXB()tM()d/" /Fd"RXB()tM()d/" /FD /c 
+"D:\exploits\BOTS\RXB()tM()d-VNC-NETAPI-ASN-2006\Ad.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP660.tmp" 
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP661.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"RXB()tM()d/RXB()tM()d.map" /debug /machine:I386 /out:"RXB()tM()d/RXB()tM()d.exe" 
+".\RXB()tM()d\Asn.obj"
+".\RXB()tM()d\netapi.obj"
+".\RXB()tM()d\vnc.obj"
+".\RXB()tM()d\Ad.obj"
+".\RXB()tM()d\Crc.obj"
+".\RXB()tM()d\Cry.obj"
+".\RXB()tM()d\Id.obj"
+".\RXB()tM()d\Ke.obj"
+".\RXB()tM()d\Ld.obj"
+".\RXB()tM()d\Rn.obj"
+".\RXB()tM()d\RXB()tM()d.obj"
+".\RXB()tM()d\Sh.obj"
+".\RXB()tM()d\Sy.obj"
+".\RXB()tM()d\Sys.obj"
+".\RXB()tM()d\Te.obj"
+".\RXB()tM()d\Th.obj"
+".\RXB()tM()d\RXB()tM()d.res"
+]
+Creating command line "link.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP661.tmp"
+<h3>Output Window</h3>
+Compiling...
+Ad.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+RXB()tM()d.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

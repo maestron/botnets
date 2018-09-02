@@ -1,0 +1,66 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Rembrandt/Helith || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+            _   _ _____ _     ___ _____ _   _
+           / / / / ____/ /   /  _/_  __/ / / /
+          / /_/ / __/ / /    / /  / / / /_/ /
+         / __  / /___/ /____/ /  / / / __  /
+        /_/ /_/_____/_____/___/ /_/ /_/ /_/ 
+
+Topic      : Security
+Information: HowTo
+Author     : Rembrandt
+Status     : Stable
+
+How to create a RSA/ElGamal-Key or an RSA/RSA-Key with GnuPG?
+-------------------------------------------------------------
+
+To make this HowTo short I won't spend much time explaining the basics which
+should be known. It demotivates to read the Manpage if you wanna create other
+keypairs then those provided by the limited generator.
+If you create a normal Keypair you`ll mostly get an DSA/ElGamal-Keypair
+if you don`t choose RSA. A normal DSA/ElGamal-Keypair is 1024Bit/4096Bit strong.
+The ElGamal value is variable but the DSA value is limited by the specification
+to exactly 1024Bit.
+
+DSA (1024Bit FIPS-180-1) is used to sign your messages and ElGamal is used
+to encrypt the messages. The problem with DSA is the limitation to 1024Bit
+and propably also that it was invented by the NSA.
+
+I prefer ElGamal because the mathematical concepts behind
+RSA and Elgamal are different. If you choose RSA all your trust belongs
+to the mathematical princip this algorithm belongs to.
+This means if the mathematical problem of RSA was solved some day
+your signatures can be faked.
+I personaly recomment ElGamal-RSA combination.
+
+So how do you create other Kay-Pairs then those provided by the Keygeneration?
+Both Methods provide a 4096/4096 Bit Keypair (compared to 1024/4096 
+wich is the default).
+
+I won't make this HowTo big so just type the following commands at your shell.
+
+shell-type -&gt; gpg --gen-key
+choose -&gt; 5
+choose -&gt; your options (4096Bit should be used)
+
+shell-type -&gt; gpg --key-edit &amp;KEY-ID
+shell-type -&gt; addkey
+shell-type -&gt; ElGamal (4) or RSA (6)
+
+choose-&gt; your options (4096Bit are prefered again.. right?)
+type -&gt; Quit the interactive-mode with &quot;quit&quot;
+
+To check the results use gpg --list-keys &amp;KEYID
+-------------------------------
+pub   4096R/0D09C0CC 2006-05-09
+uid                  Rembrandt &lt;rembrandt@testbox.org&gt;
+sub   4096g/4FE5EE5F 2006-05-09
+-------------------------------
+As you can see we generated a 4096/4096 Bit Keypair (I choosed RSA/ElGamal).
+
+Have Fun...
+</pre></body></html>

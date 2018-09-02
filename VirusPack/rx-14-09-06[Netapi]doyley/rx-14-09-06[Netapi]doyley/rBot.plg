@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Drx - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\liam\LOCALS~1\Temp\RSP42.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"bin/Release/rBot.pch" /YX /Fo"bin/Release/" /Fd"bin/Release/" /FD /c 
+"C:\Documents and Settings\liam\Desktop\rx-11-09-06[Netapi]doyley\rx-11-09-06[Netapi]doyley\src\authbypass.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\liam\LOCALS~1\Temp\RSP42.tmp" 
+Creating temporary file "C:\DOCUME~1\liam\LOCALS~1\Temp\RSP43.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"bin/Release/rxBot.pdb" /machine:I386 /out:"bin/rxBot.exe" 
+".\bin\Release\advscan.obj"
+".\bin\Release\netapi.obj"
+".\bin\Release\ftpd.obj"
+".\bin\Release\ident.obj"
+".\bin\Release\download.obj"
+".\bin\Release\driveinfo.obj"
+".\bin\Release\misc.obj"
+".\bin\Release\netutils.obj"
+".\bin\Release\remotecmd.obj"
+".\bin\Release\aliaslog.obj"
+".\bin\Release\autostart.obj"
+".\bin\Release\crc32.obj"
+".\bin\Release\ehandler.obj"
+".\bin\Release\fphost.obj"
+".\bin\Release\irc_send.obj"
+".\bin\Release\loaddlls.obj"
+".\bin\Release\rBot.obj"
+".\bin\Release\rndnick.obj"
+".\bin\Release\threads.obj"
+".\bin\Release\wildcard.obj"
+".\bin\Release\authbypass.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\liam\LOCALS~1\Temp\RSP43.tmp"
+<h3>Output Window</h3>
+Compiling...
+authbypass.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rxBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

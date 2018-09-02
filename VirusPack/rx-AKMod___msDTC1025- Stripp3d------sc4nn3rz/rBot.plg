@@ -1,0 +1,200 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Zach\LOCALS~1\Temp\RSPBCD.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\dcom.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\dcom2.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\dtc.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\lsass.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\lsass2.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\ms04_007_asn1.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\mssql.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\netbios.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\veritas.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\wkssvc.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\advscan.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\aliaslog.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\autostart.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\capture.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\cdkeys.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\crc32.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\crypt.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\dcc.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\ddos.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\download.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\driveinfo.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\ehandler.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\findfile.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\findpass.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\fphost.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\ftpd.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\httpd.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\icmpflood.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\ident.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\irc_send.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\keylogger.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\loaddlls.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\misc.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\net.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\netutils.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\pingudp.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\processes.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\psniff.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\rBot.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\redirect.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\remotecmd.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\rlogind.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\rndnick.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\scan.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\secure.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\session.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\shellcode.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\socks4.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\synflood.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\sysinfo.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\tcpflood.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\tftpd.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\threads.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\upnp.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\visit.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\webdav.cpp"
+"C:\Documents and Settings\Zach\Desktop\rx-AKMod_msDTC1025\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Zach\LOCALS~1\Temp\RSPBCD.tmp" 
+Creating temporary file "C:\DOCUME~1\Zach\LOCALS~1\Temp\RSPBCE.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/rBot.pdb" /machine:I386 /out:"Release/rBot.exe" 
+".\Release\dcom.obj"
+".\Release\dcom2.obj"
+".\Release\dtc.obj"
+".\Release\lsass.obj"
+".\Release\lsass2.obj"
+".\Release\ms04_007_asn1.obj"
+".\Release\mssql.obj"
+".\Release\netbios.obj"
+".\Release\veritas.obj"
+".\Release\wkssvc.obj"
+".\Release\advscan.obj"
+".\Release\aliaslog.obj"
+".\Release\autostart.obj"
+".\Release\capture.obj"
+".\Release\cdkeys.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\dcc.obj"
+".\Release\ddos.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\ehandler.obj"
+".\Release\findfile.obj"
+".\Release\findpass.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\httpd.obj"
+".\Release\icmpflood.obj"
+".\Release\ident.obj"
+".\Release\irc_send.obj"
+".\Release\keylogger.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\net.obj"
+".\Release\netutils.obj"
+".\Release\pingudp.obj"
+".\Release\processes.obj"
+".\Release\psniff.obj"
+".\Release\rBot.obj"
+".\Release\redirect.obj"
+".\Release\remotecmd.obj"
+".\Release\rlogind.obj"
+".\Release\rndnick.obj"
+".\Release\scan.obj"
+".\Release\secure.obj"
+".\Release\session.obj"
+".\Release\shellcode.obj"
+".\Release\socks4.obj"
+".\Release\synflood.obj"
+".\Release\sysinfo.obj"
+".\Release\tcpflood.obj"
+".\Release\tftpd.obj"
+".\Release\threads.obj"
+".\Release\upnp.obj"
+".\Release\visit.obj"
+".\Release\webdav.obj"
+".\Release\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Zach\LOCALS~1\Temp\RSPBCE.tmp"
+<h3>Output Window</h3>
+Compiling...
+dcom.cpp
+dcom2.cpp
+dtc.cpp
+lsass.cpp
+lsass2.cpp
+ms04_007_asn1.cpp
+mssql.cpp
+netbios.cpp
+veritas.cpp
+wkssvc.cpp
+advscan.cpp
+aliaslog.cpp
+autostart.cpp
+capture.cpp
+cdkeys.cpp
+crc32.cpp
+crypt.cpp
+dcc.cpp
+ddos.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+ftpd.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+irc_send.cpp
+keylogger.cpp
+loaddlls.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+pingudp.cpp
+processes.cpp
+psniff.cpp
+rBot.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+scan.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+upnp.cpp
+visit.cpp
+webdav.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

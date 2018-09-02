@@ -1,0 +1,1 @@
+BOOL ADLP(EXINFO exinfo);

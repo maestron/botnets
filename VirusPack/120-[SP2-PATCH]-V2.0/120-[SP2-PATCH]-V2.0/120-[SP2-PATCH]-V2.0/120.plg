@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP136.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"D:\Archive\Other\Root\Codes\120-[SP2-PATCH]-V1.0\120-[SP2-PATCH]-V1.0\patcher.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP136.tmp" 
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP137.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" 
+".\120\Asn.obj"
+".\120\Netapi.obj"
+".\120\Netbios.obj"
+".\120\Pnp.obj"
+".\120\Sym.obj"
+".\120\Vnc.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\Ide.obj"
+".\120\Ldll.obj"
+".\120\patcher.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\Sys.obj"
+".\120\Test.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP137.tmp"
+<h3>Output Window</h3>
+Compiling...
+patcher.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

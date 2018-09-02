@@ -1,0 +1,3 @@
+errors in directory s:\developer\socks5_rootkit+bot\bot_sys
+s:\winddk\6001.18000\inc\ddk\ndis.h(217) : error C1189: #error :  ("Only NDIS miniport drivers with version >= 5 are supported")
+link : error LNK1181: cannot open input file 's:\developer\socks5_rootkit+bot\bot_sys\objchk_w2k_x86\i386\bot_entry.obj'

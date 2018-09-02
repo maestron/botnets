@@ -1,0 +1,16 @@
+
+
+386_OBJECTS=\
+ $(OBJ_PATH)\$O\bot_entry.obj \
+
+
+
+
+
+# lowercased
+BASEDIR=s:\winddk\6001.18000
+OBJECT_ROOT=s:\winddk\6001.18000
+MAKEDIR_LOWERCASE=s:\developer\socks5_rootkit+bot\bot_sys
+OBJ_PATH=s:\developer\socks5_rootkit+bot\bot_sys
+CONCURRENT_MIDL=0
+CONCURRENT_MANIFEST_BUILD=0

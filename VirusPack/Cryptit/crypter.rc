@@ -1,0 +1,3 @@
+#define IDR_STUB 1
+
+IDR_STUB STUB DISCARDABLE "stub\\bin\\Release\\stub.exe"

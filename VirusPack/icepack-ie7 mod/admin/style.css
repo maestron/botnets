@@ -1,0 +1,207 @@
+body
+{
+ margin:            0;
+ padding:           0;
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         11px;
+ color:             #333;
+ background: 		    #fff url(images/bg.jpg) repeat-x left top;
+}	
+a
+{
+ color:             #333399;
+ background-color:  transparent;
+ text-decoration:   none;
+}
+a:visited
+{
+ color:             #333399;
+ background-color:  transparent;
+ text-decoration:   none;
+}
+a:hover
+{
+ color:             #A0A4C1;
+ text-decoration:   none;
+ background-color:  transparent;
+}
+
+td
+{
+ font-size:         11px;
+ color:             #555555;
+ line-height:       16px;
+ font-family:       tahoma, helvetica;
+}
+.copyright
+{
+ clear: 			      both;
+ vertical-align:	  bottom;
+ text-align:        center;
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         9px;
+ color:             #999;
+ line-height:       15px;
+ margin:        	  1px 0 1px 0;
+ padding:           14px 0 14px 0;
+ background: 		    #fff url(images/copyright_bg.jpg) repeat-x left top;
+ border-top:     	  1px solid #D9DBEB;
+}
+#topBar
+{  
+ background:     	  transparent;
+ margin-top:     	  6px;
+}
+
+.helpLinks
+{ 
+ color:             #fff;
+ background:        transparent;
+ text-align:        right;
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         9px; 
+ font-weight:       bold;
+ padding:           20px 30px 0px 0px;
+}
+.helpLinks a:link
+{ 
+ color:             #fff;
+ background:        transparent;
+ text-decoration:   none;
+}
+.helpLinks a:visited
+{ 
+ color:             #fff;
+ background:        transparent;
+ text-decoration:   none;
+}
+.helpLinks a:hover
+{ 
+ color:             #B9BDD4;    
+ background:        transparent;
+ text-decoration:   none;
+}
+.helpLinksLeft
+{
+ text-align:        left;
+ padding-left:      25px;
+}
+
+#header {  
+ background-color:  #5B60A1;
+ height:            10px;
+}
+
+.tableBorder {
+ border-left:      1px solid #EEEEEE;
+ border-right:     1px solid #EEEEEE;
+ margin:		       0 0 3px 0;
+ padding:			     0;
+}
+.tableHeading {
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         11px;
+ font-weight:       bold;
+ color:             #fff;
+ padding:           5px 6px 5px 6px;
+ background: 		    #fff url(images/bg_table_heading.jpg) repeat-x left top;
+ border-top:        1px solid #ceeafe;
+ border-bottom:     1px solid #ceeafe;
+ margin-bottom:		  1px;
+ text-align:        left;
+}
+.tableCellTwo {
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         11px;
+ color:             #333;
+ padding:           4px 10px 4px 6px;
+ border-top:        2px solid #fff;
+ border-bottom:     1px solid #ceeafe;
+ background: 		    #FFF url(images/bg_cell_two.jpg) repeat-x left top;
+}
+#contentNB {
+ left:              0px;
+ right:             10px;
+ margin:            0 15px 20px 15px;
+ padding:           0 13px 0 13px;
+ width:             auto;
+}
+.buttonWrapper {
+ background-color:  transparent;  
+ padding:           10px 0 10px 10px;
+}
+.buttonWrapper input {
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         11px;
+ font-weight:       bold;
+ border-top:	    	1px solid #eee;
+ border-left:	    	1px solid #eee;
+ border-right:	  	1px solid #999;
+ border-bottom:	  	1px solid #999;
+ margin:          	0;
+ padding:		      	2px 4px 2px 4px;
+ background-color:  #ceeafe;
+ color:             #666;
+ cursor:		      	pointer;
+}
+.tableCellOne {
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         11px;
+ color:             #333;
+ padding:           4px 10px 4px 6px;
+ border-top:        2px solid #fff;
+ border-bottom:     1px solid #B1B6D2;
+ background: 		    #fff url(images/bg_cell_one.jpg) repeat-x left top;
+}
+.box {
+ background: 		    #fff url(images/box_bg.jpg) repeat-x left top;
+ border:            #ceeafe 1px solid;
+ padding:           8px 10px 8px 10px;
+ margin:     	    	1px 0 20px 0;
+}
+.alert {
+ color:             #990000;
+ font-weight:       bold;
+}
+.itemWrapper {
+ padding:           3px 0 5px 0;
+ background-color:  transparent;
+}
+
+.itemWrapper a:link
+{
+ color:             #666;
+ background-color:  transparent;
+ text-decoration:   none;
+}
+
+.itemWrapper a:visited
+{
+ color:             #666;
+ background-color:  transparent;
+ text-decoration:   none;
+}
+
+.itemWrapper a:hover
+{
+ color:             #999;
+ background-color:  transparent;
+ text-decoration:   none;
+}
+
+.switch_time
+{
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         9px;
+ vertical-align:    top;
+ width:             75px;
+}
+.qhelp a:link,
+.qhelp a:active,
+.qhelp a:visited,
+.qhelp a:hover
+{
+ font-family:       Lucida Grande, Verdana, Geneva, Sans-serif;
+ font-size:         11px;
+ color:             #999;
+}

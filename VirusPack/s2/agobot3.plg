@@ -1,0 +1,230 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: configgui - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD96D.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/configgui.pdb" /machine:I386 /out:"../configgui.exe" 
+".\Release\configgui.obj"
+".\Release\configguiDlg.obj"
+".\Release\md5c.obj"
+".\Release\sapphire.obj"
+".\Release\StdAfx.obj"
+".\Release\configgui.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD96D.tmp"
+<h3>Output Window</h3>
+Linking...
+<h3>
+--------------------Configuration: agobot3 - Win32 Release No OpenSSL Internal--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD96F.tmp" with contents
+[
+/nologo /G6 /MT /W3 /Gi /GX /O1 /Ob0 /I "lib/pthreads/win32" /D "NDEBUG" /D "AGOBOT_NO_OPENSSL" /D "INTERNAL" /D "WIN32" /D "_WINDOWS" /D "FORCE_UNICODE" /D "__CLEANUP_SEH" /FR"agobot3___Win32_Release_No_OpenSSL_Internal/" /Fp"agobot3___Win32_Release_No_OpenSSL_Internal/agobot3.pch" /YX /Fo"agobot3___Win32_Release_No_OpenSSL_Internal/" /Fd"agobot3___Win32_Release_No_OpenSSL_Internal/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\irc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\smtp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\smtp_logic.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\sockets.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\bot.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\cmdline.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\cmdshell.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\commands.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\config.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\consdbg.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\cplugin.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\crypter.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\cstring.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\cthread.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\cvar.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\hook.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\installer.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\keylogger.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\logic.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\mac.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\mainctrl.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\polymorph.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\random.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\sdcompat.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\sniffer.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\ssllib.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\utility.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\dcom2scanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\dcomscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\dwscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\locscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\lsassscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\optixscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\sasserftpdscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\scanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\sqlscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\upnpscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\wdscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\wksscanner.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\ddos.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\httpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\phaticmp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\phatsyn.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\synflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\targa3.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\udpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\wonk.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\shellcode.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\redir_gre.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\redir_http.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\redir_https.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\redir_socks.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\redir_socks5.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\redir_tcp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\redirect.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\ftplib\ftplib.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\md5\md5c.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\harvest_aol.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\harvest_cdkeys.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\harvest_emails.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\harvest_registry.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD96F.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD970.tmp" with contents
+[
+msvcrt.lib msvcprt.lib oldnames.lib kernel32.lib user32.lib advapi32.lib shell32.lib ws2_32.lib netapi32.lib mpr.lib psapi.lib dnsapi.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"agobot3___Win32_Release_No_OpenSSL_Internal/agobot3.pdb" /machine:I386 /nodefaultlib /out:"bin/win32/agobot3.exe" /libpath:"lib/openssl/win32/lib" /ignore:4033 
+".\agobot3___Win32_Release_No_OpenSSL_Internal\irc.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\smtp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\smtp_logic.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sockets.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\bot.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cmdline.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cmdshell.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\commands.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\config.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\consdbg.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cplugin.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\crypter.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cstring.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cthread.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\cvar.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\hook.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\installer.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\keylogger.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\logic.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\mac.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\mainctrl.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\polymorph.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\random.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sdcompat.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sniffer.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ssllib.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\utility.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\dcom2scanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\dcomscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\dwscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\locscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\lsassscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\nbscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\optixscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sasserftpdscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\scanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\sqlscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\upnpscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\wdscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\wksscanner.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ddos.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\httpflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\phaticmp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\phatsyn.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\synflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\targa3.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\udpflood.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\wonk.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\shellcode.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_gre.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_http.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_https.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_socks.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_socks5.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redir_tcp.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\redirect.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\ftplib.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\md5c.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_aol.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_cdkeys.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_emails.obj"
+".\agobot3___Win32_Release_No_OpenSSL_Internal\harvest_registry.obj"
+".\asmstub.OBJ"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD970.tmp"
+<h3>Output Window</h3>
+Compiling...
+Command line warning D4002 : ignoring unknown option '/Ob0'
+irc.cpp
+smtp.cpp
+smtp_logic.cpp
+sockets.cpp
+bot.cpp
+cmdline.cpp
+cmdshell.cpp
+commands.cpp
+config.cpp
+consdbg.cpp
+cplugin.cpp
+crypter.cpp
+cstring.cpp
+cthread.cpp
+cvar.cpp
+hook.cpp
+installer.cpp
+keylogger.cpp
+logic.cpp
+mac.cpp
+mainctrl.cpp
+polymorph.cpp
+random.cpp
+sdcompat.cpp
+sniffer.cpp
+ssllib.cpp
+utility.cpp
+dcom2scanner.cpp
+dcomscanner.cpp
+dwscanner.cpp
+locscanner.cpp
+lsassscanner.cpp
+nbscanner.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(206) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(207) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(208) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(209) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(222) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(223) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(224) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(225) : error C2440: '=' : cannot convert from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(232) : error C2664: 'NetUseDel' : cannot convert parameter 2 from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\s\nbscanner.cpp(237) : error C2664: 'NetShareEnum' : cannot convert parameter 1 from 'char *' to 'unsigned short *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+optixscanner.cpp
+sasserftpdscanner.cpp
+scanner.cpp
+sqlscanner.cpp
+upnpscanner.cpp
+wdscanner.cpp
+wksscanner.cpp
+ddos.cpp
+httpflood.cpp
+cl.exe terminated at user request.
+
+</pre>
+</body>
+</html>

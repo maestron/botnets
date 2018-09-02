@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: reptile - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ceebz\LOCALS~1\Temp\RSPA7.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "lib/openssl/win32/include" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "NDEBUG" /Fp"Release/reptile.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\fphost.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\commands.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\crypt.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\download.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\ftpd.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\irc.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\loaddlls.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\netutils.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\protocol.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\regcontrol.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\reptile.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\service.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\threads.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\utility.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\secure.cpp"
+"C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\advscan.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ceebz\LOCALS~1\Temp\RSPA7.tmp" 
+Creating temporary file "C:\DOCUME~1\ceebz\LOCALS~1\Temp\RSPA8.tmp" with contents
+[
+/nologo /subsystem:console /incremental:no /pdb:"Release/reptile.pdb" /machine:I386 /out:"Bin/reptile.exe" /libpath:"lib/openssl/win32/lib" 
+".\Release\fphost.obj"
+".\Release\commands.obj"
+".\Release\crypt.obj"
+".\Release\download.obj"
+".\Release\ftpd.obj"
+".\Release\irc.obj"
+".\Release\loaddlls.obj"
+".\Release\netutils.obj"
+".\Release\protocol.obj"
+".\Release\regcontrol.obj"
+".\Release\reptile.obj"
+".\Release\service.obj"
+".\Release\threads.obj"
+".\Release\utility.obj"
+".\Release\secure.obj"
+".\Release\advscan.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ceebz\LOCALS~1\Temp\RSPA8.tmp"
+<h3>Output Window</h3>
+Compiling...
+fphost.cpp
+commands.cpp
+crypt.cpp
+C:\Documents and Settings\ceebz\Desktop\ceebz\projects\reptiler-nether\commands.cpp(643) : warning C4700: local variable 'scansize' used without having been initialized
+download.cpp
+ftpd.cpp
+irc.cpp
+loaddlls.cpp
+netutils.cpp
+protocol.cpp
+regcontrol.cpp
+reptile.cpp
+service.cpp
+threads.cpp
+utility.cpp
+secure.cpp
+advscan.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+reptile.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

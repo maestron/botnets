@@ -1,0 +1,113 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdbot05b - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Rick\AppData\Local\Temp\RSPEB2F.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_DEBUG" /Fp"sdbot05b___Win32_Debug/sdbot05b.pch" /YX /Fo"sdbot05b___Win32_Debug/" /Fd"sdbot05b___Win32_Debug/" /FD /c 
+"D:\INCOMMING\Rose_2008\Rose 2008\advscan.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\ms04_007_asn1.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\shellcode.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\sym06_010.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\tftpd.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\vncrooter.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\dns.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\aliaslog.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\AutoStart.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\cdkeys.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\download.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\driveinfo.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\fphost.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\ftpd.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\hostauth.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\httpd.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\identd.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\irc_send.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\loaddll.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\misc.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\net.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\netutils.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\processes.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\rndnick.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\SDBOT05B.CPP"
+"D:\INCOMMING\Rose_2008\Rose 2008\secure.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\socks.cpp"
+"D:\INCOMMING\Rose_2008\Rose 2008\threads.cpp"
+]
+Creating command line "cl.exe @C:\Users\Rick\AppData\Local\Temp\RSPEB2F.tmp" 
+Creating temporary file "C:\Users\Rick\AppData\Local\Temp\RSPEB30.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib Netapi32.lib shlwapi.lib Mpr.lib Dnsapi.lib /nologo /subsystem:windows /incremental:no /pdb:"sdbot05b___Win32_Debug/rose2007.pdb" /machine:I386 /out:"release/rose2007.exe" 
+".\sdbot05b___Win32_Debug\advscan.obj"
+".\sdbot05b___Win32_Debug\ms04_007_asn1.obj"
+".\sdbot05b___Win32_Debug\shellcode.obj"
+".\sdbot05b___Win32_Debug\sym06_010.obj"
+".\sdbot05b___Win32_Debug\tftpd.obj"
+".\sdbot05b___Win32_Debug\vncrooter.obj"
+".\sdbot05b___Win32_Debug\dns.obj"
+".\sdbot05b___Win32_Debug\aliaslog.obj"
+".\sdbot05b___Win32_Debug\AutoStart.obj"
+".\sdbot05b___Win32_Debug\cdkeys.obj"
+".\sdbot05b___Win32_Debug\download.obj"
+".\sdbot05b___Win32_Debug\driveinfo.obj"
+".\sdbot05b___Win32_Debug\fphost.obj"
+".\sdbot05b___Win32_Debug\ftpd.obj"
+".\sdbot05b___Win32_Debug\hostauth.obj"
+".\sdbot05b___Win32_Debug\httpd.obj"
+".\sdbot05b___Win32_Debug\identd.obj"
+".\sdbot05b___Win32_Debug\irc_send.obj"
+".\sdbot05b___Win32_Debug\loaddll.obj"
+".\sdbot05b___Win32_Debug\misc.obj"
+".\sdbot05b___Win32_Debug\net.obj"
+".\sdbot05b___Win32_Debug\netutils.obj"
+".\sdbot05b___Win32_Debug\processes.obj"
+".\sdbot05b___Win32_Debug\rndnick.obj"
+".\sdbot05b___Win32_Debug\SDBOT05B.OBJ"
+".\sdbot05b___Win32_Debug\secure.obj"
+".\sdbot05b___Win32_Debug\socks.obj"
+".\sdbot05b___Win32_Debug\threads.obj"
+]
+Creating command line "link.exe @C:\Users\Rick\AppData\Local\Temp\RSPEB30.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+ms04_007_asn1.cpp
+shellcode.cpp
+sym06_010.cpp
+tftpd.cpp
+vncrooter.cpp
+dns.cpp
+aliaslog.cpp
+AutoStart.cpp
+cdkeys.cpp
+download.cpp
+driveinfo.cpp
+fphost.cpp
+ftpd.cpp
+hostauth.cpp
+httpd.cpp
+identd.cpp
+irc_send.cpp
+loaddll.cpp
+misc.cpp
+net.cpp
+netutils.cpp
+processes.cpp
+rndnick.cpp
+SDBOT05B.CPP
+secure.cpp
+socks.cpp
+threads.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rose2007.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

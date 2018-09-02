@@ -1,0 +1,6 @@
+1)integrate that worm with 
+  irc bot,making it auto inviter
+2)add av/fw killer,av sites 
+  blocking using hosts file
+3)find emails in .html files 
+  and other type of files

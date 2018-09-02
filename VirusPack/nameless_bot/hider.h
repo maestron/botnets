@@ -1,0 +1,1 @@
+DWORD WINAPI CreateWin(HINSTANCE hInstance);

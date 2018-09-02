@@ -1,0 +1,18 @@
+[1] What software is needed for compilation ? 
+
+-Microsoft's Visual C++ 6,
+
+[2] How to use Visual Studio ? 
+
+get newest Platform SDK from http://www.microsoft.com/msdownload/platformsdk/sdkupdate/ . Install all. Add the following paths to "Tools|Options...|Directories" in Visual Studio (be sure to include them on top of the list):
+
+-path of sdk bin in executable file
+-path of sdk include in include files
+-path of sdk lib in libary files
+
+You should be ready to compile now.
+
+[3] Configuration: 
+
+Open config.cpp and have fun configuring.
+

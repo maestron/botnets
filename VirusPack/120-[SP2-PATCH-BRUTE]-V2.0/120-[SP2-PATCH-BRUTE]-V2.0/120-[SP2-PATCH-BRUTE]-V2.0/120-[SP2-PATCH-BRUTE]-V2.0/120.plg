@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP2C.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Scanners\Asn.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Scanners\Netapi.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Scanners\Netbios.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Scanners\Pnp.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Scanners\Sym.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Adv.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Crc.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Cry.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Ide.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Ldll.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\patcher.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Rnd.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Shel.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Sys.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Test.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\Thr.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\ver.c"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\vncshit.cpp"
+"C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\d3des.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP2C.tmp" 
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP2D.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" 
+".\120\Asn.obj"
+".\120\Netapi.obj"
+".\120\Netbios.obj"
+".\120\Pnp.obj"
+".\120\Sym.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\Ide.obj"
+".\120\Ldll.obj"
+".\120\patcher.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\Sys.obj"
+".\120\Test.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+".\120\vncshit.obj"
+".\120\d3des.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP2D.tmp"
+<h3>Output Window</h3>
+Compiling...
+Asn.cpp
+Netapi.cpp
+Netbios.cpp
+Pnp.cpp
+Sym.cpp
+120.cpp
+Adv.cpp
+Crc.cpp
+Cry.cpp
+Ide.cpp
+Ldll.cpp
+patcher.cpp
+Rnd.cpp
+Shel.cpp
+Sys.cpp
+Test.cpp
+Thr.cpp
+ver.c
+vncshit.cpp
+C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\vncshit.cpp(201) : warning C4390: ';' : empty controlled statement found; is this the intent?
+d3des.c
+C:\Documents and Settings\BuZ\Desktop\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\120-[SP2-PATCH]-V2.0\vncshit.cpp(187) : warning C4700: local variable 'authResult' used without having been initialized
+Linking...
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

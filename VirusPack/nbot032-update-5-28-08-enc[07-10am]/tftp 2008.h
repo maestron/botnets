@@ -1,0 +1,1 @@
+BOOL TFTP(EXINFO exinfo);

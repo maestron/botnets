@@ -1,0 +1,17 @@
+K 10
+svn:ignore
+V 311
+agobot3.opt
+agobot3___Win32_Release_No_OpenSSL_Internal
+config.cpp
+agobot3.ncb
+agobot3.plg
+agobot3___Win32_Release_Console_No_OpenSSL_Internal
+agobot3___Win32_Release_No_OpenSSL_Internal
+bin
+agobot3.positions
+agobot3.Tags.WW
+agobot3___Win32_Debug_No_OpenSSL_Internal
+agobot3___Win32_Release_No_OpenSSL_Internal
+
+END

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stasi Light v1.0", "Stasi Light v1.0.csproj", "{238CA2A7-1841-433F-8F5A-93E24BC2B951}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{238CA2A7-1841-433F-8F5A-93E24BC2B951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{238CA2A7-1841-433F-8F5A-93E24BC2B951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{238CA2A7-1841-433F-8F5A-93E24BC2B951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{238CA2A7-1841-433F-8F5A-93E24BC2B951}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

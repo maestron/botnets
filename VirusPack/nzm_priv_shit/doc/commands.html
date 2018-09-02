@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>enzyme .. command listing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana;
+	font-size: 11px;
+	color: #CCCCCC;
+}
+body {
+	background-color: #000000;
+}
+.style1 {
+	color: #00CC00;
+	font-weight: bold;
+}
+-->
+</style></head>
+
+<body>
+<div align="center">
+  <p align="left"><img src="nzm.jpg" width="550" height="95"></p>
+  <p align="left"><br>
+  Commands -- the commands change from mod to mod, check the source. </p>
+  <p align="left"> You'll have to look at the source for the usage anyway, so why not just do it now... </p>
+  <p align="left"><strong>MAIN BOT COMMANDS </strong></p>
+  <p align="left">irc.rndnick | irc.rn -- randomly changes nick<br>
+    irc.activate | irc.act -- login to the bot<br>
+    irc.disconnect | irc.d -- disconnects <br>
+    irc.logout | irc.lo -- logs you out<br>
+    irc.version | irc.ver -- gives bot version<br>
+    irc.reconnect | irc.r -- reconnects to the server<br>
+    irc.quit | irc.quit -- quits the bot<br>
+    irc.die | irc.die -- quits the bot<br>
+    irc.status | irc.s -- gives the status of the bot<br>
+    irc.id | irc.i -- gives the botid<br>
+    irc.getlostnow | irc.gln -- removes the bot<br>
+    irc.who -- shows who has logged into the bot<br>
+    irc.nick | irc.n -- changes the nick of the bot<br>
+    irc.join | irc.j -- joins a channel<br>
+    irc.part | irc.pt -- parts a channel<br>
+    irc.raw | irc.ra -- allows you to issue RAWs<br>
+    irc.crash -- crashes the bot<br>
+    irc.server | irc.se -- temporary on-the-fly daemon.changing<br>
+    irc.dns | irc.dn -- resolves a host/ip<br>
+    irc.log | irc.lg -- displays a log of all bot activity<br>
+    irc.aliases | irc.al -- lists the pre-defined aliases<br>
+    irc.visit | irc.v -- allows you to visit a website<br>
+    irc.gethost | irc.gh -- searches the bots for a given hostname<br>
+    irc.addalias | irc.aa -- on the fly alias adding<br>
+    irc.privmsg | irc.pm -- send pms<br>
+    irc.action | irc.ac -- perform actions<br>
+    irc.cycle | irc.cy -- hop a channel<br>
+    irc.mode | irc.m -- set a mode<br>
+    irc.repeat | irc.rp -- repeat<br>
+    irc.delay | irc.de -- set a delay<br>
+    <br>
+  </p>
+  <p align="left"><strong>MISC BOT COMMANDS </strong></p>
+  <p align="left">ftp.upload -- upload a file to a remote ftp<br>
+  lockdown.on | ld.on -- secures the bot<br>
+    lockdown.off | ld.off -- un-secures bot<br>
+    lockdown.stop -- stops the bot in the act of securing<br>
+    log.off -- turns off the bot log<br>
+    dcc.get | dcc.gt -- receive a file from the bot machine thru dcc<br>
+    mirc.cmd -- perform irc commands on bot user's mirc client<br>
+    sniff on/off -- enables/disables carnivore packet sniffer
+  </p>
+
+    </p>
+</div>
+  <p align="left"><strong>BOT DAEMON COMMANDS   </strong></p>
+  <p align="left">daemon.socks4.on | proxy.s4.on -- starts a socks4 server<br>
+    daemon.rlogin.on | daemon.rl.on -- starts a rlogin server<br>
+    daemon.httpd.on | daemon.web.on -- starts a webserver<br>
+    daemon.tftp.on | daemon.tf.on -- starts a tftp server<br>
+    daemon.redirect.on | daemon.rd.on -- starts a port redirect<br>
+    daemon.socks4.off -- stops socks4 server<br>
+    daemon.redirect.off -- stops port redirect<br>
+    daemon.rlogin.off -- stops rlogin server<br>
+    daemon.web.off -- stops webserver<br>
+    daemon.tftp.off -- stops tftp server<br>
+    daemon.ident on/off -- enables/disables ident server</p>
+  <p align="left"><strong>DDOS COMMANDS </strong></p>
+  <p align="left">ddos.syn -- starts generic synflood<br>
+ddos.ack -- starts ack flood<br>
+ddos.random -- starts random flood<br>
+ddos.icmp | ddos.ic -- sends icmps<br>
+ddos.synflood | ddos.synf -- oldschool synflood<br>
+ddos.udpflood | ddos.udpf -- oldschool udpflood<br>
+ddos.pingflood | ddos.pingf -- oldschool pingflood<br>
+ddos.tcpflood | ddos.tcpf -- oldschool tcpflood<br>
+ddos.off -- stops standard ddos commands<br>
+    ddos.syn.off -- stops synflooding<br>
+    ddos.udp.off -- stops udpflooding<br>
+    ddos.ping.off -- stops pingflooding<br>
+  </p>
+  <p align="left"><strong>BOT THREAD COMMANDS </strong></p>
+  <p align="left">threads.list | threads.l -- list the current bot threads<br>
+    threads.kill | threads.k -- kill a current bot thread<br>
+  </p>
+  <p align="left"><strong>SYSTEM COMMANDS </strong></p>
+  <p align="left">com.rebewt -- reboots the machine<br>
+    com.netinfo | com.ni -- displays net information<br>
+    com.com.nfo | com.si -- displays com.information<br>
+    com.procs | com.ps -- lists running proccesses<br>
+    com.procs.off | com.ps.off -- stops listing proccesses<br>
+    com.harvest | com.key -- lists cdkeys<br>
+    com.uptime | com.up -- displays com.em uptime<br>
+    com.driveinfo | com.drv -- displays drive information<br>
+    com.testdlls | com.dll -- runs a crucial dll check<br>
+    com.opencmd | com.ocmd -- opens up a remote cmd interface<br>
+    com.ocmd.off -- clones remote cmd interface<br>
+    com.getclip | com.gc -- displays what the user has on clipboard<br>
+    com.killprocname | com.kpn -- kills a proccess by name<br>
+    com.prockillid | com.pkid -- kills a proccess by id<br>
+    com.delete | com.del -- deletes a file<br>
+    com.filelist | com.fl -- lists files<br>
+    com.cmd | com.cm -- issue a msdos-style command to the com.em<br>
+    com.readfile | com.rf -- prints the contents of a file<br>
+    com.keylog on/off -- enables/disables real-time keylogging<br>
+    com.net -- issue commands using the ms net service<br>
+    com.open | com.o -- opens a file (can be visible or invisible)<br>
+    com.capture | com.cap -- captures picture/video from a webcam/video source/desktop<br>
+    com.execute | com.e -- executes a file<br>
+    com.rename | com.mv -- renames a file<br>
+    com.findfile | com.ff -- search for a file<br>
+    com.findfile.off | com.ff.off -- stops searching for a file<br>
+    com.findpass | com.fp -- find com.em passwords (win9x only)</p>
+  <p align="left"><strong>BOT UTILITY COMMANDS </strong></p>
+  <p align="left">util.flusharp | util.farp -- flushes ARP cache<br>
+    util.flushdns | util.fdns -- flushes DNS cache<br>
+util.clearlog | util.clg -- clears bot log
+util.email -- sends emails<br>
+    util.httpcon | util.hcon -- connect to a website</p>
+  <p align="left"><strong>root.RABILITY COMMANDS </strong></p>
+  <p align="left">root.start | root.s -- starts exploitation of remote/local systems<br>
+    root.currentip | root.cip -- displays the current exploitation ip<br>
+    root.massexploit | root.mass -- automatically scans from a hard-coded list of vulnerabilities<br>
+    root.stop -- stops exploitation of remote/local com.ems<br>
+    root.stats | root.st -- displays the status of exploitation process<br>
+  root.portscan | root.ps -- standard port scan (not root.start)  </p>
+  <p align="left"><strong>CLONE COMMANDS </strong></p>
+  <p align="left">clone.start | clone.make -- create a clone<br>
+    clone.off -- kill clone<br>
+    clone.raw | clone.ra -- send RAWs to clone<br>
+    clone.mode | clone.m -- clone mode setting<br>
+    clone.nick | clone.ni -- clone nick setting<br>
+    clone.join | clone.j -- make clone join channel<br>
+    clone.part | clone.p -- make clone part channel<br>
+    clone.privmsg | clone.pm -- make clone send pmsgs<br>
+    clone.quit | clone.q -- make clone quit<br>
+    clone.rndnick | clone.rn -- randomly change nick of clone<br>
+    clone.prefix | clone.pr -- change clone prefix</p>
+  <p align="left"><strong>DOWNLOAD/UPDATE COMMANDS </strong></p>
+  <p align="left">download.update | download.up -- updates bot<br>
+    download.wget -- download (and execute) file from website</p>
+  <p align="left">&nbsp;</p>
+  <p align="left"><br>
+    <br>
+</p>
+  <p></p>
+</div>
+</body>
+</html>

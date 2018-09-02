@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: reptile - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP9CB.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "lib/openssl/win32/include" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "NDEBUG" /Fp"Release/reptile.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Akos\Desktop\reptile\asn.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP9CB.tmp" 
+Creating temporary file "C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP9CC.tmp" with contents
+[
+/nologo /subsystem:console /incremental:no /pdb:"Release/reptile.pdb" /machine:I386 /out:"Bin/reptile.exe" /libpath:"lib/openssl/win32/lib" 
+".\Release\advscan.obj"
+".\Release\banner.obj"
+".\Release\dcom.obj"
+".\Release\fphost.obj"
+".\Release\lsass.obj"
+".\Release\mssql.obj"
+".\Release\netbios.obj"
+".\Release\netdde.obj"
+".\Release\svchost.obj"
+".\Release\thcsql.obj"
+".\Release\wins.obj"
+".\Release\wkssvc.obj"
+".\Release\commands.obj"
+".\Release\crypt.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\ftpd.obj"
+".\Release\fu.obj"
+".\Release\info.obj"
+".\Release\irc.obj"
+".\Release\loaddlls.obj"
+".\Release\netstatp.obj"
+".\Release\netutils.obj"
+".\Release\processes.obj"
+".\Release\protocol.obj"
+".\Release\pstore.obj"
+".\Release\redirect.obj"
+".\Release\regcontrol.obj"
+".\Release\reptile.obj"
+".\Release\secure.obj"
+".\Release\service.obj"
+".\Release\sniffer.obj"
+".\Release\socks4.obj"
+".\Release\speedtest.obj"
+".\Release\threads.obj"
+".\Release\utility.obj"
+".\Release\vscan.obj"
+".\Release\pnp.obj"
+".\Release\asn.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Akos\LOCALS~1\Temp\RSP9CC.tmp"
+<h3>Output Window</h3>
+Compiling...
+asn.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+reptile.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rBot", "rBot.vcproj", "{9C426D76-11E8-43FF-906F-DE9F036AC621}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9C426D76-11E8-43FF-906F-DE9F036AC621}.Debug.ActiveCfg = Debug|Win32
+		{9C426D76-11E8-43FF-906F-DE9F036AC621}.Debug.Build.0 = Debug|Win32
+		{9C426D76-11E8-43FF-906F-DE9F036AC621}.Release.ActiveCfg = Release|Win32
+		{9C426D76-11E8-43FF-906F-DE9F036AC621}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

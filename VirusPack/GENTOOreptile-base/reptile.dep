@@ -1,0 +1,2115 @@
+# Microsoft Developer Studio Generated Dependency File, included by reptile.mak
+
+.\advscan.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\banner.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\dcom.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\fphost.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\lsass.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\mssql.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\netbios.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\passwd.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\netdde.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\svchost.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\thcsql.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\wins.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\wkssvc.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\commands.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\strings.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\crypt.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\download.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\driveinfo.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\ftpd.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\fu.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\fudll.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\ioctlcmd.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\info.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\irc.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\loaddlls.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\netstatp.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\netutils.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\processes.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\protocol.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\pstore.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\redirect.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\regcontrol.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\reptile.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\configs.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\secure.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\service.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\sniffer.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\socks4.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\speedtest.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\threads.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\utility.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	
+
+.\vscan.cpp : \
+	".\advscan.h"\
+	".\banner.h"\
+	".\commands.h"\
+	".\crypt.h"\
+	".\dcom.h"\
+	".\defines.h"\
+	".\download.h"\
+	".\driveinfo.h"\
+	".\externs.h"\
+	".\fphost.h"\
+	".\ftpd.h"\
+	".\fu.h"\
+	".\functions.h"\
+	".\includes.h"\
+	".\info.h"\
+	".\irc.h"\
+	".\loaddlls.h"\
+	".\lsass.h"\
+	".\mssql.h"\
+	".\netbios.h"\
+	".\netdde.h"\
+	".\netstatp.h"\
+	".\netutils.h"\
+	".\processes.h"\
+	".\protocol.h"\
+	".\pstore.h"\
+	".\redirect.h"\
+	".\regcontrol.h"\
+	".\reptile.h"\
+	".\secure.h"\
+	".\service.h"\
+	".\sniffer.h"\
+	".\socks4.h"\
+	".\speedtest.h"\
+	".\svchost.h"\
+	".\thcsql.h"\
+	".\threads.h"\
+	".\utility.h"\
+	".\vscan.h"\
+	".\vscandef.h"\
+	".\wins.h"\
+	".\wkssvc.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\ipexport.h"\
+	"c:\program files\microsoft sdk\include\iphlpapi.h"\
+	"c:\program files\microsoft sdk\include\iptypes.h"\
+	"c:\program files\microsoft sdk\include\lmjoin.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\psapi.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\windns.h"\
+	"c:\windows\system32\pstorec.dll"\
+	

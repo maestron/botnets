@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: BeastBot6.2 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\_CONTE~1\LOCALS~1\Temp\RSP4C8.tmp" with contents
+[
+/nologo /MD /W2 /GX /O1 /I "lib/openssl/win32/include" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "NDEBUG" /D "_AFXDLL" /FR"Release/" /Fp"Release/BeastBot6.2.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\blist.cpp"
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\commands.cpp"
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\irc.cpp"
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\loaddlls.cpp"
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\mods.cpp"
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\protocol.cpp"
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\threads.cpp"
+"C:\Documents and Settings\_CONTEMPT_\Desktop\LegIonB0t5.0\Moded Bot Priv\cpp\Beast.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\_CONTE~1\LOCALS~1\Temp\RSP4C8.tmp" 
+Creating temporary file "C:\DOCUME~1\_CONTE~1\LOCALS~1\Temp\RSP4C9.tmp" with contents
+[
+/nologo /subsystem:console /incremental:no /pdb:"Release/BeastBot6.2.pdb" /machine:I386 /out:"Bin/BeastBot6.2.exe" /libpath:"lib/openssl/win32/lib" 
+".\Release\blist.obj"
+".\Release\commands.obj"
+".\Release\irc.obj"
+".\Release\loaddlls.obj"
+".\Release\mods.obj"
+".\Release\protocol.obj"
+".\Release\threads.obj"
+".\Release\Beast.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\_CONTE~1\LOCALS~1\Temp\RSP4C9.tmp"
+<h3>Output Window</h3>
+Compiling...
+blist.cpp
+commands.cpp
+irc.cpp
+loaddlls.cpp
+mods.cpp
+protocol.cpp
+threads.cpp
+Beast.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+BeastBot6.2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

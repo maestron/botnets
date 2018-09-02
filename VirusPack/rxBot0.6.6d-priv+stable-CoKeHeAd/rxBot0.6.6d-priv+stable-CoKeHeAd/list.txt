@@ -1,0 +1,25 @@
+List of work to be done:
+
++ irc_connect line split truncation issue
++ disconnect for period of time and reconnect
++ execute w/output to ircd
++ ntscan share support/test
++ key logger add-in/sendkeys
++ auto-scan on startup
++ portscanner for single ip
++ multiple server list (round-robin)
++ msn/aim spreader
++ p2p code add-in (for people who want it)
++ Registry editor
+
+Future Projects:
+
++ syn scanner
++ socks5 server
++ firewall
++ ftpd server
++ kernel hook/dll support
++ auto-update bot after dns fails or is pointed to rfc1918 address
++ turn bot into a service
++ compression header (polymorphic)
++ SSL

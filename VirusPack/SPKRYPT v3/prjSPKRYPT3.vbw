@@ -1,0 +1,14 @@
+hznyfmdle = 175, 175, 810, 633, 
+mFunctions = 125, 125, 750, 583, 
+frmMain = 75, 75, 693, 533, Z, 25, 25, 643, 483, C
+mFileSize = 0, 0, 0, 0, C
+RC4 = 0, 0, 805, 421, 
+RealignPE = 0, 0, 0, 0, C
+mChangeIcon = 0, 0, 0, 0, C
+mEOF = 0, 0, 0, 0, C
+mCloneFile = 0, 0, 0, 0, C
+frmLogin = 75, 75, 693, 533, , 50, 50, 668, 508, C
+mSection = 150, 150, 775, 608, 
+mPADX = 0, 0, 0, 0, C
+mFileExists = 150, 150, 766, 608, 
+mLogin = 125, 125, 760, 583, 

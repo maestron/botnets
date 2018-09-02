@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="444"
+   name=""
+   committed-date="2004-03-20T21:43:47.537198Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/doc/!New"
+   last-author="sox"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="440"
+   name="Command Reference.htm"
+   text-time="2004-03-21T22:22:39.828091Z"
+   committed-date="2004-03-20T19:36:42.956045Z"
+   checksum="2e8bbe015b0cfbf934155f34ec96525e"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:39.808062Z"/>
+<entry
+   committed-rev="439"
+   name="setting.css"
+   text-time="2004-03-21T22:22:39.888177Z"
+   committed-date="2004-03-20T19:29:28.281590Z"
+   checksum="a8009d70a43172d23628edfb3791066f"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:39.868148Z"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="444"
+   name="FAQ.htm"
+   text-time="2004-03-21T22:22:40.849560Z"
+   committed-date="2004-03-20T21:43:47.537198Z"
+   checksum="541e7a64b64fc8042a22c67458e10e3c"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.819516Z"/>
+</wc-entries>

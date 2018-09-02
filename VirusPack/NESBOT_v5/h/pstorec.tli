@@ -1,0 +1,210 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8447.0 (1228e447).
+//
+// pstorec.tli
+//
+// Wrapper implementations for Win32 type library pstorec.dll
+// compiler-generated file created 11/10/08 at 16:36:01 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IEnumPStoreProviders wrapper method implementations
+//
+
+inline HRESULT IEnumPStoreProviders::Next ( unsigned long celt, struct _PST_PROVIDERINFO * * rgelt, unsigned long * pceltFetched ) {
+    HRESULT _hr = raw_Next(celt, rgelt, pceltFetched);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreProviders::Skip ( unsigned long celt ) {
+    HRESULT _hr = raw_Skip(celt);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreProviders::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreProviders::Clone ( struct IEnumPStoreProviders * * ppenum ) {
+    HRESULT _hr = raw_Clone(ppenum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IPStore wrapper method implementations
+//
+
+inline HRESULT IPStore::GetInfo ( struct _PST_PROVIDERINFO * * ppProperties ) {
+    HRESULT _hr = raw_GetInfo(ppProperties);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::GetProvParam ( unsigned long dwParam, unsigned long * pcbData, unsigned char * * ppbData, unsigned long dwFlags ) {
+    HRESULT _hr = raw_GetProvParam(dwParam, pcbData, ppbData, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::SetProvParam ( unsigned long dwParam, unsigned long cbData, unsigned char * pbData, unsigned long dwFlags ) {
+    HRESULT _hr = raw_SetProvParam(dwParam, cbData, pbData, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::CreateType ( unsigned long Key, GUID * pType, struct _PST_TYPEINFO * pInfo, unsigned long dwFlags ) {
+    HRESULT _hr = raw_CreateType(Key, pType, pInfo, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::GetTypeInfo ( unsigned long Key, GUID * pType, struct _PST_TYPEINFO * * ppInfo, unsigned long dwFlags ) {
+    HRESULT _hr = raw_GetTypeInfo(Key, pType, ppInfo, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::DeleteType ( unsigned long Key, GUID * pType, unsigned long dwFlags ) {
+    HRESULT _hr = raw_DeleteType(Key, pType, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::CreateSubtype ( unsigned long Key, GUID * pType, GUID * pSubtype, struct _PST_TYPEINFO * pInfo, struct _PST_ACCESSRULESET * pRules, unsigned long dwFlags ) {
+    HRESULT _hr = raw_CreateSubtype(Key, pType, pSubtype, pInfo, pRules, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::GetSubtypeInfo ( unsigned long Key, GUID * pType, GUID * pSubtype, struct _PST_TYPEINFO * * ppInfo, unsigned long dwFlags ) {
+    HRESULT _hr = raw_GetSubtypeInfo(Key, pType, pSubtype, ppInfo, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::DeleteSubtype ( unsigned long Key, GUID * pType, GUID * pSubtype, unsigned long dwFlags ) {
+    HRESULT _hr = raw_DeleteSubtype(Key, pType, pSubtype, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::ReadAccessRuleset ( unsigned long Key, GUID * pType, GUID * pSubtype, struct _PST_ACCESSRULESET * * ppRules, unsigned long dwFlags ) {
+    HRESULT _hr = raw_ReadAccessRuleset(Key, pType, pSubtype, ppRules, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::WriteAccessRuleset ( unsigned long Key, GUID * pType, GUID * pSubtype, struct _PST_ACCESSRULESET * pRules, unsigned long dwFlags ) {
+    HRESULT _hr = raw_WriteAccessRuleset(Key, pType, pSubtype, pRules, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::EnumTypes ( unsigned long Key, unsigned long dwFlags, struct IEnumPStoreTypes * * ppenum ) {
+    HRESULT _hr = raw_EnumTypes(Key, dwFlags, ppenum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::EnumSubtypes ( unsigned long Key, GUID * pType, unsigned long dwFlags, struct IEnumPStoreTypes * * ppenum ) {
+    HRESULT _hr = raw_EnumSubtypes(Key, pType, dwFlags, ppenum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::DeleteItem ( unsigned long Key, GUID * pItemType, GUID * pItemSubtype, LPWSTR szItemName, struct _PST_PROMPTINFO * pPromptInfo, unsigned long dwFlags ) {
+    HRESULT _hr = raw_DeleteItem(Key, pItemType, pItemSubtype, szItemName, pPromptInfo, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::ReadItem ( unsigned long Key, GUID * pItemType, GUID * pItemSubtype, LPWSTR szItemName, unsigned long * pcbData, unsigned char * * ppbData, struct _PST_PROMPTINFO * pPromptInfo, unsigned long dwFlags ) {
+    HRESULT _hr = raw_ReadItem(Key, pItemType, pItemSubtype, szItemName, pcbData, ppbData, pPromptInfo, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::WriteItem ( unsigned long Key, GUID * pItemType, GUID * pItemSubtype, LPWSTR szItemName, unsigned long cbData, unsigned char * pbData, struct _PST_PROMPTINFO * pPromptInfo, unsigned long dwDefaultConfirmationStyle, unsigned long dwFlags ) {
+    HRESULT _hr = raw_WriteItem(Key, pItemType, pItemSubtype, szItemName, cbData, pbData, pPromptInfo, dwDefaultConfirmationStyle, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::OpenItem ( unsigned long Key, GUID * pItemType, GUID * pItemSubtype, LPWSTR szItemName, unsigned long ModeFlags, struct _PST_PROMPTINFO * pPromptInfo, unsigned long dwFlags ) {
+    HRESULT _hr = raw_OpenItem(Key, pItemType, pItemSubtype, szItemName, ModeFlags, pPromptInfo, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::CloseItem ( unsigned long Key, GUID * pItemType, GUID * pItemSubtype, LPWSTR szItemName, unsigned long dwFlags ) {
+    HRESULT _hr = raw_CloseItem(Key, pItemType, pItemSubtype, szItemName, dwFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IPStore::EnumItems ( unsigned long Key, GUID * pItemType, GUID * pItemSubtype, unsigned long dwFlags, struct IEnumPStoreItems * * ppenum ) {
+    HRESULT _hr = raw_EnumItems(Key, pItemType, pItemSubtype, dwFlags, ppenum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IEnumPStoreTypes wrapper method implementations
+//
+
+inline HRESULT IEnumPStoreTypes::Next ( unsigned long celt, GUID * rgelt, unsigned long * pceltFetched ) {
+    HRESULT _hr = raw_Next(celt, rgelt, pceltFetched);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreTypes::Skip ( unsigned long celt ) {
+    HRESULT _hr = raw_Skip(celt);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreTypes::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreTypes::Clone ( struct IEnumPStoreTypes * * ppenum ) {
+    HRESULT _hr = raw_Clone(ppenum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IEnumPStoreItems wrapper method implementations
+//
+
+inline HRESULT IEnumPStoreItems::Next ( unsigned long celt, LPWSTR * rgelt, unsigned long * pceltFetched ) {
+    HRESULT _hr = raw_Next(celt, rgelt, pceltFetched);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreItems::Skip ( unsigned long celt ) {
+    HRESULT _hr = raw_Skip(celt);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreItems::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEnumPStoreItems::Clone ( struct IEnumPStoreItems * * ppenum ) {
+    HRESULT _hr = raw_Clone(ppenum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

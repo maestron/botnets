@@ -1,0 +1,77 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+; Tutorial - How to set up the environment for your bot - h1t3m ;
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ You need to follow these instructions exactly otherwise you will
+ fail at compiling your bot, don't bother emailing me and asking why
+ you get errors, if you get errors you didn't follow this tutorial
+ exactly, Iv'e had many dumb shits ask me why they get errors and its
+ always not installing SDK properly, so... As i said...
+  
+>>>>>>>>>FOLLOW THIS EXACTLY OR YOU WILL FAIL<<<<<<<<<<<<
+
+
+First we need to install Visual c++ compiler.
+
+Downloads:
+http://www.megaupload.com/?d=SUHPYZRX
+http://rapidshare.com/files/21861555/msc__.rar.html
+(password: itzforblitz)
+
+http://dl.torrentreactor.net/download.php?id=362592&name=Microsoft+Visual+C%2B%2B+6.0+Standard+Edition.rar
+(will need torrent client)
+
+After downloading install it to program files, Run the Setup.exe
+file and then install, enter the serial number included inside the .rar
+as serial.txt
+
+----
+
+After that you need to install service pack 6.
+
+Download:
+http://www.microsoft.com/downloads/details.aspx?familyid=a8494edb-2e89-4676-a16a-5c5477cb9713&displaylang=en
+
+Once you have downloaded make a new folder in program files called "sp6" without
+the quotes. Unzip all files to the new sp6 folder and run setup.exe
+ Note: at the end of setup it will ask if you want to install msdn, just select
+       no and press exit.
+
+----
+
+Now you have that out of the way download Windows Platform SDK.
+
+Download:
+http://www.megaupload.com/?d=YH3SS78I
+http://rapidshare.com/files/21854411/sdk.rar.html
+(Password: itzforblitz)
+
+Once you have downloaded unzip to desktop and run sdk.exe
+When running through the setup use "typical" setup.
+ Note: This will download and install about 800 mb of sdk environment
+       so it can take a while on slow internet connections.
+       This is the main bit that ppl fuck up, if you dont
+       install this right your bot wont compile.
+
+----
+
+Now you have downloaded and (hopefully) correctly installed all the files you need.
+All that is left to do is edit the compiler to include the new sdk pack you just installed
+
+Firstly:
+  *Open microsoft c++ compiler
+  *Go to Tools > Options and Click the "Directories" tab
+  *Double click the dotted line below the other directories
+   and add the following folder paths. (picture included)
+
+C:\PROGRAM FILES\MICROSOFT PLATFORM SDK
+C:\PROGRAM FILES\MICROSOFT PLATFORM SDK\BIN
+C:\PROGRAM FILES\MICROSOFT PLATFORM SDK\INCLUDE
+C:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB
+  
+  then use the up arrow too put them at the top of the list
+  (refer to pic) http://img220.imageshack.us/img220/7675/ri0toh7.jpg
+
+Now you should be ready to compile your bot.
+-=-=-=-=-=-=-=-=-=-=-=-=-=
+;  End Tutorial - h1t3m  ;
+-=-=-=-=-=-=-=-=-=-=-=-=-=

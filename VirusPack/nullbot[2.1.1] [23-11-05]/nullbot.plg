@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nullbot032 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\iBBy\LOCALS~1\Temp\RSP4B34.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/nullbot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\nullbot[2.1.1] [23-11-05]\advscan.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\iBBy\LOCALS~1\Temp\RSP4B34.tmp" 
+Creating temporary file "C:\DOCUME~1\iBBy\LOCALS~1\Temp\RSP4B35.tmp" with contents
+[
+kernel32.lib user32.lib mpr.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/nullbot032.pdb" /machine:I386 /out:"bin/nullbot032.exe" /align:4096 
+".\Release\Aim.obj"
+".\Release\Gaim.obj"
+".\Release\GoogleTalk.obj"
+".\Release\Icq.obj"
+".\Release\IMSpread.obj"
+".\Release\Msn.obj"
+".\Release\PalTalk.obj"
+".\Release\Peer2Peer.obj"
+".\Release\Skype.obj"
+".\Release\Symnatec.obj"
+".\Release\advscan.obj"
+".\Release\download.obj"
+".\Release\ftpd.obj"
+".\Release\hostcheck.obj"
+".\Release\keylog.obj"
+".\Release\killer.obj"
+".\Release\nullbot.obj"
+".\Release\other.obj"
+".\Release\pstore.obj"
+".\Release\threads.obj"
+".\Release\uninstall.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\iBBy\LOCALS~1\Temp\RSP4B35.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+Linking...
+LINK : warning LNK4108: /ALIGN specified without /DRIVER or /VXD; image may not run
+
+
+
+<h3>Results</h3>
+nullbot032.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

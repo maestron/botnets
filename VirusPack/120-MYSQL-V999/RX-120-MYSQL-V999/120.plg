@@ -1,0 +1,228 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"120/120.res" /d "NDEBUG" "G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\120.rc"" 
+Creating temporary file "G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP65.tmp" with contents
+[
+/nologo /MT /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"120/" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\Asn.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\dcass.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\dcom.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\lsass.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\mssql.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\mysqludf.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\Netapi.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\netbios.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\random.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\Sym.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\vncshit.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\120.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Adv.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Crc.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Cry.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\d3des.c"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\ddos.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\firefox.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\ftpd.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\icmpflood.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Ide.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Key.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Ldll.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\multipletopic.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\patcher.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\pingudp.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Scanners\pstore.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Rnd.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Shel.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\sniff.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\socks4.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\socks5.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\synflood.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Sys.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\tcpflood.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Test.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\Thr.cpp"
+"G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\ver.c"
+]
+Creating command line "cl.exe @G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP65.tmp" 
+Creating temporary file "G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP66.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" /verbose:lib 
+".\120\Asn.obj"
+".\120\dcass.obj"
+".\120\dcom.obj"
+".\120\lsass.obj"
+".\120\mssql.obj"
+".\120\mysqludf.obj"
+".\120\Netapi.obj"
+".\120\netbios.obj"
+".\120\random.obj"
+".\120\Sym.obj"
+".\120\vncshit.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\d3des.obj"
+".\120\ddos.obj"
+".\120\firefox.obj"
+".\120\ftpd.obj"
+".\120\icmpflood.obj"
+".\120\Ide.obj"
+".\120\Key.obj"
+".\120\Ldll.obj"
+".\120\multipletopic.obj"
+".\120\patcher.obj"
+".\120\pingudp.obj"
+".\120\pstore.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\sniff.obj"
+".\120\socks4.obj"
+".\120\socks5.obj"
+".\120\synflood.obj"
+".\120\Sys.obj"
+".\120\tcpflood.obj"
+".\120\Test.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+".\120\120.res"
+]
+Creating command line "link.exe @G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP66.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Asn.cpp
+dcass.cpp
+dcom.cpp
+lsass.cpp
+mssql.cpp
+mysqludf.cpp
+Netapi.cpp
+netbios.cpp
+random.cpp
+Sym.cpp
+vncshit.cpp
+120.cpp
+G:\Documents and Settings\Creator\Desktop\RX-120-MYSQL-V2\RX-120-MYSQL-V2\120.cpp(599) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Adv.cpp
+Crc.cpp
+Cry.cpp
+d3des.c
+ddos.cpp
+firefox.cpp
+ftpd.cpp
+icmpflood.cpp
+Ide.cpp
+Key.cpp
+Ldll.cpp
+multipletopic.cpp
+patcher.cpp
+pingudp.cpp
+pstore.cpp
+Rnd.cpp
+Shel.cpp
+sniff.cpp
+socks4.cpp
+socks5.cpp
+synflood.cpp
+Sys.cpp
+tcpflood.cpp
+Test.cpp
+Thr.cpp
+ver.c
+Linking...
+
+Searching Libraries
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching mysqlclient.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\libcpmt.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBCMT.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\Advapi32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ws2_32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\Version.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\kernel32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching mysqlclient.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\libcpmt.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\LIBCMT.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\Advapi32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ws2_32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\Version.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\kernel32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\user32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\uuid.lib:
+    Searching mysqlclient.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\comsupp.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\ole32.lib:
+    Searching G:\PROGRAM FILES\MICROSOFT PLATFORM SDK\LIB\oleaut32.lib:
+    Searching G:\Program Files\Microsoft Visual Studio\VC98\LIB\libcpmt.lib:
+
+Done Searching Libraries
+Creating temporary file "G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP68.tmp" with contents
+[
+/nologo /o"120/120.bsc" 
+".\120\Asn.sbr"
+".\120\dcass.sbr"
+".\120\dcom.sbr"
+".\120\lsass.sbr"
+".\120\mssql.sbr"
+".\120\mysqludf.sbr"
+".\120\Netapi.sbr"
+".\120\netbios.sbr"
+".\120\random.sbr"
+".\120\Sym.sbr"
+".\120\vncshit.sbr"
+".\120\120.sbr"
+".\120\Adv.sbr"
+".\120\Crc.sbr"
+".\120\Cry.sbr"
+".\120\d3des.sbr"
+".\120\ddos.sbr"
+".\120\firefox.sbr"
+".\120\ftpd.sbr"
+".\120\icmpflood.sbr"
+".\120\Ide.sbr"
+".\120\Key.sbr"
+".\120\Ldll.sbr"
+".\120\multipletopic.sbr"
+".\120\patcher.sbr"
+".\120\pingudp.sbr"
+".\120\pstore.sbr"
+".\120\Rnd.sbr"
+".\120\Shel.sbr"
+".\120\sniff.sbr"
+".\120\socks4.sbr"
+".\120\socks5.sbr"
+".\120\synflood.sbr"
+".\120\Sys.sbr"
+".\120\tcpflood.sbr"
+".\120\Test.sbr"
+".\120\Thr.sbr"
+".\120\ver.sbr"]
+Creating command line "bscmake.exe @G:\DOCUME~1\Creator\LOCALS~1\Temp\RSP68.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

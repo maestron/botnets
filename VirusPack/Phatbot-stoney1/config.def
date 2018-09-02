@@ -1,0 +1,53 @@
+#
+# Config definition file
+# Format:
+# Every line beginning with a # is a comment
+# <objecttype><tab><name><tab><datatype><tab><description>
+#
+# objecttype can be one of these:
+# cvar		-	A cvar to be registered
+#
+# name is the name of the cvar to be registered
+#
+# datatype can be one of these:
+# string	-	a string
+# char		-	a single character
+# int		-	an integer
+# bool		-	a boolean value
+#
+# description is a string describing the cvar
+#
+
+cvar	bot_filename	string	Bot - Runtime Filename
+cvar	bot_id	string	Bot - Current ID
+cvar	bot_prefix	char	Bot - Command Prefix
+cvar	bot_timeout	int	Bot - Timeout for receiving in miliseconds
+cvar	bot_seclogin	bool	Bot - Enable login only by channel messages
+cvar	bot_compnick	bool	Bot - Use the computer name as a nickname
+cvar	bot_randnick	bool	Bot - Random nicks of Letters and Numbers
+cvar	bot_meltserver	bool	Bot - Melt the original server file
+cvar	bot_topiccmd	bool	Bot - Execute topic commands
+cvar	do_speedtest	bool	Bot - Do speedtest on startup
+cvar	do_avkill	bool	Bot - Enable AV kill.
+cvar	do_stealth	bool	Bot - Enable Stealth.
+cvar	as_valname	string	Autostart - Value Name
+cvar	as_enabled	bool	Autostart - Enabled
+cvar	as_service	bool	Autostart - Start as service
+cvar	as_service_name	string	Autostart - Short service name
+cvar	scan_maxthreads	int	Scanner - Maximum Number of threads
+cvar	scan_maxsockets	int	Scanner - Maximum Number of sockets
+cvar	ddos_maxthreads	int	DDOS - Maximum Number of threads
+cvar	redir_maxthreads	int	Redirect - Maximum Number of threads
+cvar	identd_enabled	bool	IdentD - Enable the server
+cvar	cdkey_windows	bool	Return Windows Product Keys on cdkey.get
+cvar	scaninfo_level	int	Scanner - Info Level (0)-none (1)-less (3)-more
+cvar	spam_aol_channel	string	AOL Spam - Channel name
+cvar	spam_aol_enabled	bool	AOL Spam - Enabled ?
+cvar	sniffer_enabled	bool	Sniffer - Enabled ?
+cvar	sniffer_channel	string	Sniffer Output channel
+cvar	keylog_enabled	bool	Keylogger - Enabled ?
+cvar	keylog_channel	string	KeyLogger Channel
+cvar	scaninfo_chan	string	Scanner - Output channel
+cvar	inst_polymorph	bool	Installer - Polymorph on install ? (Doesn't work with EXE packers)
+cvar	vuln_channel	string	Sniffer - Vulnerable Server Sniffer
+

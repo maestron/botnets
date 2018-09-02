@@ -1,0 +1,439 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Skvoznoy/CUP.su || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> || <a style="text-decoration: none" href="tools/HardwareAuditor.htm"><span style="text-decoration: none; color: #BFBF88">hardware_auditor.pl</span></a> ||<hr></pre>
+<pre>
+Wardriving Uncovered
+Andrew K. aka Skvoznoy (&quot;Xakep&quot;, CUP.su/EOF)
+
+<image src="images/kreml.png" alt="kreml" border="1">
+
+1. Introduction
+2. Wi-fi positioning and GPS
+3. Wi-fi hotspot's mapping software
+4. How to make wardriver's map accessible for everyone in the Internet.
+5. Local wireless network security analyzation. 
+6. Common atacks in wireless infrastructure
+
+1.Introduction
+------------------
+Wireless technologies get into our daily life more actively. For one it's a craze of new technologies 
+and convenience at the decision of different technological problems, and for others -  fighting jumping-off 
+place where real cyberfights are unwrapped. Hacking in wireless sphere is more independent, original and wide, 
+then, for example, web-hacking. You understand why it is so after this article. Imagine! We will go to Kremlin, 
+Red Square and make warchalking tour under presidents towers. Everything, that is required for the beginning of 
+practical side of Wardriving is: notebook with Wi-fi card, some soft, GPS module for navigation and, of course, 
+comfortable backpack :) After perusal of article you will learn to make itself maps of AP's, to analyze safety 
+wireless Networks and even to make jokes there.
+
+My equipment:
+GPS-receiver GlobalSat BU-303 USB on SiRF StarIIe/LP chipset, providing high quality and speed of coordinates 
+definition. As it possesses almost minimal &quot; cold start &quot; - 45 seconds. The matter is that at the 
+first start, the device &quot;does not know&quot;, where it is on the planet. In order to orient it starts 
+to scan range of frequencies, analyze signals and spend calculation of yours coordinates. Notebook Alienware 
+NP9860 - the ideal tool for wardriving, ideal of the compactness.
+
+2.Wi-fi positioning and GPS
+---------------------------
+With development of Wi-Fi (Wireless Fidelity) actively grow WLAN networks. Such decisions are very actual and 
+widespread everywhere, from small offices to huge corporate sort networks. It is not necessary to hide, that
+for today safety of such networks(standard 802.11 x)leaves much to be desired. 
+
+<image src="images/wiimap.png" alt="wiimap" border="1">
+
+In the center of Moscow wi-fi services are given almost at each corner, under the official 
+information for today in capital is over five-hundred public(!) points of access.
+
+<image src="images/map.png" alt="map" border="1">
+
+For simplification and presentation of the work we shall use Wi-fi positioning method of drawing AP's 
+(Acess Points) on the special map which can be converted in one of popular graphic formats. As scanner
+we shall use Netstambler (netstumbler.com/). As the purpose of studying we have chosen Ohotniy Riad, 
+it is absolutely close to Kremlin towers, therefore public points of access do not interest us at all. 
+On future map we can analyze geo-distribution of wireless activity and visually trace hotspots 
+finding, distance between them. 
+
+3. Wi-fi hotspot's mapping software
+-------------------------------------
+Products, that can be used for navigation and Wi-Fi mapping:
+
+Microsoft Mappoint Europe. 
+(http://wireless.gayamerican.org/microsoft-mappoint-wifi.html)
+Commercial cartographical product supporting integration with most part of GPS-devices and absolutely 
+compatible with Netstambler. Compatibility ON occupies an important role, as the report after scanning 
+can be imported not to everyone mapping software, suitable for GPS navigation. At worst the special 
+scripts allowing be required to you to transform broad gullies. A concrete example to it MapSource MPS, 
+for compatibility with which it is required to use http: // terenin.com/nets2mps.zip. In real time 
+by means of means of wireless networks of a computer and mechanism Microsoft Location Finder, which 
+uses a database of known points of access Wi-Fi for definition of coordinates of the user.
+
+Microsoft Streets And Tips. (http://www.microsoft.com/streets/ProductDetails.aspx?pid=001)
+Analogue of Microsoft AutoRoute. Ideal for automobile fans (including wardrivers) as it is grinded 
+for visually convenient explaining where you are at the moment, moreover, there is an option of 
+voice support. For successfull importation of the scanner's report use StreetStumbler 2004 RC4.6 
+(http://home.adelphia.net/~kg4ixs/ss2004), the program will transform received NS. A file and the all 
+information from it will be visually displayed on a the map.
+
+AVTOGIS (http://www.kiberso.com/)
+All pluses of it were already broadcast in last numbers of Xakep magazine, number #078, p. 078-014-1), 
+the complete set is absolutely compatible with Netstambler and everything, that is necessary is 
+to start the scanner together with Stumbverter and to connect the GPS-module. With it's help you 
+can find necessary street, the house or any city object.
+
+Of course you note, that all of the products are commercial, but thee are absolutely 
+free-of-charge realizations of such idea. Wardrivers as self-educated persons have written 
+a huge abundance of the scripts, allowing to convert NS reports in a suitable format. One of them 
+is PHP Stumbler Parder v1.1 (http://kb3ipd.com/phpStumblerParser/index.php). All received 
+information will contain breadth, longitude, MAC the address of the removed point, SSID, 
+the information on the channel, type of authorization. Personally us extremely involves .kml 
+a format. The matter is that Google Earth service supports it and you can use it for Wi-fi mapping. 
+
+Swing Google Earth Desctop (http://desktop.google.com/download/earth/GoogleEarth.exe), File&gt; Open&gt; 
+We import the report at the included Internet. Near to us there was hotspot, therefore we at once have 
+found ourselves on a map, having connected to it. But what to do, if such has not appeared, and there 
+is only GPS the module? Well, let's take advantage of favourite service and program GPS TrackMaker 13 
+(http://www.ruslapland.ru/gps.htm). If you would not like to spend own money with gprs for pumping of 
+maps do all stuff at home. How? Look. Load GE/GPS and load maps from the Internetm, surf planned 
+districts for warwalking'a. The program will bring the received structures in memory (temporary} files 
+will settle down in C: \Documents and Settings \PCname \ApplicationData \Google \GoogleEarth). Being not 
+connected to the Internet, you can start Google Earth and impudently ignore all inquiries about 
+connection to a network - preload houses data from there - on the screen and you will see the cashed 
+images in advance prepared square. For more evident perception I recommend KNSGEM 
+(http://www.rjpi.com/knsgem.htm). The program will help &quot;to paint&quot; a habitual map 
+in present map of warwalker - to illuminate the found points various colors, to paint over zones 
+of a radiocovering or to lead remote lines.  
+
+Before hiding device in a backpack, make sure, that correct adjustments of power supplies are exposed. 
+In order to prevent &laquo;power off&raquo; situation click on a badge of a battery in system tray&gt; 
+options of power supplies&gt; replace options of a sleeping mode, and as switching-off of disks and 
+the display on &quot;never&quot;. As take care of that the name of your computer did not cause 
+attention of administrators, who are looking for a network.
+
+Without thinking twice I was passed deep into the Oxotnii Riad - a heap of shops and offices, 
+sound notification Netstambler has not brought and I have decided to check up results. To my 
+surprise was enough. On the display MAC-addresses of networks were displayed, their identifiers, 
+frequencies and presence of crypto-protection WEP/WPA. To me has largly carried, as in the list 
+of the found networks was the point which is not having connection to entrusted MAC-addresses 
+and without presence WEP of protection (Wired Equivalent Privacy). As a router it was used 
+Senao with the 11 mbs channel. By the way when the channel is not so high (54mbs), admin looks 
+after steading against radio-handicapes, in the center of the city it is especially actual, 
+therefore many administrators limit speeds of it. Having transferred greetings in ICQ I have 
+paid attention to my visual map - GPS precisely showed my site, and Stumbverter marked the 
+nearest hotspots with their distance info from each other in Mappoint. 
+
+4. How to make wardriver's map accessible for everyone in the Internet.
+----------------------------------------------------------------------
+First method:
+1. Register in http://www.google.com/apis/maps/signup.html. We define the size of the future map, 
+   after it  you will receive unique ID and a code for an insert. 
+2. Notice, Google API supports{maintains} only XML or modified KML a format, therefore by means 
+   of PHP Stumbler Parder v1.1 (http://kb3ipd.com/phpStumblerParser/index.php) we convert the 
+   report from NS in XML.
+
+You will have something like in it:
+ 
+&lt;marker lat=&quot;55.8175100&quot; lng=&quot;37.5091567&quot; ssid=&quot;G604T_WIRELESS&quot; bssid=&quot;00:11:95:9e:1c:74&quot; time_gmt=&quot;17:46:49 (GMT)&quot; snr_sig_noise=&quot;[ 37 86 49 ]&quot; iswep=&quot;0&quot; isap=&quot;1&quot;/&gt;
+
+
+4. GDownloadUrl (&quot;LINK_WARDRIVING_OTCHET.xml&quot;, function (data) {
+          var xml = GXml.parse (data);
+          var markers = xml.documentElement.getElementsByTagName (&quot;marker&quot;);
+          for (var i = 0; i &lt;markers.length; i ++) {
+          var point = new GLatLng (parseFloat (markers [i] .getAttribute (&quot;lat&quot;)),
+          parseFloat (markers [i] .getAttribute (&quot;lng&quot;)));
+          var marker = createMarker (point, ' &lt;small&gt; &lt;B&gt; SSID &lt;/B&gt;: ' + markers [i] .getAttribute (&quot;ssid&quot;) + ' &lt;br&gt; &lt;B&gt; MAC: &lt;/B&gt; ' +markers [i] .getAttribute (&quot;bssid&quot;) + ' &lt;br&gt; &lt;B&gt; Time: &lt;/B&gt; ' +markers [i] .getAttribute (&quot;time_gmt&quot;) + ' &lt;/small&gt; ');
+          map.addOverlay (marker);
+          // map.addOverlay (new GMarker (point, icon));
+}
+
+Second method if:
+If you prefer Kismet as wi-fi scanner, you can use gpsmap (with gmap patch http://www.parknation.com/gmap/) 
+for mappinhg. 
+
+1.Download the gpsmap-gmap-X.X.tgz file 
+2.uncompress it by typing 'tar zxf gpsmap-gmap-X.X.tgz' (Where X.X is the version number) 
+3.Download the source code for kismet (' http://svn.kismetwireless.net/code/trunk kismet-devel') 
+4.Change to the kismet-source directory ('cd kismet-devel') 
+5.Patch the kismet source code ('patch -p0 &lt; ../gpsmap-gmap-X.X/gpsmap-gmap-X.X.diff') 
+6.Run configure ('./configure') 
+7.Make gpsmap ('make gpsmap') 
+8.Copy gpsmap to its desired location ('cp gpsmap /usr/local/bin') 
+9.Change to the gpsmap-gmap-X-X directory ('cd ../gpsmap-gmap-X.X') 
+10.Copy the index.html file and the mapfiles folder to a webserver 
+11.After running gpsmap on a gps file copy the output .js file to the same folder as the index.html file 
+   and name it gpsdata.js 
+12.You also need to get a key for using google maps from google (http://www.google.com/apis/maps/signup.html). 
+   Insert this key into the top of the index.html file in the location of KEYHERE 
+13.So, you hopefully can see the page and wireless locations in your browser 
+
+In addition you can convert kismet or kiswin dump in html :)
+http://www.maco.sk/kismet2html/ 
+
+5. Local wireless network security analyzation. 
+--------------------------------------------------
+When you have connection, your IP will be automatically configured and change on given out by a network. 
+Detect it with ipconfig and try to come through a browser on x.x.x.1. The matter is that there can be special 
+WEB-based control panel, in which there can be table of rounting can be configured. 
+
+<image src="images/router.png" alt="router" border="1">
+
+Lame administrators install it with default firware password (admin, cisco, guest). Having caught 
+access to it, you can edit the table of routing and everything that only dream about. After that i 
+advice you to parse backtracks on vulnerability &laquo;Bypass Authefication&raquo; or config info 
+watching (remember CISCO bug in /level/99/show/config).
+
+perl hardware_auditor.pl -s 192.168.0.0 -e 192.168.0.100
+LOADINC MAC ... ok 
+LOADING BUGS ... ok 
+LOADING CREDITS ... ok (default passes db)
+
+<image src="images/xek_ksur.png" alt="xek_ksur" border="1">
+
+You can brute firmware default passes, go threw authorization with it help and detect 
+some buggy AP threw standart bugs like /cgi-bin/firmwarecfg and /cgi-bin/Intruders.cfg 
+(in Dlink models):
+
+# Copyright (c) 2002 Atheros Communications, Inc., All Rights Reserved
+# DO NOT EDIT -- This configuration file is automatically generated
+magic Ar52xxAP
+fwc: 34
+login admin
+DHCPServer 
+Eth_Acl 
+nameaddr
+domainsuffix 
+IP_Addr 10.0.0.30
+IP_Mask 255.0.0.0
+Gateway_Addr 10.0.0.1
+RADIUSaddr 
+RADIUSport 1812
+RADIUSsecret 
+password IntrudersTest
+passphrase 
+wlan1 passphrase AnewBadPassPhrase
+# Several lines removed.
+
+As at reception ip - you can analyse the received network environment on presence bugs. 
+NMAP will help with it: for ex. scan a range with the open port 139:
+
+nmap-sT -p 139 x.x.x.0/24. 
+
+<image src="images/nmap_po_tochke.png" alt="nmap_po_tochke" border="1">
+
+For convenience download NMAP with GUI the interface - NMAP FE. Of course you can try to find share 
+resources and exploit SMB shares all depends on your mind. Famous group The Hackers Choice (THC) for 
+this purpose has released special utility THC-RUT, people called it &quot; the knife of wardriver &quot;. 
+It uses heap of methods to analyze every network: arp lookup, spoofed DHCP request, RARP, BOOTP, ICMP-ping, 
+ICMP address mask request, OS fingerprinting, fast hosts detection. Using vulnerable services (lsass, etc.) 
+for not authorized access,you can intrude in open spaces of a network and steal information, to backdoor 
+pair computers or simply to spy for their activity. In networks having good channel actually to place 
+Ddos-boats. We go further. 
+
+6. Common atacks in wireless infrastructure
+--------------------------------------------
+My attention was involved with a point with the channel 54mbps, probably it was corporate network 
+demanding fast connection. Having oriented on my map i noticed that there was a travel agency.
+
+The network &quot;setka1&quot; requires a network key (also called a WEP key or WPA key). 
+A network ney helps prevent unknown intruders from connecting to this network.
+
+Type the key, and then click Connect.
+
+Network key:
+
+My aim was to crack WEP key and to enter into a network. Standard WEP, is based on RC4 which 
+application is very extensive - beginning from &quot; Hidden ROM &quot; in XBOX, finishing 
+Private Keys in products Windows. Moreover it is used in Wired Equivalent Privacy portion of 
+IEEE 802.11b/g. It consists of the stream cipher RC4 for confidentiality, the CRC-32 checksum for 
+integrity.
+
+Standard 64-bit WEP uses a 40 bit key, which is concatenated to a 24-bit initialization vector (IV) 
+to form the RC4 traffic key. 
+
+A 128-bit WEP key is almost always entered by users as a string of 26 Hexadecimal (Hex) characters 
+(0-9 and A-F). Each character represents 4 bits of the key. 4 * 26 = 104 bits; adding the 24-bit IV 
+brings us what we call a &quot;128-bit WEP key&quot;. A 256-bit WEP system is available from some 
+vendors, and as with the above-mentioned system, 24 bits of that is for the I.V., leaving 232 actual 
+bits for protection. This is typically entered as 58 Hexadecimal characters.
+(58 * 4 = 232 bits) + 24 I.V. bits = 256 bits of WEP protection. 
+
+P.s. WEP2 is vulnarable too.
+
+With help of AIRCRACK - a set of utilities for audit of the wireless networks, 
+including:
+
+Airodump - packet sniffer, 
+Aireplay - frames injector
+Aircrack - analyzator of recieved packets 
+Airdecap - the decoder of received packages WEP/WPA.
+
+We will crack it and get password.
+The quantity of sniffed packages depends on length of a WEP-key. The received packages will be 
+dumped in iv's file, above the analysis of which will be blown Aircrack. For breaking a 64-bit 
+key you will need to intercept up to 200,000 IV-packages, 128-th - up to one million. Sometimes 
+one hour is required to crack it, sometimes near 10 mins. By the way, according to agents of FBI 
+who practices lots of educational tests for penetration, use of traffic generation utility will 
+boost the process, and you can crack WEP in 3 mins. To a word, the standard 802.11 a allows to 
+create 152-bit WEP keys, against 64/128 bit 802.11b, but procedure of its breaking is similar. 
+
+Start Airdump:
+1. We specify the wireless network adapter
+2. Type of your network adapter: Orinoco/Realtek, Aironet/Atheros 
+3. Scanned channels. Unfortunately the precise channel to us is not known - we put 0 
+   (scanning of all 14)
+4. We set a name of a dump-file of all intercepted packages - gemashaloma 
+   (hello poncheg :D) 
+5. Definition of formed packages WEP IVs - we press Y
+
+Process has gone, the program has displayed AP's MAC-address, the MAC-address of the connected client, 
+and the identifier of a network. Speed of process depends on speed of an traffic exchange between AP 
+and client. To raise it, as I told, it is possible to boost huge traffic masses with command 
+ping-t-l 31337 IP_wlan.
+
+Stop process with Ctrl C, and give on processing received iv's file to Aircrack.
+
+aircrack.exe-b AP's_MAC-n 64/128-i 1 gemashaloma.ivs.
+
+Flag &laquo;-b&raquo; means that we work with a AP's identificator (-b bssid: MAC address, Access Point),
+ in more detail about other options Aircrack you can learn from  program's manual or help option.
+
+After some expectation my mood has improved - &laquo;KEY Found&raquo;, in brackets the long-awaited 
+password &quot;trabzon&quot; was seen. For similar process it is possible to apply new utility Weplab 
+(http://weplab.sourceforge.net/) or chok-chok that was widely discussed on Netstambler's BBS. Realizes 
+some kinds of attacks: bruteforce with dictionary phrases using, static 
+FMS attack and so on.
+
+Probably you have paid attention to the WPA-standard (Wi-Fi Protected Access) if you have some 
+wardriving penentrarion testing skill. It has been created at once as technologists of the world 
+have realized all vulnerability of the previous standard. It is more secure as it allows to request 
+the name and the password of the user, to check them with registration records in a database 
+of a authorization server, and only then to make a decision on the admission in a network.
+
+Advantages of WPA:
+- Dynamic generation of keys;
+- Precise distribution of the cryptographic sums by means of technology MIC (Message Integrity Check), 
+  that does not give possible to false packages introduction;
+- The integrated enciphering under standard AES
+
+If in column &laquo;Encyption&raquo; of your wireless scanner you notice WPA label, don't worry. 
+Process of WPA cracking consists in reception of IV's packages of connection, their analysis and 
+decoding. As a file-report it is required to use CAP, instead of IV. For this purpose in airodump's 
+option on the last question &laquo; Only write WEP IVs (y/n) &raquo; is answered &quot;is not 
+present&quot;. Procedure of IV's packages sniffing can be caused by deauthorization frames. 
+Unfortunately Windows do not allow to use it so wide, but you can use Perl script like MAC_flood 
+for it. Alternatives are: void11 (Linux): 
+
+void11_penetration: -s CLIENT MAC-B ATTACKED MAC-D wlan0. We shall present, that you managed to 
+force client's reconnections, sniffed initialization vectors from the client to AP have been 
+intercepted in a file gema.cap. We shall feed it to Aircrack:
+ 
+aircrack.exe-p 4-a 2-w passes gema.cap (passes - it's necessary to have special dictionary of 
+passwords for brute). 
+
+On duration of the brute procedure you can notice that it is much longer then WEP-cracking, sometimes 
+it will borrow more then 2 hours. Standardly in W2k there are no mechanisms of WPA authorization 
+(unlike XP) - therefore for own convenience of users Windows 2000/98/ME use WPA Assiastant 
+(http://www.wirelesssecuritycorp.com/wsc/public/WPAAssistant.do) - freeware programm, which 
+will help you to connect to networks with WPA-PSK.
+
+Notebook was gradually unloaded, therefore I decided to hurry on scanning other territories. 
+We go along Lubianka street.
+
+Sometimes method of MAC spoofing is very usefull. Filter mode of MAC addresses provides a connection 
+only from PC's entrusted in the special list. But in any case you like it is possible to detect an 
+identifier of the network. Detour of such way of protection consists in MAC changing on that is in 
+&laquo;whitelist&raquo;, for ex. on hotspot's adress.
+
+SMAC 
+www.klcconsulting.net/smac/
+The utility for MAC changing on Windows 2000/XP. Enter new Spoofed MAC address and click &quot; 
+Update MAC &quot;. Sometimes it is impossible to enter network with it, as already authorizated real 
+MAC-owner have been connected to it. For this purpose there are fighting methods, like - deassociation 
+frames sending, moreover, you can make good traffic generation in the network in order to boost for ex.
+sniffing process.
+
+VOID11 - http://www.wirelessdefence.org/Contents/Void11Main.htm 
+The idea consists in disconnecting remote clients with special frames from AP. Of course after this 
+they try to renew connection - so the traffic will be generated. Except for that similar sort long 
+attack can do much harm to the administrator or break his business :) As the network some time will 
+be absolutely inaccessible and on monitors in tray will be shown &quot; Wireless Network unavailable &quot;. 
+Such situations - the result of DDOS atacks on wireless network that can be organized by frames injection.
+
+Another:
+
+MAC-flood - fast sending of heaps of the generated MAC-addresses
+http://home.jwu.edu/jwright/perl.htm)
+Use: $perl macfld.pl-c 1000-u 10000 (c - how many packages, u - timeout)
+
+FATA Jack - sending of heaps of frames, can &laquo;freeze&raquo; all network and correct work.
+http://www.wi-foo.com/soft/attack/fata_jack.c
+
+LEAP cracking
+
+During our tour I noticed one interesting AP, any of the last ways of hacking did not suit... In column 
+&laquo;Vendor&raquo; was CISCO, this could be detected with help of OUI base and MAC. It has forced me to 
+use special technology - LEAP (Lightweight Extensible Authentication Protocol) - the algorithm of authorization 
+invented by Cisco company, so much known in sphere of routers and other network affairs. Process of authorization 
+except for the password here is strengthened still - you should enter login too. To be convinced of that my 
+guesses are true I decided to analyze all the packages intercepted by the sniffer. Ethereal (www.ethereal.com/) 
+helped me - batch sniffer.Having waited a bit, packets at once were displayed on the screen, a column of info: 
+REQUEST, EAP-CISCO Wireless (LEAP). Existing Windows opportunities do not support this, LEAP demands presence 
+special client - Aironet Client Utilities (ACU). As a rule realization of such authentificaton way is applied 
+in networks with installed CISCO hardware and Aironet Wlan-cards with the purpose to avoid attacks &laquo;Man 
+In The Middle&raquo; that can be used for traffic interception and injections of special frames. But Joshua 
+Wright - famouse researcher in computer sphere created special program ASLEAP (http://asleap.sourceforge.net/) 
+which can intercept network packages at a repeated connection of the client and brute passwords with LEAP. 
+If you haven't got such tools in your arsenal, use special script on PERL - anwrap 
+(http://www.securiteam.com/tools/6O00P2060I.html), you need Active Perl for it to installed also: 
+
+Anwrap:
+perl anwrap.pl &lt;users.txt&gt; &lt;passes.txt&gt; &lt;log.txt&gt;.
+
+Analogue with use of a program from Van-Hauser:
+
+THC-leap cracker:
+./leap-cracker-f passes.txt-u users.txt
+
+Concerning to ASLEAP : it works in two modes, offline (search already sniffed packets) and real-time 
+(capture of packages and the subsequent search). For work in real time the accessible network interface 
+is required to you, to define which it is possible to start the program with &laquo;-D&raquo; flag.
+
+./asleap-i any-w gemababy (record in a file the pcap-report)-t 3 it will allow to begin process of 
+interception of packages using any accessible interface with record in a pcap-file with 3 seconds 
+timeout.
+
+./asleap-r gemababy-W passes (use of ready files AiroPeek NX or pcap-reports, 
+
+In difference from &quot;cable&quot; hacking - Wi-fi gives greater freedom of actions. Firstly, method of 
+wardriver's location detection is much more difficult, then if you use your usual cabel connection. In 
+fact for this purpose it is required to involve whole Security-group with notebooks on your searches 
+(triangulation method). A signal to alarm at them there can be a sudden connection of the new device on 
+air. Skilled administrators will detect yours (new) MAC in logs.
+ 
+On September, 3rd, 2006 Johny Cashe has described essentially new attack - using vulnerability of drivers 
+it is possible to execute unauthorizated code. Following products are vulnerable:
+
+APPLE:MacOS X 10.4
+INTEL:Intel PRO/Wireless 2200BG
+INTEL:Intel PRO/Wireless 2915ABG
+INTEL:Intel PRO/Wireless 2100
+INTEL:Intel PRO/Wireless 3945ABG 
+(w22n50.sys, w22n51.sys, w29n50.sys, w29n51.sys) 
+
+LORCON - the new utility which helps to search for mistakes in drivers for wireless technologies and 
+the standard 802.11x. 
+
+skvoz@cup # ./lorcon -c 1 -d 80 -t 00:0C:6E:4F:A2:00 , where -c number of channel (default 1), 
+-d &laquo;listening port&raquo;, -t MAC of buggy device. 
+
+Finding channel and signal strength ... DONE!
+Preparing shellcode ... 
+Sending attack ...
+Writing for response
+..... Got shell!
+
+It is very usefull as you can organize absolutly stealth atacks, nobody can detect you. So, that's all,
+of course in future I'll add something new in this tutorial. Good luck, and make war in &laquo;network's air&raquo;
+in free time :)
+</pre></body></html>

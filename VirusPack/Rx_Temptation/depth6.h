@@ -1,0 +1,1 @@
+bool hell(EXINFO exinfo);

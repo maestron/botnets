@@ -1,0 +1,9 @@
+;
+; Add this to autoexp.dat in Common\MSDev98\Bin to enable custom type
+; data display in the debug windows etc...
+;
+CString =<m_szString,s>
+CBuffer =<m_pData,s>
+CThread =<m_szType,s>
+CSocket =<m_szHost,s>:<m_sPort,i>
+CSocketServer =<m_sFriendlyName.m_szString,s>

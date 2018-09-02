@@ -1,0 +1,176 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Drx - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Woopie\LOCALS~1\Temp\RSP68.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"bin/Release/rBot.pch" /YX /Fo"bin/Release/" /Fd"bin/Release/" /FD /c 
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\advscan.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\dcom.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\lsass.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\lsass2.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\mssql.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\mssqllsass.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\ndcass.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\netbios.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\realcast.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\scan.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\wins.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\wkssvc.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\ddos.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\icmpflood.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\pingudp.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\skysyn.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\synflood.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\tcpflood.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\ftpd.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\httpd.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\ident.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\tftpd.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\redirect.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\socks4.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\download.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\driveinfo.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\findfile.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\keylogger.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\misc.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\netutils.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\processes.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\remotecmd.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\secure.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\sysinfo.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\visit.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\aliaslog.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\autostart.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\crc32.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\crypt.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\ehandler.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\fphost.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\irc_send.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\loaddlls.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\includes\net.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\rBot.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\rndnick.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\shellcode.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\threads.cpp"
+"C:\Documents and Settings\Woopie\Bureaublad\ifix\mafia\src\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Woopie\LOCALS~1\Temp\RSP68.tmp" 
+Creating temporary file "C:\DOCUME~1\Woopie\LOCALS~1\Temp\RSP69.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"bin/Release/rxBot.pdb" /machine:I386 /out:"bin/rxBot.exe" 
+".\bin\Release\advscan.obj"
+".\bin\Release\dcom.obj"
+".\bin\Release\lsass.obj"
+".\bin\Release\lsass2.obj"
+".\bin\Release\mssql.obj"
+".\bin\Release\mssqllsass.obj"
+".\bin\Release\ndcass.obj"
+".\bin\Release\netbios.obj"
+".\bin\Release\realcast.obj"
+".\bin\Release\scan.obj"
+".\bin\Release\wins.obj"
+".\bin\Release\wkssvc.obj"
+".\bin\Release\ddos.obj"
+".\bin\Release\icmpflood.obj"
+".\bin\Release\pingudp.obj"
+".\bin\Release\skysyn.obj"
+".\bin\Release\synflood.obj"
+".\bin\Release\tcpflood.obj"
+".\bin\Release\ftpd.obj"
+".\bin\Release\httpd.obj"
+".\bin\Release\ident.obj"
+".\bin\Release\tftpd.obj"
+".\bin\Release\redirect.obj"
+".\bin\Release\socks4.obj"
+".\bin\Release\download.obj"
+".\bin\Release\driveinfo.obj"
+".\bin\Release\findfile.obj"
+".\bin\Release\keylogger.obj"
+".\bin\Release\misc.obj"
+".\bin\Release\netutils.obj"
+".\bin\Release\processes.obj"
+".\bin\Release\remotecmd.obj"
+".\bin\Release\secure.obj"
+".\bin\Release\sysinfo.obj"
+".\bin\Release\visit.obj"
+".\bin\Release\aliaslog.obj"
+".\bin\Release\autostart.obj"
+".\bin\Release\crc32.obj"
+".\bin\Release\crypt.obj"
+".\bin\Release\ehandler.obj"
+".\bin\Release\fphost.obj"
+".\bin\Release\irc_send.obj"
+".\bin\Release\loaddlls.obj"
+".\bin\Release\net.obj"
+".\bin\Release\rBot.obj"
+".\bin\Release\rndnick.obj"
+".\bin\Release\shellcode.obj"
+".\bin\Release\threads.obj"
+".\bin\Release\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Woopie\LOCALS~1\Temp\RSP69.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+dcom.cpp
+lsass.cpp
+lsass2.cpp
+mssql.cpp
+mssqllsass.cpp
+ndcass.cpp
+netbios.cpp
+realcast.cpp
+scan.cpp
+wins.cpp
+wkssvc.cpp
+ddos.cpp
+icmpflood.cpp
+pingudp.cpp
+skysyn.cpp
+synflood.cpp
+tcpflood.cpp
+ftpd.cpp
+httpd.cpp
+ident.cpp
+tftpd.cpp
+redirect.cpp
+socks4.cpp
+download.cpp
+driveinfo.cpp
+findfile.cpp
+keylogger.cpp
+misc.cpp
+netutils.cpp
+processes.cpp
+remotecmd.cpp
+secure.cpp
+sysinfo.cpp
+visit.cpp
+aliaslog.cpp
+autostart.cpp
+crc32.cpp
+crypt.cpp
+ehandler.cpp
+fphost.cpp
+irc_send.cpp
+loaddlls.cpp
+net.cpp
+rBot.cpp
+rndnick.cpp
+shellcode.cpp
+threads.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rxBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

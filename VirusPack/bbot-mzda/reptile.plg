@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: reptile - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Cybix\LOCALS~1\Temp\RSP6AB.tmp" with contents
+[
+/nologo /MD /W2 /GX /O1 /I "lib/openssl/win32/include" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "NDEBUG" /D "_AFXDLL" /FR"Release/" /Fp"Release/reptile.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\aim5.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\commands.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\download.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\irc.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\loaddlls.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\msn.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\protocol.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\reptile.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\threads.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\triton.cpp"
+"C:\Documents and Settings\Cybix\My Documents\Bots\Current\blockBot\utility.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Cybix\LOCALS~1\Temp\RSP6AB.tmp" 
+Creating temporary file "C:\DOCUME~1\Cybix\LOCALS~1\Temp\RSP6AC.tmp" with contents
+[
+/nologo /subsystem:console /incremental:no /pdb:"Release/reptile.pdb" /machine:I386 /out:"Bin/reptile.exe" /libpath:"lib/openssl/win32/lib" 
+".\Release\aim5.obj"
+".\Release\commands.obj"
+".\Release\download.obj"
+".\Release\irc.obj"
+".\Release\loaddlls.obj"
+".\Release\msn.obj"
+".\Release\protocol.obj"
+".\Release\reptile.obj"
+".\Release\threads.obj"
+".\Release\triton.obj"
+".\Release\utility.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Cybix\LOCALS~1\Temp\RSP6AC.tmp"
+<h3>Output Window</h3>
+Compiling...
+aim5.cpp
+commands.cpp
+download.cpp
+irc.cpp
+loaddlls.cpp
+msn.cpp
+protocol.cpp
+reptile.cpp
+threads.cpp
+triton.cpp
+utility.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\Cybix\LOCALS~1\Temp\RSP6AE.tmp" with contents
+[
+/nologo /o"Release/reptile.bsc" 
+".\Release\aim5.sbr"
+".\Release\commands.sbr"
+".\Release\download.sbr"
+".\Release\irc.sbr"
+".\Release\loaddlls.sbr"
+".\Release\msn.sbr"
+".\Release\protocol.sbr"
+".\Release\reptile.sbr"
+".\Release\threads.sbr"
+".\Release\triton.sbr"
+".\Release\utility.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\Cybix\LOCALS~1\Temp\RSP6AE.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+reptile.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

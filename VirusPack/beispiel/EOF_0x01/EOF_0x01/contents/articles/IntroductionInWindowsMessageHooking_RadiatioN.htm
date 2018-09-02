@@ -1,0 +1,155 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: RadiatioN/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+Introduction in Windows Message Hooking
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Hi VXER and hackers out there! Today i want to give you a little intruduction to windows message hooking
+based on Win32 API calls. Maybe you ask yourself now: Why should I know this? Hehe, there are some 
+good reasons like:
+- You want to write a keylogger without using GetAsyncKeyState
+- You want to manipulate or filter windows messages
+- Get complete control over all windows messages and of course all running apps on a windows system
+- Understand how hooking works
+
+Ok so let's start with some basic stuff. For this tutorial i want to write a little program which hooks
+windows messages and manipulates all messages which have to do with keyboard inputs in it. i change all 
+pressed keys to the famous and lame 1337 language :) don't wonder, it is just an example to learn how 
+hooking works. i believe you'll get some more ideas while reading this tutorial for some other stuff.
+
+Needed for tutorial: You should know what windows messaging is and how an application handles this messages
+recommended but not required: Visual C++ 6 and knowledge in C++
+
+But how does window message hooking works?
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Every window created in windows uses the message queue to store data about what the user has did so far. 
+it can include data about mouse events, the keyboard and so on. (look at MSDN for more information) 
+So the user activates now the &quot;a&quot; key on the keyboard and Windows adds a message to message
+queue of the window which is in foreground at this moment. this window, belongs to notepad for example. 
+So windows adds now a new entry to this message queue with the info: 
+
+user has pressed key &quot;a&quot;
+
+This info is stored in some variables and structures, i will explain it later.
+After that notepad wants to know if the user has pressed some keys and checks in its main loop with
+GetMessage() or PeekMessage() if a new message is stored. Now you should know an application has to call
+DispatchMessage() before working with its data. Exactly here, in this function, our hook will be called :)
+In some books they say windows converts data internal in this function call, thats not completely wrong.
+Windows just calls all installed hooks for window messages in here. Of course by the right parameters 
+on installing the hook we can get full writing access to this messages and manipulate or trace its data
+before the application could parse it :D after return of our hook procedure windows calls other installed
+hooks and goes on with the message loop in notepad. we now have some basic understanding in hooks to look
+at the functions windows has.
+
+Microsoft has implemented some nice functions to hook windows messages.
+Therefore exist these functions:
+CallMsgFilter()
+CallNextHookEx()
+SetWindowsHookEx()
+UnhookWindowsHookEx()
+
+They are all implemented in User32.dll. For linking use User32.lib. 
+Declared in Winuser.h and Windows.h of Visual C++ 6.
+
+For now i have to explain some other important things. The procedure, which windows will be called in case 
+a message is dispachted, must be exported in a dll as a callback function. this dll will be loaded and 
+attached into all processes which are running in the system. (and it will be automatically done for new 
+processes) So our application (also viruses) must drop a dll on the system to get it running. I've done 
+this in my example by adding a new resource to the app and extract it in runtime to harddisk. then 
+it will be loaded and the messages get hooked. 
+
+The DLL
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+I thought it would be better to describe the dll first and then the app which loads the dll. I said 
+that we need a procedure which will be called when a message arrives. This function has the 
+following declaration:
+
+LRESULT CALLBACK GetMsgProc(
+  int code,       // hook code
+  WPARAM wParam,  // removal option
+  LPARAM lParam   // message
+);
+
+the first parameter says us whether to parse the message or give it back to the system.
+second parameter has info about the message itself. you can check if the message has been removed from
+the queue (GetMessage) or still keeps on it (PeekMessage).
+Last parameter is a pointer to a MSG structure which holds info we can change. its defined like this:
+
+typedef struct tagMSG {
+  HWND   hwnd; 
+  UINT   message; 
+  WPARAM wParam; 
+  LPARAM lParam; 
+  DWORD  time; 
+  POINT  pt; 
+} MSG, *PMSG; 
+
+The two relevant things we want to have is wParam and message. wParam has a value equal to ascii characters,
+so you can directly look for a pressed key in here. (Would be the right point for a keylogger)
+In 'message' the type of message is stored, but we just need WM_CHAR for our example. At the end of this
+procedure we have to call CallNextHookEx() to give control back to the system or any other installed hooks.
+
+Now we need a method to start our Hook. I think the best way to solve this problem is to export a new 
+function inside the dll we can call. (I also have implemented a function for uninstalling the hook)
+Inside this function we have to call
+
+hHook = SetWindowsHookEx( WH_GETMESSAGE, GetMsgProc, hInstDll, 0 );
+
+First parameter says which type of hook, second is the procedure which will be called, third a handle 
+to own dll and at last zero. zero says windows to attach our dll to all processes in the system. a handle 
+to the hook should be saved in an static variable for unloading the hook.
+Uninstalling is also very easy...
+
+UnhookWindowsHookEx(hHook);
+
+I think i don't have to explain this any more. For now our dll is finished. You can find the complete 
+source attached to this tutorial with detailed comments on most of the lines.
+
+The application
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Our application has now to solve the following problems:
+- extract the dll within the exe resource onto harddisk (windows directory)
+  - find resource
+  - load resource
+  - lock resource in memory
+  - get resource size
+  - save dll from memory to disk
+- load the dll
+- find function address in memory
+- install the hook by calling this function
+- go into never ending loop
+
+I won't describe this steps any more. this tutorial is just to get basic understanding in hooking and not
+in writing an app which can extract a resource to disk, load and call it. a problem i know: if you shutdown 
+the app, the dll will also unload and there will be no more hooking. if you have some ideas against
+this problem tell me them plz. I've just finished this project and commented it as well. 
+i call it my &quot;1337 Writer&quot; :) how i already said the source is attached to this tutorial. just look 
+in it, test it and do some own creations. how always: no copyright :D I hope you understood 
+everything - my english is not the best at all, i know ;)
+
+Some ideas
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+- You could load the dll without using a extra program. you first must be able to get a exe to target PC
+  and run it. this app must be able to drop this dll to harddisk and install it as a explorer extension.
+  i'll describe this technique in some other tutorial, just look in some other article in this zine from me.
+
+- To avoid double or more installations of a hook create a mutex to check if not already installed, cause
+  this could slow down the target machine very much.
+
+Last words
+&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;&macr;
+Some nice greetings go to the complete EOF group and especially to Skyout my good friend *keep on rocking*
+
+As always no copyright - free for any use
+
+Tutorial written by RadiatioN in March 2006 at EOF group
+http://www.eof-project.net
+
+My Site:
+http://radiation.eof-project.net
+
+Contact:
+radiation[at]eof-project[dot]net
+</pre></body></html>

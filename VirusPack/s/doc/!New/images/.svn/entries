@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="444"
+   name=""
+   committed-date="2004-03-20T21:43:47.537198Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/doc/!New/images"
+   last-author="sox"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="439"
+   name="2.jpg"
+   text-time="2004-03-21T22:22:40.058422Z"
+   committed-date="2004-03-20T19:29:28.281590Z"
+   checksum="7593f04b42ae8c3fad5d670cf99c752d"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.048408Z"/>
+<entry
+   committed-rev="444"
+   name="3.jpg"
+   text-time="2004-03-21T22:22:40.118508Z"
+   committed-date="2004-03-20T21:43:47.537198Z"
+   checksum="f36f233fdcaf0120ae2fd7b0df7f060f"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.098480Z"/>
+<entry
+   committed-rev="444"
+   name="Executables.jpg"
+   text-time="2004-03-21T22:22:40.248696Z"
+   committed-date="2004-03-20T21:43:47.537198Z"
+   checksum="dd889a5bf52101b74195ee848735e5c5"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.228667Z"/>
+<entry
+   committed-rev="439"
+   name="1.gif"
+   text-time="2004-03-21T22:22:40.288753Z"
+   committed-date="2004-03-20T19:29:28.281590Z"
+   checksum="b47b8bb2d9d2363f5e44543207a0d161"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.268724Z"/>
+<entry
+   committed-rev="444"
+   name="Includes.jpg"
+   text-time="2004-03-21T22:22:40.469012Z"
+   committed-date="2004-03-20T21:43:47.537198Z"
+   checksum="cc535d6be714bca1ffb151dad1b09817"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.448984Z"/>
+<entry
+   committed-rev="444"
+   name="4.gif"
+   text-time="2004-03-21T22:22:40.569156Z"
+   committed-date="2004-03-20T21:43:47.537198Z"
+   checksum="b6485aa665affe1186cac24aef9895d9"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.559142Z"/>
+<entry
+   committed-rev="444"
+   name="Libraries.jpg"
+   text-time="2004-03-21T22:22:40.779459Z"
+   committed-date="2004-03-20T21:43:47.537198Z"
+   checksum="9dc6ba5a519dbb8b57d73fecba10fa62"
+   last-author="sox"
+   kind="file"
+   prop-time="2004-03-21T22:22:40.759430Z"/>
+</wc-entries>

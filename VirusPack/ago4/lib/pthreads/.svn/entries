@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="9"
+   name=""
+   committed-date="2004-02-25T22:24:22.829912Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/lib/pthreads"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="145"/>
+<entry
+   name="win32"
+   kind="dir"/>
+</wc-entries>

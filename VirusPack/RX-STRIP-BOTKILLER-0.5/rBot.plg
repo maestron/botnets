@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Selecta\LOCALS~1\Temp\RSP2D.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/rBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Selecta\Desktop\New Folder (5)\RX-STRIP-BOTKILLER\rBot.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Selecta\LOCALS~1\Temp\RSP2D.tmp" 
+Creating temporary file "C:\DOCUME~1\Selecta\LOCALS~1\Temp\RSP2E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/bl4h.pdb" /machine:I386 /out:"Release/bl4h.exe" 
+".\Release\mssql.obj"
+".\Release\advscan.obj"
+".\Release\botkiller.obj"
+".\Release\download.obj"
+".\Release\ehandler.obj"
+".\Release\fphost.obj"
+".\Release\ftpd.obj"
+".\Release\keylogger.obj"
+".\Release\loaddlls.obj"
+".\Release\misc.obj"
+".\Release\net.obj"
+".\Release\processes.obj"
+".\Release\rBot.obj"
+".\Release\rndnick.obj"
+".\Release\session.obj"
+".\Release\sysinfo.obj"
+".\Release\threads.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Selecta\LOCALS~1\Temp\RSP2E.tmp"
+<h3>Output Window</h3>
+Compiling...
+rBot.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+bl4h.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

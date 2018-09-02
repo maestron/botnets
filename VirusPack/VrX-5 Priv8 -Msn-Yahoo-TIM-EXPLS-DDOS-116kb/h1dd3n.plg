@@ -1,0 +1,172 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: h1dd3n - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\crystal\LOCALS~1\Temp\RSP138.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/h1dd3n.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\aim5.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\autostart.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\crc32.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\crypt.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\ehandler.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\h1dd3n.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\irc_send.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\loaddlls.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\msn.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\netutils.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\rndnick.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\shellcode.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\threads.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\triton.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\wildcard.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\advscan.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\asn.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\dcom.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\mssql.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\vnc.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\connback.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\ftpd.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\tftpd.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\keylogger.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\aliaslog.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\download.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\driveinfo.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\fphost.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\misc.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\patcher.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\processes.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\remotecmd.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\sysinfo.cpp"
+"H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\tcpflood.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\crystal\LOCALS~1\Temp\RSP138.tmp" 
+Creating temporary file "C:\DOCUME~1\crystal\LOCALS~1\Temp\RSP139.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/h1dd3n.pdb" /machine:I386 /out:"Release/h1dd3n.exe" 
+".\Release\aim5.obj"
+".\Release\autostart.obj"
+".\Release\crc32.obj"
+".\Release\crypt.obj"
+".\Release\ehandler.obj"
+".\Release\h1dd3n.obj"
+".\Release\irc_send.obj"
+".\Release\loaddlls.obj"
+".\Release\msn.obj"
+".\Release\netutils.obj"
+".\Release\rndnick.obj"
+".\Release\shellcode.obj"
+".\Release\threads.obj"
+".\Release\triton.obj"
+".\Release\wildcard.obj"
+".\Release\advscan.obj"
+".\Release\asn.obj"
+".\Release\dcom.obj"
+".\Release\mssql.obj"
+".\Release\vnc.obj"
+".\Release\connback.obj"
+".\Release\ftpd.obj"
+".\Release\tftpd.obj"
+".\Release\keylogger.obj"
+".\Release\aliaslog.obj"
+".\Release\download.obj"
+".\Release\driveinfo.obj"
+".\Release\fphost.obj"
+".\Release\misc.obj"
+".\Release\patcher.obj"
+".\Release\processes.obj"
+".\Release\remotecmd.obj"
+".\Release\sysinfo.obj"
+".\Release\tcpflood.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\crystal\LOCALS~1\Temp\RSP139.tmp"
+<h3>Output Window</h3>
+Compiling...
+aim5.cpp
+autostart.cpp
+crc32.cpp
+crypt.cpp
+ehandler.cpp
+h1dd3n.cpp
+irc_send.cpp
+loaddlls.cpp
+msn.cpp
+H:\VrX-5 Priv8 -Msn-Yahoo-TIM-EXPLS-DDOS-116kb\msn.cpp(252) : warning C4244: 'argument' : conversion from 'short' to 'unsigned char', possible loss of data
+netutils.cpp
+rndnick.cpp
+shellcode.cpp
+threads.cpp
+triton.cpp
+wildcard.cpp
+advscan.cpp
+asn.cpp
+dcom.cpp
+mssql.cpp
+vnc.cpp
+connback.cpp
+ftpd.cpp
+tftpd.cpp
+keylogger.cpp
+aliaslog.cpp
+download.cpp
+driveinfo.cpp
+fphost.cpp
+misc.cpp
+patcher.cpp
+processes.cpp
+remotecmd.cpp
+sysinfo.cpp
+tcpflood.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\crystal\LOCALS~1\Temp\RSP13B.tmp" with contents
+[
+/nologo /o"Release/h1dd3n.bsc" 
+".\Release\aim5.sbr"
+".\Release\autostart.sbr"
+".\Release\crc32.sbr"
+".\Release\crypt.sbr"
+".\Release\ehandler.sbr"
+".\Release\h1dd3n.sbr"
+".\Release\irc_send.sbr"
+".\Release\loaddlls.sbr"
+".\Release\msn.sbr"
+".\Release\netutils.sbr"
+".\Release\rndnick.sbr"
+".\Release\shellcode.sbr"
+".\Release\threads.sbr"
+".\Release\triton.sbr"
+".\Release\wildcard.sbr"
+".\Release\advscan.sbr"
+".\Release\asn.sbr"
+".\Release\dcom.sbr"
+".\Release\mssql.sbr"
+".\Release\vnc.sbr"
+".\Release\connback.sbr"
+".\Release\ftpd.sbr"
+".\Release\tftpd.sbr"
+".\Release\keylogger.sbr"
+".\Release\aliaslog.sbr"
+".\Release\download.sbr"
+".\Release\driveinfo.sbr"
+".\Release\fphost.sbr"
+".\Release\misc.sbr"
+".\Release\patcher.sbr"
+".\Release\processes.sbr"
+".\Release\remotecmd.sbr"
+".\Release\sysinfo.sbr"
+".\Release\tcpflood.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\crystal\LOCALS~1\Temp\RSP13B.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+h1dd3n.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

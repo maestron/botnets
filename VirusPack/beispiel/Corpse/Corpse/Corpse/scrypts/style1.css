@@ -1,0 +1,19 @@
+a {text-decoration: none; line-height: 1.5; color: #90aabb}
+a.red:hover {COLOR: #f01710;}
+P {text-indent: 8px};
+
+.inp {BORDER-RIGHT: #dddddd 1px solid; BORDER-TOP: #dddddd 1px solid; BORDER-LEFT: #dddddd 1px solid; BORDER-BOTTOM: #dddddd 1px solid; FONT-SIZE: 10px; font-family: Verdana; color: #f0fcff; WIDTH: 105px; HEIGHT: 16px; BACKGROUND-COLOR: #004f79}
+
+.ver {font-family: Verdana; font-size: 10px;}
+
+.menu {font-size: 18px; line-height: 1.5; color: #bfdeff; text-decoration: none;}
+.menu:hover{COLOR: #2085cb;}
+
+.date {font-family: Verdana; font-size: 13px; color: #30a9e9}
+
+.normal {font-family: Verdana; font-size: 12px;}
+
+BODY {SCROLLBAR-FACE-COLOR: #103550; SCROLLBAR-HIGHLIGHT-COLOR: #a0a0a0;
+SCROLLBAR-SHADOW-COLOR: #909090; SCROLLBAR-DARKSHADOW-COLOR: #000000
+SCROLLBAR-3DLIGHT-COLOR: #000000; SCROLLBAR-ARROW-COLOR: #ffffff; 
+SCROLLBAR-TRACK-COLOR: #152840; color: #f0fcff;}

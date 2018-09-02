@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: HellBot - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\test\LOCALS~1\Temp\RSP21.tmp" with contents
+[
+/nologo /Gz /MD /w /W0 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/HellBot.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\test\Bureau\hell3fix\Download.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\test\LOCALS~1\Temp\RSP21.tmp" 
+Creating temporary file "C:\DOCUME~1\test\LOCALS~1\Temp\RSP22.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib psapi.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/HellBot.pdb" /machine:I386 /out:"Release/HellBot.exe" 
+".\Release\lib.obj"
+".\Release\massmail.obj"
+".\Release\msg.obj"
+".\Release\scan.obj"
+".\Release\xdns.obj"
+".\Release\xsmtp.obj"
+".\Release\zipstore.obj"
+".\Release\Config.obj"
+".\Release\Botcash.obj"
+".\Release\Commands.obj"
+".\Release\Connect.obj"
+".\Release\Crc32Static.obj"
+".\Release\CThread.obj"
+".\Release\Download.obj"
+".\Release\HellBot.obj"
+".\Release\HellMail.obj"
+".\Release\Main.obj"
+".\Release\polymorph.obj"
+".\Release\Utility.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\test\LOCALS~1\Temp\RSP22.tmp"
+<h3>Output Window</h3>
+Compiling...
+Download.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+HellBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

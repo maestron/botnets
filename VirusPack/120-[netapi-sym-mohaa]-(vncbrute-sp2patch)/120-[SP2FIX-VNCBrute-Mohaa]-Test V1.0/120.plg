@@ -1,0 +1,94 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 120 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP1B.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"120/120.pch" /YX /Fo"120/" /Fd"120/" /FD /c 
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Scanners\Asn.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Scanners\Netapi.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Scanners\Netbios.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Scanners\Pnp.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Scanners\Sym.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\vncshit.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\120.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Adv.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Crc.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Cry.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\d3des.c"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Ide.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Ldll.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\patcher.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Rnd.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Shel.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Sys.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Test.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Thr.cpp"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\ver.c"
+"D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\Scanners\mohaa.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP1B.tmp" 
+Creating temporary file "C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP1C.tmp" with contents
+[
+user32.lib /nologo /subsystem:windows /incremental:no /pdb:"120/120.pdb" /machine:I386 /out:"120/120.exe" 
+".\120\Asn.obj"
+".\120\Netapi.obj"
+".\120\Netbios.obj"
+".\120\Pnp.obj"
+".\120\Sym.obj"
+".\120\vncshit.obj"
+".\120\120.obj"
+".\120\Adv.obj"
+".\120\Crc.obj"
+".\120\Cry.obj"
+".\120\d3des.obj"
+".\120\Ide.obj"
+".\120\Ldll.obj"
+".\120\patcher.obj"
+".\120\Rnd.obj"
+".\120\Shel.obj"
+".\120\Sys.obj"
+".\120\Test.obj"
+".\120\Thr.obj"
+".\120\ver.obj"
+".\120\mohaa.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\BuZ\LOCALS~1\Temp\RSP1C.tmp"
+<h3>Output Window</h3>
+Compiling...
+Asn.cpp
+Netapi.cpp
+Netbios.cpp
+Pnp.cpp
+Sym.cpp
+vncshit.cpp
+D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\vncshit.cpp(215) : warning C4390: ';' : empty controlled statement found; is this the intent?
+120.cpp
+D:\¬120\120-[SP2fix-VncBrute]-FINALV1.0\120-[SP2fix-VncBrute]-FINALV1.0\vncshit.cpp(190) : warning C4700: local variable 'authResult' used without having been initialized
+Adv.cpp
+Crc.cpp
+Cry.cpp
+d3des.c
+Ide.cpp
+Ldll.cpp
+patcher.cpp
+Rnd.cpp
+Shel.cpp
+Sys.cpp
+Test.cpp
+Thr.cpp
+ver.c
+mohaa.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+120.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

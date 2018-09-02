@@ -1,0 +1,9 @@
+9.12.06:
+- Stealth Functions
+	- Bot without service inject memory and run inside svchost.exe - done! will added in next version
+	- Bot as service - uses svchost child 
+- Add bot main functions, eg wget,cmd,kill,adduser. syn/upd/D 
+- workstation spreader
+- vnc spreader
+- rcp server, not as tftp.
+- current spreaders creating another thread. well - close it and use the scanner thrads for it

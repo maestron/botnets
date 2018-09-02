@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: yP - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPE3.TMP" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_VC6LINKER" /Fp"Release6/yP.pch" /Yu"stdafx.h" /Fo"Release6/" /Fd"Release6/" /FD /c 
+"D:\Projects\YodaProtect\yP1.02\yP\LangData.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPE3.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP00E4.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib imagehlp.lib comctl32.lib Opengl32.lib Glu32.lib aplib.lib /nologo /subsystem:windows /incremental:yes /pdb:"Release6/yP.pdb" /debug /machine:I386 /out:"Release6/yP.exe" 
+.\Release6\alloc.obj
+.\Release6\lzo1x_9x.obj
+.\Release6\lzo_ptr.obj
+.\Release6\lzo_util.obj
+.\Release6\grid.obj
+.\Release6\thanks.obj
+.\Release6\CryptErr.obj
+.\Release6\CryptFunc.obj
+.\Release6\CryptIT.obj
+.\Release6\CryptMain.obj
+.\Release6\CryptPack.obj
+.\Release6\CryptVar.obj
+.\Release6\PER.obj
+.\Release6\StdAfx.obj
+.\Release6\TabCtrl.obj
+.\Release6\TrackCtrl.obj
+.\Release6\yP.obj
+.\Release6\yP.res
+.\Release6\LangData.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP00E4.TMP"
+<h3>Output Window</h3>
+Compiling...
+LangData.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+yP.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

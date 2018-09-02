@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="295"
+   name=""
+   committed-date="2004-03-15T02:05:30.493748Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/configgui/md5"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="282"
+   name="global.h"
+   text-time="2004-03-21T22:23:20.085979Z"
+   committed-date="2004-03-13T17:08:13.287267Z"
+   checksum="650888a1590d495c8dcc59569f6839a0"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.065950Z"/>
+<entry
+   committed-rev="295"
+   name="md5c.cpp"
+   text-time="2004-03-21T22:23:20.126036Z"
+   committed-date="2004-03-15T02:05:30.493748Z"
+   checksum="b97c74cfa3ff6169a83db0530b6155bf"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.116022Z"/>
+<entry
+   committed-rev="282"
+   name="md5.h"
+   text-time="2004-03-21T22:23:20.196137Z"
+   committed-date="2004-03-13T17:08:13.287267Z"
+   checksum="92bc91ca9f387209188fa316a4ab9405"
+   kind="file"
+   prop-time="2004-03-21T22:23:20.176108Z"/>
+</wc-entries>

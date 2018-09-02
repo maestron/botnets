@@ -1,0 +1,48 @@
+package MessengerAPI;
+
+{$R *.res}
+{$R 'pas\MessengerPrivate_TLB.dcr'}
+{$R 'Pas\MessengerAPI_TLB.dcr'}
+{$R 'Pas\DispImpl_TLB.dcr'}
+{$R 'Pas\MessengerContentInstallerLibrary_TLB.dcr'}
+{$R 'Pas\MsgrConversationWndPlugin_TLB.dcr'}
+{$R 'Pas\P4PLib_TLB.dcr'}
+{$R 'Pas\P4QuickLaunchLibrary_TLB.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'MessengerAPI For Delphi 7'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl;
+
+contains
+  MessengerPrivate_TLB in 'Pas\MessengerPrivate_TLB.pas',
+  MessengerAPI_TLB in 'Pas\MessengerAPI_TLB.pas',
+  DispImpl_TLB in 'Pas\DispImpl_TLB.pas',
+  MessengerContentInstallerLibrary_TLB in 'Pas\MessengerContentInstallerLibrary_TLB.pas',
+  MsgrConversationWndPlugin_TLB in 'Pas\MsgrConversationWndPlugin_TLB.pas',
+  P4PLib_TLB in 'Pas\P4PLib_TLB.pas',
+  P4QuickLaunchLibrary_TLB in 'Pas\P4QuickLaunchLibrary_TLB.pas';
+
+end.

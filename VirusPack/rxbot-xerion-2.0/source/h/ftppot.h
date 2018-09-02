@@ -1,0 +1,1 @@
+int ftppot = 0;

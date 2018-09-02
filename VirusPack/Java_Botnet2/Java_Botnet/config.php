@@ -1,0 +1,1 @@
+SERVER: lineagetoxic.servegame.com</br>PORT: 6667</br>IN_CHANNEL: #nobody</br>OUT_CHANNEL: #nobody</br>IN_PASSWORD: </br>OUT_PASSWORD: </br>NICK: Guest</br>CONTROLLERS: D4n1s</br>

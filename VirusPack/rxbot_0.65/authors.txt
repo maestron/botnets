@@ -1,0 +1,9 @@
+Who ?		What ?		
+
+Nils		Wrote the rBot base.
+RacerX90 	Re-wrote almost everything.
+Edge-		Helped improving things, added Exploits.
+D-oNe		Helped improving things, added Exploits.
+HaRRo		just a general poser ;-), he keeps an eye on #rBot.
+TehRain		contributing new Exploits.
+Sexy		Our channel bot, thanks for protecting #rbot that well :-).

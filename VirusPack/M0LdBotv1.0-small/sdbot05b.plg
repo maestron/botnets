@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdbot05b - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP5EB.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_DEBUG" /Fp"debug/sdbot05b.pch" /YX /Fo"debug/" /Fd"debug/" /FD /c 
+"D:\exploits\BOTS\M0LdBotv1.0-small\sources\sdbot05b.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP5EB.tmp" 
+Creating temporary file "C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP5EC.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib Netapi32.lib shlwapi.lib Mpr.lib Dnsapi.lib /nologo /subsystem:windows /incremental:no /pdb:"debug/sdbot05b.pdb" /machine:I386 /out:"debug/sdbot05b.exe" /align:4096 
+".\debug\adlp.obj"
+".\debug\advscan.obj"
+".\debug\dcom.obj"
+".\debug\lsass.obj"
+".\debug\ms04_007_asn1.obj"
+".\debug\shellcode.obj"
+".\debug\tftpd.obj"
+".\debug\upnp.obj"
+".\debug\aliaslog.obj"
+".\debug\AutoStart.obj"
+".\debug\fphost.obj"
+".\debug\ftpd.obj"
+".\debug\hostauth.obj"
+".\debug\irc_send.obj"
+".\debug\loaddll.obj"
+".\debug\misc.obj"
+".\debug\netutils.obj"
+".\debug\rndnick.obj"
+".\debug\sdbot05b.obj"
+".\debug\threads.obj"
+]
+Creating command line "link.exe @C:\DOKUME~1\Bloody\LOKALE~1\Temp\RSP5EC.tmp"
+<h3>Output Window</h3>
+Compiling...
+sdbot05b.cpp
+D:\exploits\BOTS\M0LdBotv1.0-small\sources\sdbot05b.cpp(86) : warning C4101: 'cstat' : unreferenced local variable
+D:\exploits\BOTS\M0LdBotv1.0-small\sources\sdbot05b.cpp(81) : warning C4101: 'logbuf' : unreferenced local variable
+D:\exploits\BOTS\M0LdBotv1.0-small\sources\sdbot05b.cpp(79) : warning C4101: 'tstr' : unreferenced local variable
+D:\exploits\BOTS\M0LdBotv1.0-small\sources\sdbot05b.cpp(375) : warning C4101: 'str' : unreferenced local variable
+D:\exploits\BOTS\M0LdBotv1.0-small\sources\sdbot05b.cpp(944) : warning C4715: 'irc_parseline' : not all control paths return a value
+Linking...
+LINK : warning LNK4108: /ALIGN specified without /DRIVER or /VXD; image may not run
+
+
+
+<h3>Results</h3>
+sdbot05b.exe - 0 error(s), 6 warning(s)
+</pre>
+</body>
+</html>

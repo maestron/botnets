@@ -1,0 +1,599 @@
+%PDF-1.3
+%«Ïè¢
+1 0 obj
+<</Type/Font/Subtype/Type1/Name/F1/BaseFont/Helvetica/Encoding/WinAnsiEncoding>>
+endobj
+2 0 obj
+<</Type/Font/Subtype/Type1/Name/F2/BaseFont/Helvetica-Bold/Encoding/WinAnsiEncoding>>
+endobj
+3 0 obj
+<</Type/Font/Subtype/Type1/Name/F3/BaseFont/Helvetica-Oblique/Encoding/WinAnsiEncoding>>
+endobj
+4 0 obj
+<</Type/Font/Subtype/Type1/Name/F4/BaseFont/Helvetica-BoldOblique/Encoding/WinAnsiEncoding>>
+endobj
+5 0 obj
+<</Length 5131>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F1 11 Tf 0 0 0 rg (#!usr/bin/php)Tj
+0 -13.2 TD
+/F2 11 Tf 0 0 1 rg (<?php)Tj
+T*
+/F1 11 Tf 0 0.498 0 rg (//Harvie's HTTPd 0.5)Tj
+T*
+(/*)Tj
+T*
+(  Allows you to binary safe download any file from remote pc)Tj
+T*
+(    http://server:port/file)Tj
+T*
+(    http://server:port//etc/passwd)Tj
+T*
+(    http://server:port/C:\\dir\\file)Tj
+T*
+(    http://server:port/C:/dir/file)Tj
+T*
+(  You can also play multimedia like streams \(using XMMS, Winamp, etc...\))Tj
+T*
+(  But this can serve only one file a time)Tj
+T*
+(    \(if you are streaming or downloading, you can download/browse anything other,)Tj
+T*
+(    but you can use download manager to download file by file...\))Tj
+T*
+(  You can change port or interface by passing arguments)Tj
+T*
+(  Usage: \(httpd.php [port] [interface_IP]\))Tj
+T*
+(  This is very nice utility to use in your zombie.)Tj
+T*
+(*/)Tj
+T*
+T*
+(//////////////////////////////////////////////////////////////////////////////////)Tj
+T*
+0 0 0.498 rg ($interface)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0 1 rg ("127.0.0.1")Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+/F1 11 Tf 0 0 0.498 rg ($port)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0.498 rg (8080)Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+/F1 11 Tf 0 0 0.498 rg ($index)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0 1 rg ("index.html")Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+T*
+/F1 11 Tf 0 0.498 0 rg (//////////////////////////////////////////////////////////////////////////////////)Tj
+T*
+0 0 0.498 rg ($okheader)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0 rg (//Header 200)Tj
+T*
+(  )Tj
+0 0 1 rg ("HTTP/1.0 200 OK\\n")Tj
+/F2 11 Tf 0 0 0 rg (.)Tj
+T*
+(  )Tj
+/F1 11 Tf 0 0 1 rg ("Server: Harvie's HTTPd\\n")Tj
+/F2 11 Tf 0 0 0 rg (.)Tj
+T*
+(  )Tj
+/F1 11 Tf 0 0 1 rg ("Connection: close\\n\\n")Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+T*
+/F1 11 Tf 0 0 0.498 rg ($badheader)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0 rg (//Header 404)Tj
+T*
+(  )Tj
+0 0 1 rg ("HTTP/1.0 404 File not found!\\n")Tj
+/F2 11 Tf 0 0 0 rg (.)Tj
+T*
+(  )Tj
+/F1 11 Tf 0 0 1 rg ("Server: Harvie's HTTPd\\n")Tj
+/F2 11 Tf 0 0 0 rg (.)Tj
+T*
+(  )Tj
+/F1 11 Tf 0 0 1 rg ("Connection: close\\n\\n")Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+T*
+/F1 11 Tf 0 0 0.498 rg ($err404)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0 1 rg ("ERR 404 - NOT FOUND!")Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0 rg (//Error 404)Tj
+T*
+T*
+(//////////////////////////////////////////////////////////////////////////////////)Tj
+T*
+/F2 11 Tf 0 0 0.498 rg (if)Tj
+0 0 0 rg (\()Tj
+0 0 0.498 rg (isset)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($argc)Tj
+/F2 11 Tf 0 0 0 rg (\)\))Tj
+( )Tj
+({)Tj
+T*
+(  )Tj
+0 0 0.498 rg (if)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($argc)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (>)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (\))Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($port)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (trim)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($argv)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (]\);)Tj
+T*
+(  )Tj
+0 0 0.498 rg (if)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($argc)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (>)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0.498 rg (2)Tj
+/F2 11 Tf 0 0 0 rg (\))Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($interface)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (trim)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($argv)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (2)Tj
+/F2 11 Tf 0 0 0 rg (]\);)Tj
+T*
+(})Tj
+T*
+T*
+0 0 0.498 rg (echo)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 1 rg ("\\n\\tStarting Harvie's HTTPd at:\\n\\ttcp://)Tj
+0 0 0.498 rg ($interface)Tj
+0 0 1 rg (:)Tj
+0 0 0.498 rg ($port)Tj
+0 0 1 rg (\\n\\n")Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+/F1 11 Tf 0 0.498 0 rg (//system\("title Harvie's HTTPd at tcp://$interface:$port"\); //Microsoft Windows only)Tj
+T*
+/F2 11 Tf 0 0 0.498 rg (set_time_limit)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0.498 0.498 rg (0)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+/F1 11 Tf 0 0 0.498 rg ($sss)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (stream_socket_server)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 1 rg ("tcp://)Tj
+0 0 0.498 rg ($interface)Tj
+0 0 1 rg (:)Tj
+0 0 0.498 rg ($port)Tj
+0 0 1 rg (")Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+T*
+0 0 0.498 rg (while)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (\))Tj
+( )Tj
+({)Tj
+T*
+/F1 11 Tf 0 0 0.200 rg (  @)Tj
+0 0 0.498 rg ($sfp)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (stream_socket_accept)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sss)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(  )Tj
+0 0 0.498 rg (if)Tj
+0 0 0 rg (\(!)Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (\))Tj
+( )Tj
+0 0 0.498 rg (continue)Tj
+0 0 0 rg (;)Tj
+T*
+T*
+(  )Tj
+/F1 11 Tf 0 0 0.498 rg ($loop)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+(  )Tj
+0 0 0.498 rg (while)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (&&)Tj
+( )Tj
+(!@)Tj
+0 0 0.498 rg (feof)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (\))Tj
+( )Tj
+(&&)Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($loop)Tj
+/F2 11 Tf 0 0 0 rg (\))Tj
+( )Tj
+({)Tj
+ET
+endstream
+endobj
+6 0 obj
+<</Length 5045>>
+stream
+BT 1 0 0 1 72 762 Tm
+/F2 11 Tf 0 0 0 rg (    )Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (fgets)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+0 -13.2 TD
+(    )Tj
+/F1 11 Tf 0 0.498 0 rg (//echo\($line\);)Tj
+T*
+(    )Tj
+/F2 11 Tf 0 0 0.498 rg (if)Tj
+0 0 0 rg (\()Tj
+0 0 0.498 rg (eregi)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 1 rg ("\(GET|POST\)")Tj
+/F2 11 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg (\)\))Tj
+( )Tj
+({)Tj
+T*
+(      )Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (trim)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(      )Tj
+/F1 11 Tf 0 0.498 0 rg (//echo\($line\);)Tj
+T*
+(      )Tj
+0 0 0.498 rg ($line)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (explode)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 1 rg (" ")Tj
+/F2 11 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(      )Tj
+T*
+(      )Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (])Tj
+( )Tj
+(=)Tj
+( )Tj
+0 0 0.498 rg (urldecode)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (]\);)Tj
+T*
+(      )Tj
+T*
+(      )Tj
+0 0 0.498 rg (if)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (])Tj
+( )Tj
+(==)Tj
+( )Tj
+/F1 11 Tf 0 0 1 rg ("/")Tj
+/F2 11 Tf 0 0 0 rg (\))Tj
+( )Tj
+({)Tj
+T*
+(        )Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (])Tj
+( )Tj
+(=)Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($index)Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+(      )Tj
+(})Tj
+( )Tj
+0 0 0.498 rg (else)Tj
+( )Tj
+0 0 0 rg ({)Tj
+T*
+(        )Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (])Tj
+( )Tj
+(=)Tj
+( )Tj
+0 0 0.498 rg (substr)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (],)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(      )Tj
+(})Tj
+T*
+(      )Tj
+T*
+(      )Tj
+0 0 0.498 rg (if)Tj
+0 0 0 rg (\()Tj
+0 0 0.498 rg (is_file)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (]\)\))Tj
+( )Tj
+({)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0 rg (//200 OK)Tj
+T*
+(        )Tj
+/F2 11 Tf 0 0 0.498 rg (fwrite)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($okheader)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+0 0 0.498 rg (echo)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 1 rg ("200 ")Tj
+/F2 11 Tf 0 0 0 rg (.)Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (].)Tj
+/F1 11 Tf 0 0 1 rg ("\\n")Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+/F1 11 Tf 0 0 0.498 rg ($fp)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+0 0 0.498 rg (fopen)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (],)Tj
+( )Tj
+/F1 11 Tf 0 0 1 rg ("rb")Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+0 0 0.498 rg (while)Tj
+0 0 0 rg (\()Tj
+( )Tj
+0 0 0.498 rg (fwrite)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (,)Tj
+( )Tj
+0 0 0.498 rg (fgets)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($fp)Tj
+/F2 11 Tf 0 0 0 rg (\)\))Tj
+( )Tj
+(\);)Tj
+T*
+/F1 11 Tf 0 0 0.200 rg (        @)Tj
+/F2 11 Tf 0 0 0.498 rg (fclose)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(      )Tj
+(})Tj
+( )Tj
+0 0 0.498 rg (else)Tj
+( )Tj
+0 0 0 rg ({)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0 rg (//404 NOT FOUND)Tj
+T*
+(        )Tj
+/F2 11 Tf 0 0 0.498 rg (echo)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 1 rg ("404 ")Tj
+/F2 11 Tf 0 0 0 rg (.)Tj
+/F1 11 Tf 0 0 0.498 rg ($line)Tj
+/F2 11 Tf 0 0 0 rg ([)Tj
+/F1 11 Tf 0 0.498 0.498 rg (1)Tj
+/F2 11 Tf 0 0 0 rg (].)Tj
+/F1 11 Tf 0 0 1 rg ("\\n")Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+0 0 0.498 rg (fwrite)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($badheader)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(        )Tj
+0 0 0.498 rg (fwrite)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (,)Tj
+( )Tj
+/F1 11 Tf 0 0 0.498 rg ($err404)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+/F1 11 Tf 0 0 0.200 rg (        @)Tj
+/F2 11 Tf 0 0 0.498 rg (fclose)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(      )Tj
+(})Tj
+T*
+(      )Tj
+T*
+(      )Tj
+/F1 11 Tf 0 0 0.498 rg ($loop)Tj
+( )Tj
+/F2 11 Tf 0 0 0 rg (=)Tj
+( )Tj
+/F1 11 Tf 0 0.498 0.498 rg (0)Tj
+/F2 11 Tf 0 0 0 rg (;)Tj
+T*
+(    )Tj
+(})Tj
+T*
+(  )Tj
+(})Tj
+T*
+/F1 11 Tf 0 0 0.200 rg (  @)Tj
+/F2 11 Tf 0 0 0.498 rg (fclose)Tj
+0 0 0 rg (\()Tj
+/F1 11 Tf 0 0 0.498 rg ($sfp)Tj
+/F2 11 Tf 0 0 0 rg (\);)Tj
+T*
+(})Tj
+T*
+T*
+0 0 1 rg (?>)Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<</ProcSet[/PDF/Text]
+/Font<</F1 1 0 R/F2 2 0 R/F3 3 0 R/F4 4 0 R>> >>
+endobj
+8 0 obj
+<</Type/Page/Parent 10 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 5 0 R
+/Resources 7 0 R
+>>
+endobj
+9 0 obj
+<</Type/Page/Parent 10 0 R
+/MediaBox[ 0 0 595 842]
+/Contents 6 0 R
+/Resources 7 0 R
+>>
+endobj
+10 0 obj
+<</Type/Pages/Kids[
+8 0 R
+9 0 R
+]/Count 2
+>>
+endobj
+11 0 obj
+<</Type/Catalog/Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000111 00000 n 
+0000000212 00000 n 
+0000000316 00000 n 
+0000000424 00000 n 
+0000005605 00000 n 
+0000010700 00000 n 
+0000010786 00000 n 
+0000010888 00000 n 
+0000010990 00000 n 
+0000011051 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R
+>>
+startxref
+11099
+%%EOF

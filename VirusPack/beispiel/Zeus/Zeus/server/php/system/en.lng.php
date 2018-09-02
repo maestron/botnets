@@ -1,0 +1,36 @@
+<?php if(!defined('__INDEX__'))die();
+define('LNG_CODEPAGE','utf-8');
+define('LNG_TITLE','ZeuS');
+define('LNG_COPYRIGHT','Copyright &copy; 2006-2007 ZeuS Group');
+define('LNG_MM_INFO','Information:');
+define('LNG_MM_INFO_UN','Profile:');
+define('LNG_MM_INFO_DATE','GMT date:');
+define('LNG_MM_INFO_TIME','GMT time:');
+define('LNG_FORMAT_DATA','d.m.Y');
+define('LNG_FORMAT_TIME','H:i:s');
+define('LNG_FORMAT_DT','H:i:s d.m.Y');
+define('LNG_MM_STATS','Statistics:');
+define('LNG_MM_STATS_INFO','Summary');
+define('LNG_MM_BOTNET','Botnet:');
+define('LNG_MM_BOTNET_LIST','Online bots');
+define('LNG_MM_BOTNET_CMDS','Remote commands');
+define('LNG_MM_LOGS','Logs:');
+define('LNG_MM_LOGS_DB','Search');
+define('LNG_MM_LOGS_DBT','Search with template');
+define('LNG_MM_LOGS_FILES','Uploaded files');
+define('LNG_MM_SPAMBOT','Spam manager');
+define('LNG_MM_SYS','System:');
+define('LNG_MM_SYS_USERS','Profiles');
+define('LNG_MM_SYS_OPTIONS','Options');
+define('LNG_MM_SYS_USER','Profile');
+define('LNG_MM_LOGOUT','Logout');
+
+define('LNG_CM_VL_TEXT', 'Today logs in text mode');
+define('LNG_CM_VL_HTML', 'Today logs in HTML mode');
+define('LNG_CM_UF',      'Uploaded files');
+define('LNG_CM_INFO',    'Information');
+define('LNG_CM_RCMD',    'Remote commands');
+define('LNG_CM_SS',      'Live screenshot');
+define('LNG_CM_SOCK',    'Check socks server');
+define('LNG_CM_PROXY',   'Check proxy server');
+?>

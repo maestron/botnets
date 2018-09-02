@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="505"
+   name=""
+   committed-date="2004-03-23T00:03:49.488863Z"
+   url="svn://svn.bastart.eu.org/agobot3_current"
+   last-author="wonk"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="505"/>
+<entry
+   committed-rev="9"
+   name="build.h"
+   text-time="2004-03-21T22:22:34.690704Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="2a79b76430b78de84db3bc7a52467d94"
+   kind="file"
+   prop-time="2004-03-21T22:22:34.680689Z"/>
+<entry
+   committed-rev="373"
+   name="redirect.h"
+   text-time="2004-03-21T22:22:34.740776Z"
+   committed-date="2004-03-18T17:07:53.072504Z"
+   checksum="ae0c1600455a650f26c104e2f273cd88"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:34.720747Z"/>
+<entry
+   committed-rev="294"
+   name="commands.h"
+   text-time="2004-03-21T22:22:34.850934Z"
+   committed-date="2004-03-15T01:22:24.293613Z"
+   checksum="d2ff39fc872264615767405edf0c7644"
+   kind="file"
+   prop-time="2004-03-21T22:22:34.830905Z"/>
+<entry
+   committed-rev="502"
+   name="configgui.exe"
+   text-time="2004-03-21T22:22:35.351654Z"
+   committed-date="2004-03-22T20:31:16.992679Z"
+   checksum="82b8e19372cd1cbd1d8b88a426ead42a"
+   last-author="wonk"
+   kind="file"
+   conflict-new="configgui.exe.r502"
+   prop-time="2004-03-22T21:39:06.577520Z"
+   conflict-old="configgui.exe.r478"/>
+<entry
+   committed-rev="9"
+   name="disclaimer.txt"
+   text-time="2004-03-21T22:22:35.401726Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="e8ce5f964cb192fb125c1e27ee8667d5"
+   kind="file"
+   prop-time="2004-03-21T22:22:35.381697Z"/>
+<entry
+   committed-rev="9"
+   name="redir_socks.h"
+   text-time="2004-03-21T22:22:35.451798Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="82c432c3f3e94eab48c3d156dd3506d7"
+   kind="file"
+   prop-time="2004-03-21T22:22:35.441784Z"/>
+<entry
+   name="tools"
+   kind="dir"/>
+<entry
+   committed-rev="9"
+   name="redir_tcp.h"
+   text-time="2004-03-21T22:22:35.602014Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="a6d756ba1620cf70a5eee22f03b01640"
+   kind="file"
+   prop-time="2004-03-21T22:22:35.571971Z"/>
+<entry
+   committed-rev="9"
+   name="cmdline.h"
+   text-time="2004-03-21T22:22:35.672115Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="3b94e2abdfab9092000d46070f96384d"
+   kind="file"
+   prop-time="2004-03-21T22:22:35.652086Z"/>
+<entry
+   committed-rev="493"
+   name="configure.ac"
+   text-time="2004-03-22T21:39:06.757779Z"
+   committed-date="2004-03-22T03:46:42.668346Z"
+   checksum="1ad14693fb6236abc46410b4ba11af75"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:06.727736Z"/>
+<entry
+   committed-rev="33"
+   name="smtp.cpp"
+   text-time="2004-03-21T22:22:35.762244Z"
+   committed-date="2004-02-26T23:05:59.668978Z"
+   checksum="b2aa5cf91a158317e28d102e75c6fccc"
+   kind="file"
+   prop-time="2004-03-21T22:22:35.742216Z"/>
+<entry
+   committed-rev="297"
+   name="baglescanner.cpp"
+   text-time="2004-03-21T22:22:35.802302Z"
+   committed-date="2004-03-15T02:26:51.258443Z"
+   checksum="064e394ed56f472b7880115b704c9517"
+   kind="file"
+   prop-time="2004-03-21T22:22:35.792288Z"/>
+<entry
+   name="doc"
+   kind="dir"/>
+<entry
+   committed-rev="9"
+   name="message.h"
+   text-time="2004-03-21T22:22:42.081331Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="816b1b7d84db1960642f44e2655c180f"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.071316Z"/>
+<entry
+   committed-rev="9"
+   name="ssllib.h"
+   text-time="2004-03-21T22:22:42.181475Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="7f12ceefb398cc9dd02ca8209a1e693c"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.171460Z"/>
+<entry
+   committed-rev="17"
+   name="synflood.cpp"
+   text-time="2004-03-21T22:22:42.141417Z"
+   committed-date="2004-02-26T04:44:21.848236Z"
+   checksum="44c637f068f38111493e30ae6061e857"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.121388Z"/>
+<entry
+   committed-rev="9"
+   name="polymorph.h"
+   text-time="2004-03-21T22:22:42.261590Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="cae170a59593ffacab3a898962c61a1c"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.211518Z"/>
+<entry
+   committed-rev="294"
+   name="mac.h"
+   text-time="2004-03-21T22:22:42.441849Z"
+   committed-date="2004-03-15T01:22:24.293613Z"
+   checksum="3608d7d46c2686ef969d6dd0034ca1a3"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.421820Z"/>
+<entry
+   committed-rev="376"
+   name="phaticmp.cpp"
+   text-time="2004-03-21T22:22:42.391777Z"
+   committed-date="2004-03-18T17:17:54.122534Z"
+   checksum="fa561638fb1c540a7cd9d02ce359db68"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.381763Z"/>
+<entry
+   committed-rev="503"
+   name="config.cpp"
+   text-time="2004-03-23T02:01:26.890979Z"
+   committed-date="2004-03-23T00:02:03.197101Z"
+   checksum="782187372036e17acdcb869ae3489f1c"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-23T02:01:26.870950Z"/>
+<entry
+   committed-rev="9"
+   name="p2p.h"
+   text-time="2004-03-21T22:22:42.481907Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="33cf9daca14ed6dcef8ffbd0051680c9"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.471892Z"/>
+<entry
+   committed-rev="9"
+   name="redir_socks.cpp"
+   text-time="2004-03-21T22:22:42.521964Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="d69b14bf63c7e52c5662614e44e80f9c"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.511950Z"/>
+<entry
+   committed-rev="9"
+   name="redir_tcp.cpp"
+   text-time="2004-03-21T22:22:42.632123Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="a25e7ca6f764137a1a7568c007f90292"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.612094Z"/>
+<entry
+   committed-rev="9"
+   name="cmdline.cpp"
+   text-time="2004-03-21T22:22:42.582051Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="7d1782f3bb300e6459f21009c834d999"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.552008Z"/>
+<entry
+   committed-rev="497"
+   name="irc.cpp"
+   text-time="2004-03-22T21:39:06.938038Z"
+   committed-date="2004-03-22T17:00:46.385409Z"
+   checksum="5318814ddb06a8509ca81b0b9f41d73b"
+   last-author="silencer"
+   kind="file"
+   prop-time="2004-03-22T21:39:06.918009Z"/>
+<entry
+   committed-rev="116"
+   name="wdscanner.cpp"
+   text-time="2004-03-21T22:22:42.762310Z"
+   committed-date="2004-03-06T13:09:11.035863Z"
+   checksum="ee2ab8ae6bd716942ff34636a51b22a0"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.742281Z"/>
+<entry
+   committed-rev="9"
+   name="consdbg.h"
+   text-time="2004-03-21T22:22:42.722252Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="8ae2f94dc08f997f066f04b4be998a39"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.702224Z"/>
+<entry
+   committed-rev="402"
+   name="bot.h"
+   text-time="2004-03-21T22:22:42.842425Z"
+   committed-date="2004-03-19T18:06:37.393763Z"
+   checksum="6817420b5756a38a9b9a28ef3713fa5e"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.832411Z"/>
+<entry
+   committed-rev="469"
+   name="radminscanner.h"
+   text-time="2004-03-21T22:22:42.802368Z"
+   committed-date="2004-03-21T13:10:12.123530Z"
+   checksum="91c40f3194d4d538828cbf3acda7da84"
+   last-author="Nils"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.792353Z"/>
+<entry
+   committed-rev="9"
+   name="cmdopt.h"
+   text-time="2004-03-21T22:22:42.892497Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="bbf99a918d54f3af9b8b8d3749f6d64e"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.872468Z"/>
+<entry
+   committed-rev="290"
+   name="dcomscanner.cpp"
+   text-time="2004-03-21T22:22:42.942569Z"
+   committed-date="2004-03-14T02:25:22.829602Z"
+   checksum="a601737b5e04b0101d5af5e0bf4ea4cd"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.922540Z"/>
+<entry
+   committed-rev="9"
+   name="crypter.h"
+   text-time="2004-03-21T22:22:42.982627Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="6730cee1c317ba2de7fa21f5db91c5ae"
+   kind="file"
+   prop-time="2004-03-21T22:22:42.972612Z"/>
+<entry
+   committed-rev="9"
+   name="hook.cpp"
+   text-time="2004-03-21T22:22:43.022684Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="d0a4ea071585ebf86807cc2fb44cc77c"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.012670Z"/>
+<entry
+   committed-rev="368"
+   name="redir_gre.cpp"
+   text-time="2004-03-21T22:22:43.072756Z"
+   committed-date="2004-03-18T16:39:58.054809Z"
+   checksum="61452279b79645e5ff97f7af22792401"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.062742Z"/>
+<entry
+   committed-rev="366"
+   name="installer.h"
+   text-time="2004-03-21T22:22:43.142857Z"
+   committed-date="2004-03-18T15:37:32.164697Z"
+   checksum="ff4e2db0555056db3877c4684c2be716"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.122828Z"/>
+<entry
+   committed-rev="414"
+   name="todo.txt"
+   text-time="2004-03-21T22:22:43.182915Z"
+   committed-date="2004-03-19T23:11:48.261728Z"
+   checksum="cdf8a279a86d2cd40b809ba1f22e8c03"
+   last-author="d4t4"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.172900Z"/>
+<entry
+   committed-rev="9"
+   name="shellcode.cpp"
+   text-time="2004-03-21T22:22:43.243001Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="a97cf083ac67a9e3a09006272bedf986"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.212958Z"/>
+<entry
+   committed-rev="127"
+   name="harvest_registry.h"
+   text-time="2004-03-21T22:22:43.283059Z"
+   committed-date="2004-03-07T04:47:43.496825Z"
+   checksum="54f4301af575ece7b020334a57d044f0"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.273044Z"/>
+<entry
+   committed-rev="477"
+   name="cstring.cpp"
+   text-time="2004-03-21T22:22:43.343145Z"
+   committed-date="2004-03-21T20:42:18.042517Z"
+   checksum="ab535cebbb99fe3b2534cce5479b4e1d"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.313102Z"/>
+<entry
+   committed-rev="9"
+   name="sdcompat.cpp"
+   text-time="2004-03-21T22:22:43.393217Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="ce75e8ac16f1b8956ab361e43ae6e2fe"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.373188Z"/>
+<entry
+   committed-rev="486"
+   name="cpanelscanner.cpp"
+   text-time="2004-03-22T21:39:07.008139Z"
+   committed-date="2004-03-22T01:15:29.512086Z"
+   checksum="ea2ade5483e8cbfaa538238596ddbf27"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:06.978096Z"/>
+<entry
+   committed-rev="445"
+   name="mainctrl.h"
+   text-time="2004-03-21T22:22:43.443289Z"
+   committed-date="2004-03-20T22:40:17.303324Z"
+   checksum="96ae8fe2a99c161517167140bcac0d4c"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.423260Z"/>
+<entry
+   committed-rev="498"
+   name="harvest_cdkeys.cpp"
+   text-time="2004-03-22T21:39:07.088254Z"
+   committed-date="2004-03-22T17:10:01.890252Z"
+   checksum="831234fb974594873dd572aa2ee40557"
+   last-author="thegeek"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.068225Z"/>
+<entry
+   committed-rev="9"
+   name="gpl.txt"
+   text-time="2004-03-21T22:22:43.533419Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="393a5ca445f6965873eca0259a17f833"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.513390Z"/>
+<entry
+   committed-rev="396"
+   name="consdbg.cpp"
+   text-time="2004-03-21T22:22:43.573476Z"
+   committed-date="2004-03-19T01:49:09.141410Z"
+   checksum="0899cf84bec533368494296b8c224041"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.563462Z"/>
+<entry
+   committed-rev="9"
+   name="random.cpp"
+   text-time="2004-03-21T22:22:43.623548Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="d5cc1078d40a30a000cfb5eb59dd28d1"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.603520Z"/>
+<entry
+   committed-rev="445"
+   name="sockets.h"
+   text-time="2004-03-21T22:22:43.673620Z"
+   committed-date="2004-03-20T22:40:17.303324Z"
+   checksum="19c69764e6be8177595fc88ad44c3138"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.653592Z"/>
+<entry
+   committed-rev="9"
+   name="rsalib.h"
+   text-time="2004-03-21T22:22:43.713678Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="c22210651c07e4ad2a5241067f56c3a1"
+   kind="file"
+   prop-time="2004-03-21T22:22:43.693649Z"/>
+<entry
+   committed-rev="481"
+   name="targa3.cpp"
+   text-time="2004-03-22T21:39:07.168369Z"
+   committed-date="2004-03-21T23:00:01.636701Z"
+   checksum="1b5d551c73d841111b78aa81e51398de"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.148340Z"/>
+<entry
+   name="lib"
+   kind="dir"/>
+<entry
+   committed-rev="478"
+   name="scanner.cpp"
+   text-time="2004-03-21T22:23:16.891385Z"
+   committed-date="2004-03-21T21:39:41.590843Z"
+   checksum="cd72594b803c650dd6ca8284cebee15e"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:16.871356Z"/>
+<entry
+   committed-rev="9"
+   name="redir_https.h"
+   text-time="2004-03-21T22:23:16.951472Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="5829e683434a34aec3024c15bb84201d"
+   kind="file"
+   prop-time="2004-03-21T22:23:16.931443Z"/>
+<entry
+   committed-rev="9"
+   name="resource.h"
+   text-time="2004-03-21T22:23:17.011558Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="2b7b383879fa48367201eb6efcd93164"
+   kind="file"
+   prop-time="2004-03-21T22:23:16.991529Z"/>
+<entry
+   committed-rev="9"
+   name="3dnow.h"
+   text-time="2004-03-21T22:23:17.061630Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="ef0d7947ea3fbee875166d804c4db2d7"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.041601Z"/>
+<entry
+   name="ftplib"
+   kind="dir"/>
+<entry
+   committed-rev="487"
+   name="files.txt"
+   text-time="2004-03-22T21:39:07.348628Z"
+   committed-date="2004-03-22T01:16:02.401596Z"
+   checksum="4be03c19d6bd1db6c47648ef2302e768"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.328600Z"/>
+<entry
+   committed-rev="9"
+   name="sniffer.h"
+   text-time="2004-03-21T22:23:17.532307Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="264699ee4ecf70dd1c455f171331e14e"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.512278Z"/>
+<entry
+   committed-rev="9"
+   name="cplugin.cpp"
+   text-time="2004-03-21T22:23:17.582379Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="fd03a3cd1bfb177f92790d61b45b27b7"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.562350Z"/>
+<entry
+   committed-rev="149"
+   name="logic.h"
+   text-time="2004-03-21T22:23:17.622436Z"
+   committed-date="2004-03-08T05:01:20.587483Z"
+   checksum="97bf6f73e66021dc10233e562a67ff0d"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.612422Z"/>
+<entry
+   committed-rev="464"
+   name="bnc.cpp"
+   text-time="2004-03-21T22:23:17.672508Z"
+   committed-date="2004-03-21T05:01:31.375329Z"
+   checksum="b05e59f8949185329c9e766178406ada"
+   last-author="silencer"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.662494Z"/>
+<entry
+   committed-rev="9"
+   name="redir_gre.h"
+   text-time="2004-03-21T22:23:17.782667Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="b143aaac61fc480e928eccf326fe8ce7"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.772652Z"/>
+<entry
+   committed-rev="9"
+   name="shellcode.h"
+   text-time="2004-03-21T22:23:17.852768Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="756ae88719f7771528a3e7dd6247321b"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.842753Z"/>
+<entry
+   committed-rev="445"
+   name="utility.h"
+   text-time="2004-03-21T22:23:17.922868Z"
+   committed-date="2004-03-20T22:40:17.303324Z"
+   checksum="a0fc7347def3d49748dc3db1c5ed1f54"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:17.912854Z"/>
+<entry
+   name="hookdll"
+   kind="dir"/>
+<entry
+   committed-rev="488"
+   name="sockets.cpp"
+   text-time="2004-03-22T21:39:07.428744Z"
+   committed-date="2004-03-22T03:04:08.039925Z"
+   checksum="e3997b71b44d8b2b445c79d4c3148ca9"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.408715Z"/>
+<entry
+   committed-rev="9"
+   name="sdcompat.h"
+   text-time="2004-03-21T22:23:18.463646Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="e3d3c73c697cab97599aa3f440f09de9"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.443617Z"/>
+<entry
+   committed-rev="366"
+   name="harvest_cdkeys.h"
+   text-time="2004-03-21T22:23:18.503704Z"
+   committed-date="2004-03-18T15:37:32.164697Z"
+   checksum="e8dfebb220744d05ca17c194c844b581"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.493689Z"/>
+<entry
+   committed-rev="9"
+   name="redir_https.cpp"
+   text-time="2004-03-21T22:23:18.553776Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="db42cf926b9d23921bfc781e941476ea"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.533747Z"/>
+<entry
+   committed-rev="9"
+   name="ssllib.cpp"
+   text-time="2004-03-21T22:23:18.663934Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="93f221ee128029091531fd6c2d359d97"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.653920Z"/>
+<entry
+   committed-rev="495"
+   name="Makefile.am"
+   text-time="2004-03-22T21:39:07.518873Z"
+   committed-date="2004-03-22T08:14:44.399893Z"
+   checksum="1bcb97a0ad767110ffff0ef2a821f1a0"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.498844Z"/>
+<entry
+   committed-rev="366"
+   name="main.h"
+   text-time="2004-03-21T22:23:18.764078Z"
+   committed-date="2004-03-18T15:37:32.164697Z"
+   checksum="17b21d0a8ca35027f8bfc157a966dcee"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.744049Z"/>
+<entry
+   committed-rev="447"
+   name="ddos.cpp"
+   text-time="2004-03-21T22:23:18.714006Z"
+   committed-date="2004-03-20T22:53:24.962058Z"
+   checksum="1df4c16e7375d1d9a8774e137cdc27c2"
+   last-author="d4t4"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.703992Z"/>
+<entry
+   committed-rev="489"
+   name="acinit.sh"
+   text-time="2004-03-22T21:39:07.588974Z"
+   committed-date="2004-03-22T03:22:43.938641Z"
+   checksum="1e017bb852d4caddedad8e98d29fab2b"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.568945Z"/>
+<entry
+   committed-rev="402"
+   name="mac.cpp"
+   text-time="2004-03-21T22:23:18.864222Z"
+   committed-date="2004-03-19T18:06:37.393763Z"
+   checksum="82ed2ff3be4377a0798dd32d56d33d94"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.834179Z"/>
+<entry
+   committed-rev="373"
+   name="redir_socks5.h"
+   text-time="2004-03-21T22:23:18.914294Z"
+   committed-date="2004-03-18T17:07:53.072504Z"
+   checksum="9f2ba54f64917283ba200cabf71028da"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:18.894265Z"/>
+<entry
+   committed-rev="485"
+   name="utility.cpp"
+   text-time="2004-03-22T21:39:07.699132Z"
+   committed-date="2004-03-22T00:54:44.299029Z"
+   checksum="868376c67e4909f4a4638a6544d44d35"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.659075Z"/>
+<entry
+   committed-rev="9"
+   name="smtp_logic.h"
+   text-time="2004-03-21T22:23:19.094553Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="ed0789930b4d55784fdf8012bb39e402"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.074524Z"/>
+<entry
+   committed-rev="504"
+   name="changes.txt"
+   text-time="2004-03-23T02:01:26.991123Z"
+   committed-date="2004-03-23T00:02:46.259047Z"
+   checksum="50e8c79159dea16ad1da24a1e3322579"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-23T02:01:26.971094Z"/>
+<entry
+   committed-rev="466"
+   name="bnc.h"
+   text-time="2004-03-21T22:23:19.134611Z"
+   committed-date="2004-03-21T05:10:49.597024Z"
+   checksum="3e363b7f642eaec93fc5d71853208aaa"
+   last-author="silencer"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.124596Z"/>
+<entry
+   committed-rev="425"
+   name="sqlscanner.cpp"
+   text-time="2004-03-21T22:23:19.234755Z"
+   committed-date="2004-03-20T01:03:53.542873Z"
+   checksum="e9cd20fc5f1fec199f1a5255ce51b040"
+   last-author="glow"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.224740Z"/>
+<entry
+   committed-rev="9"
+   name="redir_http.h"
+   text-time="2004-03-21T22:23:19.194697Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="58668d006562809f0ccda593d52f9e01"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.174668Z"/>
+<entry
+   committed-rev="9"
+   name="debug.sh"
+   text-time="2004-03-21T22:23:19.364942Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="e69abc2d15e984622252df96cd1d81a1"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.344913Z"/>
+<entry
+   committed-rev="478"
+   name="dcom2scanner.cpp"
+   text-time="2004-03-21T22:23:19.314870Z"
+   committed-date="2004-03-21T21:39:41.590843Z"
+   checksum="ee834dc4b2fcc79a94a717c2f34b58b2"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.264798Z"/>
+<entry
+   committed-rev="463"
+   name="irc.h"
+   text-time="2004-03-21T22:23:19.405000Z"
+   committed-date="2004-03-21T04:44:12.670155Z"
+   checksum="c0633bd4dd91dcee577395e89062d9f9"
+   last-author="silencer"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.394985Z"/>
+<entry
+   committed-rev="488"
+   name="bot.cpp"
+   text-time="2004-03-22T21:39:07.909435Z"
+   committed-date="2004-03-22T03:04:08.039925Z"
+   checksum="1bc518b1aafb1181becc4dfd09dddd63"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:07.869377Z"/>
+<entry
+   committed-rev="469"
+   name="radminscanner.cpp"
+   text-time="2004-03-21T22:23:19.455072Z"
+   committed-date="2004-03-21T13:10:12.123530Z"
+   checksum="a3d568133b0d3b8ec9f2ef5dfa4eb993"
+   last-author="Nils"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.445057Z"/>
+<entry
+   committed-rev="431"
+   name="build.sh"
+   text-time="2004-03-21T22:23:19.565230Z"
+   committed-date="2004-03-20T02:47:22.560212Z"
+   checksum="8b31be1a8df400238be149cbb7a335e5"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.545201Z"/>
+<entry
+   committed-rev="9"
+   name="crypter.cpp"
+   text-time="2004-03-21T22:23:19.615302Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="be1ac4b3907cfd557446f6f48b97f8e1"
+   kind="file"
+   prop-time="2004-03-21T22:23:19.595273Z"/>
+<entry
+   name="configgui"
+   kind="dir"/>
+<entry
+   committed-rev="373"
+   name="redirect.cpp"
+   text-time="2004-03-21T22:23:21.257664Z"
+   committed-date="2004-03-18T17:07:53.072504Z"
+   checksum="3ca639c16dfb7f57822b63c370108d5b"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.247649Z"/>
+<entry
+   committed-rev="9"
+   name="commands.cpp"
+   text-time="2004-03-21T22:23:21.217606Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="862e80e6357cb358233d6298ff4cfb68"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.197577Z"/>
+<entry
+   committed-rev="9"
+   name="cmdbase.h"
+   text-time="2004-03-21T22:23:21.317750Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="26db6f0199a8036b090e9dd00e316475"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.307736Z"/>
+<entry
+   committed-rev="307"
+   name="harvest_registry.cpp"
+   text-time="2004-03-21T22:23:21.397865Z"
+   committed-date="2004-03-15T18:02:05.190881Z"
+   checksum="4b55b4f5d325e22948a67a95aa0e4724"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.367822Z"/>
+<entry
+   committed-rev="457"
+   name="harvest_emails.cpp"
+   text-time="2004-03-21T22:23:21.548081Z"
+   committed-date="2004-03-21T02:50:06.693012Z"
+   checksum="6376b06a85ee76c19b9d193dfa0425bf"
+   last-author="glow"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.538067Z"/>
+<entry
+   committed-rev="193"
+   name="source_stats.sh"
+   text-time="2004-03-21T22:23:21.508024Z"
+   committed-date="2004-03-09T21:18:55.467882Z"
+   checksum="70a2f82b621c71859ef9276d9d8bf923"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.487995Z"/>
+<entry
+   committed-rev="229"
+   name="asmstub.OBJ"
+   text-time="2004-03-21T22:23:21.457952Z"
+   committed-date="2004-03-12T13:43:41.110308Z"
+   checksum="1f2b44aa136609f4356736ef92ce1cd7"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.437923Z"/>
+<entry
+   committed-rev="495"
+   name="cthread.cpp"
+   text-time="2004-03-22T21:39:08.249924Z"
+   committed-date="2004-03-22T08:14:44.399893Z"
+   checksum="51fa642eb94650b4fc151c2b370928ba"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:08.219881Z"/>
+<entry
+   committed-rev="9"
+   name="rsalib.cpp"
+   text-time="2004-03-21T22:23:21.698297Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="3def23fc50249e85de2ae388cc5bad45"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.678268Z"/>
+<entry
+   committed-rev="9"
+   name="harvest_aol.h"
+   text-time="2004-03-21T22:23:21.648225Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="5ca26566806fd76c617804a53601047e"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.628196Z"/>
+<entry
+   committed-rev="9"
+   name="ircgate.cpp"
+   text-time="2004-03-21T22:23:21.848513Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="4f9371216f50179ed46648dfb9883f37"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.838499Z"/>
+<entry
+   committed-rev="368"
+   name="wksscanner.cpp"
+   text-time="2004-03-21T22:23:21.798441Z"
+   committed-date="2004-03-18T16:39:58.054809Z"
+   checksum="22fa0efe83a1bbcbe20febf5a7a252fa"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.788427Z"/>
+<entry
+   committed-rev="456"
+   name="cstring.h"
+   text-time="2004-03-21T22:23:21.748369Z"
+   committed-date="2004-03-21T02:42:11.459759Z"
+   checksum="f0260dc41d01ecc8a7fe51f9b03ca899"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.738355Z"/>
+<entry
+   committed-rev="9"
+   name="agobot3.rc"
+   text-time="2004-03-21T22:23:21.898585Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="cb408ea8df789821eba4c5fd16fc5222"
+   kind="file"
+   prop-time="2004-03-21T22:23:21.888571Z"/>
+<entry
+   name="Mods"
+   kind="dir"/>
+<entry
+   committed-rev="25"
+   name="locscanner.cpp"
+   text-time="2004-03-21T22:23:22.359248Z"
+   committed-date="2004-02-26T16:18:45.960897Z"
+   checksum="4fbd88f4e057781c638c6f93979adf4c"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.339219Z"/>
+<entry
+   committed-rev="193"
+   name="polymorph.cpp"
+   text-time="2004-03-21T22:23:22.409320Z"
+   committed-date="2004-03-09T21:18:55.467882Z"
+   checksum="d07be979821c55376747cc4b04a70c5c"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.389291Z"/>
+<entry
+   committed-rev="193"
+   name="source_cacti.sh"
+   text-time="2004-03-21T22:23:22.479420Z"
+   committed-date="2004-03-09T21:18:55.467882Z"
+   checksum="285902740b51c62ac398fa2aff2bfbc3"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.469406Z"/>
+<entry
+   committed-rev="368"
+   name="sniffer.cpp"
+   text-time="2004-03-21T22:23:22.529492Z"
+   committed-date="2004-03-18T16:39:58.054809Z"
+   checksum="45d71fccfb562c83768cb4fab1577a31"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.519478Z"/>
+<entry
+   committed-rev="478"
+   name="scanner.h"
+   text-time="2004-03-21T22:23:22.579564Z"
+   committed-date="2004-03-21T21:39:41.590843Z"
+   checksum="4c3c75b9a9bbdc9800350a926a05aaa6"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.569550Z"/>
+<entry
+   committed-rev="342"
+   name="cvar.h"
+   text-time="2004-03-21T22:23:22.679708Z"
+   committed-date="2004-03-17T03:02:41.147400Z"
+   checksum="d8b65a8922a79283e93f92898a00e179"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.659680Z"/>
+<entry
+   committed-rev="9"
+   name="cmdshell.h"
+   text-time="2004-03-21T22:23:22.629636Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="5132962f81afb08c619e63298d108b4b"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.619622Z"/>
+<entry
+   committed-rev="9"
+   name="p2p.cpp"
+   text-time="2004-03-21T22:23:22.729780Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="9df216f299c4caf71d74f9e1a50a5181"
+   kind="file"
+   prop-time="2004-03-21T22:23:22.719766Z"/>
+<entry
+   name="md5"
+   kind="dir"/>
+<entry
+   committed-rev="9"
+   name="cplugin.h"
+   text-time="2004-03-21T22:23:23.120342Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="f74efd5d9d520ca42e4b914c62ae51e5"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.100313Z"/>
+<entry
+   committed-rev="453"
+   name="harvest_aol.cpp"
+   text-time="2004-03-21T22:23:23.190443Z"
+   committed-date="2004-03-21T01:03:47.395784Z"
+   checksum="43888ffd67e66686c05a9aeb8246cd12"
+   last-author="evilbyte"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.150385Z"/>
+<entry
+   committed-rev="290"
+   name="doomscanner.cpp"
+   text-time="2004-03-21T22:23:23.240515Z"
+   committed-date="2004-03-14T02:25:22.829602Z"
+   checksum="d926dfc92b9080f51616bb28b6d4f9ed"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.230500Z"/>
+<entry
+   committed-rev="9"
+   name="apl.txt"
+   text-time="2004-03-21T22:23:23.300601Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="9b12255be30584c0bbc557a979d6cc8a"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.280572Z"/>
+<entry
+   committed-rev="9"
+   name="harvest_emails.h"
+   text-time="2004-03-21T22:23:23.350673Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="041a05b157a3e79465f9beb0a6f41e8f"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.330644Z"/>
+<entry
+   committed-rev="372"
+   name="udpflood.cpp"
+   text-time="2004-03-21T22:23:23.400745Z"
+   committed-date="2004-03-18T17:00:35.119283Z"
+   checksum="2b97e373b759c3863495b48d74bba7d6"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.390731Z"/>
+<entry
+   committed-rev="479"
+   name="wonk.cpp"
+   text-time="2004-03-22T21:39:08.460227Z"
+   committed-date="2004-03-21T22:47:10.374789Z"
+   checksum="8e6411da4caed15ec5bcc47e18a946b6"
+   last-author="evilbyte"
+   kind="file"
+   prop-time="2004-03-22T21:39:08.440198Z"/>
+<entry
+   committed-rev="445"
+   name="cthread.h"
+   text-time="2004-03-21T22:23:23.500889Z"
+   committed-date="2004-03-20T22:40:17.303324Z"
+   checksum="f4cc50f8156bacd685927a8c9bf00dff"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.490875Z"/>
+<entry
+   committed-rev="9"
+   name="ircgate.h"
+   text-time="2004-03-21T22:23:23.550961Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="80cb8943ae899d87d9eb2989fc8445de"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.530932Z"/>
+<entry
+   committed-rev="290"
+   name="dwscanner.cpp"
+   text-time="2004-03-21T22:23:23.601033Z"
+   committed-date="2004-03-14T02:25:22.829602Z"
+   checksum="6984690a768b1a4fe5426ad443aa6ea9"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.581004Z"/>
+<entry
+   committed-rev="342"
+   name="confbase.h"
+   text-time="2004-03-21T22:23:23.651105Z"
+   committed-date="2004-03-17T03:02:41.147400Z"
+   checksum="038be6f457b7781065a26046e444199a"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.631076Z"/>
+<entry
+   committed-rev="368"
+   name="phatsyn.cpp"
+   text-time="2004-03-21T22:23:23.701177Z"
+   committed-date="2004-03-18T16:39:58.054809Z"
+   checksum="cf3eb65b0c905c53fefceff34cb49418"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.681148Z"/>
+<entry
+   committed-rev="38"
+   name="cmdshell.cpp"
+   text-time="2004-03-21T22:23:23.791307Z"
+   committed-date="2004-02-27T06:35:21.918696Z"
+   checksum="953cc900136d6f2d122fe33ccf3fdf3e"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.781292Z"/>
+<entry
+   committed-rev="346"
+   name="cvar.cpp"
+   text-time="2004-03-21T22:23:23.751249Z"
+   committed-date="2004-03-17T05:29:18.876936Z"
+   checksum="41d04f9299ea3c2bf6b318574ab92a9e"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.731220Z"/>
+<entry
+   committed-rev="221"
+   name="upnpscanner.cpp"
+   text-time="2004-03-21T22:23:23.841379Z"
+   committed-date="2004-03-11T22:11:24.361166Z"
+   checksum="dae481938356734e01b2d3ec3de64dc0"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.821350Z"/>
+<entry
+   committed-rev="373"
+   name="redir_socks5.cpp"
+   text-time="2004-03-21T22:23:23.891451Z"
+   committed-date="2004-03-18T17:07:53.072504Z"
+   checksum="c9c087412eefd39bf62442043db32d55"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.871422Z"/>
+<entry
+   committed-rev="483"
+   name="installer.cpp"
+   text-time="2004-03-22T21:39:08.550356Z"
+   committed-date="2004-03-21T23:34:10.834105Z"
+   checksum="e9545b46c237840aa8472751c301e49f"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-22T21:39:08.530328Z"/>
+<entry
+   committed-rev="447"
+   name="ddos.h"
+   text-time="2004-03-21T22:23:23.991595Z"
+   committed-date="2004-03-20T22:53:24.962058Z"
+   checksum="b0fbc4b1e592c0aee067257e034c05fe"
+   last-author="d4t4"
+   kind="file"
+   prop-time="2004-03-21T22:23:23.971566Z"/>
+<entry
+   committed-rev="294"
+   name="smtp_logic.cpp"
+   text-time="2004-03-21T22:23:24.031652Z"
+   committed-date="2004-03-15T01:22:24.293613Z"
+   checksum="3ee04cd6146798521d54cdbd6ad84931"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.021638Z"/>
+<entry
+   committed-rev="446"
+   name="agobot3.dsp"
+   text-time="2004-03-21T22:23:24.091739Z"
+   committed-date="2004-03-20T22:53:12.449646Z"
+   checksum="96f9987faecb1eeae72c8420e9c3aed0"
+   last-author="d4t4"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.071710Z"/>
+<entry
+   committed-rev="14"
+   name="httpflood.cpp"
+   text-time="2004-03-21T22:23:24.231940Z"
+   committed-date="2004-02-25T22:58:10.067014Z"
+   checksum="47a467c7a9396291386ed253e74f05a8"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.211912Z"/>
+<entry
+   committed-rev="9"
+   name="redir_http.cpp"
+   text-time="2004-03-21T22:23:24.302041Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="fe8c2cf0f09dc51bd0173d5ee89bcf02"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.271998Z"/>
+<entry
+   committed-rev="9"
+   name="hook.h"
+   text-time="2004-03-21T22:23:24.372142Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="81692cbbcbda33288e764fce1ce1aebe"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.332084Z"/>
+<entry
+   name="configs"
+   kind="dir"/>
+<entry
+   committed-rev="454"
+   name="nbscanner.cpp"
+   text-time="2004-03-21T22:23:24.782732Z"
+   committed-date="2004-03-21T02:05:44.196002Z"
+   checksum="cd012737de95901a0d9e01e0abe156c9"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.772718Z"/>
+<entry
+   committed-rev="505"
+   name="mainctrl.cpp"
+   text-time="2004-03-23T02:01:27.061224Z"
+   committed-date="2004-03-23T00:03:49.488863Z"
+   checksum="75ac6b98d0f476ce6182780ffc7c3064"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-23T02:01:27.041195Z"/>
+<entry
+   committed-rev="372"
+   name="agobot3.dsw"
+   text-time="2004-03-21T22:23:24.902905Z"
+   committed-date="2004-03-18T17:00:35.119283Z"
+   checksum="686cec5337decb5dc6ffc42c42d22b72"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.872862Z"/>
+<entry
+   committed-rev="360"
+   name="config.def"
+   text-time="2004-03-21T22:23:24.952977Z"
+   committed-date="2004-03-18T01:54:38.431737Z"
+   checksum="149aa66f196f2355981b2aefd7459028"
+   last-author="wonk"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.932948Z"/>
+<entry
+   committed-rev="9"
+   name="random.h"
+   text-time="2004-03-21T22:23:25.003049Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="00ad1b05e533694170f55f688ac05422"
+   kind="file"
+   prop-time="2004-03-21T22:23:24.983020Z"/>
+<entry
+   committed-rev="9"
+   name="smtp.h"
+   text-time="2004-03-21T22:23:25.053121Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="1c99aa5c145a45d53f285187688846fc"
+   kind="file"
+   prop-time="2004-03-21T22:23:25.033092Z"/>
+<entry
+   committed-rev="205"
+   name="logic.cpp"
+   text-time="2004-03-21T22:23:25.103193Z"
+   committed-date="2004-03-11T04:28:08.513004Z"
+   checksum="85f9f1fb4ef3a4a17e6c157282c43d92"
+   kind="file"
+   prop-time="2004-03-21T22:23:25.083164Z"/>
+<entry
+   committed-rev="18"
+   name="contrib.txt"
+   text-time="2004-03-21T22:23:25.183308Z"
+   committed-date="2004-02-26T04:49:50.909868Z"
+   checksum="8399972deefe0714e2e7020ee2808a35"
+   kind="file"
+   prop-time="2004-03-21T22:23:25.153265Z"/>
+</wc-entries>

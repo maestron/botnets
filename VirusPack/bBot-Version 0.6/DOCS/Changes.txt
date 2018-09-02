@@ -1,0 +1,74 @@
+-----------------------------------------------------
+|
+|bBot-Version 0.6
+|
+|
+-----------------------------------------------------
+
+(5th/4th/2005)
+Changed:
+-Version info.
+-Took out the Exploiting IP: msg's and the File Transfer Started
+to stop bots flooding channels (all you need to see is what boxes
+the bot uploaded the file to)
+
+Fixed:
+-
+
+Added:
+-Working WKS Eng and Other
+-Working NTdcass
+-NTbios/NTscan.. for dcass
+-Working WKSdcass Eng and Other (thx to shax)
+
+Known Bugs:
+-WKS scanners work, but make the bot unstable...
+
+To Do List:
+-Find another WKS that is more stable
+
+-----------------------------------------------------
+Changes for bBot-Version 0.5 PUBLIC and PRiVATE versions.
+Some of the changes to bBot-Version 0.5 are:
+
+(29th/12th/2004)
+Changed:
+*Version info.
+*Much more stabler than version 0.4 (only in private source)
+
+Fixed:
+
+Added: 
+*More Scanners, Sasser, dcass(cant remember if i removed it) and
+added dcom135lsass.
+
+Known Bugs:
+
+To Do List:
+*Add new exploits.
+*Add new commands.
+
+(13th/12th/2004)
+bBot-Version 0.4 PRiVATE
+
+Changed:
+*Exploits that are not used that often were removed, Optix, Dameware,
+ Netdevil, Netbios, Mssql, Beagle, MyDoom, Kuang2, Sub7.
+*Ddos command was removed
+*remove command was changed to "r3m0v3", "rmz0r" for security reasons.
+*download command was changed to "d0wnl04d", "dlz0r" for security reasons.
+*update command was changed to "upd4t3", "upz0r" for security reaons.
+*getcdkeys command was changed to "cdkeys".
+*made exe smaller.
+*stabler then what it used to be.
+
+Fixed:
+
+Added:
+*master command for fun.
+*cd-key reg's for cdkeys.cpp
+
+Known bugs:
+
+To Do List:
+*Add new exploits.

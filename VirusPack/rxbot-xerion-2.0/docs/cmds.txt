@@ -1,0 +1,159 @@
+<<<<<<<<<<<<<<<<<
+xerion commands:
+>>>>>>>>>>>>>>>>>
+
+BOT COMMANDS
+____________
+
+bot.auth, bot.au ----- login to the bot
+bot.rndnick, bot.rn ----- randomly changes botnick
+bot.dienow, bot.dnow ----- kills the bot
+bot.getout, bot.gout ----- logs out of bot
+bot.version, bot.ver ----- displays bot version
+bot.log.stop ----- stops listing bot log
+bot.refresh, bot.rf ----- reconnects bot to irc
+bot.dizconnekt, bot.dz ----- disconnects bot from irc
+bot.terminate, bot.term ----- terminates bot
+bot.status, bot.s ----- displays bot status
+bot.id, bot.i ----- displays bot identification
+bot.threads, bot.t ----- displays bot thread listing
+bot.encrypt, bot.enc ----- encrypts strings (uselss as of now)
+bot.aliases, bot.al ----- displays bot alias listing
+bot.log, bot.lg ----- displays bot log
+bot.clearlog, bot.clg ----- clears bot log
+bot.unins, bot.uni ----- uninstalls bot
+bot.httpcon, bot.hcon ----- http connect
+bot.who ----- displays bot's login list
+bot.nick, bot.n ----- changes bot's nick
+bot.join, bot.j ----- makes bot join a channel
+bot.part, bot.pt ----- makes bot part a channel
+bot.delay, bot.de ----- sets a delay on bot
+bot.raw, bot.r ----- send RAW commands to bot
+bot.portscan, bot.psc ----- starts regular (not exploit!) port scanner
+bot.killthread, bot.kt ----- kills a specified bot thread
+bot.setserver, bot.se ----- sets irc server for bot
+bot.dns, bot.dn ----- has bot resolve a host/ip
+bot.visit, bot.v ----- makes bot visit a website
+bot.mirccmd, bot.mirc ----- makes bot issue mIRC commands
+bot.sniff [on/off] ----- enables carnivore packet sniffer
+bot.gethost, bot.gh ----- gets host of bots
+bot.addalias, bot.aa ----- allows on-the-fly alias adding
+bot.repeat, bot.rp ----- makes bot repeat a line
+bot.privmsg, bot.pm ----- sends private messages via bot
+bot.action, bot.a ----- bot can perform actions
+bot.cycle, bot.cy ----- makes bot cycle given channel
+bot.mode, bot.m ----- makes bot change modes
+bot.email ----- sends emails from bot
+bot.post ----- customized bot visit (can visit special php urls, ex: votes)
+
+*************************************************************************
+CLONE COMMANDS
+______________
+
+clone.start, clone.s ----- creates clones
+clone.quit, clone.q ----- makes clone quit
+clone.rndnick, clone.rn ----- randomly changes clone's nick
+clone.raw, clone.r ----- send raw commands to clones
+clone.privmsg, clone.pm ----- sends private msgs from clone
+clone.action, clone.a ----- has clone perform actions
+clone.mode, clone.m ----- makes clone change mode
+clone.join, clone.j ----- makes clone join channel
+clone.part, clone.p ----- makes clone part channel
+clone.nick, clone.n ----- manually change clone's nick
+
+*************************************************************************
+SYSTEM COMMANDS
+_______________
+
+sys.secure, sys.sec ----- secures the system
+sys.unsecure, sys.unsec ----- unsecures the system
+sys.findfilestop, sys.ff.stop ----- stops finding file
+sys.procs.stop, sys.ps.stop ----- stops listing processes
+sys.clone.stop ----- stops making clones
+sys.secure.stop ----- stops securing box
+sys.rebo0t ----- reboots machine
+sys.net ----- allows input of net commands
+sys.sysinfo, sys.si ----- displays system information
+sys.netinfo, sys.ni ----- displays network information
+sys.procs, sys.ps ----- lists running system processes
+sys.harvest, sys.harv ----- returns CDKeys on machine
+sys.uptime, sys.up ----- displays machine's uptime
+sys.driveinfo, sys.drv ----- displays the machine's drive info
+sys.testdlls, sys.dll ----- makes sure dlls are initialized
+sys.opencmd, sys.ocmd ----- enables interactive remote command prompt
+sys.cmd, sys.cm ----- enables input of dos-based commands
+sys.cmd.stop ----- disables remote command prompt
+sys.getclip, sys.gc ----- gets user's clipboard info
+sys.capture, sys.cap ------ capture video/pictures from machine
+sys.flusharp, sys.farp ----- flushes arp cache
+sys.flushdns, sys.fdns ----- flushes dns cache
+sys.open, sys.o ----- opens a file on machine
+sys.killproc, sys.kp ----- kills a system process by name
+sys.kill, sy.ki ----- kills a system process by number
+sys.delete, sys.del ----- deletes a file on the machine
+sys.file, sys.fi ----- displays a system file list
+sys.readfile, sys.rf ----- displays contents of a file
+sys.keylog [on/off] ----- enables/disables keylogger
+sys.execute, sys.e ----- executes a file on machine
+sys.findfile, sys.ff ----- finds a file on machine
+sys.findfile.stop, sys.ff.stop ----- stops searching for a file
+sys.findpass, sys.fp ----- finds stored passwords (win9x only)
+sys.rename, sys.mv ----- renames files on machine
+sys.upload ----- upload files to a remote ftp server
+
+*************************************************************************
+EXPLOIT COMMANDS
+________________
+
+exploit.begin, exp.b ----- begins exploitation
+exploit.masslocalscan, exp.mls ----- exploits preconfigured vulns on local range
+exploit.stop ----- stops exploiting machines
+exploit.stats, exp.st ----- displays exploit stats
+exploit.currentip, exp.cip ----- displays current exploiting ip
+
+*************************************************************************
+SERVER COMMANDS
+_______________
+
+srv.socks4, srv.s4 ----- initializes socks4 server
+srv.rlogind, srv.rlgd ----- initializes rlogind server
+srv.rlogind.stop ----- kills the rlogind server
+srv.redirect, srv.rd ----- initializes server redirect
+srv.socks4.stop ----- kills the socks4 server
+srv.webserver.stop ----- kills the webserver
+srv.redirect.stop ----- kills the port redirect
+srv.tftp.stop ----- kills the tftp server
+srv.webserver, srv.websrv ----- initializes webserver
+srv.tftpserver, srv.tftp ----- initializes tftp server
+srv.ident [on/off] ----- enables/disables ident server
+
+*************************************************************************
+DDOS COMMANDS
+_____________
+
+ddos.stop ----- stops ddossing
+ddos.icmpflood, ddos.icmp ----- starts icmp flood
+ddos.pingflood, ddos.pingf ----- starts ping flood
+ddos.tcpflood, ddos.tcpf ----- starts tcp flood
+ddos.udpflood, ddos.udp ----- starts udp flood
+ddos.synflood, ddos.synf ----- starts syn flood
+ddos.ack ----- starts ack flood
+ddos.random ----- starts a random flood
+ddos.syn.stop ----- stops synflooding
+ddos.udp.stop ----- stops udpflooding
+ddos.ping.stop ----- stops pingflooding
+
+*************************************************************************
+DCC COMMANDS
+____________
+
+dcc.get, dcc.gt ----- gets a file on machine via DCC
+
+*************************************************************************
+DOWNLOAD COMMANDS
+_________________
+
+download.newexe, download.ne ----- updates bot
+download.webdl, download.wd ----- download a file from web
+
+*************************************************************************

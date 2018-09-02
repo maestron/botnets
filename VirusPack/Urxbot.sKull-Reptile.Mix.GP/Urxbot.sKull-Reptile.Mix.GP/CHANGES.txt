@@ -1,0 +1,23 @@
+The only changes from Urxbot.sKull-Reptile.Mix is:
+
+* the bot will not scan local nets.
+* the scanstats will only output if it has rooted, and only
+  show what was rooted.
+* added pnp445.
+* I changed scanall command a bit.  Before it would scan asn1http,
+  asn1smb, and asn1smbnt, at 75 threads a piece.  I changed it so
+  it would scan asn1http and pnp with 50 threads a piece.
+
+This bot spreads pretty good, but it is unstable.
+The problems I have ran across with this bot is:
+
+* When I use encrypted strings in config, the bot will not
+  try to load.
+* There seems to be a problem with tftp, but ftp works fine.
+
+
+I did not create this bot, I just added a few things and tried to
+make it a little more stable.  For some reason when I update a few
+bots to it, they will start spreading fine.  I see the rooted bots
+joining, but I see the older bots quiting with "connection reset
+by peer", so good luck with it. -gp

@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdbot05b - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\LEARNI~1\LOCALS~1\Temp\RSP1CDA.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/sdbot05b.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"F:\LoexBot1.3final\LoegggxBot1.3\LoexBot1.3\mydoom.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\LEARNI~1\LOCALS~1\Temp\RSP1CDA.tmp" 
+Creating temporary file "C:\DOCUME~1\LEARNI~1\LOCALS~1\Temp\RSP1CDB.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wininet.lib Netapi32.lib shlwapi.lib Mpr.lib Dnsapi.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/rose.pdb" /machine:I386 /out:"Release/rose.exe" /align:4096 
+.\Release\advscan.obj
+.\Release\dcom.obj
+.\Release\mssql.obj
+.\Release\netapi.obj
+.\Release\pnp.obj
+.\Release\shellcode.obj
+.\Release\tftpd.obj
+.\Release\vncrooter.obj
+.\Release\dns.obj
+.\Release\aliaslog.obj
+.\Release\AutoStart.obj
+.\Release\avirus.obj
+.\Release\download.obj
+.\Release\driveinfo.obj
+.\Release\firefox.obj
+.\Release\FlashFxp.obj
+.\Release\fphost.obj
+.\Release\ftpd.obj
+.\Release\hostauth.obj
+.\Release\httpd.obj
+.\Release\icmpflood.obj
+.\Release\identd.obj
+.\Release\irc_send.obj
+.\Release\loaddll.obj
+.\Release\misc.obj
+.\Release\net.obj
+.\Release\netutils.obj
+.\Release\peer2peer.obj
+.\Release\processes.obj
+.\Release\pstore.obj
+.\Release\rndnick.obj
+.\Release\SDBOT05B.OBJ
+.\Release\secure.obj
+.\Release\sniffer.obj
+.\Release\socks.obj
+.\Release\synflood.obj
+.\Release\taskhider.obj
+.\Release\threads.obj
+.\Release\visit.obj
+.\Release\mydoom.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\LEARNI~1\LOCALS~1\Temp\RSP1CDB.tmp"
+<h3>Output Window</h3>
+Compiling...
+mydoom.cpp
+Linking...
+LINK : warning LNK4108: /ALIGN specified without /DRIVER or /VXD; image may not run
+
+
+
+<h3>Results</h3>
+rose.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

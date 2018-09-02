@@ -1,0 +1,158 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rBot - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD967.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "NO_AVFW_KILL" /D "NO_SECSYSTEM" /D "NO_REGISTRY" /D "NO_EHANDLER" /D "NO_CRYPT" /D "DEBUG_LOGGING" /FR"Debug/" /Fp"Debug/rBot.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\advscan.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\aliaslog.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\autostart.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\beagle.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\capture.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\cdkeys.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\crc32.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\crypt.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\dameware.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\dcc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\dcom.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\dcom2.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\ddos.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\download.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\driveinfo.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\ehandler.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\findfile.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\findpass.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\fphost.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\httpd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\icmpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\ident.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\irc_send.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\keylogger.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\kuang2.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\loaddlls.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\lsass.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\misc.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\mssql.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\mydoom.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\net.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\netbios.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\netdevil.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\netutils.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\optix.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\pingudp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\processes.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\psniff.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\rBot.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\redirect.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\remotecmd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\rlogind.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\rndnick.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\scan.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\secure.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\session.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\shellcode.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\socks4.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\sub7.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\synflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\sysinfo.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\tcpflood.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\tftpd.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\threads.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\upnp.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\visit.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\webdav.cpp"
+"C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD967.tmp" 
+Creating temporary file "C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD968.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/rBot.map" /debug /machine:I386 /out:"Debug/rBot.exe" 
+".\Debug\advscan.obj"
+".\Debug\aliaslog.obj"
+".\Debug\autostart.obj"
+".\Debug\beagle.obj"
+".\Debug\capture.obj"
+".\Debug\cdkeys.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\dameware.obj"
+".\Debug\dcc.obj"
+".\Debug\dcom.obj"
+".\Debug\dcom2.obj"
+".\Debug\ddos.obj"
+".\Debug\download.obj"
+".\Debug\driveinfo.obj"
+".\Debug\ehandler.obj"
+".\Debug\findfile.obj"
+".\Debug\findpass.obj"
+".\Debug\fphost.obj"
+".\Debug\httpd.obj"
+".\Debug\icmpflood.obj"
+".\Debug\ident.obj"
+".\Debug\irc_send.obj"
+".\Debug\keylogger.obj"
+".\Debug\kuang2.obj"
+".\Debug\loaddlls.obj"
+".\Debug\lsass.obj"
+".\Debug\misc.obj"
+".\Debug\mssql.obj"
+".\Debug\mydoom.obj"
+".\Debug\net.obj"
+".\Debug\netbios.obj"
+".\Debug\netdevil.obj"
+".\Debug\netutils.obj"
+".\Debug\optix.obj"
+".\Debug\pingudp.obj"
+".\Debug\processes.obj"
+".\Debug\psniff.obj"
+".\Debug\rBot.obj"
+".\Debug\redirect.obj"
+".\Debug\remotecmd.obj"
+".\Debug\rlogind.obj"
+".\Debug\rndnick.obj"
+".\Debug\scan.obj"
+".\Debug\secure.obj"
+".\Debug\session.obj"
+".\Debug\shellcode.obj"
+".\Debug\socks4.obj"
+".\Debug\sub7.obj"
+".\Debug\synflood.obj"
+".\Debug\sysinfo.obj"
+".\Debug\tcpflood.obj"
+".\Debug\tftpd.obj"
+".\Debug\threads.obj"
+".\Debug\upnp.obj"
+".\Debug\visit.obj"
+".\Debug\webdav.obj"
+".\Debug\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\D4n1s\LOCALS~1\Temp\RSPD968.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+aliaslog.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+autostart.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+beagle.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+capture.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+cdkeys.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+crc32.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+crypt.cpp
+C:\Documents and Settings\D4n1s\Επιφάνεια εργασίας\Φάκελος\rXSass\includes.h(85) : fatal error C1083: Cannot open include file: 'lsass.h': No such file or directory
+dameware.cpp
+cl.exe terminated at user request.
+
+</pre>
+</body>
+</html>

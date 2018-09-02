@@ -1,0 +1,5 @@
+# Microsoft Developer Studio Generated Dependency File, included by Wisdom.mak
+
+.\main.cpp : \
+	"..\..\..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

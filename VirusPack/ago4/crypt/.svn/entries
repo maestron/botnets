@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="33"
+   name=""
+   committed-date="2004-02-26T23:05:59.668978Z"
+   url="svn://svn.bastart.eu.org/agobot3_current/crypt"
+   kind="dir"
+   uuid="b0162986-33d4-0310-9809-ec569eafc4f1"
+   revision="145"/>
+<entry
+   committed-rev="9"
+   name="gpl.txt"
+   text-time="2003-02-11T19:52:22.537715Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="393a5ca445f6965873eca0259a17f833"
+   kind="file"
+   prop-time="2003-02-11T19:52:22.517686Z"/>
+<entry
+   committed-rev="9"
+   name="Makefile.bc5"
+   text-time="2003-02-11T19:52:22.567758Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="1752050f741bdc44d119996de06aa409"
+   kind="file"
+   prop-time="2003-02-11T19:52:22.557744Z"/>
+<entry
+   committed-rev="12"
+   name="main.cpp"
+   text-time="2003-02-11T19:52:22.607816Z"
+   committed-date="2004-02-25T22:47:57.857150Z"
+   checksum="6fd0d37d55ad0d2b53645a526843b749"
+   kind="file"
+   prop-time="2003-02-11T19:52:22.587787Z"/>
+<entry
+   committed-rev="9"
+   name="Makefile.ming"
+   text-time="2003-02-11T19:52:22.637859Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="07e9627e82bc0efa5cdb53a17799c3f7"
+   kind="file"
+   prop-time="2003-02-11T19:52:22.627844Z"/>
+<entry
+   committed-rev="33"
+   name="crypt.dsp"
+   text-time="2003-02-11T19:52:22.667902Z"
+   committed-date="2004-02-26T23:05:59.668978Z"
+   checksum="f01d6f153b6dceafe3a26482469d6f16"
+   kind="file"
+   prop-time="2003-02-11T19:52:22.657888Z"/>
+<entry
+   committed-rev="9"
+   name="Makefile"
+   text-time="2003-02-11T19:52:22.697945Z"
+   committed-date="2004-02-25T22:24:22.829912Z"
+   checksum="c15ebca09466ccd51c504cc73a27599c"
+   kind="file"
+   prop-time="2003-02-11T19:52:22.687931Z"/>
+</wc-entries>

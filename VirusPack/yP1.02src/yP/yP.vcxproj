@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ECF926FC-C4A5-426D-821F-8DA1871130F9}</ProjectGuid>
+    <RootNamespace>yP</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>aplib.lib;imagehlp.lib;comctl32.lib;Opengl32.lib;Glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)yP.exe</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)yC.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>aplib.lib;imagehlp.lib;comctl32.lib;Opengl32.lib;Glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)yP.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CryptErr.cpp" />
+    <ClCompile Include="CryptFunc.cpp" />
+    <ClCompile Include="CryptIT.cpp" />
+    <ClCompile Include="CryptMain.cpp" />
+    <ClCompile Include="CryptPack.cpp" />
+    <ClCompile Include="CryptVar.cpp" />
+    <ClCompile Include="LangData.cpp" />
+    <ClCompile Include="PER.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TabCtrl.cpp" />
+    <ClCompile Include="TrackCtrl.cpp" />
+    <ClCompile Include="yP.cpp" />
+    <ClCompile Include="Ziplib\alloc.cpp" />
+    <ClCompile Include="Ziplib\lzo1x_9x.cpp" />
+    <ClCompile Include="Ziplib\lzo_ptr.cpp" />
+    <ClCompile Include="Ziplib\lzo_util.cpp" />
+    <ClCompile Include="Thanks\grid.cpp" />
+    <ClCompile Include="Thanks\thanks.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ziplib\lzo_mchw.ch" />
+    <None Include="Ziplib\lzo_swd.ch" />
+    <None Include="Graphics\bitmaps\bitmap1.bmp" />
+    <None Include="Graphics\bitmaps\Help.bmp" />
+    <None Include="Graphics\icons\icon2.ico" />
+    <None Include="Graphics\bitmaps\New.bmp" />
+    <None Include="Graphics\bitmaps\OPEN.bmp" />
+    <None Include="Graphics\icons\Open.ico" />
+    <None Include="Graphics\icons\Option.ico" />
+    <None Include="Graphics\bitmaps\Save.bmp" />
+    <None Include="Graphics\icons\Secur01b.ico" />
+    <None Include="Graphics\icons\yPIcons.ico" />
+    <None Include="yPIcons.ico" />
+    <None Include="Copyright.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aplib.h" />
+    <ClInclude Include="CryptErr.h" />
+    <ClInclude Include="CryptFunc.h" />
+    <ClInclude Include="CryptIT.h" />
+    <ClInclude Include="CryptMain.h" />
+    <ClInclude Include="CryptPack.h" />
+    <ClInclude Include="CryptVar.h" />
+    <ClInclude Include="LangData.h" />
+    <ClInclude Include="PER.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TabCtrl.h" />
+    <ClInclude Include="TrackCtrl.h" />
+    <ClInclude Include="yP.h" />
+    <ClInclude Include="Ziplib\config1x.h" />
+    <ClInclude Include="Ziplib\lutil.h" />
+    <ClInclude Include="Ziplib\lzo1x.h" />
+    <ClInclude Include="Ziplib\lzo_conf.h" />
+    <ClInclude Include="Ziplib\lzo_ptr.h" />
+    <ClInclude Include="Ziplib\lzo_util.h" />
+    <ClInclude Include="Ziplib\lzoconf.h" />
+    <ClInclude Include="Ziplib\lzoutil.h" />
+    <ClInclude Include="Thanks\grid.h" />
+    <ClInclude Include="Thanks\thanks.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="yP.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Graphics\XPtheme\yP.exe.manifest" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="yC.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

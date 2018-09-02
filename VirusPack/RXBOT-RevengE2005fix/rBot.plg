@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Drx - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\StaNeR\LOKALE~1\Temp\RSP7E.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "C:\Program Files\Microsoft SDK\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"bin/Release/rBot.pch" /YX /Fo"bin/Release/" /Fd"bin/Release/" /FD /c 
+"G:\RXBOT-RevengE2005fix\src\advscan.cpp"
+"G:\RXBOT-RevengE2005fix\src\ms05039-pnp.cpp"
+"G:\RXBOT-RevengE2005fix\src\ms05039-win2k.cpp"
+"G:\RXBOT-RevengE2005fix\src\ddos.cpp"
+"G:\RXBOT-RevengE2005fix\src\icmpflood.cpp"
+"G:\RXBOT-RevengE2005fix\src\pingudp.cpp"
+"G:\RXBOT-RevengE2005fix\src\skysyn.cpp"
+"G:\RXBOT-RevengE2005fix\src\synflood.cpp"
+"G:\RXBOT-RevengE2005fix\src\tcpflood.cpp"
+"G:\RXBOT-RevengE2005fix\src\ftpd.cpp"
+"G:\RXBOT-RevengE2005fix\src\ident.cpp"
+"G:\RXBOT-RevengE2005fix\src\download.cpp"
+"G:\RXBOT-RevengE2005fix\src\driveinfo.cpp"
+"G:\RXBOT-RevengE2005fix\src\misc.cpp"
+"G:\RXBOT-RevengE2005fix\src\netutils.cpp"
+"G:\RXBOT-RevengE2005fix\src\remotecmd.cpp"
+"G:\RXBOT-RevengE2005fix\src\sysinfo.cpp"
+"G:\RXBOT-RevengE2005fix\src\visit.cpp"
+"G:\RXBOT-RevengE2005fix\src\aliaslog.cpp"
+"G:\RXBOT-RevengE2005fix\src\autostart.cpp"
+"G:\RXBOT-RevengE2005fix\src\crc32.cpp"
+"G:\RXBOT-RevengE2005fix\src\ehandler.cpp"
+"G:\RXBOT-RevengE2005fix\src\fphost.cpp"
+"G:\RXBOT-RevengE2005fix\src\irc_send.cpp"
+"G:\RXBOT-RevengE2005fix\src\loaddlls.cpp"
+"G:\RXBOT-RevengE2005fix\src\rBot.cpp"
+"G:\RXBOT-RevengE2005fix\src\rndnick.cpp"
+"G:\RXBOT-RevengE2005fix\src\threads.cpp"
+"G:\RXBOT-RevengE2005fix\src\wildcard.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\StaNeR\LOKALE~1\Temp\RSP7E.tmp" 
+Creating temporary file "C:\DOCUME~1\StaNeR\LOKALE~1\Temp\RSP7F.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"bin/Release/rxBot.pdb" /machine:I386 /out:"bin/rxBot.exe" 
+".\bin\Release\advscan.obj"
+".\bin\Release\ms05039-pnp.obj"
+".\bin\Release\ms05039-win2k.obj"
+".\bin\Release\ddos.obj"
+".\bin\Release\icmpflood.obj"
+".\bin\Release\pingudp.obj"
+".\bin\Release\skysyn.obj"
+".\bin\Release\synflood.obj"
+".\bin\Release\tcpflood.obj"
+".\bin\Release\ftpd.obj"
+".\bin\Release\ident.obj"
+".\bin\Release\download.obj"
+".\bin\Release\driveinfo.obj"
+".\bin\Release\misc.obj"
+".\bin\Release\netutils.obj"
+".\bin\Release\remotecmd.obj"
+".\bin\Release\sysinfo.obj"
+".\bin\Release\visit.obj"
+".\bin\Release\aliaslog.obj"
+".\bin\Release\autostart.obj"
+".\bin\Release\crc32.obj"
+".\bin\Release\ehandler.obj"
+".\bin\Release\fphost.obj"
+".\bin\Release\irc_send.obj"
+".\bin\Release\loaddlls.obj"
+".\bin\Release\rBot.obj"
+".\bin\Release\rndnick.obj"
+".\bin\Release\threads.obj"
+".\bin\Release\wildcard.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\StaNeR\LOKALE~1\Temp\RSP7F.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+ms05039-pnp.cpp
+ms05039-win2k.cpp
+ddos.cpp
+icmpflood.cpp
+pingudp.cpp
+skysyn.cpp
+synflood.cpp
+tcpflood.cpp
+ftpd.cpp
+ident.cpp
+download.cpp
+driveinfo.cpp
+misc.cpp
+netutils.cpp
+remotecmd.cpp
+sysinfo.cpp
+visit.cpp
+aliaslog.cpp
+autostart.cpp
+crc32.cpp
+ehandler.cpp
+fphost.cpp
+irc_send.cpp
+loaddlls.cpp
+rBot.cpp
+rndnick.cpp
+threads.cpp
+wildcard.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+rxBot.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

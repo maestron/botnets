@@ -1,0 +1,232 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TsGh - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Brandon\AppData\Local\Temp\RSPB05B.tmp" with contents
+[
+/nologo /MTd /W3 /Gi /GX /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/TsGh.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Users\Brandon\Desktop\TsGh Bot v3\advscan.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\aliaslog.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\autostart.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\beagle.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\capture.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\cdkeys.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\commands.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\connect.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\crc32.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\crypt.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\dameware.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\dcc.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\dcom.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\dcom2.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\download.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\driveinfo.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\ehandler.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\findfile.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\findpass.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\fphost.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\ftptransfer.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\httpd.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\icmpflood.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\ident.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\iis5ssl.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\irc_send.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\keylogger.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\loaddlls.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\lsarestrict.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\lsass.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\misc.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\msnsend.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\mssql.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\mydoom.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\net.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\netbios.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\netdevil.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\netutils.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\optix.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\pingudp.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\processes.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\protocol.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\psniff.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\redirect.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\remotecmd.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\rlogind.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\rndnick.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\rootkit.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\secure.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\session.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\shellcode.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\socks4.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\startup.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\sub7.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\synflood.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\sysinfo.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\tcpflood.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\tftpd.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\threads.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\TsGh.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\upnp.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\visit.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\vnc.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\webdav.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\wildcard.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\workstation.cpp"
+"C:\Users\Brandon\Desktop\TsGh Bot v3\zip.cpp"
+]
+Creating command line "cl.exe @C:\Users\Brandon\AppData\Local\Temp\RSPB05B.tmp" 
+Creating temporary file "C:\Users\Brandon\AppData\Local\Temp\RSPB06C.tmp" with contents
+[
+/nologo /subsystem:windows /profile /map:"Debug/TsGh.map" /debug /machine:I386 /out:"Debug/TsGh.exe" 
+".\Debug\advscan.obj"
+".\Debug\aliaslog.obj"
+".\Debug\autostart.obj"
+".\Debug\beagle.obj"
+".\Debug\capture.obj"
+".\Debug\cdkeys.obj"
+".\Debug\commands.obj"
+".\Debug\connect.obj"
+".\Debug\crc32.obj"
+".\Debug\crypt.obj"
+".\Debug\dameware.obj"
+".\Debug\dcc.obj"
+".\Debug\dcom.obj"
+".\Debug\dcom2.obj"
+".\Debug\download.obj"
+".\Debug\driveinfo.obj"
+".\Debug\ehandler.obj"
+".\Debug\findfile.obj"
+".\Debug\findpass.obj"
+".\Debug\fphost.obj"
+".\Debug\ftptransfer.obj"
+".\Debug\httpd.obj"
+".\Debug\icmpflood.obj"
+".\Debug\ident.obj"
+".\Debug\iis5ssl.obj"
+".\Debug\irc_send.obj"
+".\Debug\keylogger.obj"
+".\Debug\loaddlls.obj"
+".\Debug\lsarestrict.obj"
+".\Debug\lsass.obj"
+".\Debug\misc.obj"
+".\Debug\msnsend.obj"
+".\Debug\mssql.obj"
+".\Debug\mydoom.obj"
+".\Debug\net.obj"
+".\Debug\netbios.obj"
+".\Debug\netdevil.obj"
+".\Debug\netutils.obj"
+".\Debug\optix.obj"
+".\Debug\pingudp.obj"
+".\Debug\processes.obj"
+".\Debug\protocol.obj"
+".\Debug\psniff.obj"
+".\Debug\redirect.obj"
+".\Debug\remotecmd.obj"
+".\Debug\rlogind.obj"
+".\Debug\rndnick.obj"
+".\Debug\rootkit.obj"
+".\Debug\secure.obj"
+".\Debug\session.obj"
+".\Debug\shellcode.obj"
+".\Debug\socks4.obj"
+".\Debug\startup.obj"
+".\Debug\sub7.obj"
+".\Debug\synflood.obj"
+".\Debug\sysinfo.obj"
+".\Debug\tcpflood.obj"
+".\Debug\tftpd.obj"
+".\Debug\threads.obj"
+".\Debug\TsGh.obj"
+".\Debug\upnp.obj"
+".\Debug\visit.obj"
+".\Debug\vnc.obj"
+".\Debug\webdav.obj"
+".\Debug\wildcard.obj"
+".\Debug\workstation.obj"
+".\Debug\zip.obj"
+]
+Creating command line "link.exe @C:\Users\Brandon\AppData\Local\Temp\RSPB06C.tmp"
+<h3>Output Window</h3>
+Compiling...
+advscan.cpp
+aliaslog.cpp
+autostart.cpp
+beagle.cpp
+capture.cpp
+cdkeys.cpp
+commands.cpp
+connect.cpp
+crc32.cpp
+crypt.cpp
+dameware.cpp
+dcc.cpp
+dcom.cpp
+dcom2.cpp
+download.cpp
+driveinfo.cpp
+ehandler.cpp
+findfile.cpp
+findpass.cpp
+fphost.cpp
+ftptransfer.cpp
+httpd.cpp
+icmpflood.cpp
+ident.cpp
+iis5ssl.cpp
+irc_send.cpp
+keylogger.cpp
+loaddlls.cpp
+lsarestrict.cpp
+lsass.cpp
+misc.cpp
+msnsend.cpp
+C:\Users\Brandon\Desktop\TsGh Bot v3\msnsend.cpp(203) : warning C4244: 'argument' : conversion from 'short' to 'unsigned char', possible loss of data
+C:\Users\Brandon\Desktop\TsGh Bot v3\msnsend.cpp(209) : warning C4244: 'argument' : conversion from 'short' to 'unsigned char', possible loss of data
+mssql.cpp
+mydoom.cpp
+net.cpp
+netbios.cpp
+netdevil.cpp
+netutils.cpp
+optix.cpp
+pingudp.cpp
+processes.cpp
+protocol.cpp
+psniff.cpp
+redirect.cpp
+remotecmd.cpp
+rlogind.cpp
+rndnick.cpp
+rootkit.cpp
+secure.cpp
+session.cpp
+shellcode.cpp
+socks4.cpp
+startup.cpp
+sub7.cpp
+synflood.cpp
+sysinfo.cpp
+tcpflood.cpp
+tftpd.cpp
+threads.cpp
+TsGh.cpp
+upnp.cpp
+visit.cpp
+vnc.cpp
+webdav.cpp
+wildcard.cpp
+workstation.cpp
+zip.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+TsGh.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Line 18: Class XtremeSuiteControls.GroupBox of control GroupBox1 was not a loaded control class.
+Line 39: Class XtremeSuiteControls.PushButton of control cmdExit was not a loaded control class.
+Line 53: Class XtremeSuiteControls.PushButton of control cmdLogin was not a loaded control class.
+Line 67: Class XtremeSuiteControls.FlatEdit of control txtUser was not a loaded control class.
+Line 97: Class InetCtlsObjects.Inet of control Inet1 was not a loaded control class.

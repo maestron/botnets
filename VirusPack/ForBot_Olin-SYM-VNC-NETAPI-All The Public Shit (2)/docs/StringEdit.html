@@ -1,0 +1,81 @@
+<html>
+ <head>
+  <title>Afro's tool - String Mod for ForBot</title>
+<script>
+
+function bS(){
+	sKey=document.forms[0].sK.value;
+	Dev=document.forms[0].Ks.value;
+	document.forms[0].Bb.value="";
+	Bbc=sKey.split(Dev);
+	for(i=0;i<document.forms[0].Ba.value.length;i++)
+	{
+		for(j=0;j<Bbc.length;j++)
+		{
+			if(Bbc[j]==document.forms[0].Ba.value.charAt(i)){document.forms[0].Bb.value=document.forms[0].Bb.value+(j+1)+',';}
+		}
+	}
+	x='';
+	document.forms[0].Bb.value=document.forms[0].Bb.value.substr(0,document.forms[0].Bb.value.length-1)+',0';
+	document.forms[0].Bb2.value="dp("+document.forms[0].Bb.value+").CStr()";
+	dd=document.forms[0].Bb.value.split(',');
+	for(i=0;i<dd.length;i++)
+	{
+		bc=sKey.split(Dev);
+		y=bc[dd[i]-1];
+		if (y != undefined)
+		{
+			x=x+y;
+		}
+	}
+	document.forms[0].Bc.value=x;
+}
+
+function bSx()
+{
+	x="";
+	Dev=document.forms[0].Ks.value;
+	bb=document.forms[0].Ca.value.split(',');
+	for(i=0;i<bb.length;i++)
+	{
+		bc=document.forms[0].sK.value.split(Dev);
+bx=bc[bb[i]-1];	if(bx!=undefined)	x=x+bx;
+	}
+	document.forms[0].Cb.value=x;
+	return x;
+}
+
+</script>
+<style>
+table {
+background-color:#EDEFEE;
+font-size:11px;
+}</style>
+ </head>
+ <body bgcolor=#DDDDDD>
+<basefont face=arial>
+<TABLE cellpadding=0cellspacing=0 border=1 align=center>
+<tr>
+<form onsubmit="bS();window.clipboardData.setData('Text',document.forms[0].Bb2.value);document.forms[0].Ba.focus();document.forms[0].Ba.select();return false;">
+<Td colspan=2>
+
+<table>
+<tr><td>Key: </td><td><input id=sK style=width:340; value='a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|!|?|#|$|%|^|&|*|(|)|_|+|[|`|]|0|1|2|3|4|5|6|7|8|9| |.|\|-|/|:|"|@'></td></tr>
+<tr><td>Devider: </td><td><input id=Ks value='|'></td></tr></table>
+</td></tr><TR><td>
+<table>
+<tr><Td>Input: </td><td><input id=Ba width=150 value=></td></tr>
+<tr><Td>Output: </td><td><input id=Bb readonly></td></tr>
+<tr><td><input id=Bb2 readonly type=hidden></td></tr>
+<tr><td>Check: </td><td><input id=Bc readonly></td></tr>
+<tr><td colspan=2 align=center><input type=submit value='Do It' style='width:100%;'></td></tr>
+</table>
+</TD><td valign=top>
+<table>
+<tr><Td>Input: </td><td><input id=Ca value=30,9,5,78,25,15,21,78,4,21,13,2,78,6,21,3,11,0></td></tr>
+<tr><Td>Output: </td><td><input id=Cb value></td></tr>
+<tr><td><img height=26 style='width:0;'></td><td></td></tr>
+<tr><Td colspan=2 align=center><input style='width:100%' type=button onclick=bSx() value='Manual Check'></td></tr>
+</table>
+</TD>
+</TABLE>

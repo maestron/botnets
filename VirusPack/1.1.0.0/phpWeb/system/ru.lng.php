@@ -1,0 +1,36 @@
+<?php if(!defined('__INDEX__'))die();
+define('LNG_CODEPAGE','windows-1251');
+define('LNG_TITLE','ZeuS');
+define('LNG_COPYRIGHT','Copyright &copy; 2006-2007 ZeuS Group');
+define('LNG_MM_INFO','Информация:');
+define('LNG_MM_INFO_UN','Профиль:');
+define('LNG_MM_INFO_DATE','GMT Дата:');
+define('LNG_MM_INFO_TIME','GMT Время:');
+define('LNG_FORMAT_DATA','d.m.Y');
+define('LNG_FORMAT_TIME','H:i:s');
+define('LNG_FORMAT_DT','H:i:s d.m.Y');
+define('LNG_MM_STATS','Статистика:');
+define('LNG_MM_STATS_INFO','Общая');
+define('LNG_MM_BOTNET','Ботнет:');
+define('LNG_MM_BOTNET_LIST','Онлайн-боты');
+define('LNG_MM_BOTNET_CMDS','Команды');
+define('LNG_MM_LOGS','Логи:');
+define('LNG_MM_LOGS_DB','Поиск');
+define('LNG_MM_LOGS_DBT','Поиск по шаблону');
+define('LNG_MM_LOGS_FILES','Загруженные файлы');
+define('LNG_MM_SPAMBOT','Рассылка спама');
+define('LNG_MM_SYS','Система:');
+define('LNG_MM_SYS_USERS','Профили');
+define('LNG_MM_SYS_OPTIONS','Параметры');
+define('LNG_MM_SYS_USER','Профиль');
+define('LNG_MM_LOGOUT','Выход');
+
+define('LNG_CM_VL_TEXT', 'Today logs in text mode');
+define('LNG_CM_VL_HTML', 'Today logs in HTML mode');
+define('LNG_CM_UF',      'Uploaded files');
+define('LNG_CM_INFO',    'Information');
+define('LNG_CM_RCMD',    'Remote commands');
+define('LNG_CM_SS',      'Live screenshot');
+define('LNG_CM_SOCK',    'Check socks server');
+define('LNG_CM_PROXY',   'Check proxy server');
+?>
