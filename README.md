@@ -7,4 +7,5 @@ Many projects are duplicates or revisions of each other. Many of them have outda
 ## Donations
 
 Donations are appreciated:
+
 (BTC): 1FPZzkoUxe2uXzne4KML6TYzASCieWXS6E
